@@ -1,0 +1,7 @@
+import React from 'react';
+import {AbsoluteFill,interpolate,useCurrentFrame} from 'remotion';
+import {INK} from '../animation/helpers';
+export const Beam:React.FC<{fromX:number;fromY:number;toX:number;toY:number;startFrame?:number}>=({fromX,fromY,toX,toY,startFrame=0})=>{const frame=useCurrentFrame();const o=interpolate(frame,[startFrame,startFrame+12,startFrame+70,startFrame+90],[0,0.65,0.65,0],{extrapolateLeft:'clamp',extrapolateRight:'clamp'});return <polygon points={`${fromX-24},${fromY} ${fromX+24},${fromY} ${toX+130},${toY} ${toX-130},${toY}`} fill="#e8fbff" opacity={o*(0.9+0.1*Math.sin(frame*0.7))}/>};
+const star=(r:number)=>`M0 ${-r} L${r*.3} ${-r*.3} L${r} 0 L${r*.3} ${r*.3} L0 ${r} L${-r*.3} ${r*.3} L${-r} 0 L${-r*.3} ${-r*.3} Z`;
+export const Sparkles:React.FC<{cx:number;cy:number;count?:number}>=({cx,cy,count=16})=>{const frame=useCurrentFrame();return <g>{Array.from({length:count},(_,i)=>{const ph=((frame*1.6+i*(100/count))%100)/100;return <path key={i} d={star(10+(i%3)*6)} transform={`translate(${cx+((i*97)%260)-130} ${cy-ph*420}) rotate(${frame*4+i*30})`} fill="#fff6c9" stroke={INK} strokeWidth={3} opacity={Math.sin(ph*Math.PI)}/>})}</g>};
+export const Flash:React.FC<{atFrame:number}>=({atFrame})=>{const frame=useCurrentFrame();const o=interpolate(frame,[atFrame,atFrame+6,atFrame+30],[0,.8,0],{extrapolateLeft:'clamp',extrapolateRight:'clamp'});return <AbsoluteFill style={{background:'#fff',opacity:o}}/>};
