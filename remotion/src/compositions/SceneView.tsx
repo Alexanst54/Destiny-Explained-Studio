@@ -1,0 +1,14 @@
+import React from 'react';
+import {AbsoluteFill,Easing,interpolate,useCurrentFrame,useVideoConfig} from 'remotion';
+import {TravelerSky} from '../backgrounds/TravelerSky';
+import {Ghost} from '../characters/Ghost';
+import {Hunter} from '../characters/Hunter';
+import {Beam,Flash,Sparkles} from '../components/Effects';
+import {GROUND,HEIGHT,WIDTH} from '../project/timeline';
+import type {Cue,SceneDef} from '../types';
+type Props={scene:SceneDef;cues:Cue[];startFrame:number;durationInFrames:number};
+export const SceneView:React.FC<Props>=({scene,cues,startFrame,durationInFrames})=>{const frame=useCurrentFrame();const {fps}=useVideoConfig();const now=(startFrame+frame)/fps;const talking=cues.some(c=>now>=c.start&&now<c.end);
+const zoom=interpolate(frame,[0,durationInFrames],[scene.camera.zoomFrom,scene.camera.zoomTo],{easing:Easing.inOut(Easing.ease)});
+const opacity=Math.min(interpolate(frame,[0,8],[0,1],{extrapolateRight:'clamp'}),interpolate(frame,[durationInFrames-8,durationInFrames],[1,0],{extrapolateLeft:'clamp'}));
+const hx=interpolate(frame,[0,durationInFrames],scene.hunterX),gx=hx+scene.ghostOffset[0],gy=GROUND+scene.ghostOffset[1],revive=scene.hunterPose==='resurrect';
+return <AbsoluteFill style={{opacity}}><AbsoluteFill style={{transformOrigin:`${scene.camera.focusX}px ${scene.camera.focusY}px`,transform:`scale(${zoom})`}}><TravelerSky/><svg width={WIDTH} height={HEIGHT} viewBox={`0 0 ${WIDTH} ${HEIGHT}`} style={{position:'absolute',inset:0}}>{revive&&<Beam fromX={gx} fromY={gy+80} toX={hx} toY={GROUND} startFrame={6}/>}<Hunter x={hx} y={GROUND} pose={scene.hunterPose} talking={talking}/><Ghost x={gx} y={gy} look={talking?0:1} glow={revive}/>{revive&&<Sparkles cx={hx} cy={GROUND-60}/>}</svg></AbsoluteFill>{revive&&<Flash atFrame={8}/>}</AbsoluteFill>};
