@@ -1,0 +1,30 @@
+name: Import Claude project
+on:
+  push:
+    paths:
+      - claude-project.zip
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Extract Remotion project without touching mobile prototype
+        run: |
+          test -f claude-project.zip
+          mkdir -p /tmp/claude-import remotion
+          unzip -q -o claude-project.zip -d /tmp/claude-import
+          test -f /tmp/claude-import/destiny-explained-studio/package.json
+          cp -a /tmp/claude-import/destiny-explained-studio/. remotion/
+          rm -f remotion/.gitkeep
+      - name: Commit imported source
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add remotion
+          if ! git diff --cached --quiet; then
+            git commit -m "Import Claude Remotion animation engine"
+            git push
+          fi
