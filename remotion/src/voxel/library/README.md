@@ -99,6 +99,6 @@ npm run render:worlds
 python scripts/verify_narration.py --episode out/voxel_worlds_demo-ready.json --video out/voxel-worlds-demo.mp4
 ```
 
-Sur Android : choisir **Démo 4 décors** dans l’éditeur, modifier si besoin, exporter, ouvrir `Editor-Colab.ipynb`, importer le JSON et exécuter le parcours existant. Le notebook reste générique et n’exige ni workflow Actions ni édition manuelle des épisodes du dépôt. Sa `REF` et les liens du site pointent sur cette PR pour permettre les tests avant fusion ; après fusion volontaire, `main` peut les remplacer.
+Sur Android : choisir **Démo 4 décors** dans l’éditeur, modifier si besoin, exporter, ouvrir `Editor-Colab.ipynb`, importer le JSON et exécuter le parcours existant. Le notebook reste générique et n’exige ni workflow Actions ni édition manuelle des épisodes du dépôt. Sa `REF` et les liens du site ciblent `main` pour utiliser le moteur publié après fusion volontaire de la PR.
 
 Le rendu et la validation audio ont été effectués dans l’environnement de travail, pas dans une session Google Colab réelle. La durée CPU varie suivant la session. Voir `VALIDATION.md` pour les mesures et les limites.

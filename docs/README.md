@@ -26,7 +26,7 @@ Les formulaires changent uniquement les champs visés, sauf le recalcul explicit
 
 ### JSON → Colab → MP4, sans modifier le dépôt
 
-Ouvrir [Editor-Colab](https://colab.research.google.com/github/Alexanst54/Destiny-Explained-Studio/blob/feat/voxel-environment-library/remotion/tts/Editor-Colab.ipynb) depuis le bouton du site. Avant fusion, le notebook référence cette branche de PR ; après fusion, `main` peut remplacer `feat/voxel-environment-library` dans le lien et `REF`.
+Ouvrir [Editor-Colab](https://colab.research.google.com/github/Alexanst54/Destiny-Explained-Studio/blob/main/remotion/tts/Editor-Colab.ipynb) depuis le bouton du site. Le lien du notebook et sa variable `REF` ciblent `main`. Après fusion de la PR, le notebook charge le moteur et la bibliothèque depuis `main`, sans changement de référence.
 
 1. Session CPU Python 3.12 ; exécuter l’installation.
 2. Choisir le JSON exporté dans les téléchargements Android. L’original est conservé dans `remotion/out/editor-upload.json` ; la copie stricte dans `out/editor-episode.json`, avec rapport des champs écartés.
