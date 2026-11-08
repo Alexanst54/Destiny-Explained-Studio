@@ -1,7 +1,7 @@
 import React,{useLayoutEffect} from 'react';
 import {useThree} from '@react-three/fiber';
 import {PerspectiveCamera} from 'three';
-import {Tower,Traveler} from '../episode/Environment';
+import {VoxelEnvironment} from '../library/Library';
 import {Block} from '../Models';
 import {particleSeed} from '../timeline';
 import type {Shot} from './schema';
@@ -17,6 +17,7 @@ export const FilmCameraRig:React.FC<{pose:FilmCamera}>=({pose})=>{
   return null;
 };
 export const Stage:React.FC<{environment:Shot['environment'];halo:boolean}>=({environment,halo})=>{
+  if(environment==='europa'||environment==='black-garden'||environment==='pyramid-interior')return <VoxelEnvironment location={environment}/>;
   if(environment==='light-space')return <group>
     <Block position={[0,-0.15,0]} size={[5,0.3,5]} color="#263746"/>
     {Array.from({length:24},(_,i)=><Block key={i}
@@ -24,8 +25,7 @@ export const Stage:React.FC<{environment:Shot['environment'];halo:boolean}>=({en
       size={[0.05,0.05,0.05]} color="#8deaff" emissive/>)}
   </group>;
   return <group>
-    <Tower/>
-    <Traveler halo={halo}/>
+    <VoxelEnvironment location="the-tower" halo={halo}/>
     {environment==='golden-age-vision'&&Array.from({length:10},(_,i)=><Block key={i}
       position={[(i-4.5)*0.65,1.5+particleSeed(i,7)*2,-6]} size={[0.08,0.08,0.08]} color="#ffd27a" emissive/>)}
     {environment==='collapse-vision'&&Array.from({length:12},(_,i)=><Block key={i}

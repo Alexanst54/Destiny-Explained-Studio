@@ -1,9 +1,9 @@
-import {clone,catalog,templateEpisode,newEpisode,parseImport,validateEpisode,compatibleCopy,sceneList,planFor,patch,reflow,invalidateVoice,setDuration,moveScene,addScene,deleteScene,addShot,moveShot,deleteShot,spreadShots,newAction,newEvent,frameCue,phraseCue,shotStart,secondsLabel,slug} from './model.mjs';
+import {clone,catalog,templateEpisode,demoEpisode,setEnvironment,newElement,removeProperty,newEpisode,parseImport,validateEpisode,compatibleCopy,sceneList,planFor,patch,reflow,invalidateVoice,setDuration,moveScene,addScene,deleteScene,addShot,moveShot,deleteShot,spreadShots,newAction,newEvent,frameCue,phraseCue,shotStart,secondsLabel,slug} from './model.mjs';
 const KEY='destiny-explained-editor-v1';
 const $=selector=>document.querySelector(selector);
 const list=v=>Array.isArray(v)?v:[];
 const record=v=>v&&typeof v==='object'&&!Array.isArray(v);
-const labels={frame:'Temps dans la scène',phrase:'Mots de narration','wide-tilt-up':'Plan large vers le ciel','slow-orbit-traveler':'Orbite lente du Voyageur','push-in-sky':'Travelling vers le ciel','close-up-ghost':'Gros plan du Spectre','medium-guardian':'Plan moyen du Gardien','wide-pullback':'Recul large',calm:'Calme',balanced:'Équilibrée',cinematic:'Cinématique',tower:'La Tour','golden-age-vision':'Vision de l’Âge d’or','collapse-vision':'Vision de l’Effondrement','light-space':'Espace de Lumière',guardian:'Gardien',ghost:'Spectre',idle:'Repos',walk:'Marche',run:'Course',jump:'Saut',fall:'Chute',resurrect:'Résurrection',combat:'Combat',interact:'Interaction','look-up':'Regard vers le ciel',hover:'Flottement',orbit:'Orbite',scan:'Scan',dolly:'Travelling',zoom:'Zoom',follow:'Suivi', 'close-up':'Gros plan',perspective:'Changement d’angle',particles:'Particules',explosion:'Explosion voxel',hologram:'Hologramme',beam:'Rayon lumineux',shake:'Secousse',cut:'Coupe franche',fade:'Fondu sombre',wipe:'Volet',match:'Raccord de caméra'};
+const labels={'the-tower':'La Tour et la Dernière Cité',europa:'Europe enneigée','black-garden':'Le Jardin noir','pyramid-interior':'Intérieur de Pyramide',scene:'Décor de la scène',custom:'Liste propre au plan','vex-structure':'Structure vex','light-fragments':'Fragments de Lumière',crystal:'Cristaux',snow:'Neige',still:'Immobile',pulse:'Pulsation lumineuse',drift:'Dérive',blizzard:'Tempête de neige',frame:'Temps dans la scène',phrase:'Mots de narration','wide-tilt-up':'Plan large vers le ciel','slow-orbit-traveler':'Orbite lente du Voyageur','push-in-sky':'Travelling vers le ciel','close-up-ghost':'Gros plan du Spectre','medium-guardian':'Plan moyen du Gardien','wide-pullback':'Recul large',calm:'Calme',balanced:'Équilibrée',cinematic:'Cinématique',tower:'La Tour','golden-age-vision':'Vision de l’Âge d’or','collapse-vision':'Vision de l’Effondrement','light-space':'Espace de Lumière',guardian:'Gardien',ghost:'Spectre',idle:'Repos',walk:'Marche',run:'Course',jump:'Saut',fall:'Chute',resurrect:'Résurrection',combat:'Combat',interact:'Interaction','look-up':'Regard vers le ciel',hover:'Flottement',orbit:'Orbite',scan:'Scan',dolly:'Travelling',zoom:'Zoom',follow:'Suivi', 'close-up':'Gros plan',perspective:'Changement d’angle',particles:'Particules',explosion:'Explosion voxel',hologram:'Hologramme',beam:'Rayon lumineux',shake:'Secousse',cut:'Coupe franche',fade:'Fondu sombre',wipe:'Volet',match:'Raccord de caméra'};
 const friendly=v=>labels[v]??v;
 function node(tag,attrs={},...children){
  const e=document.createElement(tag);
@@ -57,7 +57,7 @@ function numberField(title,value,change,{min,max,step='any',id,help}={}){
  snapshotInput(input);return node('label',{class:'field',htmlFor:input.id},node('span',{},title),input,help?small(help):null);
 }
 function selectField(title,value,options,change,id){
- const select=node('select',{id:id??slug('choix'),onChange:e=>commitControl(change,e.target.value)});
+ const select=node('select',{'aria-label':title,id:id??slug('choix'),onChange:e=>commitControl(change,e.target.value)});
  if(!options.includes(value))select.append(node('option',{value:typeof value==='string'?value:'',selected:true,disabled:true},value?`Non reconnu : ${String(value)}`:'À renseigner'));
  for(const option of options)select.append(node('option',{value:option,selected:option===value},friendly(option)));
  return node('label',{class:'field',htmlFor:select.id},node('span',{},title),select);
@@ -120,7 +120,7 @@ function shotCard(s,p,item,index){
  card.append(node('div',{class:'plan-body'},
   textField('Intention narrative',item.purpose,v=>changeField([...path,'purpose'],v),{help:'Quel élément de l’histoire ce plan aide-t-il à comprendre ?'}),
   cueFields(item,path),
-  node('div',{class:'two-col'},selectField('Décor du plan',item.environment,catalog.environments,v=>changeField([...path,'environment'],v)),selectField('Caméra',item.camera?.mode,catalog.cameras,v=>{
+  node('div',{class:'two-col'},selectField('Décor du plan',item.environment,catalog.environments,v=>replace(setEnvironment(episode,[...path,'environment'],v))),selectField('Caméra',item.camera?.mode,catalog.cameras,v=>{
    let e=patch(episode,[...path,'camera','mode'],v);const c=e.direction.scenes[pi].shots[index].camera;
    if(v==='orbit'){c.angleFrom??=-.15;c.angleTo??=.15;}if(v==='follow')c.track??=item.actors?.guardian?'guardian':'ghost';replace(e);
   })),
@@ -134,6 +134,7 @@ function shotCard(s,p,item,index){
    node('div',{class:'two-col'},numberField('Angle de champ départ (°)',item.camera?.fovFrom,v=>changeField([...path,'camera','fovFrom'],v),{min:25,max:65}),numberField('Angle de champ arrivée (°)',item.camera?.fovTo,v=>changeField([...path,'camera','fovTo'],v),{min:25,max:65})),
    ['follow'].includes(item.camera?.mode)||item.camera?.track?selectField('Personnage suivi',item.camera?.track,['guardian','ghost'],v=>changeField([...path,'camera','track'],v)):null,
    item.camera?.mode==='orbit'?node('div',{class:'two-col'},numberField('Orbite départ (radians)',item.camera?.angleFrom,v=>changeField([...path,'camera','angleFrom'],v),{min:-3,max:3}),numberField('Orbite arrivée (radians)',item.camera?.angleTo,v=>changeField([...path,'camera','angleTo'],v),{min:-3,max:3})):null),
+  elementControls([...path,'elements'],item.elements,{inherit:true}),
   actionTools(()=>{shotIndex=Math.max(0,index-1);replace(moveShot(episode,sceneIndex,index,-1),{message:'Plan déplacé. Ses ancrages sont conservés : vérifiez leur ordre.'});},()=>{shotIndex=index+1;replace(moveShot(episode,sceneIndex,index,1),{message:'Plan déplacé. Ses ancrages sont conservés : vérifiez leur ordre.'});},()=>{try{replace(deleteShot(episode,sceneIndex,index),{message:index===0?'Plan supprimé. Le nouveau premier plan commence à zéro. Annuler reste disponible.':'Plan supprimé.'});}catch(e){toast(e.message);}},index===0,index===p.shots.length-1,p.shots.length<=1)
  ));return card;
 }
@@ -148,6 +149,37 @@ function clipCard(item,index,kind){
    button('Supprimer',()=>{const e=clone(episode);e.direction.scenes[pi][family].splice(index,1);replace(e);},{class:'danger-quiet'})
   ));
 }
+const openElementPanels=new Set();
+function elementControls(path,items,{inherit=false}={}){
+ const panelKey=path.join('.');
+ const inherited=inherit&&items===undefined;
+ const entries=list(items);
+ const panel=node('details',{class:'advanced-controls voxel-elements',open:openElementPanels.has(panelKey)},node('summary',{},inherit?'Éléments voxel de ce plan':'Éléments voxel de la scène'),
+  small('Éléments de décor réutilisables. Le Gardien et le Spectre principaux restent pilotés par les animations du récit. Maximum 12 éléments et 256 particules par liste.'),
+  inherit?selectField('Source des éléments',inherited?'scene':'custom',['scene','custom'],value=>{
+   if(value==='scene')replace(removeProperty(episode,path));
+   else replace(patch(episode,path,clone(sceneList(episode)[sceneIndex]?.elements??[])));
+  }):null,
+  inherited?small('Les éléments de la scène sont hérités. Une liste propre au plan les remplace ; une liste vide les masque.'):node('div',{class:'element-list'},
+   button('+ Ajouter un élément',()=>replace(patch(episode,path,[...entries,newElement()])),{class:'secondary',disabled:entries.length>=12}),
+   ...entries.map((item,index)=>{
+    if(!record(item))return small('Élément invalide : utilisez le JSON avancé.');
+    const itemPath=[...path,index],particle=['snow','particles','light-fragments'].includes(item.type);
+    return node('fieldset',{class:'element-card'},node('legend',{},`Élément ${index+1} · ${friendly(item.type)}`),
+     selectField('Type d’élément',item.type,catalog.elementTypes,value=>{
+      let e=patch(episode,[...itemPath,'type'],value);e=patch(e,[...itemPath,'animation'],catalog.elementAnimations[value][0]);replace(e);
+     }),
+     selectField('Animation de l’élément',item.animation??catalog.elementAnimations[item.type]?.[0],catalog.elementAnimations[item.type]??[],v=>changeField([...itemPath,'animation'],v)),
+     vectorFields('Position de l’élément',item.position,[...itemPath,'position']),
+     numberField('Échelle',item.scale??1,v=>changeField([...itemPath,'scale'],v),{min:.25,max:3,step:.1}),
+     particle?node('div',{class:'two-col'},numberField('Nombre de particules',item.count??24,v=>changeField([...itemPath,'count'],v),{min:1,max:64,step:1}),numberField('Force de l’effet',item.strength??.65,v=>changeField([...itemPath,'strength'],v),{min:0,max:1,step:.1})):null,
+     node('details',{class:'advanced-controls'},node('summary',{},'Rotation et graine déterministe'),vectorFields('Rotation (radians)',item.rotation??[0,0,0],[...itemPath,'rotation']),numberField('Graine',item.seed??0,v=>changeField([...itemPath,'seed'],v),{min:0,max:65535,step:1})),
+     button('Supprimer cet élément',()=>{const e=clone(entries);e.splice(index,1);replace(patch(episode,path,e));},{class:'danger-quiet'}));
+   })),
+ );
+ panel.addEventListener('toggle',()=>{if(panel.isConnected){if(panel.open)openElementPanels.add(panelKey);else openElementPanels.delete(panelKey);}});
+ return panel;
+}
 function legacyControls(s){
  return node('section',{class:'card'},node('h3',{},'Mise en scène classique'),selectField('Caméra de scène',s.camera,catalog.basicCameras,v=>changeField(['scenes',sceneIndex,'camera'],v)),small('Les actions classiques sont conservées dans le JSON avancé. Ajouter des plans active le moteur cinématique ; leurs animations se règlent ensuite séparément.'),button('Activer les plans cinématiques',()=>{try{replace(addShot(episode,sceneIndex,0),{message:'Plans cinématiques activés. Les anciennes actions restent conservées dans le JSON.'});}catch(e){toast(e.message);}},{class:'secondary'}));
 }
@@ -159,6 +191,9 @@ function sceneEditor(){
   node('div',{class:'section-heading'},node('div',{},node('p',{class:'eyebrow'},`SCÈNE ${sceneIndex+1} / ${sceneList(episode).length}`),node('h2',{},'Le récit, puis les plans')),node('span',{class:'pill',id:'scene-duration-label'},secondsLabel(s.durationFrames))),
   node('div',{class:'card'},textField('Narration anglaise',s.narration,v=>changeField(['scenes',sceneIndex,'narration'],v,{dirty:true}),{area:true,id:'narration',rows:5,help:'Ce texte sera lu par Kokoro. Une modification remet la voix et les sous-titres en attente.'}),
    numberField('Durée de la scène (secondes)',Number(s.durationFrames)/(episode.format?.fps??30),v=>edit(setDuration(episode,sceneIndex,v===null?NaN:v)),{id:'scene-duration',min:1,step:.1,help:'Arrondie à l’image près. Les débuts des scènes suivantes sont recalculés ; les plans, animations et effets restent inchangés et sont revérifiés.'}),
+   selectField('Décor de la scène',s.location,catalog.locations,v=>replace(setEnvironment(episode,['scenes',sceneIndex,'location'],v)),'scene-location'),
+   small('Les plans réglés sur « Décor de la scène » suivent ce choix. Les anciens plans avec un décor explicite gardent leur choix.'),
+   elementControls(['scenes',sceneIndex,'elements'],s.elements),
    actionTools(()=>{const i=sceneIndex;sceneIndex--;replace(moveScene(episode,i,-1));},()=>{const i=sceneIndex;sceneIndex++;replace(moveScene(episode,i,1));},()=>{const i=sceneIndex;sceneIndex=Math.max(0,i-1);replace(deleteScene(episode,i),{message:'Scène supprimée. Annuler reste disponible.'});},sceneIndex===0,sceneIndex===sceneList(episode).length-1,sceneList(episode).length<=1)),
   !p?legacyControls(s):node('div',{},node('div',{class:'tabs',role:'tablist','aria-label':'Mise en scène'},...['shots','actions','events'].map(key=>button(`${key==='shots'?'Plans':key==='actions'?'Animations':'Effets'} (${list(p[key]).length})`,()=>{tab=key;render();},{role:'tab','aria-selected':tab===key,class:tab===key?'active':''}))),
    tab==='shots'?node('section',{class:'tab-panel',role:'tabpanel','aria-label':'Plans'},small('Débuts vocaux estimés. Balayez la chronologie des plans ; chaque intention doit servir la narration.'),node('div',{id:'shot-timeline-region'},shotTimeline(s,p)),
@@ -198,7 +233,7 @@ function renderContent(){
   mode=value;save();render();},{'aria-pressed':mode===value,class:mode===value?'selected':''})));
  const librarySelect=node('select',{id:'project-select','aria-label':'Projet enregistré',onChange:e=>switchProject(e.target.value)},...library.map(p=>node('option',{value:p.key,selected:p.key===active},typeof p.episode?.title==='string'?p.episode.title:'Sans titre')));
  app.append(file,node('section',{class:'intro'},node('div',{},node('p',{class:'eyebrow'},'VOTRE PROCHAIN SHORT'),node('h1',{},'Une histoire. Plusieurs plans.'),node('p',{class:'intro-copy'},'Écrivez ici. Générez votre vidéo dans Colab. Vos projets restent sur votre téléphone.')),node('div',{class:'hero-art','aria-hidden':'true'},node('i'),node('i'),node('i'))),
-  node('section',{class:'project-shelf'},node('label',{},node('span',{class:'eyebrow'},'MES PROJETS'),librarySelect),node('div',{class:'button-row'},button('+ Nouveau',()=>createProject(newEpisode(),'Nouvel épisode créé.')),button('Modèle Voyageur',()=>createProject(templateEpisode(),'Modèle du Voyageur chargé, sans modification.')))),
+  node('section',{class:'project-shelf'},node('label',{},node('span',{class:'eyebrow'},'MES PROJETS'),librarySelect),node('div',{class:'button-row'},button('+ Nouveau',()=>createProject(newEpisode(),'Nouvel épisode créé.')),button('Modèle Voyageur',()=>createProject(templateEpisode(),'Modèle du Voyageur chargé, sans modification.')),button('Démo 4 décors',()=>createProject(demoEpisode(),'Démonstration des quatre décors chargée.')))),
   node('section',{class:'project-head'},node('div',{},node('p',{class:'eyebrow'},'ÉPISODE EN COURS'),node('h2',{id:'project-heading'},typeof episode.title==='string'?episode.title:'Épisode sans titre'),node('p',{id:'episode-stat',class:'hint'},`${sceneList(episode).length} scènes · ${secondsLabel(episode.format?.durationFrames)} · 1080 × 1920`)),modes),
   node('div',{class:'edit-toolbar'},node('span',{id:'save-status',class:storageError?'error-text':'hint'},storageError||'Sauvegarde locale automatique'),node('div',{class:'button-row'},button('↶ Annuler',()=>{if(rawDirty()){toast('Appliquez ou annulez le brouillon JSON avant de revenir en arrière.');return;}if(!undo.length)return;redo.push(clone(episode));replace(undo.pop(),{remember:false});},{id:'undo-button',disabled:undo.length===0}),button('↷ Rétablir',()=>{if(rawDirty()){toast('Appliquez ou annulez le brouillon JSON avant de rétablir.');return;}if(!redo.length)return;undo.push(clone(episode));replace(redo.pop(),{remember:false});},{id:'redo-button',disabled:redo.length===0}),button('Enregistrer',()=>{save();toast(storageError||'Projet enregistré sur cet appareil.');}))),
   mode==='beginner'?node('section',{class:'card episode-fields'},textField('Titre de l’épisode',episode.title,v=>changeField(['title'],v),{id:'episode-title'}),
@@ -208,7 +243,7 @@ function renderContent(){
   mode==='advanced'?advancedEditor():node('div',{class:'workspace'},node('aside',{class:'scene-rail','aria-label':'Scènes'},node('div',{class:'section-heading'},node('h2',{},'Scènes'),button('+',()=>{const e=addScene(episode);sceneIndex=sceneList(e).length-1;shotIndex=0;replace(e);},{'aria-label':'Ajouter une scène'})),node('div',{class:'scene-list'},...sceneList(episode).map((s,i)=>button([node('span',{class:'eyebrow'},`SCÈNE ${String(i+1).padStart(2,'0')}`),node('strong',{},typeof s?.narration==='string'?s.narration.slice(0,65):'À renseigner'),node('small',{},secondsLabel(s?.durationFrames))],()=>{sceneIndex=i;shotIndex=0;render();},{class:i===sceneIndex?'scene-button selected':'scene-button','aria-pressed':i===sceneIndex})))),sceneEditor()),
   node('div',{id:'validation-region'},validationBox()),
   node('section',{class:'card transfer'},node('p',{class:'eyebrow'},'DE L’ÉCRITURE À LA VIDÉO'),node('h2',{},'La suite se passe dans Colab'),node('p',{},'Téléchargez une copie pour rendu, ouvrez le notebook puis importez ce fichier depuis votre téléphone. Kokoro crée la voix ; Remotion calcule le MP4.'),
-   node('div',{class:'button-row'},button('Copie pour rendu',()=>exportFile(true),{class:'secondary',id:'export-render'}),node('a',{class:'button-link',href:'https://colab.research.google.com/github/Alexanst54/Destiny-Explained-Studio/blob/feat/mobile-json-editor/remotion/tts/Editor-Colab.ipynb',target:'_blank',rel:'noopener noreferrer'},'Ouvrir Colab ↗')),
+   node('div',{class:'button-row'},button('Copie pour rendu',()=>exportFile(true),{class:'secondary',id:'export-render'}),node('a',{class:'button-link',href:'https://colab.research.google.com/github/Alexanst54/Destiny-Explained-Studio/blob/main/remotion/tts/Editor-Colab.ipynb',target:'_blank',rel:'noopener noreferrer'},'Ouvrir Colab ↗')),
    small('Le JSON complet conserve tous les champs. La copie pour rendu écarte uniquement les champs non reconnus par le schéma actuel, sans changer votre projet. Aucun MP4 n’est généré dans ce site.'),node('a',{href:'./GUIDE.html'},'Aide et publication GitHub Pages')),
   node('footer',{class:'page-footer'},'Projet de fans non officiel · Sans affiliation avec Bungie · Aucune connexion à un compte'),
   node('nav',{class:'bottom-bar','aria-label':'Fichiers'},button('↥ Importer',()=>$('#import-file').click(),{id:'import-button'}),button('↓ Exporter JSON',()=>exportFile(false),{class:'primary',id:'export-button'}),node('a',{href:'#validation-region',class:'button-link'},'Validation'))

@@ -5,7 +5,8 @@ import {useThree} from '@react-three/fiber';
 import {Color} from 'three';
 import {Block, Ghost, Guardian} from '../Models';
 import {LightParticles, ResurrectionBeam} from '../VoxelResurrection';
-import {Tower, Traveler} from './Environment';
+import {VoxelEnvironment,VoxelElements} from '../library/Library';
+import {environmentStyle} from '../library/catalog';
 import {episodeSchema, validateWords} from './schema';
 import type {VoxelEpisodeDef, AlignedWord} from './schema';
 import {cameraPose, captionWords, findScene, sceneState} from './state';
@@ -36,7 +37,8 @@ export const VoxelEpisode: React.FC<VoxelEpisodeProps> = (props) => {
   const darkness = fx('sky-darken') ? 0.25 + state.progress * 0.7 : 0;
   const lightning = fx('distant-lightning') && ((state.local >= 60 && state.local < 64) ||
     (state.local >= 180 && state.local < 185));
-  const sky = new Color('#101a2b').lerp(new Color('#030610'), darkness);
+  const style = environmentStyle(scene.location==='the-tower'?'tower':scene.location);
+  const sky = new Color(style.sky).lerp(new Color('#030610'), darkness);
   const captions = captionWords(scene, frame, preview ? undefined : words);
   return <AbsoluteFill style={{backgroundColor:'#101a2b'}}>
     <ThreeCanvas width={width} height={height} dpr={1} camera={{fov:42,near:0.1,far:80,
@@ -44,12 +46,12 @@ export const VoxelEpisode: React.FC<VoxelEpisodeProps> = (props) => {
       <color attach="background" args={[sky]}/>
       <fog attach="fog" args={[sky,24,50]}/>
       <Camera pose={cameraPose(scene.camera,state.progress)}/>
-      <ambientLight intensity={lightning ? 2 : 1.1-darkness*0.6}/>
-      <directionalLight position={[4,7,5]} intensity={2.4-darkness*1.5} color="#ffe2b5"/>
-      <directionalLight position={[-5,4,-3]} intensity={2} color="#8aa8ff"/>
+      <ambientLight intensity={lightning ? 2 : style.ambient-darkness*0.6}/>
+      <directionalLight position={[4,7,5]} intensity={2.4-darkness*1.5} color={style.key}/>
+      <directionalLight position={[-5,4,-3]} intensity={2} color={style.fill}/>
       {fx('golden-glow') && <pointLight position={[0,6,-6]} color="#ffe9a6" intensity={35} distance={15}/>}
-      <Tower/>
-      <Traveler halo={fx('traveler-halo')}/>
+      <VoxelEnvironment location={scene.location} halo={fx('traveler-halo')}/>
+      <VoxelElements items={scene.elements??[]} frame={state.local}/>
       <Guardian rise={state.rise} t={state.t} headTilt={state.lookUp ? -0.28*state.progress : 0}
         position={[state.guardianX,state.guardianY,0]} rotation={[0,0,state.guardianRotation]}/>
       <Ghost t={state.t} position={[state.ghostX,state.ghostY,0]}

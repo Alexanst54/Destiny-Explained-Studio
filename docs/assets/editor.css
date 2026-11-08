@@ -3,3 +3,5 @@
 .guide{max-width:780px;margin:auto;padding:32px 20px 100px;line-height:1.65}.guide h2{margin-top:32px}
 
 h1,h2,h3,.plan-card summary,.scene-button strong{overflow-wrap:anywhere}.intro>div:first-child{min-width:0}
+
+.element-list,.element-card{display:grid;gap:14px}.element-card{margin-top:14px}.voxel-elements{min-width:0}

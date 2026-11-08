@@ -1,0 +1,818 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "id": "voxel-worlds-demo",
+  "title": "Worlds of Destiny",
+  "language": "en-US",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationFrames": 480
+  },
+  "style": "classic-voxel",
+  "setting": "the-tower",
+  "disclaimer": "Unofficial fan-made educational video. Not affiliated with Bungie.",
+  "audio": {
+    "voiceover": {
+      "enabled": true,
+      "language": "en-US",
+      "source": "assets/audio/traveler-en.wav",
+      "status": "to-generate"
+    },
+    "music": null
+  },
+  "characters": [
+    {
+      "id": "guardian",
+      "model": "voxel-guardian-v1"
+    },
+    {
+      "id": "ghost",
+      "model": "voxel-ghost-v1"
+    }
+  ],
+  "environments": [
+    {
+      "id": "the-tower",
+      "model": "voxel-tower-v1",
+      "props": [
+        "traveler-sphere",
+        "last-city-silhouette",
+        "tower-balcony"
+      ]
+    },
+    {
+      "id": "europa",
+      "model": "voxel-europa-v1",
+      "props": [
+        "ice-ridges",
+        "snowfield",
+        "research-outpost"
+      ]
+    },
+    {
+      "id": "black-garden",
+      "model": "voxel-black-garden-v1",
+      "props": [
+        "vex-gate",
+        "garden-terraces",
+        "red-flowers"
+      ]
+    },
+    {
+      "id": "pyramid-interior",
+      "model": "voxel-pyramid-v1",
+      "props": [
+        "stepped-walls",
+        "resonant-altar",
+        "amber-trim"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "world-the-tower",
+      "startFrame": 0,
+      "durationFrames": 120,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        },
+        {
+          "actor": "ghost",
+          "animation": "hover"
+        }
+      ],
+      "effects": [
+        "soft-daylight"
+      ],
+      "narration": "The Tower overlooks humanity's Last City.",
+      "elements": [
+        {
+          "id": "city-patrol",
+          "type": "guardian",
+          "position": [
+            -3.8,
+            0,
+            -2
+          ],
+          "scale": 0.7,
+          "animation": "walk"
+        },
+        {
+          "id": "city-light",
+          "type": "light-fragments",
+          "position": [
+            0,
+            1,
+            -4
+          ],
+          "animation": "pulse",
+          "count": 16,
+          "seed": 12
+        }
+      ]
+    },
+    {
+      "id": "world-europa",
+      "startFrame": 120,
+      "durationFrames": 120,
+      "location": "europa",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        },
+        {
+          "actor": "ghost",
+          "animation": "hover"
+        }
+      ],
+      "effects": [
+        "soft-daylight"
+      ],
+      "narration": "On Europa, ancient secrets sleep beneath ice.",
+      "elements": [
+        {
+          "id": "snowstorm",
+          "type": "snow",
+          "position": [
+            0,
+            0,
+            -2
+          ],
+          "animation": "blizzard",
+          "count": 64,
+          "strength": 0.8,
+          "seed": 42
+        },
+        {
+          "id": "ice-crystals",
+          "type": "crystal",
+          "position": [
+            2.8,
+            0,
+            -2
+          ],
+          "scale": 1.4,
+          "animation": "pulse"
+        }
+      ]
+    },
+    {
+      "id": "world-black-garden",
+      "startFrame": 240,
+      "durationFrames": 120,
+      "location": "black-garden",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        },
+        {
+          "actor": "ghost",
+          "animation": "hover"
+        }
+      ],
+      "effects": [
+        "soft-daylight"
+      ],
+      "narration": "The Black Garden hides mysterious Vex structures.",
+      "elements": [
+        {
+          "id": "vex-ruin",
+          "type": "vex-structure",
+          "position": [
+            3,
+            0,
+            -3
+          ],
+          "scale": 1.2,
+          "animation": "pulse"
+        },
+        {
+          "id": "garden-particles",
+          "type": "particles",
+          "position": [
+            0,
+            1,
+            -3
+          ],
+          "animation": "drift",
+          "count": 24,
+          "seed": 32
+        }
+      ]
+    },
+    {
+      "id": "world-pyramid-interior",
+      "startFrame": 360,
+      "durationFrames": 120,
+      "location": "pyramid-interior",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        },
+        {
+          "actor": "ghost",
+          "animation": "hover"
+        }
+      ],
+      "effects": [
+        "soft-daylight"
+      ],
+      "narration": "Pyramid interiors echo the power of Darkness.",
+      "elements": [
+        {
+          "id": "pyramid-light",
+          "type": "light-fragments",
+          "position": [
+            0,
+            2,
+            -5
+          ],
+          "animation": "pulse",
+          "count": 24,
+          "seed": 63
+        },
+        {
+          "id": "floating-ghost",
+          "type": "ghost",
+          "position": [
+            -2.8,
+            2.3,
+            -2
+          ],
+          "animation": "hover",
+          "scale": 0.7
+        }
+      ]
+    }
+  ],
+  "subtitles": {
+    "mode": "word-aligned",
+    "language": "en-US",
+    "source": "assets/subtitles/traveler-en.words.json",
+    "status": "pending-voiceover-alignment",
+    "maxLines": 2,
+    "safeAreaBottomPx": 340
+  },
+  "render": {
+    "composition": "VoxelCinematicEpisode",
+    "output": "out/voxel-worlds-demo.mp4",
+    "codec": "h264"
+  },
+  "notes": [
+    "16-second procedural library demo; four locations, two purposeful shots per scene.",
+    "Original episode and all other compositions remain available."
+  ],
+  "direction": {
+    "version": 1,
+    "intensity": "balanced",
+    "scenes": [
+      {
+        "sceneId": "world-the-tower",
+        "shots": [
+          {
+            "id": "world-the-tower-shot-1",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the location described by the narrator.",
+            "environment": "scene",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2.6,
+                4.2,
+                12
+              ],
+              "to": [
+                1.6,
+                4,
+                11
+              ],
+              "targetFrom": [
+                0,
+                2.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                2.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          },
+          {
+            "id": "world-the-tower-shot-2",
+            "at": {
+              "sceneFrame": 60
+            },
+            "purpose": "Reveal the geometry and atmosphere of this destination.",
+            "environment": "scene",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "orbit",
+              "from": [
+                -2.5,
+                3.5,
+                10
+              ],
+              "to": [
+                -1.4,
+                3.7,
+                9.5
+              ],
+              "targetFrom": [
+                0,
+                2.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                2.8,
+                -4
+              ],
+              "fovFrom": 44,
+              "fovTo": 42,
+              "angleFrom": -0.1,
+              "angleTo": 0.1
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [
+          {
+            "id": "world-the-tower-walk",
+            "actor": "guardian",
+            "animation": "walk",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 110,
+            "from": [
+              -1,
+              0.02,
+              1
+            ],
+            "to": [
+              0.5,
+              0.02,
+              0.5
+            ],
+            "height": 1.3,
+            "purpose": "The Guardian explores the location being described."
+          },
+          {
+            "id": "world-the-tower-ghost",
+            "actor": "ghost",
+            "animation": "orbit",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 120,
+            "from": [
+              0.6,
+              3.2,
+              0
+            ],
+            "to": [
+              0.7,
+              3.4,
+              0
+            ],
+            "height": 1.3,
+            "purpose": "The Ghost accompanies the exploration."
+          }
+        ],
+        "events": []
+      },
+      {
+        "sceneId": "world-europa",
+        "shots": [
+          {
+            "id": "world-europa-shot-1",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the location described by the narrator.",
+            "environment": "scene",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2.6,
+                4.2,
+                12
+              ],
+              "to": [
+                1.6,
+                4,
+                11
+              ],
+              "targetFrom": [
+                0,
+                2.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                2.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 8
+            }
+          },
+          {
+            "id": "world-europa-shot-2",
+            "at": {
+              "sceneFrame": 60
+            },
+            "purpose": "Reveal the geometry and atmosphere of this destination.",
+            "environment": "scene",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "orbit",
+              "from": [
+                -2.5,
+                3.5,
+                10
+              ],
+              "to": [
+                -1.4,
+                3.7,
+                9.5
+              ],
+              "targetFrom": [
+                0,
+                2.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                2.8,
+                -4
+              ],
+              "fovFrom": 44,
+              "fovTo": 42,
+              "angleFrom": -0.1,
+              "angleTo": 0.1
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [
+          {
+            "id": "world-europa-walk",
+            "actor": "guardian",
+            "animation": "walk",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 110,
+            "from": [
+              -1,
+              0.02,
+              1
+            ],
+            "to": [
+              0.5,
+              0.02,
+              0.5
+            ],
+            "height": 1.3,
+            "purpose": "The Guardian explores the location being described."
+          },
+          {
+            "id": "world-europa-ghost",
+            "actor": "ghost",
+            "animation": "orbit",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 120,
+            "from": [
+              0.6,
+              3.2,
+              0
+            ],
+            "to": [
+              0.7,
+              3.4,
+              0
+            ],
+            "height": 1.3,
+            "purpose": "The Ghost accompanies the exploration."
+          }
+        ],
+        "events": []
+      },
+      {
+        "sceneId": "world-black-garden",
+        "shots": [
+          {
+            "id": "world-black-garden-shot-1",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the location described by the narrator.",
+            "environment": "scene",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2.6,
+                4.2,
+                12
+              ],
+              "to": [
+                1.6,
+                4,
+                11
+              ],
+              "targetFrom": [
+                0,
+                2.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                2.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 8
+            }
+          },
+          {
+            "id": "world-black-garden-shot-2",
+            "at": {
+              "sceneFrame": 60
+            },
+            "purpose": "Reveal the geometry and atmosphere of this destination.",
+            "environment": "scene",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "orbit",
+              "from": [
+                -2.5,
+                3.5,
+                10
+              ],
+              "to": [
+                -1.4,
+                3.7,
+                9.5
+              ],
+              "targetFrom": [
+                0,
+                2.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                2.8,
+                -4
+              ],
+              "fovFrom": 44,
+              "fovTo": 42,
+              "angleFrom": -0.1,
+              "angleTo": 0.1
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [
+          {
+            "id": "world-black-garden-walk",
+            "actor": "guardian",
+            "animation": "walk",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 110,
+            "from": [
+              -1,
+              0.02,
+              1
+            ],
+            "to": [
+              0.5,
+              0.02,
+              0.5
+            ],
+            "height": 1.3,
+            "purpose": "The Guardian explores the location being described."
+          },
+          {
+            "id": "world-black-garden-ghost",
+            "actor": "ghost",
+            "animation": "orbit",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 120,
+            "from": [
+              0.6,
+              3.2,
+              0
+            ],
+            "to": [
+              0.7,
+              3.4,
+              0
+            ],
+            "height": 1.3,
+            "purpose": "The Ghost accompanies the exploration."
+          }
+        ],
+        "events": []
+      },
+      {
+        "sceneId": "world-pyramid-interior",
+        "shots": [
+          {
+            "id": "world-pyramid-interior-shot-1",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the location described by the narrator.",
+            "environment": "scene",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2.6,
+                4.2,
+                12
+              ],
+              "to": [
+                1.6,
+                4,
+                11
+              ],
+              "targetFrom": [
+                0,
+                2.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                2.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 8
+            }
+          },
+          {
+            "id": "world-pyramid-interior-shot-2",
+            "at": {
+              "sceneFrame": 60
+            },
+            "purpose": "Reveal the geometry and atmosphere of this destination.",
+            "environment": "scene",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "orbit",
+              "from": [
+                -2.5,
+                3.5,
+                10
+              ],
+              "to": [
+                -1.4,
+                3.7,
+                9.5
+              ],
+              "targetFrom": [
+                0,
+                2.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                2.8,
+                -4
+              ],
+              "fovFrom": 44,
+              "fovTo": 42,
+              "angleFrom": -0.1,
+              "angleTo": 0.1
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [
+          {
+            "id": "world-pyramid-interior-walk",
+            "actor": "guardian",
+            "animation": "walk",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 110,
+            "from": [
+              -1,
+              0.02,
+              1
+            ],
+            "to": [
+              0.5,
+              0.02,
+              0.5
+            ],
+            "height": 1.3,
+            "purpose": "The Guardian explores the location being described."
+          },
+          {
+            "id": "world-pyramid-interior-ghost",
+            "actor": "ghost",
+            "animation": "orbit",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 120,
+            "from": [
+              0.6,
+              3.2,
+              0
+            ],
+            "to": [
+              0.7,
+              3.4,
+              0
+            ],
+            "height": 1.3,
+            "purpose": "The Ghost accompanies the exploration."
+          }
+        ],
+        "events": []
+      }
+    ]
+  }
+}
