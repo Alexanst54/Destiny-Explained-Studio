@@ -273,6 +273,8 @@ def generate(args):
     relative = folder.relative_to(ROOT / "public").as_posix()
     ready["audio"]["voiceover"].update(enabled=True, status="ready", source=f"{relative}/narration.wav")
     ready["subtitles"].update(status="ready", source=f"{relative}/words.json")
+    if ready.get("shorts") is not None:
+        ready["shorts"]["alignedWords"] = all_words
     write_json(ready_path, ready)
     try:
         subprocess.run(["node", "--experimental-strip-types", str(ROOT / "scripts/episode.mjs"),

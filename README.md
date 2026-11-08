@@ -46,3 +46,7 @@ L’[Atlas sourcé et extensible](remotion/atlas/README.md) ajoute des référen
 ## Living Worlds 0.4
 
 [Personnages, populations, animations et météo CPU](remotion/living/README.md) étendent l’Atlas sans changer ses identifiants. L’éditeur `docs/` ajoute **Personnages**, **Météo**, trois démos historiques et une réouverture hors ligne après la première visite. [Rapport, fidélité visuelle et limites](remotion/living/REPORT.md). Publication GitHub Pages toujours **main /docs**, avec le même parcours Android → Colab.
+
+## Hybrid Shorts Director 0.5
+
+Le [storyboard hybride](remotion/hybrid/README.md) réunit voxel, cartes schématiques, timelines, graphiques et texte, avec captions dynamiques et aperçu partagé dans le navigateur. [Guide mobile sans code](remotion/hybrid/MOBILE.md), [parcours Colab CPU](remotion/hybrid/COLAB.md) et [rapport des tests/rendu](remotion/hybrid/REPORT.md). Démo de référence : `remotion/episodes/hybrid_riis.json`, 35 secondes avec Kokoro. Les projets précédents restent accessibles dans l’éditeur existant ; aucune fusion ou publication n’est automatisée.

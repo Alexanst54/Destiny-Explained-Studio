@@ -17,7 +17,7 @@ import type {VoxelEpisodeDef, AlignedWord} from './schema';
 import {cameraPose, captionWords, findScene, sceneState} from './state';
 import type {CameraPose} from './state';
 
-export type VoxelEpisodeProps = {episode: VoxelEpisodeDef; preview: boolean; alignedWords?: AlignedWord[]};
+export type VoxelEpisodeProps = {episode: VoxelEpisodeDef; preview: boolean; alignedWords?: AlignedWord[]; visualOnly?:boolean; draftQuality?:boolean};
 const Camera: React.FC<{pose: CameraPose}> = ({pose}) => {
   const {camera} = useThree();
   useLayoutEffect(() => {

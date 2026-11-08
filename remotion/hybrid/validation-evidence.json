@@ -1,0 +1,174 @@
+{
+  "baseCommit": "3e120dfc4e6a01fa7eaba03800d9ccce6eea439b",
+  "render": {
+    "exitCode": 0,
+    "wallSeconds": 298.16,
+    "maxChildRssKiB": 618656,
+    "concurrency": 1,
+    "gl": "swangle",
+    "note": "Maximum RSS of observed children, not total concurrent Chromium memory. Other checks may run during rendering."
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "30/1",
+        "duration": "35.000000",
+        "nb_frames": "1050",
+        "side_data_list": [
+          {}
+        ]
+      },
+      {
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "duration": "35.008000",
+        "nb_frames": "1643"
+      }
+    ],
+    "format": {
+      "duration": "35.008000",
+      "size": "7005278"
+    }
+  },
+  "videoSha256": "aed4e002a437268c4a5fb83f1bfd87ed775137b535d60a850b697470369a23a5",
+  "audio": {
+    "durationSeconds": 35.0,
+    "words": 64,
+    "wordsWithAudio": 64,
+    "minWordRms": 0.019097888842225075,
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "audioDurationSeconds": 35.008,
+    "videoDurationSeconds": 35.0,
+    "audioChecks": [
+      {
+        "scene": "hook",
+        "lagMs": 0.0,
+        "correlation": 0.9701988101005554
+      },
+      {
+        "scene": "riis-before",
+        "lagMs": 0.0,
+        "correlation": 0.9999544024467468
+      },
+      {
+        "scene": "departure-map",
+        "lagMs": 0.0,
+        "correlation": 0.9972258806228638
+      },
+      {
+        "scene": "exodus",
+        "lagMs": 0.0,
+        "correlation": 0.9994442462921143
+      },
+      {
+        "scene": "conclusion",
+        "lagMs": 0.0,
+        "correlation": 0.9987278580665588
+      }
+    ],
+    "method": "Source waveform vs decoded AAC, not an independent annotation of word boundaries"
+  },
+  "stills": {
+    "stills": [
+      {
+        "name": "hybrid_riis",
+        "frame": 45,
+        "sha256": "752e29293a422403000a13e9d3e0eb0b84e84857cf343111b2f5e195f662f187"
+      },
+      {
+        "name": "hybrid_riis",
+        "frame": 390,
+        "sha256": "8b8ad03ee5bb23b7ab2e1c7053b2ba16ca960112498d2f07564894a75ebb4cc3"
+      },
+      {
+        "name": "hybrid_riis",
+        "frame": 45,
+        "sha256": "752e29293a422403000a13e9d3e0eb0b84e84857cf343111b2f5e195f662f187"
+      },
+      {
+        "name": "hybrid_riis",
+        "frame": 210,
+        "sha256": "9a2464c844476be2a0a38339d1bdd83dd02761e3f382f1f4eba10cc5703c36ff"
+      },
+      {
+        "name": "hybrid_riis",
+        "frame": 600,
+        "sha256": "57e025a3532118a19f1af46c97c87c4121ea8d49fdb4c30845dbe8392e640eb4"
+      },
+      {
+        "name": "hybrid_oryx",
+        "frame": 540,
+        "sha256": "660b3f60ed644252f87d9a4227c922b1af1cf9602892d1d743ab985ce241fffe"
+      },
+      {
+        "name": "hybrid_black_garden",
+        "frame": 450,
+        "sha256": "55825290bd4fae2dacad4c6e6e1d189ab1064f7da142edd8b359c69afd5fa355"
+      },
+      {
+        "name": "traveler_episode_002",
+        "frame": 120,
+        "sha256": "4d17f2e72480d20ae0355a7552dc236cad122792e25f5811d98fc1482dd12def"
+      },
+      {
+        "name": "atlas_demo",
+        "frame": 120,
+        "sha256": "2d9723bb392d73fee27104bfbb0f372c2077ecb426b9c4cd5c43ac583cbaad19"
+      },
+      {
+        "name": "living_europa",
+        "frame": 120,
+        "sha256": "4434d67392d6d08770112f1880a63b132a3cdf1fa18eb7fc88259891fc1572df"
+      }
+    ],
+    "alignedPreviewFinalHashes": [
+      "54ac81e3ff099a5826dffd9ce03be41fd2c6cd548eecb7f11a3c07b75a1fdc8e",
+      "54ac81e3ff099a5826dffd9ce03be41fd2c6cd548eecb7f11a3c07b75a1fdc8e"
+    ]
+  },
+  "legacyPngMatches": {
+    "traveler_episode_002": true,
+    "atlas_demo": true,
+    "living_europa": true
+  },
+  "optionalAudioMix": {
+    "frames": 30,
+    "durationSeconds": 1,
+    "codec": "aac",
+    "originalToneHz": 220,
+    "differenceRms": 0.03881939873099327,
+    "provenance": "Original generated oscillator; no external asset",
+    "note": "Difference from the same narration-only interval confirms an audible mixed track; envelope/ducking also covered by unit tests."
+  },
+  "tests": {
+    "lastFullNodePassed": 56,
+    "lastFullPythonPassed": 11,
+    "latestHybridUnitPassed": 9,
+    "browserViewports": [
+      320,
+      360,
+      393,
+      1280
+    ],
+    "browserLegacy": true,
+    "browserLiving": true,
+    "browserOffline": true,
+    "browserHybrid": true,
+    "offlineKokoroSynthesis": true,
+    "finalRepeatOutsideSandbox": "Not executed: automatic approval review hit usage limit; previous successful runs are recorded separately"
+  },
+  "limitations": [
+    "No physical Android test",
+    "No remote Google Colab run",
+    "Word boundaries are Kokoro predictions, not independent annotations",
+    "Memory is partial process RSS, not total Chromium memory"
+  ]
+}
