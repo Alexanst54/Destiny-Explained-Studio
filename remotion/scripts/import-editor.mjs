@@ -1,0 +1,12 @@
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {parseImport,validateEpisode,compatibleCopy} from '../../editor/model.mjs';
+const input=process.argv[2];
+if(!input)throw new Error('Usage: node --experimental-strip-types scripts/import-editor.mjs input.json [--compatible-copy]');
+const raw=parseImport(readFileSync(input,'utf8')),result=validateEpisode(raw);
+if(result.errors.length)throw new Error(JSON.stringify(result.errors,null,2));
+if(result.unknown.length&&!process.argv.includes('--compatible-copy'))throw new Error('Champs inconnus : '+result.unknown.join(', ')+'. Conservez votre original puis utilisez --compatible-copy.');
+mkdirSync('out',{recursive:true});
+writeFileSync('out/editor-episode.json',JSON.stringify(compatibleCopy(raw),null,2)+'\n');
+writeFileSync('out/editor-import-report.json',JSON.stringify({input,omittedFromRenderCopy:result.unknown,warnings:result.warnings},null,2)+'\n');
+console.log('Original conservé. Copie moteur : out/editor-episode.json');
+console.log(JSON.stringify({omittedFromRenderCopy:result.unknown,warnings:result.warnings},null,2));
