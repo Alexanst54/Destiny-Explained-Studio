@@ -17,7 +17,7 @@ const CameraRig: React.FC<{state: State}> = ({state}) => {
   return null;
 };
 
-const LightParticles: React.FC<{state: State}> = ({state}) => <group>
+export const LightParticles: React.FC<{state: State}> = ({state}) => <group>
   {Array.from({length: 48}, (_, i) => {
     const phase = ((state.t * 0.46 + particleSeed(i, 0)) % 1 + 1) % 1;
     const angle = particleSeed(i, 1) * Math.PI * 2 + state.t * 0.7;
@@ -30,7 +30,7 @@ const LightParticles: React.FC<{state: State}> = ({state}) => <group>
   })}
 </group>;
 
-const ResurrectionBeam: React.FC<{state: State}> = ({state}) => {
+export const ResurrectionBeam: React.FC<{state: State}> = ({state}) => {
   const top = state.ghostY - 0.25;
   const bottom = 0.28;
   return <group position={[state.ghostX, 0, 0]}>

@@ -10,7 +10,21 @@
     "browser:ensure": "remotion browser ensure",
     "still:voxel": "remotion still src/index.ts VoxelResurrection out/voxel-frame.png --frame=165 --image-format=png --gl=swangle",
     "render:voxel": "remotion render src/index.ts VoxelResurrection out/voxel-resurrection.mp4 --codec=h264 --pixel-format=yuv420p --concurrency=1 --gl=swangle",
-    "test:voxel": "node --experimental-strip-types --test tests/voxel-timeline.test.mjs"
+    "test:voxel": "node --experimental-strip-types --test tests/voxel-timeline.test.mjs",
+    "validate:episode": "node --experimental-strip-types scripts/episode.mjs validate",
+    "render:episode": "node --experimental-strip-types scripts/episode.mjs render",
+    "render:episode:test": "node --experimental-strip-types scripts/episode.mjs render --preview --frames=1140-1319",
+    "still:episode": "remotion still src/index.ts VoxelEpisode out/episode-002-traveler.png --frame=1310 --image-format=png --gl=swangle",
+    "test:episode": "node --experimental-strip-types --test tests/episode.test.mjs",
+    "narrate:episode": "python scripts/narration.py",
+    "render:episode:voiced": "node --experimental-strip-types scripts/episode.mjs render out/traveler_episode_002-ready.json",
+    "test:narration": "python -m unittest discover -s tests -p \"test_narration.py\"",
+    "verify:narration": "python scripts/verify_narration.py",
+    "prepare:cinematic": "node --experimental-strip-types scripts/prepare-cinematic.mjs",
+    "render:cinematic": "node --experimental-strip-types scripts/episode.mjs render out/traveler_episode_002_cinematic-ready.json",
+    "test:cinematic": "node --experimental-strip-types --test tests/cinematic.test.mjs",
+    "verify:cinematic": "python scripts/verify_narration.py --episode out/traveler_episode_002_cinematic-ready.json --video out/episode-002-traveler-cinematic.mp4",
+    "still:motion": "remotion still src/index.ts VoxelMotionLab out/motion-lab.png --frame=390 --image-format=png --gl=swangle"
   },
   "dependencies": {
     "@react-three/fiber": "8.18.0",
@@ -19,7 +33,8 @@
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "remotion": "4.0.541",
-    "three": "0.170.0"
+    "three": "0.170.0",
+    "zod": "4.6.7"
   },
   "devDependencies": {
     "@types/react": "18.3.18",

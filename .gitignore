@@ -6,3 +6,7 @@ out/
 .env.*
 !.env.example
 .DS_Store
+.venv*/
+__pycache__/
+.cache/
+remotion/public/assets/narration/

@@ -1,10 +1,19 @@
 import React from 'react';
+import {MotionLab} from './voxel/cinematic/MotionLab';
+import rawCinematic from '../episodes/traveler_episode_002_cinematic.json';
+import {CinematicEpisode} from './voxel/cinematic/CinematicEpisode';
 import {Composition} from 'remotion';
+import rawTravelerEpisode from '../episodes/traveler_episode_002.json';
+import {episodeSchema} from './voxel/episode/schema';
+import {VoxelEpisode} from './voxel/episode/VoxelEpisode';
 import {Episode} from './compositions/Episode';
 import {episode1} from './project/episode1';
 import {FPS, HEIGHT, WIDTH, totalFrames} from './project/timeline';
 import {VoxelResurrection} from './voxel/VoxelResurrection';
 import {VOXEL_DURATION, VOXEL_FPS} from './voxel/timeline';
+
+const travelerEpisode = episodeSchema.parse(rawTravelerEpisode);
+const cinematicEpisode = episodeSchema.parse(rawCinematic);
 
 export const RemotionRoot: React.FC = () => <>
   <Composition
@@ -25,4 +34,16 @@ export const RemotionRoot: React.FC = () => <>
     fps={VOXEL_FPS}
     durationInFrames={VOXEL_DURATION}
   />
+  <Composition id="VoxelEpisode" component={VoxelEpisode} width={1080} height={1920}
+    fps={travelerEpisode.format.fps} durationInFrames={travelerEpisode.format.durationFrames}
+    defaultProps={{episode:travelerEpisode,preview:true}}
+    calculateMetadata={({props}) => {
+      const episode = episodeSchema.parse(props.episode);
+      return {durationInFrames:episode.format.durationFrames,fps:episode.format.fps,
+        width:episode.format.width,height:episode.format.height};
+    }}/>
+  <Composition id="VoxelCinematicEpisode" component={CinematicEpisode} width={1080} height={1920}
+    fps={30} durationInFrames={1800} defaultProps={{episode:cinematicEpisode,preview:true}}
+    calculateMetadata={({props})=>{const e=episodeSchema.parse(props.episode);return {durationInFrames:e.format.durationFrames};}}/>
+  <Composition id="VoxelMotionLab" component={MotionLab} width={1080} height={1920} fps={30} durationInFrames={720} defaultProps={{intensity:"balanced"}}/>
 </>;

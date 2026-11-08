@@ -1,0 +1,4 @@
+# OPTIONAL. Only install when explicitly choosing the paid OpenAI TTS provider.
+# Alignment remains local; the default Kokoro path does not import this package.
+stable-ts==2.19.1
+torchaudio==2.6.0

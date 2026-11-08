@@ -1,0 +1,13 @@
+# Install CPU torch first; see COLAB-TTS.md. Python 3.12 was tested.
+torch==2.6.0
+kokoro==0.9.4
+misaki[en]==0.9.4
+transformers==4.51.3
+huggingface-hub==0.36.2
+numpy==2.2.6
+soundfile==0.13.1
+espeakng-loader==0.2.4
+phonemizer-fork==3.3.2
+spacy==3.8.18
+# Explicit installation avoids a hidden download at the first synthesis.
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
