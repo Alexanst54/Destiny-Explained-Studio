@@ -32,6 +32,27 @@ test('seeded group placement and paths stay bounded; CPU budget enforced',()=>{
  for(const a of initial){assert.equal(a.animation,'flee');for(const p of [a.position,...a.path.waypoints.map(p=>p.position)])assert.ok(p.every(v=>Math.abs(v)<=18));}
  assert.equal(livingWorldSchema.safeParse({cast:Array.from({length:9},(_,i)=>({...actor(),id:'x'+i})),groups:[g]}).success,false);
 });
+test('resolved scene/shot population never silently truncates or bypasses CPU budget',()=>{
+ const a=actor(),member={...a,id:'member'};
+ const group=(id,count)=>groupSchema.parse({id,member,count,seed:42,formation:'line',spacing:1,behavior:'idle'});
+ const base=livingWorldSchema.parse({cast:[{...a,id:'base'}],groups:[group('scene',24)]});
+ const replacement=Array.from({length:9},(_,i)=>({...a,id:'shot'+i}));
+ // Valid scene and valid shot overrides can still exceed the effective combined limit.
+ assert.equal(livingWorldSchema.safeParse(base).success,true);
+ assert.equal(directWorld(base).length,25);
+ assert.throws(()=>directWorld(base,{cast:replacement}),/CPU population budget exceeds 32 \\(resolved 33\\)/);
+ assert.equal(directWorld(base,{cast:replacement,groups:[]}).length,9);
+ assert.equal(directWorld(base,{cast:[],groups:[]}).length,0);
+ assert.equal(directWorld(base,{groups:[group('new',24)]}).length,25);
+ assert.throws(()=>directWorld(base,{groups:[group('new',24)],cast:replacement}),/CPU population budget exceeds 32/);
+ assert.throws(()=>directWorld(base,{cast:[{...a,id:'scene'}]}),/Duplicate living world id/);
+ const e=demo();
+ e.scenes[0].livingWorld={mode:'reconstruction',cast:[{...a,id:'base'}],groups:[group('scene',24)],props:[]};
+ e.direction.scenes[0].shots[0].livingWorld={cast:replacement};
+ assert.equal(episodeSchema.safeParse(e).success,false,'episode schema rejects inherited over-budget shot');
+ e.direction.scenes[0].shots[0].livingWorld={cast:replacement,groups:[]};
+ assert.equal(episodeSchema.safeParse(e).success,true,'explicit empty group override restores valid budget');
+});
 test('weather types, transitions, particles, day cycle and out-of-order seeking',()=>{
  for(const type of weatherTypes){const w={...weather(),type,to:undefined,particleBudget:128};const saved=weatherParticles(w,330);weatherParticles(w,10);assert.deepEqual(weatherParticles(w,330),saved);assert.ok(saved.length<=128);assert.ok(saved.every(p=>p.position.every(Number.isFinite)));assert.equal(weatherParticles(w,720).length,0);}
  const w=weather();assert.equal(weatherState(w,0).mix,0);assert.equal(weatherState(w,600).mix,1);assert.ok(weatherState(w,300).intensity<weatherState(w,600).intensity);assert.ok(weatherState({...w,dayCycleFrames:720},360).daylight<weatherState(w,0).daylight);
