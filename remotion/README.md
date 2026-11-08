@@ -85,3 +85,10 @@ Kokoro génère la voix anglaise `af_heart` à vitesse 1×, les WAV par scène e
 sous-titres mot par mot. Voir [le guide Kokoro et Colab](tts/COLAB-TTS.md) et
 [le notebook Android](tts/Kokoro-Colab.ipynb). OpenAI TTS reste une option
 explicitement activable, sans appel payant dans le parcours par défaut.
+
+## Mise en scène cinématique
+
+`VoxelCinematicEpisode` ajoute 16 plans narratifs à l'épisode 002, en réutilisant
+sa voix Kokoro et ses 60 secondes. Voir [le moteur de plans JSON](src/voxel/cinematic/README.md)
+et [le notebook Colab](tts/Cinematic-Colab.ipynb). Les compositions antérieures
+restent disponibles ; `VoxelMotionLab` démontre les actions réutilisables.

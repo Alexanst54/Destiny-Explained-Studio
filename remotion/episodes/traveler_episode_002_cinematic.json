@@ -1,0 +1,1335 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "id": "destiny-explained-002-traveler-cinematic",
+  "title": "What Is the Traveler?",
+  "language": "en-US",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationFrames": 1800
+  },
+  "style": "classic-voxel",
+  "setting": "the-tower",
+  "disclaimer": "Unofficial fan-made educational video. Not affiliated with Bungie.",
+  "audio": {
+    "voiceover": {
+      "enabled": true,
+      "language": "en-US",
+      "source": "assets/audio/traveler-en.wav",
+      "status": "to-generate"
+    },
+    "music": null
+  },
+  "characters": [
+    {
+      "id": "guardian",
+      "model": "voxel-guardian-v1"
+    },
+    {
+      "id": "ghost",
+      "model": "voxel-ghost-v1"
+    }
+  ],
+  "environments": [
+    {
+      "id": "the-tower",
+      "model": "voxel-tower-v1",
+      "props": [
+        "traveler-sphere",
+        "last-city-silhouette",
+        "tower-balcony"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene-01",
+      "startFrame": 0,
+      "durationFrames": 240,
+      "location": "the-tower",
+      "camera": "wide-tilt-up",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [
+        "soft-daylight"
+      ],
+      "narration": "Above humanity's Last City floats a mysterious sphere called the Traveler. But what exactly is it?"
+    },
+    {
+      "id": "scene-02",
+      "startFrame": 240,
+      "durationFrames": 300,
+      "location": "the-tower",
+      "camera": "slow-orbit-traveler",
+      "actions": [
+        {
+          "actor": "ghost",
+          "animation": "hover"
+        }
+      ],
+      "effects": [
+        "golden-glow"
+      ],
+      "narration": "Long ago, the Traveler arrived in our solar system. Its presence helped humanity enter a Golden Age of discovery, technology, and longer lives."
+    },
+    {
+      "id": "scene-03",
+      "startFrame": 540,
+      "durationFrames": 300,
+      "location": "the-tower",
+      "camera": "push-in-sky",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "look-up"
+        }
+      ],
+      "effects": [
+        "sky-darken",
+        "distant-lightning"
+      ],
+      "narration": "Then came the Collapse. A terrible catastrophe devastated civilization. The Traveler remained on Earth, while humanity struggled to survive."
+    },
+    {
+      "id": "scene-04",
+      "startFrame": 840,
+      "durationFrames": 360,
+      "location": "the-tower",
+      "camera": "close-up-ghost",
+      "actions": [
+        {
+          "actor": "ghost",
+          "animation": "hover"
+        },
+        {
+          "actor": "ghost",
+          "animation": "scan"
+        }
+      ],
+      "effects": [
+        "light-particles"
+      ],
+      "narration": "Afterward, the Traveler released Ghosts: small, independent companions that search for people they can bring back as Lightbearers. Some become Guardians, defenders of the Last City."
+    },
+    {
+      "id": "scene-05",
+      "startFrame": 1200,
+      "durationFrames": 300,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "resurrect"
+        },
+        {
+          "actor": "ghost",
+          "animation": "hover"
+        }
+      ],
+      "effects": [
+        "resurrection-beam",
+        "voxel-particles"
+      ],
+      "narration": "With their Ghosts, Guardians can wield the Light and return from death, though that power has limits, and a Ghost can be destroyed."
+    },
+    {
+      "id": "scene-06",
+      "startFrame": 1500,
+      "durationFrames": 300,
+      "location": "the-tower",
+      "camera": "wide-pullback",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        },
+        {
+          "actor": "ghost",
+          "animation": "hover"
+        }
+      ],
+      "effects": [
+        "traveler-halo"
+      ],
+      "narration": "Even now, the Traveler remains one of Destiny's greatest mysteries: a source of hope, power, and questions still unanswered."
+    }
+  ],
+  "subtitles": {
+    "mode": "word-aligned",
+    "language": "en-US",
+    "source": "assets/subtitles/traveler-en.words.json",
+    "status": "pending-voiceover-alignment",
+    "maxLines": 2,
+    "safeAreaBottomPx": 340
+  },
+  "render": {
+    "composition": "VoxelCinematicEpisode",
+    "output": "out/episode-002-traveler-cinematic.mp4",
+    "codec": "h264"
+  },
+  "notes": [
+    "Derived from episode 002; narration text, scene boundaries and total duration are unchanged.",
+    "Direction version 1 resolves authored shots and effects against aligned Kokoro words. Each item states its narrative purpose.",
+    "Historical visions are explicitly illustrative; no Guardian battle is invented during the Collapse.",
+    "Use prepare:cinematic to reuse the original ready narration. Generated media is not committed."
+  ],
+  "direction": {
+    "version": 1,
+    "intensity": "balanced",
+    "scenes": [
+      {
+        "sceneId": "scene-01",
+        "shots": [
+          {
+            "id": "arrival",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Follow the Guardian approaching the balcony to establish human scale.",
+            "environment": "tower",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "follow",
+              "from": [
+                0,
+                2.2,
+                9
+              ],
+              "to": [
+                0.5,
+                2.4,
+                9
+              ],
+              "targetFrom": [
+                0,
+                0.3,
+                0
+              ],
+              "targetTo": [
+                0,
+                0.3,
+                0
+              ],
+              "fovFrom": 42,
+              "fovTo": 42,
+              "track": "guardian"
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          },
+          {
+            "id": "traveler-reveal",
+            "at": {
+              "phrase": "Traveler"
+            },
+            "purpose": "Reveal the sphere when the narrator names the Traveler.",
+            "environment": "tower",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "zoom",
+              "from": [
+                0,
+                5,
+                13
+              ],
+              "to": [
+                0,
+                5.3,
+                12
+              ],
+              "targetFrom": [
+                0,
+                6,
+                -10
+              ],
+              "targetTo": [
+                0,
+                6,
+                -10
+              ],
+              "fovFrom": 45,
+              "fovTo": 39
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 10
+            }
+          }
+        ],
+        "actions": [
+          {
+            "id": "approach",
+            "actor": "guardian",
+            "animation": "walk",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 95,
+            "from": [
+              -1.5,
+              0.02,
+              -0.7
+            ],
+            "to": [
+              -0.5,
+              0.02,
+              0.6
+            ],
+            "height": 1.3,
+            "purpose": "Approach the balcony while looking toward the Last City."
+          },
+          {
+            "id": "first-look",
+            "actor": "guardian",
+            "animation": "look-up",
+            "at": {
+              "sceneFrame": 110
+            },
+            "durationFrames": 90,
+            "from": [
+              -0.5,
+              0.02,
+              0.6
+            ],
+            "to": [
+              -0.5,
+              0.02,
+              0.6
+            ],
+            "height": 1.3,
+            "purpose": "Look up at the newly named Traveler."
+          }
+        ],
+        "events": []
+      },
+      {
+        "sceneId": "scene-02",
+        "shots": [
+          {
+            "id": "ancient-arrival",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "A slow orbit presents the Traveler as the subject of the ancient arrival.",
+            "environment": "tower",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "orbit",
+              "from": [
+                0,
+                5.2,
+                13
+              ],
+              "to": [
+                0,
+                5.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                6,
+                -10
+              ],
+              "targetTo": [
+                0,
+                6,
+                -10
+              ],
+              "fovFrom": 42,
+              "fovTo": 42,
+              "angleFrom": -0.18,
+              "angleTo": 0.18
+            },
+            "transition": {
+              "type": "match",
+              "durationFrames": 12
+            }
+          },
+          {
+            "id": "golden-age",
+            "at": {
+              "phrase": "Golden Age"
+            },
+            "purpose": "Move to the Ghost projection as the narration explains discovery and technology.",
+            "environment": "golden-age-vision",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "close-up",
+              "from": [
+                1.5,
+                4.2,
+                8
+              ],
+              "to": [
+                0.5,
+                3.9,
+                7.5
+              ],
+              "targetFrom": [
+                0,
+                2.8,
+                -0.5
+              ],
+              "targetTo": [
+                0,
+                2.8,
+                -0.5
+              ],
+              "fovFrom": 45,
+              "fovTo": 42
+            },
+            "transition": {
+              "type": "match",
+              "durationFrames": 12
+            }
+          }
+        ],
+        "actions": [
+          {
+            "id": "project-history",
+            "actor": "guardian",
+            "animation": "interact",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 240,
+            "from": [
+              -0.5,
+              0.02,
+              0.6
+            ],
+            "to": [
+              -0.5,
+              0.02,
+              0.6
+            ],
+            "height": 1.3,
+            "purpose": "The Guardian consults a Ghost projection of the Golden Age."
+          },
+          {
+            "id": "history-orbit",
+            "actor": "ghost",
+            "animation": "orbit",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 280,
+            "from": [
+              0.8,
+              3.5,
+              0
+            ],
+            "to": [
+              -0.5,
+              3.4,
+              0.1
+            ],
+            "height": 1.3,
+            "purpose": "The Ghost guides attention toward its projection."
+          }
+        ],
+        "events": [
+          {
+            "id": "solar-system-map",
+            "type": "hologram",
+            "at": {
+              "phrase": "solar system"
+            },
+            "durationFrames": 190,
+            "position": [
+              0,
+              2.7,
+              -0.5
+            ],
+            "strength": 0.8,
+            "purpose": "A symbolic orbital diagram illustrates the solar system and technology."
+          },
+          {
+            "id": "golden-motes",
+            "type": "particles",
+            "at": {
+              "phrase": "Golden Age"
+            },
+            "durationFrames": 100,
+            "position": [
+              0,
+              1.6,
+              -0.5
+            ],
+            "strength": 0.6,
+            "purpose": "Light motes mark the Golden Age reveal."
+          }
+        ]
+      },
+      {
+        "sceneId": "scene-03",
+        "shots": [
+          {
+            "id": "collapse-context",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish an explicitly illustrative city vision before the catastrophe.",
+            "environment": "collapse-vision",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                -2,
+                3.2,
+                10
+              ],
+              "to": [
+                0,
+                2.8,
+                8
+              ],
+              "targetFrom": [
+                0,
+                1,
+                -5
+              ],
+              "targetTo": [
+                0,
+                1,
+                -5
+              ],
+              "fovFrom": 44,
+              "fovTo": 44
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 10
+            }
+          },
+          {
+            "id": "collapse-impact",
+            "at": {
+              "phrase": "catastrophe"
+            },
+            "purpose": "A short low-angle impact shot visualizes the catastrophe being named.",
+            "environment": "collapse-vision",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "perspective",
+              "from": [
+                2,
+                1.4,
+                7
+              ],
+              "to": [
+                1,
+                2,
+                6
+              ],
+              "targetFrom": [
+                0,
+                0.8,
+                -5
+              ],
+              "targetTo": [
+                0,
+                0.8,
+                -5
+              ],
+              "fovFrom": 48,
+              "fovTo": 50
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          },
+          {
+            "id": "collapse-aftermath",
+            "at": {
+              "sceneFrame": 123
+            },
+            "purpose": "A brief reverse angle shows the damaged city on civilization.",
+            "environment": "collapse-vision",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "orbit",
+              "from": [
+                -3,
+                2,
+                8
+              ],
+              "to": [
+                -2,
+                3,
+                8
+              ],
+              "targetFrom": [
+                0,
+                1,
+                -5
+              ],
+              "targetTo": [
+                0,
+                1,
+                -5
+              ],
+              "fovFrom": 42,
+              "fovTo": 42,
+              "angleFrom": 0,
+              "angleTo": 0.12
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          },
+          {
+            "id": "traveler-remains",
+            "at": {
+              "phrase": "The Traveler"
+            },
+            "purpose": "Hold on the Traveler when the narration explains that it remained.",
+            "environment": "collapse-vision",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "zoom",
+              "from": [
+                0,
+                4.6,
+                12
+              ],
+              "to": [
+                0,
+                5,
+                11
+              ],
+              "targetFrom": [
+                0,
+                6,
+                -10
+              ],
+              "targetTo": [
+                0,
+                6,
+                -10
+              ],
+              "fovFrom": 44,
+              "fovTo": 40
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 8
+            }
+          }
+        ],
+        "actions": [],
+        "events": [
+          {
+            "id": "collapse-burst",
+            "type": "explosion",
+            "at": {
+              "phrase": "catastrophe"
+            },
+            "durationFrames": 48,
+            "position": [
+              0,
+              1,
+              -5
+            ],
+            "strength": 0.9,
+            "purpose": "Distant city debris illustrates the Collapse without inventing a Guardian battle."
+          },
+          {
+            "id": "collapse-shake",
+            "type": "shake",
+            "at": {
+              "phrase": "catastrophe"
+            },
+            "durationFrames": 28,
+            "position": [
+              0,
+              0,
+              0
+            ],
+            "strength": 0.65,
+            "purpose": "A brief impact shake accompanies only the catastrophe."
+          },
+          {
+            "id": "collapse-dust",
+            "type": "particles",
+            "at": {
+              "phrase": "devastated"
+            },
+            "durationFrames": 105,
+            "position": [
+              -1,
+              0.2,
+              -4
+            ],
+            "strength": 0.65,
+            "purpose": "Residual motes connect the impact to the aftermath."
+          }
+        ]
+      },
+      {
+        "sceneId": "scene-04",
+        "shots": [
+          {
+            "id": "ghost-release",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Isolate a Ghost in the Light while the narrator describes its release.",
+            "environment": "light-space",
+            "actors": {
+              "guardian": false,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "close-up",
+              "from": [
+                1,
+                4,
+                7
+              ],
+              "to": [
+                0.4,
+                3.8,
+                6
+              ],
+              "targetFrom": [
+                0,
+                3.5,
+                0
+              ],
+              "targetTo": [
+                0,
+                3.5,
+                0
+              ],
+              "fovFrom": 40,
+              "fovTo": 40
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 12
+            }
+          },
+          {
+            "id": "ghost-companion",
+            "at": {
+              "phrase": "companions"
+            },
+            "purpose": "Follow the Ghost to show companionship and its search for a person.",
+            "environment": "tower",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "follow",
+              "from": [
+                1,
+                0,
+                6
+              ],
+              "to": [
+                0.6,
+                0,
+                6.5
+              ],
+              "targetFrom": [
+                0,
+                0,
+                0
+              ],
+              "targetTo": [
+                0,
+                0,
+                0
+              ],
+              "fovFrom": 44,
+              "fovTo": 44,
+              "track": "ghost"
+            },
+            "transition": {
+              "type": "match",
+              "durationFrames": 12
+            }
+          },
+          {
+            "id": "guardian-defender",
+            "at": {
+              "phrase": "Guardians"
+            },
+            "purpose": "Give the Guardian a longer hero shot when defenders are named.",
+            "environment": "tower",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                -1,
+                3.6,
+                9
+              ],
+              "to": [
+                0.5,
+                3.6,
+                9
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                0.5
+              ],
+              "targetTo": [
+                0,
+                1.6,
+                0.5
+              ],
+              "fovFrom": 42,
+              "fovTo": 40
+            },
+            "transition": {
+              "type": "match",
+              "durationFrames": 10
+            }
+          }
+        ],
+        "actions": [
+          {
+            "id": "ghost-appears",
+            "actor": "ghost",
+            "animation": "interact",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 160,
+            "from": [
+              0.5,
+              3.5,
+              0
+            ],
+            "to": [
+              -0.4,
+              3.4,
+              0
+            ],
+            "height": 1.3,
+            "purpose": "A Ghost emerges into view before seeking a companion."
+          },
+          {
+            "id": "ghost-search",
+            "actor": "ghost",
+            "animation": "scan",
+            "at": {
+              "sceneFrame": 170
+            },
+            "durationFrames": 180,
+            "from": [
+              -0.4,
+              3.4,
+              0
+            ],
+            "to": [
+              0.6,
+              3.5,
+              0.1
+            ],
+            "height": 1.3,
+            "purpose": "The Ghost scans for a prospective Lightbearer."
+          },
+          {
+            "id": "greet-ghost",
+            "actor": "guardian",
+            "animation": "interact",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 180,
+            "from": [
+              -1.1,
+              0.02,
+              -0.2
+            ],
+            "to": [
+              -1.1,
+              0.02,
+              -0.2
+            ],
+            "height": 1.3,
+            "purpose": "The Guardian acknowledges the companion."
+          },
+          {
+            "id": "defender-step",
+            "actor": "guardian",
+            "animation": "walk",
+            "at": {
+              "phrase": "Some"
+            },
+            "durationFrames": 70,
+            "from": [
+              -1.1,
+              0.02,
+              -0.2
+            ],
+            "to": [
+              -0.7,
+              0.02,
+              1.2
+            ],
+            "height": 1.3,
+            "purpose": "Step into view as the narration introduces Guardians."
+          }
+        ],
+        "events": [
+          {
+            "id": "ghost-light",
+            "type": "particles",
+            "at": {
+              "phrase": "Ghosts"
+            },
+            "durationFrames": 230,
+            "position": [
+              0,
+              2.4,
+              0
+            ],
+            "strength": 0.7,
+            "purpose": "Motes illustrate Ghosts emerging from the Light."
+          },
+          {
+            "id": "search-ray",
+            "type": "beam",
+            "at": {
+              "phrase": "search"
+            },
+            "durationFrames": 80,
+            "position": [
+              -0.3,
+              3.4,
+              0
+            ],
+            "strength": 0.6,
+            "purpose": "The scan beam shows the search described by the narration.",
+            "to": [
+              -0.9,
+              1.4,
+              0.2
+            ]
+          }
+        ]
+      },
+      {
+        "sceneId": "scene-05",
+        "shots": [
+          {
+            "id": "fallen-guardian",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish a fallen Guardian before explaining the return from death.",
+            "environment": "tower",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                -1.4,
+                3.6,
+                10
+              ],
+              "to": [
+                -0.5,
+                3.6,
+                9
+              ],
+              "targetFrom": [
+                0,
+                1.5,
+                0
+              ],
+              "targetTo": [
+                0,
+                1.5,
+                0
+              ],
+              "fovFrom": 43,
+              "fovTo": 43
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 8
+            }
+          },
+          {
+            "id": "return-to-life",
+            "at": {
+              "phrase": "return"
+            },
+            "purpose": "Move closer exactly on return to show the resurrection action.",
+            "environment": "tower",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                -0.8,
+                3.9,
+                9
+              ],
+              "to": [
+                0.4,
+                3.4,
+                8
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                0
+              ],
+              "targetTo": [
+                0,
+                1.6,
+                0
+              ],
+              "fovFrom": 43,
+              "fovTo": 40
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          },
+          {
+            "id": "ghost-vulnerable",
+            "at": {
+              "phrase": "limits"
+            },
+            "purpose": "A long Ghost close-up gives weight to the limits of resurrection.",
+            "environment": "tower",
+            "actors": {
+              "guardian": false,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "close-up",
+              "from": [
+                0.8,
+                3.6,
+                6
+              ],
+              "to": [
+                0.4,
+                3.6,
+                6
+              ],
+              "targetFrom": [
+                0,
+                3.4,
+                0
+              ],
+              "targetTo": [
+                0,
+                3.4,
+                0
+              ],
+              "fovFrom": 40,
+              "fovTo": 38
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 8
+            }
+          }
+        ],
+        "actions": [
+          {
+            "id": "fall-demonstration",
+            "actor": "guardian",
+            "animation": "fall",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 30,
+            "from": [
+              0,
+              0.02,
+              0
+            ],
+            "to": [
+              0,
+              0.02,
+              0
+            ],
+            "height": 1.3,
+            "purpose": "Illustrate the starting state of a resurrection, without combat."
+          },
+          {
+            "id": "return-demonstration",
+            "actor": "guardian",
+            "animation": "resurrect",
+            "at": {
+              "phrase": "return"
+            },
+            "durationFrames": 64,
+            "from": [
+              0,
+              0.02,
+              0
+            ],
+            "to": [
+              0,
+              0.02,
+              0
+            ],
+            "height": 1.3,
+            "purpose": "Rise when the narrator says return from death."
+          },
+          {
+            "id": "reviving-ghost",
+            "actor": "ghost",
+            "animation": "hover",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 275,
+            "from": [
+              0.4,
+              3.4,
+              0
+            ],
+            "to": [
+              0,
+              3.4,
+              0
+            ],
+            "height": 1.3,
+            "purpose": "The Ghost remains beside its chosen Guardian."
+          }
+        ],
+        "events": [
+          {
+            "id": "revival-ray",
+            "type": "beam",
+            "at": {
+              "phrase": "return"
+            },
+            "durationFrames": 68,
+            "position": [
+              0,
+              3.4,
+              0
+            ],
+            "strength": 0.9,
+            "purpose": "The Light beam accompanies the narrated resurrection.",
+            "to": [
+              0,
+              0.3,
+              0
+            ]
+          },
+          {
+            "id": "revival-cubes",
+            "type": "particles",
+            "at": {
+              "phrase": "return"
+            },
+            "durationFrames": 68,
+            "position": [
+              0,
+              0.1,
+              0
+            ],
+            "strength": 0.85,
+            "purpose": "Light particles support the return from death."
+          }
+        ]
+      },
+      {
+        "sceneId": "scene-06",
+        "shots": [
+          {
+            "id": "mystery-reveal",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "A long Traveler reveal gives space to the unresolved mystery.",
+            "environment": "tower",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "zoom",
+              "from": [
+                0,
+                4.5,
+                13
+              ],
+              "to": [
+                0.5,
+                5,
+                13
+              ],
+              "targetFrom": [
+                0,
+                5,
+                -9
+              ],
+              "targetTo": [
+                0,
+                5,
+                -9
+              ],
+              "fovFrom": 43,
+              "fovTo": 40
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 12
+            }
+          },
+          {
+            "id": "hope-pullback",
+            "at": {
+              "phrase": "hope"
+            },
+            "purpose": "Pull back to the Guardian and City as hope and unanswered questions conclude the episode.",
+            "environment": "tower",
+            "actors": {
+              "guardian": true,
+              "ghost": true
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                0.5,
+                4.8,
+                13
+              ],
+              "to": [
+                1.5,
+                5.2,
+                16
+              ],
+              "targetFrom": [
+                0,
+                4,
+                -4
+              ],
+              "targetTo": [
+                0,
+                4,
+                -4
+              ],
+              "fovFrom": 42,
+              "fovTo": 45
+            },
+            "transition": {
+              "type": "match",
+              "durationFrames": 14
+            }
+          }
+        ],
+        "actions": [
+          {
+            "id": "final-look",
+            "actor": "guardian",
+            "animation": "look-up",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 100,
+            "from": [
+              -0.6,
+              0.02,
+              0
+            ],
+            "to": [
+              -0.6,
+              0.02,
+              0
+            ],
+            "height": 1.3,
+            "purpose": "The Guardian contemplates the Traveler in the final revelation."
+          },
+          {
+            "id": "final-companion",
+            "actor": "ghost",
+            "animation": "hover",
+            "at": {
+              "sceneFrame": 0
+            },
+            "durationFrames": 290,
+            "from": [
+              0.6,
+              3.4,
+              0
+            ],
+            "to": [
+              0.4,
+              3.5,
+              0
+            ],
+            "height": 1.3,
+            "purpose": "The Ghost stays beside the Guardian for the conclusion."
+          }
+        ],
+        "events": [
+          {
+            "id": "hope-motes",
+            "type": "particles",
+            "at": {
+              "phrase": "hope"
+            },
+            "durationFrames": 90,
+            "position": [
+              0,
+              0.8,
+              0
+            ],
+            "strength": 0.4,
+            "purpose": "Subtle Light motes support the final image of hope."
+          }
+        ]
+      }
+    ]
+  }
+}
