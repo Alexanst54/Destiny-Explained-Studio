@@ -2,6 +2,7 @@ import {readFileSync, existsSync, mkdirSync, writeFileSync, unlinkSync} from 'no
 import {resolve, dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {spawnSync} from 'node:child_process';
+import {resolveDirection,estimatedWords} from '../src/voxel/cinematic/timeline.ts';
 import {episodeSchema, episodeWarnings, validateWords} from '../src/voxel/episode/schema.ts';
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -38,6 +39,7 @@ try {
     }
     warnings.forEach(w => console.warn(w));
   }
+  if (episode.direction) resolveDirection(episode, alignedWords ?? estimatedWords(episode));
   const range = args.find(a => a.startsWith('--frames='));
   if (range) {
     const [start,end] = range.slice(9).split('-').map(Number);

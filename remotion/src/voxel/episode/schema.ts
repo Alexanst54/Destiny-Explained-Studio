@@ -1,4 +1,5 @@
 import {z} from 'zod';
+import {directionSchema} from '../cinematic/schema.ts';
 
 const text = z.string().trim().min(1);
 const frames = z.number().int().nonnegative();
@@ -35,9 +36,10 @@ export const episodeSchema = z.object({
   subtitles: z.object({mode: z.literal('word-aligned'), language: z.literal('en-US'),
     source: publicPath, status: z.enum(['pending-voiceover-alignment', 'ready']),
     maxLines: z.literal(2), safeAreaBottomPx: z.number().int().min(250).max(700)}).strict(),
-  render: z.object({composition: z.literal('VoxelEpisode'),
+  render: z.object({composition: z.enum(['VoxelEpisode','VoxelCinematicEpisode']),
     output: text.regex(/^out\/[a-zA-Z0-9_-]+\.mp4$/), codec: z.literal('h264')}).strict(),
   notes: z.array(text),
+  direction: directionSchema.optional(),
 }).strict().superRefine((episode, ctx) => {
   const issue = (path: (string | number)[], message: string) =>
     ctx.addIssue({code: z.ZodIssueCode.custom, path, message});
@@ -45,6 +47,10 @@ export const episodeSchema = z.object({
     issue(['characters'], 'Declare Guardian and Ghost exactly once');
   if (new Set(episode.environments[0].props).size !== 3)
     issue(['environments', 0, 'props'], 'Declare all three distinct environment props');
+  if (episode.render.composition==='VoxelCinematicEpisode' && !episode.direction)
+    issue(['direction'], 'Cinematic composition requires direction');
+  if (episode.direction && episode.render.composition!=='VoxelCinematicEpisode')
+    issue(['render','composition'], 'Direction requires the cinematic composition');
   const ids = new Set<string>();
   let cursor = 0;
   episode.scenes.forEach((s, i) => {

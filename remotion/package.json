@@ -19,7 +19,12 @@
     "narrate:episode": "python scripts/narration.py",
     "render:episode:voiced": "node --experimental-strip-types scripts/episode.mjs render out/traveler_episode_002-ready.json",
     "test:narration": "python -m unittest discover -s tests -p \"test_narration.py\"",
-    "verify:narration": "python scripts/verify_narration.py"
+    "verify:narration": "python scripts/verify_narration.py",
+    "prepare:cinematic": "node --experimental-strip-types scripts/prepare-cinematic.mjs",
+    "render:cinematic": "node --experimental-strip-types scripts/episode.mjs render out/traveler_episode_002_cinematic-ready.json",
+    "test:cinematic": "node --experimental-strip-types --test tests/cinematic.test.mjs",
+    "verify:cinematic": "python scripts/verify_narration.py --episode out/traveler_episode_002_cinematic-ready.json --video out/episode-002-traveler-cinematic.mp4",
+    "still:motion": "remotion still src/index.ts VoxelMotionLab out/motion-lab.png --frame=390 --image-format=png --gl=swangle"
   },
   "dependencies": {
     "@react-three/fiber": "8.18.0",
