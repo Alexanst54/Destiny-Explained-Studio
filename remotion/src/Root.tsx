@@ -1,3 +1,5 @@
+import {HybridShort} from '../hybrid/HybridShort';
+import {newHybridProject} from '../hybrid/templates';
 import React from 'react';
 import {MotionLab} from './voxel/cinematic/MotionLab';
 import rawCinematic from '../episodes/traveler_episode_002_cinematic.json';
@@ -15,7 +17,9 @@ import {VOXEL_DURATION, VOXEL_FPS} from './voxel/timeline';
 const travelerEpisode = episodeSchema.parse(rawTravelerEpisode);
 const cinematicEpisode = episodeSchema.parse(rawCinematic);
 
+const hybridDefault=episodeSchema.parse(newHybridProject());
 export const RemotionRoot: React.FC = () => <>
+  <Composition id="HybridShort" component={HybridShort} width={1080} height={1920} fps={30} durationInFrames={hybridDefault.format.durationFrames} defaultProps={{episode:hybridDefault,preview:true}} calculateMetadata={({props})=>({durationInFrames:episodeSchema.parse(props.episode).format.durationFrames})}/>
   <Composition
     id="Episode1"
     component={Episode}

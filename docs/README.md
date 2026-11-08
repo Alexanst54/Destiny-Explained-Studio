@@ -98,3 +98,7 @@ Les liens et `Editor-Colab.ipynb` ciblent **main** : l’import Atlas dans Colab
 Les boutons **Démo Tourbillon**, **Démo Europe** et **Démo Fundament** chargent des épisodes de 24 secondes, avec narration anglaise à générer dans Colab. Après une première visite réussie en ligne, le cache statique permet de rouvrir l’éditeur hors ligne ; les références externes demandent le réseau. La sauvegarde locale ne remplace pas l’export JSON.
 
 [Contrat technique et limites historiques](../remotion/living/README.md). Le cache change automatiquement à chaque reconstruction des assets statiques ; aucun backend et aucun changement de publication Pages.
+
+### Hybrid Shorts 0.5
+
+**Storyboard Shorts** ajoute les cinq types de plans, six modèles narratifs, réorganisation tactile, captions, pistes locales facultatives et aperçu Remotion partagé. [Guide mobile publié](HYBRID-GUIDE.html). Les projets historiques restent disponibles sous **Épisode**. Le JSON prêt téléchargé de Colab embarque les mots alignés des projets 0.5 ; l’aperçu sans ces données annonce un minutage estimé et une narration silencieuse. [Architecture et limites](../remotion/hybrid/README.md).

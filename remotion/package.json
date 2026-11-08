@@ -44,11 +44,17 @@
     "narrate:living": "python scripts/narration.py episodes/living_europa.json",
     "render:living": "node --experimental-strip-types scripts/episode.mjs render out/living_europa-ready.json",
     "verify:living:render": "node scripts/verify-living-render.mjs",
-    "test:editor:offline": "node ../editor/offline.browser.test.cjs"
+    "test:editor:offline": "node ../editor/offline.browser.test.cjs",
+    "test:hybrid": "node --experimental-strip-types --test tests/hybrid.test.mjs",
+    "test:hybrid:browser": "node ../editor/hybrid.browser.test.cjs",
+    "narrate:hybrid": "python scripts/narration.py episodes/hybrid_riis.json",
+    "render:hybrid": "node --experimental-strip-types scripts/episode.mjs render out/hybrid_riis-ready.json",
+    "verify:hybrid:render": "node scripts/verify-hybrid-render.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "8.18.0",
     "@remotion/cli": "4.0.541",
+    "@remotion/player": "4.0.541",
     "@remotion/three": "4.0.541",
     "react": "18.3.1",
     "react-dom": "18.3.1",

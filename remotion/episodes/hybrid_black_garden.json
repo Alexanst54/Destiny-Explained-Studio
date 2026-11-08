@@ -1,0 +1,373 @@
+{
+  "schemaVersion": "0.5.0",
+  "id": "hybrid-black-garden",
+  "title": "What Was the Black Garden?",
+  "language": "en-US",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationFrames": 600
+  },
+  "style": "classic-voxel",
+  "setting": "the-tower",
+  "disclaimer": "Unofficial fan-made educational video. Not affiliated with Bungie.",
+  "audio": {
+    "voiceover": {
+      "enabled": true,
+      "language": "en-US",
+      "source": "assets/audio/traveler-en.wav",
+      "status": "to-generate"
+    },
+    "music": null
+  },
+  "characters": [
+    {
+      "id": "guardian",
+      "model": "voxel-guardian-v1"
+    },
+    {
+      "id": "ghost",
+      "model": "voxel-ghost-v1"
+    }
+  ],
+  "environments": [
+    {
+      "id": "the-tower",
+      "model": "voxel-tower-v1",
+      "props": [
+        "traveler-sphere",
+        "last-city-silhouette",
+        "tower-balcony"
+      ]
+    },
+    {
+      "id": "europa",
+      "model": "voxel-europa-v1",
+      "props": [
+        "ice-ridges",
+        "snowfield",
+        "research-outpost"
+      ]
+    },
+    {
+      "id": "black-garden",
+      "model": "voxel-black-garden-v1",
+      "props": [
+        "vex-gate",
+        "garden-terraces",
+        "red-flowers"
+      ]
+    },
+    {
+      "id": "pyramid-interior",
+      "model": "voxel-pyramid-v1",
+      "props": [
+        "stepped-walls",
+        "resonant-altar",
+        "amber-trim"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "garden-hook",
+      "startFrame": 0,
+      "durationFrames": 120,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "What was the Black Garden?",
+      "visual": {
+        "type": "text",
+        "headline": "What was the Black Garden?",
+        "sources": [
+          "wiki-vex-history"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        },
+        "body": "An enigmatic place bound to the Vex.",
+        "kind": "hook"
+      }
+    },
+    {
+      "id": "garden-world",
+      "startFrame": 120,
+      "durationFrames": 210,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "The Black Garden is closely associated with the Vex. Its landscape is rendered here as a stylized reconstruction.",
+      "visual": {
+        "type": "voxel",
+        "headline": "The Black Garden",
+        "sources": [
+          "wiki-vex-history"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        }
+      },
+      "atlas": {
+        "locationId": "black-garden"
+      },
+      "livingWorld": {
+        "mode": "reconstruction",
+        "cast": [],
+        "groups": []
+      }
+    },
+    {
+      "id": "garden-graphic",
+      "startFrame": 330,
+      "durationFrames": 270,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "A setting, its inhabitants, and its mysteries are different questions. Separate what the sources show from what an illustration suggests.",
+      "visual": {
+        "type": "graphic",
+        "headline": "Separate evidence from interpretation",
+        "sources": [
+          "wiki-vex-history"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        },
+        "cards": [
+          {
+            "id": "evidence",
+            "title": "Documented association",
+            "body": "The Vex and the Black Garden.",
+            "position": [
+              48,
+              30
+            ]
+          },
+          {
+            "id": "interpretation",
+            "title": "Visual reconstruction",
+            "body": "This voxel landscape is an illustration.",
+            "position": [
+              48,
+              65
+            ]
+          }
+        ],
+        "connections": [
+          {
+            "from": "evidence",
+            "to": "interpretation",
+            "label": ""
+          }
+        ]
+      }
+    }
+  ],
+  "subtitles": {
+    "mode": "word-aligned",
+    "language": "en-US",
+    "source": "assets/subtitles/traveler-en.words.json",
+    "status": "pending-voiceover-alignment",
+    "maxLines": 2,
+    "safeAreaBottomPx": 340
+  },
+  "render": {
+    "composition": "HybridShort",
+    "output": "out/hybrid-black-garden.mp4",
+    "codec": "h264"
+  },
+  "notes": [
+    "No confirmed motive is assigned where the sources do not establish one.",
+    "All voxel appearances are artistic reconstructions; map positions are schematic."
+  ],
+  "direction": {
+    "version": 1,
+    "intensity": "balanced",
+    "scenes": [
+      {
+        "sceneId": "garden-hook",
+        "shots": [
+          {
+            "id": "garden-hook-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "garden-world",
+        "shots": [
+          {
+            "id": "garden-world-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "garden-graphic",
+        "shots": [
+          {
+            "id": "garden-graphic-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      }
+    ]
+  },
+  "shorts": {
+    "version": 1,
+    "template": "did-you-know",
+    "mode": "reconstruction",
+    "confidence": "partial",
+    "sources": [],
+    "captions": {
+      "style": "dynamic-shorts",
+      "bottomPx": 350,
+      "maxWords": 5
+    },
+    "audio": {
+      "voiceVolume": 1,
+      "tracks": []
+    },
+    "quality": "cpu"
+  }
+}

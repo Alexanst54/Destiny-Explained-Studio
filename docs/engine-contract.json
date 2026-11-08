@@ -1,11 +1,17 @@
 {
   "format": 1,
   "sources": {
+    "remotion/hybrid/schema.ts": "be84692e47f9c7ec3fd768f8ea3351bb3ec6b46eec46a6aeabeb96c1f8dfae9d",
+    "remotion/hybrid/state.ts": "2ee4c053f4efdec21817f3929a9b782f2f5250aa55ba2b6ab1df2a82c7590713",
+    "remotion/hybrid/templates.ts": "80574aa4a271ba27eea076211a94f47c09d2f031adaa377132a6e78e2ab43f61",
+    "remotion/episodes/hybrid_riis.json": "ddb8436328d607b9b0b2b722e6a4c330affabf96219ebc55897fdf5080648eea",
+    "remotion/episodes/hybrid_oryx.json": "ca2312ba3b18e984f92d637b69d8d87e44057e7a244b2304917055cfdb660e77",
+    "remotion/episodes/hybrid_black_garden.json": "5c3fc4aeb03aef68e4eb0df36399885407daca7743d678538fc22108bf38ffc2",
     "remotion/characters/catalog.json": "0fdd32ef6218133422334eb32167db348d10af40d4b377e6bd6a0a0fa5dbf586",
     "remotion/characters/schema.ts": "07cac3027c5afd41f6815c903d02dd72f2e90b6b1e434636f7157c5d71e5ee49",
     "remotion/characters/index.ts": "51fd300e7037c51566b8477c6bdb8bf85c08d55edacd55860475839173a9cd0d",
     "remotion/living/schema.ts": "ce33b1bd9dcc9f2d625f21986b7412a0c70ef3465c33f9e503289787bd8935e8",
-    "remotion/living/director.ts": "da7c2fe7daee2d7ac420708484d059045d44765692cd86d8bb41f3b3dfe41640",
+    "remotion/living/director.ts": "b9816e53a5ac982d39a2936ebfcc67bcea9316957e4f44497208ba472994abd6",
     "remotion/weather/schema.ts": "d7e399169aed1dae65b62b6272d06aed8352d7346744afa7b71afc254e4ea15e",
     "remotion/episodes/living_whirlwind.json": "5b02089b271a1d41a4c4aad8d52b5adefccfbd0fb15bceb140f191c90491a0bf",
     "remotion/episodes/living_europa.json": "7e8efafbd08fe353b82b69f6a0d3280b0fe2dbe3c265590bb4e27c03467c51d7",
@@ -16,7 +22,7 @@
     "remotion/episodes/atlas_demo.json": "cbcec854bbc82bd08f0aa5d0d10638d99218ac8b270e3225a193a81b86231f92",
     "remotion/src/voxel/library/catalog.ts": "4b8b838bfd7ee860985944a0dbb61efce0941e1f044af899f38033ce64440b48",
     "remotion/episodes/voxel_worlds_demo.json": "0528ef19f942fc60af6086ac9b73293568b7e75cf39f78d04884f8b5f2eaacd8",
-    "remotion/src/voxel/episode/schema.ts": "6348a7f8a09b1bcc8362c684dd5cec258b2a7a2f87a512a944bb679213a43350",
+    "remotion/src/voxel/episode/schema.ts": "b379a685a904b0236b3c5b9b5a9665f704bb43118688011240192ea811af64f5",
     "remotion/src/voxel/cinematic/schema.ts": "37f3913b5e3e5fed32f916fe933949539a74d19a94986e4ab999cb7ee49a3985",
     "remotion/src/voxel/cinematic/timeline.ts": "4bf51e1a540e78ac7f7d5929c6277fe3e37189784cafbcc31239df309a42b304",
     "remotion/episodes/traveler_episode_002_cinematic.json": "2ef78c46dc45902bd5082b750946b15894caac856420c1fe5a414a66f0d5a7b9"

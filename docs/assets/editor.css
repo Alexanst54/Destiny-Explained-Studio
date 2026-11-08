@@ -10,3 +10,6 @@ h1,h2,h3,.plan-card summary,.scene-button strong{overflow-wrap:anywhere}.intro>d
 
 /* Living Worlds: wrap tabs and long source labels on narrow touch screens. */
 .atlas-tabs{flex-wrap:wrap}.character-result a{overflow-wrap:anywhere;margin-right:.5rem}.cast-card{min-width:0}.character-result{min-width:0}
+
+/* Hybrid storyboard: native touch controls, no drag-only interaction. */
+.storyboard-list{display:flex;gap:.5rem;overflow-x:auto;max-width:100%;padding:.5rem 0}.storyboard-list button{flex:0 0 auto;min-height:44px}.hybrid-storyboard{min-width:0}.hybrid-preview{width:100%;max-width:360px;margin:1rem auto;aspect-ratio:9/16}.hybrid-storyboard .card{min-width:0}.hybrid-storyboard a{overflow-wrap:anywhere}.hybrid-storyboard .button-row{flex-wrap:wrap}@media(prefers-reduced-motion:reduce){.hybrid-storyboard *{scroll-behavior:auto;transition:none;animation:none}}

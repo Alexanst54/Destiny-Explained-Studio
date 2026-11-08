@@ -1,0 +1,395 @@
+{
+  "schemaVersion": "0.5.0",
+  "id": "hybrid-oryx",
+  "title": "The Origins of Oryx",
+  "language": "en-US",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationFrames": 600
+  },
+  "style": "classic-voxel",
+  "setting": "the-tower",
+  "disclaimer": "Unofficial fan-made educational video. Not affiliated with Bungie.",
+  "audio": {
+    "voiceover": {
+      "enabled": true,
+      "language": "en-US",
+      "source": "assets/audio/traveler-en.wav",
+      "status": "to-generate"
+    },
+    "music": null
+  },
+  "characters": [
+    {
+      "id": "guardian",
+      "model": "voxel-guardian-v1"
+    },
+    {
+      "id": "ghost",
+      "model": "voxel-ghost-v1"
+    }
+  ],
+  "environments": [
+    {
+      "id": "the-tower",
+      "model": "voxel-tower-v1",
+      "props": [
+        "traveler-sphere",
+        "last-city-silhouette",
+        "tower-balcony"
+      ]
+    },
+    {
+      "id": "europa",
+      "model": "voxel-europa-v1",
+      "props": [
+        "ice-ridges",
+        "snowfield",
+        "research-outpost"
+      ]
+    },
+    {
+      "id": "black-garden",
+      "model": "voxel-black-garden-v1",
+      "props": [
+        "vex-gate",
+        "garden-terraces",
+        "red-flowers"
+      ]
+    },
+    {
+      "id": "pyramid-interior",
+      "model": "voxel-pyramid-v1",
+      "props": [
+        "stepped-walls",
+        "resonant-altar",
+        "amber-trim"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "oryx-hook",
+      "startFrame": 0,
+      "durationFrames": 120,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "Before Oryx, there was Aurash.",
+      "visual": {
+        "type": "text",
+        "headline": "Before the Taken King",
+        "sources": [
+          "books-of-sorrow"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        },
+        "body": "A story told in the Books of Sorrow.",
+        "kind": "hook"
+      }
+    },
+    {
+      "id": "aurash",
+      "startFrame": 120,
+      "durationFrames": 180,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "The Books of Sorrow describe Aurash as one of three Krill siblings on Fundament.",
+      "visual": {
+        "type": "voxel",
+        "headline": "Aurash · Krill origins",
+        "sources": [
+          "books-of-sorrow"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        }
+      },
+      "atlas": {
+        "locationId": "fundament",
+        "variantId": "krill-origins"
+      },
+      "livingWorld": {
+        "mode": "reconstruction",
+        "era": "ancient",
+        "cast": [
+          {
+            "id": "sister-aurash",
+            "characterId": "aurash",
+            "position": [
+              -1.2,
+              0,
+              -1
+            ],
+            "animation": "talk",
+            "startFrame": 0,
+            "durationFrames": 180,
+            "clips": [],
+            "variantId": "aurash"
+          }
+        ],
+        "groups": []
+      }
+    },
+    {
+      "id": "oryx-timeline",
+      "startFrame": 300,
+      "durationFrames": 300,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "The worm pact led to transformation. Aurash became Auryx, and later Oryx. These events have no precise calendar dates here.",
+      "visual": {
+        "type": "timeline",
+        "headline": "Transformation, not a dated calendar",
+        "sources": [
+          "books-of-sorrow"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        },
+        "events": [
+          {
+            "id": "aurash",
+            "label": "Aurash",
+            "period": "Krill origins",
+            "date": null,
+            "confidence": "partial",
+            "sources": [
+              "books-of-sorrow"
+            ]
+          },
+          {
+            "id": "auryx",
+            "label": "Auryx",
+            "period": "After the worm pact",
+            "date": null,
+            "confidence": "partial",
+            "sources": [
+              "books-of-sorrow"
+            ]
+          },
+          {
+            "id": "oryx",
+            "label": "Oryx",
+            "period": "Later transformation",
+            "date": null,
+            "confidence": "partial",
+            "sources": [
+              "books-of-sorrow"
+            ]
+          }
+        ]
+      }
+    }
+  ],
+  "subtitles": {
+    "mode": "word-aligned",
+    "language": "en-US",
+    "source": "assets/subtitles/traveler-en.words.json",
+    "status": "pending-voiceover-alignment",
+    "maxLines": 2,
+    "safeAreaBottomPx": 340
+  },
+  "render": {
+    "composition": "HybridShort",
+    "output": "out/hybrid-oryx.mp4",
+    "codec": "h264"
+  },
+  "notes": [
+    "No confirmed motive is assigned where the sources do not establish one.",
+    "All voxel appearances are artistic reconstructions; map positions are schematic."
+  ],
+  "direction": {
+    "version": 1,
+    "intensity": "balanced",
+    "scenes": [
+      {
+        "sceneId": "oryx-hook",
+        "shots": [
+          {
+            "id": "oryx-hook-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "aurash",
+        "shots": [
+          {
+            "id": "aurash-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "oryx-timeline",
+        "shots": [
+          {
+            "id": "oryx-timeline-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      }
+    ]
+  },
+  "shorts": {
+    "version": 1,
+    "template": "character-origins",
+    "mode": "reconstruction",
+    "confidence": "partial",
+    "sources": [],
+    "captions": {
+      "style": "dynamic-shorts",
+      "bottomPx": 350,
+      "maxWords": 5
+    },
+    "audio": {
+      "voiceVolume": 1,
+      "tracks": []
+    },
+    "quality": "cpu"
+  }
+}

@@ -17,7 +17,7 @@ import {AtlasEnvironment} from '../library/AtlasEnvironment';
 import {atlasRecipe} from '../../../atlas/recipes';
 import {resolveEnvironment,environmentStyle} from '../library/catalog';
 
-export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alignedWords})=>{
+export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alignedWords,visualOnly=false,draftQuality=false})=>{
   const valid=useMemo(()=>episodeSchema.parse(episode),[episode]);
   const words=useMemo(()=>alignedWords?validateWords(alignedWords,valid):undefined,[alignedWords,valid]);
   if(!preview&&(!words||valid.subtitles.status!=='ready'||(valid.audio.voiceover.enabled&&valid.audio.voiceover.status!=='ready')))
@@ -39,7 +39,7 @@ export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alig
   const captions=captionWords(findScene(valid,frame),frame,preview?undefined:words);
   const halo=valid.scenes.find(s=>s.id===scene.sceneId)!.effects.includes('traveler-halo');
   return <AbsoluteFill style={{backgroundColor:'#101a2b'}}>
-    <ThreeCanvas width={width} height={height} dpr={1} camera={{fov:42,near:0.1,far:80,position:[0,4.4,13]}} gl={{antialias:true,alpha:false}}>
+    <ThreeCanvas width={width} height={height} dpr={draftQuality?.5:1} camera={{fov:42,near:0.1,far:80,position:[0,4.4,13]}} gl={{antialias:true,alpha:false}}>
       <color attach="background" args={[style.sky]}/>
       <fog attach="fog" args={[style.sky,style.fogNear,style.fogFar]}/>
       <FilmCameraRig pose={camera}/>
@@ -60,6 +60,7 @@ export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alig
     </ThreeCanvas>
     {transition.opacity>0&&<AbsoluteFill style={{backgroundColor:'#101a2b',opacity:transition.type==='wipe'?1:transition.opacity,
       clipPath:transition.type==='wipe'?`inset(0 ${100*(1-transition.opacity)}% 0 0)`:undefined}}/>}
+    {!visualOnly&&<>
     <div style={{position:'absolute',top:140,left:70,right:70,color:'#eef7ff',textAlign:'center',fontFamily:'sans-serif',fontSize:preview&&sourceScene.livingWorld?44:56,fontWeight:800,
       letterSpacing:3,textShadow:'0 2px 8px #101a2b'}}>{valid.title}</div>
     {(preview||vision)&&<div style={{position:'absolute',top:230,width:'100%',textAlign:'center',color:'#ffe9a6',fontFamily:'sans-serif',fontSize:24}}>
@@ -72,6 +73,7 @@ export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alig
         style={{color:w.active?'#ffe9a6':'#e6faff'}}>{w.text}{' '}</span>)}</div>)}
     </div>}
     <div style={{position:'absolute',bottom:75,left:80,right:80,textAlign:'center',color:'#b1bfd0',fontFamily:'sans-serif',fontSize:20}}>{valid.disclaimer}</div>
-    {!preview&&valid.audio.voiceover.enabled&&<Audio src={staticFile(valid.audio.voiceover.source)}/>}
+    </>}
+    {!visualOnly&&!preview&&valid.audio.voiceover.enabled&&<Audio src={staticFile(valid.audio.voiceover.source)}/>}
   </AbsoluteFill>;
 };

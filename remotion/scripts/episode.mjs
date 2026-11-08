@@ -39,6 +39,9 @@ try {
     }
     warnings.forEach(w => console.warn(w));
   }
+  for(const track of episode.shorts?.audio.tracks??[]){
+    if(!track.source.startsWith('data:')&&!existsSync(resolve(root,'public',track.source)))throw new Error(`Missing local audio track ${track.id}: ${track.source}`);
+  }
   if (episode.direction) resolveDirection(episode, alignedWords ?? estimatedWords(episode));
   const range = args.find(a => a.startsWith('--frames='));
   if (range) {
