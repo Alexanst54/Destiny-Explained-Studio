@@ -34,6 +34,10 @@ export const cameraPose = (camera: VoxelSceneDef['camera'], p: number): CameraPo
 export const captionWords = (scene: VoxelSceneDef, frame: number, words?: AlignedWord[]) => {
   const t = frame / 30;
   if (words) {
+    // Keep chunks inside the current scene; global groups of six could otherwise
+    // display text from the previous scene at a cut.
+    words = words.filter(w => w.start >= scene.startFrame / 30 - 1e-6 &&
+      w.end <= (scene.startFrame + scene.durationFrames) / 30 + 1e-6);
     const active = words.findIndex(w => t >= w.start && t < w.end);
     if (active === -1) return [];
     const chunk = Math.floor(active / 6) * 6;

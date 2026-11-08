@@ -6,6 +6,11 @@ import {episodeSchema, episodeWarnings, validateWords} from '../src/voxel/episod
 import {findScene, sceneState, cameraPose, captionWords} from '../src/voxel/episode/state.ts';
 const raw = JSON.parse(readFileSync(new URL('../episodes/traveler_episode_002.json',import.meta.url),'utf8'));
 const clone = () => structuredClone(raw);
+const alignedForEpisode = e => e.scenes.flatMap(s => {
+  const tokens=s.narration.split(/\s+/);
+  const step=s.durationFrames/30/tokens.length*0.9;
+  return tokens.map((text,i) => ({text,start:s.startFrame/30+i*step,end:s.startFrame/30+(i+1)*step}));
+});
 
 test('the supplied episode is 1800 frames with contiguous scene boundaries', () => {
   const e = episodeSchema.parse(raw);
@@ -59,13 +64,19 @@ test('all frames have finite camera and animation state; seeking is reproducible
 test('alignment must match narration, stay ordered and remain inside the episode', () => {
   const e=episodeSchema.parse(raw);
   const tokens=e.scenes.flatMap(s => s.narration.split(/\s+/));
-  const words=tokens.map((text,i) => ({text,start:i*0.3,end:(i+1)*0.3}));
+  const words=alignedForEpisode(e);
   assert.equal(validateWords(words,e).length,tokens.length);
   assert.throws(() => validateWords([{text:'wrong',start:0,end:1}],e));
   const overlap=structuredClone(words);overlap[1].start=0;
   assert.throws(() => validateWords(overlap,e));
   const overflow=structuredClone(words);overflow.at(-1).end=61;
   assert.throws(() => validateWords(overflow,e));
+  const drift=structuredClone(words);drift[0].start=8;drift[0].end=8.1;
+  assert.throws(() => validateWords(drift,e));
+  const boundary=e.scenes[1];
+  const displayed=captionWords(boundary, Math.round(words[16].start*30)+1,words);
+  assert.equal(displayed[0].text,'Long');
+  assert.ok(!displayed.some(w => w.text==='it?'));
 });
 
 test('CLI accepts preview and refuses a final render with pending assets', () => {
@@ -94,7 +105,7 @@ test('ready mode checks real WAV duration, missing files and aligned word files'
     e.audio.voiceover.source=`${basename(dir)}/voice.wav`;
     e.subtitles.source=`${basename(dir)}/words.json`;
     const tokens=e.scenes.flatMap(s => s.narration.split(/\s+/));
-    const words=tokens.map((text,i) => ({text,start:i*0.3,end:(i+1)*0.3}));
+    const words=alignedForEpisode(e);
     writeFileSync(join(dir,'words.json'),JSON.stringify(words));
     writeFileSync(join(dir,'episode.json'),JSON.stringify(e));
     const writeWav = seconds => {

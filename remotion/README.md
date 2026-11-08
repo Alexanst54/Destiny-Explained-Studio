@@ -75,5 +75,13 @@ La composition `VoxelResurrection` ajoute une résurrection procédurale de
 `VoxelEpisode` accepte le format strict fourni dans
 `episodes/traveler_episode_002.json`, avec six scènes sur 60 secondes.
 Voir [le guide JSON, la validation et le rendu de test](src/voxel/episode/README.md).
-La voix et l'alignement annoncés sont encore en attente : le test est un aperçu
-silencieux, et le rendu final exige les ressources prêtes.
+Le JSON source annonce la voix et l'alignement en attente. Le moteur Kokoro
+ci-dessous génère les ressources et un JSON prêt pour le rendu final ; le test
+JSON initial reste un aperçu silencieux.
+
+## Narration gratuite par défaut
+
+Kokoro génère la voix anglaise `af_heart` à vitesse 1×, les WAV par scène et les
+sous-titres mot par mot. Voir [le guide Kokoro et Colab](tts/COLAB-TTS.md) et
+[le notebook Android](tts/Kokoro-Colab.ipynb). OpenAI TTS reste une option
+explicitement activable, sans appel payant dans le parcours par défaut.
