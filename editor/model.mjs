@@ -3,7 +3,7 @@ import {atlasRefSchema} from '../remotion/atlas/index.ts';
 // the editor keeps the original object and creates an explicitly separate projection.
 import {locations,elementTypes,elementAnimations,defaultElementAnimation,environmentDefinitions} from '../remotion/src/voxel/library/catalog.ts';
 import demo from '../remotion/episodes/voxel_worlds_demo.json' with {type:'json'};
-import {episodeSchema} from '../remotion/src/voxel/episode/schema.ts';
+import {episodeWarnings,episodeSchema} from '../remotion/src/voxel/episode/schema.ts';
 import {directionSchema} from '../remotion/src/voxel/cinematic/schema.ts';
 import {resolveDirection,estimatedWords,resolveCue} from '../remotion/src/voxel/cinematic/timeline.ts';
 import template from '../remotion/episodes/traveler_episode_002_cinematic.json' with {type:'json'};
@@ -195,7 +195,7 @@ export function validateEpisode(raw){
  const parsed=episodeSchema.safeParse(episode),errors=[],warnings=[];
  if(!parsed.success)for(const issue of parsed.error.issues)errors.push({path:issue.path.join('.'),message:issueMessage(issue)});
  else{
-  const e=parsed.data;
+  const e=parsed.data;warnings.push(...episodeWarnings(e));
   if(!/^[a-zA-Z0-9_-]+$/.test(e.id))errors.push({path:'id',message:'Kokoro exige un identifiant sans espaces ni caractères spéciaux.'});
   for(const s of e.scenes)if(!/^[a-zA-Z0-9_-]+$/.test(s.id))errors.push({path:s.id,message:'Kokoro exige un identifiant de scène sans espaces.'});
   errors.push(...staticTiming(e));
@@ -234,7 +234,7 @@ export function setAtlasReference(raw,path,locationId,variantId){
  let old=raw;for(const key of path)old=old?.[key];
  const ref=object(old)?clone(old):{};ref.locationId=locationId;
  if(variantId)ref.variantId=variantId;else delete ref.variantId;
- const next=patch(raw,path,ref);next.schemaVersion='0.3.0';
+ const next=patch(raw,path,ref);next.schemaVersion=next.schemaVersion==='0.4.0'?'0.4.0':'0.3.0';
  if(path[0]==='direction'){
   const shotPath=path.slice(0,-1);let shot=next;for(const key of shotPath)shot=shot[key];shot.environment='scene';
  }

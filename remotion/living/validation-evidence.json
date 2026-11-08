@@ -1,0 +1,114 @@
+{
+  "render": {
+    "exitCode": 0,
+    "wallSeconds": 606.02,
+    "userSeconds": 78.053737,
+    "systemSeconds": 3.568015,
+    "maxChildRssKiB": 832952,
+    "concurrency": 1,
+    "gl": "swangle",
+    "note": "ru_maxrss is maximum child RSS, not sum of concurrent browser processes."
+  },
+  "video": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1080,
+        "height": 1920,
+        "r_frame_rate": "30/1",
+        "duration": "24.000000",
+        "nb_frames": "720",
+        "side_data_list": [
+          {}
+        ]
+      },
+      {
+        "codec_name": "aac",
+        "sample_rate": "48000",
+        "channels": 2,
+        "r_frame_rate": "0/0",
+        "duration": "24.000000",
+        "nb_frames": "1127"
+      }
+    ],
+    "format": {
+      "duration": "24.000000",
+      "size": "7962116"
+    }
+  },
+  "videoSha256": "189fe8dcf5ce5ebf4756a67771831afe413d7d0b73c0e0ef6c8303a2d78f19bf",
+  "stills": [
+    {
+      "name": "living_europa",
+      "frame": 120,
+      "sha256": "4434d67392d6d08770112f1880a63b132a3cdf1fa18eb7fc88259891fc1572df"
+    },
+    {
+      "name": "living_europa",
+      "frame": 600,
+      "sha256": "b520b138c474dcf21c346057172d5266efee18c82fdc63b3505243ec6be82947"
+    },
+    {
+      "name": "living_europa",
+      "frame": 120,
+      "sha256": "4434d67392d6d08770112f1880a63b132a3cdf1fa18eb7fc88259891fc1572df"
+    },
+    {
+      "name": "living_whirlwind",
+      "frame": 120,
+      "sha256": "2ed2e50bc1161f5445db5b62fdde4511884770fe5f99a7921a5253144732e92d"
+    },
+    {
+      "name": "living_fundament",
+      "frame": 120,
+      "sha256": "2a3d6985580dc95083fe31330fad3ac42b8adacb290cbafd21f69aea6528b180"
+    },
+    {
+      "name": "traveler_episode_002",
+      "frame": 120,
+      "sha256": "4d17f2e72480d20ae0355a7552dc236cad122792e25f5811d98fc1482dd12def"
+    },
+    {
+      "name": "traveler_episode_002_cinematic",
+      "frame": 120,
+      "sha256": "e46ead93c90bd790c554d68b53ebd119cf83db5a35ac1463e3575c67f314f412"
+    },
+    {
+      "name": "voxel_worlds_demo",
+      "frame": 120,
+      "sha256": "83fbed0adad685614087c25807fd423494827366299138f1a58e8c96c5c96172"
+    },
+    {
+      "name": "atlas_demo",
+      "frame": 120,
+      "sha256": "2d9723bb392d73fee27104bfbb0f372c2077ecb426b9c4cd5c43ac583cbaad19"
+    }
+  ],
+  "narration": {
+    "provider": "kokoro",
+    "voice": "af_heart",
+    "speed": 1,
+    "speechSeconds": 23.175,
+    "alignedWords": 46,
+    "wordsWithAudio": 46,
+    "aacLagMs": 0,
+    "correlation": 0.9996604323387146,
+    "alignment": "kokoro-predicted-phoneme-durations",
+    "limitation": "Not an independent annotation of word boundaries"
+  },
+  "tests": {
+    "node": 46,
+    "python": 10,
+    "viewports": [
+      320,
+      360,
+      393,
+      1280
+    ],
+    "browserLegacy": true,
+    "browserLiving": true,
+    "browserOffline": true
+  }
+}

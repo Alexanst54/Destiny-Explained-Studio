@@ -42,3 +42,7 @@ La [bibliothèque voxel procédurale](remotion/src/voxel/library/README.md) ajou
 ## Atlas of Destiny 0.3
 
 L’[Atlas sourcé et extensible](remotion/atlas/README.md) ajoute des références de lieux/variantes au JSON, un onglet mobile et des décors modulaires CPU. [Couverture, sources et lacunes](remotion/atlas/REPORT.md). Le catalogue est partiel : les lignes du manifest ne constituent pas une preuve d’exhaustivité ni de disponibilité actuelle. Démonstration : `remotion/episodes/atlas_demo.json` (24 secondes), bouton **Démo Atlas**, puis parcours Colab existant depuis main après fusion.
+
+## Living Worlds 0.4
+
+[Personnages, populations, animations et météo CPU](remotion/living/README.md) étendent l’Atlas sans changer ses identifiants. L’éditeur `docs/` ajoute **Personnages**, **Météo**, trois démos historiques et une réouverture hors ligne après la première visite. [Rapport, fidélité visuelle et limites](remotion/living/REPORT.md). Publication GitHub Pages toujours **main /docs**, avec le même parcours Android → Colab.

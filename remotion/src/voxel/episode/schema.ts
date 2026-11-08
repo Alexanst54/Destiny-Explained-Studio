@@ -1,3 +1,6 @@
+import {livingWorldSchema} from '../../../living/schema.ts';
+import {weatherSchema,weatherWarnings} from '../../../weather/schema.ts';
+import {loreWarnings} from '../../../living/director.ts';
 import {z} from 'zod';
 import {atlasRefSchema} from '../../../atlas/index.ts';
 import {locationSchema,environmentDeclarationSchema,elementsSchema,resolveEnvironment} from '../library/catalog.ts';
@@ -16,12 +19,12 @@ const action = z.discriminatedUnion('actor', [
   z.object({actor: z.literal('ghost'), animation: z.enum(['hover', 'scan'])}).strict(),
 ]);
 const scene = z.object({id: text, startFrame: frames,
-  durationFrames: z.number().int().min(30), location: locationSchema, atlas:atlasRefSchema.optional(), elements:elementsSchema.optional(),
+  durationFrames: z.number().int().min(30), location: locationSchema, atlas:atlasRefSchema.optional(), livingWorld:livingWorldSchema.optional(), weather:weatherSchema.optional(), elements:elementsSchema.optional(),
   camera: z.enum(cameras), actions: z.array(action).min(1),
   effects: z.array(z.enum(effects)), narration: text}).strict();
 
 export const episodeSchema = z.object({
-  schemaVersion: z.enum(['0.1.0-draft','0.1','0.1.0','0.2','0.2.0','0.3.0']), id: text, title: text, language: z.literal('en-US'),
+  schemaVersion: z.enum(['0.1.0-draft','0.1','0.1.0','0.2','0.2.0','0.3.0','0.4.0']), id: text, title: text, language: z.literal('en-US'),
   format: z.object({width: z.literal(1080), height: z.literal(1920), fps: z.literal(30),
     durationFrames: z.number().int().positive().max(18000)}).strict(),
   style: z.literal('classic-voxel'), setting: locationSchema, disclaimer: text,
@@ -54,7 +57,17 @@ export const episodeSchema = z.object({
   episode.scenes.forEach((scene,i)=>{
     if(!declared.has(scene.location))issue(['scenes',i,'location'],'Environment must be declared');
     const plan=episode.direction?.scenes.find(p=>p.sceneId===scene.id);
+    const checkLiving=(shot:import('../../../living/schema').LivingShot|undefined,weather:typeof scene.weather,path:(string|number)[])=>{
+      const cast=shot?.cast??scene.livingWorld?.cast??[],groups=shot?.groups??scene.livingWorld?.groups??[];
+      if(cast.length+groups.reduce((n,g)=>n+g.count,0)>32)issue(path,'CPU population budget exceeds 32');
+      const keys=[...cast.map(a=>a.id),...groups.map(g=>g.id)];if(new Set(keys).size!==keys.length)issue(path,'Duplicate living world id');
+      for(const a of [...cast,...groups.map(g=>g.member)])if(a.startFrame+a.durationFrames>scene.durationFrames)issue(path,'Character exceeds scene');
+      if(weather&&weather.startFrame+weather.durationFrames>scene.durationFrames)issue(path,'Weather exceeds scene');
+      for(const o of shot?.animations??[])if(!cast.some(a=>a.id===o.id)&&!groups.some(g=>Array.from({length:g.count},(_,i)=>g.id+':'+i).includes(o.id)))issue(path,'Unknown shot character animation target');
+    };
+    checkLiving(undefined,scene.weather,['scenes',i,'livingWorld']);
     plan?.shots.forEach((shot,j)=>{
+      checkLiving(shot.livingWorld,shot.weather??scene.weather,['direction','scenes',i,'shots',j,'livingWorld']);
       const env=resolveEnvironment(shot.environment,scene.location);
       const id=env==='tower'||env==='golden-age-vision'||env==='collapse-vision'?'the-tower':env;
       if(id!=='light-space'&&!declared.has(id))issue(['direction','scenes',i,'shots',j,'environment'],'Environment must be declared');
@@ -128,8 +141,15 @@ export const episodeWarnings = (episode: VoxelEpisodeDef): string[] => {
   if (episode.subtitles.status !== 'ready')
     warnings.push('Word alignment is pending: preview captions use estimated timing.');
   for (const s of episode.scenes) {
+    warnings.push(...loreWarnings(s.livingWorld,s.atlas),...weatherWarnings(s.atlas?.locationId,s.weather));
+    const plan=episode.direction?.scenes.find(p=>p.sceneId===s.id);
+    if(!plan)warnings.push(...loreWarnings(s.livingWorld,s.atlas,undefined,{guardian:s.actions.some(a=>a.actor==='guardian'),ghost:s.actions.some(a=>a.actor==='ghost')}));
+    for(const shot of plan?.shots??[]){
+      const ref=shot.atlas??(shot.environment==='scene'?s.atlas:undefined);
+      warnings.push(...loreWarnings(s.livingWorld,ref,shot.livingWorld,shot.actors),...weatherWarnings(ref?.locationId??(shot.environment==='scene'?s.location:shot.environment),shot.weather??s.weather));
+    }
     const wpm = s.narration.split(/\s+/).length * 60 * episode.format.fps / s.durationFrames;
     if (wpm > 180) warnings.push(`${s.id}: ${Math.round(wpm)} words/min; review pacing.`);
   }
-  return warnings;
+  return [...new Set(warnings)];
 };

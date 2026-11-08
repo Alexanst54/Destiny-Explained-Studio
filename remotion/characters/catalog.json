@@ -1,0 +1,3149 @@
+{
+  "schemaVersion": "0.4.0",
+  "scope": "Initial functional subset. Original simplified voxel models. No claim of complete roster or canonical costume fidelity.",
+  "sources": [
+    {
+      "id": "wiki-cayde-6",
+      "title": "Cayde-6",
+      "url": "https://www.destinypedia.com/Cayde-6",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-zavala",
+      "title": "Zavala",
+      "url": "https://www.destinypedia.com/Zavala",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-ikora-rey",
+      "title": "Ikora Rey",
+      "url": "https://www.destinypedia.com/Ikora_Rey",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-saint-14",
+      "title": "Saint-14",
+      "url": "https://www.destinypedia.com/Saint-14",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-osiris",
+      "title": "Osiris",
+      "url": "https://www.destinypedia.com/Osiris",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-eris-morn",
+      "title": "Eris Morn",
+      "url": "https://www.destinypedia.com/Eris_Morn",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-mara-sov",
+      "title": "Mara Sov",
+      "url": "https://www.destinypedia.com/Mara_Sov",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-uldren-sov",
+      "title": "Uldren Sov / Crow",
+      "url": "https://www.destinypedia.com/Uldren_Sov",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-eramis",
+      "title": "Eramis",
+      "url": "https://www.destinypedia.com/Eramis",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-mithrax",
+      "title": "Mithrax",
+      "url": "https://www.destinypedia.com/Mithrax,_Kell_of_Light",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-aurash",
+      "title": "Aurash / Auryx / Oryx",
+      "url": "https://www.destinypedia.com/Oryx,_the_Taken_King",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-sathona",
+      "title": "Sathona / Savathûn",
+      "url": "https://www.destinypedia.com/Savathûn,_the_Witch_Queen",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-xi-ro",
+      "title": "Xi Ro / Xivu Arath",
+      "url": "https://www.destinypedia.com/Xivu_Arath,_God_of_War",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-clovis-bray",
+      "title": "Clovis Bray",
+      "url": "https://www.destinypedia.com/Clovis_Bray_I",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-traveler",
+      "title": "The Traveler",
+      "url": "https://www.destinypedia.com/Traveler",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-rasputin",
+      "title": "Rasputin",
+      "url": "https://www.destinypedia.com/Rasputin",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-ghost-unit",
+      "title": "Ghost",
+      "url": "https://www.destinypedia.com/Ghost",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-human-scientist",
+      "title": "Human scientist",
+      "url": "https://www.destinypedia.com/Human",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-awoken-guard",
+      "title": "Awoken guard",
+      "url": "https://www.destinypedia.com/Awoken",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-exo-scientist",
+      "title": "Exo scientist",
+      "url": "https://www.destinypedia.com/Exo",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-eliksni-civilian",
+      "title": "Eliksni civilian",
+      "url": "https://www.destinypedia.com/Fallen",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-krill-civilian",
+      "title": "Krill inhabitant",
+      "url": "https://www.destinypedia.com/Krill",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-hive-acolyte",
+      "title": "Hive Acolyte",
+      "url": "https://www.destinypedia.com/Acolyte",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-cabal-soldier",
+      "title": "Cabal soldier",
+      "url": "https://www.destinypedia.com/Legionary",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-vex-goblin",
+      "title": "Vex Goblin",
+      "url": "https://www.destinypedia.com/Goblin",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-taken-thrall",
+      "title": "Taken Thrall",
+      "url": "https://www.destinypedia.com/Taken_Thrall",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-scorn-screeb",
+      "title": "Scorn Screeb",
+      "url": "https://www.destinypedia.com/Screeb",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-precursor",
+      "title": "Precursor — unknown form",
+      "url": "https://www.destinypedia.com/Precursors",
+      "kind": "secondary",
+      "locator": "History and appearance sections; simplified silhouettes are editorial, not official assets.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "books-of-sorrow",
+      "title": "Books of Sorrow",
+      "url": "https://www.ishtar-collective.net/categories/books-of-sorrow",
+      "kind": "primary",
+      "locator": "I: Predators; II: The Hateful Verse; V: Needle and Worm; IX: The Bargain; XXVI: star by star by star",
+      "verification": "retrieved"
+    }
+  ],
+  "characters": [
+    {
+      "id": "cayde-6",
+      "names": {
+        "fr": "Cayde-6",
+        "en": "Cayde-6"
+      },
+      "civilization": "exo",
+      "faction": "Vanguard",
+      "affiliations": [
+        {
+          "faction": "Vanguard",
+          "era": null
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Stable narrative identity; costume variants do not imply a new person.",
+      "visual": {
+        "model": "humanoid",
+        "silhouette": "Two legs, two arms, distinct head and torso",
+        "palette": [
+          "#354960",
+          "#d6b87a",
+          "#67d9ff"
+        ],
+        "equipment": [
+          "hood",
+          "visor"
+        ],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Cayde-6",
+            "en": "Cayde-6"
+          },
+          "change": "baseline",
+          "civilization": "exo",
+          "eras": [
+            "city-age"
+          ],
+          "events": [
+            "Vanguard service",
+            "Forsaken"
+          ],
+          "sources": [
+            "wiki-cayde-6"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#354960",
+              "#d6b87a",
+              "#67d9ff"
+            ],
+            "equipment": [
+              "hood",
+              "visor"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Vanguard service",
+        "Forsaken"
+      ],
+      "locations": [
+        "earth"
+      ],
+      "sources": [
+        "wiki-cayde-6"
+      ]
+    },
+    {
+      "id": "zavala",
+      "names": {
+        "fr": "Zavala",
+        "en": "Zavala"
+      },
+      "civilization": "awoken",
+      "faction": "Vanguard",
+      "affiliations": [
+        {
+          "faction": "Vanguard",
+          "era": null
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Stable narrative identity; costume variants do not imply a new person.",
+      "visual": {
+        "model": "heavy",
+        "silhouette": "Broad armored torso, short thick legs",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [
+          "pauldrons"
+        ],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Zavala",
+            "en": "Zavala"
+          },
+          "change": "baseline",
+          "civilization": "awoken",
+          "eras": [
+            "city-age"
+          ],
+          "events": [
+            "Vanguard service",
+            "Red War"
+          ],
+          "sources": [
+            "wiki-zavala"
+          ],
+          "visual": {
+            "model": "heavy",
+            "silhouette": "Broad armored torso, short thick legs",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [
+              "pauldrons"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Vanguard service",
+        "Red War"
+      ],
+      "locations": [
+        "earth"
+      ],
+      "sources": [
+        "wiki-zavala"
+      ]
+    },
+    {
+      "id": "ikora-rey",
+      "names": {
+        "fr": "Ikora Rey",
+        "en": "Ikora Rey"
+      },
+      "civilization": "human",
+      "faction": "Vanguard",
+      "affiliations": [
+        {
+          "faction": "Vanguard",
+          "era": null
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Stable narrative identity; costume variants do not imply a new person.",
+      "visual": {
+        "model": "humanoid",
+        "silhouette": "Two legs, two arms, distinct head and torso",
+        "palette": [
+          "#604b69",
+          "#cfb592",
+          "#9cdcff"
+        ],
+        "equipment": [
+          "robe"
+        ],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Ikora Rey",
+            "en": "Ikora Rey"
+          },
+          "change": "baseline",
+          "civilization": "human",
+          "eras": [
+            "city-age"
+          ],
+          "events": [
+            "Vanguard service",
+            "Red War"
+          ],
+          "sources": [
+            "wiki-ikora-rey"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#604b69",
+              "#cfb592",
+              "#9cdcff"
+            ],
+            "equipment": [
+              "robe"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Vanguard service",
+        "Red War"
+      ],
+      "locations": [
+        "earth"
+      ],
+      "sources": [
+        "wiki-ikora-rey"
+      ]
+    },
+    {
+      "id": "saint-14",
+      "names": {
+        "fr": "Saint-14",
+        "en": "Saint-14"
+      },
+      "civilization": "exo",
+      "faction": "Vanguard",
+      "affiliations": [
+        {
+          "faction": "Vanguard",
+          "era": null
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Stable narrative identity; costume variants do not imply a new person.",
+      "visual": {
+        "model": "heavy",
+        "silhouette": "Broad armored torso, short thick legs",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [
+          "crest",
+          "visor"
+        ],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Saint-14",
+            "en": "Saint-14"
+          },
+          "change": "baseline",
+          "civilization": "exo",
+          "eras": [
+            "city-age"
+          ],
+          "events": [
+            "Battle of Six Fronts",
+            "Return from the Infinite Forest"
+          ],
+          "sources": [
+            "wiki-saint-14"
+          ],
+          "visual": {
+            "model": "heavy",
+            "silhouette": "Broad armored torso, short thick legs",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [
+              "crest",
+              "visor"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Battle of Six Fronts",
+        "Return from the Infinite Forest"
+      ],
+      "locations": [
+        "earth"
+      ],
+      "sources": [
+        "wiki-saint-14"
+      ]
+    },
+    {
+      "id": "osiris",
+      "names": {
+        "fr": "Osiris",
+        "en": "Osiris"
+      },
+      "civilization": "human",
+      "faction": "Vanguard",
+      "affiliations": [
+        {
+          "faction": "Vanguard",
+          "era": "city-age"
+        },
+        {
+          "faction": "Cult of Osiris",
+          "era": "exile"
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Same person after Sagira dies. Loss of Light is neither resurrection nor a species transformation. No exact year asserted.",
+      "visual": {
+        "model": "humanoid",
+        "silhouette": "Two legs, two arms, distinct head and torso",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [
+          "hood"
+        ],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Same person after Sagira dies. Loss of Light is neither resurrection nor a species transformation. No exact year asserted."
+      },
+      "variants": [
+        {
+          "id": "lightbearer",
+          "names": {
+            "fr": "Osiris — Lumière",
+            "en": "Osiris — Lightbearer"
+          },
+          "change": "baseline",
+          "civilization": "human",
+          "eras": [
+            "city-age"
+          ],
+          "events": [
+            "Exile",
+            "Death of Sagira"
+          ],
+          "sources": [
+            "wiki-osiris"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [
+              "hood"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Same person after Sagira dies. Loss of Light is neither resurrection nor a species transformation. No exact year asserted."
+          },
+          "datedBySource": null
+        },
+        {
+          "id": "lightless",
+          "names": {
+            "fr": "Osiris — sans Lumière",
+            "en": "Osiris — Lightless"
+          },
+          "change": "equipment",
+          "civilization": "human",
+          "eras": [
+            "post-sagira"
+          ],
+          "events": [
+            "Exile",
+            "Death of Sagira"
+          ],
+          "sources": [
+            "wiki-osiris"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [
+              "hood"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Same person after Sagira dies. Loss of Light is neither resurrection nor a species transformation. No exact year asserted."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Exile",
+        "Death of Sagira"
+      ],
+      "locations": [
+        "mercury",
+        "earth"
+      ],
+      "sources": [
+        "wiki-osiris"
+      ]
+    },
+    {
+      "id": "eris-morn",
+      "names": {
+        "fr": "Eris Morn",
+        "en": "Eris Morn"
+      },
+      "civilization": "human",
+      "faction": "Hidden",
+      "affiliations": [
+        {
+          "faction": "Hidden",
+          "era": null
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Stable narrative identity; costume variants do not imply a new person.",
+      "visual": {
+        "model": "humanoid",
+        "silhouette": "Two legs, two arms, distinct head and torso",
+        "palette": [
+          "#343e32",
+          "#998f72",
+          "#a8e658"
+        ],
+        "equipment": [
+          "hood"
+        ],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Eris Morn",
+            "en": "Eris Morn"
+          },
+          "change": "baseline",
+          "civilization": "human",
+          "eras": [
+            "city-age"
+          ],
+          "events": [
+            "Great Disaster aftermath"
+          ],
+          "sources": [
+            "wiki-eris-morn"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#343e32",
+              "#998f72",
+              "#a8e658"
+            ],
+            "equipment": [
+              "hood"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Great Disaster aftermath"
+      ],
+      "locations": [
+        "moon"
+      ],
+      "sources": [
+        "wiki-eris-morn"
+      ]
+    },
+    {
+      "id": "mara-sov",
+      "names": {
+        "fr": "Mara Sov",
+        "en": "Mara Sov"
+      },
+      "civilization": "awoken",
+      "faction": "Reef",
+      "affiliations": [
+        {
+          "faction": "Reef",
+          "era": null
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Stable narrative identity; costume variants do not imply a new person.",
+      "visual": {
+        "model": "humanoid",
+        "silhouette": "Two legs, two arms, distinct head and torso",
+        "palette": [
+          "#5b527e",
+          "#aec8dc",
+          "#a9d5ff"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Mara Sov",
+            "en": "Mara Sov"
+          },
+          "change": "baseline",
+          "civilization": "awoken",
+          "eras": [
+            "city-age"
+          ],
+          "events": [
+            "Battle of Saturn"
+          ],
+          "sources": [
+            "wiki-mara-sov"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#5b527e",
+              "#aec8dc",
+              "#a9d5ff"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Battle of Saturn"
+      ],
+      "locations": [
+        "reef"
+      ],
+      "sources": [
+        "wiki-mara-sov"
+      ]
+    },
+    {
+      "id": "uldren-sov",
+      "names": {
+        "fr": "Uldren Sov / Crow",
+        "en": "Uldren Sov / Crow"
+      },
+      "civilization": "awoken",
+      "faction": "Reef / Vanguard",
+      "affiliations": [
+        {
+          "faction": "Reef",
+          "era": "city-age"
+        },
+        {
+          "faction": "Vanguard as Crow",
+          "era": "post-forsaken"
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Crow is the resurrected Lightbearer of Uldren, not simply an equipment change or an uninterrupted memory history.",
+      "visual": {
+        "model": "humanoid",
+        "silhouette": "Two legs, two arms, distinct head and torso",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [
+          "hood"
+        ],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Crow is the resurrected Lightbearer of Uldren, not simply an equipment change or an uninterrupted memory history."
+      },
+      "variants": [
+        {
+          "id": "uldren",
+          "names": {
+            "fr": "Uldren Sov",
+            "en": "Uldren Sov"
+          },
+          "change": "baseline",
+          "civilization": "awoken",
+          "eras": [
+            "city-age"
+          ],
+          "events": [
+            "Forsaken",
+            "Resurrection as Crow"
+          ],
+          "sources": [
+            "wiki-uldren-sov"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [
+              "hood"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Crow is the resurrected Lightbearer of Uldren, not simply an equipment change or an uninterrupted memory history."
+          },
+          "datedBySource": null
+        },
+        {
+          "id": "crow",
+          "names": {
+            "fr": "Le Corbeau",
+            "en": "Crow"
+          },
+          "change": "resurrection",
+          "civilization": "awoken",
+          "eras": [
+            "post-forsaken"
+          ],
+          "events": [
+            "Forsaken",
+            "Resurrection as Crow"
+          ],
+          "sources": [
+            "wiki-uldren-sov"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [
+              "hood"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Crow is the resurrected Lightbearer of Uldren, not simply an equipment change or an uninterrupted memory history."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Forsaken",
+        "Resurrection as Crow"
+      ],
+      "locations": [
+        "reef",
+        "earth"
+      ],
+      "sources": [
+        "wiki-uldren-sov"
+      ]
+    },
+    {
+      "id": "eramis",
+      "names": {
+        "fr": "Éramis",
+        "en": "Eramis"
+      },
+      "civilization": "eliksni",
+      "faction": "House Salvation",
+      "affiliations": [
+        {
+          "faction": "House of Devils",
+          "era": "post-whirlwind"
+        },
+        {
+          "faction": "House Salvation",
+          "era": "beyond-light"
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Stable narrative identity; costume variants do not imply a new person.",
+      "visual": {
+        "model": "four-arm",
+        "silhouette": "Four arms, narrow waist and bent legs",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [
+          "pauldrons"
+        ],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+      },
+      "variants": [
+        {
+          "id": "shipstealer",
+          "names": {
+            "fr": "Voleuse de vaisseaux",
+            "en": "Shipstealer"
+          },
+          "change": "baseline",
+          "civilization": "eliksni",
+          "eras": [
+            "post-whirlwind"
+          ],
+          "events": [
+            "Whirlwind survivor",
+            "House Salvation"
+          ],
+          "sources": [
+            "wiki-eramis"
+          ],
+          "visual": {
+            "model": "four-arm",
+            "silhouette": "Four arms, narrow waist and bent legs",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [
+              "pauldrons"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        },
+        {
+          "id": "salvation",
+          "names": {
+            "fr": "Maison du Salut",
+            "en": "House Salvation"
+          },
+          "change": "equipment",
+          "civilization": "eliksni",
+          "eras": [
+            "beyond-light"
+          ],
+          "events": [
+            "Whirlwind survivor",
+            "House Salvation"
+          ],
+          "sources": [
+            "wiki-eramis"
+          ],
+          "visual": {
+            "model": "four-arm",
+            "silhouette": "Four arms, narrow waist and bent legs",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [
+              "pauldrons"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Whirlwind survivor",
+        "House Salvation"
+      ],
+      "locations": [
+        "europa",
+        "riis"
+      ],
+      "sources": [
+        "wiki-eramis"
+      ]
+    },
+    {
+      "id": "mithrax",
+      "names": {
+        "fr": "Mithrax",
+        "en": "Mithrax"
+      },
+      "civilization": "eliksni",
+      "faction": "House Light",
+      "affiliations": [
+        {
+          "faction": "House Light",
+          "era": null
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Stable narrative identity; costume variants do not imply a new person.",
+      "visual": {
+        "model": "four-arm",
+        "silhouette": "Four arms, narrow waist and bent legs",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [
+          "robe"
+        ],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Mithrax",
+            "en": "Mithrax"
+          },
+          "change": "baseline",
+          "civilization": "eliksni",
+          "eras": [
+            "city-age"
+          ],
+          "events": [
+            "House Light"
+          ],
+          "sources": [
+            "wiki-mithrax"
+          ],
+          "visual": {
+            "model": "four-arm",
+            "silhouette": "Four arms, narrow waist and bent legs",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [
+              "robe"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "House Light"
+      ],
+      "locations": [
+        "earth"
+      ],
+      "sources": [
+        "wiki-mithrax"
+      ]
+    },
+    {
+      "id": "aurash",
+      "names": {
+        "fr": "Aurash / Auryx / Oryx",
+        "en": "Aurash / Auryx / Oryx"
+      },
+      "civilization": "krill",
+      "faction": "Osmium Court",
+      "affiliations": [
+        {
+          "faction": "Osmium Court",
+          "era": null
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted.",
+      "visual": {
+        "model": "krill",
+        "silhouette": "Small fragile body, three eyes; no mature Hive armor",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted."
+      },
+      "variants": [
+        {
+          "id": "aurash",
+          "names": {
+            "fr": "Aurash",
+            "en": "Aurash"
+          },
+          "change": "baseline",
+          "civilization": "krill",
+          "eras": [
+            "ancient"
+          ],
+          "events": [
+            "Osmium Court exile",
+            "Worm pact",
+            "Transformation into Auryx and Oryx"
+          ],
+          "sources": [
+            "wiki-aurash",
+            "books-of-sorrow"
+          ],
+          "visual": {
+            "model": "krill",
+            "silhouette": "Fragile three-eyed Krill; no modern Hive armor",
+            "palette": [
+              "#77675c",
+              "#c5b48b",
+              "#d9dba0"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted."
+          },
+          "datedBySource": null
+        },
+        {
+          "id": "auryx",
+          "names": {
+            "fr": "Auryx",
+            "en": "Auryx"
+          },
+          "change": "transformation",
+          "civilization": "hive",
+          "eras": [
+            "post-pact"
+          ],
+          "events": [
+            "Osmium Court exile",
+            "Worm pact",
+            "Transformation into Auryx and Oryx"
+          ],
+          "sources": [
+            "wiki-aurash",
+            "books-of-sorrow"
+          ],
+          "visual": {
+            "model": "hive",
+            "silhouette": "Small fragile body, three eyes; no mature Hive armor",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted."
+          },
+          "datedBySource": null
+        },
+        {
+          "id": "oryx",
+          "names": {
+            "fr": "Oryx",
+            "en": "Oryx"
+          },
+          "change": "transformation",
+          "civilization": "hive",
+          "eras": [
+            "post-pact"
+          ],
+          "events": [
+            "Osmium Court exile",
+            "Worm pact",
+            "Transformation into Auryx and Oryx"
+          ],
+          "sources": [
+            "wiki-aurash",
+            "books-of-sorrow"
+          ],
+          "visual": {
+            "model": "giant",
+            "silhouette": "Tall chitinous entity; wings represented as stepped voxel fins",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [],
+            "scale": 2.3,
+            "certainty": "reconstruction",
+            "note": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Osmium Court exile",
+        "Worm pact",
+        "Transformation into Auryx and Oryx"
+      ],
+      "locations": [
+        "fundament"
+      ],
+      "sources": [
+        "wiki-aurash",
+        "books-of-sorrow"
+      ]
+    },
+    {
+      "id": "sathona",
+      "names": {
+        "fr": "Sathona / Savathûn",
+        "en": "Sathona / Savathûn"
+      },
+      "civilization": "krill",
+      "faction": "Osmium Court",
+      "affiliations": [
+        {
+          "faction": "Osmium Court",
+          "era": null
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted.",
+      "visual": {
+        "model": "krill",
+        "silhouette": "Small fragile body, three eyes; no mature Hive armor",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted."
+      },
+      "variants": [
+        {
+          "id": "sathona",
+          "names": {
+            "fr": "Sathona",
+            "en": "Sathona"
+          },
+          "change": "baseline",
+          "civilization": "krill",
+          "eras": [
+            "ancient"
+          ],
+          "events": [
+            "Osmium Court exile",
+            "Worm pact"
+          ],
+          "sources": [
+            "wiki-sathona",
+            "books-of-sorrow"
+          ],
+          "visual": {
+            "model": "krill",
+            "silhouette": "Fragile three-eyed Krill; no modern Hive armor",
+            "palette": [
+              "#77675c",
+              "#c5b48b",
+              "#d9dba0"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted."
+          },
+          "datedBySource": null
+        },
+        {
+          "id": "savathun",
+          "names": {
+            "fr": "Savathûn",
+            "en": "Savathûn"
+          },
+          "change": "transformation",
+          "civilization": "hive",
+          "eras": [
+            "post-pact"
+          ],
+          "events": [
+            "Osmium Court exile",
+            "Worm pact"
+          ],
+          "sources": [
+            "wiki-sathona",
+            "books-of-sorrow"
+          ],
+          "visual": {
+            "model": "giant",
+            "silhouette": "Tall chitinous entity; wings represented as stepped voxel fins",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [],
+            "scale": 2.3,
+            "certainty": "reconstruction",
+            "note": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Osmium Court exile",
+        "Worm pact"
+      ],
+      "locations": [
+        "fundament"
+      ],
+      "sources": [
+        "wiki-sathona",
+        "books-of-sorrow"
+      ]
+    },
+    {
+      "id": "xi-ro",
+      "names": {
+        "fr": "Xi Ro / Xivu Arath",
+        "en": "Xi Ro / Xivu Arath"
+      },
+      "civilization": "krill",
+      "faction": "Osmium Court",
+      "affiliations": [
+        {
+          "faction": "Osmium Court",
+          "era": null
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted.",
+      "visual": {
+        "model": "krill",
+        "silhouette": "Small fragile body, three eyes; no mature Hive armor",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted."
+      },
+      "variants": [
+        {
+          "id": "xi-ro",
+          "names": {
+            "fr": "Xi Ro",
+            "en": "Xi Ro"
+          },
+          "change": "baseline",
+          "civilization": "krill",
+          "eras": [
+            "ancient"
+          ],
+          "events": [
+            "Osmium Court exile",
+            "Worm pact"
+          ],
+          "sources": [
+            "wiki-xi-ro",
+            "books-of-sorrow"
+          ],
+          "visual": {
+            "model": "krill",
+            "silhouette": "Fragile three-eyed Krill; no modern Hive armor",
+            "palette": [
+              "#77675c",
+              "#c5b48b",
+              "#d9dba0"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "Books of Sorrow describe the Krill origins and transformations; this in-universe account is not an omniscient chronology. Early anatomy is reconstructed. No numerical dates asserted."
+          },
+          "datedBySource": null
+        },
+        {
+          "id": "xivu-arath",
+          "names": {
+            "fr": "Xivu Arath",
+            "en": "Xivu Arath"
+          },
+          "change": "transformation",
+          "civilization": "hive",
+          "eras": [
+            "post-pact"
+          ],
+          "events": [
+            "Osmium Court exile",
+            "Worm pact"
+          ],
+          "sources": [
+            "wiki-xi-ro",
+            "books-of-sorrow"
+          ],
+          "visual": {
+            "model": "unknown",
+            "silhouette": "Tall chitinous entity; wings represented as stepped voxel fins",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [],
+            "scale": 2.3,
+            "certainty": "unknown",
+            "note": "No full canonical 3D body asserted by this implementation. Hidden until a sourced visual recipe is reviewed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Osmium Court exile",
+        "Worm pact"
+      ],
+      "locations": [
+        "fundament"
+      ],
+      "sources": [
+        "wiki-xi-ro",
+        "books-of-sorrow"
+      ]
+    },
+    {
+      "id": "clovis-bray",
+      "names": {
+        "fr": "Clovis Bray",
+        "en": "Clovis Bray"
+      },
+      "civilization": "human",
+      "faction": "Bray",
+      "affiliations": [
+        {
+          "faction": "Bray",
+          "era": null
+        }
+      ],
+      "archetype": "leader",
+      "identityNote": "AI copy is a narrative derivative, not an ordinary clothing variant. The giant Exo head is represented as a machine terminal, not a walking humanoid.",
+      "visual": {
+        "model": "humanoid",
+        "silhouette": "Two legs, two arms, distinct head and torso",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [
+          "coat"
+        ],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "AI copy is a narrative derivative, not an ordinary clothing variant. The giant Exo head is represented as a machine terminal, not a walking humanoid."
+      },
+      "variants": [
+        {
+          "id": "human",
+          "names": {
+            "fr": "Clovis Bray humain",
+            "en": "Human Clovis Bray"
+          },
+          "change": "baseline",
+          "civilization": "human",
+          "eras": [
+            "golden-age"
+          ],
+          "events": [
+            "Exo program"
+          ],
+          "sources": [
+            "wiki-clovis-bray"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [
+              "coat"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "AI copy is a narrative derivative, not an ordinary clothing variant. The giant Exo head is represented as a machine terminal, not a walking humanoid."
+          },
+          "datedBySource": null
+        },
+        {
+          "id": "ai",
+          "names": {
+            "fr": "IA de Clovis",
+            "en": "Clovis AI"
+          },
+          "change": "transformation",
+          "civilization": "machine",
+          "eras": [
+            "post-exo-program"
+          ],
+          "events": [
+            "Exo program"
+          ],
+          "sources": [
+            "wiki-clovis-bray"
+          ],
+          "visual": {
+            "model": "terminal",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [
+              "coat"
+            ],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "AI copy is a narrative derivative, not an ordinary clothing variant. The giant Exo head is represented as a machine terminal, not a walking humanoid."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Exo program"
+      ],
+      "locations": [
+        "europa"
+      ],
+      "sources": [
+        "wiki-clovis-bray"
+      ]
+    },
+    {
+      "id": "traveler",
+      "names": {
+        "fr": "Le Voyageur",
+        "en": "The Traveler"
+      },
+      "civilization": "cosmic",
+      "faction": "Unknown",
+      "affiliations": [
+        {
+          "faction": "Unknown",
+          "era": null
+        }
+      ],
+      "archetype": "entity",
+      "identityNote": "Stable narrative identity; costume variants do not imply a new person.",
+      "visual": {
+        "model": "sphere",
+        "silhouette": "Large white sphere",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Le Voyageur",
+            "en": "The Traveler"
+          },
+          "change": "baseline",
+          "civilization": "cosmic",
+          "eras": [
+            "ancient"
+          ],
+          "events": [
+            "Whirlwind",
+            "Collapse"
+          ],
+          "sources": [
+            "wiki-traveler"
+          ],
+          "visual": {
+            "model": "sphere",
+            "silhouette": "Large white sphere",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Whirlwind",
+        "Collapse"
+      ],
+      "locations": [
+        "earth",
+        "riis"
+      ],
+      "sources": [
+        "wiki-traveler"
+      ]
+    },
+    {
+      "id": "rasputin",
+      "names": {
+        "fr": "Raspoutine",
+        "en": "Rasputin"
+      },
+      "civilization": "machine",
+      "faction": "Warmind",
+      "affiliations": [
+        {
+          "faction": "Warmind",
+          "era": null
+        }
+      ],
+      "archetype": "entity",
+      "identityNote": "Stable narrative identity; costume variants do not imply a new person.",
+      "visual": {
+        "model": "terminal",
+        "silhouette": "Machine housing and luminous interface",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Raspoutine",
+            "en": "Rasputin"
+          },
+          "change": "baseline",
+          "civilization": "machine",
+          "eras": [
+            "golden-age"
+          ],
+          "events": [
+            "Golden Age",
+            "Collapse"
+          ],
+          "sources": [
+            "wiki-rasputin"
+          ],
+          "visual": {
+            "model": "terminal",
+            "silhouette": "Machine housing and luminous interface",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Golden Age",
+        "Collapse"
+      ],
+      "locations": [
+        "mars"
+      ],
+      "sources": [
+        "wiki-rasputin"
+      ]
+    },
+    {
+      "id": "ghost-unit",
+      "names": {
+        "fr": "Spectre",
+        "en": "Ghost"
+      },
+      "civilization": "machine",
+      "faction": "Light",
+      "affiliations": [
+        {
+          "faction": "Light",
+          "era": null
+        }
+      ],
+      "archetype": "drone",
+      "identityNote": "Stable narrative identity; costume variants do not imply a new person.",
+      "visual": {
+        "model": "drone",
+        "silhouette": "Floating shell around a single luminous eye",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Spectre",
+            "en": "Ghost"
+          },
+          "change": "baseline",
+          "civilization": "machine",
+          "eras": [
+            "post-collapse"
+          ],
+          "events": [
+            "Creation after the Collapse"
+          ],
+          "sources": [
+            "wiki-ghost-unit"
+          ],
+          "visual": {
+            "model": "drone",
+            "silhouette": "Floating shell around a single luminous eye",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Original simplified voxel illustration. Proportions, palette and gestures are artistic approximations; no canonical costume is claimed."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [
+        "Creation after the Collapse"
+      ],
+      "locations": [
+        "earth"
+      ],
+      "sources": [
+        "wiki-ghost-unit"
+      ]
+    },
+    {
+      "id": "human-scientist",
+      "names": {
+        "fr": "Scientifique humain",
+        "en": "Human scientist"
+      },
+      "civilization": "human",
+      "faction": "Unspecified",
+      "affiliations": [
+        {
+          "faction": "Unspecified",
+          "era": null
+        }
+      ],
+      "archetype": "scientist",
+      "identityNote": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction.",
+      "visual": {
+        "model": "humanoid",
+        "silhouette": "Two legs, two arms, distinct head and torso",
+        "palette": [
+          "#c5cbd1",
+          "#6b7e97",
+          "#98e8ff"
+        ],
+        "equipment": [
+          "coat"
+        ],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Scientifique humain",
+            "en": "Human scientist"
+          },
+          "change": "baseline",
+          "civilization": "human",
+          "eras": [
+            "golden-age"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-human-scientist"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#c5cbd1",
+              "#6b7e97",
+              "#98e8ff"
+            ],
+            "equipment": [
+              "coat"
+            ],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [
+        "europa"
+      ],
+      "sources": [
+        "wiki-human-scientist"
+      ]
+    },
+    {
+      "id": "awoken-guard",
+      "names": {
+        "fr": "Garde éveillé",
+        "en": "Awoken guard"
+      },
+      "civilization": "awoken",
+      "faction": "Unspecified",
+      "affiliations": [
+        {
+          "faction": "Unspecified",
+          "era": null
+        }
+      ],
+      "archetype": "soldier",
+      "identityNote": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction.",
+      "visual": {
+        "model": "humanoid",
+        "silhouette": "Two legs, two arms, distinct head and torso",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Garde éveillé",
+            "en": "Awoken guard"
+          },
+          "change": "baseline",
+          "civilization": "awoken",
+          "eras": [
+            "post-collapse"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-awoken-guard"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [
+        "reef"
+      ],
+      "sources": [
+        "wiki-awoken-guard"
+      ]
+    },
+    {
+      "id": "exo-scientist",
+      "names": {
+        "fr": "Scientifique exo",
+        "en": "Exo scientist"
+      },
+      "civilization": "exo",
+      "faction": "Unspecified",
+      "affiliations": [
+        {
+          "faction": "Unspecified",
+          "era": null
+        }
+      ],
+      "archetype": "scientist",
+      "identityNote": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction.",
+      "visual": {
+        "model": "humanoid",
+        "silhouette": "Two legs, two arms, distinct head and torso",
+        "palette": [
+          "#7f96ac",
+          "#c9d5da",
+          "#80d4ff"
+        ],
+        "equipment": [
+          "coat"
+        ],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Scientifique exo",
+            "en": "Exo scientist"
+          },
+          "change": "baseline",
+          "civilization": "exo",
+          "eras": [
+            "golden-age"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-exo-scientist"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#7f96ac",
+              "#c9d5da",
+              "#80d4ff"
+            ],
+            "equipment": [
+              "coat"
+            ],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [
+        "europa"
+      ],
+      "sources": [
+        "wiki-exo-scientist"
+      ]
+    },
+    {
+      "id": "eliksni-civilian",
+      "names": {
+        "fr": "Civil éliksni",
+        "en": "Eliksni civilian"
+      },
+      "civilization": "eliksni",
+      "faction": "Unspecified",
+      "affiliations": [
+        {
+          "faction": "Unspecified",
+          "era": null
+        }
+      ],
+      "archetype": "civilian",
+      "identityNote": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction.",
+      "visual": {
+        "model": "four-arm",
+        "silhouette": "Four arms, narrow waist and bent legs",
+        "palette": [
+          "#78634e",
+          "#c7aa73",
+          "#9eddf4"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Civil éliksni",
+            "en": "Eliksni civilian"
+          },
+          "change": "baseline",
+          "civilization": "eliksni",
+          "eras": [
+            "pre-whirlwind"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-eliksni-civilian"
+          ],
+          "visual": {
+            "model": "four-arm",
+            "silhouette": "Four arms, narrow waist and bent legs",
+            "palette": [
+              "#78634e",
+              "#c7aa73",
+              "#9eddf4"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [
+        "riis"
+      ],
+      "sources": [
+        "wiki-eliksni-civilian"
+      ]
+    },
+    {
+      "id": "krill-civilian",
+      "names": {
+        "fr": "Habitant krill",
+        "en": "Krill inhabitant"
+      },
+      "civilization": "krill",
+      "faction": "Unspecified",
+      "affiliations": [
+        {
+          "faction": "Unspecified",
+          "era": null
+        }
+      ],
+      "archetype": "civilian",
+      "identityNote": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction.",
+      "visual": {
+        "model": "krill",
+        "silhouette": "Small fragile body, three eyes; no mature Hive armor",
+        "palette": [
+          "#77675c",
+          "#c5b48b",
+          "#d9dba0"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Habitant krill",
+            "en": "Krill inhabitant"
+          },
+          "change": "baseline",
+          "civilization": "krill",
+          "eras": [
+            "ancient"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-krill-civilian",
+            "books-of-sorrow"
+          ],
+          "visual": {
+            "model": "krill",
+            "silhouette": "Fragile three-eyed Krill; no modern Hive armor",
+            "palette": [
+              "#77675c",
+              "#c5b48b",
+              "#d9dba0"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [
+        "fundament"
+      ],
+      "sources": [
+        "wiki-krill-civilian",
+        "books-of-sorrow"
+      ]
+    },
+    {
+      "id": "hive-acolyte",
+      "names": {
+        "fr": "Acolyte de la Ruche",
+        "en": "Hive Acolyte"
+      },
+      "civilization": "hive",
+      "faction": "Unspecified",
+      "affiliations": [
+        {
+          "faction": "Unspecified",
+          "era": null
+        }
+      ],
+      "archetype": "soldier",
+      "identityNote": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction.",
+      "visual": {
+        "model": "hive",
+        "silhouette": "Chitinous body and three eyes",
+        "palette": [
+          "#6e7662",
+          "#b3b69a",
+          "#c8eb7d"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Acolyte de la Ruche",
+            "en": "Hive Acolyte"
+          },
+          "change": "baseline",
+          "civilization": "hive",
+          "eras": [
+            "post-pact"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-hive-acolyte"
+          ],
+          "visual": {
+            "model": "hive",
+            "silhouette": "Chitinous body and three eyes",
+            "palette": [
+              "#6e7662",
+              "#b3b69a",
+              "#c8eb7d"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [
+        "moon"
+      ],
+      "sources": [
+        "wiki-hive-acolyte"
+      ]
+    },
+    {
+      "id": "cabal-soldier",
+      "names": {
+        "fr": "Soldat cabal",
+        "en": "Cabal soldier"
+      },
+      "civilization": "cabal",
+      "faction": "Unspecified",
+      "affiliations": [
+        {
+          "faction": "Unspecified",
+          "era": null
+        }
+      ],
+      "archetype": "soldier",
+      "identityNote": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction.",
+      "visual": {
+        "model": "heavy",
+        "silhouette": "Broad armored torso, short thick legs",
+        "palette": [
+          "#7e3a37",
+          "#b7a48b",
+          "#edbd76"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Soldat cabal",
+            "en": "Cabal soldier"
+          },
+          "change": "baseline",
+          "civilization": "cabal",
+          "eras": [
+            "city-age"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-cabal-soldier"
+          ],
+          "visual": {
+            "model": "heavy",
+            "silhouette": "Broad armored torso, short thick legs",
+            "palette": [
+              "#7e3a37",
+              "#b7a48b",
+              "#edbd76"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [
+        "mars"
+      ],
+      "sources": [
+        "wiki-cabal-soldier"
+      ]
+    },
+    {
+      "id": "vex-goblin",
+      "names": {
+        "fr": "Gobelin vex",
+        "en": "Vex Goblin"
+      },
+      "civilization": "vex",
+      "faction": "Unspecified",
+      "affiliations": [
+        {
+          "faction": "Unspecified",
+          "era": null
+        }
+      ],
+      "archetype": "soldier",
+      "identityNote": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction.",
+      "visual": {
+        "model": "vex",
+        "silhouette": "Mechanical frame and luminous core",
+        "palette": [
+          "#8c794c",
+          "#bbad77",
+          "#edeeee"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Gobelin vex",
+            "en": "Vex Goblin"
+          },
+          "change": "baseline",
+          "civilization": "vex",
+          "eras": [
+            "ancient"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-vex-goblin"
+          ],
+          "visual": {
+            "model": "vex",
+            "silhouette": "Mechanical frame and luminous core",
+            "palette": [
+              "#8c794c",
+              "#bbad77",
+              "#edeeee"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [
+        "venus"
+      ],
+      "sources": [
+        "wiki-vex-goblin"
+      ]
+    },
+    {
+      "id": "taken-thrall",
+      "names": {
+        "fr": "Esclave corrompu",
+        "en": "Taken Thrall"
+      },
+      "civilization": "taken",
+      "faction": "Unspecified",
+      "affiliations": [
+        {
+          "faction": "Unspecified",
+          "era": null
+        }
+      ],
+      "archetype": "creature",
+      "identityNote": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction.",
+      "visual": {
+        "model": "hive",
+        "silhouette": "Chitinous body and three eyes",
+        "palette": [
+          "#141a27",
+          "#ededed",
+          "#ffffff"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Esclave corrompu",
+            "en": "Taken Thrall"
+          },
+          "change": "baseline",
+          "civilization": "taken",
+          "eras": [
+            "post-oryx"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-taken-thrall"
+          ],
+          "visual": {
+            "model": "hive",
+            "silhouette": "Chitinous body and three eyes",
+            "palette": [
+              "#141a27",
+              "#ededed",
+              "#ffffff"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [
+        "dreadnaught"
+      ],
+      "sources": [
+        "wiki-taken-thrall"
+      ]
+    },
+    {
+      "id": "scorn-screeb",
+      "names": {
+        "fr": "Ravageur infâme",
+        "en": "Scorn Screeb"
+      },
+      "civilization": "scorn",
+      "faction": "Unspecified",
+      "affiliations": [
+        {
+          "faction": "Unspecified",
+          "era": null
+        }
+      ],
+      "archetype": "creature",
+      "identityNote": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction.",
+      "visual": {
+        "model": "beast",
+        "silhouette": "Two legs, two arms, distinct head and torso",
+        "palette": [
+          "#564c38",
+          "#8b9569",
+          "#77e4ef"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "stylized-documented",
+        "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Ravageur infâme",
+            "en": "Scorn Screeb"
+          },
+          "change": "baseline",
+          "civilization": "scorn",
+          "eras": [
+            "post-forsaken"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-scorn-screeb"
+          ],
+          "visual": {
+            "model": "beast",
+            "silhouette": "Two legs, two arms, distinct head and torso",
+            "palette": [
+              "#564c38",
+              "#8b9569",
+              "#77e4ef"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "stylized-documented",
+            "note": "Population archetype, not a named canonical individual. Civilian equipment and all procedural variation are artistic reconstruction."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [
+        "tangled-shore"
+      ],
+      "sources": [
+        "wiki-scorn-screeb"
+      ]
+    },
+    {
+      "id": "precursor",
+      "names": {
+        "fr": "Précurseur — forme inconnue",
+        "en": "Precursor — unknown form"
+      },
+      "civilization": "witness-precursors",
+      "faction": "Unspecified",
+      "affiliations": [
+        {
+          "faction": "Unspecified",
+          "era": null
+        }
+      ],
+      "archetype": "civilian",
+      "identityNote": "Population archetype, not a named canonical individual. No canonical individual body asserted; hidden placeholder pending documented model research.",
+      "visual": {
+        "model": "unknown",
+        "silhouette": "Unknown; no body is asserted",
+        "palette": [
+          "#65758d",
+          "#b4c7d1",
+          "#6bdde8"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "unknown",
+        "note": "Population archetype, not a named canonical individual. No canonical individual body asserted; hidden placeholder pending documented model research."
+      },
+      "variants": [
+        {
+          "id": "default",
+          "names": {
+            "fr": "Précurseur — forme inconnue",
+            "en": "Precursor — unknown form"
+          },
+          "change": "baseline",
+          "civilization": "witness-precursors",
+          "eras": [
+            "pre-witness"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-precursor"
+          ],
+          "visual": {
+            "model": "unknown",
+            "silhouette": "Unknown; no body is asserted",
+            "palette": [
+              "#65758d",
+              "#b4c7d1",
+              "#6bdde8"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "unknown",
+            "note": "Population archetype, not a named canonical individual. No canonical individual body asserted; hidden placeholder pending documented model research."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [],
+      "sources": [
+        "wiki-precursor"
+      ]
+    }
+  ]
+}
