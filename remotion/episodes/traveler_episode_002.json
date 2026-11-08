@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "0.1.0-draft",
+  "id": "destiny-explained-002-traveler",
+  "title": "What Is the Traveler?",
+  "language": "en-US",
+  "format": {"width": 1080, "height": 1920, "fps": 30, "durationFrames": 1800},
+  "style": "classic-voxel",
+  "setting": "the-tower",
+  "disclaimer": "Unofficial fan-made educational video. Not affiliated with Bungie.",
+  "audio": {"voiceover": {"enabled": true, "language": "en-US", "source": "assets/audio/traveler-en.wav", "status": "to-generate"}, "music": null},
+  "characters": [
+    {"id": "guardian", "model": "voxel-guardian-v1"},
+    {"id": "ghost", "model": "voxel-ghost-v1"}
+  ],
+  "environments": [
+    {"id": "the-tower", "model": "voxel-tower-v1", "props": ["traveler-sphere", "last-city-silhouette", "tower-balcony"]}
+  ],
+  "scenes": [
+    {"id": "scene-01", "startFrame": 0, "durationFrames": 240, "location": "the-tower", "camera": "wide-tilt-up", "actions": [{"actor": "guardian", "animation": "idle"}], "effects": ["soft-daylight"], "narration": "Above humanity's Last City floats a mysterious sphere called the Traveler. But what exactly is it?"},
+    {"id": "scene-02", "startFrame": 240, "durationFrames": 300, "location": "the-tower", "camera": "slow-orbit-traveler", "actions": [{"actor": "ghost", "animation": "hover"}], "effects": ["golden-glow"], "narration": "Long ago, the Traveler arrived in our solar system. Its presence helped humanity enter a Golden Age of discovery, technology, and longer lives."},
+    {"id": "scene-03", "startFrame": 540, "durationFrames": 300, "location": "the-tower", "camera": "push-in-sky", "actions": [{"actor": "guardian", "animation": "look-up"}], "effects": ["sky-darken", "distant-lightning"], "narration": "Then came the Collapse. A terrible catastrophe devastated civilization. The Traveler remained on Earth, while humanity struggled to survive."},
+    {"id": "scene-04", "startFrame": 840, "durationFrames": 360, "location": "the-tower", "camera": "close-up-ghost", "actions": [{"actor": "ghost", "animation": "hover"}, {"actor": "ghost", "animation": "scan"}], "effects": ["light-particles"], "narration": "Afterward, the Traveler released Ghosts: small, independent companions that search for people they can bring back as Lightbearers. Some become Guardians, defenders of the Last City."},
+    {"id": "scene-05", "startFrame": 1200, "durationFrames": 300, "location": "the-tower", "camera": "medium-guardian", "actions": [{"actor": "guardian", "animation": "resurrect"}, {"actor": "ghost", "animation": "hover"}], "effects": ["resurrection-beam", "voxel-particles"], "narration": "With their Ghosts, Guardians can wield the Light and return from death, though that power has limits, and a Ghost can be destroyed."},
+    {"id": "scene-06", "startFrame": 1500, "durationFrames": 300, "location": "the-tower", "camera": "wide-pullback", "actions": [{"actor": "guardian", "animation": "idle"}, {"actor": "ghost", "animation": "hover"}], "effects": ["traveler-halo"], "narration": "Even now, the Traveler remains one of Destiny's greatest mysteries: a source of hope, power, and questions still unanswered."}
+  ],
+  "subtitles": {"mode": "word-aligned", "language": "en-US", "source": "assets/subtitles/traveler-en.words.json", "status": "pending-voiceover-alignment", "maxLines": 2, "safeAreaBottomPx": 340},
+  "render": {"composition": "VoxelEpisode", "output": "out/episode-002-traveler.mp4", "codec": "h264"},
+  "notes": ["Illustrative schema, not yet supported by the current repository.", "Narration text is a draft; adjust pacing to voiceover duration before rendering.", "Scene and camera/action names require implementation or mapping to existing reusable components.", "The Tower setting is a conceptual voxel environment, not an existing asset."]
+}
