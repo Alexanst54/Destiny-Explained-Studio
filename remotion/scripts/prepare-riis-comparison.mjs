@@ -1,0 +1,14 @@
+import {readFileSync,writeFileSync,mkdirSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import assert from 'node:assert/strict';
+import {episodeSchema,validateWords} from '../src/voxel/episode/schema.ts';
+process.chdir(fileURLToPath(new URL('..',import.meta.url)));
+const original=episodeSchema.parse(JSON.parse(readFileSync('episodes/hybrid_riis.json'))),next=episodeSchema.parse(JSON.parse(readFileSync('episodes/hybrid_riis_06.json')));
+const ready=episodeSchema.parse(JSON.parse(readFileSync('out/hybrid_riis-ready.json')));
+assert.deepEqual(next.scenes.map(s=>[s.narration,s.startFrame,s.durationFrames,s.visual?.sources]),original.scenes.map(s=>[s.narration,s.startFrame,s.durationFrames,s.visual?.sources]));
+assert.deepEqual(ready.scenes.map(s=>s.narration),original.scenes.map(s=>s.narration));
+if(!ready.audio.voiceover.enabled||ready.audio.voiceover.status!=='ready'||ready.subtitles.status!=='ready')throw new Error('Generate the original Riis Kokoro narration first.');
+const words=validateWords(JSON.parse(readFileSync('public/'+ready.subtitles.source)),next);
+next.audio=structuredClone(ready.audio);next.subtitles=structuredClone(ready.subtitles);next.shorts.alignedWords=words;
+mkdirSync('out',{recursive:true});writeFileSync('out/hybrid_riis_06-ready.json',JSON.stringify(episodeSchema.parse(next),null,2)+'\n');
+console.log('Ready: out/hybrid_riis_06-ready.json. The exact original Kokoro WAV and timestamps are reused after script/timing validation.');

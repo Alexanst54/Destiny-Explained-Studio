@@ -1,3 +1,4 @@
+import type {ScenePolish,ProjectPolish} from '../../../polish/schema';
 import {weatherState} from '../../../weather/state';
 import {LivingWorldLayer} from '../../../living/LivingWorldLayer';
 import {narrativeLabel} from '../../../living/director';
@@ -17,7 +18,7 @@ import type {VoxelEpisodeDef, AlignedWord} from './schema';
 import {cameraPose, captionWords, findScene, sceneState} from './state';
 import type {CameraPose} from './state';
 
-export type VoxelEpisodeProps = {episode: VoxelEpisodeDef; preview: boolean; alignedWords?: AlignedWord[]; visualOnly?:boolean; draftQuality?:boolean};
+export type VoxelEpisodeProps = {episode: VoxelEpisodeDef; preview: boolean; alignedWords?: AlignedWord[]; visualOnly?:boolean; draftQuality?:boolean;scenePolish?:ScenePolish;projectPolish?:ProjectPolish;reducedMotion?:boolean};
 const Camera: React.FC<{pose: CameraPose}> = ({pose}) => {
   const {camera} = useThree();
   useLayoutEffect(() => {

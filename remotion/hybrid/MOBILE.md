@@ -16,3 +16,7 @@ Le [guide de l’interface Pages](../../docs/HYBRID-GUIDE.html) décrit le parco
 Les exemples **Démo Riis**, **Démo Oryx** et **Démo Jardin noir** sont disponibles directement dans le storyboard. Riis dure 35 s ; les deux autres durent 20 s et ne sont pas des démonstrations de motivations non attestées.
 
 Après une première installation en ligne réussie, le service worker conserve les formulaires, catalogues et lecteur pour le rechargement hors ligne. Exporter régulièrement : la suppression des données du navigateur supprime aussi la sauvegarde locale. Ne pas confondre les tests tactiles Chromium réalisés avec un essai sur un téléphone physique.
+
+## Extensions 0.6
+
+Les nouveaux panneaux restent facultatifs. Voir le [guide Visual Polish](../polish/MOBILE.md) pour les captions, caméras, personnages, atmosphères, voix locale d’aperçu et comparaison avant/après. La démo 0.5 et les projets historiques sont conservés.

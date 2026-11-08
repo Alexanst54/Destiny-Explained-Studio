@@ -12,6 +12,8 @@ export function duplicateStoryboard(raw,index){
 export function setStoryboardType(raw,index,type){
  const e=clone(raw),s=e.scenes[index];if(s.visual.type===type)return e;
  s.editorVisualDrafts??={};s.editorVisualDrafts[s.visual.type]=clone(s.visual);
+ if(s.visual.type==='voxel'&&s.polish?.environment){s.editorEnvironmentDraft=clone(s.polish.environment);delete s.polish.environment;}
+ if(type==='voxel'&&s.editorEnvironmentDraft){s.polish??={};s.polish.environment=clone(s.editorEnvironmentDraft);delete s.editorEnvironmentDraft;}
  s.visual=clone(s.editorVisualDrafts[type]??{...newVisual(type),headline:s.visual.headline,sources:s.visual.sources});
  if(type==='voxel'){s.atlas??={locationId:'riis',variantId:'before-whirlwind'};s.livingWorld??={mode:'reconstruction',cast:[],groups:[]};}
  return invalidateVoice(e);
