@@ -69,3 +69,11 @@ peuvent empêcher son téléchargement sans indiquer une erreur dans le projet.
 La composition `VoxelResurrection` ajoute une résurrection procédurale de
 15 secondes avec Three.js, React Three Fiber et `@remotion/three`, sans remplacer
 `Episode1`. Voir [la scène voxel et ses commandes](src/voxel/README.md).
+
+## Épisode JSON : le Voyageur
+
+`VoxelEpisode` accepte le format strict fourni dans
+`episodes/traveler_episode_002.json`, avec six scènes sur 60 secondes.
+Voir [le guide JSON, la validation et le rendu de test](src/voxel/episode/README.md).
+La voix et l'alignement annoncés sont encore en attente : le test est un aperçu
+silencieux, et le rendu final exige les ressources prêtes.

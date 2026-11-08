@@ -15,8 +15,8 @@ export const Block: React.FC<{
   </mesh>
 );
 
-export const Guardian: React.FC<{rise: number; t: number} & ThreeElements['group']> =
-  ({rise, t, ...props}) => {
+export const Guardian: React.FC<{rise: number; t: number; headTilt?: number} & ThreeElements['group']> =
+  ({rise, t, headTilt = 0, ...props}) => {
     const breath = Math.sin(t * 2.5) * 0.018 * rise;
     return <group {...props}>
       <Block position={[-0.23, 0.46, 0]} size={[0.36, 0.82, 0.4]} color="#353a61"/>
@@ -34,10 +34,14 @@ export const Guardian: React.FC<{rise: number; t: number} & ThreeElements['group
           <Block position={[0, -0.52, 0]} size={[0.3, 0.65, 0.36]} color="#7462ba"/>
           <Block position={[0, -0.9, 0.02]} size={[0.32, 0.23, 0.38]} color="#20273d"/>
         </group>)}
+        <group rotation={[headTilt, 0, 0]} position={[0, 2.25, 0]}>
+          <group position={[0, -2.25, 0]}>
         <Block position={[0, 2.25, 0]} size={[0.82, 0.72, 0.72]} color="#433568"/>
         <Block position={[0, 2.23, 0.38]} size={[0.65, 0.36, 0.08]} color="#171e33"/>
         <Block position={[0, 2.27, 0.43]} size={[0.52, 0.11, 0.04]} color="#80efff" emissive/>
         <Block position={[0, 2.64, -0.06]} size={[0.94, 0.12, 0.86]} color="#7462ba"/>
+          </group>
+        </group>
       </group>
     </group>;
   };
