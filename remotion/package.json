@@ -7,17 +7,24 @@
     "render": "remotion render src/index.ts Episode1 out/episode1.mp4 --codec=h264 --pixel-format=yuv420p --concurrency=2",
     "still": "remotion still src/index.ts Episode1 out/frame.png --frame=150 --image-format=png",
     "typecheck": "tsc --noEmit",
-    "browser:ensure": "remotion browser ensure"
+    "browser:ensure": "remotion browser ensure",
+    "still:voxel": "remotion still src/index.ts VoxelResurrection out/voxel-frame.png --frame=165 --image-format=png --gl=swangle",
+    "render:voxel": "remotion render src/index.ts VoxelResurrection out/voxel-resurrection.mp4 --codec=h264 --pixel-format=yuv420p --concurrency=1 --gl=swangle",
+    "test:voxel": "node --experimental-strip-types --test tests/voxel-timeline.test.mjs"
   },
   "dependencies": {
+    "@react-three/fiber": "8.18.0",
     "@remotion/cli": "4.0.541",
+    "@remotion/three": "4.0.541",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "remotion": "4.0.541"
+    "remotion": "4.0.541",
+    "three": "0.170.0"
   },
   "devDependencies": {
     "@types/react": "18.3.18",
     "@types/react-dom": "18.3.5",
+    "@types/three": "0.170.0",
     "typescript": "5.5.4"
   },
   "engines": {

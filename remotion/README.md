@@ -2,7 +2,8 @@
 
 Ce moteur est indépendant de `index.html`. Il rend l'épisode existant avec toutes
 ses animations SVG : 10 secondes, 300 images, 30 fps, **1080 × 1920**.
-L'épisode est actuellement silencieux (`voiceover: null`). Aucun voxel n'est ajouté.
+L'épisode 2D est actuellement silencieux (`voiceover: null`). Une composition
+voxel indépendante est disponible ; voir la section correspondante ci-dessous.
 
 ## Environnement reproductible
 
@@ -62,3 +63,9 @@ npm run render -- --browser-executable=/usr/bin/chromium
 Le navigateur système dépend de la machine ; le Headless Shell téléchargé par
 Remotion reste le parcours par défaut. Les restrictions réseau de l'environnement
 peuvent empêcher son téléchargement sans indiquer une erreur dans le projet.
+
+## Prototype voxel 3D
+
+La composition `VoxelResurrection` ajoute une résurrection procédurale de
+15 secondes avec Three.js, React Three Fiber et `@remotion/three`, sans remplacer
+`Episode1`. Voir [la scène voxel et ses commandes](src/voxel/README.md).
