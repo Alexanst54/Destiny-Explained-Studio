@@ -1,3 +1,6 @@
+import {weatherState} from '../../../weather/state';
+import {LivingWorldLayer} from '../../../living/LivingWorldLayer';
+import {narrativeLabel} from '../../../living/director';
 import React,{useMemo} from 'react';
 import {AbsoluteFill,Audio,staticFile,useCurrentFrame,useVideoConfig} from 'remotion';
 import {ThreeCanvas} from '@remotion/three';
@@ -29,6 +32,8 @@ export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alig
   const atlasReference=shot.atlas??(shot.environment==='scene'?sourceScene.atlas:undefined);
   const atlasState=atlasReference?atlasRecipe(atlasReference):undefined;
   const style=atlasState?{...environmentStyle(environment),sky:atlasState.palette.sky,key:atlasState.palette.accent,fill:'#9baed7',ambient:1.1}:environmentStyle(environment);
+  const weather=shot.weather??sourceScene.weather,ws=weather?weatherState(weather,frame-scene.start):undefined;
+  const weatherLight=ws?.active?ws.light:1;
   const dark=!atlasState&&environment==='collapse-vision',light=!atlasState&&environment==='golden-age-vision';
   const vision=!atlasState&&environment.includes('vision');
   const captions=captionWords(findScene(valid,frame),frame,preview?undefined:words);
@@ -38,11 +43,12 @@ export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alig
       <color attach="background" args={[style.sky]}/>
       <fog attach="fog" args={[style.sky,style.fogNear,style.fogFar]}/>
       <FilmCameraRig pose={camera}/>
-      <ambientLight intensity={style.ambient}/>
-      <directionalLight position={[4,7,5]} intensity={dark?1:2.4} color={style.key}/>
-      <directionalLight position={[-5,4,-3]} intensity={2} color={style.fill}/>
+      <ambientLight intensity={style.ambient*weatherLight}/>
+      <directionalLight position={[4,7,5]} intensity={(dark?1:2.4)*weatherLight} color={style.key}/>
+      <directionalLight position={[-5,4,-3]} intensity={2*weatherLight} color={style.fill}/>
       {light&&<pointLight position={[0,6,-6]} color="#ffe9a6" intensity={25} distance={15}/>}
       <>{atlasReference?<AtlasEnvironment reference={atlasReference} frame={frame-scene.start} halo={halo}/>:<Stage environment={environment} halo={halo}/>}</>
+      <LivingWorldLayer world={sourceScene.livingWorld} shot={shot.livingWorld} weather={shot.weather??sourceScene.weather} frame={frame-scene.start} shotStart={shot.start-scene.start}/>
       <VoxelElements items={shot.elements??sourceScene.elements??[]} frame={frame-scene.start}/>
       {shot.actors.guardian&&<Guardian rise={guardian.rise} t={frame/30} pose={guardian.joints}
         position={guardian.position} rotation={guardian.rotation}/>}
@@ -54,11 +60,12 @@ export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alig
     </ThreeCanvas>
     {transition.opacity>0&&<AbsoluteFill style={{backgroundColor:'#101a2b',opacity:transition.type==='wipe'?1:transition.opacity,
       clipPath:transition.type==='wipe'?`inset(0 ${100*(1-transition.opacity)}% 0 0)`:undefined}}/>}
-    <div style={{position:'absolute',top:140,left:70,right:70,color:'#eef7ff',textAlign:'center',fontFamily:'sans-serif',fontSize:56,fontWeight:800,
+    <div style={{position:'absolute',top:140,left:70,right:70,color:'#eef7ff',textAlign:'center',fontFamily:'sans-serif',fontSize:preview&&sourceScene.livingWorld?44:56,fontWeight:800,
       letterSpacing:3,textShadow:'0 2px 8px #101a2b'}}>{valid.title}</div>
     {(preview||vision)&&<div style={{position:'absolute',top:230,width:'100%',textAlign:'center',color:'#ffe9a6',fontFamily:'sans-serif',fontSize:24}}>
       {preview?'PREVIEW · SILENT · ESTIMATED CUES':environment==='collapse-vision'?'THE COLLAPSE · ILLUSTRATION':'THE GOLDEN AGE · ILLUSTRATION'}</div>}
     {atlasState&&<div style={{position:'absolute',top:275,left:65,right:65,textAlign:'center',color:'#ffe9a6',fontFamily:'sans-serif',fontSize:23,lineHeight:1.4,textShadow:'0 2px 5px #101a2b'}}>{atlasState.reconstructed?'ARTISTIC RECONSTRUCTION':'STYLIZED GAME-INSPIRED ENVIRONMENT'} · {atlasState.label}</div>}
+    {sourceScene.livingWorld&&<div style={{position:'absolute',top:345,left:65,right:65,textAlign:'center',color:'#ffe9a6',fontFamily:'sans-serif',fontSize:24}}>{narrativeLabel(sourceScene.livingWorld)}</div>}
     {captions.length>0&&<div style={{position:'absolute',bottom:valid.subtitles.safeAreaBottomPx,left:80,right:80,padding:'25px 30px',backgroundColor:'rgba(10,17,30,0.85)',
       border:'2px solid #6a91a7',borderRadius:16,color:'#e6faff',textAlign:'center',fontFamily:'sans-serif',fontSize:42,lineHeight:1.3,fontWeight:700}}>
       {[captions.slice(0,3),captions.slice(3,6)].filter(line=>line.length).map((line,i)=><div key={i}>{line.map((w,j)=><span key={j}

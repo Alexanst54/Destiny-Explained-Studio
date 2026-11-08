@@ -38,7 +38,13 @@
     "narrate:atlas": "python scripts/narration.py episodes/atlas_demo.json",
     "render:atlas": "node --experimental-strip-types scripts/episode.mjs render out/atlas_demo-ready.json",
     "render:atlas:preview": "node --experimental-strip-types scripts/episode.mjs render episodes/atlas_demo.json --preview",
-    "report:atlas": "node --experimental-strip-types scripts/atlas-report.mjs"
+    "report:atlas": "node --experimental-strip-types scripts/atlas-report.mjs",
+    "test:living": "node --experimental-strip-types --test tests/living.test.mjs",
+    "test:living:browser": "node ../editor/living.browser.test.cjs",
+    "narrate:living": "python scripts/narration.py episodes/living_europa.json",
+    "render:living": "node --experimental-strip-types scripts/episode.mjs render out/living_europa-ready.json",
+    "verify:living:render": "node scripts/verify-living-render.mjs",
+    "test:editor:offline": "node ../editor/offline.browser.test.cjs"
   },
   "dependencies": {
     "@react-three/fiber": "8.18.0",

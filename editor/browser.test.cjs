@@ -18,7 +18,7 @@ const root=path.resolve(__dirname,'..');
  await context.route('**/*',async route=>{
   const url=new URL(route.request().url());assert.equal(url.origin,'https://editor.test');
   const rel=url.pathname.replace('/Destiny-Explained-Studio/','')||'index.html';
-  assert.ok(!rel.includes('..'));
+  assert.ok(!rel.includes('..'));if(rel.replace(/^\//,'')==='favicon.ico'){await route.fulfill({status:204,body:''});return;}
   const type=rel.endsWith('.js')?'text/javascript':rel.endsWith('.css')?'text/css':'text/html';
   await route.fulfill({body:await fs.readFile(path.join(root,'docs',rel)),contentType:type});
  });

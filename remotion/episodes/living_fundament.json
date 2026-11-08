@@ -1,0 +1,325 @@
+{
+  "schemaVersion": "0.4.0",
+  "id": "living-fundament",
+  "title": "Fundament: Before the Hive",
+  "language": "en-US",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationFrames": 720
+  },
+  "style": "classic-voxel",
+  "setting": "the-tower",
+  "disclaimer": "Unofficial fan-made educational video. Not affiliated with Bungie.",
+  "audio": {
+    "voiceover": {
+      "enabled": true,
+      "language": "en-US",
+      "source": "assets/audio/traveler-en.wav",
+      "status": "to-generate"
+    },
+    "music": null
+  },
+  "characters": [
+    {
+      "id": "guardian",
+      "model": "voxel-guardian-v1"
+    },
+    {
+      "id": "ghost",
+      "model": "voxel-ghost-v1"
+    }
+  ],
+  "environments": [
+    {
+      "id": "the-tower",
+      "model": "voxel-tower-v1",
+      "props": [
+        "traveler-sphere",
+        "last-city-silhouette",
+        "tower-balcony"
+      ]
+    },
+    {
+      "id": "europa",
+      "model": "voxel-europa-v1",
+      "props": [
+        "ice-ridges",
+        "snowfield",
+        "research-outpost"
+      ]
+    },
+    {
+      "id": "black-garden",
+      "model": "voxel-black-garden-v1",
+      "props": [
+        "vex-gate",
+        "garden-terraces",
+        "red-flowers"
+      ]
+    },
+    {
+      "id": "pyramid-interior",
+      "model": "voxel-pyramid-v1",
+      "props": [
+        "stepped-walls",
+        "resonant-altar",
+        "amber-trim"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "fundament",
+      "startFrame": 0,
+      "durationFrames": 720,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        },
+        {
+          "actor": "ghost",
+          "animation": "hover"
+        }
+      ],
+      "effects": [
+        "soft-daylight"
+      ],
+      "narration": "Before the Hive, the Krill struggled to survive on Fundament. The Books of Sorrow describe floating continents and a vast ocean. Aurash, Sathona, and Xi Ro sought a different future. This scene reconstructs their early lives. Their gestures, surroundings, and fragile forms are artistic interpretations of an in-universe account.",
+      "elements": [],
+      "atlas": {
+        "locationId": "fundament",
+        "variantId": "krill-origins"
+      },
+      "livingWorld": {
+        "mode": "reconstruction",
+        "era": "ancient",
+        "cast": [
+          {
+            "id": "sister-aurash",
+            "characterId": "aurash",
+            "position": [
+              -1.2,
+              0,
+              -1
+            ],
+            "animation": "talk",
+            "startFrame": 0,
+            "durationFrames": 720,
+            "clips": [],
+            "variantId": "aurash"
+          },
+          {
+            "id": "sister-sathona",
+            "characterId": "sathona",
+            "position": [
+              0.0,
+              0,
+              -1
+            ],
+            "animation": "interact",
+            "startFrame": 0,
+            "durationFrames": 720,
+            "clips": [],
+            "variantId": "sathona"
+          },
+          {
+            "id": "sister-xi-ro",
+            "characterId": "xi-ro",
+            "position": [
+              1.2,
+              0,
+              -1
+            ],
+            "animation": "talk",
+            "startFrame": 0,
+            "durationFrames": 720,
+            "clips": [],
+            "variantId": "xi-ro"
+          }
+        ],
+        "groups": [
+          {
+            "id": "population",
+            "member": {
+              "id": "template",
+              "characterId": "krill-civilian",
+              "position": [
+                -2,
+                0,
+                -3
+              ],
+              "animation": "walk",
+              "startFrame": 0,
+              "durationFrames": 720,
+              "clips": [],
+              "path": {
+                "waypoints": [
+                  {
+                    "position": [
+                      -2,
+                      0,
+                      -3
+                    ],
+                    "pauseFrames": 30
+                  },
+                  {
+                    "position": [
+                      1,
+                      0,
+                      -5
+                    ],
+                    "pauseFrames": 0
+                  }
+                ],
+                "speed": 0.25
+              }
+            },
+            "count": 8,
+            "seed": 42,
+            "formation": "scatter",
+            "spacing": 0.7,
+            "behavior": "walk",
+            "sizeVariation": 0.1
+          }
+        ]
+      },
+      "weather": {
+        "type": "fog",
+        "intensity": 0.5,
+        "windDirection": 35,
+        "windSpeed": 2,
+        "visibility": 1,
+        "startFrame": 0,
+        "durationFrames": 720,
+        "seed": 42,
+        "transitionFrames": 600,
+        "dayPhase": 0.5,
+        "particleBudget": 64,
+        "to": {
+          "type": "supernatural",
+          "intensity": 0.85,
+          "windDirection": 65,
+          "windSpeed": 16,
+          "visibility": 0.4
+        }
+      }
+    }
+  ],
+  "subtitles": {
+    "mode": "word-aligned",
+    "language": "en-US",
+    "source": "assets/subtitles/traveler-en.words.json",
+    "status": "pending-voiceover-alignment",
+    "maxLines": 2,
+    "safeAreaBottomPx": 340
+  },
+  "render": {
+    "composition": "VoxelCinematicEpisode",
+    "output": "out/living-fundament.mp4",
+    "codec": "h264"
+  },
+  "notes": [
+    "24-second artistic reconstruction; procedural characters and weather are not canonical visual records.",
+    "No modern Guardian or Ghost is shown in these historical scenes."
+  ],
+  "direction": {
+    "version": 1,
+    "intensity": "balanced",
+    "scenes": [
+      {
+        "sceneId": "fundament",
+        "shots": [
+          {
+            "id": "fundament-shot-0",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.5,
+                12
+              ],
+              "to": [
+                1,
+                3.2,
+                11
+              ],
+              "targetFrom": [
+                0,
+                1.4,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.5,
+                -3
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          },
+          {
+            "id": "fundament-shot-1",
+            "at": {
+              "sceneFrame": 360
+            },
+            "purpose": "Move closer to the architectural or landscape details supporting the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                -2,
+                3,
+                10
+              ],
+              "to": [
+                0,
+                3,
+                9
+              ],
+              "targetFrom": [
+                0,
+                1.4,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.5,
+                -3
+              ],
+              "fovFrom": 44,
+              "fovTo": 42
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 12
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      }
+    ]
+  }
+}

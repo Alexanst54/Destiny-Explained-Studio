@@ -1,0 +1,312 @@
+{
+  "schemaVersion": "0.4.0",
+  "id": "living-whirlwind",
+  "title": "The Whirlwind of Riis",
+  "language": "en-US",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationFrames": 720
+  },
+  "style": "classic-voxel",
+  "setting": "the-tower",
+  "disclaimer": "Unofficial fan-made educational video. Not affiliated with Bungie.",
+  "audio": {
+    "voiceover": {
+      "enabled": true,
+      "language": "en-US",
+      "source": "assets/audio/traveler-en.wav",
+      "status": "to-generate"
+    },
+    "music": null
+  },
+  "characters": [
+    {
+      "id": "guardian",
+      "model": "voxel-guardian-v1"
+    },
+    {
+      "id": "ghost",
+      "model": "voxel-ghost-v1"
+    }
+  ],
+  "environments": [
+    {
+      "id": "the-tower",
+      "model": "voxel-tower-v1",
+      "props": [
+        "traveler-sphere",
+        "last-city-silhouette",
+        "tower-balcony"
+      ]
+    },
+    {
+      "id": "europa",
+      "model": "voxel-europa-v1",
+      "props": [
+        "ice-ridges",
+        "snowfield",
+        "research-outpost"
+      ]
+    },
+    {
+      "id": "black-garden",
+      "model": "voxel-black-garden-v1",
+      "props": [
+        "vex-gate",
+        "garden-terraces",
+        "red-flowers"
+      ]
+    },
+    {
+      "id": "pyramid-interior",
+      "model": "voxel-pyramid-v1",
+      "props": [
+        "stepped-walls",
+        "resonant-altar",
+        "amber-trim"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "whirlwind",
+      "startFrame": 0,
+      "durationFrames": 720,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        },
+        {
+          "actor": "ghost",
+          "animation": "hover"
+        }
+      ],
+      "effects": [
+        "soft-daylight"
+      ],
+      "narration": "Before the Whirlwind, Riis was home to the Eliksni. The Traveler blessed their civilization. Then catastrophe shattered their world, and survivors fled into the stars. These scenes imagine civilian life and escape. The storm is an artistic metaphor, not a documented weather record.",
+      "elements": [],
+      "atlas": {
+        "locationId": "riis",
+        "variantId": "before-whirlwind"
+      },
+      "livingWorld": {
+        "mode": "reconstruction",
+        "era": "pre-whirlwind",
+        "cast": [
+          {
+            "id": "citizen",
+            "characterId": "eliksni-civilian",
+            "position": [
+              1,
+              0,
+              -1
+            ],
+            "animation": "talk",
+            "startFrame": 0,
+            "durationFrames": 720,
+            "clips": []
+          }
+        ],
+        "groups": [
+          {
+            "id": "population",
+            "member": {
+              "id": "template",
+              "characterId": "eliksni-civilian",
+              "position": [
+                -2,
+                0,
+                -3
+              ],
+              "animation": "walk",
+              "startFrame": 0,
+              "durationFrames": 720,
+              "clips": [
+                {
+                  "animation": "flee",
+                  "startFrame": 360,
+                  "durationFrames": 360,
+                  "transitionFrames": 24
+                }
+              ],
+              "path": {
+                "waypoints": [
+                  {
+                    "position": [
+                      -2,
+                      0,
+                      -3
+                    ],
+                    "pauseFrames": 30
+                  },
+                  {
+                    "position": [
+                      1,
+                      0,
+                      -5
+                    ],
+                    "pauseFrames": 0
+                  }
+                ],
+                "speed": 0.25
+              }
+            },
+            "count": 8,
+            "seed": 42,
+            "formation": "scatter",
+            "spacing": 0.7,
+            "behavior": "walk",
+            "sizeVariation": 0.1
+          }
+        ]
+      },
+      "weather": {
+        "type": "clear",
+        "intensity": 0.15,
+        "windDirection": 35,
+        "windSpeed": 2,
+        "visibility": 1,
+        "startFrame": 0,
+        "durationFrames": 720,
+        "seed": 42,
+        "transitionFrames": 600,
+        "dayPhase": 0.5,
+        "particleBudget": 64,
+        "to": {
+          "type": "thunderstorm",
+          "intensity": 0.85,
+          "windDirection": 65,
+          "windSpeed": 16,
+          "visibility": 0.4
+        }
+      }
+    }
+  ],
+  "subtitles": {
+    "mode": "word-aligned",
+    "language": "en-US",
+    "source": "assets/subtitles/traveler-en.words.json",
+    "status": "pending-voiceover-alignment",
+    "maxLines": 2,
+    "safeAreaBottomPx": 340
+  },
+  "render": {
+    "composition": "VoxelCinematicEpisode",
+    "output": "out/living-whirlwind.mp4",
+    "codec": "h264"
+  },
+  "notes": [
+    "24-second artistic reconstruction; procedural characters and weather are not canonical visual records.",
+    "No modern Guardian or Ghost is shown in these historical scenes."
+  ],
+  "direction": {
+    "version": 1,
+    "intensity": "balanced",
+    "scenes": [
+      {
+        "sceneId": "whirlwind",
+        "shots": [
+          {
+            "id": "whirlwind-shot-0",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.5,
+                12
+              ],
+              "to": [
+                1,
+                3.2,
+                11
+              ],
+              "targetFrom": [
+                0,
+                1.4,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.5,
+                -3
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          },
+          {
+            "id": "whirlwind-shot-1",
+            "at": {
+              "sceneFrame": 360
+            },
+            "purpose": "Move closer to the architectural or landscape details supporting the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                -2,
+                3,
+                10
+              ],
+              "to": [
+                0,
+                3,
+                9
+              ],
+              "targetFrom": [
+                0,
+                1.4,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.5,
+                -3
+              ],
+              "fovFrom": 44,
+              "fovTo": 42
+            },
+            "transition": {
+              "type": "fade",
+              "durationFrames": 12
+            },
+            "livingWorld": {
+              "animations": [
+                {
+                  "id": "citizen",
+                  "animation": "flee",
+                  "transitionFrames": 24
+                }
+              ]
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      }
+    ]
+  }
+}

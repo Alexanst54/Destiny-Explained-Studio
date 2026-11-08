@@ -88,3 +88,13 @@ Les zones attestées seulement par le manifest sont identifiées comme telles : 
 Les références `atlas.locationId` et `atlas.variantId` restent dans le projet local et l’export. Les autres champs et champs inconnus sont préservés. Un plan « Décor de la scène » hérite du lieu de scène ; une référence Atlas explicite de plan le remplace. Les anciens décors explicites ne sont pas réécrits automatiquement.
 
 Les liens et `Editor-Colab.ipynb` ciblent **main** : l’import Atlas dans Colab requiert la fusion volontaire de cette PR. La publication reste **main /docs**, sans nouveau workflow. Le [catalogue, le contrat et l’import hors ligne](../remotion/atlas/README.md) et le [rapport de couverture](../remotion/atlas/REPORT.md) sont consultables dans le dépôt GitHub. L’inventaire est partiel et ses lacunes sont publiées.
+
+### Living Worlds 0.4
+
+**Personnages** recherche les noms FR/EN et filtre civilisation/faction. Dépliez une fiche pour consulter ses sources puis ajoutez-la à la scène. Les variantes, positions, périodes, trajectoires et animations sont réglables pour plusieurs personnages. Les groupes sont paramétrés séparément ; le budget total est de 32. Les réglages d’animation par plan figurent aussi dans les plans de l’épisode.
+
+**Météo** propose des ambiances adaptées au lieu Atlas et affiche les incompatibilités dans la validation. Les réglages comprennent intensité, vent, période, visibilité, seed, particules, cycle solaire et transition. Une météo inhabituelle reste autorisée en reconstitution. **Histoire alternative** affiche explicitement « NOT CANON » dans la vidéo.
+
+Les boutons **Démo Tourbillon**, **Démo Europe** et **Démo Fundament** chargent des épisodes de 24 secondes, avec narration anglaise à générer dans Colab. Après une première visite réussie en ligne, le cache statique permet de rouvrir l’éditeur hors ligne ; les références externes demandent le réseau. La sauvegarde locale ne remplace pas l’export JSON.
+
+[Contrat technique et limites historiques](../remotion/living/README.md). Le cache change automatiquement à chaque reconstruction des assets statiques ; aucun backend et aucun changement de publication Pages.

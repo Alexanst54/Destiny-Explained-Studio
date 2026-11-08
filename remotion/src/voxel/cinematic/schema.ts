@@ -1,3 +1,5 @@
+import {livingShotSchema} from '../../../living/schema.ts';
+import {weatherSchema} from '../../../weather/schema.ts';
 import {z} from 'zod';
 import {atlasRefSchema} from '../../../atlas/index.ts';
 import {shotEnvironmentSchema,elementsSchema} from '../library/catalog.ts';
@@ -9,7 +11,7 @@ export const cueSchema = z.union([
 ]);
 const transition = z.object({type:z.enum(['cut','fade','wipe','match']),durationFrames:z.number().int().min(0).max(30)}).strict();
 const shot = z.object({id:z.string().min(1),at:cueSchema,purpose:reason,
-  environment:shotEnvironmentSchema,atlas:atlasRefSchema.optional(),elements:elementsSchema.optional(),
+  environment:shotEnvironmentSchema,atlas:atlasRefSchema.optional(),livingWorld:livingShotSchema.optional(),weather:weatherSchema.optional(),elements:elementsSchema.optional(),
   actors:z.object({guardian:z.boolean(),ghost:z.boolean()}).strict(),
   camera:z.object({mode:z.enum(['dolly','orbit','zoom','follow','close-up','perspective']),
     from:vec,to:vec,targetFrom:vec,targetTo:vec,

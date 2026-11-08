@@ -1,3 +1,6 @@
+import {weatherState} from '../../../weather/state';
+import {LivingWorldLayer} from '../../../living/LivingWorldLayer';
+import {narrativeLabel} from '../../../living/director';
 import React, {useLayoutEffect, useMemo} from 'react';
 import {AbsoluteFill, Audio, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
 import {ThreeCanvas} from '@remotion/three';
@@ -42,6 +45,7 @@ export const VoxelEpisode: React.FC<VoxelEpisodeProps> = (props) => {
   const style = environmentStyle(scene.location==='the-tower'?'tower':scene.location);
   const atlasState=scene.atlas?atlasRecipe(scene.atlas):undefined;
   const sky = new Color(atlasState?.palette.sky??style.sky).lerp(new Color('#030610'), darkness);
+  const ws=scene.weather?weatherState(scene.weather,state.local):undefined,weatherLight=ws?.active?ws.light:1;
   const captions = captionWords(scene, frame, preview ? undefined : words);
   return <AbsoluteFill style={{backgroundColor:'#101a2b'}}>
     <ThreeCanvas width={width} height={height} dpr={1} camera={{fov:42,near:0.1,far:80,
@@ -49,16 +53,17 @@ export const VoxelEpisode: React.FC<VoxelEpisodeProps> = (props) => {
       <color attach="background" args={[sky]}/>
       <fog attach="fog" args={[sky,24,50]}/>
       <Camera pose={cameraPose(scene.camera,state.progress)}/>
-      <ambientLight intensity={lightning ? 2 : style.ambient-darkness*0.6}/>
-      <directionalLight position={[4,7,5]} intensity={2.4-darkness*1.5} color={style.key}/>
-      <directionalLight position={[-5,4,-3]} intensity={2} color={style.fill}/>
+      <ambientLight intensity={(lightning ? 2 : style.ambient-darkness*0.6)*weatherLight}/>
+      <directionalLight position={[4,7,5]} intensity={(2.4-darkness*1.5)*weatherLight} color={style.key}/>
+      <directionalLight position={[-5,4,-3]} intensity={2*weatherLight} color={style.fill}/>
       {fx('golden-glow') && <pointLight position={[0,6,-6]} color="#ffe9a6" intensity={35} distance={15}/>}
       {scene.atlas?<AtlasEnvironment reference={scene.atlas} frame={state.local} halo={fx('traveler-halo')}/>:<VoxelEnvironment location={scene.location} halo={fx('traveler-halo')}/>}
+      <LivingWorldLayer world={scene.livingWorld} weather={scene.weather} frame={state.local}/>
       <VoxelElements items={scene.elements??[]} frame={state.local}/>
-      <Guardian rise={state.rise} t={state.t} headTilt={state.lookUp ? -0.28*state.progress : 0}
-        position={[state.guardianX,state.guardianY,0]} rotation={[0,0,state.guardianRotation]}/>
-      <Ghost t={state.t} position={[state.ghostX,state.ghostY,0]}
-        rotation={[0,state.scan ? Math.sin(state.t*2)*0.4 : 0,0]}/>
+      {(!scene.livingWorld||scene.actions.some(a=>a.actor==='guardian'))&&<Guardian rise={state.rise} t={state.t} headTilt={state.lookUp ? -0.28*state.progress : 0}
+        position={[state.guardianX,state.guardianY,0]} rotation={[0,0,state.guardianRotation]}/>}
+      {(!scene.livingWorld||scene.actions.some(a=>a.actor==='ghost'))&&<Ghost t={state.t} position={[state.ghostX,state.ghostY,0]}
+        rotation={[0,state.scan ? Math.sin(state.t*2)*0.4 : 0,0]}/>}
       {state.scan && <mesh position={[0,state.ghostY,1.1]} rotation={[Math.PI/2,0,0]}>
         <cylinderGeometry args={[0.05,0.6,2,6,1,true]}/>
         <meshBasicMaterial color="#8deaff" transparent opacity={0.14} depthWrite={false} side={2}/>
@@ -71,10 +76,11 @@ export const VoxelEpisode: React.FC<VoxelEpisodeProps> = (props) => {
       </group>}
     </ThreeCanvas>
     <div style={{position:'absolute',top:140,left:70,right:70,color:'#eef7ff',textAlign:'center',
-      fontFamily:'sans-serif',fontSize:56,fontWeight:800,letterSpacing:3,textShadow:'0 2px 8px #101a2b'}}>{valid.title}</div>
+      fontFamily:'sans-serif',fontSize:preview&&scene.livingWorld?44:56,fontWeight:800,letterSpacing:3,textShadow:'0 2px 8px #101a2b'}}>{valid.title}</div>
     {preview && <div style={{position:'absolute',top:230,width:'100%',textAlign:'center',color:'#ffe9a6',
       fontFamily:'sans-serif',fontSize:24}}>PREVIEW · SILENT · ESTIMATED CAPTIONS</div>}
     {atlasState&&<div style={{position:'absolute',top:275,left:65,right:65,textAlign:'center',color:'#ffe9a6',fontFamily:'sans-serif',fontSize:23,lineHeight:1.4}}>{atlasState.reconstructed?'ARTISTIC RECONSTRUCTION':'STYLIZED GAME-INSPIRED ENVIRONMENT'} · {atlasState.label}</div>}
+    {scene.livingWorld&&<div style={{position:'absolute',top:345,left:65,right:65,textAlign:'center',color:'#ffe9a6',fontFamily:'sans-serif',fontSize:24}}>{narrativeLabel(scene.livingWorld)}</div>}
     {captions.length > 0 && <div style={{position:'absolute',bottom:valid.subtitles.safeAreaBottomPx,
       left:80,right:80,padding:'25px 30px',backgroundColor:'rgba(10,17,30,0.85)',
       border:'2px solid #6a91a7',borderRadius:16,color:'#e6faff',textAlign:'center',

@@ -1,3 +1,9 @@
+import {characterCatalog,charactersById,searchCharacters} from '../remotion/characters/index.ts';
+import {civilizations,animations as livingAnimations} from '../remotion/characters/schema.ts';
+import {weatherTypes,weatherPresets} from '../remotion/weather/schema.ts';
+import whirlwindDemo from '../remotion/episodes/living_whirlwind.json' with {type:'json'};
+import europaDemo from '../remotion/episodes/living_europa.json' with {type:'json'};
+import fundamentDemo from '../remotion/episodes/living_fundament.json' with {type:'json'};
 import {atlas,locationsById,sourcesById,searchAtlas,resolveAtlas} from '../remotion/atlas/index.ts';
 import {categories} from '../remotion/atlas/schema.ts';
 import atlasDemo from '../remotion/episodes/atlas_demo.json' with {type:'json'};
@@ -10,6 +16,7 @@ const $=selector=>document.querySelector(selector);
 const list=v=>Array.isArray(v)?v:[];
 const record=v=>v&&typeof v==='object'&&!Array.isArray(v);
 const labels={'dark-age':'Âge sombre','red-war':'Guerre rouge','pre-invasion':'Avant l’invasion','universe-realm':'Univers, dimensions et royaumes','stellar-body':'Systèmes et astres','destination-region':'Destinations et régions',zone:'Zones et sous-zones','historical-site':'Lieux historiques','activity-site':'Raids, donjons et missions','ship-station':'Vaisseaux et stations','lore-world':'Mondes du lore','historical-variant':'Variantes historiques',human:'Humaine',vex:'Vex',hive:'Ruche',cabal:'Cabale',eliksni:'Éliksni',awoken:'Éveillée',krill:'Krill',lubraean:'Lubraéenne','golden-age':'Âge d’or','city-age':'Âge de la Cité',ancient:'Antiquité','pre-whirlwind':'Avant le Tourbillon','post-whirlwind':'Après le Tourbillon','the-tower':'La Tour et la Dernière Cité',europa:'Europe enneigée','black-garden':'Le Jardin noir','pyramid-interior':'Intérieur de Pyramide',scene:'Décor de la scène',custom:'Liste propre au plan','vex-structure':'Structure vex','light-fragments':'Fragments de Lumière',crystal:'Cristaux',snow:'Neige',still:'Immobile',pulse:'Pulsation lumineuse',drift:'Dérive',blizzard:'Tempête de neige',frame:'Temps dans la scène',phrase:'Mots de narration','wide-tilt-up':'Plan large vers le ciel','slow-orbit-traveler':'Orbite lente du Voyageur','push-in-sky':'Travelling vers le ciel','close-up-ghost':'Gros plan du Spectre','medium-guardian':'Plan moyen du Gardien','wide-pullback':'Recul large',calm:'Calme',balanced:'Équilibrée',cinematic:'Cinématique',tower:'La Tour','golden-age-vision':'Vision de l’Âge d’or','collapse-vision':'Vision de l’Effondrement','light-space':'Espace de Lumière',guardian:'Gardien',ghost:'Spectre',idle:'Repos',walk:'Marche',run:'Course',jump:'Saut',fall:'Chute',resurrect:'Résurrection',combat:'Combat',interact:'Interaction','look-up':'Regard vers le ciel',hover:'Flottement',orbit:'Orbite',scan:'Scan',dolly:'Travelling',zoom:'Zoom',follow:'Suivi', 'close-up':'Gros plan',perspective:'Changement d’angle',particles:'Particules',explosion:'Explosion voxel',hologram:'Hologramme',beam:'Rayon lumineux',shake:'Secousse',cut:'Coupe franche',fade:'Fondu sombre',wipe:'Volet',match:'Raccord de caméra'};
+Object.assign(labels,{exo:'Exos',machine:'Machines',cosmic:'Entités cosmiques',taken:'Corrompus',scorn:'Infâmes','witness-precursors':'Précurseurs (forme inconnue)',clear:'Temps clair',clouds:'Nuages',rain:'Pluie',thunderstorm:'Orage',fog:'Brouillard',sandstorm:'Tempête de sable','strong-wind':'Vent violent',spores:'Spores atmosphériques',energy:'Particules d’énergie',supernatural:'Atmosphère surnaturelle',flee:'Fuite',look:'Regard',salute:'Salut',talk:'Discussion',observe:'Observation',kneel:'Agenouillement',attack:'Attaque',hit:'Impact',terminal:'Utiliser un terminal',appear:'Apparition',disappear:'Disparition',grid:'Grille',line:'Ligne',scatter:'Dispersion',canonical:'Canon (illustration stylisée)',reconstruction:'Reconstitution artistique','alternate-history':'Histoire alternative — non canon',default:'Apparence de référence'});
 const friendly=v=>labels[v]??v;
 function node(tag,attrs={},...children){
  const e=document.createElement(tag);
@@ -99,7 +106,7 @@ function validationBox(){
  box.append(small('La voix, sa durée réelle et les ancrages vocaux seront vérifiés après génération dans Colab.'));
  return box;
 }
-function translate(message){return message.replace('Narration cue not found','Ancrage vocal introuvable').replace('narration cue not found','Ancrage vocal introuvable').replace('cue outside scene','Le début sort de la scène').replace('effect exceeds scene','L’effet dépasse la scène').replace('action exceeds scene','L’animation dépasse la scène').replace('shots must be ordered and at least 12 frames long','Les plans doivent être ordonnés et durer au moins 12 images').replace('first shot must begin at scene start','Le premier plan doit commencer à zéro').replace('transition too long','La transition est trop longue').replace('tracking an invisible actor','Le suivi vise un personnage invisible').replace('Duplicate direction id','Identifiant dupliqué').replace('camera path crosses its target','La caméra traverse son point visé').replace('overlapping guardian actions','Des animations du Gardien se chevauchent').replace('overlapping ghost actions','Des animations du Spectre se chevauchent');}
+function translate(message){return message.replace('Voiceover is pending: preview is silent.','Voix en attente : aperçu silencieux.').replace('Word alignment is pending: preview captions use estimated timing.','Sous-titres en attente : minutage estimé dans l’aperçu.').replace('Narration cue not found','Ancrage vocal introuvable').replace('narration cue not found','Ancrage vocal introuvable').replace('cue outside scene','Le début sort de la scène').replace('effect exceeds scene','L’effet dépasse la scène').replace('action exceeds scene','L’animation dépasse la scène').replace('shots must be ordered and at least 12 frames long','Les plans doivent être ordonnés et durer au moins 12 images').replace('first shot must begin at scene start','Le premier plan doit commencer à zéro').replace('transition too long','La transition est trop longue').replace('tracking an invisible actor','Le suivi vise un personnage invisible').replace('Duplicate direction id','Identifiant dupliqué').replace('camera path crosses its target','La caméra traverse son point visé').replace('overlapping guardian actions','Des animations du Gardien se chevauchent').replace('overlapping ghost actions','Des animations du Spectre se chevauchent');}
 function refresh(){
  const ub=$('#undo-button'),rb=$('#redo-button');if(ub)ub.disabled=!undo.length;if(rb)rb.disabled=!redo.length;
  const v=$('#validation-region');if(v)v.replaceChildren(validationBox());
@@ -142,6 +149,9 @@ function shotCard(s,p,item,index){
    item.camera?.mode==='orbit'?node('div',{class:'two-col'},numberField('Orbite départ (radians)',item.camera?.angleFrom,v=>changeField([...path,'camera','angleFrom'],v),{min:-3,max:3}),numberField('Orbite arrivée (radians)',item.camera?.angleTo,v=>changeField([...path,'camera','angleTo'],v),{min:-3,max:3})):null),
   atlasSelectionInfo(item.atlas,[...path,'atlas']),button('Choisir un lieu Atlas pour ce plan',()=>{shotIndex=index;atlasTarget='shot';view='atlas';render();}),
   elementControls([...path,'elements'],item.elements,{inherit:true}),
+  s.livingWorld?node('details',{},node('summary',{},'Personnages Living Worlds dans ce plan'),small('Les personnages et leurs déplacements héritent de la scène. Ces animations remplacent la pose à partir du début du plan.'),
+   ...(s.livingWorld.cast??[]).map(a=>selectField(charactersById.get(a.characterId)?.names.fr??a.id,item.livingWorld?.animations?.find(o=>o.id===a.id)?.animation??a.animation,livingAnimations,v=>{const old=item.livingWorld?.animations??[];worldChange([...path,'livingWorld','animations'],[...old.filter(o=>o.id!==a.id),{id:a.id,animation:v,transitionFrames:12}]);})),
+   button('Hériter des animations de la scène',()=>replace(removeProperty(episode,[...path,'livingWorld'])))):null,
   actionTools(()=>{shotIndex=Math.max(0,index-1);replace(moveShot(episode,sceneIndex,index,-1),{message:'Plan déplacé. Ses ancrages sont conservés : vérifiez leur ordre.'});},()=>{shotIndex=index+1;replace(moveShot(episode,sceneIndex,index,1),{message:'Plan déplacé. Ses ancrages sont conservés : vérifiez leur ordre.'});},()=>{try{replace(deleteShot(episode,sceneIndex,index),{message:index===0?'Plan supprimé. Le nouveau premier plan commence à zéro. Annuler reste disponible.':'Plan supprimé.'});}catch(e){toast(e.message);}},index===0,index===p.shots.length-1,p.shots.length<=1)
  ));return card;
 }
@@ -288,13 +298,16 @@ function renderContent(){
   const f=e.target.files?.[0];if(!f)return;
   try{if(f.size>2*1024*1024)throw new Error('Le fichier dépasse 2 Mo.');const raw=parseImport(await f.text());createProject(raw,'JSON importé intégralement.');}catch(error){toast(`Import impossible : ${error.message}`);}
  }});
+ if(view==='characters'){app.append(file,charactersPanel());return;}
+ if(view==='weather'){app.append(file,weatherPanel());return;}
  if(view==='atlas'){app.append(file,atlasPanel());return;}
  const modes=node('div',{class:'mode-switch','aria-label':'Mode d’édition'},...['beginner','advanced'].map(value=>button(value==='beginner'?'Débutant':'JSON avancé',()=>{
   if(value==='beginner'&&rawDraft!==JSON.stringify(episode,null,2)){toast('Appliquez ou annulez le brouillon JSON avant de changer de mode.');return;}
   mode=value;save();render();},{'aria-pressed':mode===value,class:mode===value?'selected':''})));
  const librarySelect=node('select',{id:'project-select','aria-label':'Projet enregistré',onChange:e=>switchProject(e.target.value)},...library.map(p=>node('option',{value:p.key,selected:p.key===active},typeof p.episode?.title==='string'?p.episode.title:'Sans titre')));
- app.append(file,node('nav',{class:'atlas-tabs','aria-label':'Studio'},button('Épisode',()=>{}, {'aria-current':'page'}),button('Atlas',()=>{if(rawDirty()){toast('Appliquez ou annulez le brouillon JSON avant d’ouvrir l’Atlas.');return;}atlasTarget='scene';view='atlas';render();},{id:'atlas-tab'})),node('section',{class:'intro'},node('div',{},node('p',{class:'eyebrow'},'VOTRE PROCHAIN SHORT'),node('h1',{},'Une histoire. Plusieurs plans.'),node('p',{class:'intro-copy'},'Écrivez ici. Générez votre vidéo dans Colab. Vos projets restent sur votre téléphone.')),node('div',{class:'hero-art','aria-hidden':'true'},node('i'),node('i'),node('i'))),
+ app.append(file,node('nav',{class:'atlas-tabs','aria-label':'Studio'},button('Épisode',()=>{}, {'aria-current':'page'}),...['characters','weather'].map(key=>button(key==='characters'?'Personnages':'Météo',()=>{if(rawDirty()){toast('Appliquez le brouillon JSON.');return;}view=key;render();},{id:key+'-tab'})),button('Atlas',()=>{if(rawDirty()){toast('Appliquez ou annulez le brouillon JSON avant d’ouvrir l’Atlas.');return;}atlasTarget='scene';view='atlas';render();},{id:'atlas-tab'})),node('section',{class:'intro'},node('div',{},node('p',{class:'eyebrow'},'VOTRE PROCHAIN SHORT'),node('h1',{},'Une histoire. Plusieurs plans.'),node('p',{class:'intro-copy'},'Écrivez ici. Générez votre vidéo dans Colab. Vos projets restent sur votre téléphone.')),node('div',{class:'hero-art','aria-hidden':'true'},node('i'),node('i'),node('i'))),
   node('section',{class:'project-shelf'},node('label',{},node('span',{class:'eyebrow'},'MES PROJETS'),librarySelect),node('div',{class:'button-row'},button('+ Nouveau',()=>createProject(newEpisode(),'Nouvel épisode créé.')),button('Modèle Voyageur',()=>createProject(templateEpisode(),'Modèle du Voyageur chargé, sans modification.')),button('Démo 4 décors',()=>createProject(demoEpisode(),'Démonstration des quatre décors chargée.')))),
+  node('section',{class:'button-row'},...[[whirlwindDemo,'Démo Tourbillon'],[europaDemo,'Démo Europe'],[fundamentDemo,'Démo Fundament']].map(([e,label])=>button(label,()=>createProject(clone(e))))),
   node('section',{class:'project-head'},node('div',{},node('p',{class:'eyebrow'},'ÉPISODE EN COURS'),node('h2',{id:'project-heading'},typeof episode.title==='string'?episode.title:'Épisode sans titre'),node('p',{id:'episode-stat',class:'hint'},`${sceneList(episode).length} scènes · ${secondsLabel(episode.format?.durationFrames)} · 1080 × 1920`)),modes),
   node('div',{class:'edit-toolbar'},node('span',{id:'save-status',class:storageError?'error-text':'hint'},storageError||'Sauvegarde locale automatique'),node('div',{class:'button-row'},button('↶ Annuler',()=>{if(rawDirty()){toast('Appliquez ou annulez le brouillon JSON avant de revenir en arrière.');return;}if(!undo.length)return;redo.push(clone(episode));replace(undo.pop(),{remember:false});},{id:'undo-button',disabled:undo.length===0}),button('↷ Rétablir',()=>{if(rawDirty()){toast('Appliquez ou annulez le brouillon JSON avant de rétablir.');return;}if(!redo.length)return;undo.push(clone(episode));replace(redo.pop(),{remember:false});},{id:'redo-button',disabled:redo.length===0}),button('Enregistrer',()=>{save();toast(storageError||'Projet enregistré sur cet appareil.');}))),
   mode==='beginner'?node('section',{class:'card episode-fields'},textField('Titre de l’épisode',episode.title,v=>changeField(['title'],v),{id:'episode-title'}),
@@ -310,6 +323,60 @@ function renderContent(){
   node('nav',{class:'bottom-bar','aria-label':'Fichiers'},button('↥ Importer',()=>$('#import-file').click(),{id:'import-button'}),button('↓ Exporter JSON',()=>exportFile(false),{class:'primary',id:'export-button'}),node('a',{href:'#validation-region',class:'button-link'},'Validation'))
  );
 }
+const characterFilters={query:'',civilization:'',faction:''};
+function worldChange(path,value){let e=patch(episode,path,value);e.schemaVersion='0.4.0';replace(e);}
+function ensureLiving(){
+ const s=episode.scenes[sceneIndex];if(s.livingWorld)return;
+ worldChange(['scenes',sceneIndex,'livingWorld'],{mode:'reconstruction',cast:[],groups:[]});
+}
+function livingHeader(title){return node('div',{class:'section-heading'},node('h1',{},title),button('← Épisode',()=>{view='episode';render();}));}
+function castCard(a,i,base=['scenes',sceneIndex,'livingWorld','cast']){
+ const path=[...base,i],c=charactersById.get(a.characterId);
+ return node('details',{class:'card cast-card',open:true},node('summary',{},c?.names.fr??a.characterId),
+  small(c?.identityNote??'Personnage inconnu.'),
+  selectField('Variante du personnage',a.variantId??c?.variants[0]?.id,c?.variants.map(v=>v.id)??[],v=>worldChange([...path,'variantId'],v)),
+  selectField('Animation du personnage',a.animation??'idle',livingAnimations,v=>worldChange([...path,'animation'],v)),
+  vectorFields('Position du personnage',a.position,[...path,'position']),
+  node('div',{class:'two-col'},numberField('Début du personnage (images)',a.startFrame??0,v=>changeField([...path,'startFrame'],v),{min:0,step:1}),numberField('Durée du personnage (images)',a.durationFrames,v=>changeField([...path,'durationFrames'],v),{min:1,step:1})),
+  node('details',{},node('summary',{},'Trajectoire et changements d’animation'),
+   ...(a.path?.waypoints??[]).map((p,j)=>node('div',{},vectorFields(`Point ${j+1}`,p.position,[...path,'path','waypoints',j,'position']),numberField('Pause (images)',p.pauseFrames??0,v=>changeField([...path,'path','waypoints',j,'pauseFrames'],v),{min:0,step:1}))),
+   a.path?numberField('Vitesse (unités/s)',a.path.speed,v=>changeField([...path,'path','speed'],v),{min:.05,max:12}):button('Créer une trajectoire',()=>worldChange([...path,'path'],{waypoints:[{position:a.position,pauseFrames:0},{position:[Math.min(18,a.position[0]+2),a.position[1],a.position[2]-1],pauseFrames:0}],speed:.5})),
+   ...(a.clips??[]).map((clip,j)=>node('div',{class:'card'},selectField('Animation programmée',clip.animation,livingAnimations,v=>worldChange([...path,'clips',j,'animation'],v)),numberField('Début animation (images)',clip.startFrame,v=>changeField([...path,'clips',j,'startFrame'],v),{min:0,step:1}),numberField('Durée animation (images)',clip.durationFrames,v=>changeField([...path,'clips',j,'durationFrames'],v),{min:1,step:1}))),
+   button('Programmer une animation',()=>worldChange([...path,'clips'],[...(a.clips??[]),{animation:'interact',startFrame:Math.floor(a.durationFrames/2),durationFrames:Math.ceil(a.durationFrames/2),transitionFrames:12}]))),
+  button('Retirer ce personnage',()=>{let parent=episode;for(const k of base)parent=parent[k];worldChange(base,parent.filter((_,j)=>j!==i));},{class:'danger-quiet'})
+ );
+}
+function charactersPanel(){
+ const s=episode.scenes[sceneIndex],w=s?.livingWorld;
+ const filters=node('div',{class:'two-col'},textField('Recherche personnages FR/EN',characterFilters.query,v=>{characterFilters.query=v;update();},{id:'character-search'}),selectField('Civilisation',characterFilters.civilization,['',...civilizations],v=>{characterFilters.civilization=v;update();}),selectField('Faction',characterFilters.faction,['',...new Set(characterCatalog.characters.map(c=>c.faction))],v=>{characterFilters.faction=v;update();}));
+ const results=node('div',{id:'character-results'});
+ function update(){results.replaceChildren(...searchCharacters(characterFilters.query,characterFilters.civilization,characterFilters.faction).slice(0,16).map(c=>node('details',{class:'card character-result','data-character-id':c.id},node('summary',{},c.names.fr+' · '+c.names.en),small(c.visual.silhouette),small(c.visual.note),small(c.identityNote),...c.sources.map(id=>{const src=characterCatalog.sources.find(s=>s.id===id);return node('a',{href:src.url,target:'_blank',rel:'noopener noreferrer'},src.title+' ↗ ');}),button('Ajouter à la scène',()=>{ensureLiving();const path=['scenes',sceneIndex,'livingWorld','cast'];const current=episode.scenes[sceneIndex].livingWorld.cast;worldChange(path,[...current,{id:slug('pnj'),characterId:c.id,variantId:c.variants[0].id,position:[current.length*1.1,0,-2],animation:'idle',startFrame:0,durationFrames:s.durationFrames,clips:[]}]);}))));}
+ update();
+ return node('section',{},livingHeader('Personnages'),small(`Scène ${sceneIndex+1} · 16 résultats maximum affichés. Affinez la recherche. Budget total : 32 personnages.`),filters,results,
+  node('h2',{},'Personnages dans la scène'),w?selectField('Mode narratif',w.mode??'reconstruction',['canonical','reconstruction','alternate-history'],v=>worldChange(['scenes',sceneIndex,'livingWorld','mode'],v)):small('Ajoutez un personnage pour activer les mondes vivants.'),
+  ...(w?.cast??[]).map((a,i)=>castCard(a,i)),
+  node('h2',{},'Groupes de figurants'),...(w?.groups??[]).map((g,i)=>{const path=['scenes',sceneIndex,'livingWorld','groups',i];return node('details',{class:'card',open:true},node('summary',{},g.id),numberField('Nombre de figurants',g.count,v=>changeField([...path,'count'],v),{min:1,max:24,step:1}),selectField('Population',g.member.characterId,characterCatalog.characters.filter(c=>['civilian','scientist','soldier','creature'].includes(c.archetype)).map(c=>c.id),v=>{const m={...g.member,characterId:v};delete m.variantId;worldChange([...path,'member'],m);}),selectField('Formation',g.formation,['grid','line','scatter'],v=>worldChange([...path,'formation'],v)),selectField('Comportement',g.behavior,['idle','walk','flee'],v=>worldChange([...path,'behavior'],v)),numberField('Graine du groupe',g.seed,v=>changeField([...path,'seed'],v),{min:0,max:2147483647,step:1}),numberField('Espacement',g.spacing,v=>changeField([...path,'spacing'],v),{min:.5,max:3}),vectorFields('Origine du groupe',g.member.position,[...path,'member','position']),button('Retirer ce groupe',()=>worldChange(['scenes',sceneIndex,'livingWorld','groups'],w.groups.filter((_,j)=>j!==i))));}),
+  button('Ajouter un groupe',()=>{ensureLiving();const w=episode.scenes[sceneIndex].livingWorld;worldChange(['scenes',sceneIndex,'livingWorld','groups'],[...w.groups,{id:slug('groupe'),member:{id:'template',characterId:'eliksni-civilian',position:[-2,0,-4],animation:'idle',startFrame:0,durationFrames:s.durationFrames,clips:[]},count:4,seed:42,formation:'grid',spacing:1,behavior:'idle',sizeVariation:.08}]);}),
+  node('div',{id:'validation-region'},validationBox()));
+}
+function weatherPanel(){
+ const s=episode.scenes[sceneIndex],w=s?.weather,path=['scenes',sceneIndex,'weather'];
+ const preset=weatherPresets[s?.atlas?.locationId??s?.location];
+ const create=type=>worldChange(path,{type,intensity:.5,windDirection:0,windSpeed:3,visibility:1,startFrame:0,durationFrames:s.durationFrames,seed:42,transitionFrames:Math.min(60,s.durationFrames),dayPhase:.5,particleBudget:64});
+ return node('section',{},livingHeader('Météo'),small(`Scène ${sceneIndex+1} · ${preset?.note??'Préréglages artistiques ; compatibilité du lieu non documentée.'}`),
+  selectField('Préréglage météo',w?.type??'clear',preset?.types??weatherTypes,v=>create(v)),
+  !w?button('Activer la météo',()=>create('clear')):node('div',{class:'card'},selectField('Condition météo',w.type,weatherTypes,v=>worldChange([...path,'type'],v)),
+   numberField('Intensité météo',w.intensity,v=>changeField([...path,'intensity'],v),{min:0,max:1,step:.05}),
+   numberField('Direction du vent (degrés)',w.windDirection??0,v=>changeField([...path,'windDirection'],v),{min:-180,max:180}),numberField('Vitesse du vent',w.windSpeed??0,v=>changeField([...path,'windSpeed'],v),{min:0,max:30}),numberField('Visibilité',w.visibility??1,v=>changeField([...path,'visibility'],v),{min:.05,max:1,step:.05}),
+   numberField('Début météo (images)',w.startFrame??0,v=>changeField([...path,'startFrame'],v),{min:0,step:1}),numberField('Durée météo (images)',w.durationFrames,v=>changeField([...path,'durationFrames'],v),{min:1,step:1}),numberField('Graine météo',w.seed,v=>changeField([...path,'seed'],v),{min:0,max:2147483647,step:1}),numberField('Budget particules',w.particleBudget??64,v=>changeField([...path,'particleBudget'],v),{min:0,max:128,step:1}),
+   numberField('Heure solaire (0 nuit, 0,5 midi)',w.dayPhase??.5,v=>changeField([...path,'dayPhase'],v),{min:0,max:1,step:.05}),
+   numberField('Cycle jour/nuit (images)',w.dayCycleFrames??720,v=>changeField([...path,'dayCycleFrames'],v),{min:30,max:18000,step:1}),
+   selectField('Évolution vers',w.to?.type??w.type,weatherTypes,v=>worldChange([...path,'to'],{type:v,intensity:.85,windDirection:w.windDirection??0,windSpeed:12,visibility:.4})),
+   w.to?node('div',{},numberField('Intensité finale',w.to.intensity,v=>changeField([...path,'to','intensity'],v),{min:0,max:1,step:.05}),numberField('Durée de transition météo (images)',w.transitionFrames??60,v=>changeField([...path,'transitionFrames'],v),{min:0,max:s.durationFrames,step:1})):null,
+   button('Retirer la météo',()=>replace(removeProperty(episode,path)))),
+  small('Aperçu : les paramètres sont validés ci-dessous. Le rendu animé s’effectue dans Colab.'),node('div',{id:'validation-region'},validationBox()));
+}
+
 try{
  const saved=JSON.parse(localStorage.getItem(KEY)||'null');
  if(saved?.version===1&&Array.isArray(saved.projects)){library=saved.projects.filter(p=>record(p.episode)&&typeof p.key==='string');active=saved.active;}
@@ -318,3 +385,5 @@ if(!library.length){const e=templateEpisode();active=slug('projet');library=[{ke
 const initial=current()??library[0];active=initial.key;episode=clone(initial.episode);rawDraft=initial.rawDraft??JSON.stringify(episode,null,2);mode=initial.mode??'beginner';
 render();
 window.addEventListener('pagehide',save);
+
+if('serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').catch(()=>{});
