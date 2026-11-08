@@ -32,3 +32,7 @@ d'image fixe et de rendu dans [le guide du moteur](remotion/README.md).
 Pour rendre depuis un téléphone Android sans ordinateur personnel et sans
 GitHub Actions : [guide Google Colab](remotion/COLAB.md).
 Les textes saisis dans le prototype HTML ne sont pas transmis au moteur.
+
+## Éditeur JSON mobile (GitHub Pages)
+
+Un éditeur français statique est disponible dans `docs/`. Publication : Settings → Pages → Deploy from a branch → **main /docs**. Aucun workflow Actions à créer. [Guide, stockage local, champs inconnus et parcours Android → Colab](docs/README.md). Sources dans `editor/` ; build et vérification depuis `remotion/` avec `npm run editor:build` et `npm run editor:check`.
