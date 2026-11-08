@@ -1,3 +1,8 @@
+import {Color} from 'three';
+import {weatherColors} from '../../../weather/WeatherLayer';
+import {EnvironmentLayer} from '../../../polish/EnvironmentLayer';
+import {effectBudget,atmosphere} from '../../../polish/environment';
+import {directCamera} from '../../../polish/camera';
 import {weatherState} from '../../../weather/state';
 import {LivingWorldLayer} from '../../../living/LivingWorldLayer';
 import {narrativeLabel} from '../../../living/director';
@@ -17,7 +22,7 @@ import {AtlasEnvironment} from '../library/AtlasEnvironment';
 import {atlasRecipe} from '../../../atlas/recipes';
 import {resolveEnvironment,environmentStyle} from '../library/catalog';
 
-export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alignedWords,visualOnly=false,draftQuality=false})=>{
+export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alignedWords,visualOnly=false,draftQuality=false,scenePolish,projectPolish,reducedMotion=false})=>{
   const valid=useMemo(()=>episodeSchema.parse(episode),[episode]);
   const words=useMemo(()=>alignedWords?validateWords(alignedWords,valid):undefined,[alignedWords,valid]);
   if(!preview&&(!words||valid.subtitles.status!=='ready'||(valid.audio.voiceover.enabled&&valid.audio.voiceover.status!=='ready')))
@@ -26,29 +31,36 @@ export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alig
   const frame=useCurrentFrame(),{width,height}=useVideoConfig();
   const {scene,shot,events}=atFrame(timeline,frame);
   const guardian=actorPose('guardian',scene.actions,frame,timeline.intensity),ghost=actorPose('ghost',scene.actions,frame,timeline.intensity);
-  const camera=cameraState(timeline,scene,shot,frame,events),transition=transitionState(timeline,shot,frame);
+  const camera=directCamera(cameraState(timeline,scene,shot,reducedMotion&&scenePolish?.camera?shot.start:frame,events),scenePolish?.camera,frame-scene.start,reducedMotion),transition=transitionState(timeline,shot,frame);
   const sourceScene=valid.scenes.find(s=>s.id===scene.sceneId)!;
   const environment=resolveEnvironment(shot.environment,sourceScene.location);
   const atlasReference=shot.atlas??(shot.environment==='scene'?sourceScene.atlas:undefined);
   const atlasState=atlasReference?atlasRecipe(atlasReference):undefined;
   const style=atlasState?{...environmentStyle(environment),sky:atlasState.palette.sky,key:atlasState.palette.accent,fill:'#9baed7',ambient:1.1}:environmentStyle(environment);
-  const weather=shot.weather??sourceScene.weather,ws=weather?weatherState(weather,frame-scene.start):undefined;
-  const weatherLight=ws?.active?ws.light:1;
+  const selectedWeather=shot.weather??sourceScene.weather;
+  const budget=effectBudget(projectPolish,draftQuality?'draft':'final',selectedWeather?.particleBudget??0);
+  const weather=projectPolish&&selectedWeather?{...selectedWeather,particleBudget:budget.weather,...(reducedMotion&&selectedWeather.type==='thunderstorm'?{type:'rain' as const,to:undefined}:{})}:selectedWeather;
+  const atmosphereState=scenePolish?.environment?atmosphere(scenePolish.environment,frame-scene.start,reducedMotion):undefined;
+  const ws=weather?weatherState(weather,frame-scene.start):undefined;
+  const directedSky=atmosphereState?.sky??(projectPolish&&ws?.active&&weather?'#'+new Color(weatherColors[weather.type]).lerp(new Color(weatherColors[weather.to?.type??weather.type]),ws.mix).multiplyScalar(ws.daylight*(1-ws.intensity*.35)+ws.lightning*.3).getHexString():style.sky);
+  const fogNear=atmosphereState?.fogNear??(projectPolish&&ws?.active?ws.fogNear:style.fogNear),fogFar=atmosphereState?.fogFar??(projectPolish&&ws?.active?ws.fogFar:style.fogFar);
+  const weatherLight=(ws?.active?ws.light:1)*(atmosphereState?.light??1);
   const dark=!atlasState&&environment==='collapse-vision',light=!atlasState&&environment==='golden-age-vision';
   const vision=!atlasState&&environment.includes('vision');
   const captions=captionWords(findScene(valid,frame),frame,preview?undefined:words);
   const halo=valid.scenes.find(s=>s.id===scene.sceneId)!.effects.includes('traveler-halo');
   return <AbsoluteFill style={{backgroundColor:'#101a2b'}}>
     <ThreeCanvas width={width} height={height} dpr={draftQuality?.5:1} camera={{fov:42,near:0.1,far:80,position:[0,4.4,13]}} gl={{antialias:true,alpha:false}}>
-      <color attach="background" args={[style.sky]}/>
-      <fog attach="fog" args={[style.sky,style.fogNear,style.fogFar]}/>
+      <color attach="background" args={[directedSky]}/>
+      <fog attach="fog" args={[directedSky,fogNear,fogFar]}/>
       <FilmCameraRig pose={camera}/>
       <ambientLight intensity={style.ambient*weatherLight}/>
       <directionalLight position={[4,7,5]} intensity={(dark?1:2.4)*weatherLight} color={style.key}/>
       <directionalLight position={[-5,4,-3]} intensity={2*weatherLight} color={style.fill}/>
       {light&&<pointLight position={[0,6,-6]} color="#ffe9a6" intensity={25} distance={15}/>}
       <>{atlasReference?<AtlasEnvironment reference={atlasReference} frame={frame-scene.start} halo={halo}/>:<Stage environment={environment} halo={halo}/>}</>
-      <LivingWorldLayer world={sourceScene.livingWorld} shot={shot.livingWorld} weather={shot.weather??sourceScene.weather} frame={frame-scene.start} shotStart={shot.start-scene.start}/>
+      <LivingWorldLayer world={sourceScene.livingWorld} shot={shot.livingWorld} weather={weather} frame={frame-scene.start} shotStart={shot.start-scene.start} quality={draftQuality?'draft':'final'} contactShadows={projectPolish?.contactShadows??true} manageAtmosphere={!projectPolish}/>
+      {scenePolish?.environment&&<EnvironmentLayer config={scenePolish.environment} frame={frame-scene.start} detailCount={budget.details} particleCount={budget.atmosphere} reducedMotion={reducedMotion}/>}
       <VoxelElements items={shot.elements??sourceScene.elements??[]} frame={frame-scene.start}/>
       {shot.actors.guardian&&<Guardian rise={guardian.rise} t={frame/30} pose={guardian.joints}
         position={guardian.position} rotation={guardian.rotation}/>}

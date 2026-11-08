@@ -49,7 +49,12 @@
     "test:hybrid:browser": "node ../editor/hybrid.browser.test.cjs",
     "narrate:hybrid": "python scripts/narration.py episodes/hybrid_riis.json",
     "render:hybrid": "node --experimental-strip-types scripts/episode.mjs render out/hybrid_riis-ready.json",
-    "verify:hybrid:render": "node scripts/verify-hybrid-render.mjs"
+    "verify:hybrid:render": "node scripts/verify-hybrid-render.mjs",
+    "test:polish": "node --experimental-strip-types --test tests/polish.test.mjs",
+    "test:polish:browser": "node ../editor/polish.browser.test.cjs",
+    "prepare:polish:comparison": "node --experimental-strip-types scripts/prepare-riis-comparison.mjs",
+    "render:polish:comparison": "python scripts/render-riis-comparison.py",
+    "verify:polish:render": "node scripts/verify-polish-render.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "8.18.0",

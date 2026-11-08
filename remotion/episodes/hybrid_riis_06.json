@@ -1,0 +1,791 @@
+{
+  "schemaVersion": "0.6.0",
+  "id": "hybrid-riis-06",
+  "title": "Why Did the Traveler Leave Riis?",
+  "language": "en-US",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationFrames": 1050
+  },
+  "style": "classic-voxel",
+  "setting": "the-tower",
+  "disclaimer": "Unofficial fan-made educational video. Not affiliated with Bungie.",
+  "audio": {
+    "voiceover": {
+      "enabled": true,
+      "language": "en-US",
+      "source": "assets/audio/traveler-en.wav",
+      "status": "to-generate"
+    },
+    "music": null
+  },
+  "characters": [
+    {
+      "id": "guardian",
+      "model": "voxel-guardian-v1"
+    },
+    {
+      "id": "ghost",
+      "model": "voxel-ghost-v1"
+    }
+  ],
+  "environments": [
+    {
+      "id": "the-tower",
+      "model": "voxel-tower-v1",
+      "props": [
+        "traveler-sphere",
+        "last-city-silhouette",
+        "tower-balcony"
+      ]
+    },
+    {
+      "id": "europa",
+      "model": "voxel-europa-v1",
+      "props": [
+        "ice-ridges",
+        "snowfield",
+        "research-outpost"
+      ]
+    },
+    {
+      "id": "black-garden",
+      "model": "voxel-black-garden-v1",
+      "props": [
+        "vex-gate",
+        "garden-terraces",
+        "red-flowers"
+      ]
+    },
+    {
+      "id": "pyramid-interior",
+      "model": "voxel-pyramid-v1",
+      "props": [
+        "stepped-walls",
+        "resonant-altar",
+        "amber-trim"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "hook",
+      "startFrame": 0,
+      "durationFrames": 120,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "Why did the Traveler leave Riis?",
+      "visual": {
+        "type": "text",
+        "headline": "Why did the Traveler leave Riis?",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        },
+        "body": "A lost homeworld. A question that needs care.",
+        "kind": "hook"
+      },
+      "polish": {
+        "camera": {
+          "preset": "push-in",
+          "startFrame": 0,
+          "durationFrames": 120,
+          "intensity": 0.75,
+          "curve": "smooth",
+          "screenTarget": [
+            50,
+            35
+          ],
+          "seed": 42
+        }
+      }
+    },
+    {
+      "id": "riis-before",
+      "startFrame": 120,
+      "durationFrames": 210,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "Riis was the Eliksni homeworld. They revered the Traveler as their Great Machine.",
+      "visual": {
+        "type": "voxel",
+        "headline": "Riis · before the Whirlwind",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        }
+      },
+      "atlas": {
+        "locationId": "riis",
+        "variantId": "before-whirlwind"
+      },
+      "livingWorld": {
+        "mode": "reconstruction",
+        "era": "pre-whirlwind",
+        "cast": [],
+        "groups": [
+          {
+            "id": "population",
+            "member": {
+              "id": "template",
+              "characterId": "eliksni-civilian",
+              "position": [
+                -2,
+                0,
+                -3
+              ],
+              "animation": "walk",
+              "startFrame": 0,
+              "durationFrames": 210,
+              "clips": [],
+              "path": {
+                "waypoints": [
+                  {
+                    "position": [
+                      -2,
+                      0,
+                      -3
+                    ],
+                    "pauseFrames": 30
+                  },
+                  {
+                    "position": [
+                      1,
+                      0,
+                      -5
+                    ],
+                    "pauseFrames": 0
+                  }
+                ],
+                "speed": 0.5
+              },
+              "director": {
+                "emotion": "curiosity",
+                "gesture": "look",
+                "target": [
+                  0,
+                  2,
+                  -2
+                ],
+                "headStrength": 0.6,
+                "seed": 2026,
+                "variation": 0.14,
+                "startFrame": 0,
+                "durationFrames": 210,
+                "stopFrames": 14,
+                "turnFrames": 16,
+                "exodus": false
+              }
+            },
+            "count": 6,
+            "seed": 42,
+            "formation": "scatter",
+            "spacing": 0.7,
+            "behavior": "walk",
+            "sizeVariation": 0.1
+          }
+        ]
+      },
+      "polish": {
+        "camera": {
+          "preset": "orbit",
+          "startFrame": 0,
+          "durationFrames": 210,
+          "intensity": 0.75,
+          "curve": "smooth",
+          "screenTarget": [
+            50,
+            35
+          ],
+          "seed": 42
+        },
+        "environment": {
+          "preset": "calm-riis",
+          "intensity": 0.5,
+          "depth": 0.7,
+          "parallax": 0.6,
+          "lightVariation": 0.08,
+          "seed": 2718
+        }
+      }
+    },
+    {
+      "id": "departure-map",
+      "startFrame": 330,
+      "durationFrames": 180,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "The Traveler departed during the Whirlwind. This map shows a schematic journey.",
+      "visual": {
+        "type": "map",
+        "headline": "A departure, not an explanation",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        },
+        "nodes": [
+          {
+            "id": "riis",
+            "label": "Riis",
+            "locationId": "riis",
+            "position": [
+              24,
+              35
+            ]
+          },
+          {
+            "id": "stars",
+            "label": "Across the stars",
+            "position": [
+              68,
+              65
+            ]
+          }
+        ],
+        "routes": [
+          {
+            "from": "riis",
+            "to": "stars",
+            "label": "Schematic departure"
+          }
+        ],
+        "camera": {
+          "from": [
+            50,
+            50
+          ],
+          "to": [
+            47,
+            47
+          ],
+          "zoomFrom": 1,
+          "zoomTo": 1.14
+        }
+      },
+      "polish": {
+        "camera": {
+          "preset": "map-to-voxel",
+          "startFrame": 0,
+          "durationFrames": 180,
+          "intensity": 0.85,
+          "curve": "smooth",
+          "screenTarget": [
+            68,
+            65
+          ],
+          "seed": 42
+        }
+      }
+    },
+    {
+      "id": "exodus",
+      "startFrame": 510,
+      "durationFrames": 300,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "The catastrophe shattered Eliksni civilization. Survivors fled Riis. Many pursued the Traveler across the stars, remembering Riis.",
+      "visual": {
+        "type": "voxel",
+        "headline": "The Whirlwind · exile and survival",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        }
+      },
+      "atlas": {
+        "locationId": "riis",
+        "variantId": "after-whirlwind"
+      },
+      "livingWorld": {
+        "mode": "reconstruction",
+        "era": "post-whirlwind",
+        "cast": [],
+        "groups": [
+          {
+            "id": "population",
+            "member": {
+              "id": "template",
+              "characterId": "eliksni-civilian",
+              "position": [
+                -2,
+                0,
+                -3
+              ],
+              "animation": "flee",
+              "startFrame": 0,
+              "durationFrames": 300,
+              "clips": [],
+              "path": {
+                "waypoints": [
+                  {
+                    "position": [
+                      -2,
+                      0,
+                      -3
+                    ],
+                    "pauseFrames": 30
+                  },
+                  {
+                    "position": [
+                      1,
+                      0,
+                      -5
+                    ],
+                    "pauseFrames": 0
+                  }
+                ],
+                "speed": 0.8
+              },
+              "director": {
+                "emotion": "fear",
+                "gesture": "flee",
+                "target": [
+                  0,
+                  2,
+                  -2
+                ],
+                "headStrength": 0.6,
+                "seed": 2026,
+                "variation": 0.14,
+                "startFrame": 0,
+                "durationFrames": 300,
+                "stopFrames": 14,
+                "turnFrames": 16,
+                "exodus": true
+              }
+            },
+            "count": 6,
+            "seed": 42,
+            "formation": "scatter",
+            "spacing": 0.7,
+            "behavior": "flee",
+            "sizeVariation": 0.1
+          }
+        ]
+      },
+      "weather": {
+        "type": "thunderstorm",
+        "intensity": 0.7,
+        "windDirection": 45,
+        "windSpeed": 14,
+        "visibility": 0.5,
+        "startFrame": 0,
+        "durationFrames": 300,
+        "seed": 42,
+        "transitionFrames": 60,
+        "dayPhase": 0.4,
+        "particleBudget": 48
+      },
+      "polish": {
+        "camera": {
+          "preset": "shake",
+          "startFrame": 0,
+          "durationFrames": 300,
+          "intensity": 0.75,
+          "curve": "smooth",
+          "screenTarget": [
+            50,
+            35
+          ],
+          "seed": 42
+        },
+        "environment": {
+          "preset": "whirlwind",
+          "intensity": 0.9,
+          "depth": 0.9,
+          "parallax": 0.6,
+          "lightVariation": 0.08,
+          "seed": 31415
+        }
+      }
+    },
+    {
+      "id": "conclusion",
+      "startFrame": 810,
+      "durationFrames": 240,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "That sequence does not prove one simple motive. The Traveler's intentions demand careful reading, not certainty.",
+      "visual": {
+        "type": "text",
+        "headline": "History is not the same as motive.",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        },
+        "body": "Departure is documented. One simple explanation is not established here.",
+        "kind": "conclusion"
+      },
+      "polish": {
+        "camera": {
+          "preset": "reveal",
+          "startFrame": 0,
+          "durationFrames": 240,
+          "intensity": 0.75,
+          "curve": "smooth",
+          "screenTarget": [
+            50,
+            35
+          ],
+          "seed": 42
+        }
+      }
+    }
+  ],
+  "subtitles": {
+    "mode": "word-aligned",
+    "language": "en-US",
+    "source": "assets/subtitles/traveler-en.words.json",
+    "status": "pending-voiceover-alignment",
+    "maxLines": 2,
+    "safeAreaBottomPx": 340
+  },
+  "render": {
+    "composition": "HybridShort",
+    "output": "out/hybrid-riis-06.mp4",
+    "codec": "h264"
+  },
+  "notes": [
+    "No confirmed motive is assigned where the sources do not establish one.",
+    "All voxel appearances are artistic reconstructions; map positions are schematic.",
+    "0.6 cinematic comparison: exact 0.5 script and timing, optional procedural visual direction only."
+  ],
+  "direction": {
+    "version": 1,
+    "intensity": "balanced",
+    "scenes": [
+      {
+        "sceneId": "hook",
+        "shots": [
+          {
+            "id": "hook-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "riis-before",
+        "shots": [
+          {
+            "id": "riis-before-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "departure-map",
+        "shots": [
+          {
+            "id": "departure-map-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "exodus",
+        "shots": [
+          {
+            "id": "exodus-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "conclusion",
+        "shots": [
+          {
+            "id": "conclusion-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      }
+    ]
+  },
+  "shorts": {
+    "version": 1,
+    "template": "destiny-mysteries",
+    "mode": "reconstruction",
+    "confidence": "partial",
+    "sources": [],
+    "captions": {
+      "style": "kinetic-words",
+      "bottomPx": 350,
+      "maxWords": 5,
+      "fontSize": 50,
+      "color": "#f7fbff",
+      "accent": "#ffe297",
+      "leftPx": 80,
+      "rightPx": 180,
+      "emphasis": [
+        "Traveler",
+        "Riis",
+        "Whirlwind",
+        "survivors",
+        "motive",
+        "certainty"
+      ]
+    },
+    "audio": {
+      "voiceVolume": 1,
+      "tracks": []
+    },
+    "quality": "cpu",
+    "polish": {
+      "version": 1,
+      "quality": "final",
+      "previewQuality": "draft",
+      "previewEffectScale": 0.4,
+      "particleBudget": 96,
+      "detailBudget": 30,
+      "contactShadows": true,
+      "pacingProfile": "mysterious"
+    }
+  }
+}

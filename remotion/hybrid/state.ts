@@ -15,11 +15,11 @@ export function captionTiming(episode:VoxelEpisodeDef,words?:AlignedWord[]){
  if(proposed)try{return {words:validateWords(proposed,episode),exact:true,reason:''};}catch{return {words:estimatedWords(episode),exact:false,reason:'Incomplete or invalid timestamps · estimated timing'};}
  return {words:estimatedWords(episode),exact:false,reason:'No word timestamps · estimated timing'};
 }
-export function captionSegment(words:AlignedWord[],frame:number,sceneStart:number,sceneEnd:number,maxWords=5){
+export function captionSegment(words:AlignedWord[],frame:number,sceneStart:number,sceneEnd:number,maxWords=5,holdGaps=false){
  const local=words.filter(w=>w.start>=sceneStart/30-1e-6&&w.end<=sceneEnd/30+1e-6),t=frame/30;
  const chunks:AlignedWord[][]=[];let current:AlignedWord[]=[];
  for(const word of local){if(current.length&&(current.length>=maxWords||current.reduce((n,w)=>n+w.text.length+1,0)+word.text.length>42)){chunks.push(current);current=[];}current.push(word);}if(current.length)chunks.push(current);
- return (chunks.find(c=>c.some(w=>t>=w.start&&t<w.end))??[]).map(w=>({...w,active:t>=w.start&&t<w.end}));
+ return (chunks.find(c=>holdGaps?t>=c[0].start&&t<c[c.length-1].end:c.some(w=>t>=w.start&&t<w.end))??[]).map(w=>({...w,active:t>=w.start&&t<w.end}));
 }
 export function transitionMotion(type:string,frame:number,duration:number,reduced=false){
  const p=duration?ease(frame/duration):1,t=reduced&&type!=='cut'?'fade':type;

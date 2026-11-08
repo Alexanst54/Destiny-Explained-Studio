@@ -102,3 +102,7 @@ Les boutons **Démo Tourbillon**, **Démo Europe** et **Démo Fundament** charge
 ### Hybrid Shorts 0.5
 
 **Storyboard Shorts** ajoute les cinq types de plans, six modèles narratifs, réorganisation tactile, captions, pistes locales facultatives et aperçu Remotion partagé. [Guide mobile publié](HYBRID-GUIDE.html). Les projets historiques restent disponibles sous **Épisode**. Le JSON prêt téléchargé de Colab embarque les mots alignés des projets 0.5 ; l’aperçu sans ces données annonce un minutage estimé et une narration silencieuse. [Architecture et limites](../remotion/hybrid/README.md).
+
+### Visual Polish 0.6
+
+Le storyboard propose quatre styles de captions supplémentaires, caméras, expressions, atmosphères à budgets, conseils éditoriaux et annuler/rétablir. Démo Riis 0.6 et comparaison avant/après conservent le scénario 0.5. Une narration WAV/MP3 locale peut accompagner le lecteur, sans téléversement ni sauvegarde du fichier dans le JSON. [Guide mobile](../remotion/polish/MOBILE.md) et [mesures réelles](../remotion/polish/REPORT.md).

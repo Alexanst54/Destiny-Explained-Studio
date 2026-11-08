@@ -29,6 +29,7 @@ export function loreWarnings(world:LivingWorld|undefined,reference?:AtlasReferen
   if(krill&&v.civilization!=='krill')warnings.push(`${label} : civilisation incompatible avec Fundament avant la Ruche.`);
   if(era&&v.eras.length&&v.eras.every(e=>later(e,era)))warnings.push(`${label} : variante postérieure à l’époque choisie (${v.eras.join(', ')}).`);
   if(visual.certainty!=='stylized-documented')warnings.push(`${label} : apparence ${visual.certainty==='unknown'?'inconnue, modèle masqué':'reconstituée artistiquement'}, non officielle.`);
+  if(a.director&&a.director.variation>0)warnings.push(`${label} : variation de costume/silhouette artistique, non officielle.`);
   if(world?.mode==='canonical'&&(a.palette||a.equipment))warnings.push(`${label} : équipement/palette personnalisé, reconstitution visuelle.`);
  }return [...new Set(warnings)];
 }

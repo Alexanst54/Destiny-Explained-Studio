@@ -50,3 +50,7 @@ L’[Atlas sourcé et extensible](remotion/atlas/README.md) ajoute des référen
 ## Hybrid Shorts Director 0.5
 
 Le [storyboard hybride](remotion/hybrid/README.md) réunit voxel, cartes schématiques, timelines, graphiques et texte, avec captions dynamiques et aperçu partagé dans le navigateur. [Guide mobile sans code](remotion/hybrid/MOBILE.md), [parcours Colab CPU](remotion/hybrid/COLAB.md) et [rapport des tests/rendu](remotion/hybrid/REPORT.md). Démo de référence : `remotion/episodes/hybrid_riis.json`, 35 secondes avec Kokoro. Les projets précédents restent accessibles dans l’éditeur existant ; aucune fusion ou publication n’est automatisée.
+
+## Viral Editing & Visual Polish 0.6
+
+[Extensions cinématographiques](remotion/polish/README.md) : quatre nouveaux styles de captions, caméras, personnages expressifs, atmosphères à budgets CPU et narration locale facultative en aperçu. [Guide téléphone](remotion/polish/MOBILE.md), [comparaison Riis 0.5/0.6](remotion/polish/COMPARISON.md) et [rapport de validation](remotion/polish/REPORT.md). La démo `hybrid_riis_06.json` conserve le scénario prudent et les 35 secondes de 0.5.

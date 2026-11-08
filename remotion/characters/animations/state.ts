@@ -1,3 +1,4 @@
+import {directCharacter} from '../../polish/characters.ts';
 import type {Cast,Group} from '../../living/schema';
 export type Vec=[number,number,number];
 export const clamp=(v:number,a=0,b=1)=>Math.max(a,Math.min(b,v));
@@ -46,13 +47,13 @@ export function characterState(a:Cast,frame:number,override?:{animation:Cast['an
  const pose=Object.fromEntries(Object.keys(current).map(k=>[k,base[k as keyof typeof base]+(current[k as keyof typeof current]-base[k as keyof typeof base])*blend])) as typeof current;
  // Clip exit blends to the base pose; no accumulated state.
  if(clip&&!override){const exit=smooth((clip.startFrame+clip.durationFrames-local)/Math.max(1,clip.transitionFrames));const idle=joints(a.animation,local,a.durationFrames);for(const k of Object.keys(pose) as (keyof typeof pose)[])pose[k]=idle[k]+(pose[k]-idle[k])*exit;}
- const motion=pathState(a,Math.min(frame,a.startFrame+a.durationFrames));return {...motion,pose,active,animation:name};
+ const motion=pathState(a,Math.min(frame,a.startFrame+a.durationFrames));return directCharacter(a,frame,{...motion,pose,active,animation:name});
 }
 export function expandGroup(g:Group):Cast[]{
  return Array.from({length:g.count},(_,i)=>{
  const x=g.formation==='line'?i-(g.count-1)/2:g.formation==='grid'?i%5-2:(random(g.seed,i*3)-.5)*5;
  const z=g.formation==='grid'?Math.floor(i/5):g.formation==='scatter'?(random(g.seed,i*3+1)-.5)*4:0;
  const offset=[x*g.spacing,0,z*g.spacing];const shift=(v:number[])=>bounded(v.map((n,j)=>n+offset[j]));
- return {...g.member,id:`${g.id}:${i}`,position:shift(g.member.position),scale:clamp(g.member.scale*(1+(random(g.seed,i*3+2)-.5)*2*g.sizeVariation),.5,1.5),animation:g.behavior==='idle'?g.member.animation:g.behavior,path:g.member.path?{...g.member.path,waypoints:g.member.path.waypoints.map(p=>({...p,position:shift(p.position)}))}:undefined};
+ return {...g.member,...(g.member.director?{director:{...g.member.director,seed:(g.member.director.seed+i*7919)%2147483647}}:{}),id:`${g.id}:${i}`,position:shift(g.member.position),scale:clamp(g.member.scale*(1+(random(g.seed,i*3+2)-.5)*2*g.sizeVariation),.5,1.5),animation:g.behavior==='idle'?g.member.animation:g.behavior,path:g.member.path?{...g.member.path,waypoints:g.member.path.waypoints.map(p=>({...p,position:shift(p.position)}))}:undefined};
  });
 }
