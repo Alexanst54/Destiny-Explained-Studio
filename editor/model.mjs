@@ -1,3 +1,4 @@
+import {atlasRefSchema} from '../remotion/atlas/index.ts';
 // Shared by the static app, Node tests and Colab import. The engine stays strict;
 // the editor keeps the original object and creates an explicitly separate projection.
 import {locations,elementTypes,elementAnimations,defaultElementAnimation,environmentDefinitions} from '../remotion/src/voxel/library/catalog.ts';
@@ -182,7 +183,7 @@ function issueMessage(issue){
  if(issue.code==='invalid_union')return 'Structure incohérente : vérifiez les champs et les ancrages de début.';
  if(issue.code==='too_small')return `Valeur ou taille minimale : ${issue.minimum}.`;
  if(issue.code==='too_big')return `Valeur ou taille maximale : ${issue.maximum}.`;
- const known={"Environment must be declared":"Ce décor doit être déclaré dans environments. Le sélecteur de décor le fait automatiquement.","Duplicate environment declaration":"Décor déclaré plusieurs fois.","Animation incompatible with this voxel element":"Cette animation n’est pas compatible avec cet élément voxel.","Duplicate voxel element id":"Identifiant d’élément voxel dupliqué.","Voxel element particle budget exceeds 256":"Le budget de 256 particules par liste est dépassé.","Duplicate scene id":"Identifiant de scène dupliqué.","Conflicting Guardian actions":"Des actions du Gardien sont contradictoires.","Duplicate action":"Action dupliquée.","Duplicate effect":"Effet dupliqué.","Cinematic composition requires direction":"La composition cinématique exige une mise en scène.","Direction requires the cinematic composition":"La mise en scène exige VoxelCinematicEpisode.","Resurrection action and beam must occur together":"La résurrection et son rayon doivent être présents ensemble.","Resurrection requires at least 120 frames":"La résurrection classique exige au moins 120 images."};
+ const known={"Unknown Atlas location":"Lieu inconnu dans l’Atlas.","Unknown historical variant for this location":"Variante historique inconnue pour ce lieu.","Environment must be declared":"Ce décor doit être déclaré dans environments. Le sélecteur de décor le fait automatiquement.","Duplicate environment declaration":"Décor déclaré plusieurs fois.","Animation incompatible with this voxel element":"Cette animation n’est pas compatible avec cet élément voxel.","Duplicate voxel element id":"Identifiant d’élément voxel dupliqué.","Voxel element particle budget exceeds 256":"Le budget de 256 particules par liste est dépassé.","Duplicate scene id":"Identifiant de scène dupliqué.","Conflicting Guardian actions":"Des actions du Gardien sont contradictoires.","Duplicate action":"Action dupliquée.","Duplicate effect":"Effet dupliqué.","Cinematic composition requires direction":"La composition cinématique exige une mise en scène.","Direction requires the cinematic composition":"La mise en scène exige VoxelCinematicEpisode.","Resurrection action and beam must occur together":"La résurrection et son rayon doivent être présents ensemble.","Resurrection requires at least 120 frames":"La résurrection classique exige au moins 120 images."};
  if(known[issue.message])return known[issue.message];
  if(issue.message.startsWith('Expected '))return 'Le début des scènes doit être continu, sans trou ni chevauchement. '+issue.message.match(/\d+/)?.[0]+' images attendues.';
  if(issue.message.startsWith('Scene total'))return 'La durée totale ne correspond pas à la somme des scènes.';
@@ -226,4 +227,16 @@ export function newElement(type='crystal'){
 }
 export function removeProperty(raw,path){
  const e=clone(raw);let at=e;for(const key of path.slice(0,-1))at=at[key];delete at[path.at(-1)];return e;
+}
+
+export function setAtlasReference(raw,path,locationId,variantId){
+ atlasRefSchema.parse({locationId,...(variantId?{variantId}:{})});
+ let old=raw;for(const key of path)old=old?.[key];
+ const ref=object(old)?clone(old):{};ref.locationId=locationId;
+ if(variantId)ref.variantId=variantId;else delete ref.variantId;
+ const next=patch(raw,path,ref);next.schemaVersion='0.3.0';
+ if(path[0]==='direction'){
+  const shotPath=path.slice(0,-1);let shot=next;for(const key of shotPath)shot=shot[key];shot.environment='scene';
+ }
+ return next;
 }

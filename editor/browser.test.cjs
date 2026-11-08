@@ -64,6 +64,29 @@ const root=path.resolve(__dirname,'..');
  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
  await fs.mkdir(path.join(root,'remotion/out'),{recursive:true});await page.screenshot({path:path.join(root,'remotion/out/editor-mobile.png'),fullPage:true});
  await page.setViewportSize({width:1280,height:900});await page.screenshot({path:path.join(root,'remotion/out/editor-desktop.png'),fullPage:true});
+ // Atlas is a real mobile tab: filters, variants, scene/shot assignment and persistence.
+ await page.locator('#atlas-tab').click();await page.locator('#atlas-search').waitFor();
+ for(const width of [320,360,393,1280]){await page.setViewportSize({width,height:851});assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`Atlas overflow at ${width}`);}
+ await page.setViewportSize({width:393,height:851});
+ await page.locator('#atlas-search').fill('riis');
+ const riis=page.locator('[data-place-id="riis"]');await riis.waitFor();
+ await riis.getByLabel('Variante historique',{exact:true}).selectOption('before-whirlwind');
+ await riis.getByRole('button',{name:'Utiliser pour la scène',exact:true}).click();
+ await page.locator('#atlas-search').fill('Fundament');const fundament=page.locator('[data-place-id="fundament"]');await fundament.waitFor();
+ await fundament.getByLabel('Variante historique',{exact:true}).selectOption('krill-origins');
+ await fundament.getByRole('button',{name:'Utiliser pour le plan',exact:true}).click();
+ await page.locator('#atlas-search').fill('');await page.locator('#atlas-parent').selectOption('europa-regions');
+ assert.ok((await page.locator('#atlas-count').textContent()).includes('résultat'));
+ assert.ok(await page.locator('.atlas-card').count()>0);
+ await page.locator('#atlas-parent').selectOption('');await page.locator('#atlas-category').selectOption('lore-world');await page.locator('#atlas-civilization').selectOption('eliksni');
+ assert.equal(await page.locator('.atlas-card').count(),1);assert.equal(await page.locator('[data-place-id="riis"]').count(),1);
+ await page.locator('[data-place-id="riis"] summary').click();
+ const sourceLinks=await page.locator('[data-place-id="riis"] a').evaluateAll(links=>links.map(a=>a.href));assert.ok(sourceLinks.length);assert.ok(sourceLinks.every(url=>url.startsWith('https://')));
+ await page.screenshot({path:path.join(root,'remotion/out/atlas-editor-mobile.png'),fullPage:true});
+ await page.getByRole('button',{name:'← Épisode',exact:true}).first().click();
+ await page.getByRole('button',{name:'Enregistrer',exact:true}).click();await page.reload();await page.locator('#episode-title').waitFor();
+ const selected=await downloaded('#export-render');assert.equal(selected.schemaVersion,'0.3.0');assert.deepEqual(selected.scenes[0].atlas,{locationId:'riis',variantId:'before-whirlwind'});assert.deepEqual(selected.direction.scenes[0].shots[1].atlas,{locationId:'fundament',variantId:'krill-origins'});
+ assert.equal(selected.scenes[0].elements[0].count,48); // Previously edited fields survive Atlas changes.
  // Invalid nested structures stay repairable and complete.
  await page.locator('#import-file').setInputFiles({name:'broken.json',mimeType:'application/json',buffer:Buffer.from('{"title":"Broken","scenes":[null],"direction":{"scenes":[null]},"custom":42}')});
  await page.getByRole('button',{name:'JSON avancé',exact:true}).click().catch(()=>{});
@@ -71,6 +94,6 @@ const root=path.resolve(__dirname,'..');
  await page.getByRole('button',{name:'Modèle Voyageur',exact:true}).click().catch(async()=>page.getByRole('button',{name:'Charger le modèle Voyageur',exact:true}).click());
  await page.evaluate(()=>{Storage.prototype.setItem=()=>{throw new DOMException('quota','QuotaExceededError');};});
  await page.getByRole('button',{name:'Enregistrer',exact:true}).click();assert.match(await page.locator('#toast').textContent(),/indisponible ou pleine/);
- assert.deepEqual(errors,[]);console.log('PASS: 4 viewports, import/export payloads (download click mocked), unknown fields, XSS text, storage/reload, invalid draft, plans, durations, library scene/shot selection, element editing; no page errors.');
+ assert.deepEqual(errors,[]);console.log('PASS: 4 viewports, import/export payloads (download click mocked), unknown fields, XSS text, storage/reload, invalid draft, plans, durations, library scene/shot selection, element editing, Atlas filters/variants/scene+shot selection/persistence; no page errors.');
  await browser.close();
 })().catch(e=>{console.error(e);process.exit(1);});

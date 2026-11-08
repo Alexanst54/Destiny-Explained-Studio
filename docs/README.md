@@ -78,3 +78,13 @@ Le bouton **Démo 4 décors** charge un épisode de 16 secondes (Tour/Dernière 
 Déplier **Éléments voxel de la scène** pour ajouter Gardien décoratif, Spectre, structure vex, fragments de Lumière, cristaux, neige ou particules, puis régler animation, position, échelle et graine. Les personnages principaux restent animés dans l’onglet Animations. Pour un plan, **Éléments voxel de ce plan** permet de conserver l’héritage de scène ou de créer une liste propre (qui remplace la liste de scène). Les limites sont de 12 éléments, 64 particules par élément et 256 particules par liste ; les erreurs bloquent la copie pour rendu.
 
 Exporter et importer le fichier dans **Editor-Colab** suffit ; les nouveaux champs sont acceptés par le même adaptateur et la même chaîne Kokoro → Remotion. Le [contrat JSON complet](../remotion/src/voxel/library/README.md) se consulte dans le dépôt GitHub. Aucun service ni workflow n’est ajouté au site statique.
+
+## Atlas of Destiny 0.3
+
+L’onglet **Atlas** propose la recherche en français/anglais (accents facultatifs), les filtres catégorie/civilisation/époque et la navigation par lieu parent. Choisir une fiche, consulter ses sources et son degré de certitude, sélectionner éventuellement une variante historique, puis l’affecter à la scène ou au plan actuellement sélectionné. **Démo Atlas** charge les quatre scènes Riis/Mercure/Fundament/Europe-Bray en 24 secondes.
+
+Les zones attestées seulement par le manifest sont identifiées comme telles : ni leur nom ni leur présence dans ces tables ne prouvent une carte complète ou une disponibilité en jeu actuelle. Les traductions françaises éditoriales sont signalées. Les lieux sans décor dédié utilisent une reconstitution artistique clairement annoncée dans la vidéo. Les métadonnées encore inconnues ne sont pas inventées.
+
+Les références `atlas.locationId` et `atlas.variantId` restent dans le projet local et l’export. Les autres champs et champs inconnus sont préservés. Un plan « Décor de la scène » hérite du lieu de scène ; une référence Atlas explicite de plan le remplace. Les anciens décors explicites ne sont pas réécrits automatiquement.
+
+Les liens et `Editor-Colab.ipynb` ciblent **main** : l’import Atlas dans Colab requiert la fusion volontaire de cette PR. La publication reste **main /docs**, sans nouveau workflow. Le [catalogue, le contrat et l’import hors ligne](../remotion/atlas/README.md) et le [rapport de couverture](../remotion/atlas/REPORT.md) sont consultables dans le dépôt GitHub. L’inventaire est partiel et ses lacunes sont publiées.

@@ -38,3 +38,7 @@ Les textes saisis dans le prototype HTML ne sont pas transmis au moteur.
 Un éditeur français statique est disponible dans `docs/`. Publication : Settings → Pages → Deploy from a branch → **main /docs**. Aucun workflow Actions à créer. [Guide, stockage local, champs inconnus et parcours Android → Colab](docs/README.md). Sources dans `editor/` ; build et vérification depuis `remotion/` avec `npm run editor:build` et `npm run editor:check`.
 
 La [bibliothèque voxel procédurale](remotion/src/voxel/library/README.md) ajoute quatre décors et des éléments sélectionnables dans le JSON et l’éditeur. Démonstration : `remotion/episodes/voxel_worlds_demo.json`, bouton **Démo 4 décors**, puis import dans Editor-Colab.
+
+## Atlas of Destiny 0.3
+
+L’[Atlas sourcé et extensible](remotion/atlas/README.md) ajoute des références de lieux/variantes au JSON, un onglet mobile et des décors modulaires CPU. [Couverture, sources et lacunes](remotion/atlas/REPORT.md). Le catalogue est partiel : les lignes du manifest ne constituent pas une preuve d’exhaustivité ni de disponibilité actuelle. Démonstration : `remotion/episodes/atlas_demo.json` (24 secondes), bouton **Démo Atlas**, puis parcours Colab existant depuis main après fusion.

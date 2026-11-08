@@ -1,9 +1,15 @@
-import {clone,catalog,templateEpisode,demoEpisode,setEnvironment,newElement,removeProperty,newEpisode,parseImport,validateEpisode,compatibleCopy,sceneList,planFor,patch,reflow,invalidateVoice,setDuration,moveScene,addScene,deleteScene,addShot,moveShot,deleteShot,spreadShots,newAction,newEvent,frameCue,phraseCue,shotStart,secondsLabel,slug} from './model.mjs';
+import {atlas,locationsById,sourcesById,searchAtlas,resolveAtlas} from '../remotion/atlas/index.ts';
+import {categories} from '../remotion/atlas/schema.ts';
+import atlasDemo from '../remotion/episodes/atlas_demo.json' with {type:'json'};
+import {clone,setAtlasReference,catalog,templateEpisode,demoEpisode,setEnvironment,newElement,removeProperty,newEpisode,parseImport,validateEpisode,compatibleCopy,sceneList,planFor,patch,reflow,invalidateVoice,setDuration,moveScene,addScene,deleteScene,addShot,moveShot,deleteShot,spreadShots,newAction,newEvent,frameCue,phraseCue,shotStart,secondsLabel,slug} from './model.mjs';
+let view='episode',atlasTarget='scene';
+const atlasFilters={query:'',category:'',civilization:'',era:'',parentId:''};
+const atlasVariants=new Map();let atlasLimit=20;
 const KEY='destiny-explained-editor-v1';
 const $=selector=>document.querySelector(selector);
 const list=v=>Array.isArray(v)?v:[];
 const record=v=>v&&typeof v==='object'&&!Array.isArray(v);
-const labels={'the-tower':'La Tour et la Dernière Cité',europa:'Europe enneigée','black-garden':'Le Jardin noir','pyramid-interior':'Intérieur de Pyramide',scene:'Décor de la scène',custom:'Liste propre au plan','vex-structure':'Structure vex','light-fragments':'Fragments de Lumière',crystal:'Cristaux',snow:'Neige',still:'Immobile',pulse:'Pulsation lumineuse',drift:'Dérive',blizzard:'Tempête de neige',frame:'Temps dans la scène',phrase:'Mots de narration','wide-tilt-up':'Plan large vers le ciel','slow-orbit-traveler':'Orbite lente du Voyageur','push-in-sky':'Travelling vers le ciel','close-up-ghost':'Gros plan du Spectre','medium-guardian':'Plan moyen du Gardien','wide-pullback':'Recul large',calm:'Calme',balanced:'Équilibrée',cinematic:'Cinématique',tower:'La Tour','golden-age-vision':'Vision de l’Âge d’or','collapse-vision':'Vision de l’Effondrement','light-space':'Espace de Lumière',guardian:'Gardien',ghost:'Spectre',idle:'Repos',walk:'Marche',run:'Course',jump:'Saut',fall:'Chute',resurrect:'Résurrection',combat:'Combat',interact:'Interaction','look-up':'Regard vers le ciel',hover:'Flottement',orbit:'Orbite',scan:'Scan',dolly:'Travelling',zoom:'Zoom',follow:'Suivi', 'close-up':'Gros plan',perspective:'Changement d’angle',particles:'Particules',explosion:'Explosion voxel',hologram:'Hologramme',beam:'Rayon lumineux',shake:'Secousse',cut:'Coupe franche',fade:'Fondu sombre',wipe:'Volet',match:'Raccord de caméra'};
+const labels={'dark-age':'Âge sombre','red-war':'Guerre rouge','pre-invasion':'Avant l’invasion','universe-realm':'Univers, dimensions et royaumes','stellar-body':'Systèmes et astres','destination-region':'Destinations et régions',zone:'Zones et sous-zones','historical-site':'Lieux historiques','activity-site':'Raids, donjons et missions','ship-station':'Vaisseaux et stations','lore-world':'Mondes du lore','historical-variant':'Variantes historiques',human:'Humaine',vex:'Vex',hive:'Ruche',cabal:'Cabale',eliksni:'Éliksni',awoken:'Éveillée',krill:'Krill',lubraean:'Lubraéenne','golden-age':'Âge d’or','city-age':'Âge de la Cité',ancient:'Antiquité','pre-whirlwind':'Avant le Tourbillon','post-whirlwind':'Après le Tourbillon','the-tower':'La Tour et la Dernière Cité',europa:'Europe enneigée','black-garden':'Le Jardin noir','pyramid-interior':'Intérieur de Pyramide',scene:'Décor de la scène',custom:'Liste propre au plan','vex-structure':'Structure vex','light-fragments':'Fragments de Lumière',crystal:'Cristaux',snow:'Neige',still:'Immobile',pulse:'Pulsation lumineuse',drift:'Dérive',blizzard:'Tempête de neige',frame:'Temps dans la scène',phrase:'Mots de narration','wide-tilt-up':'Plan large vers le ciel','slow-orbit-traveler':'Orbite lente du Voyageur','push-in-sky':'Travelling vers le ciel','close-up-ghost':'Gros plan du Spectre','medium-guardian':'Plan moyen du Gardien','wide-pullback':'Recul large',calm:'Calme',balanced:'Équilibrée',cinematic:'Cinématique',tower:'La Tour','golden-age-vision':'Vision de l’Âge d’or','collapse-vision':'Vision de l’Effondrement','light-space':'Espace de Lumière',guardian:'Gardien',ghost:'Spectre',idle:'Repos',walk:'Marche',run:'Course',jump:'Saut',fall:'Chute',resurrect:'Résurrection',combat:'Combat',interact:'Interaction','look-up':'Regard vers le ciel',hover:'Flottement',orbit:'Orbite',scan:'Scan',dolly:'Travelling',zoom:'Zoom',follow:'Suivi', 'close-up':'Gros plan',perspective:'Changement d’angle',particles:'Particules',explosion:'Explosion voxel',hologram:'Hologramme',beam:'Rayon lumineux',shake:'Secousse',cut:'Coupe franche',fade:'Fondu sombre',wipe:'Volet',match:'Raccord de caméra'};
 const friendly=v=>labels[v]??v;
 function node(tag,attrs={},...children){
  const e=document.createElement(tag);
@@ -134,6 +140,7 @@ function shotCard(s,p,item,index){
    node('div',{class:'two-col'},numberField('Angle de champ départ (°)',item.camera?.fovFrom,v=>changeField([...path,'camera','fovFrom'],v),{min:25,max:65}),numberField('Angle de champ arrivée (°)',item.camera?.fovTo,v=>changeField([...path,'camera','fovTo'],v),{min:25,max:65})),
    ['follow'].includes(item.camera?.mode)||item.camera?.track?selectField('Personnage suivi',item.camera?.track,['guardian','ghost'],v=>changeField([...path,'camera','track'],v)):null,
    item.camera?.mode==='orbit'?node('div',{class:'two-col'},numberField('Orbite départ (radians)',item.camera?.angleFrom,v=>changeField([...path,'camera','angleFrom'],v),{min:-3,max:3}),numberField('Orbite arrivée (radians)',item.camera?.angleTo,v=>changeField([...path,'camera','angleTo'],v),{min:-3,max:3})):null),
+  atlasSelectionInfo(item.atlas,[...path,'atlas']),button('Choisir un lieu Atlas pour ce plan',()=>{shotIndex=index;atlasTarget='shot';view='atlas';render();}),
   elementControls([...path,'elements'],item.elements,{inherit:true}),
   actionTools(()=>{shotIndex=Math.max(0,index-1);replace(moveShot(episode,sceneIndex,index,-1),{message:'Plan déplacé. Ses ancrages sont conservés : vérifiez leur ordre.'});},()=>{shotIndex=index+1;replace(moveShot(episode,sceneIndex,index,1),{message:'Plan déplacé. Ses ancrages sont conservés : vérifiez leur ordre.'});},()=>{try{replace(deleteShot(episode,sceneIndex,index),{message:index===0?'Plan supprimé. Le nouveau premier plan commence à zéro. Annuler reste disponible.':'Plan supprimé.'});}catch(e){toast(e.message);}},index===0,index===p.shots.length-1,p.shots.length<=1)
  ));return card;
@@ -148,6 +155,58 @@ function clipCard(item,index,kind){
    kind==='actions'?node('details',{class:'advanced-controls'},node('summary',{},'Déplacement et hauteur'),vectorFields('Départ',item.from,[...path,'from']),vectorFields('Arrivée',item.to,[...path,'to']),numberField('Hauteur du saut',item.height??1.3,v=>changeField([...path,'height'],v),{min:0,max:3})):node('div',{},numberField('Intensité (0–1)',item.strength,v=>changeField([...path,'strength'],v),{min:0,max:1,step:.1}),node('details',{class:'advanced-controls'},node('summary',{},'Position de l’effet'),vectorFields('Origine',item.position,[...path,'position']),item.type==='beam'?vectorFields('Extrémité',item.to,[...path,'to']):null)),
    button('Supprimer',()=>{const e=clone(episode);e.direction.scenes[pi][family].splice(index,1);replace(e);},{class:'danger-quiet'})
   ));
+}
+function atlasSelectionInfo(ref,path){
+ if(!ref)return null;
+ let label;try{label=resolveAtlas(ref).label;}catch{label='Référence Atlas à corriger';}
+ return node('div',{class:'atlas-selection'},node('strong',{},'Atlas · '+label),small('Ce lieu est prioritaire sur le décor générique correspondant. Les plans « Décor de la scène » héritent du lieu de scène.'),button('Retirer cette sélection Atlas',()=>replace(removeProperty(episode,path)),{class:'danger-quiet'}));
+}
+function atlasPanel(){
+ const matches=()=>searchAtlas(atlasFilters);
+ const panel=node('section',{class:'atlas-panel'},node('nav',{class:'atlas-tabs'},button('← Épisode',()=>{view='episode';render();}),button('Atlas',()=>{}, {'aria-current':'page'}),button('Démo Atlas',()=>{view='episode';createProject(clone(atlasDemo),'Démo Atlas chargée.');})),
+  node('div',{class:'card'},node('p',{class:'eyebrow'},'DESTINY EXPLAINED · 0.3'),node('h1',{},'Atlas de Destiny'),small(`${atlas.locations.length} fiches sourcées · inventaire partiel, extensible. Présence dans un manifest ≠ disponibilité actuelle. Les noms français éditoriaux sont signalés.`),
+   node('p',{},`Projet : ${episode.title??'Sans titre'} · scène ${sceneIndex+1} · plan ${shotIndex+1}`),small('Une sélection est enregistrée dans le projet local et son export JSON. Les anciens champs et les champs inconnus sont conservés.')));
+ function refreshResults(){const region=panel.querySelector('#atlas-results');if(region)region.replaceChildren(results());}
+ const query=textField('Rechercher en français ou anglais',atlasFilters.query,value=>{atlasFilters.query=value;atlasLimit=20;refreshResults();},{id:'atlas-search',help:'Noms, alias et identifiants. Les accents sont facultatifs.'});
+ const filters=node('div',{class:'card atlas-filters'},query,
+  selectField('Catégorie',atlasFilters.category,['',...categories],value=>{atlasFilters.category=value;atlasLimit=20;refreshResults();},'atlas-category'),
+  selectField('Civilisation',atlasFilters.civilization,['',...[...new Set(atlas.locations.flatMap(p=>p.civilizations))].sort()],value=>{atlasFilters.civilization=value;atlasLimit=20;refreshResults();},'atlas-civilization'),
+  selectField('Époque',atlasFilters.era,['',...[...new Set(atlas.locations.flatMap(p=>[...p.eras,...p.variants.flatMap(v=>v.eras)]))].sort()],value=>{atlasFilters.era=value;atlasLimit=20;refreshResults();},'atlas-era'),
+  selectField('Destination ou région parente',atlasFilters.parentId,['',...atlas.locations.filter(p=>!['zone','activity-site','historical-site','lore-world'].includes(p.category)).map(p=>p.id)],value=>{atlasFilters.parentId=value;atlasLimit=20;refreshResults();},'atlas-parent'));
+ // Use localized place names in navigation; empty filters mean all values.
+ for(const select of filters.querySelectorAll('select'))for(const option of select.options){if(option.value==='')option.textContent='Tous';else if(select.id==='atlas-parent')option.textContent=locationsById.get(option.value)?.names.fr??option.value;}
+ function results(){
+  const found=matches(),listNode=node('div',{class:'atlas-cards'});
+  listNode.append(node('p',{class:'hint',id:'atlas-count'},`${found.length} résultat(s). ${atlasFilters.parentId?'Enfants directs de '+locationsById.get(atlasFilters.parentId)?.names.fr:''}`));
+  if(atlasFilters.parentId)listNode.append(button('↑ Remonter au parent',()=>{atlasFilters.parentId=locationsById.get(atlasFilters.parentId)?.parentId??'';atlasLimit=20;render();}));
+  for(const place of found.slice(0,atlasLimit)){
+   const currentScene=sceneList(episode)[sceneIndex];
+   const currentRef=atlasTarget==='shot'?planFor(episode,currentScene?.id)?.shots?.[shotIndex]?.atlas:currentScene?.atlas;
+   let variantId=atlasVariants.get(place.id)??(currentRef?.locationId===place.id?currentRef.variantId??'':'');
+   const fidelity=place.canonStatus==='editorial-container'?'Conteneur éditorial, pas un nom propre de lieu canonique':place.canonStatus==='manifest-attested'?'Nom et parent attestés par le manifest ; carte non vérifiée':place.appearance.evidence==='game'?'Environnement montré en jeu (référence partielle)':place.appearance.evidence==='lore-and-cinematic'?'Lore et images cinématiques partielles':'Lieu décrit dans le lore / connaissance limitée';
+   const card=node('article',{class:'card atlas-card','data-place-id':place.id},node('h2',{},place.names.fr),node('p',{class:'hint'},place.names.en),node('p',{class:'pill'},friendly(place.category)),small(fidelity),small(place.render.mode==='dedicated'?'Décor dédié, stylisé ; pas une reproduction exacte.':'Décor modulaire de substitution · reconstitution artistique.'),small('Nom français : '+(place.frenchNameStatus==='editorial-translation'?'traduction éditoriale':place.frenchNameStatus==='untranslated'?'non traduit':'issu du manifest / nom officiel abrégé')),);
+   const variant=selectField('Variante historique',variantId,['',...place.variants.map(v=>v.id)],value=>{atlasVariants.set(place.id,value);variantId=value;},'atlas-variant-'+place.id);
+   for(const option of variant.querySelector('select').options)option.textContent=option.value?place.variants.find(v=>v.id===option.value)?.names.fr??option.value:'État de référence';
+   if(place.variants.length)card.append(variant,small('Les variantes historiques sont des reconstitutions artistiques, même si le lieu actuel possède un décor dédié.'));
+   const select=(target)=>{
+    try{
+     let path;if(target==='scene')path=['scenes',sceneIndex,'atlas'];
+     else{const pi=directionIndex();if(pi<0)throw new Error('Activez les plans cinématiques avant de sélectionner un lieu de plan.');const shots=episode.direction.scenes[pi].shots;if(!shots[shotIndex])throw new Error('Sélectionnez un plan existant.');path=['direction','scenes',pi,'shots',shotIndex,'atlas'];}
+     atlasTarget=target==='scene'?'scene':'shot';
+     replace(setAtlasReference(episode,path,place.id,(atlasVariants.get(place.id)??variantId)||undefined),{message:`${place.names.fr} enregistré pour ${target==='scene'?'la scène':'le plan'}.`});
+    }catch(error){toast(error.message);}
+   };
+   card.append(node('div',{class:'button-row'},button('Utiliser pour la scène',()=>select('scene'),{class:'primary'}),button('Utiliser pour le plan',()=>select('shot'),{disabled:directionIndex()<0})));
+   if(atlas.locations.some(p=>p.parentId===place.id))card.append(button('Explorer les zones',()=>{atlasFilters.parentId=place.id;atlasFilters.query='';atlasLimit=20;render();}));
+   const refs=new Set([...place.sources,...place.variants.flatMap(v=>v.sources)]);
+   card.append(node('details',{},node('summary',{},'Sources et fiabilité'),small('Note documentaire (anglais) : '+place.appearance.note),small('Certitude d’apparence : '+({partial:'partielle',unknown:'inconnue',documented:'documentée'}[place.appearance.confidence])),...Array.from(refs,id=>{const source=sourcesById.get(id);return source?node('p',{},node('a',{href:source.url,target:'_blank',rel:'noopener noreferrer'},source.title),small(({'primary-manifest':'Manifest Bungie (primaire)','primary-lore-archive':'Archive du lore (primaire)',secondary:'Référence communautaire (secondaire)'}[source.kind])+' · '+(source.locator??'consultée le '+source.checkedAt))):small('Source inconnue : '+id);})));listNode.append(card);
+  }
+  if(found.length>atlasLimit)listNode.append(button('Afficher 20 fiches de plus',()=>{atlasLimit+=20;refreshResults();}));
+  if(!found.length)listNode.append(small('Aucun résultat dans cet inventaire partiel. Vérifiez les filtres ou consultez les lacunes documentées.'));
+  return listNode;
+ }
+ panel.append(filters,node('div',{id:'atlas-results'},results()),node('details',{class:'card'},node('summary',{},'Couverture et lieux encore manquants'),...atlas.knownGaps.map(g=>small(g))),node('div',{class:'bottom-bar'},button('← Épisode',()=>{view='episode';render();}),button('Exporter JSON',()=>exportFile(false),{class:'primary'}),button('Copie pour rendu',()=>exportFile(true))));
+ return panel;
 }
 const openElementPanels=new Set();
 function elementControls(path,items,{inherit=false}={}){
@@ -193,6 +252,7 @@ function sceneEditor(){
    numberField('Durée de la scène (secondes)',Number(s.durationFrames)/(episode.format?.fps??30),v=>edit(setDuration(episode,sceneIndex,v===null?NaN:v)),{id:'scene-duration',min:1,step:.1,help:'Arrondie à l’image près. Les débuts des scènes suivantes sont recalculés ; les plans, animations et effets restent inchangés et sont revérifiés.'}),
    selectField('Décor de la scène',s.location,catalog.locations,v=>replace(setEnvironment(episode,['scenes',sceneIndex,'location'],v)),'scene-location'),
    small('Les plans réglés sur « Décor de la scène » suivent ce choix. Les anciens plans avec un décor explicite gardent leur choix.'),
+   atlasSelectionInfo(s.atlas,['scenes',sceneIndex,'atlas']),button('Choisir un lieu dans l’Atlas',()=>{atlasTarget='scene';view='atlas';render();}),
    elementControls(['scenes',sceneIndex,'elements'],s.elements),
    actionTools(()=>{const i=sceneIndex;sceneIndex--;replace(moveScene(episode,i,-1));},()=>{const i=sceneIndex;sceneIndex++;replace(moveScene(episode,i,1));},()=>{const i=sceneIndex;sceneIndex=Math.max(0,i-1);replace(deleteScene(episode,i),{message:'Scène supprimée. Annuler reste disponible.'});},sceneIndex===0,sceneIndex===sceneList(episode).length-1,sceneList(episode).length<=1)),
   !p?legacyControls(s):node('div',{},node('div',{class:'tabs',role:'tablist','aria-label':'Mise en scène'},...['shots','actions','events'].map(key=>button(`${key==='shots'?'Plans':key==='actions'?'Animations':'Effets'} (${list(p[key]).length})`,()=>{tab=key;render();},{role:'tab','aria-selected':tab===key,class:tab===key?'active':''}))),
@@ -228,11 +288,12 @@ function renderContent(){
   const f=e.target.files?.[0];if(!f)return;
   try{if(f.size>2*1024*1024)throw new Error('Le fichier dépasse 2 Mo.');const raw=parseImport(await f.text());createProject(raw,'JSON importé intégralement.');}catch(error){toast(`Import impossible : ${error.message}`);}
  }});
+ if(view==='atlas'){app.append(file,atlasPanel());return;}
  const modes=node('div',{class:'mode-switch','aria-label':'Mode d’édition'},...['beginner','advanced'].map(value=>button(value==='beginner'?'Débutant':'JSON avancé',()=>{
   if(value==='beginner'&&rawDraft!==JSON.stringify(episode,null,2)){toast('Appliquez ou annulez le brouillon JSON avant de changer de mode.');return;}
   mode=value;save();render();},{'aria-pressed':mode===value,class:mode===value?'selected':''})));
  const librarySelect=node('select',{id:'project-select','aria-label':'Projet enregistré',onChange:e=>switchProject(e.target.value)},...library.map(p=>node('option',{value:p.key,selected:p.key===active},typeof p.episode?.title==='string'?p.episode.title:'Sans titre')));
- app.append(file,node('section',{class:'intro'},node('div',{},node('p',{class:'eyebrow'},'VOTRE PROCHAIN SHORT'),node('h1',{},'Une histoire. Plusieurs plans.'),node('p',{class:'intro-copy'},'Écrivez ici. Générez votre vidéo dans Colab. Vos projets restent sur votre téléphone.')),node('div',{class:'hero-art','aria-hidden':'true'},node('i'),node('i'),node('i'))),
+ app.append(file,node('nav',{class:'atlas-tabs','aria-label':'Studio'},button('Épisode',()=>{}, {'aria-current':'page'}),button('Atlas',()=>{if(rawDirty()){toast('Appliquez ou annulez le brouillon JSON avant d’ouvrir l’Atlas.');return;}atlasTarget='scene';view='atlas';render();},{id:'atlas-tab'})),node('section',{class:'intro'},node('div',{},node('p',{class:'eyebrow'},'VOTRE PROCHAIN SHORT'),node('h1',{},'Une histoire. Plusieurs plans.'),node('p',{class:'intro-copy'},'Écrivez ici. Générez votre vidéo dans Colab. Vos projets restent sur votre téléphone.')),node('div',{class:'hero-art','aria-hidden':'true'},node('i'),node('i'),node('i'))),
   node('section',{class:'project-shelf'},node('label',{},node('span',{class:'eyebrow'},'MES PROJETS'),librarySelect),node('div',{class:'button-row'},button('+ Nouveau',()=>createProject(newEpisode(),'Nouvel épisode créé.')),button('Modèle Voyageur',()=>createProject(templateEpisode(),'Modèle du Voyageur chargé, sans modification.')),button('Démo 4 décors',()=>createProject(demoEpisode(),'Démonstration des quatre décors chargée.')))),
   node('section',{class:'project-head'},node('div',{},node('p',{class:'eyebrow'},'ÉPISODE EN COURS'),node('h2',{id:'project-heading'},typeof episode.title==='string'?episode.title:'Épisode sans titre'),node('p',{id:'episode-stat',class:'hint'},`${sceneList(episode).length} scènes · ${secondsLabel(episode.format?.durationFrames)} · 1080 × 1920`)),modes),
   node('div',{class:'edit-toolbar'},node('span',{id:'save-status',class:storageError?'error-text':'hint'},storageError||'Sauvegarde locale automatique'),node('div',{class:'button-row'},button('↶ Annuler',()=>{if(rawDirty()){toast('Appliquez ou annulez le brouillon JSON avant de revenir en arrière.');return;}if(!undo.length)return;redo.push(clone(episode));replace(undo.pop(),{remember:false});},{id:'undo-button',disabled:undo.length===0}),button('↷ Rétablir',()=>{if(rawDirty()){toast('Appliquez ou annulez le brouillon JSON avant de rétablir.');return;}if(!redo.length)return;undo.push(clone(episode));replace(redo.pop(),{remember:false});},{id:'redo-button',disabled:redo.length===0}),button('Enregistrer',()=>{save();toast(storageError||'Projet enregistré sur cet appareil.');}))),
