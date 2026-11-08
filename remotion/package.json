@@ -15,7 +15,11 @@
     "render:episode": "node --experimental-strip-types scripts/episode.mjs render",
     "render:episode:test": "node --experimental-strip-types scripts/episode.mjs render --preview --frames=1140-1319",
     "still:episode": "remotion still src/index.ts VoxelEpisode out/episode-002-traveler.png --frame=1310 --image-format=png --gl=swangle",
-    "test:episode": "node --experimental-strip-types --test tests/episode.test.mjs"
+    "test:episode": "node --experimental-strip-types --test tests/episode.test.mjs",
+    "narrate:episode": "python scripts/narration.py",
+    "render:episode:voiced": "node --experimental-strip-types scripts/episode.mjs render out/traveler_episode_002-ready.json",
+    "test:narration": "python -m unittest discover -s tests -p \"test_narration.py\"",
+    "verify:narration": "python scripts/verify_narration.py"
   },
   "dependencies": {
     "@react-three/fiber": "8.18.0",

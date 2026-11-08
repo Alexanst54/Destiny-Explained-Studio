@@ -9,10 +9,10 @@ const args = process.argv.slice(2);
 const command = args.shift();
 const source = args[0] && !args[0].startsWith('--') ? args.shift() : 'episodes/traveler_episode_002.json';
 const preview = args.includes('--preview');
-const allowed = /^(--preview|--frames=\d+-\d+|--browser-executable=.+)$/;
+const allowed = /^(--preview|--frames=\d+-\d+|--browser-executable=.+|--concurrency=[1-4])$/;
 try {
   if (!['validate','render'].includes(command) || args.some(a => !allowed.test(a)))
-    throw new Error('Usage: episode.mjs validate|render [episode.json] [--preview] [--frames=start-end] [--browser-executable=path]');
+    throw new Error('Usage: episode.mjs validate|render [episode.json] [--preview] [--frames=start-end] [--browser-executable=path] [--concurrency=1-4]');
   const episode = episodeSchema.parse(JSON.parse(readFileSync(resolve(root,source),'utf8')));
   console.log(`${episode.id}: ${episode.scenes.length} scenes, ${episode.format.durationFrames} frames, ${episode.format.durationFrames/episode.format.fps}s`);
   let alignedWords;
@@ -51,7 +51,7 @@ try {
       writeFileSync(propsPath,JSON.stringify({episode,preview,alignedWords}));
       const result = spawnSync(process.execPath,[resolve(root,'node_modules/@remotion/cli/remotion-cli.js'),
         'render','src/index.ts',episode.render.composition,output,
-        '--codec=h264','--pixel-format=yuv420p','--concurrency=1','--gl=swangle',`--props=${propsPath}`,
+        '--codec=h264','--pixel-format=yuv420p',...(args.some(a => a.startsWith('--concurrency=')) ? [] : ['--concurrency=1']),'--gl=swangle',`--props=${propsPath}`,
         ...args.filter(a => a !== '--preview')],{cwd:root,stdio:'inherit'});
       if (result.error || result.status !== 0) throw new Error(`Render failed: ${result.error?.message ?? result.status}`);
     } finally {unlinkSync(propsPath);}

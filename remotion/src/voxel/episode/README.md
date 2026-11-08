@@ -90,7 +90,8 @@ final silencieux. Le fichier final porte le nom `render.output` du JSON ;
 l'aperçu porte le suffixe `-preview`. Ne pas contourner ces vérifications avec une
 commande CLI directe pour un export final.
 
-Le moteur n'intègre ni TTS ni alignement forcé automatique. Le texte source reste
+Le [parcours Kokoro](../../../tts/COLAB-TTS.md) génère désormais la narration et
+les horodatages automatiquement, sans modifier ce JSON source. Le texte reste
 un brouillon à vérifier éditorialement, notamment ses références temporelles au
 Voyageur, avant de produire la voix. Les durées par scène ne sont pas ajustées
 automatiquement à la diction ; le validateur signale les scènes dépassant 180 mots/min.

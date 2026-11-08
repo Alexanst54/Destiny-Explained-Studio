@@ -1,0 +1,19 @@
+{
+  "provider": "kokoro",
+  "leadInSeconds": 0,
+  "kokoro": {
+    "repo": "hexgrad/Kokoro-82M",
+    "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "voice": "af_heart",
+    "speed": 1.0,
+    "language": "a",
+    "threads": 2
+  },
+  "openai": {
+    "enabled": false,
+    "model": "gpt-4o-mini-tts",
+    "voice": "alloy",
+    "speed": 1.0,
+    "alignmentModel": "base.en"
+  }
+}

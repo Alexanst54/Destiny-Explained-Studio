@@ -83,6 +83,23 @@ export const validateWords = (input: unknown, episode: VoxelEpisodeDef) => {
   const normalize = (value: string) => value.toLowerCase().replace(/[^a-z0-9]/g, '');
   if (normalize(words.map(w => w.text).join(' ')) !== normalize(episode.scenes.map(s => s.narration).join(' ')))
     throw new Error('Aligned words must match the episode narration');
+  // Associate words with scene narration, rather than allowing an aligned transcript
+  // to drift into the next scene while remaining inside the total episode duration.
+  let character = 0;
+  const boundaries = episode.scenes.map(scene => {
+    const from = character;
+    character += normalize(scene.narration).length;
+    return {scene, from, to: character};
+  });
+  character = 0;
+  for (const word of words) {
+    const count = normalize(word.text).length;
+    const boundary = boundaries.find(b => character >= b.from && character + count <= b.to);
+    if (!count || !boundary || word.start < boundary.scene.startFrame / episode.format.fps - 1e-6 ||
+      word.end > (boundary.scene.startFrame + boundary.scene.durationFrames) / episode.format.fps + 1e-6)
+      throw new Error('Aligned words must remain inside their narration scene');
+    character += count;
+  }
   return words;
 };
 export const episodeWarnings = (episode: VoxelEpisodeDef): string[] => {
