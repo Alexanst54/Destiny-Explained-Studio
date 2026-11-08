@@ -3,7 +3,16 @@ import {resolveAtlas} from '../atlas/index.ts';
 import type {AtlasReference} from '../atlas/index';
 import type {LivingWorld,LivingShot} from './schema';
 import {expandGroup} from '../characters/animations/state.ts';
-export function directWorld(world:LivingWorld|undefined,shot?:LivingShot){return [...(shot?.cast??world?.cast??[]),...(shot?.groups??world?.groups??[]).flatMap(expandGroup)].slice(0,32);}
+export function directWorld(world:LivingWorld|undefined,shot?:LivingShot){
+ const cast=shot?.cast??world?.cast??[];
+ const groups=shot?.groups??world?.groups??[];
+ // Validate the effective cast after scene/shot inheritance. Never silently truncate.
+ const total=cast.length+groups.reduce((count,group)=>count+group.count,0);
+ if(total>32)throw new Error(`CPU population budget exceeds 32 (resolved ${total})`);
+ const ids=[...cast.map(actor=>actor.id),...groups.map(group=>group.id)];
+ if(new Set(ids).size!==ids.length)throw new Error('Duplicate living world id after scene/shot inheritance');
+ return [...cast,...groups.flatMap(expandGroup)];
+}
 // Independent partial orders; no invented ordering between Riis and human history.
 const eraChains=[['golden-age','post-collapse','dark-age','city-age','red-war','post-forsaken','beyond-light','post-sagira'],['ancient','post-pact','post-oryx'],['pre-whirlwind','post-whirlwind'],['golden-age','post-exo-program']];
 const later=(candidate:string,era:string)=>eraChains.some(chain=>chain.includes(candidate)&&chain.includes(era)&&chain.indexOf(candidate)>chain.indexOf(era));
