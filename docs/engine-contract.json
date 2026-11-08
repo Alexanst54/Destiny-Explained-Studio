@@ -1,8 +1,10 @@
 {
   "format": 1,
   "sources": {
-    "remotion/src/voxel/episode/schema.ts": "b11e85d2d486aa148fec15b17a5ed14beb9d388fb14776a32a08072bf40ac40f",
-    "remotion/src/voxel/cinematic/schema.ts": "9a1d392aedd74d0770663f594ed0d2b31d8237cef246adb2d46ed6c2ae8b85bb",
+    "remotion/src/voxel/library/catalog.ts": "4b8b838bfd7ee860985944a0dbb61efce0941e1f044af899f38033ce64440b48",
+    "remotion/episodes/voxel_worlds_demo.json": "0528ef19f942fc60af6086ac9b73293568b7e75cf39f78d04884f8b5f2eaacd8",
+    "remotion/src/voxel/episode/schema.ts": "35f6852b79a47bcf84ca95151108936c9c1b80415c989ae79ddea6842bd5c02e",
+    "remotion/src/voxel/cinematic/schema.ts": "629f7f4e2efde0c67bd2aafb12877abfea9f661cf0af90637a2951223546edcd",
     "remotion/src/voxel/cinematic/timeline.ts": "4bf51e1a540e78ac7f7d5929c6277fe3e37189784cafbcc31239df309a42b304",
     "remotion/episodes/traveler_episode_002_cinematic.json": "2ef78c46dc45902bd5082b750946b15894caac856420c1fe5a414a66f0d5a7b9"
   }

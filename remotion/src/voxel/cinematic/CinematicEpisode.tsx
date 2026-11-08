@@ -9,6 +9,8 @@ import {resolveDirection,estimatedWords,atFrame} from './timeline';
 import {actorPose,cameraState,transitionState} from './motion';
 import {FilmCameraRig,Stage} from './Stage';
 import {VoxelBurst,Hologram,LightRay} from './Effects';
+import {VoxelElements} from '../library/Library';
+import {resolveEnvironment,environmentStyle} from '../library/catalog';
 
 export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alignedWords})=>{
   const valid=useMemo(()=>episodeSchema.parse(episode),[episode]);
@@ -20,19 +22,23 @@ export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alig
   const {scene,shot,events}=atFrame(timeline,frame);
   const guardian=actorPose('guardian',scene.actions,frame,timeline.intensity),ghost=actorPose('ghost',scene.actions,frame,timeline.intensity);
   const camera=cameraState(timeline,scene,shot,frame,events),transition=transitionState(timeline,shot,frame);
-  const dark=shot.environment==='collapse-vision',light=shot.environment==='golden-age-vision';
+  const sourceScene=valid.scenes.find(s=>s.id===scene.sceneId)!;
+  const environment=resolveEnvironment(shot.environment,sourceScene.location);
+  const style=environmentStyle(environment);
+  const dark=environment==='collapse-vision',light=environment==='golden-age-vision';
   const captions=captionWords(findScene(valid,frame),frame,preview?undefined:words);
   const halo=valid.scenes.find(s=>s.id===scene.sceneId)!.effects.includes('traveler-halo');
   return <AbsoluteFill style={{backgroundColor:'#101a2b'}}>
     <ThreeCanvas width={width} height={height} dpr={1} camera={{fov:42,near:0.1,far:80,position:[0,4.4,13]}} gl={{antialias:true,alpha:false}}>
-      <color attach="background" args={[dark?'#060b17':'#101a2b']}/>
-      <fog attach="fog" args={[dark?'#060b17':'#101a2b',24,50]}/>
+      <color attach="background" args={[style.sky]}/>
+      <fog attach="fog" args={[style.sky,style.fogNear,style.fogFar]}/>
       <FilmCameraRig pose={camera}/>
-      <ambientLight intensity={dark?0.55:1.1}/>
-      <directionalLight position={[4,7,5]} intensity={dark?1:2.4} color="#ffe2b5"/>
-      <directionalLight position={[-5,4,-3]} intensity={2} color="#8aa8ff"/>
+      <ambientLight intensity={style.ambient}/>
+      <directionalLight position={[4,7,5]} intensity={dark?1:2.4} color={style.key}/>
+      <directionalLight position={[-5,4,-3]} intensity={2} color={style.fill}/>
       {light&&<pointLight position={[0,6,-6]} color="#ffe9a6" intensity={25} distance={15}/>}
-      <Stage environment={shot.environment} halo={halo}/>
+      <Stage environment={environment} halo={halo}/>
+      <VoxelElements items={shot.elements??sourceScene.elements??[]} frame={frame-scene.start}/>
       {shot.actors.guardian&&<Guardian rise={guardian.rise} t={frame/30} pose={guardian.joints}
         position={guardian.position} rotation={guardian.rotation}/>}
       {shot.actors.ghost&&<Ghost t={frame/30} position={ghost.position}

@@ -26,7 +26,7 @@ Les formulaires changent uniquement les champs visés, sauf le recalcul explicit
 
 ### JSON → Colab → MP4, sans modifier le dépôt
 
-Ouvrir [Editor-Colab](https://colab.research.google.com/github/Alexanst54/Destiny-Explained-Studio/blob/feat/mobile-json-editor/remotion/tts/Editor-Colab.ipynb) depuis le bouton du site. Avant fusion, le notebook référence cette branche de PR ; après fusion, `main` peut remplacer `feat/mobile-json-editor` dans le lien et `REF`.
+Ouvrir [Editor-Colab](https://colab.research.google.com/github/Alexanst54/Destiny-Explained-Studio/blob/feat/voxel-environment-library/remotion/tts/Editor-Colab.ipynb) depuis le bouton du site. Avant fusion, le notebook référence cette branche de PR ; après fusion, `main` peut remplacer `feat/voxel-environment-library` dans le lien et `REF`.
 
 1. Session CPU Python 3.12 ; exécuter l’installation.
 2. Choisir le JSON exporté dans les téléchargements Android. L’original est conservé dans `remotion/out/editor-upload.json` ; la copie stricte dans `out/editor-episode.json`, avec rapport des champs écartés.
@@ -70,3 +70,11 @@ CHROMIUM_EXECUTABLE=/usr/bin/chromium npm run test:editor:browser
 ```
 
 Le test sert les fichiers statiques via le routage Playwright, sans lancer de serveur. Il couvre quatre largeurs (320, 360, 393 et 1280 pixels), import/export, champs inconnus, texte HTML inerte, sauvegarde/rechargement, brouillon invalide, ajout de plans, durées, import mal structuré et refus du stockage. Dans l’environnement géré, la politique Chromium interdit les téléchargements `blob:` : le test capture le vrai contenu du Blob et neutralise uniquement le clic de téléchargement. L’enregistrement effectif du fichier reste à vérifier sur Chrome Android réel ; aucune politique navigateur n’est contournée.
+
+## Bibliothèque de décors et d’éléments voxel
+
+Le bouton **Démo 4 décors** charge un épisode de 16 secondes (Tour/Dernière Cité, Europe, Jardin noir, Pyramide). Le décor de scène se choisit dans les réglages de scène. Les nouveaux plans suivent ce choix avec **Décor de la scène** ; les anciens plans conservent leur décor explicite. Changer le décor ajoute sa déclaration compatible au JSON.
+
+Déplier **Éléments voxel de la scène** pour ajouter Gardien décoratif, Spectre, structure vex, fragments de Lumière, cristaux, neige ou particules, puis régler animation, position, échelle et graine. Les personnages principaux restent animés dans l’onglet Animations. Pour un plan, **Éléments voxel de ce plan** permet de conserver l’héritage de scène ou de créer une liste propre (qui remplace la liste de scène). Les limites sont de 12 éléments, 64 particules par élément et 256 particules par liste ; les erreurs bloquent la copie pour rendu.
+
+Exporter et importer le fichier dans **Editor-Colab** suffit ; les nouveaux champs sont acceptés par le même adaptateur et la même chaîne Kokoro → Remotion. Le [contrat JSON complet](../remotion/src/voxel/library/README.md) se consulte dans le dépôt GitHub. Aucun service ni workflow n’est ajouté au site statique.

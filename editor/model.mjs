@@ -1,5 +1,7 @@
 // Shared by the static app, Node tests and Colab import. The engine stays strict;
 // the editor keeps the original object and creates an explicitly separate projection.
+import {locations,elementTypes,elementAnimations,defaultElementAnimation,environmentDefinitions} from '../remotion/src/voxel/library/catalog.ts';
+import demo from '../remotion/episodes/voxel_worlds_demo.json' with {type:'json'};
 import {episodeSchema} from '../remotion/src/voxel/episode/schema.ts';
 import {directionSchema} from '../remotion/src/voxel/cinematic/schema.ts';
 import {resolveDirection,estimatedWords,resolveCue} from '../remotion/src/voxel/cinematic/timeline.ts';
@@ -32,6 +34,7 @@ const planSchema=directionSchema.shape.scenes.element;
 const shotSchema=planSchema.shape.shots.element;
 const variants=planSchema.shape.actions.element.options;
 export const catalog={
+ locations,elementTypes,elementAnimations,
  cameras:shotSchema.shape.camera.shape.mode.options,
  environments:shotSchema.shape.environment.options,
  transitions:shotSchema.shape.transition.shape.type.options,
@@ -48,8 +51,9 @@ export function parseImport(text){
  return raw;
 }
 export const templateEpisode=()=>clone(template);
+export const demoEpisode=()=>clone(demo);
 export const slug=prefix=>`${prefix}-${globalThis.crypto?.randomUUID?.().slice(0,8)??Math.random().toString(36).slice(2,10)}`;
-export function newShot(id=slug('plan'),frame=0){return {id,at:{sceneFrame:frame},purpose:'Présenter le sujet de ce passage.',environment:'tower',actors:{guardian:true,ghost:true},
+export function newShot(id=slug('plan'),frame=0){return {id,at:{sceneFrame:frame},purpose:'Présenter le sujet de ce passage.',environment:'scene',actors:{guardian:true,ghost:true},
  camera:{mode:'dolly',from:[0,4.4,13],to:[0,4.8,12],targetFrom:[0,3,-2],targetTo:[0,3,-2],fovFrom:42,fovTo:42},transition:{type:'cut',durationFrames:0}};}
 export function newAction(actor='guardian'){return {id:slug('action'),actor,animation:catalog.animations[actor][0],at:{sceneFrame:0},durationFrames:60,from:actor==='guardian'?[0,.02,0]:[.6,3.4,0],to:actor==='guardian'?[0,.02,0]:[.6,3.4,0],height:1.3,purpose:'Accompagner le passage raconté.'};}
 export function newEvent(){return {id:slug('effet'),type:'particles',at:{sceneFrame:0},durationFrames:45,position:[0,.5,0],strength:.5,purpose:'Souligner un élément de la narration.'};}
@@ -178,7 +182,7 @@ function issueMessage(issue){
  if(issue.code==='invalid_union')return 'Structure incohérente : vérifiez les champs et les ancrages de début.';
  if(issue.code==='too_small')return `Valeur ou taille minimale : ${issue.minimum}.`;
  if(issue.code==='too_big')return `Valeur ou taille maximale : ${issue.maximum}.`;
- const known={"Duplicate scene id":"Identifiant de scène dupliqué.","Conflicting Guardian actions":"Des actions du Gardien sont contradictoires.","Duplicate action":"Action dupliquée.","Duplicate effect":"Effet dupliqué.","Cinematic composition requires direction":"La composition cinématique exige une mise en scène.","Direction requires the cinematic composition":"La mise en scène exige VoxelCinematicEpisode.","Resurrection action and beam must occur together":"La résurrection et son rayon doivent être présents ensemble.","Resurrection requires at least 120 frames":"La résurrection classique exige au moins 120 images."};
+ const known={"Environment must be declared":"Ce décor doit être déclaré dans environments. Le sélecteur de décor le fait automatiquement.","Duplicate environment declaration":"Décor déclaré plusieurs fois.","Animation incompatible with this voxel element":"Cette animation n’est pas compatible avec cet élément voxel.","Duplicate voxel element id":"Identifiant d’élément voxel dupliqué.","Voxel element particle budget exceeds 256":"Le budget de 256 particules par liste est dépassé.","Duplicate scene id":"Identifiant de scène dupliqué.","Conflicting Guardian actions":"Des actions du Gardien sont contradictoires.","Duplicate action":"Action dupliquée.","Duplicate effect":"Effet dupliqué.","Cinematic composition requires direction":"La composition cinématique exige une mise en scène.","Direction requires the cinematic composition":"La mise en scène exige VoxelCinematicEpisode.","Resurrection action and beam must occur together":"La résurrection et son rayon doivent être présents ensemble.","Resurrection requires at least 120 frames":"La résurrection classique exige au moins 120 images."};
  if(known[issue.message])return known[issue.message];
  if(issue.message.startsWith('Expected '))return 'Le début des scènes doit être continu, sans trou ni chevauchement. '+issue.message.match(/\d+/)?.[0]+' images attendues.';
  if(issue.message.startsWith('Scene total'))return 'La durée totale ne correspond pas à la somme des scènes.';
@@ -206,3 +210,20 @@ export function validateEpisode(raw){
 }
 export function compatibleCopy(raw){const result=validateEpisode(raw);if(!result.valid)throw new Error(result.errors.map(e=>`${e.path} : ${e.message}`).join('\n'));return clone(result.episode);}
 export function secondsLabel(frames,fps=30){return `${(Number(frames||0)/fps).toFixed(2).replace('.',',')} s`;}
+
+export function setEnvironment(raw,path,value){
+ const e=patch(raw,path,value);
+ const id=['tower','golden-age-vision','collapse-vision'].includes(value)?'the-tower':value;
+ if(environmentDefinitions[id]){
+  if(!Array.isArray(e.environments))e.environments=[];
+  if(!e.environments.some(x=>x?.id===id))e.environments.push(clone(environmentDefinitions[id]));
+ }
+ return e;
+}
+export function newElement(type='crystal'){
+ return {id:slug('element'),type,position:type==='ghost'?[2,3.2,0]:type==='guardian'?[2,0,0]:type==='snow'?[0,0,0]:[3,0,-3],
+  animation:defaultElementAnimation(type),scale:1,seed:0,...(['snow','particles','light-fragments'].includes(type)?{count:24,strength:.65}:{})};
+}
+export function removeProperty(raw,path){
+ const e=clone(raw);let at=e;for(const key of path.slice(0,-1))at=at[key];delete at[path.at(-1)];return e;
+}

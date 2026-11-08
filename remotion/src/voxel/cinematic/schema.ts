@@ -1,4 +1,5 @@
 import {z} from 'zod';
+import {shotEnvironmentSchema,elementsSchema} from '../library/catalog.ts';
 const reason = z.string().trim().min(8);
 const vec = z.tuple([z.number().finite().min(-40).max(40),z.number().finite().min(-10).max(30),z.number().finite().min(-40).max(40)]);
 export const cueSchema = z.union([
@@ -7,7 +8,7 @@ export const cueSchema = z.union([
 ]);
 const transition = z.object({type:z.enum(['cut','fade','wipe','match']),durationFrames:z.number().int().min(0).max(30)}).strict();
 const shot = z.object({id:z.string().min(1),at:cueSchema,purpose:reason,
-  environment:z.enum(['tower','golden-age-vision','collapse-vision','light-space']),
+  environment:shotEnvironmentSchema,elements:elementsSchema.optional(),
   actors:z.object({guardian:z.boolean(),ghost:z.boolean()}).strict(),
   camera:z.object({mode:z.enum(['dolly','orbit','zoom','follow','close-up','perspective']),
     from:vec,to:vec,targetFrom:vec,targetTo:vec,

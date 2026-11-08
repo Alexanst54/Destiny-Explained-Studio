@@ -28,7 +28,11 @@
     "editor:build": "node scripts/build-editor.mjs",
     "editor:check": "node scripts/build-editor.mjs --check",
     "test:editor": "node --experimental-strip-types --test ../editor/model.test.mjs",
-    "test:editor:browser": "node ../editor/browser.test.cjs"
+    "test:editor:browser": "node ../editor/browser.test.cjs",
+    "test:library": "node --experimental-strip-types --test tests/library.test.mjs",
+    "render:worlds:preview": "node --experimental-strip-types scripts/episode.mjs render episodes/voxel_worlds_demo.json --preview",
+    "narrate:worlds": "python scripts/narration.py episodes/voxel_worlds_demo.json",
+    "render:worlds": "node --experimental-strip-types scripts/episode.mjs render out/voxel_worlds_demo-ready.json"
   },
   "dependencies": {
     "@react-three/fiber": "8.18.0",

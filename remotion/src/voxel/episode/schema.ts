@@ -1,4 +1,5 @@
 import {z} from 'zod';
+import {locationSchema,environmentDeclarationSchema,elementsSchema,resolveEnvironment} from '../library/catalog.ts';
 import {directionSchema} from '../cinematic/schema.ts';
 
 const text = z.string().trim().min(1);
@@ -14,7 +15,7 @@ const action = z.discriminatedUnion('actor', [
   z.object({actor: z.literal('ghost'), animation: z.enum(['hover', 'scan'])}).strict(),
 ]);
 const scene = z.object({id: text, startFrame: frames,
-  durationFrames: z.number().int().min(30), location: z.literal('the-tower'),
+  durationFrames: z.number().int().min(30), location: locationSchema, elements:elementsSchema.optional(),
   camera: z.enum(cameras), actions: z.array(action).min(1),
   effects: z.array(z.enum(effects)), narration: text}).strict();
 
@@ -22,16 +23,14 @@ export const episodeSchema = z.object({
   schemaVersion: z.literal('0.1.0-draft'), id: text, title: text, language: z.literal('en-US'),
   format: z.object({width: z.literal(1080), height: z.literal(1920), fps: z.literal(30),
     durationFrames: z.number().int().positive().max(18000)}).strict(),
-  style: z.literal('classic-voxel'), setting: z.literal('the-tower'), disclaimer: text,
+  style: z.literal('classic-voxel'), setting: locationSchema, disclaimer: text,
   audio: z.object({voiceover: z.object({enabled: z.boolean(), language: z.literal('en-US'),
     source: publicPath, status: z.enum(['to-generate', 'ready'])}).strict(), music: z.null()}).strict(),
   characters: z.array(z.discriminatedUnion('id', [
     z.object({id: z.literal('guardian'), model: z.literal('voxel-guardian-v1')}).strict(),
     z.object({id: z.literal('ghost'), model: z.literal('voxel-ghost-v1')}).strict(),
   ])).length(2),
-  environments: z.array(z.object({id: z.literal('the-tower'), model: z.literal('voxel-tower-v1'),
-    props: z.array(z.enum(['traveler-sphere', 'last-city-silhouette', 'tower-balcony'])).length(3),
-  }).strict()).length(1),
+  environments: z.array(environmentDeclarationSchema).min(1).max(4),
   scenes: z.array(scene).min(1),
   subtitles: z.object({mode: z.literal('word-aligned'), language: z.literal('en-US'),
     source: publicPath, status: z.enum(['pending-voiceover-alignment', 'ready']),
@@ -45,8 +44,21 @@ export const episodeSchema = z.object({
     ctx.addIssue({code: z.ZodIssueCode.custom, path, message});
   if (new Set(episode.characters.map(c => c.id)).size !== 2)
     issue(['characters'], 'Declare Guardian and Ghost exactly once');
-  if (new Set(episode.environments[0].props).size !== 3)
-    issue(['environments', 0, 'props'], 'Declare all three distinct environment props');
+  const declared = new Set(episode.environments.map(e=>e.id));
+  if(declared.size!==episode.environments.length)issue(['environments'],'Duplicate environment declaration');
+  episode.environments.forEach((e,i)=>{
+    if(new Set(e.props).size!==3)issue(['environments',i,'props'],'Declare all three distinct environment props');
+  });
+  if(!declared.has(episode.setting))issue(['setting'],'Environment must be declared');
+  episode.scenes.forEach((scene,i)=>{
+    if(!declared.has(scene.location))issue(['scenes',i,'location'],'Environment must be declared');
+    const plan=episode.direction?.scenes.find(p=>p.sceneId===scene.id);
+    plan?.shots.forEach((shot,j)=>{
+      const env=resolveEnvironment(shot.environment,scene.location);
+      const id=env==='tower'||env==='golden-age-vision'||env==='collapse-vision'?'the-tower':env;
+      if(id!=='light-space'&&!declared.has(id))issue(['direction','scenes',i,'shots',j,'environment'],'Environment must be declared');
+    });
+  });
   if (episode.render.composition==='VoxelCinematicEpisode' && !episode.direction)
     issue(['direction'], 'Cinematic composition requires direction');
   if (episode.direction && episode.render.composition!=='VoxelCinematicEpisode')
