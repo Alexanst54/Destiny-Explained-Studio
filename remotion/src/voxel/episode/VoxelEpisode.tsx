@@ -7,6 +7,8 @@ import {Block, Ghost, Guardian} from '../Models';
 import {LightParticles, ResurrectionBeam} from '../VoxelResurrection';
 import {VoxelEnvironment,VoxelElements} from '../library/Library';
 import {environmentStyle} from '../library/catalog';
+import {AtlasEnvironment} from '../library/AtlasEnvironment';
+import {atlasRecipe} from '../../../atlas/recipes';
 import {episodeSchema, validateWords} from './schema';
 import type {VoxelEpisodeDef, AlignedWord} from './schema';
 import {cameraPose, captionWords, findScene, sceneState} from './state';
@@ -38,7 +40,8 @@ export const VoxelEpisode: React.FC<VoxelEpisodeProps> = (props) => {
   const lightning = fx('distant-lightning') && ((state.local >= 60 && state.local < 64) ||
     (state.local >= 180 && state.local < 185));
   const style = environmentStyle(scene.location==='the-tower'?'tower':scene.location);
-  const sky = new Color(style.sky).lerp(new Color('#030610'), darkness);
+  const atlasState=scene.atlas?atlasRecipe(scene.atlas):undefined;
+  const sky = new Color(atlasState?.palette.sky??style.sky).lerp(new Color('#030610'), darkness);
   const captions = captionWords(scene, frame, preview ? undefined : words);
   return <AbsoluteFill style={{backgroundColor:'#101a2b'}}>
     <ThreeCanvas width={width} height={height} dpr={1} camera={{fov:42,near:0.1,far:80,
@@ -50,7 +53,7 @@ export const VoxelEpisode: React.FC<VoxelEpisodeProps> = (props) => {
       <directionalLight position={[4,7,5]} intensity={2.4-darkness*1.5} color={style.key}/>
       <directionalLight position={[-5,4,-3]} intensity={2} color={style.fill}/>
       {fx('golden-glow') && <pointLight position={[0,6,-6]} color="#ffe9a6" intensity={35} distance={15}/>}
-      <VoxelEnvironment location={scene.location} halo={fx('traveler-halo')}/>
+      {scene.atlas?<AtlasEnvironment reference={scene.atlas} frame={state.local} halo={fx('traveler-halo')}/>:<VoxelEnvironment location={scene.location} halo={fx('traveler-halo')}/>}
       <VoxelElements items={scene.elements??[]} frame={state.local}/>
       <Guardian rise={state.rise} t={state.t} headTilt={state.lookUp ? -0.28*state.progress : 0}
         position={[state.guardianX,state.guardianY,0]} rotation={[0,0,state.guardianRotation]}/>
@@ -71,6 +74,7 @@ export const VoxelEpisode: React.FC<VoxelEpisodeProps> = (props) => {
       fontFamily:'sans-serif',fontSize:56,fontWeight:800,letterSpacing:3,textShadow:'0 2px 8px #101a2b'}}>{valid.title}</div>
     {preview && <div style={{position:'absolute',top:230,width:'100%',textAlign:'center',color:'#ffe9a6',
       fontFamily:'sans-serif',fontSize:24}}>PREVIEW · SILENT · ESTIMATED CAPTIONS</div>}
+    {atlasState&&<div style={{position:'absolute',top:275,left:65,right:65,textAlign:'center',color:'#ffe9a6',fontFamily:'sans-serif',fontSize:23,lineHeight:1.4}}>{atlasState.reconstructed?'ARTISTIC RECONSTRUCTION':'STYLIZED GAME-INSPIRED ENVIRONMENT'} · {atlasState.label}</div>}
     {captions.length > 0 && <div style={{position:'absolute',bottom:valid.subtitles.safeAreaBottomPx,
       left:80,right:80,padding:'25px 30px',backgroundColor:'rgba(10,17,30,0.85)',
       border:'2px solid #6a91a7',borderRadius:16,color:'#e6faff',textAlign:'center',

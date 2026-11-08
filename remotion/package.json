@@ -32,7 +32,13 @@
     "test:library": "node --experimental-strip-types --test tests/library.test.mjs",
     "render:worlds:preview": "node --experimental-strip-types scripts/episode.mjs render episodes/voxel_worlds_demo.json --preview",
     "narrate:worlds": "python scripts/narration.py episodes/voxel_worlds_demo.json",
-    "render:worlds": "node --experimental-strip-types scripts/episode.mjs render out/voxel_worlds_demo-ready.json"
+    "render:worlds": "node --experimental-strip-types scripts/episode.mjs render out/voxel_worlds_demo-ready.json",
+    "test:atlas": "node --experimental-strip-types --test tests/atlas.test.mjs",
+    "test:atlas:import": "python -m unittest discover -s tests -p \"test_manifest_import.py\"",
+    "narrate:atlas": "python scripts/narration.py episodes/atlas_demo.json",
+    "render:atlas": "node --experimental-strip-types scripts/episode.mjs render out/atlas_demo-ready.json",
+    "render:atlas:preview": "node --experimental-strip-types scripts/episode.mjs render episodes/atlas_demo.json --preview",
+    "report:atlas": "node --experimental-strip-types scripts/atlas-report.mjs"
   },
   "dependencies": {
     "@react-three/fiber": "8.18.0",

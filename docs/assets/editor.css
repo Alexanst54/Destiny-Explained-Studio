@@ -5,3 +5,5 @@
 h1,h2,h3,.plan-card summary,.scene-button strong{overflow-wrap:anywhere}.intro>div:first-child{min-width:0}
 
 .element-list,.element-card{display:grid;gap:14px}.element-card{margin-top:14px}.voxel-elements{min-width:0}
+
+.atlas-tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}.atlas-tabs [aria-current=page]{background:#3a3154;border-color:var(--violet)}.atlas-panel{display:grid;gap:18px}.atlas-panel h1{margin:10px 0}.atlas-panel .card{min-width:0}.atlas-filters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.atlas-filters>.field:first-child{grid-column:1/-1}.atlas-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.atlas-cards>#atlas-count{grid-column:1/-1}.atlas-card{display:flex;flex-direction:column;gap:12px}.atlas-card .pill{white-space:normal;align-self:flex-start}.atlas-card a{overflow-wrap:anywhere}.atlas-selection{border:1px solid var(--gold);border-radius:10px;padding:12px;display:grid;gap:10px}@media(max-width:760px){.atlas-filters,.atlas-cards{grid-template-columns:minmax(0,1fr)}.atlas-card .button-row>*{flex:1;font-size:13px}.atlas-panel>.bottom-bar button{font-size:11px}}

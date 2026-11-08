@@ -1,4 +1,5 @@
 import {z} from 'zod';
+import {atlasRefSchema} from '../../../atlas/index.ts';
 import {locationSchema,environmentDeclarationSchema,elementsSchema,resolveEnvironment} from '../library/catalog.ts';
 import {directionSchema} from '../cinematic/schema.ts';
 
@@ -15,12 +16,12 @@ const action = z.discriminatedUnion('actor', [
   z.object({actor: z.literal('ghost'), animation: z.enum(['hover', 'scan'])}).strict(),
 ]);
 const scene = z.object({id: text, startFrame: frames,
-  durationFrames: z.number().int().min(30), location: locationSchema, elements:elementsSchema.optional(),
+  durationFrames: z.number().int().min(30), location: locationSchema, atlas:atlasRefSchema.optional(), elements:elementsSchema.optional(),
   camera: z.enum(cameras), actions: z.array(action).min(1),
   effects: z.array(z.enum(effects)), narration: text}).strict();
 
 export const episodeSchema = z.object({
-  schemaVersion: z.literal('0.1.0-draft'), id: text, title: text, language: z.literal('en-US'),
+  schemaVersion: z.enum(['0.1.0-draft','0.1','0.1.0','0.2','0.2.0','0.3.0']), id: text, title: text, language: z.literal('en-US'),
   format: z.object({width: z.literal(1080), height: z.literal(1920), fps: z.literal(30),
     durationFrames: z.number().int().positive().max(18000)}).strict(),
   style: z.literal('classic-voxel'), setting: locationSchema, disclaimer: text,
