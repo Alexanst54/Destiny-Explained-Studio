@@ -40,7 +40,7 @@ test('resolved scene/shot population never silently truncates or bypasses CPU bu
  // Valid scene and valid shot overrides can still exceed the effective combined limit.
  assert.equal(livingWorldSchema.safeParse(base).success,true);
  assert.equal(directWorld(base).length,25);
- assert.throws(()=>directWorld(base,{cast:replacement}),/CPU population budget exceeds 32 \\(resolved 33\\)/);
+ assert.throws(()=>directWorld(base,{cast:replacement}),/CPU population budget exceeds 32.*resolved 33/);
  assert.equal(directWorld(base,{cast:replacement,groups:[]}).length,9);
  assert.equal(directWorld(base,{cast:[],groups:[]}).length,0);
  assert.equal(directWorld(base,{groups:[group('new',24)]}).length,25);
