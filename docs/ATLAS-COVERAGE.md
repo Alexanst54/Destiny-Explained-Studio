@@ -1,6 +1,6 @@
 # Atlas universel D1/D2 — rencontres, boss et réemploi des assets
 
-Revue : 2026-11-09. Issue [#18](https://github.com/Alexanst54/Destiny-Explained-Studio/issues/18), fondation PR #19 et extension Blender Vénus/Caveau. **Couverture encore partielle** : une revue des rencontres principales ne signifie ni inventaire de tous les ennemis/défis, ni arènes modélisées, ni variantes exhaustives.
+Revue : 2026-11-09. Issue [#18](https://github.com/Alexanst54/Destiny-Explained-Studio/issues/18), fondation PR #19, extension PR #20 et refonte visuelle 0.9.1. **Couverture encore partielle** : une revue des rencontres principales ne signifie ni inventaire de tous les ennemis/défis, ni arènes modélisées, ni variantes exhaustives.
 
 ## Périmètre vérifié
 
@@ -665,7 +665,7 @@ Chaque profil indique fichiers/symboles existants, familles, modules, templates,
 | riis-variant-before-whirlwind | eliksni / environment-eliksni | atlas-family-eliksni ; blender-riis-v1 | oui | modular-reconstruction |
 | riis-variant-after-whirlwind | eliksni / environment-eliksni | atlas-family-eliksni | oui | modular-reconstruction |
 
-Le décor dédié existant est une évocation voxel, pas une carte exacte. Les autres arènes partagent les recettes de famille. Aucun fichier propriétaire ni transfert complet de géométrie historique. Riis reste inchangé ; Vénus, le Puits du Templier et le Trône de verre ont des générateurs séparés et deux rigs dédiés. Voir blender/venus_vault/VALIDATION.md pour les vrais rendus et leurs limites.
+Le décor dédié existant est une évocation voxel, pas une carte exacte. Les autres arènes partagent les recettes de famille. Aucun fichier propriétaire ni transfert complet de géométrie historique. Riis reste inchangé ; Vénus, le Puits du Templier et le Trône de verre ont des générateurs séparés et deux rigs dédiés. La refonte 0.9.1 conserve les IDs et ajoute anatomie détaillée, IK et LOD indépendants de la résolution. Voir blender/cinematic_vex/README.md et docs/previews/cinematic-vex-0.9.1 pour les comparatifs et limites.
 
 ## Corrections sourcées sans migration du catalogue historique
 
@@ -698,4 +698,4 @@ Source-evidence.json conserve les inventaires primaires, les ensembles exacts d�
 
 Depuis remotion/ : `npm run test:atlas:universal`, `npm run typecheck:atlas:universal`, `npm run audit:assets -- --check`, `npm run report:atlas:coverage -- --check`. Voir atlas/universal/VALIDATION.md pour les commandes réellement exécutées. Les contrôles n’ont pas besoin du réseau.
 
-Extension visuelle sur une branche dédiée, ciblant la branche de PR #19, sans modifier PR #19. Les anciens épisodes, le moteur vidéo, les assets existants et la PR #17 restent inchangés ; aucune fusion automatique. Les anciens IDs de la fondation sont conservés et testés. Nouveaux modèles procéduraux limités à Athéon et au Templier ; aucun rendu de 35 secondes.
+Refonte 0.9.1 sur une branche dédiée ciblant la branche de PR #20 ; PR #17, #19 et #20 restent indépendantes. Les anciens épisodes, le moteur vidéo, les assets existants et la PR #17 restent inchangés ; aucune fusion automatique. Les anciens IDs de la fondation sont conservés et testés. Nouveaux modèles procéduraux limités à Athéon et au Templier ; aucun rendu de 35 secondes.

@@ -58,3 +58,7 @@ Les vérifications demandent un checkout Git et fonctionnent hors ligne. L’obs
 `blender.ts` expose `selectBlenderAsset` pour les six IDs existants Vénus/Caveau/Templier/Athéon. Le sélecteur vérifie le registre des générateurs et les relations d’arène ; Python émet la même requête. Les anciens `AtlasReference`, contrats Blender et épisodes ne changent pas. Le renderer Remotion conserve ses assets modulaires : un statut global dédié ne transforme pas la fidélité de chaque moteur. Les générateurs ont un scope explicite de lieux ou de boss, sans réaffectation d’une identité à une autre.
 
 Voir [le guide Vénus/Caveau](../../blender/venus_vault/README.md), ses tests et ses prévisualisations. L’extension est sur une branche dédiée ciblant cette fondation, sans commits de PR #17.
+
+## Refonte cinématographique 0.9.1
+
+La branche de refonte dérive de PR #20. Les six sélections et asset IDs restent identiques ; `selectBlenderAsset` accepte désormais un `lod` explicite (0 par défaut), ainsi que les vues anatomiques et `reveal`. Les anciennes requêtes sans LOD sont normalisées sans mutation de leur objet d’entrée. La qualité d’échantillonnage et la résolution ne réduisent pas la géométrie principale. [Le guide cinématographique](../../blender/cinematic_vex/README.md) décrit les modèles originaux, l’IK, les sources visuelles et les vrais comparatifs. Les preuves 0.9.0 restent conservées et validées avec leur code historique.

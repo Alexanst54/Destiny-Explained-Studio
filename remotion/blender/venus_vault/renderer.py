@@ -51,7 +51,7 @@ def build_scene(request, device='auto', threads=3):
     bpy.context.window.scene=scene
     scene.cycles.samples=settings['samples'];scene.cycles.max_bounces=settings['bounces']
     scene.render.use_persistent_data=True
-    scene.cycles.use_adaptive_sampling=True;scene.cycles.adaptive_threshold={'draft':.12,'balanced':.06,'cinematic':.025}[r['quality']];scene.cycles.adaptive_min_samples=8
+    scene.cycles.use_adaptive_sampling=True;scene.cycles.adaptive_threshold=.01 if outside else {'draft':.12,'balanced':.06,'cinematic':.025}[r['quality']];scene.cycles.adaptive_min_samples=0 if outside else 8
     scene.cycles.volume_bounces=1;scene.cycles.seed=r['seed'];scene.cycles.use_animated_seed=False
     import _cycles
     denoise=bool(getattr(_cycles,'with_openimagedenoise',False))
@@ -105,6 +105,7 @@ def build_scene(request, device='auto', threads=3):
         light('Warm key','SUN',(-18,-10,30),(0,9,2),'#ffdf9c',3.2,15)
         light('Cyan fill','AREA',(14,-4,14),(0,9,5),'#82dbf5',2000,12)
         light('Vault rim','AREA',(0,21,20),(0,9,6),'#d1f5ff',3500,10)
+        light('Boss face','AREA',(-5,-4,10),(0,9,6),'#e5e7d5',600,8)
     else:
         light('Warm sculpting key','AREA',(-21,-15,32),(0,9,11),'#e4e4d5',18000,11)
         light('Cyan fill','AREA',(19,-3,21),(0,9,10),'#79c9ef',6500,11)

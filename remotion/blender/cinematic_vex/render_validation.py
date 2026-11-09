@@ -1,8 +1,8 @@
 """Render six real Cinematic before/after pairs and two Balanced clips; bounded jobs only."""
 import argparse,hashlib,json,subprocess,sys,tarfile,tempfile
-from provenance import render_signature
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
+from cinematic_vex.provenance import render_signature
 from venus_vault.camera import camera_pose
 from render_one import stream_process
 ROOT=Path(__file__).resolve().parents[3]

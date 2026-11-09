@@ -34,4 +34,4 @@ def camera_pose(environment,preset='wide',frame=0,fps=30):
         elif preset in ['close-up','mechanism']:pos=(6,-15,11);target=(0,9,8.5);lens=52
         elif preset=='ground-reveal':pos=(4,-30,2+smooth*10);target=(0,9,3+smooth*6);lens=38
         else:pos=(7-smooth*3,-35+smooth*4,9);target=(0,9,7.8);lens=40
-    return dict(position=pos,target=target,lens=lens,sensorFit='VERTICAL',sensorHeight=24,near=.1,far=350)
+    return dict(position=pos,target=target,lens=lens,sensorFit='AUTO' if environment=='venus' else 'VERTICAL',sensorHeight=24,near=.1,far=250 if environment=='venus' else 350)

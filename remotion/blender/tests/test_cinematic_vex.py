@@ -68,6 +68,7 @@ class CinematicVexTests(unittest.TestCase):
             a=pose('boss-atheon',clip,37);pose('boss-atheon',clip,4)
             self.assertEqual(a,pose('boss-atheon',clip,37))
         with self.assertRaises(ValueError):pose('boss-atheon','walk',0,True)
+        self.assertEqual(pose('boss-atheon','walk',24,24),pose('boss-atheon','walk',30,30))
 
     def test_reveal_and_temporal_effects_are_controllable(self):
         a=pose('boss-atheon','temporal',0);b=pose('boss-atheon','temporal',45)

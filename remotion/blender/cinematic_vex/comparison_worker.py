@@ -3,6 +3,7 @@ Run with a frozen baseline checkout as --source for 'before'; no proprietary dat
 """
 import argparse,hashlib,json,resource,sys,time
 from pathlib import Path
+sys.path.insert(0,str(Path(__file__).resolve().parent))
 p=argparse.ArgumentParser();p.add_argument('--source',required=True);p.add_argument('--shot',required=True);p.add_argument('--output',required=True);p.add_argument('--phase',choices=['before','after'],required=True);a=p.parse_args(sys.argv[sys.argv.index('--')+1:])
 sys.path.insert(0,str(Path(a.source).resolve()/'remotion/blender'))
 from provenance import render_signature

@@ -1,0 +1,98 @@
+{
+  "status": "success",
+  "phase": "before",
+  "presentation": "shared-studio",
+  "adaptiveThreshold": 0.02500000037252903,
+  "shot": {
+    "id": "profile",
+    "selection": "boss-atheon",
+    "camera": "profile",
+    "width": 640,
+    "height": 800,
+    "sharedCamera": {
+      "position": [
+        48,
+        9,
+        10.5
+      ],
+      "target": [
+        0,
+        9,
+        10
+      ],
+      "lens": 42,
+      "sensorFit": "VERTICAL",
+      "sensorHeight": 24,
+      "near": 0.1,
+      "far": 350
+    }
+  },
+  "request": {
+    "version": 1,
+    "selectionId": "boss-atheon",
+    "environmentId": "arena-glass-throne",
+    "bossId": "boss-atheon",
+    "quality": "cinematic",
+    "seed": 42,
+    "camera": "wide",
+    "animation": "idle",
+    "frames": 1,
+    "fps": 30,
+    "width": 640,
+    "height": 800,
+    "startFrame": 0
+  },
+  "blenderVersion": "4.3.2",
+  "configuration": {
+    "requested": "auto",
+    "selected": "CPU",
+    "backend": null,
+    "devices": [],
+    "notes": [
+      "No compatible Cycles GPU found; CPU fallback selected."
+    ],
+    "samples": 128,
+    "bounces": 7,
+    "denoise": true,
+    "threads": 3,
+    "hazeDensity": 0.0045,
+    "viewTransform": "AgX",
+    "environmentBoxes": 705,
+    "bossBoxes": 129,
+    "batchedMeshes": 46,
+    "particles": 120,
+    "designSha256": "5f1b75dea1ed23612b52b4f33283c1bcf66f36b3c9c1171858a559568816db6e"
+  },
+  "buildSeconds": 0.071,
+  "cameraMatrixWorld": [
+    [
+      -2.821299744937278e-07,
+      -0.010415918193757534,
+      0.9999457597732544,
+      48.0
+    ],
+    [
+      1.0,
+      5.697236460378008e-08,
+      2.827387390880176e-07,
+      9.0
+    ],
+    [
+      -5.991425666707073e-08,
+      0.9999457597732544,
+      0.010415918193757534,
+      10.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "renderSeconds": 14.941,
+  "pngBytes": 418388,
+  "pngSha256": "ff253cbff370ce8798f3ff2ad218bd8818523bbf4443307e9a40f9f8c0f047e4",
+  "secondsInsideBlender": 15.012,
+  "peakProcessRssKiB": 781756
+}

@@ -1599,6 +1599,11 @@
       "sha256": "19aa0bc87a5416125d9ef544b6b627b963e2880ebe2c801fb1fa1c70c0dd8975"
     },
     {
+      "path": "remotion/blender/cinematic_vex/VALIDATION.md",
+      "bytes": 2666,
+      "sha256": "03cd3411c8fa6776579c59e9c4da3d49b091db3539eec70804f45b87e36bf522"
+    },
+    {
       "path": "remotion/blender/cinematic_vex/animation.py",
       "bytes": 4872,
       "sha256": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a"
@@ -1610,13 +1615,18 @@
     },
     {
       "path": "remotion/blender/cinematic_vex/blender_check.py",
-      "bytes": 5425,
-      "sha256": "fa363fb86c89283fd14d29192bcc1e19cedc222e4a0a0610c560c0c66f3c1857"
+      "bytes": 5919,
+      "sha256": "f359068ddbb2a1d1f052c75f59cb430cc7580b9e261e6b55640d7b0c4f3938c2"
+    },
+    {
+      "path": "remotion/blender/cinematic_vex/collect_evidence.py",
+      "bytes": 6078,
+      "sha256": "5cf811adad24ebd0210c1d7712de19c28c8db6bc8e3377e9c974334b77a6dada"
     },
     {
       "path": "remotion/blender/cinematic_vex/comparison_worker.py",
-      "bytes": 4992,
-      "sha256": "7fa6e957c7e50325fb8f1378d56b005acd9e1d69fcc0a8b79f67dfff05511530"
+      "bytes": 5048,
+      "sha256": "14599d8b56c9108eae4af7f6a6b7e7bc2945ebd5b7cae1af0e338bd4b95b4c44"
     },
     {
       "path": "remotion/blender/cinematic_vex/instancing.py",
@@ -1635,8 +1645,8 @@
     },
     {
       "path": "remotion/blender/cinematic_vex/render_validation.py",
-      "bytes": 4246,
-      "sha256": "366af747fe365d055f0e05303fb89cdf12aa883ff0b152237fcec95ac557bd31"
+      "bytes": 4260,
+      "sha256": "a56ba3a245d09554057ea1684b500f6951d5ea2651932af74f8cdd9c9f054d06"
     },
     {
       "path": "remotion/blender/cinematic_vex/shapes.py",
@@ -1657,6 +1667,11 @@
       "path": "remotion/blender/cinematic_vex/validation_shots.json",
       "bytes": 1510,
       "sha256": "0a6fec6cbeeff359247d4800bb6705b9910ba37be68db3a277e14ae4492346fa"
+    },
+    {
+      "path": "remotion/blender/cinematic_vex/verify_evidence.py",
+      "bytes": 4597,
+      "sha256": "9f7ebc923b30ef3ee15590ac906ee5be226586425a8e6ca4abd742177571fb5c"
     },
     {
       "path": "remotion/blender/cinematic_vex/visual-references.json",
@@ -1770,8 +1785,8 @@
     },
     {
       "path": "remotion/blender/tests/test_cinematic_vex.py",
-      "bytes": 4844,
-      "sha256": "a5371b8ad90881b5a81e5eb3382c90d7eb6fd2e45d98d5ae7ba012bd0c737729"
+      "bytes": 4936,
+      "sha256": "8f18a595d0b278534b457e279a7003c8e404e6636414042428b7ce4f9ab00185"
     },
     {
       "path": "remotion/blender/tests/test_contract.py",
@@ -1810,8 +1825,8 @@
     },
     {
       "path": "remotion/blender/venus_vault/README.md",
-      "bytes": 7401,
-      "sha256": "cfa75ee809872dfe8a3e4620a647369450fff001cb9fafe44d1c03c5b186f6a3"
+      "bytes": 7694,
+      "sha256": "0eb8013e49d86c3e0d73f0768268c8568ed70bdb4d658b9422b54a360457f55b"
     },
     {
       "path": "remotion/blender/venus_vault/VALIDATION.md",
@@ -1830,8 +1845,8 @@
     },
     {
       "path": "remotion/blender/venus_vault/camera.py",
-      "bytes": 2600,
-      "sha256": "abcca47de931b0df3dc693e38ebc87e7e0337cdecc44033a98d475abd46d2491"
+      "bytes": 2669,
+      "sha256": "d56b814d3d247dc539639899ef90bbdabef4e9e256041515201c191f02d728cf"
     },
     {
       "path": "remotion/blender/venus_vault/design.py",
@@ -1845,8 +1860,8 @@
     },
     {
       "path": "remotion/blender/venus_vault/renderer.py",
-      "bytes": 14130,
-      "sha256": "13c548f3d016cd68ccac46364cdec8a5d025af764ea5d234f03dd9f77494d4b5"
+      "bytes": 14237,
+      "sha256": "fb0943bc37142290dbd86d99c9900d72dd412c115542b534b246a9792600d39f"
     },
     {
       "path": "remotion/blender/venus_vault/request.py",

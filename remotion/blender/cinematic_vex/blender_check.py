@@ -62,9 +62,16 @@ update_frame(state,71);update_frame(state,13)
 assert max(abs(o.matrix_world[i][j]-snapshot[k][i][j]) for k,o in state['joints'].items() for i in range(4) for j in range(4))<1e-5
 for boss,animation in [('boss-atheon','temporal'),('boss-atheon','reveal'),('boss-templar','attack'),('boss-templar','move')]:
     s=build_scene(select(boss,animation=animation,quality='draft',camera='front'),'cpu',2)
+    if animation=='temporal':s['request']['camera']='temporal'
     for f in [0,18,36,60]:
         update_frame(s,f)
         assert all(math.isfinite(x) for o in s['joints'].values() for row in o.matrix_world for x in row)
+        if animation=='temporal':
+            for obj in s['scene'].objects:
+                if obj.type=='MESH' and obj.parent in s['joints'].values():
+                    for corner in obj.bound_box:
+                        v=world_to_camera_view(s['scene'],s['scene'].camera,obj.matrix_world@Vector(corner))
+                        assert 0<v.x<1 and 0<v.y<1 and v.z>0,('Temporal composition clipped',f,obj.name,tuple(v))
         evaluated+=1
 # Linked instances are an opt-in extension API; the normal scene keeps merged mesh batches.
 from cinematic_vex.instancing import compile_linked_boxes
@@ -75,4 +82,4 @@ linked=compile_linked_boxes(sample.result(),state['materials'],collection)
 assert linked[0].data.as_pointer()==linked[1].data.as_pointer()
 assert linked[0].material_slots[0].material!=linked[1].material_slots[0].material
 assert tuple(linked[1].location)==(4,0,0)
-print('CINEMATIC_CHECK',{'evaluations':evaluated,'maxAnkleErrorMetres':worst,'maxStanceSlidingMetres':sliding,'maxGroundPenetrationMetres':max(0,penetration),'maxTerrainLayerContactErrorMetres':terrain_error,'staticResources':True,'linkedGeometryReuse':True})
+print('CINEMATIC_CHECK',{'evaluations':evaluated,'maxAnkleErrorMetres':worst,'maxStanceSlidingMetres':sliding,'maxNominalPlanePenetrationMetres':max(0,penetration),'maxTerrainLayerContactErrorMetres':terrain_error,'staticResources':True,'linkedGeometryReuse':True})

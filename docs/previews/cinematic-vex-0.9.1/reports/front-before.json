@@ -1,0 +1,98 @@
+{
+  "status": "success",
+  "phase": "before",
+  "presentation": "shared-studio",
+  "adaptiveThreshold": 0.02500000037252903,
+  "shot": {
+    "id": "front",
+    "selection": "boss-atheon",
+    "camera": "front",
+    "width": 640,
+    "height": 800,
+    "sharedCamera": {
+      "position": [
+        0,
+        -39,
+        10.5
+      ],
+      "target": [
+        0,
+        9,
+        10
+      ],
+      "lens": 42,
+      "sensorFit": "VERTICAL",
+      "sensorHeight": 24,
+      "near": 0.1,
+      "far": 350
+    }
+  },
+  "request": {
+    "version": 1,
+    "selectionId": "boss-atheon",
+    "environmentId": "arena-glass-throne",
+    "bossId": "boss-atheon",
+    "quality": "cinematic",
+    "seed": 42,
+    "camera": "wide",
+    "animation": "idle",
+    "frames": 1,
+    "fps": 30,
+    "width": 640,
+    "height": 800,
+    "startFrame": 0
+  },
+  "blenderVersion": "4.3.2",
+  "configuration": {
+    "requested": "auto",
+    "selected": "CPU",
+    "backend": null,
+    "devices": [],
+    "notes": [
+      "No compatible Cycles GPU found; CPU fallback selected."
+    ],
+    "samples": 128,
+    "bounces": 7,
+    "denoise": true,
+    "threads": 3,
+    "hazeDensity": 0.0045,
+    "viewTransform": "AgX",
+    "environmentBoxes": 705,
+    "bossBoxes": 129,
+    "batchedMeshes": 46,
+    "particles": 120,
+    "designSha256": "5f1b75dea1ed23612b52b4f33283c1bcf66f36b3c9c1171858a559568816db6e"
+  },
+  "buildSeconds": 0.082,
+  "cameraMatrixWorld": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.010416037403047085,
+      -0.9999457597732544,
+      -39.0
+    ],
+    [
+      0.0,
+      0.9999457597732544,
+      0.010416037403047085,
+      10.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "renderSeconds": 20.167,
+  "pngBytes": 444250,
+  "pngSha256": "f199eb3ab7e65f3a25c123fd471369619ce667533d42c963587c12b064274a6b",
+  "secondsInsideBlender": 20.25,
+  "peakProcessRssKiB": 783900
+}

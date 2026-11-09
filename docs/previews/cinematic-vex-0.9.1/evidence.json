@@ -1,0 +1,462 @@
+{
+  "version": "0.9.1",
+  "status": "complete",
+  "checkedAt": "2026-11-09",
+  "baseline": "b1fd922fd495037daf897c9eca7713fcf69c4f1a",
+  "stills": [
+    {
+      "id": "front",
+      "definition": {
+        "id": "front",
+        "selection": "boss-atheon",
+        "camera": "front",
+        "width": 640,
+        "height": 800
+      },
+      "before": {
+        "png": "before/front.png",
+        "report": "reports/front-before.json",
+        "sha256": "f199eb3ab7e65f3a25c123fd471369619ce667533d42c963587c12b064274a6b",
+        "reportSha256": "f4386f8b36245bf0beeedd40b2782287cc78d6e016461f07d4d603607de32f23"
+      },
+      "after": {
+        "png": "after/front.png",
+        "report": "reports/front-after.json",
+        "sha256": "dbc4a39fcf622761878bf1ba5890e99c068494e403dcd775e17f76d1605acb18",
+        "reportSha256": "92b3393767247ac2c8a2ba891caee2f669add5de59a53b4fcf4d1f46efb1a9e0"
+      }
+    },
+    {
+      "id": "profile",
+      "definition": {
+        "id": "profile",
+        "selection": "boss-atheon",
+        "camera": "profile",
+        "width": 640,
+        "height": 800
+      },
+      "before": {
+        "png": "before/profile.png",
+        "report": "reports/profile-before.json",
+        "sha256": "ff253cbff370ce8798f3ff2ad218bd8818523bbf4443307e9a40f9f8c0f047e4",
+        "reportSha256": "202cb5b5438848f6d5d8863a51928baaac88e7374cfc10124905a247f94b5671"
+      },
+      "after": {
+        "png": "after/profile.png",
+        "report": "reports/profile-after.json",
+        "sha256": "2cf2b0a4b6b504d3f7a9cd08e57ef3237bb0e1327dbcde41cd3eb012630eef48",
+        "reportSha256": "d75888232ed1197a89b759f77c7438ff9fd45a6b421f62869123a74007f9479c"
+      }
+    },
+    {
+      "id": "low-angle",
+      "definition": {
+        "id": "low-angle",
+        "selection": "boss-atheon",
+        "camera": "low-angle",
+        "width": 800,
+        "height": 640
+      },
+      "before": {
+        "png": "before/low-angle.png",
+        "report": "reports/low-angle-before.json",
+        "sha256": "44ce732573ccfa7a3787944637efd692abcefb22c90fcc1f3cdd5731b0c82f59",
+        "reportSha256": "6f7e3572bc7c908e926c0ff190701c9f0677f2c5d825995c55773336250f1a4d"
+      },
+      "after": {
+        "png": "after/low-angle.png",
+        "report": "reports/low-angle-after.json",
+        "sha256": "56a74692569f5fe4c9f3510a6c7a84f97cdaad20f1703c76b5737a8cdb20c3b7",
+        "reportSha256": "88cb045be00fd81910ada880f50710056dc4eead253791a337d8fbb2903245d6"
+      }
+    },
+    {
+      "id": "head-torso",
+      "definition": {
+        "id": "head-torso",
+        "selection": "boss-atheon",
+        "camera": "close-up",
+        "width": 800,
+        "height": 640,
+        "beforeVerticalAlignment": -5.1
+      },
+      "before": {
+        "png": "before/head-torso.png",
+        "report": "reports/head-torso-before.json",
+        "sha256": "58ffc127ac897d0272c2356a1f74f9f476bd1fe04bd0c0dc7aa0304449193cc7",
+        "reportSha256": "595e841c00c3e1490fde0b7a9c19e53c471c7c5a1f8f90cedf8bfa3dd0b5f256"
+      },
+      "after": {
+        "png": "after/head-torso.png",
+        "report": "reports/head-torso-after.json",
+        "sha256": "cfcb8ac37206a5d98589dd2a1993c4aad1851ca6ce3f4eaff7d334e5ff735adb",
+        "reportSha256": "dc30dfdff3be5b5cc6c4ca90c9c92af31d3bc4dcb9403264fd424d8d27488620"
+      }
+    },
+    {
+      "id": "throne",
+      "definition": {
+        "id": "throne",
+        "selection": "boss-atheon",
+        "camera": "wide",
+        "width": 960,
+        "height": 640
+      },
+      "before": {
+        "png": "before/throne.png",
+        "report": "reports/throne-before.json",
+        "sha256": "8b00636f00c920413f0393efced6d879090b970a5e25d70a5c9d088ba1155a68",
+        "reportSha256": "30ca8ba9796ab958fe24cf3d94e2799d9c851ebb756270e42dd6eb5c3eacfca4"
+      },
+      "after": {
+        "png": "after/throne.png",
+        "report": "reports/throne-after.json",
+        "sha256": "febd01c5f1f892b84a5cfecd3f70276f5d112d41ebdb64ba424b3401af9276ff",
+        "reportSha256": "28a5d97aab02fa8e99e9ec82fa8565239ec0512d30fe84187e565e763e3aeb28"
+      }
+    },
+    {
+      "id": "templar",
+      "definition": {
+        "id": "templar",
+        "selection": "boss-templar",
+        "camera": "front",
+        "width": 640,
+        "height": 800
+      },
+      "before": {
+        "png": "before/templar.png",
+        "report": "reports/templar-before.json",
+        "sha256": "742d7d7ad85486b5d426f9912e88ecb5962ad9e6d676235361a860bf04ed18db",
+        "reportSha256": "f07585ed7e27f43f89e418ca1b8bb45336e2477d0a3d8f7fae67a9ccea67de91"
+      },
+      "after": {
+        "png": "after/templar.png",
+        "report": "reports/templar-after.json",
+        "sha256": "3c5d685a43816d421377b3f7c9aed96884bcf4673030edadf3fc77fb9298c02b",
+        "reportSha256": "7fd96109c98ced77d1fc94d47654d29ddd3a1dc65623a18fd15249602945c96c"
+      }
+    }
+  ],
+  "clips": [
+    {
+      "id": "walk",
+      "definition": {
+        "id": "walk",
+        "selection": "boss-atheon",
+        "camera": "orbit",
+        "animation": "walk",
+        "width": 480,
+        "height": 360,
+        "frames": 48,
+        "startFrame": 0,
+        "fps": 24,
+        "quality": "balanced",
+        "lod": 0
+      },
+      "report": "reports/walk-clip.json",
+      "reportSha256": "d53dd69d595ec05471c17e3c06be7f2649e6662fc05e584fe9795d7ca6e9229e",
+      "video": "clips/walk.mp4",
+      "videoSha256": "84a4bec2ee9fbb30dbffa43c87451cef6324c362dc36ed68edcd7c680cf73d07",
+      "pngs": [
+        {
+          "png": "clips/walk-0000.png",
+          "index": 0,
+          "sourceFrame": 0,
+          "sha256": "9fe5f7efceb9f0e847030c6c29b66f6524163bb1b0c8a335d83418238efa8ccf"
+        },
+        {
+          "png": "clips/walk-0018.png",
+          "index": 18,
+          "sourceFrame": 18,
+          "sha256": "77e3068a1bed86b6482b7b232e75c82499fa6b7905c4abbd8dd6451fd2428c06"
+        },
+        {
+          "png": "clips/walk-0047.png",
+          "index": 47,
+          "sourceFrame": 47,
+          "sha256": "4656107e8c0efeae4c734779d1973c1517aa01b63fa62785cf3b348845627125"
+        }
+      ]
+    },
+    {
+      "id": "temporal",
+      "definition": {
+        "id": "temporal",
+        "selection": "boss-atheon",
+        "camera": "temporal",
+        "animation": "temporal",
+        "width": 480,
+        "height": 360,
+        "frames": 36,
+        "startFrame": 12,
+        "fps": 24,
+        "quality": "balanced",
+        "lod": 0
+      },
+      "report": "reports/temporal-clip.json",
+      "reportSha256": "02ff3824b2e6de3b37b5083ee467b18ce9a830546b836c8c96a817d5ad454214",
+      "video": "clips/temporal.mp4",
+      "videoSha256": "b8acc7606813ae4fc2ba95044f7e8d93015fe022547fcebf35b1da9221a4ff42",
+      "pngs": [
+        {
+          "png": "clips/temporal-0000.png",
+          "index": 0,
+          "sourceFrame": 12,
+          "sha256": "44e1124b69a4d2ed82f1945575cbc0bb6d88cfe3072087de6755e66e46b2be93"
+        },
+        {
+          "png": "clips/temporal-0018.png",
+          "index": 18,
+          "sourceFrame": 30,
+          "sha256": "2f225eb5c9093fa3fb3b4ac495079329342ac4ebb37ff1555951adebe028c2cf"
+        },
+        {
+          "png": "clips/temporal-0035.png",
+          "index": 35,
+          "sourceFrame": 47,
+          "sha256": "9a1d801c5983a74ececd034dbe65f1c3ded33d99dd450d15cfdbc919d3b7bdce"
+        }
+      ]
+    }
+  ],
+  "geometryCounts": {
+    "boss-atheon": [
+      {
+        "lod": 0,
+        "boxes": 3245,
+        "joints": 18
+      },
+      {
+        "lod": 1,
+        "boxes": 1108,
+        "joints": 18
+      },
+      {
+        "lod": 2,
+        "boxes": 437,
+        "joints": 18
+      }
+    ],
+    "boss-templar": [
+      {
+        "lod": 0,
+        "boxes": 1835,
+        "joints": 13
+      },
+      {
+        "lod": 1,
+        "boxes": 674,
+        "joints": 13
+      },
+      {
+        "lod": 2,
+        "boxes": 245,
+        "joints": 13
+      }
+    ]
+  },
+  "renderInputHashes": {
+    "remotion/blender/import_scene.py": "6957ffaef2eb50ff8b5057186820ef5b8ffbd06ca48c77354e2dc9da9ad8f287",
+    "remotion/blender/contract.py": "19f8231c60a6ba20e82735c90bab2a34c1185a5a727b6e01d6cd74f41f5e3c2b",
+    "remotion/blender/characters/vex_bosses.py": "e372a2df2dfde4bca1242f115877a2e60df0a188f54dc0b7f3b74d56bff41951",
+    "remotion/blender/environments/venus.py": "f6baf34cca0bb20c8c3be6e26df208fc0e05f3e82dde32b6c61d0cc3506d9d05",
+    "remotion/blender/environments/vault_of_glass.py": "cd6cab89cd66a41976f744ffccbaaac4061e508e84cfcc18985e6dfcbb13fcaf",
+    "remotion/blender/venus_vault/geometry.py": "846d0f5b21269c3ccd69640232dc0149c7b45e4e3e8297faa405cf7313391072",
+    "remotion/blender/venus_vault/request.py": "8112f167aadc72a987ae26d522f36ccf1f038d20781b685e27049eb3c0bd12e4",
+    "remotion/blender/venus_vault/camera.py": "d56b814d3d247dc539639899ef90bbdabef4e9e256041515201c191f02d728cf",
+    "remotion/blender/venus_vault/design.py": "f2f2c97656e820cfb5028ef978fd448a3c36c68bb6abd7cb7e2e6ad872f02823",
+    "remotion/blender/venus_vault/renderer.py": "fb0943bc37142290dbd86d99c9900d72dd412c115542b534b246a9792600d39f",
+    "remotion/blender/venus_vault/atlas-bindings.json": "daf438b634df37cf940f4309e281a27081b21706a741a903348f2364f412323e",
+    "remotion/blender/cinematic_vex/atheon.py": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f",
+    "remotion/blender/cinematic_vex/templar.py": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5",
+    "remotion/blender/cinematic_vex/animation.py": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a",
+    "remotion/blender/cinematic_vex/materials.py": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542",
+    "remotion/blender/cinematic_vex/shapes.py": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea",
+    "remotion/blender/cinematic_vex/throne.py": "9e99f13f7c06edc66a05e90ba2ea396e14cc7bec435418948302d439e9ac81fd",
+    "remotion/blender/cinematic_vex/comparison_worker.py": "14599d8b56c9108eae4af7f6a6b7e7bc2945ebd5b7cae1af0e338bd4b95b4c44",
+    "remotion/blender/cinematic_vex/validation_shots.json": "0a6fec6cbeeff359247d4800bb6705b9910ba37be68db3a277e14ae4492346fa"
+  },
+  "protectedInputHashes": {
+    "docs/assets/editor.css": "caf7bec4a4734b3dcb164f5af0cd4cfdeb3f9750770d51f33ccf846721fbc053",
+    "docs/assets/editor.js": "45149290425bb17562a132128390fb867e29e53da26d4132945040084a09ca35",
+    "docs/assets/hybrid-preview.js": "37eef4da1d50f8aa397ab738dc50f593fb33f8b5b4ffd1ffb0fb95ab8e9d708b",
+    "docs/images/blender-082/riis-cinematic.png": "03a96dff8a41eba611dc99c79341f6080e9b99c33cb6a159a8ae18ae81fa85c5",
+    "docs/images/blender-082/riis-legacy.png": "466c16391c93685c887a239e78e7b1ccdd0df6e7c0bf177018cf1620a28bcb21",
+    "docs/images/blender-video-083-preview.png": "f24648f34e0a6150c63fbd052a75e61814a360d6ccdbd2ee58428732e74ad664",
+    "editor/animation-model.mjs": "7d4ee53330d75f38561f536a1f3763c1a46e6290da7dbc895ad4f3ca0a8988c3",
+    "editor/animation.browser.test.cjs": "0458562b211f5d1544f65eb9b9574992cb1d0d2a60566475fc7d4085d3fd45a1",
+    "editor/app.mjs": "5c2ae8402d26d5bf45c876d6c2bfd0aad2a982fdeebf2acebccd875a85774af6",
+    "editor/browser.test.cjs": "79c8c52a0269a464f6b66cf38c43faed64a81ab86f229cc234e22a765bf2f70b",
+    "editor/hybrid-model.mjs": "041ddb02e6f201482e78d4c07e0be2e62c13738337cd5db1a08ad4fddad18e37",
+    "editor/hybrid-preview.jsx": "f8a6d2f8740fd7696d91b5626f710e6ff04c66ffa385e7b7dea67a1507ab9948",
+    "editor/hybrid.browser.test.cjs": "87a80a9fef5005246a062c2c6e364f36a075a373be5706a8c6ab8bbb8023a5b6",
+    "editor/living.browser.test.cjs": "8cb10d3f7c68a570c1928e136bf15f279180ca6cb0af7cc4ed253e1df6460276",
+    "editor/local-audio.mjs": "4798b8e902aa3d328cd4a8f4a72b6affdfb2a4140a7973d7af63a78f9142835b",
+    "editor/model.mjs": "9e6ca762192ef4249979ac99e96bf1d6928c1b052cb76964f956a08633923c26",
+    "editor/model.test.mjs": "7b02f07c69c0d4a24c4b122af42aa9ec4400d90da9543c5a20855d84bb1aa32c",
+    "editor/offline.browser.test.cjs": "747103a92330dd6fd0cfab1d24ff3e6e151a7cbf1c549920799c42937ebafc89",
+    "editor/polish-model.mjs": "34c945ee953acf782845aabd964824f8157ec0dbff67c2cebcd8463ebc58e7ba",
+    "editor/polish.browser.test.cjs": "18a91f14e0fe9b6187ba981922dbbfafb29240ee7a289ff215850d9147bc2d29",
+    "editor/service-worker.js": "b19cc694c636a239199d48301a2512a78800897dd48a8878807376ce2fd260ca",
+    "remotion/animation/COMPARISON.md": "c6ead4e7dd3a90c0c436adc46a1ac88257645b66f63e2a520ffb701f93558d19",
+    "remotion/animation/FILES.md": "d388804c6ff7942f1d78b78c725b71b68704782fa28fc2ae58446708f6ef1fd7",
+    "remotion/animation/INSPECTION.md": "f3a1cebf836dc76d940657f46c02877a9699df49f0fb41cabedc4f1d5c402c83",
+    "remotion/animation/MOBILE.md": "1325a28c83b81b79a98e3a243f47a47abe9059ef59457ccf6aadbf7a0be10e2b",
+    "remotion/animation/README.md": "fca39538ad5010586fd593d13ffbb1fd1e5a0266fed30132e4423a1f598db1a3",
+    "remotion/animation/REPORT.md": "3fa8c6863235383ddfe511dc3ba7ce1e8a1d13ae60c5e87171a72cef9446cecb",
+    "remotion/animation/RigCharacter.tsx": "f922854958d16e2e198966b2cdb5ab1b97a64128e4721c2f859bd31f4a84f0fb",
+    "remotion/animation/camera.ts": "2af71a01622396473981c2dc992557967c36232e0dab7788c1e709f45ee6c43b",
+    "remotion/animation/director.ts": "7050519a55728adb61810600cbb7aceda523375f0c6d9561f7ef8794a52e21d4",
+    "remotion/animation/pack.ts": "a12646b02350a9b925ca945288fec8c4df830210e276496624d6c07bea85d1e5",
+    "remotion/animation/rig.ts": "70871fdb32f797d286a4d2b8c69d1b9518ab527ef2cfc37b85629cab7b7f4dd3",
+    "remotion/animation/schema.ts": "f64f7ae6ac993a6fa3d04a33d55b16fac2cb25c90bff9436c07e75d1dc6d95f0",
+    "remotion/animation/validation-evidence.json": "84e8db21f24f427bd1c96c8616767a294dbbdaed9167081a6814f660a0e4bec1",
+    "remotion/atlas/README.md": "0bff91d7c7880ca0c7f91c883def7b66df7161543c89c3f0273df1a9db3dd49b",
+    "remotion/atlas/REPORT.md": "ad3c252ec2ddde3e7b8f7b52caf40c4f3b7f004fcb8cc3f3df8d413cba5b76c4",
+    "remotion/atlas/VALIDATION.md": "e30e41ad3c5426cd1fcc2ea63a67d19ceccb618d2bfdee46f20faf21f6397972",
+    "remotion/atlas/catalog.json": "2148a2b328fb2a3d9998ce164d193d9c43ff4df3150512c737c81646f651791c",
+    "remotion/atlas/geometry.ts": "66a3753287e10cb3852daa969cab8c6f24fe0d8beb93f7a8bce827ccef63ff4f",
+    "remotion/atlas/import_manifest.py": "f188ec39c1c92957a297be38da7bc7d9de47924a645dc72477e179f9298896da",
+    "remotion/atlas/index.ts": "bb42777d424d12a3aa6853acd27461302599dcffc0b285985ba446486fddf6a7",
+    "remotion/atlas/manifest-evidence.json": "0b19866c806008424ee7ab9cfc0697f67dffc732287c04fe748493e0a65a4bb8",
+    "remotion/atlas/recipes.ts": "443810b21e35dd389999ba3513b49bd289a815e6475ea0f70db214b0c530d741",
+    "remotion/atlas/schema.ts": "29db5196a094fb1d4ab23c2f619ea78c0f29bbfdf1abf9e696eb03b7e2f1191d",
+    "remotion/blender/Blender-Colab-Pro.ipynb": "cffae7c5be326cbf2dc68a5048f9487794ba7e4f20ceef28d64900ca03e93eeb",
+    "remotion/blender/Blender-Video-Colab-Pro.ipynb": "250abb8bf058deae11db90fd581b0ac3245c081211a10f624fc7acbc3b66f6a6",
+    "remotion/blender/ENVIRONMENTS-REPORT.md": "55b9e13e451c8100f794bf0add628494e25f1ad18f1b45af94b0e3d8a04dce96",
+    "remotion/blender/ENVIRONMENTS.md": "2e4865453d10c92ba8c47fef84435cab7ff37be95ab726b791ddc9853285bf93",
+    "remotion/blender/README.md": "71367c2154ea904928b14a24fbb49afb6e03975d0b5e290a3d9698e9348fb2ff",
+    "remotion/blender/REPORT.md": "60d7eb09ac352c27d2d1a6932fe9a540c2b1522ffb355c42a7f81d2bab3f1f1f",
+    "remotion/blender/VIDEO-README.md": "cfec03647f0b993338877dcee8f55aa49fa34647854d0aaa325fc00807fa4026",
+    "remotion/blender/VIDEO-REPORT.md": "fe91f2e68078306e1bbf0b95d3c270d85df6db5e9c3a403291cf1700fd5f3345",
+    "remotion/blender/contract.py": "19f8231c60a6ba20e82735c90bab2a34c1185a5a727b6e01d6cd74f41f5e3c2b",
+    "remotion/blender/environment-validation.json": "d6e4332633fd2408e9fe146e1a69446eea77a1fbc04dec89bb4a2b306d712d76",
+    "remotion/blender/environments/riis.py": "a5a46f84d3aa2913a1727123d21a2ad6c2a56fbec1f6ac2fc081bad8b9c88fba",
+    "remotion/blender/examples/generate.mjs": "505982202e24b5df14e5662c879d07aec88b34a6f4f62867bbec5dd06d24fa6a",
+    "remotion/blender/examples/riis-before-whirlwind.json": "b405d794c8c620a8345fbc5dbfac868e606910467fec35c93f976de7058a44ca",
+    "remotion/blender/examples/riis-frame-210.json": "78f7996d9ec126a37dc024e5e03899185c490c5a0de196d850d98aeb9ace8ece",
+    "remotion/blender/export-sequence.mjs": "ff9f713618ca3f7836c83a41efd3c0f540fdd9c8218bd9b79d19b32770a8d138",
+    "remotion/blender/export.mjs": "37cf881bd37fa1634ef83d96a43f9309127dde22874fae1795447d59e7877a76",
+    "remotion/blender/export.ts": "6d0c1c27ee1d0ba7dfef663f72d20d9770fab55e35445f89a8cb2e64de2d0e2b",
+    "remotion/blender/import_scene.py": "6957ffaef2eb50ff8b5057186820ef5b8ffbd06ca48c77354e2dc9da9ad8f287",
+    "remotion/blender/render_one.py": "c84fe26507952f2a10ba25106f016a579f930e68151ac1ab37a98e1e3180af81",
+    "remotion/blender/schema.ts": "9ef309210694e31b9083f003642616be45ba80d7c03abf50c8facef7e576207f",
+    "remotion/blender/sequence.py": "17a94b5a2f905b0b0e2c38ab26e4560e2bdcee417452793fa236090e87e2916c",
+    "remotion/blender/sequences.ts": "a1eecdcc09f115b5b3aab02e904dbcd520e92835ca0ecf55b45f1b0e483117b0",
+    "remotion/blender/tests/blender_check.py": "b2387474fb84faa1d4c68fcb6e48583f9edf52ee353b73835531db1c175a1caa",
+    "remotion/blender/tests/environment_check.py": "69c36ddf2c32e001ea846b4c44a4068b40c944d90fe6295adb1f5f278c82e1d7",
+    "remotion/blender/tests/export.test.mjs": "bb564c7fa7fca3f012e945fc53861189cea6d4c6bfbfc07c769e8fc6672aaa78",
+    "remotion/blender/tests/sequences.test.mjs": "04993c3d983f16b53cc309a5b35a4b1a7b3b5aa492a965991064a67756c6890a",
+    "remotion/blender/tests/test_contract.py": "fccf2b998773d8a1281afec1fb794421f205e3498cd071f4cd3ca9798b6c0e54",
+    "remotion/blender/tests/test_environment.py": "63ffec34bf8a1accc54f9522e4bd733425b00fb722755488883072125837ba29",
+    "remotion/blender/tests/test_render_one.py": "1808d304713654cb97243091fc6dacc864ce206fa801ec4186ce0ad67c941ccc",
+    "remotion/blender/tests/test_sequence.py": "d5da1164f3697a9135ed9a015f5e397c47ad27c6200ff88b6bf33db9be748bb6",
+    "remotion/blender/validation-evidence.json": "3ef328dc3c21ae380da20823f28eb114a5962d85e647ca52510382e43104a8aa",
+    "remotion/blender/verify-video.py": "ee6a6714d2de6c097fb7ab836cb94a9a2c228252a56e985262848f8cf5d23317",
+    "remotion/blender/video-validation.json": "6bdd9a67f787b41f8a1d003f6fda92257b664323d430fea3543e8ee5861e6484",
+    "remotion/characters/animations/state.ts": "beaa9635b62cc73200e25ea45761b4bd3c01ff24cbe0a5845a848e1d692ebef9",
+    "remotion/characters/catalog.json": "3e506b9a0a0c632d7d86aa2bb4e78eb6d4bba832d0905d4020014ef65752c3af",
+    "remotion/characters/index.ts": "51fd300e7037c51566b8477c6bdb8bf85c08d55edacd55860475839173a9cd0d",
+    "remotion/characters/models/VoxelCharacter.tsx": "15c6d339803b2f593c930b73ba821dd8443434dfbffc8877d3821c3de8d3fe21",
+    "remotion/characters/schema.ts": "07cac3027c5afd41f6815c903d02dd72f2e90b6b1e434636f7157c5d71e5ee49",
+    "remotion/characters/source-evidence.json": "8fe8fca9a3557c6a426c341f77486d3d39f55b6d3226d2588be92adfb91d83e1",
+    "remotion/episodes/atlas_demo.json": "cbcec854bbc82bd08f0aa5d0d10638d99218ac8b270e3225a193a81b86231f92",
+    "remotion/episodes/hybrid_black_garden.json": "5c3fc4aeb03aef68e4eb0df36399885407daca7743d678538fc22108bf38ffc2",
+    "remotion/episodes/hybrid_oryx.json": "ca2312ba3b18e984f92d637b69d8d87e44057e7a244b2304917055cfdb660e77",
+    "remotion/episodes/hybrid_riis.json": "ddb8436328d607b9b0b2b722e6a4c330affabf96219ebc55897fdf5080648eea",
+    "remotion/episodes/hybrid_riis_06.json": "fa21354dda909db21fcafe26fe033604281af5e70eae907b4331717a441831d4",
+    "remotion/episodes/hybrid_riis_07.json": "061270479607a6417adac4df207fbde46da1fd295a9ef1ca5abb167468b5412d",
+    "remotion/episodes/living_europa.json": "7e8efafbd08fe353b82b69f6a0d3280b0fe2dbe3c265590bb4e27c03467c51d7",
+    "remotion/episodes/living_fundament.json": "248f3b189d4705908b62ba8d76bd6c0d010c6d19783e98a4cc4a23abdd4bc438",
+    "remotion/episodes/living_whirlwind.json": "5b02089b271a1d41a4c4aad8d52b5adefccfbd0fb15bceb140f191c90491a0bf",
+    "remotion/episodes/traveler_episode_002.json": "1783dc2778b2d569e9bcdb493dd6d925e35e856c33fba1d4fe791503929b8299",
+    "remotion/episodes/traveler_episode_002_cinematic.json": "2ef78c46dc45902bd5082b750946b15894caac856420c1fe5a414a66f0d5a7b9",
+    "remotion/episodes/voxel_worlds_demo.json": "0528ef19f942fc60af6086ac9b73293568b7e75cf39f78d04884f8b5f2eaacd8",
+    "remotion/hybrid/COLAB.md": "5ba52bdf30bdf9bcf3ab8f76b6d92e39c9d36f0bcb50c520b097045b78dc30e5",
+    "remotion/hybrid/CaptionLayer.tsx": "a1bba9f1de13b6c43525f889a597024d56da4bb2098867667f44164cd1d083e6",
+    "remotion/hybrid/HybridShort.tsx": "3ab9460752e163bbfcb2aa3d5077d41a7faa2fbb3b068f04a82b1ddc25b7191e",
+    "remotion/hybrid/INSPECTION.md": "6789d9f756236869e64a79aa9f9070afc38b4e8ec059a52c6a5cf00407a60a3f",
+    "remotion/hybrid/MOBILE.md": "c5bdacc1be52807791059cd45366f40979ce885218cb87da5d975b39fd37bd72",
+    "remotion/hybrid/README.md": "e8c4d31500cb757c911c19fc328241c56cc9631ecdee6a8c7e83749ad91f2597",
+    "remotion/hybrid/REPORT.md": "b8aa96d0d644a68e88a9304cb14eec736166da8d37baadf83257faf94661611c",
+    "remotion/hybrid/Visuals.tsx": "e8cea57c1ae5cea710bbc1761d45c9b2d871475dc5bb71428faae9452d2b7016",
+    "remotion/hybrid/adapter.ts": "5dcab7785537f00974e3520f8128e870b565bf60765273031ada082a9f8e3043",
+    "remotion/hybrid/schema.ts": "f0a0462e37785cdba281aafbca7adf709ddd984952be164cbf5e538ab4f86226",
+    "remotion/hybrid/state.ts": "8c2d7f7119cae23d6d9f0ff3d60e64b75678324bc656173aa70793ecd46f5ec3",
+    "remotion/hybrid/templates.ts": "80574aa4a271ba27eea076211a94f47c09d2f031adaa377132a6e78e2ab43f61",
+    "remotion/hybrid/validation-evidence.json": "5186dd409acf73c742c4db9bf9c61bd265cd40970937c75dacc7ea77c396d2a3",
+    "remotion/living/LivingWorldLayer.tsx": "a31d893410a1df5233252e765b6c1f1fd5e39109872751ea61c8ff0d424c8e02",
+    "remotion/living/README.md": "8980b7ae60e4c6c0c1abe3439256395ad770a9579b6ac99066e46880992f4649",
+    "remotion/living/REPORT.md": "1a5da133bd850ea5f12e7c4ec622457e5dadeddee66530da29263b5ddc44f2cc",
+    "remotion/living/director.ts": "1c9b7bbe0e4dce1fd42d7d888beacf62b65e8162a856b45cf079950a47946a5b",
+    "remotion/living/schema.ts": "411c39f99f5cfe4487abbda5957bbf880184cd4757c200747ad51c153e3063b4",
+    "remotion/living/validation-evidence.json": "9f49cf809edc039f25e6fc2eb3d08e5be3c0f345ee83d28e71809baaa79689a8",
+    "remotion/polish/COMPARISON.md": "e5cc7ec8dad2e948e4c467e04dd40ae384e304a36e8528e13558fdce7bbdef8d",
+    "remotion/polish/EnvironmentLayer.tsx": "6fd793471366182f27b7c6ef5042528dead075562007bdf4051b1f202137ba1a",
+    "remotion/polish/FILES.md": "cf7c1c99cabe018ece7c5c3a27bd2a007de7b597772ff463f56e5961cee469ab",
+    "remotion/polish/INSPECTION.md": "979239d65db01304fd84815122e1831df166ed55711469748e676067aa960b45",
+    "remotion/polish/MOBILE.md": "04e280fba703d7bd8124e40604aa002b6fdc1a3ac0b3ec299eb41026f7df9fa8",
+    "remotion/polish/PolishedCaptions.tsx": "a149935868db461254dc64a79426bb811a953943c308b5ad309a72988147ce2a",
+    "remotion/polish/README.md": "18b19e9ced63e111ba74b781143764d8668e40e8f57474c4180c48f0de7e75fb",
+    "remotion/polish/REPORT.md": "daaa792ae52099cca7dc711e06e03f1a4d4f99e77cc711d66398e83931a142f6",
+    "remotion/polish/advice.ts": "2771701775fc976efd3cceffb869af813a0455e34887d3d11f8a3dccc6f5ca59",
+    "remotion/polish/camera.ts": "c00d7b8ee65d1c3920582d164a5c476ff610b2a818dde7ac5626129bfd954bd8",
+    "remotion/polish/captions.ts": "570d7da27569905020d576236ebf2ac540c3cf80a4263508b4d32ccf292bd2f8",
+    "remotion/polish/characters.ts": "e75b0e9a0c9c42a7a045dcc2ac25d3f2c7817f9c6953b5b1b63b73a89577b184",
+    "remotion/polish/compare.ts": "a260a144647c95c34fa711ee9ba6164704dfe8ce8829249d990451b1a54794ab",
+    "remotion/polish/environment.ts": "242846af7c4d564bc86db49226f429bd761892699d250a76ff15da63bf0f18f4",
+    "remotion/polish/schema.ts": "63fdf52c2eea244bd9402b55ca23a8b051eb9789b4ca86fe5436e61b07869d31",
+    "remotion/polish/validation-evidence.json": "0aee7b50b323c7e9b426e2d30cc3f203afb42f61e2794e01af8ae871fbc14956",
+    "remotion/src/voxel/library/AtlasEnvironment.tsx": "ff7c35fc5c28eac1e6d7e3a6f71a52c1b9c95cf77c0a2918f8da94bce8f6d673",
+    "remotion/src/voxel/library/Library.tsx": "f8520cad38f584a03c7daf77b10cd17bfe41112c062f8a54a6ce7f8101c99cdc",
+    "remotion/src/voxel/library/README.md": "fd620e2c1b0a9598c6970f0437c124b1472b6d5d36c2f45aff2ee939b401715a",
+    "remotion/src/voxel/library/VALIDATION.md": "aa9db46521265e7d29509aa524016736c35034a66843ebc4272d3bf381d02abb",
+    "remotion/src/voxel/library/catalog.ts": "4b8b838bfd7ee860985944a0dbb61efce0941e1f044af899f38033ce64440b48",
+    "remotion/src/voxel/library/layout.ts": "1daec929be14c76b4feb47dbe992eb3b4602e9171ad7274fc668f4f2145f84bb"
+  },
+  "historicalGalleryHashes": {
+    "docs/previews/venus-vault/atheon.report.json": "0dab854f300fa4a353c041c195defbca6a1d1fb34172fced29a6cd21cca21ee3",
+    "docs/previews/venus-vault/atheon-walk.mp4": "8cf47c4d62fdb799bf10ab3c95b92b801ec20e12309fe3f9408065c1955dd5f7",
+    "docs/previews/venus-vault/atheon-walk.report.json": "8375f57ee48415e54a93f196a37fc5017fff1e9a6324db53fd3508b95dbd95f4",
+    "docs/previews/venus-vault/README.md": "369350e433c442ee94c30022996b0c7a2b8cbbe569fe40fe654e0d23a1bc202e",
+    "docs/previews/venus-vault/atheon-walk-0018.png": "cbe2ce54ae671256944a9f3f63700f0a033a105e5da19a37aa4b966e56b55bde",
+    "docs/previews/venus-vault/templar.report.json": "e3f674ac15e6c071072e2e99e2ed56f8c12b4b17afa0004d097f2db06e6c0e6b",
+    "docs/previews/venus-vault/glass-throne.report.json": "1b1f2548a150af59df7feaecaf44c392334c427307ae8d32137027407463311f",
+    "docs/previews/venus-vault/venus.report.json": "6c7227506c7cf30cf258d01f48416f657f6db12946ebf896c69bddb718b37e44",
+    "docs/previews/venus-vault/atheon.png": "ee6548576bf443d2fc8a017afbe168436d7c7da686c0efd9d2ffc34e3ec04da2",
+    "docs/previews/venus-vault/venus.png": "60e56a18799a264557570d191cfbf884277cc4fd09706b3f445f5252eb32b2e7",
+    "docs/previews/venus-vault/templars-well.png": "d283fafe70dad96cc9abc3a629cecd1fdd9c99a5b1597afc1a0e69dff605e20c",
+    "docs/previews/venus-vault/templars-well.report.json": "cb46747c752ffbe1daeba1d32c91b838f82ddbbe37c83a4776145495f1b20359",
+    "docs/previews/venus-vault/glass-throne.png": "4f5458a800328bb0ce4c86db95d149d9cdb38274360e6f3be73781d45217e248",
+    "docs/previews/venus-vault/templar.png": "1d34f15063c0d5567ab98f6a18f3024d5176f20c4891e78a0ed4716b2e633c4f",
+    "docs/previews/venus-vault/evidence.json": "b80d8f0232f62ce2d492b8591564dc8211f7e3d5e3dae8817dc3aa68dc199686",
+    "docs/previews/venus-vault/atheon-walk-0047.png": "94cf07669a1666dfd2c35b95f274a2ed18c93e51f912f858f37df4021ffe43f7",
+    "docs/previews/venus-vault/atheon-walk-0000.png": "89739604951b06c8d85d33a936a13bf4d6e7f5837df004899c06a29527c974ca"
+  },
+  "nativeBlenderCheck": {
+    "evaluations": 136,
+    "maxAnkleErrorMetres": 1.1920928955078125e-06,
+    "maxStanceSlidingMetres": 1.7192608239479013e-06,
+    "maxNominalPlanePenetrationMetres": 7.152557373046875e-07,
+    "maxTerrainLayerContactErrorMetres": 0.030000686645507812,
+    "staticResources": true,
+    "linkedGeometryReuse": true
+  },
+  "compatibilityBlenderCheck": "VENUS_VAULT_CHECK 156 poses; static resources, projections and random-access transforms passed",
+  "hardware": {
+    "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+    "cpu": "AMD EPYC 9V74 80-Core Processor",
+    "logicalCpusAvailable": 3,
+    "renderDeviceObservations": [
+      {
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "threads": 3
+      }
+    ],
+    "gpuMemoryAndUtilization": null,
+    "timingScope": "Validation runs with possible CPU contention, not controlled comparative performance benchmarks."
+  }
+}
