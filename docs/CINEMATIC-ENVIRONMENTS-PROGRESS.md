@@ -15,3 +15,15 @@ Implemented generator, additive schema/validator changes, optional environment m
 Executed: existing Python contract/notebook tests 3/3; TypeScript successful. No GPU or Colab execution claimed. No full video.
 
 Next: focused tests, reduced CPU preview and legacy render; live-log/timeout notebook update, report, publish PR. Resume by reading this file and checking git status before running commands. Do not repeatedly retry failed renders.
+
+## Checkpoint 2 — bounded rendering and notebook
+
+PR draft opened early: https://github.com/Alexanst54/Destiny-Explained-Studio/pull/15 . First checkpoint pushed successfully.
+
+- Updated Colab forms: new/legacy/upload scene, Draft/Balanced/Cinematic, dawn/blue-hour, seed, resolution, device, configurable timeout; exactly one PNG. Live stdout plus 15-second heartbeat, process-group termination, error logs and JSON outcome; downloadable archive on failure too.
+- First balanced CPU preview (pre-foreground refinement): 270×480, 32 samples, 12.938 seconds wall, 271212 KiB Blender maximum RSS, 253137-byte PNG. Inspected visually; added paving inlays and foreground edge details. This initial render does not represent the final geometry revision.
+- Focused Node bridge tests: 5/5. Blender legacy check passed (176 objects, transforms/FOV/shear/scene preservation). All environment quality imports passed: Draft 392 / Balanced 693 / Cinematic 912 meshes; samples 8/32/96, bounces 2/3/5. Nine Python tests passed, including no-newline streaming, timeout termination and failure reporting.
+- One notebook assertion initially failed because the rendering command moved to the helper; updated it to check delegation and helper flags. No production render failure involved.
+- Final cinematic and legacy CPU comparison PNGs running at 25%, with 180s deadlines. No GPU execution or full video.
+
+Remaining: inspect final PNGs, record measured results, guides and final targeted checks, publish checkpoint/PR update. No Android/remote Colab run claimed.

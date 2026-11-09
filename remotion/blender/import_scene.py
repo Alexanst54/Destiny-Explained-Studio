@@ -81,9 +81,10 @@ def build_scene(data,profile=None,device='auto',scale=100,threads=None):
     scene.render.resolution_x=data['resolution']['width'];scene.render.resolution_y=data['resolution']['height'];scene.render.resolution_percentage=scale;scene.render.pixel_aspect_x=1;scene.render.pixel_aspect_y=1
     scene.render.fps=data['source']['fps'];scene.frame_set(data['source']['frame']);scene.render.image_settings.file_format='PNG';scene.render.image_settings.color_mode='RGBA';scene.render.film_transparent=False
     scene.view_settings.view_transform='Standard';scene.view_settings.exposure=0;scene.view_settings.gamma=1
+    view_fallback=False
     if environment:
         try:scene.view_settings.view_transform='AgX'
-        except TypeError:pass  # Standard remains available on older Blender builds.
+        except TypeError:view_fallback=True  # Standard remains available on older Blender builds.
         scene.cycles.sample_clamp_indirect=3
     available=len(os.sched_getaffinity(0)) if hasattr(os,'sched_getaffinity') else os.cpu_count() or 1
     count=min(available,4) if threads is None else threads
@@ -122,6 +123,7 @@ def build_scene(data,profile=None,device='auto',scale=100,threads=None):
         light.rotation_euler=direction.to_track_quat('-Z','Y').to_euler()
     scene['bridge_source']=json.dumps(data['source']);scene['bridge_omissions']=json.dumps(data['omissions']);scene['bridge_profile']=profile
     info=choose_device(scene,device)
+    if view_fallback:info['notes'].append('AgX unavailable; Standard view transform retained.')
     if settings['denoise'] and not denoise_supported:info['notes'].append('OpenImageDenoise unavailable or not advertised by this build; denoising disabled.')
     info.update(environmentDetail=environment['detail'] if environment else None,viewTransform=scene.view_settings.view_transform,hazeDensity=environment['hazeDensity'] if environment else 0,bakedAffineCount=baked,profile=profile,samples=settings['samples'],bounces=settings['bounces'],denoise=denoise,denoiseRequested=settings['denoise'],cpuAvailable=available,threads=count,scalePercent=scale)
     return scene,objects,info

@@ -40,6 +40,16 @@ def generate(snapshot,detail='balanced',seed=42,lighting='dawn'):
     for side in [-1,1]:
         box(f'plaza-edge-{side}',(side*5.3,-.1,-12),(.25,.25,52),'gold')
         for step in range(5):box(f'valley-bank-{side}-{step}',(side*(8+step*3),-2+step*.3,-27),(5,.8,68),'ground')
+    # Inlaid paving and shallow foreground terraces lead into the central street.
+    for i in range(14 if detail!='draft' else 7):
+        z=8-i*1.5
+        for side in [-1,1]:
+            box(f'paving-{i}-{side}',(side*2.1,.012,z),(3.6,.024,.07),'terrace')
+            if detail!='draft':box(f'paving-inlay-{i}-{side}',(side*3.9,.025,z),(.15,.025,.18),'gold')
+    for side in [-1,1]:
+        for i in range(3):box(f'foreground-step-{side}-{i}',(side*(3.7+i*.4),.08+i*.12,6.5),(1,.16,3.5),'terrace')
+        box(f'foreground-beacon-{side}',(side*3.8,.65,5.5),(.4,.8,.4),'roof')
+        box(f'foreground-beacon-light-{side}',(side*3.8,1.1,5.5),(.42,.14,.42),'accent')
     # Terraced inhabited districts: setbacks, buttresses, doors, luminous slit windows.
     def tower(name,x,z,height,width=5):
         floors=settings['floors'];h=height/floors

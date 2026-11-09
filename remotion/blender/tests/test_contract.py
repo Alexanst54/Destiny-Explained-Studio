@@ -27,6 +27,6 @@ class Contract(unittest.TestCase):
             if cell['cell_type']=='code':
                 self.assertEqual(cell['outputs'],[]);self.assertIsNone(cell['execution_count']);s=''.join(cell['source']);ast.parse(s,filename=f'cell-{i}');code.append(s)
         text='\n'.join(code)
-        self.assertIn('<=3',text);self.assertIn('--python-exit-code',text);self.assertNotIn("'--animation'",text);self.assertNotIn("'switch','-C'",text)
+        self.assertIn('len(snapshots)==1',text);self.assertIn('from render_one import render_one',text);self.assertIn('--python-exit-code',(ROOT/'render_one.py').read_text());self.assertNotIn("'--animation'",text);self.assertNotIn("'switch','-C'",text)
 
 if __name__=='__main__':unittest.main()
