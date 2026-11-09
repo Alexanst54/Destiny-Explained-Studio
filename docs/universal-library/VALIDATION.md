@@ -34,3 +34,7 @@ node editor/universal-library.browser.test.cjs
 Le test navigateur exige un serveur du dépôt sur 8000 et Chromium ; ses captures locales sont des contrôles d’interface, pas des rendus 3D. La suite Node complète est celle du checkpoint 0.9.1, augmentée de `tests/universal-library.test.mjs` (six tests) : les 102 tests ne sont pas une affirmation d’exécution de tous les tests possibles du dépôt. Les contrôles natifs exigent Blender, voir le guide.
 
 Le workflow GitHub Actions additionnel vérifie les tests purs, l’index généré et les médias livrés ; il ne génère pas de nouvelles images, ne teste aucun GPU et ne fusionne rien. Les résultats CI sont consultables sur la PR. La syntaxe des cellules du nouveau notebook est compilée localement ; Colab, T4 et Android restent non testés. Les mesures de temps peuvent inclure une contention CPU et ne constituent pas un benchmark comparatif contrôlé.
+
+## Exécution CI distante indisponible
+
+Le [premier job GitHub Actions](https://github.com/Alexanst54/Destiny-Explained-Studio/actions/runs/42663392430), au commit `cca2466`, a été bloqué avant allocation du runner : GitHub signale un verrouillage du compte pour facturation. Aucune étape de test distante n’a été exécutée. Le check reste en échec ; il ne représente pas un résultat de test de code. Les validations locales ci-dessus ont réussi. [Diagnostic exact](ci-status.json) ; voir les checks de la PR pour l’état courant.

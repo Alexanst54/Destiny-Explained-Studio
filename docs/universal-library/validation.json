@@ -40,7 +40,15 @@
   "historicalEpisodes": 12,
   "device": "CPU",
   "gpuValidated": false,
-  "ci": "See PR checks; workflow verifies unit tests and real shipped media without generating substitute renders.",
+  "ci": {
+    "status": "blocked-before-runner-start",
+    "runUrl": "https://github.com/Alexanst54/Destiny-Explained-Studio/actions/runs/42663392430",
+    "commit": "cca246640b692c34ad4f5ad4e982577d3a4fb29b",
+    "executedTestSteps": 0,
+    "githubAnnotation": "The job was not started because your account is locked due to a billing issue.",
+    "localValidation": "102 Node, 43 Blender Python + 4 manifest, native Blender and shipped-media checks passed.",
+    "note": "Observed first CI attempt; see PR checks for current status. No false passing check or runner bypass."
+  },
   "limitations": [
     "Crota remains an artistic prototype, not user approved or completed.",
     "Other priority bosses and raids/dungeons are not implemented; backlog is explicit.",
