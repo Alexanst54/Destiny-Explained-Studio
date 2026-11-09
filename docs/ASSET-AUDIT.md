@@ -8,7 +8,7 @@ Extension visuelle sur `feat/venus-vault-blender-0.9.0`, basée sur la branche d
 
 Exécuter depuis `remotion/` : `npm run audit:assets` ; vérifier sans réécriture : `npm run audit:assets -- --check`. [asset-audit.json](../remotion/atlas/universal/asset-audit.json) contient chemins, tailles, SHA-256 et références par épisode. Les schémas historiques sont exécutés. L’audit fonctionne hors ligne.
 
-L’inventaire porte sur **153 fichiers suivis**, **12 épisodes JSON**, les catalogues, moteurs, bridges et assets compilés. Les médias Kokoro et caches ignorés ne sont pas des fichiers d’assets versionnés ; les références à générer sont signalées séparément. Un fichier présent ou une référence textuelle ne démontre pas son rendu ni sa fidélité canonique.
+L’inventaire porte sur **170 fichiers suivis**, **12 épisodes JSON**, les catalogues, moteurs, bridges et assets compilés. Les médias Kokoro et caches ignorés ne sont pas des fichiers d’assets versionnés ; les références à générer sont signalées séparément. Un fichier présent ou une référence textuelle ne démontre pas son rendu ni sa fidélité canonique.
 
 ## Inventaire réel
 

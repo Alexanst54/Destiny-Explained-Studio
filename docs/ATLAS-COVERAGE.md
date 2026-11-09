@@ -341,8 +341,8 @@ Le Puppeteer est conservé comme une identité distincte d’Atraks-1 malgré le
 
 | Boss ou forme | Profil(s) | Templates / rigs historiques | État de réemploi |
 | --- | --- | --- | --- |
-| boss-templar | Hydre Templier Blender originale | aucun template fidèle / nouveau rig Blender dédié | implemented-stylized |
-| boss-atheon | Minotaure Athéon Blender original | aucun template fidèle / nouveau rig Blender dédié | implemented-stylized |
+| boss-templar | Hydre Templier cinématographique Blender 0.9.1 | aucun template fidèle / nouveau rig Blender dédié | implemented-stylized |
+| boss-atheon | Athéon cinématographique Blender 0.9.1 | aucun template fidèle / nouveau rig Blender dédié | implemented-stylized |
 | boss-ir-yut | Ruche : Prêtresse flottante | hive-acolyte / aucun rig historique adapté | no-suitable-model |
 | boss-crota | Ruche : géant ailé / Ascendant | hive-acolyte / humanoid | adaptation-required |
 | boss-crypt-security | Bray : système de sécurité | rasputin / aucun rig historique adapté | adaptation-required |

@@ -7863,7 +7863,7 @@
       "environmentFamily": "vex",
       "blenderAssetId": "blender-glass-throne-v1",
       "remotionAssetId": "atlas-family-vex",
-      "note": "Original procedural voxel interpretation implemented by the Venus/Vault extension; not a canonical map or extracted game asset. See blender/venus_vault/VALIDATION.md for actual render evidence and limits.",
+      "note": "Original monumental procedural Glass Throne 0.9.1, not an exact game map; independent geometry LOD and procedural temporal gates. See blender/cinematic_vex/README.md.",
       "type": "arena",
       "parentId": "vault-of-glass",
       "legacyLocationId": null
@@ -20672,7 +20672,7 @@
       "environmentFamily": "vex",
       "blenderAssetId": "blender-templar-v1",
       "remotionAssetId": null,
-      "note": "Original procedural voxel interpretation implemented by the Venus/Vault extension; not a canonical map or extracted game asset. See blender/venus_vault/VALIDATION.md for actual render evidence and limits.",
+      "note": "Original procedural cinematic voxel implementation 0.9.1; Atlas identity and asset IDs preserved. Explicit geometry LOD, independent render quality/resolution. See blender/cinematic_vex/README.md and real before/after evidence.",
       "type": "boss",
       "characterId": null,
       "composition": "individual",
@@ -20715,7 +20715,7 @@
       "environmentFamily": "vex",
       "blenderAssetId": "blender-atheon-v1",
       "remotionAssetId": null,
-      "note": "Original procedural voxel interpretation implemented by the Venus/Vault extension; not a canonical map or extracted game asset. See blender/venus_vault/VALIDATION.md for actual render evidence and limits.",
+      "note": "Original procedural cinematic voxel implementation 0.9.1; Atlas identity and asset IDs preserved. Explicit geometry LOD, independent render quality/resolution. See blender/cinematic_vex/README.md and real before/after evidence.",
       "type": "boss",
       "characterId": null,
       "composition": "individual",
@@ -39028,13 +39028,22 @@
         {
           "path": "remotion/blender/import_scene.py",
           "symbol": "choose_device"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/throne.py",
+          "symbol": "generate"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/instancing.py",
+          "symbol": "compile_linked_boxes"
         }
       ],
       "reusableParts": [
-        "Générateur original implémenté, palette métallique et émissions, géométrie voxel partagée et paramètres de graine."
+        "Puits conservé ; Trône monumental à structures profondes, plateformes, passerelles et portails à matériau procédural animé.",
+        "Fusion par matériau par défaut ; compilation de voxels liés optionnelle pour les accessoires répétés."
       ],
       "requiredWork": [
-        "Portails sans monde récursif ; disposition stylisée, pas géométrie de jeu."
+        "Pas de monde récursif à travers les portails ; disposition artistique et non carte exacte."
       ],
       "limitations": [
         "Interprétation artistique originale ; voir les rendus de validation, pas une carte ou un modèle officiel."
@@ -39042,7 +39051,7 @@
     },
     {
       "id": "reuse-blender-templar",
-      "label": "Hydre Templier Blender originale",
+      "label": "Hydre Templier cinématographique Blender 0.9.1",
       "kind": "boss",
       "familyIds": [
         "vex"
@@ -39058,13 +39067,22 @@
         {
           "path": "remotion/blender/import_scene.py",
           "symbol": "choose_device"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/templar.py",
+          "symbol": "generate"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/animation.py",
+          "symbol": "evaluate"
         }
       ],
       "reusableParts": [
-        "Générateur original implémenté, palette métallique et émissions, géométrie voxel partagée et paramètres de graine."
+        "Coque à croissants, corps vertical effilé, œil, lames ventrales, canons, panneaux de bouclier en cellules et articulation par sous-ensembles.",
+        "LOD explicite, animation sans état, matériaux partagés et géométrie fusionnée."
       ],
       "requiredWork": [
-        "Pas de projectiles simulés, de collision ni de mécanique de dégâts ; coque et bouclier stylisés."
+        "Effets de tir et recul graphiques ; pas de projectile ou dégât simulé."
       ],
       "limitations": [
         "Interprétation artistique originale ; voir les rendus de validation, pas une carte ou un modèle officiel."
@@ -39072,7 +39090,7 @@
     },
     {
       "id": "reuse-blender-atheon",
-      "label": "Minotaure Athéon Blender original",
+      "label": "Athéon cinématographique Blender 0.9.1",
       "kind": "boss",
       "familyIds": [
         "vex"
@@ -39088,13 +39106,27 @@
         {
           "path": "remotion/blender/import_scene.py",
           "symbol": "choose_device"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/atheon.py",
+          "symbol": "generate"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/animation.py",
+          "symbol": "solve_leg"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/materials.py",
+          "symbol": "add_wear"
         }
       ],
       "reusableParts": [
-        "Générateur original implémenté, palette métallique et émissions, géométrie voxel partagée et paramètres de graine."
+        "Nouvelle anatomie élancée, couronne à trois lames, plastron en V, abdomen radiolaire, canon asymétrique et pieds à griffes.",
+        "LOD explicite 0/1/2, IK analytique des jambes, contacts plantés, matériaux procéduraux partagés et fusion des voxels par articulation."
       ],
       "requiredWork": [
-        "Pas d’IK de contact au sol ni de mécanique temporelle jouable ; fidélité artistique, pas modèle du jeu."
+        "Pas de dynamique de poids/collisions de combat ; IK de placement, pas simulation physique.",
+        "Les plaques du sol ajoutent 3 cm à la surface nominale ; tolérance de contact mesurée et documentée."
       ],
       "limitations": [
         "Interprétation artistique originale ; voir les rendus de validation, pas une carte ou un modèle officiel."

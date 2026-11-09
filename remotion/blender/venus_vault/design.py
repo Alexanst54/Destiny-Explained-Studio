@@ -7,8 +7,8 @@ from characters import vex_bosses
 
 def generate_design(request):
     r=validate(request)
-    env=venus.generate(r['seed'],r['quality']) if r['environmentId']=='venus' else vault_of_glass.generate(r['seed'],r['quality'],r['environmentId'])
-    boss=vex_bosses.generate(r['bossId'],r['seed'],r['quality']) if r['bossId'] else None
+    env=venus.generate(r['seed'],r['quality']) if r['environmentId']=='venus' else vault_of_glass.generate(r['seed'],r['quality'],r['environmentId'],r['lod'])
+    boss=vex_bosses.generate(r['bossId'],r['seed'],r['quality'],r['lod']) if r['bossId'] else None
     dust=Design('particles',r['seed']+1 if r['seed']<2147483647 else 0,r['quality'])
     for i in range(QUALITY[r['quality']]['particles']):
         x=dust.rng.uniform(-14,14);y=dust.rng.uniform(0,26);z=dust.rng.uniform(1,15);size=dust.rng.uniform(.018,.055)

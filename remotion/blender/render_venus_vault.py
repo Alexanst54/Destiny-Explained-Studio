@@ -11,12 +11,12 @@ from render_one import stream_process
 
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('selection');p.add_argument('output')
-    p.add_argument('--quality',choices=['draft','balanced','cinematic'],default='balanced');p.add_argument('--seed',type=int,default=42)
-    p.add_argument('--camera',choices=['wide','reveal','orbit','low-angle','close-up'],default='wide');p.add_argument('--animation',default='idle')
+    p.add_argument('--lod',type=int,choices=[0,1,2],default=0);p.add_argument('--quality',choices=['draft','balanced','cinematic'],default='balanced');p.add_argument('--seed',type=int,default=42)
+    p.add_argument('--camera',choices=['wide','reveal','orbit','low-angle','close-up','front','profile','ground-reveal','mechanism','temporal'],default='wide');p.add_argument('--animation',default='idle')
     p.add_argument('--start-frame',type=int,default=0);p.add_argument('--frames',type=int,default=1);p.add_argument('--fps',type=int,choices=[24,30],default=30);p.add_argument('--width',type=int,default=960);p.add_argument('--height',type=int,default=540)
     p.add_argument('--device',choices=['auto','cpu'],default='auto');p.add_argument('--threads',type=int,default=3);p.add_argument('--timeout',type=int,default=1800)
     p.add_argument('--blender',default='blender');p.add_argument('--video',action='store_true');p.add_argument('--check-only',action='store_true');a=p.parse_args()
-    request=select(a.selection,a.quality,a.seed,a.camera,a.animation,a.frames,a.fps,a.width,a.height,a.start_frame)
+    request=select(a.selection,a.quality,a.seed,a.camera,a.animation,a.frames,a.fps,a.width,a.height,a.start_frame,a.lod)
     if a.video and (a.frames<2 or a.check_only):p.error('--video requires at least two rendered frames')
     binary=shutil.which(a.blender)
     if not binary:raise RuntimeError('Blender not found')
