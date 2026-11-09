@@ -20,8 +20,13 @@ def build(r,device,threads,out):
         old=select(r['binding']['selectionId'],r['quality'],r['seed'],camera,r['animation'],r['frames'],r['fps'],r['width'],r['height'],r['startFrame'],r['lod'])
         state=build_scene(old,device,threads);state['provider']=provider
     else:
-        if provider!='family-study':raise ValueError('No universal model provider yet')
-        PALETTE.update(palette());key=hashlib.sha256(json.dumps({k:r[k] for k in ['seed','quality','lod','environmentVariant']},sort_keys=True).encode()+r['binding']['familyId'].encode()).hexdigest()
+        if provider not in ['family-study','universal']:raise ValueError('Unknown universal provider')
+        PALETTE.update(palette())
+        if provider=='universal':
+            from universal import crota
+            if r['binding']['selectionId'] not in ['boss-crota','oversoul-throne']:raise ValueError('No dedicated provider for this entity')
+            crota.setup()
+        key=hashlib.sha256(json.dumps({k:r[k] for k in ['seed','quality','lod','environmentVariant']},sort_keys=True).encode()+r['binding'].get('familyId',r['binding']['selectionId']).encode()).hexdigest()
         cache=out/'design-cache.json';design=None
         if cache.exists():
             try:
@@ -30,7 +35,8 @@ def build(r,device,threads,out):
             except (ValueError,KeyError):pass
         cache_hit=design is not None
         if design is None:
-            design=generate(r['binding']['familyId'],r['seed'],r['quality'],r['lod'],r['environmentVariant']);atomic_json(cache,dict(key=key,sha256=digest(design),design=design))
+            design=crota.arena(r['seed'],r['quality'],r['lod']) if provider=='universal' else generate(r['binding']['familyId'],r['seed'],r['quality'],r['lod'],r['environmentVariant'])
+            atomic_json(cache,dict(key=key,sha256=digest(design),design=design))
         scene=bpy.data.scenes.new('Universal family study');bpy.context.window.scene=scene;scene.render.engine='CYCLES';settings=QUALITY[r['quality']]
         scene.cycles.samples=settings['samples'];scene.cycles.max_bounces=settings['bounces'];scene.cycles.use_adaptive_sampling=True;scene.cycles.adaptive_threshold={'draft':.12,'balanced':.06,'cinematic':.025}[r['quality']];scene.cycles.seed=r['seed'];scene.render.use_persistent_data=True
         import _cycles
@@ -39,7 +45,11 @@ def build(r,device,threads,out):
         scene.world=bpy.data.worlds.new('Family world');scene.world.use_nodes=True;scene.world.node_tree.nodes['Background'].inputs['Color'].default_value=linear_color('#536172');scene.world.node_tree.nodes['Background'].inputs['Strength'].default_value=.22
         mats={}
         for name,(color,rough,metal,emission) in PALETTE.items():
-            m=bpy.data.materials.new(name);m.use_nodes=True;p=m.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=linear_color(color);p.inputs['Roughness'].default_value=rough;p.inputs['Metallic'].default_value=metal;p.inputs['Emission Color'].default_value=linear_color(color);p.inputs['Emission Strength'].default_value=emission;mats[name]=m
+            m=bpy.data.materials.new(name);m.use_nodes=True;p=m.node_tree.nodes.get('Principled BSDF');p.inputs['Base Color'].default_value=linear_color(color);p.inputs['Roughness'].default_value=rough;p.inputs['Metallic'].default_value=metal;p.inputs['Emission Color'].default_value=linear_color(color);p.inputs['Emission Strength'].default_value=emission;
+            if name.startswith('crota-') and emission==0:
+                noise=m.node_tree.nodes.new('ShaderNodeTexNoise');noise.inputs['Scale'].default_value=7;noise.inputs['Detail'].default_value=3
+                bump=m.node_tree.nodes.new('ShaderNodeBump');bump.inputs['Strength'].default_value=.16;bump.inputs['Distance'].default_value=.06;m.node_tree.links.new(noise.outputs['Fac'],bump.inputs['Height']);m.node_tree.links.new(bump.outputs['Normal'],p.inputs['Normal'])
+            mats[name]=m
         collection=bpy.data.collections.new('Architectural study');scene.collection.children.link(collection);meshes=compile_design(design,mats,collection)
         for name,pos,target,power,color,size in [('Key',(-16,-12,30),(0,16,6),16000,'#ffdeb0',12),('Fill',(18,6,19),(0,18,7),9000,'#a6d4ff',9),('Rim',(0,40,25),(0,15,7),18000,'#a1daff',8)]:
             data=bpy.data.lights.new(name,'AREA');data.energy=power;data.color=linear_color(color)[:3];data.shape='DISK';data.size=size;o=bpy.data.objects.new(name,data);scene.collection.objects.link(o);o.location=pos;o.rotation_euler=(Vector(target)-o.location).to_track_quat('-Z','Y').to_euler()
@@ -49,6 +59,16 @@ def build(r,device,threads,out):
         data=bpy.data.cameras.new('Universal camera');cam=bpy.data.objects.new('Universal camera',data);scene.collection.objects.link(cam);scene.camera=cam
         info=choose_device(scene,device);info.update(samples=settings['samples'],lod=r['lod'],threads=threads,designSha256=digest(design),boxes=len(design['objects']),designCacheHit=cache_hit,batchedMeshes=len(meshes),persistentData=True)
         state=dict(scene=scene,provider=provider,configuration=info)
+        if provider=='universal' and r['binding']['entity']['kind']=='boss':
+            if r['binding']['selectionId']!='boss-crota':raise ValueError('No dedicated provider for this boss')
+            boss=crota.generate(r['seed'],r['quality'],r['lod']);joints={};col=bpy.data.collections.new('Dedicated boss/Crota');scene.collection.children.link(col)
+            for j in boss['joints']:
+                ob=bpy.data.objects.new(j['id'],None);col.objects.link(ob);ob.location=j['position']
+                if j['parent']:ob.parent=joints[j['parent']]
+                joints[j['id']]=ob
+            compile_design(boss,mats,col,joints);state.update(boss=boss,joints=joints,materials=mats)
+            info.update(bossBoxes=len(boss['objects']),bossDesignSha256=digest(boss),joints=len(joints))
+        if provider=='universal' and r['view']!='environment':collection.hide_render=True
     if r['view']=='silhouette':
         # Original geometry, black emission override, isolated against a white world.
         m=bpy.data.materials.new('Silhouette override');m.use_nodes=True;n=m.node_tree.nodes;n.clear();em=n.new('ShaderNodeEmission');em.inputs['Color'].default_value=(0,0,0,1);o=n.new('ShaderNodeOutputMaterial');m.node_tree.links.new(em.outputs[0],o.inputs['Surface']);state['scene'].view_layers[0].material_override=m
@@ -66,6 +86,21 @@ def update(state,r,frame):
         from mathutils import Vector
         scene=state['scene'];scene.frame_set(frame);cam=scene.camera;t=frame/r['fps'];a=-math.pi/2+.18+t*.035
         cam.location=(45*math.cos(a),15+45*math.sin(a),15);cam.rotation_euler=(Vector((0,20,7))-cam.location).to_track_quat('-Z','Y').to_euler();cam.data.lens=32;cam.data.clip_end=300
+        if state['provider']=='universal':
+            # Four repeatable physical framings for the dedicated Crota proportions.
+            target=(-1.2,10,7.8);position=(-1.2,-28,8.8);lens=40
+            if r['view']=='three-quarter':position=(23,-26,9);lens=40
+            if r['view']=='environment':position=(20,-39,16);target=(0,22,11);lens=30
+            if r['view']=='reveal':position=(7,-35,2+min(t/2,1)*8);target=(0,10,4+min(t/2,1)*5);lens=36
+            if r['view']=='close-up':position=(7,-12,12);target=(0,10,10);lens=48
+            cam.location=position;cam.rotation_euler=(Vector(target)-cam.location).to_track_quat('-Z','Y').to_euler();cam.data.lens=lens;cam.data.sensor_fit='VERTICAL';cam.data.sensor_height=24
+            if state.get('boss'):
+                from universal.crota import pose,MATERIALS
+                p=pose(r['animation'],frame,r['fps'])
+                for j in state['boss']['joints']:
+                    ob=state['joints'][j['id']];ob.location=p['position'].get(j['id'],j['position']);ob.rotation_euler=p['rotation'].get(j['id'],(0,0,0));ob.scale=p['scale'].get(j['id'],(1,1,1))
+                for name in ['crota-soul','crota-eye']:
+                    state['materials'][name].node_tree.nodes['Principled BSDF'].inputs['Emission Strength'].default_value=MATERIALS[name][3]*p['emissionPulse']
     state['scene'].view_layers[0].update()
 
 def main():

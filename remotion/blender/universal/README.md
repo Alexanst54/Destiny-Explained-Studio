@@ -34,3 +34,22 @@ node --test remotion/tests/universal-library.test.mjs
 ## Colab Pro / T4
 
 Le notebook [Cinematic-Vex-Colab-Pro.ipynb](../Cinematic-Vex-Colab-Pro.ipynb) garde son workflow historique. Pour cette bibliothèque : cloner la branche `feat/universal-cinematic-library-1.0`, installer Blender officiel 4.3.2 vérifié comme dans ce notebook, puis exécuter les commandes ci-dessus avec `--blender` pointant sur ce binaire. Sur une session T4 : lancer d’abord une seule frame Draft, vérifier `configuration.selected`, `backend`, `devices`, puis un clip court Balanced. Sauvegarder le dossier de sortie dans Drive et reprendre avec la même commande et `--resume`. Vérifier que les PNG sont intègres et que le nombre de cache hits correspond aux frames achevées. Ne pas annoncer un gain GPU à partir des mesures CPU. Colab/T4/Android non exécutés dans cette livraison ; pas de rendu complet de 35 secondes.
+
+## Lots suivants et grille automatique
+
+Cropta et `oversoul-throne` sont enregistrés sur la branche `feat/library-crota-lot-b-1.0` comme prototypes dédiés partiels, pas comme modèles terminés. [Rendus et limites](../../../docs/universal-library/crota/README.md). Les autres boss manquants restent bloqués.
+
+```sh
+# Produit seulement le plan, sans rendre une bibliothèque entière implicitement.
+python remotion/blender/universal/batch.py work/library-grid
+# Inclut les prototypes, toujours avec leurs statuts partiels.
+python remotion/blender/universal/batch.py work/library-grid --include-prototypes
+# Lance les jobs préparés ; reprend leurs sorties compatibles.
+python remotion/blender/universal/batch.py work/library-grid --include-prototypes --execute --blender /chemin/blender
+```
+
+La grille fixe est face/trois-quarts/silhouette/environnement en Cinematic, plus une seconde Balanced. Le plan conserve les identités/formes manquantes et leurs activités. Une réussite technique n’approuve ni la fidélité ni la qualité artistique et ne promeut pas automatiquement les statuts.
+
+Le notebook additionnel [Universal-Library-Colab-Pro.ipynb](../Universal-Library-Colab-Pro.ipynb) clone la branche du lot B et expose les options par formulaire. Son code est compilé localement ; aucune exécution distante ni compatibilité Android réelle n’est revendiquée. Les notebooks précédents restent intacts.
+
+Le catalogue documentaire Atlas conserve son statut placeholder pour Cropta : le registre de la bibliothèque expose un prototype expérimental séparé et ne promeut aucun statut Atlas sans validation spécifique. Les autres identités et toutes les formes non implémentées restent manquantes.

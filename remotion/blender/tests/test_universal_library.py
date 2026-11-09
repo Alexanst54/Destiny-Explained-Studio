@@ -18,10 +18,10 @@ class UniversalLibrary(unittest.TestCase):
  def test_approved_models_protected_and_legacy_route(self):
   self.assertTrue(check_registry());b=resolve('boss-atheon');self.assertEqual(b['provider'],'venus-vault');self.assertEqual(b['environmentId'],'arena-glass-throne');self.assertTrue(implementations()['boss-atheon']['protectedFiles'])
  def test_family_studies_explicit_and_ambiguous(self):
-  with self.assertRaises(ValueError):resolve('oversoul-throne')
-  self.assertEqual(resolve('oversoul-throne',allow_family_study=True)['status'],'partial-family-study')
+  with self.assertRaises(ValueError):resolve('arena-golgoroth-s-cellar')
+  self.assertEqual(resolve('arena-golgoroth-s-cellar',allow_family_study=True)['status'],'partial-family-study')
   with self.assertRaises(ValueError):resolve('black-garden',allow_family_study=True)
-  with self.assertRaises(ValueError):resolve('oversoul-throne',allow_family_study=True,family_id='neomuna')
+  with self.assertRaises(ValueError):resolve('arena-golgoroth-s-cellar',allow_family_study=True,family_id='neomuna')
  def test_all_family_variants_determinism_and_geometry(self):
   for f in index()['families']:
    for variant in f['variants']:

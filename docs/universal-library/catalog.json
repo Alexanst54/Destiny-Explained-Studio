@@ -123,6 +123,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "venus"
+      ],
       "previews": [
         {
           "view": "existing-evidence",
@@ -252,6 +255,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "venus"
+      ],
       "previews": [
         {
           "view": "existing-evidence",
@@ -341,6 +347,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "moon"
+      ],
       "previews": []
     },
     {
@@ -354,8 +364,26 @@
       "nature": null,
       "priority": true,
       "atlasVisualStatus": "placeholder",
-      "status": "missing",
-      "implementation": null,
+      "status": "partial-dedicated-prototype",
+      "implementation": {
+        "provider": "universal",
+        "status": "partial-dedicated-prototype",
+        "environmentId": "oversoul-throne",
+        "animations": [
+          "idle",
+          "move",
+          "attack",
+          "reveal"
+        ],
+        "lods": [
+          0,
+          1,
+          2
+        ],
+        "gallery": "docs/universal-library/crota/README.md",
+        "galleryV1Status": "pending-real-renders",
+        "protectedFiles": []
+      },
       "family": "hive",
       "familyCandidates": [
         "hive"
@@ -423,6 +451,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "moon"
       ],
       "previews": []
     },
@@ -492,6 +524,12 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dsc-morning-star",
+        "europa",
+        "europa-regions",
+        "jupiter"
+      ],
       "previews": []
     },
     {
@@ -560,6 +598,12 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dsc-morning-star",
+        "europa",
+        "europa-regions",
+        "jupiter"
       ],
       "previews": []
     },
@@ -679,6 +723,14 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dsc-morning-star",
+        "earth",
+        "europa",
+        "europa-regions",
+        "jupiter",
+        "moon"
+      ],
       "previews": []
     },
     {
@@ -747,6 +799,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -814,6 +870,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -896,6 +956,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "venus"
+      ],
       "previews": []
     },
     {
@@ -976,6 +1039,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
       ],
       "previews": []
     },
@@ -1058,6 +1125,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
+      ],
       "previews": []
     },
     {
@@ -1139,6 +1210,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
+      ],
       "previews": []
     },
     {
@@ -1219,6 +1294,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
       ],
       "previews": []
     },
@@ -1329,6 +1408,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
+      ],
       "previews": []
     },
     {
@@ -1410,6 +1493,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
+      ],
       "previews": []
     },
     {
@@ -1475,6 +1563,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
       ],
       "previews": []
     },
@@ -1559,6 +1652,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
+      ],
       "previews": []
     },
     {
@@ -1625,6 +1723,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
+      ],
       "previews": []
     },
     {
@@ -1690,6 +1793,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
       ],
       "previews": []
     },
@@ -1822,6 +1930,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "arcadian-valley",
+        "leviathan",
+        "nessus"
+      ],
       "previews": []
     },
     {
@@ -1889,6 +2002,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "arcadian-valley",
+        "leviathan",
+        "nessus"
       ],
       "previews": []
     },
@@ -1970,6 +2088,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -2035,6 +2156,9 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "leviathan"
       ],
       "previews": []
     },
@@ -2102,6 +2226,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -2167,6 +2295,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -2234,6 +2366,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -2299,6 +2435,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -2366,6 +2506,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "last-city"
+      ],
       "previews": []
     },
     {
@@ -2431,6 +2575,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "last-city"
       ],
       "previews": []
     },
@@ -2532,6 +2680,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -2612,6 +2764,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "black-garden"
+      ],
       "previews": []
     },
     {
@@ -2677,6 +2832,9 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "black-garden"
       ],
       "previews": []
     },
@@ -2744,6 +2902,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
+      ],
       "previews": []
     },
     {
@@ -2809,6 +2971,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
       ],
       "previews": []
     },
@@ -2876,6 +3042,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
+      ],
       "previews": []
     },
     {
@@ -2941,6 +3111,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
       ],
       "previews": []
     },
@@ -3008,6 +3182,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
+      ],
       "previews": []
     },
     {
@@ -3073,6 +3251,9 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "essence"
       ],
       "previews": []
     },
@@ -3140,6 +3321,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "essence"
+      ],
       "previews": []
     },
     {
@@ -3206,6 +3390,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "pale-heart",
+        "traveler"
+      ],
       "previews": []
     },
     {
@@ -3271,6 +3459,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "pale-heart",
+        "traveler"
       ],
       "previews": []
     },
@@ -3353,6 +3545,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "unknown-periphery"
+      ],
       "previews": []
     },
     {
@@ -3434,6 +3629,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "unknown-periphery"
+      ],
       "previews": []
     },
     {
@@ -3514,6 +3712,9 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "unknown-periphery"
       ],
       "previews": []
     },
@@ -3598,6 +3799,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "unknown-periphery"
+      ],
       "previews": []
     },
     {
@@ -3667,6 +3871,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -3732,6 +3940,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -3799,6 +4011,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -3864,6 +4080,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -3931,6 +4151,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -3996,6 +4220,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -4063,6 +4291,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -4128,6 +4360,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -4195,6 +4431,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -4260,6 +4500,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "moon",
+        "moon-regions"
       ],
       "previews": []
     },
@@ -4327,6 +4572,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "moon",
+        "moon-regions"
+      ],
       "previews": []
     },
     {
@@ -4393,6 +4643,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -4459,6 +4710,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -4526,6 +4778,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -4591,6 +4844,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
       ],
       "previews": []
     },
@@ -4658,6 +4915,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
+      ],
       "previews": []
     },
     {
@@ -4723,6 +4984,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
       ],
       "previews": []
     },
@@ -4790,6 +5055,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
+      ],
       "previews": []
     },
     {
@@ -4855,6 +5124,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
       ],
       "previews": []
     },
@@ -4924,6 +5197,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -4989,6 +5266,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
       ],
       "previews": []
     },
@@ -5056,6 +5337,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -5121,6 +5406,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
       ],
       "previews": []
     },
@@ -5188,6 +5477,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -5253,6 +5546,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
       ],
       "previews": []
     },
@@ -5320,6 +5617,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -5385,6 +5686,9 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "mars"
       ],
       "previews": []
     },
@@ -5452,6 +5756,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "mars"
+      ],
       "previews": []
     },
     {
@@ -5518,6 +5825,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "mars"
+      ],
       "previews": []
     },
     {
@@ -5583,6 +5893,9 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "mars"
       ],
       "previews": []
     },
@@ -5652,6 +5965,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "new-pacific-arcology",
+        "saturn",
+        "titan"
+      ],
       "previews": []
     },
     {
@@ -5720,6 +6038,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "new-pacific-arcology",
+        "saturn",
+        "titan"
+      ],
       "previews": []
     },
     {
@@ -5785,6 +6108,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "new-pacific-arcology",
+        "saturn",
+        "titan"
       ],
       "previews": []
     },
@@ -5852,6 +6180,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "new-pacific-arcology",
+        "saturn",
+        "titan"
+      ],
       "previews": []
     },
     {
@@ -5917,6 +6250,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "new-pacific-arcology",
+        "saturn",
+        "titan"
       ],
       "previews": []
     },
@@ -5984,6 +6322,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "edz"
+      ],
       "previews": []
     },
     {
@@ -6049,6 +6391,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "edz"
       ],
       "previews": []
     },
@@ -6117,6 +6463,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "edz"
+      ],
       "previews": []
     },
     {
@@ -6182,6 +6532,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "edz"
       ],
       "previews": []
     },
@@ -6249,6 +6603,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "edz"
+      ],
       "previews": []
     },
     {
@@ -6314,6 +6672,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "edz"
       ],
       "previews": []
     },
@@ -6381,6 +6743,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "edz"
+      ],
       "previews": []
     },
     {
@@ -6447,6 +6813,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "edz"
+      ],
       "previews": []
     },
     {
@@ -6512,6 +6882,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "edz"
       ],
       "previews": []
     },
@@ -6693,6 +7067,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "europa",
+        "jupiter",
+        "vesper-station"
+      ],
       "previews": []
     },
     {
@@ -6758,6 +7137,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "europa",
+        "jupiter",
+        "vesper-station"
       ],
       "previews": []
     },
@@ -6825,6 +7209,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
+      ],
       "previews": []
     },
     {
@@ -6891,6 +7279,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
+      ],
       "previews": []
     },
     {
@@ -6956,6 +7348,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "arena-imperium-carrier",
+        "arena-malphas-contemptus",
+        "venus"
       ],
       "previews": []
     },
@@ -7040,6 +7437,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "arena-imperium-carrier",
+        "arena-malphas-contemptus",
+        "venus"
+      ],
       "previews": []
     },
     {
@@ -7105,6 +7507,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "moon"
       ],
       "previews": []
     },
@@ -7188,6 +7594,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "moon"
+      ],
       "previews": []
     },
     {
@@ -7253,6 +7664,9 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "venus"
       ],
       "previews": []
     },
@@ -7337,6 +7751,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
+      ],
       "previews": []
     },
     {
@@ -7402,6 +7820,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
       ],
       "previews": []
     },
@@ -7469,6 +7891,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
+      ],
       "previews": []
     },
     {
@@ -7534,6 +7960,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
       ],
       "previews": []
     },
@@ -7601,6 +8031,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
+      ],
       "previews": []
     },
     {
@@ -7666,6 +8100,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -7733,6 +8171,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "edz"
+      ],
       "previews": []
     },
     {
@@ -7798,6 +8240,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "edz"
       ],
       "previews": []
     },
@@ -7865,6 +8311,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "edz"
       ],
       "previews": []
     },
@@ -7949,6 +8399,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "io",
+        "jupiter"
+      ],
       "previews": []
     },
     {
@@ -8031,6 +8485,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "io",
+        "jupiter"
       ],
       "previews": []
     },
@@ -8115,6 +8573,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "io",
+        "jupiter"
+      ],
       "previews": []
     },
     {
@@ -8180,6 +8642,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "io",
+        "jupiter"
       ],
       "previews": []
     },
@@ -8280,6 +8746,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "last-city",
+        "tower"
+      ],
       "previews": []
     },
     {
@@ -8360,6 +8831,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "last-city",
+        "tower"
       ],
       "previews": []
     },
@@ -8442,6 +8918,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "last-city",
+        "tower"
+      ],
       "previews": []
     },
     {
@@ -8507,6 +8988,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "last-city",
+        "tower"
       ],
       "previews": []
     },
@@ -8574,6 +9060,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "glykon"
+      ],
       "previews": []
     },
     {
@@ -8639,6 +9128,9 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "glykon"
       ],
       "previews": []
     },
@@ -8708,6 +9200,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -8774,6 +9267,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -8840,6 +9334,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -8906,6 +9401,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -8971,6 +9467,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "seraph-station"
       ],
       "previews": []
     },
@@ -9040,6 +9540,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "seraph-station"
+      ],
       "previews": []
     },
     {
@@ -9105,6 +9609,9 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "mars"
       ],
       "previews": []
     },
@@ -9172,6 +9679,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "mars"
+      ],
       "previews": []
     },
     {
@@ -9238,6 +9748,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "black-garden"
+      ],
       "previews": []
     },
     {
@@ -9303,6 +9816,9 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "black-garden"
       ],
       "previews": []
     },
@@ -9372,6 +9888,12 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dsc-morning-star",
+        "europa",
+        "europa-regions",
+        "jupiter"
+      ],
       "previews": []
     },
     {
@@ -9439,6 +9961,12 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dsc-morning-star",
+        "europa",
+        "europa-regions",
+        "jupiter"
       ],
       "previews": []
     },
@@ -9521,6 +10049,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
+      ],
       "previews": []
     },
     {
@@ -9586,6 +10118,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
       ],
       "previews": []
     },
@@ -9653,6 +10190,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
+      ],
       "previews": []
     },
     {
@@ -9718,6 +10260,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "arcadian-valley",
+        "leviathan",
+        "nessus"
       ],
       "previews": []
     },
@@ -9785,6 +10332,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -9850,6 +10400,9 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "unknown-periphery"
       ],
       "previews": []
     },
@@ -9917,6 +10470,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -9982,6 +10539,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
       ],
       "previews": []
     },
@@ -10049,6 +10610,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "new-pacific-arcology",
+        "saturn",
+        "titan"
+      ],
       "previews": []
     },
     {
@@ -10114,6 +10680,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "new-pacific-arcology",
+        "saturn",
+        "titan"
       ],
       "previews": []
     },
@@ -10181,6 +10752,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "arena-imperium-carrier",
+        "arena-malphas-contemptus",
+        "venus"
+      ],
       "previews": []
     },
     {
@@ -10246,6 +10822,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "moon"
       ],
       "previews": []
     },
@@ -10313,6 +10893,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "moon"
+      ],
       "previews": []
     },
     {
@@ -10378,6 +10962,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
       ],
       "previews": []
     },
@@ -10460,6 +11048,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "io",
+        "jupiter"
+      ],
       "previews": []
     },
     {
@@ -10540,6 +11132,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "io",
+        "jupiter"
       ],
       "previews": []
     },
@@ -10622,6 +11218,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "io",
+        "jupiter"
+      ],
       "previews": []
     },
     {
@@ -10687,6 +11287,11 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "last-city",
+        "tower"
       ],
       "previews": []
     },
@@ -10756,6 +11361,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "last-city",
+        "tower"
+      ],
       "previews": []
     },
     {
@@ -10822,6 +11432,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -10887,6 +11498,10 @@
           "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "seraph-station"
       ],
       "previews": []
     },
@@ -10969,6 +11584,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "europa",
+        "jupiter",
+        "vesper-station"
+      ],
       "previews": []
     },
     {
@@ -11037,6 +11657,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "europa",
+        "jupiter",
+        "vesper-station"
+      ],
       "previews": []
     },
     {
@@ -11090,6 +11715,7 @@
           }
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -11143,6 +11769,7 @@
           }
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -11198,6 +11825,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -11250,6 +11880,7 @@
           }
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -11304,6 +11935,7 @@
           }
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -11357,6 +11989,7 @@
           }
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -11409,6 +12042,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "jupiter"
       ],
       "previews": []
     },
@@ -11463,6 +12099,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "saturn"
+      ],
       "previews": []
     },
     {
@@ -11515,6 +12154,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "oort-cloud"
       ],
       "previews": []
     },
@@ -11576,6 +12218,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "earth"
+      ],
       "previews": []
     },
     {
@@ -11627,6 +12272,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "moon"
       ],
       "previews": []
     },
@@ -11685,6 +12334,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "mercury"
       ],
       "previews": []
     },
@@ -11754,6 +12406,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "venus"
+      ],
       "previews": []
     },
     {
@@ -11808,6 +12463,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "mars"
+      ],
       "previews": []
     },
     {
@@ -11859,6 +12517,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "io",
+        "jupiter"
       ],
       "previews": []
     },
@@ -11912,6 +12574,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "saturn",
+        "titan"
       ],
       "previews": []
     },
@@ -11967,6 +12633,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "nessus"
+      ],
       "previews": []
     },
     {
@@ -12020,6 +12689,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "europa",
+        "jupiter"
+      ],
       "previews": []
     },
     {
@@ -12071,6 +12744,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "neptune"
       ],
       "previews": []
     },
@@ -12126,6 +12802,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
+      ],
       "previews": []
     },
     {
@@ -12179,6 +12859,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "edz"
       ],
       "previews": []
     },
@@ -12236,6 +12920,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "earth",
+        "last-city"
+      ],
       "previews": []
     },
     {
@@ -12287,6 +12975,11 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "europa",
+        "europa-regions",
+        "jupiter"
       ],
       "previews": []
     },
@@ -12349,6 +13042,12 @@
           }
         }
       ],
+      "destinationIds": [
+        "dsc-morning-star",
+        "europa",
+        "europa-regions",
+        "jupiter"
+      ],
       "previews": []
     },
     {
@@ -12404,6 +13103,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -12456,6 +13159,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "savathun-throne-world"
+      ],
       "previews": []
     },
     {
@@ -12504,6 +13210,11 @@
             "moduleIds": []
           }
         }
+      ],
+      "destinationIds": [
+        "europa",
+        "europan-pyramid",
+        "jupiter"
       ],
       "previews": []
     },
@@ -12557,6 +13268,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -12609,6 +13324,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
+      ],
       "previews": []
     },
     {
@@ -12660,6 +13379,9 @@
             "moduleIds": []
           }
         }
+      ],
+      "destinationIds": [
+        "black-garden"
       ],
       "previews": []
     },
@@ -12714,6 +13436,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "pale-heart",
+        "traveler"
+      ],
       "previews": []
     },
     {
@@ -12766,6 +13492,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "kepler",
+        "oort-cloud"
       ],
       "previews": []
     },
@@ -12820,6 +13550,11 @@
           }
         }
       ],
+      "destinationIds": [
+        "earth",
+        "last-city",
+        "tower"
+      ],
       "previews": []
     },
     {
@@ -12872,6 +13607,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "traveler"
       ],
       "previews": []
     },
@@ -12927,6 +13665,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -12977,6 +13718,11 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "europa",
+        "jupiter",
+        "vesper-station"
       ],
       "previews": []
     },
@@ -13030,6 +13776,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "essence"
+      ],
       "previews": []
     },
     {
@@ -13081,6 +13830,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
       ],
       "previews": []
     },
@@ -13134,6 +13887,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "fundament"
       ],
       "previews": []
     },
@@ -13190,6 +13946,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "riis"
+      ],
       "previews": []
     },
     {
@@ -13243,6 +14002,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "europa",
+        "jupiter"
+      ],
       "previews": []
     },
     {
@@ -13294,6 +14057,11 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
       ],
       "previews": []
     },
@@ -13377,6 +14145,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "venus"
+      ],
       "previews": []
     },
     {
@@ -13430,6 +14201,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "moon"
       ],
       "previews": []
     },
@@ -13497,6 +14272,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
+      ],
       "previews": []
     },
     {
@@ -13550,6 +14329,11 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
       ],
       "previews": []
     },
@@ -13611,6 +14395,11 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "arcadian-valley",
+        "leviathan",
+        "nessus"
       ],
       "previews": []
     },
@@ -13674,6 +14463,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -13725,6 +14517,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "leviathan"
       ],
       "previews": []
     },
@@ -13778,6 +14573,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -13842,6 +14641,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "earth",
+        "last-city"
+      ],
       "previews": []
     },
     {
@@ -13904,6 +14707,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "leviathan"
       ],
       "previews": []
     },
@@ -13970,6 +14776,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "black-garden"
+      ],
       "previews": []
     },
     {
@@ -14028,6 +14837,12 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "dsc-morning-star",
+        "europa",
+        "europa-regions",
+        "jupiter"
       ],
       "previews": []
     },
@@ -14091,6 +14906,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
+      ],
       "previews": []
     },
     {
@@ -14150,6 +14969,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "essence"
       ],
       "previews": []
     },
@@ -14211,6 +15033,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "pale-heart",
+        "traveler"
+      ],
       "previews": []
     },
     {
@@ -14262,6 +15088,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "unknown-periphery"
       ],
       "previews": []
     },
@@ -14315,6 +15144,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -14375,6 +15208,11 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "moon",
+        "moon-regions"
       ],
       "previews": []
     },
@@ -14440,6 +15278,7 @@
           }
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -14502,6 +15341,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
       ],
       "previews": []
     },
@@ -14571,6 +15414,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "derelict-leviathan",
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -14622,6 +15469,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "mars"
       ],
       "previews": []
     },
@@ -14686,6 +15536,11 @@
           }
         }
       ],
+      "destinationIds": [
+        "new-pacific-arcology",
+        "saturn",
+        "titan"
+      ],
       "previews": []
     },
     {
@@ -14737,6 +15592,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "edz"
       ],
       "previews": []
     },
@@ -14800,6 +15659,11 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "europa",
+        "jupiter",
+        "vesper-station"
       ],
       "previews": []
     },
@@ -14866,6 +15730,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
+      ],
       "previews": []
     },
     {
@@ -14925,6 +15793,11 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "arena-imperium-carrier",
+        "arena-malphas-contemptus",
+        "venus"
       ],
       "previews": []
     },
@@ -14991,6 +15864,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "io",
+        "jupiter"
+      ],
       "previews": []
     },
     {
@@ -15042,6 +15919,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "leviathan"
       ],
       "previews": []
     },
@@ -15115,6 +15995,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "venus"
+      ],
       "previews": []
     },
     {
@@ -15185,6 +16068,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "venus"
+      ],
       "previews": []
     },
     {
@@ -15198,8 +16084,22 @@
       "nature": null,
       "priority": false,
       "atlasVisualStatus": "modular-reconstruction",
-      "status": "missing",
-      "implementation": null,
+      "status": "partial-dedicated-prototype",
+      "implementation": {
+        "provider": "universal",
+        "status": "partial-dedicated-prototype",
+        "animations": [
+          "idle"
+        ],
+        "lods": [
+          0,
+          1,
+          2
+        ],
+        "gallery": "docs/universal-library/crota/README.md",
+        "galleryV1Status": "pending-real-renders",
+        "protectedFiles": []
+      },
       "family": "hive",
       "familyCandidates": [
         "hive"
@@ -15246,6 +16146,10 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "moon"
       ],
       "previews": []
     },
@@ -15301,6 +16205,12 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dsc-morning-star",
+        "europa",
+        "europa-regions",
+        "jupiter"
+      ],
       "previews": []
     },
     {
@@ -15352,6 +16262,12 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dsc-morning-star",
+        "europa",
+        "europa-regions",
+        "jupiter"
       ],
       "previews": []
     },
@@ -15409,6 +16325,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -15461,6 +16381,10 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -15516,6 +16440,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
+      ],
       "previews": []
     },
     {
@@ -15569,6 +16497,10 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
       ],
       "previews": []
     },
@@ -15624,6 +16556,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
+      ],
       "previews": []
     },
     {
@@ -15677,6 +16613,10 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
       ],
       "previews": []
     },
@@ -15734,6 +16674,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "dreadnaught",
+        "saturn"
+      ],
       "previews": []
     },
     {
@@ -15785,6 +16729,11 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
       ],
       "previews": []
     },
@@ -15839,6 +16788,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
+      ],
       "previews": []
     },
     {
@@ -15890,6 +16844,11 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
       ],
       "previews": []
     },
@@ -15944,6 +16903,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
+      ],
       "previews": []
     },
     {
@@ -15997,6 +16961,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth",
+        "plaguelands"
+      ],
       "previews": []
     },
     {
@@ -16048,6 +17017,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "arcadian-valley",
+        "nessus"
       ],
       "previews": []
     },
@@ -16109,6 +17082,11 @@
           }
         }
       ],
+      "destinationIds": [
+        "arcadian-valley",
+        "leviathan",
+        "nessus"
+      ],
       "previews": []
     },
     {
@@ -16160,6 +17138,11 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "arcadian-valley",
+        "leviathan",
+        "nessus"
       ],
       "previews": []
     },
@@ -16213,6 +17196,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "arcadian-valley",
+        "leviathan",
+        "nessus"
+      ],
       "previews": []
     },
     {
@@ -16265,6 +17253,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -16316,6 +17307,9 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "leviathan"
       ],
       "previews": []
     },
@@ -16370,6 +17364,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "leviathan"
+      ],
       "previews": []
     },
     {
@@ -16422,6 +17419,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "last-city"
+      ],
       "previews": []
     },
     {
@@ -16465,6 +17466,9 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "unknown-periphery"
       ],
       "previews": []
     },
@@ -16522,6 +17526,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "unknown-periphery"
+      ],
       "previews": []
     },
     {
@@ -16577,6 +17584,9 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "unknown-periphery"
       ],
       "previews": []
     },
@@ -16634,6 +17644,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "unknown-periphery"
+      ],
       "previews": []
     },
     {
@@ -16688,6 +17701,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "unknown-periphery"
+      ],
       "previews": []
     },
     {
@@ -16739,6 +17755,11 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "moon",
+        "moon-regions"
       ],
       "previews": []
     },
@@ -16800,6 +17821,11 @@
           }
         }
       ],
+      "destinationIds": [
+        "earth",
+        "moon",
+        "moon-regions"
+      ],
       "previews": []
     },
     {
@@ -16851,6 +17877,11 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "moon",
+        "moon-regions"
       ],
       "previews": []
     },
@@ -16904,6 +17935,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "moon",
+        "moon-regions"
+      ],
       "previews": []
     },
     {
@@ -16956,6 +17992,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "moon",
+        "moon-regions"
+      ],
       "previews": []
     },
     {
@@ -17007,6 +18048,11 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "moon",
+        "moon-regions"
       ],
       "previews": []
     },
@@ -17061,6 +18107,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -17114,6 +18161,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -17167,6 +18215,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -17219,6 +18268,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
+      ],
       "previews": []
     },
     {
@@ -17270,6 +18323,10 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
       ],
       "previews": []
     },
@@ -17331,6 +18388,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "mars"
+      ],
       "previews": []
     },
     {
@@ -17390,6 +18450,11 @@
           }
         }
       ],
+      "destinationIds": [
+        "new-pacific-arcology",
+        "saturn",
+        "titan"
+      ],
       "previews": []
     },
     {
@@ -17448,6 +18513,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "edz"
+      ],
       "previews": []
     },
     {
@@ -17501,6 +18570,11 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "europa",
+        "jupiter",
+        "vesper-station"
       ],
       "previews": []
     },
@@ -17556,6 +18630,11 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "arena-imperium-carrier",
+        "arena-malphas-contemptus",
+        "venus"
+      ],
       "previews": []
     },
     {
@@ -17607,6 +18686,11 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "arena-imperium-carrier",
+        "arena-malphas-contemptus",
+        "venus"
       ],
       "previews": []
     },
@@ -17661,6 +18745,11 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "arena-imperium-carrier",
+        "arena-malphas-contemptus",
+        "venus"
       ],
       "previews": []
     },
@@ -17718,6 +18807,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "earth",
+        "moon"
+      ],
       "previews": []
     },
     {
@@ -17769,6 +18862,9 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "venus"
       ],
       "previews": []
     },
@@ -17828,6 +18924,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "cosmodrome",
+        "earth"
+      ],
       "previews": []
     },
     {
@@ -17879,6 +18979,10 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -17934,6 +19038,10 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "edz"
       ],
       "previews": []
     },
@@ -17999,6 +19107,11 @@
           }
         }
       ],
+      "destinationIds": [
+        "earth",
+        "last-city",
+        "tower"
+      ],
       "previews": []
     },
     {
@@ -18052,6 +19165,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "glykon"
       ],
       "previews": []
     },
@@ -18114,6 +19230,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "glykon"
+      ],
       "previews": []
     },
     {
@@ -18175,6 +19294,7 @@
           }
         }
       ],
+      "destinationIds": [],
       "previews": []
     },
     {
@@ -18226,6 +19346,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "earth",
+        "seraph-station"
       ],
       "previews": []
     },
@@ -18288,6 +19412,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "earth",
+        "seraph-station"
+      ],
       "previews": []
     },
     {
@@ -18348,6 +19476,9 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "mars"
       ],
       "previews": []
     },
@@ -18412,6 +19543,9 @@
           }
         }
       ],
+      "destinationIds": [
+        "black-garden"
+      ],
       "previews": []
     },
     {
@@ -18473,6 +19607,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -18533,6 +19671,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
       ],
       "previews": []
     },
@@ -18598,6 +19740,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -18661,6 +19807,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "dreaming-city",
+        "reef"
+      ],
       "previews": []
     },
     {
@@ -18720,6 +19870,10 @@
             ]
           }
         }
+      ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
       ],
       "previews": []
     },
@@ -18781,6 +19935,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
+      ],
       "previews": []
     },
     {
@@ -18841,6 +19999,10 @@
           }
         }
       ],
+      "destinationIds": [
+        "lure",
+        "savathun-throne-world"
+      ],
       "previews": []
     },
     {
@@ -18892,6 +20054,9 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "essence"
       ],
       "previews": []
     },
@@ -18945,6 +20110,9 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "essence"
+      ],
       "previews": []
     },
     {
@@ -18996,6 +20164,9 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "essence"
       ],
       "previews": []
     },
@@ -19049,6 +20220,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "pale-heart",
+        "traveler"
+      ],
       "previews": []
     },
     {
@@ -19100,6 +20275,10 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "pale-heart",
+        "traveler"
       ],
       "previews": []
     },
@@ -19153,6 +20332,10 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [
+        "pale-heart",
+        "traveler"
+      ],
       "previews": []
     },
     {
@@ -19204,6 +20387,10 @@
           "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
           "existingRecipe": null
         }
+      ],
+      "destinationIds": [
+        "pale-heart",
+        "traveler"
       ],
       "previews": []
     },
@@ -19259,6 +20446,7 @@
           "existingRecipe": null
         }
       ],
+      "destinationIds": [],
       "previews": []
     }
   ],
@@ -39378,5 +40566,1531 @@
   "userApprovedModels": [
     "boss-atheon",
     "boss-templar"
+  ],
+  "destinations": [
+    {
+      "id": "reef",
+      "game": "D1",
+      "enName": "The Reef",
+      "frName": "Le Récif",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-reef",
+            "legacy-wiki-awoken-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-reef",
+        "legacy-wiki-awoken-history"
+      ],
+      "environmentFamily": "awoken",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-awoken",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "solar-system",
+      "legacyLocationId": "reef"
+    },
+    {
+      "id": "jupiter",
+      "game": "D2",
+      "enName": "Jupiter",
+      "frName": "Jupiter",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-jupiter"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-jupiter"
+      ],
+      "environmentFamily": "cosmic",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-cosmic",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "solar-system",
+      "legacyLocationId": "jupiter"
+    },
+    {
+      "id": "saturn",
+      "game": "D2",
+      "enName": "Saturn",
+      "frName": "Saturne",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-saturn"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-saturn"
+      ],
+      "environmentFamily": "cosmic",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-cosmic",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "solar-system",
+      "legacyLocationId": "saturn"
+    },
+    {
+      "id": "oort-cloud",
+      "game": "D2",
+      "enName": "Oort Cloud",
+      "frName": "Nuage d’Oort",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "manifest-only",
+          "sources": [
+            "legacy-bungie-d2-destinyplacedefinition-4076196532"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinyplacedefinition-4076196532"
+      ],
+      "environmentFamily": "cosmic",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-cosmic",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "solar-system",
+      "legacyLocationId": "oort-cloud"
+    },
+    {
+      "id": "earth",
+      "game": "both",
+      "enName": "Earth",
+      "frName": "Terre",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinyplacedefinition-3747705955",
+            "legacy-wiki-golden-age",
+            "legacy-wiki-collapse",
+            "legacy-wiki-earth-history",
+            "legacy-wiki-human-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinyplacedefinition-3747705955",
+        "legacy-wiki-golden-age",
+        "legacy-wiki-collapse",
+        "legacy-wiki-earth-history",
+        "legacy-wiki-human-history"
+      ],
+      "environmentFamily": "human",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-human",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "solar-system",
+      "legacyLocationId": "earth"
+    },
+    {
+      "id": "moon",
+      "game": "both",
+      "enName": "The Moon",
+      "frName": "La Lune",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinyplacedefinition-677774031"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinyplacedefinition-677774031"
+      ],
+      "environmentFamily": "hive",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-hive",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "earth",
+      "legacyLocationId": "moon"
+    },
+    {
+      "id": "mercury",
+      "game": "both",
+      "enName": "Mercury",
+      "frName": "Mercure",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinyplacedefinition-1259908504",
+            "legacy-wiki-golden-age",
+            "legacy-wiki-mercury-history",
+            "legacy-wiki-vex-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinyplacedefinition-1259908504",
+        "legacy-wiki-golden-age",
+        "legacy-wiki-mercury-history",
+        "legacy-wiki-vex-history"
+      ],
+      "environmentFamily": "vex",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-vex",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "solar-system",
+      "legacyLocationId": "mercury"
+    },
+    {
+      "id": "venus",
+      "game": "both",
+      "enName": "Venus",
+      "frName": "Vénus",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinyplacedefinition-3871070152",
+            "legacy-wiki-vex-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture. Visual implementation is an original stylized reconstruction; sources attest identity, not exact geometry."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "dedicated",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinyplacedefinition-3871070152",
+        "legacy-wiki-vex-history"
+      ],
+      "environmentFamily": "vex",
+      "blenderAssetId": "blender-venus-v1",
+      "remotionAssetId": "atlas-family-vex",
+      "note": "Original procedural voxel interpretation implemented by the Venus/Vault extension; not a canonical map or extracted game asset. See blender/venus_vault/VALIDATION.md for actual render evidence and limits. Representative Ishtar/jungle slice only, not a model of the whole destination or planet.",
+      "type": "stellar-body",
+      "parentId": "solar-system",
+      "legacyLocationId": "venus"
+    },
+    {
+      "id": "mars",
+      "game": "both",
+      "enName": "Mars",
+      "frName": "Mars",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinyplacedefinition-2809578934",
+            "legacy-wiki-golden-age"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinyplacedefinition-2809578934",
+        "legacy-wiki-golden-age"
+      ],
+      "environmentFamily": "human",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-human",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "solar-system",
+      "legacyLocationId": "mars"
+    },
+    {
+      "id": "io",
+      "game": "D2",
+      "enName": "Io",
+      "frName": "Io",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinyplacedefinition-763066127"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinyplacedefinition-763066127"
+      ],
+      "environmentFamily": "vex",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-vex",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "jupiter",
+      "legacyLocationId": "io"
+    },
+    {
+      "id": "titan",
+      "game": "D2",
+      "enName": "Titan, Moon of Saturn",
+      "frName": "Titan",
+      "frNameStatus": "shortened-official-name",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinyplacedefinition-3655393761",
+            "legacy-wiki-titan-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinyplacedefinition-3655393761",
+        "legacy-wiki-titan-history"
+      ],
+      "environmentFamily": "ocean",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-ocean",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "saturn",
+      "legacyLocationId": "titan"
+    },
+    {
+      "id": "nessus",
+      "game": "D2",
+      "enName": "Nessus",
+      "frName": "Nessos",
+      "frNameStatus": "official-manifest",
+      "aliases": [
+        "Nessos"
+      ],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinyplacedefinition-3607432451",
+            "legacy-wiki-vex-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinyplacedefinition-3607432451",
+        "legacy-wiki-vex-history"
+      ],
+      "environmentFamily": "vex",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-vex",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "solar-system",
+      "legacyLocationId": "nessus"
+    },
+    {
+      "id": "europa",
+      "game": "D2",
+      "enName": "Europa",
+      "frName": "Europe",
+      "frNameStatus": "official-manifest",
+      "aliases": [
+        "Europe",
+        "Europa"
+      ],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinyplacedefinition-1729879943",
+            "legacy-bungie-d2-destinydestinationdefinition-1729879943",
+            "legacy-wiki-europa-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "dedicated",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinyplacedefinition-1729879943",
+        "legacy-bungie-d2-destinydestinationdefinition-1729879943",
+        "legacy-wiki-europa-history"
+      ],
+      "environmentFamily": "ice",
+      "blenderAssetId": null,
+      "remotionAssetId": "voxel-europa-v1",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "jupiter",
+      "legacyLocationId": "europa"
+    },
+    {
+      "id": "neptune",
+      "game": "D2",
+      "enName": "Neptune",
+      "frName": "Neptune",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinyplacedefinition-2012786160"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinyplacedefinition-2012786160"
+      ],
+      "environmentFamily": "future-city",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-future-city",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "stellar-body",
+      "parentId": "solar-system",
+      "legacyLocationId": "neptune"
+    },
+    {
+      "id": "cosmodrome",
+      "game": "both",
+      "enName": "Cosmodrome",
+      "frName": "Le Cosmodrome",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-3990611421",
+            "legacy-wiki-human-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-3990611421",
+        "legacy-wiki-human-history"
+      ],
+      "environmentFamily": "human",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-human",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "earth",
+      "legacyLocationId": "cosmodrome"
+    },
+    {
+      "id": "edz",
+      "game": "D2",
+      "enName": "European Dead Zone",
+      "frName": "Zone morte européenne",
+      "frNameStatus": "official-manifest",
+      "aliases": [
+        "EDZ",
+        "ZME",
+        "European Dead Zone",
+        "Zone morte européenne"
+      ],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-697502628",
+            "legacy-wiki-human-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-697502628",
+        "legacy-wiki-human-history"
+      ],
+      "environmentFamily": "human",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-human",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "earth",
+      "legacyLocationId": "edz"
+    },
+    {
+      "id": "last-city",
+      "game": "both",
+      "enName": "The Last City",
+      "frName": "La dernière Cité",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-1737926756",
+            "legacy-wiki-red-war",
+            "legacy-wiki-human-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-1737926756",
+        "legacy-wiki-red-war",
+        "legacy-wiki-human-history"
+      ],
+      "environmentFamily": "human",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-human",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "earth",
+      "legacyLocationId": "last-city"
+    },
+    {
+      "id": "europa-regions",
+      "game": "D2",
+      "enName": "Europa",
+      "frName": "Europe",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-1729879943"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-1729879943"
+      ],
+      "environmentFamily": "ice",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-ice",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "europa",
+      "legacyLocationId": "europa-regions"
+    },
+    {
+      "id": "dreaming-city",
+      "game": "D2",
+      "enName": "The Dreaming City",
+      "frName": "La Cité des rêves",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-1416096592",
+            "legacy-wiki-awoken-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-1416096592",
+        "legacy-wiki-awoken-history"
+      ],
+      "environmentFamily": "awoken",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-awoken",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "reef",
+      "legacyLocationId": "dreaming-city"
+    },
+    {
+      "id": "savathun-throne-world",
+      "game": "D2",
+      "enName": "Savathûn's Throne World",
+      "frName": "Monde du trône de Savathûn",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-2244580325"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-2244580325"
+      ],
+      "environmentFamily": "hive",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-hive",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "ascendant-plane",
+      "legacyLocationId": "savathun-throne-world"
+    },
+    {
+      "id": "europan-pyramid",
+      "game": "D2",
+      "enName": "The Europan Pyramid",
+      "frName": "Pyramide d'Europe",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-3354423374"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "dedicated",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-3354423374"
+      ],
+      "environmentFamily": "pyramid",
+      "blenderAssetId": null,
+      "remotionAssetId": "voxel-pyramid-v1",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "ship-station",
+      "parentId": "europa",
+      "legacyLocationId": "europan-pyramid"
+    },
+    {
+      "id": "derelict-leviathan",
+      "game": "D2",
+      "enName": "Derelict Leviathan",
+      "frName": "Épave du Léviathan",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-4081978654"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-4081978654"
+      ],
+      "environmentFamily": "cabal",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-cabal",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "ship-station",
+      "parentId": "leviathan",
+      "legacyLocationId": "derelict-leviathan"
+    },
+    {
+      "id": "dreadnaught",
+      "game": "both",
+      "enName": "Dreadnaught, Rings of Saturn",
+      "frName": "Le Cuirassé, Anneaux de Saturne",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-4173149923"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-4173149923"
+      ],
+      "environmentFamily": "hive",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-hive",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "ship-station",
+      "parentId": "saturn",
+      "legacyLocationId": "dreadnaught"
+    },
+    {
+      "id": "black-garden",
+      "game": "both",
+      "enName": "The Black Garden",
+      "frName": "Le Jardin noir",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-1057138507",
+            "legacy-wiki-vex-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "dedicated",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-1057138507",
+        "legacy-wiki-vex-history"
+      ],
+      "environmentFamily": "garden",
+      "blenderAssetId": null,
+      "remotionAssetId": "voxel-black-garden-v1",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "destiny-universe",
+      "legacyLocationId": "black-garden"
+    },
+    {
+      "id": "pale-heart",
+      "game": "D2",
+      "enName": "The Pale Heart",
+      "frName": "Le Cœur pâle",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-3998251206"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-3998251206"
+      ],
+      "environmentFamily": "cosmic",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-cosmic",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "traveler",
+      "legacyLocationId": "pale-heart"
+    },
+    {
+      "id": "kepler",
+      "game": "D2",
+      "enName": "Kepler",
+      "frName": "Kepler",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-4076196532"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-4076196532"
+      ],
+      "environmentFamily": "cosmic",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-cosmic",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "oort-cloud",
+      "legacyLocationId": "kepler"
+    },
+    {
+      "id": "tower",
+      "game": "D1",
+      "enName": "The Tower",
+      "frName": "La Tour",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-tower",
+            "legacy-wiki-red-war",
+            "legacy-wiki-human-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "dedicated",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-tower",
+        "legacy-wiki-red-war",
+        "legacy-wiki-human-history"
+      ],
+      "environmentFamily": "human",
+      "blenderAssetId": null,
+      "remotionAssetId": "voxel-tower-v1",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "last-city",
+      "legacyLocationId": "tower"
+    },
+    {
+      "id": "traveler",
+      "game": "D1",
+      "enName": "The Traveler",
+      "frName": "Le Voyageur",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-traveler"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-traveler"
+      ],
+      "environmentFamily": "cosmic",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-cosmic",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "ship-station",
+      "parentId": "destiny-universe",
+      "legacyLocationId": "traveler"
+    },
+    {
+      "id": "leviathan",
+      "game": "D2",
+      "enName": "Leviathan",
+      "frName": "Léviathan",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-leviathan-ship",
+            "legacy-wiki-cabal-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-leviathan-ship",
+        "legacy-wiki-cabal-history"
+      ],
+      "environmentFamily": "cabal",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-cabal",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "ship-station",
+      "parentId": "solar-system",
+      "legacyLocationId": "leviathan"
+    },
+    {
+      "id": "vesper-station",
+      "game": "D2",
+      "enName": "Vesper Station",
+      "frName": "Station Vesper",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-vesper-station"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-vesper-station"
+      ],
+      "environmentFamily": "bray",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-bray",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "ship-station",
+      "parentId": "europa",
+      "legacyLocationId": "vesper-station"
+    },
+    {
+      "id": "essence",
+      "game": "D2",
+      "enName": "Essence",
+      "frName": "Essence",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-essence"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-essence"
+      ],
+      "environmentFamily": "pyramid",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-pyramid",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "ship-station",
+      "parentId": "destiny-universe",
+      "legacyLocationId": "essence"
+    },
+    {
+      "id": "lure",
+      "game": "D2",
+      "enName": "The Lure",
+      "frName": "L’Appât",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-the-lure"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-the-lure"
+      ],
+      "environmentFamily": "pyramid",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-pyramid",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "ship-station",
+      "parentId": "savathun-throne-world",
+      "legacyLocationId": "lure"
+    },
+    {
+      "id": "fundament",
+      "game": "D1",
+      "enName": "Fundament",
+      "frName": "Fundament",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "lore",
+          "sources": [
+            "legacy-wiki-fundament",
+            "legacy-ishtar-i-predators"
+          ],
+          "note": "Books of Sorrow is an in-universe account. Floating continents and oceans support a reconstruction; the full landscape is not officially mapped."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-fundament",
+        "legacy-ishtar-i-predators"
+      ],
+      "environmentFamily": "ocean",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-ocean",
+      "note": "Books of Sorrow is an in-universe account. Floating continents and oceans support a reconstruction; the full landscape is not officially mapped.",
+      "type": "lore-world",
+      "parentId": "destiny-universe",
+      "legacyLocationId": "fundament"
+    },
+    {
+      "id": "riis",
+      "game": "D2",
+      "enName": "Riis",
+      "frName": "Riis",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "cinematic",
+          "sources": [
+            "legacy-wiki-riis",
+            "legacy-wiki-eliksni-history"
+          ],
+          "note": "Riis is attested in lore and stylized historical imagery; its exact pre-Whirlwind architecture is not established by a playable map."
+        },
+        {
+          "kind": "lore",
+          "sources": [
+            "legacy-wiki-riis",
+            "legacy-wiki-eliksni-history"
+          ],
+          "note": "Riis is attested in lore and stylized historical imagery; its exact pre-Whirlwind architecture is not established by a playable map."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-riis",
+        "legacy-wiki-eliksni-history"
+      ],
+      "environmentFamily": "eliksni",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-eliksni",
+      "note": "Riis is attested in lore and stylized historical imagery; its exact pre-Whirlwind architecture is not established by a playable map.",
+      "type": "lore-world",
+      "parentId": "destiny-universe",
+      "legacyLocationId": "riis"
+    },
+    {
+      "id": "plaguelands",
+      "game": "D1",
+      "enName": "Plaguelands",
+      "frName": "Contrée infestée",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-plaguelands"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-plaguelands"
+      ],
+      "environmentFamily": "human",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-human",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "parentId": "cosmodrome",
+      "legacyLocationId": "plaguelands"
+    },
+    {
+      "id": "dsc-morning-star",
+      "game": "D2",
+      "enName": "Morning Star",
+      "frName": "Morning Star",
+      "frNameStatus": "untranslated",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "wiki-dsc"
+          ],
+          "note": "Lieu nommé dans la source ; famille modulaire existante, aucune arène fidèle ni modèle individuel créé."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "wiki-dsc"
+      ],
+      "environmentFamily": "bray",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-bray",
+      "note": "Station orbitale associée à Europe ; parentId exprime le rattachement, pas une position au sol.",
+      "type": "ship-station",
+      "parentId": "europa",
+      "legacyLocationId": null
+    },
+    {
+      "id": "arcadian-valley",
+      "game": "D2",
+      "enName": "Arcadian Valley",
+      "frName": "Vallée d'Arcadia",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-3607432451"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-3607432451"
+      ],
+      "environmentFamily": "vex",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-vex",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "legacyLocationId": "arcadian-valley",
+      "parentId": "nessus"
+    },
+    {
+      "id": "unknown-periphery",
+      "game": "D2",
+      "enName": "Unknown Periphery",
+      "frName": "Unknown Periphery",
+      "frNameStatus": "untranslated",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "wiki-desert"
+          ],
+          "note": "Nom géographique vérifié dans une source inspectée ; famille existante réutilisée comme proxy, pas une arène dédiée fidèle."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "wiki-desert"
+      ],
+      "environmentFamily": "vex",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-vex",
+      "note": "Nom géographique vérifié dans une source inspectée ; famille existante réutilisée comme proxy, pas une arène dédiée fidèle.",
+      "type": "destination-region",
+      "parentId": "nine-realms",
+      "legacyLocationId": null
+    },
+    {
+      "id": "moon-regions",
+      "game": "D2",
+      "enName": "The Moon",
+      "frName": "La Lune",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-677774031"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-677774031"
+      ],
+      "environmentFamily": "hive",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-hive",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "legacyLocationId": "moon-regions",
+      "parentId": "moon"
+    },
+    {
+      "id": "new-pacific-arcology",
+      "game": "D2",
+      "enName": "New Pacific Arcology",
+      "frName": "Arcologie du Nouveau-Pacifique",
+      "frNameStatus": "official-manifest",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-bungie-d2-destinydestinationdefinition-2388758973"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-bungie-d2-destinydestinationdefinition-2388758973"
+      ],
+      "environmentFamily": "ocean",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-ocean",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "destination-region",
+      "legacyLocationId": "new-pacific-arcology",
+      "parentId": "titan"
+    },
+    {
+      "id": "arena-imperium-carrier",
+      "game": "D2",
+      "enName": "Imperium Carrier",
+      "frName": "Imperium Carrier",
+      "frNameStatus": "untranslated",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "wiki-equilibrium"
+          ],
+          "note": "Nom géographique vérifié dans une source inspectée ; famille existante réutilisée comme proxy, pas une arène dédiée fidèle."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "wiki-equilibrium"
+      ],
+      "environmentFamily": "cabal",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-cabal",
+      "note": "Nom géographique vérifié dans une source inspectée ; famille existante réutilisée comme proxy, pas une arène dédiée fidèle.",
+      "type": "ship-station",
+      "parentId": "equilibrium",
+      "legacyLocationId": null
+    },
+    {
+      "id": "arena-malphas-contemptus",
+      "game": "D2",
+      "enName": "Malphas Contemptus",
+      "frName": "Malphas Contemptus",
+      "frNameStatus": "untranslated",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "wiki-equilibrium",
+            "wiki-place-malphas-contemptus"
+          ],
+          "note": "Nom géographique vérifié dans une source inspectée ; famille existante réutilisée comme proxy, pas une arène dédiée fidèle."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "wiki-equilibrium",
+        "wiki-place-malphas-contemptus"
+      ],
+      "environmentFamily": "cabal",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-cabal",
+      "note": "Nom géographique vérifié dans une source inspectée ; famille existante réutilisée comme proxy, pas une arène dédiée fidèle.",
+      "type": "ship-station",
+      "parentId": "equilibrium",
+      "legacyLocationId": null
+    },
+    {
+      "id": "glykon",
+      "game": "D2",
+      "enName": "Glykon Volatus",
+      "frName": "Glykon Volatus",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-glykon-volatus",
+            "legacy-wiki-cabal-history"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-glykon-volatus",
+        "legacy-wiki-cabal-history"
+      ],
+      "environmentFamily": "cabal",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-cabal",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "ship-station",
+      "legacyLocationId": "glykon",
+      "parentId": "solar-system"
+    },
+    {
+      "id": "seraph-station",
+      "game": "D2",
+      "enName": "Seraph Station",
+      "frName": "Station Séraphin",
+      "frNameStatus": "editorial-translation",
+      "aliases": [],
+      "expansion": null,
+      "firstSeen": null,
+      "appearanceEvidence": [
+        {
+          "kind": "gameplay",
+          "sources": [
+            "legacy-wiki-seraph-station"
+          ],
+          "note": "Stylized reconstruction; no claim of a canonical map or exact architecture."
+        }
+      ],
+      "canonStatus": "attested",
+      "visualStatus": "modular-reconstruction",
+      "availability": "unknown",
+      "availabilityEvidence": null,
+      "sources": [
+        "legacy-wiki-seraph-station"
+      ],
+      "environmentFamily": "bray",
+      "blenderAssetId": null,
+      "remotionAssetId": "atlas-family-bray",
+      "note": "Stylized reconstruction; no claim of a canonical map or exact architecture.",
+      "type": "ship-station",
+      "legacyLocationId": "seraph-station",
+      "parentId": "earth"
+    }
   ]
 }

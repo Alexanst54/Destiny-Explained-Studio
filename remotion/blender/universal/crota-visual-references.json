@@ -1,0 +1,23 @@
+[
+  {
+    "title": "File:Crota1.jpg",
+    "url": "https://destiny.wiki.gallery/images/8/88/Crota1.jpg",
+    "sha256": "292276c42e03dd22947bdd5206de095b6173baab9e723ffdbc9671129f40f78f",
+    "consultedAt": "2026-11-09",
+    "usage": "Visual reference only; not imported into generated geometry or shaders."
+  },
+  {
+    "title": "File:Grimoire card Crota.jpg",
+    "url": "https://destiny.wiki.gallery/images/9/98/Grimoire_card_Crota.jpg",
+    "sha256": "a50c5ef8f9086e53befa433f31c0e197c951e5a28ca6fa38a3480c986b0d3c7c",
+    "consultedAt": "2026-11-09",
+    "usage": "Visual reference only; not imported into generated geometry or shaders."
+  },
+  {
+    "title": "File:Crota2.jpg",
+    "url": "https://destiny.wiki.gallery/images/f/f6/Crota2.jpg",
+    "sha256": "ffeb6e45d32424a9414aeb75928e14ce3bf479d67a5adc605ea71612de09f223",
+    "consultedAt": "2026-11-09",
+    "usage": "Visual reference only; not imported into generated geometry or shaders."
+  }
+]
