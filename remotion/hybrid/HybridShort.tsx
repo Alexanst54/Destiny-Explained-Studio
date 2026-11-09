@@ -1,7 +1,9 @@
+import {validateSequences,sequenceImage} from '../blender/sequences';
+import type {BlenderSequences} from '../blender/sequences';
 import {withoutPolish} from '../polish/compare';
 import {screenCamera} from '../polish/camera';
 import React,{useMemo} from 'react';
-import {AbsoluteFill,Audio,Sequence,staticFile,useCurrentFrame} from 'remotion';
+import {AbsoluteFill,Audio,Img,Sequence,staticFile,useCurrentFrame} from 'remotion';
 import {episodeSchema,validateWords} from '../src/voxel/episode/schema';
 import type {VoxelEpisodeProps} from '../src/voxel/episode/VoxelEpisode';
 import {findScene} from '../src/voxel/episode/state';
@@ -10,18 +12,20 @@ import {captionTiming,transitionMotion,audioGain,sourceTitle} from './state';
 import {voxelVisualEpisode} from './adapter';
 import {visualRegistry} from './Visuals';
 import {CaptionLayer} from './CaptionLayer';
-export const HybridShort:React.FC<VoxelEpisodeProps&{reducedMotion?:boolean;localNarrationUrl?:string;previewMuted?:boolean;compareBefore?:boolean}>=({episode,preview,alignedWords,reducedMotion=false,localNarrationUrl,previewMuted=false,compareBefore=false})=>{
+export const HybridShort:React.FC<VoxelEpisodeProps&{reducedMotion?:boolean;localNarrationUrl?:string;previewMuted?:boolean;compareBefore?:boolean;blenderSequences?:BlenderSequences}>=({episode,preview,alignedWords,reducedMotion=false,localNarrationUrl,previewMuted=false,compareBefore=false,blenderSequences})=>{
  const selected=useMemo(()=>preview&&compareBefore?withoutPolish(episode):episode,[episode,preview,compareBefore]);
  const valid=useMemo(()=>episodeSchema.parse(selected),[selected]),voxel=useMemo(()=>voxelVisualEpisode(valid),[valid]);
+ const sequences=useMemo(()=>blenderSequences?validateSequences(blenderSequences,valid):undefined,[blenderSequences,valid]);
  const timing=useMemo(()=>captionTiming(valid,alignedWords),[valid,alignedWords]);
  if(!preview&&(!timing.exact||valid.subtitles.status!=='ready'||(valid.audio.voiceover.enabled&&valid.audio.voiceover.status!=='ready')))throw new Error('Final Short requires ready Kokoro narration and complete validated word timestamps');
  const frame=useCurrentFrame(),scene=findScene(valid,frame),visual=scene.visual!,local=frame-scene.startFrame;
  const motion=transitionMotion(visual.transition.type,local,visual.transition.durationFrames,reducedMotion),Component=visual.type==='voxel'?undefined:visualRegistry[visual.type];
  const directing=screenCamera(visual.type==='voxel'?undefined:scene.polish?.camera,local,reducedMotion);
+ const blenderImage=sequenceImage(sequences,frame);
  const hypothetical=['hypothesis','alternate-history'].includes(valid.shorts!.mode),sources=visual.sources;
  return <AbsoluteFill style={{background:'#091423',fontFamily:'Arial, sans-serif',overflow:'hidden'}}>
   <AbsoluteFill style={{opacity:motion.opacity,transform:`translateX(${motion.x}%) scale(${motion.scale})`,clipPath:`inset(0 ${motion.wipe}% 0 0)`}}>
-   {visual.type==='voxel'?<CinematicEpisode episode={voxel} preview={true} visualOnly draftQuality={valid.shorts?.polish?(preview?valid.shorts.polish.previewQuality:valid.shorts.polish.quality)==='draft':preview&&valid.shorts?.quality==='draft'} scenePolish={scene.polish} projectPolish={valid.shorts?.polish} reducedMotion={reducedMotion}/>:Component&&(scene.polish?.camera?<AbsoluteFill style={{transform:`translate(${directing.x}px,${directing.y}px) scale(${directing.scale})`,transformOrigin:directing.origin}}><Component visual={visual} frame={reducedMotion&&scene.polish?.camera?scene.durationFrames-1:local} duration={scene.durationFrames} reducedMotion={reducedMotion}/>{directing.focus>0&&<div style={{position:'absolute',left:(scene.polish?.camera?.screenTarget[0]??50)+'%',top:(scene.polish?.camera?.screenTarget[1]??50)+'%',width:70,height:70,transform:'translate(-50%,-50%)',border:'2px solid #ffe297',borderRadius:12,opacity:directing.focus}}/>}</AbsoluteFill>:<Component visual={visual} frame={reducedMotion&&scene.polish?.camera?scene.durationFrames-1:local} duration={scene.durationFrames} reducedMotion={reducedMotion}/>)}
+   {blenderImage?<Img src={staticFile(blenderImage)} style={{width:'100%',height:'100%',objectFit:'cover'}}/>:visual.type==='voxel'?<CinematicEpisode episode={voxel} preview={true} visualOnly draftQuality={valid.shorts?.polish?(preview?valid.shorts.polish.previewQuality:valid.shorts.polish.quality)==='draft':preview&&valid.shorts?.quality==='draft'} scenePolish={scene.polish} projectPolish={valid.shorts?.polish} reducedMotion={reducedMotion}/>:Component&&(scene.polish?.camera?<AbsoluteFill style={{transform:`translate(${directing.x}px,${directing.y}px) scale(${directing.scale})`,transformOrigin:directing.origin}}><Component visual={visual} frame={reducedMotion&&scene.polish?.camera?scene.durationFrames-1:local} duration={scene.durationFrames} reducedMotion={reducedMotion}/>{directing.focus>0&&<div style={{position:'absolute',left:(scene.polish?.camera?.screenTarget[0]??50)+'%',top:(scene.polish?.camera?.screenTarget[1]??50)+'%',width:70,height:70,transform:'translate(-50%,-50%)',border:'2px solid #ffe297',borderRadius:12,opacity:directing.focus}}/>}</AbsoluteFill>:<Component visual={visual} frame={reducedMotion&&scene.polish?.camera?scene.durationFrames-1:local} duration={scene.durationFrames} reducedMotion={reducedMotion}/>)}
    {visual.type==='voxel'&&visual.headline&&<div style={{position:'absolute',top:155,left:85,right:180,color:'#fff',fontSize:48,fontWeight:800,textShadow:'0 3px 12px #000',overflowWrap:'anywhere'}}>{visual.headline}</div>}
   </AbsoluteFill>
   {motion.flash>0&&<AbsoluteFill style={{background:'#fff',opacity:motion.flash}}/>}

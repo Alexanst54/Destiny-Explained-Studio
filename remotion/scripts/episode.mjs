@@ -1,3 +1,4 @@
+import {validateSequences} from '../blender/sequences.ts';
 import {readFileSync, existsSync, mkdirSync, writeFileSync, unlinkSync} from 'node:fs';
 import {resolve, dirname} from 'node:path';
 import {fileURLToPath} from 'node:url';
@@ -10,10 +11,10 @@ const args = process.argv.slice(2);
 const command = args.shift();
 const source = args[0] && !args[0].startsWith('--') ? args.shift() : 'episodes/traveler_episode_002.json';
 const preview = args.includes('--preview');
-const allowed = /^(--preview|--frames=\d+-\d+|--browser-executable=.+|--concurrency=[1-4])$/;
+const allowed = /^(--preview|--frames=\d+-\d+|--browser-executable=.+|--concurrency=[1-4]|--blender-sequences=.+|--scale=(0\.[1-9][0-9]*|1))$/;
 try {
   if (!['validate','render'].includes(command) || args.some(a => !allowed.test(a)))
-    throw new Error('Usage: episode.mjs validate|render [episode.json] [--preview] [--frames=start-end] [--browser-executable=path] [--concurrency=1-4]');
+    throw new Error('Usage: episode.mjs validate|render [episode.json] [--preview] [--frames=start-end] [--browser-executable=path] [--concurrency=1-4] [--blender-sequences=manifest.json] [--scale=0.1]');
   const episode = episodeSchema.parse(JSON.parse(readFileSync(resolve(root,source),'utf8')));
   console.log(`${episode.id}: ${episode.scenes.length} scenes, ${episode.format.durationFrames} frames, ${episode.format.durationFrames/episode.format.fps}s`);
   let alignedWords;
@@ -48,16 +49,19 @@ try {
     const [start,end] = range.slice(9).split('-').map(Number);
     if (start > end || end >= episode.format.durationFrames) throw new Error('Invalid test frame range');
   }
+  const sequenceArg=args.find(a=>a.startsWith('--blender-sequences='));
+  const blenderSequences=sequenceArg?validateSequences(JSON.parse(readFileSync(resolve(root,sequenceArg.split('=').slice(1).join('=')),'utf8')),episode):undefined;
+  if(blenderSequences)for(const clip of blenderSequences.clips)for(const path of clip.frames)if(!existsSync(resolve(root,'public',path)))throw Error('Missing Blender frame: '+path);
   if (command === 'render') {
     mkdirSync(resolve(root,'out'),{recursive:true});
     const propsPath = resolve(root,'out',`.episode-props-${process.pid}.json`);
-    const output = preview ? episode.render.output.replace(/\.mp4$/, '-preview.mp4') : episode.render.output;
+    const output = blenderSequences ? episode.render.output.replace(/\.mp4$/, '-blender.mp4') : preview ? episode.render.output.replace(/\.mp4$/, '-preview.mp4') : episode.render.output;
     try {
-      writeFileSync(propsPath,JSON.stringify({episode,preview,alignedWords}));
+      writeFileSync(propsPath,JSON.stringify({episode,preview,alignedWords,blenderSequences}));
       const result = spawnSync(process.execPath,[resolve(root,'node_modules/@remotion/cli/remotion-cli.js'),
         'render','src/index.ts',episode.render.composition,output,
         '--codec=h264','--pixel-format=yuv420p',...(args.some(a => a.startsWith('--concurrency=')) ? [] : ['--concurrency=1']),'--gl=swangle',`--props=${propsPath}`,
-        ...args.filter(a => a !== '--preview')],{cwd:root,stdio:'inherit'});
+        ...args.filter(a => a !== '--preview'&&!a.startsWith('--blender-sequences='))],{cwd:root,stdio:'inherit'});
       if (result.error || result.status !== 0) throw new Error(`Render failed: ${result.error?.message ?? result.status}`);
     } finally {unlinkSync(propsPath);}
   }
