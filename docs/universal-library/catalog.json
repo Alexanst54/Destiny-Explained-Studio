@@ -1387,8 +1387,45 @@
       "nature": null,
       "priority": true,
       "atlasVisualStatus": "placeholder",
-      "status": "missing",
-      "implementation": null,
+      "status": "partial-dedicated-prototype",
+      "implementation": {
+        "provider": "universal",
+        "module": "universal.oryx",
+        "status": "partial-dedicated-prototype",
+        "animations": [
+          "idle",
+          "move",
+          "combat",
+          "signature",
+          "reveal"
+        ],
+        "lods": [
+          0,
+          1,
+          2
+        ],
+        "views": [
+          "front",
+          "profile",
+          "three-quarter",
+          "cinematic",
+          "environment",
+          "silhouette",
+          "reveal",
+          "close-up"
+        ],
+        "gallery": "docs/universal-library/lot-c/oryx/README.md",
+        "galleryV1Status": "pending-real-renders",
+        "protectedFiles": [],
+        "environmentId": "arena-threshold",
+        "reviewGrid": {
+          "width": 768,
+          "height": 576,
+          "frames": 36,
+          "fps": 24,
+          "animation": "signature"
+        }
+      },
       "family": "hive",
       "familyCandidates": [
         "hive"
@@ -2994,8 +3031,45 @@
       "nature": null,
       "priority": true,
       "atlasVisualStatus": "placeholder",
-      "status": "missing",
-      "implementation": null,
+      "status": "partial-dedicated-prototype",
+      "implementation": {
+        "provider": "universal",
+        "module": "universal.rhulk",
+        "status": "partial-dedicated-prototype",
+        "animations": [
+          "idle",
+          "move",
+          "combat",
+          "signature",
+          "reveal"
+        ],
+        "lods": [
+          0,
+          1,
+          2
+        ],
+        "views": [
+          "front",
+          "profile",
+          "three-quarter",
+          "cinematic",
+          "environment",
+          "silhouette",
+          "reveal",
+          "close-up"
+        ],
+        "gallery": "docs/universal-library/lot-c/rhulk/README.md",
+        "galleryV1Status": "pending-real-renders",
+        "protectedFiles": [],
+        "environmentId": "vow-of-disciple",
+        "reviewGrid": {
+          "width": 640,
+          "height": 800,
+          "frames": 36,
+          "fps": 24,
+          "animation": "combat"
+        }
+      },
       "family": "pyramid",
       "familyCandidates": [
         "pyramid"
@@ -3343,8 +3417,45 @@
       "nature": null,
       "priority": true,
       "atlasVisualStatus": "placeholder",
-      "status": "missing",
-      "implementation": null,
+      "status": "partial-dedicated-prototype",
+      "implementation": {
+        "provider": "universal",
+        "module": "universal.nezarec",
+        "status": "partial-dedicated-prototype",
+        "animations": [
+          "idle",
+          "move",
+          "combat",
+          "signature",
+          "reveal"
+        ],
+        "lods": [
+          0,
+          1,
+          2
+        ],
+        "views": [
+          "front",
+          "profile",
+          "three-quarter",
+          "cinematic",
+          "environment",
+          "silhouette",
+          "reveal",
+          "close-up"
+        ],
+        "gallery": "docs/universal-library/lot-c/nezarec/README.md",
+        "galleryV1Status": "pending-real-renders",
+        "protectedFiles": [],
+        "environmentId": "root-of-nightmares",
+        "reviewGrid": {
+          "width": 640,
+          "height": 640,
+          "frames": 36,
+          "fps": 24,
+          "animation": "combat"
+        }
+      },
       "family": "pyramid",
       "familyCandidates": [
         "pyramid"
@@ -14932,8 +15043,26 @@
       "nature": null,
       "priority": false,
       "atlasVisualStatus": "modular-reconstruction",
-      "status": "missing",
-      "implementation": null,
+      "status": "partial-dedicated-prototype",
+      "implementation": {
+        "provider": "universal",
+        "module": "universal.rhulk",
+        "status": "partial-dedicated-prototype",
+        "animations": [
+          "idle"
+        ],
+        "lods": [
+          0,
+          1,
+          2
+        ],
+        "views": [
+          "environment"
+        ],
+        "gallery": "docs/universal-library/lot-c/rhulk/README.md",
+        "galleryV1Status": "pending-real-renders",
+        "protectedFiles": []
+      },
       "family": "pyramid",
       "familyCandidates": [
         "pyramid"
@@ -14998,8 +15127,26 @@
       "nature": null,
       "priority": false,
       "atlasVisualStatus": "modular-reconstruction",
-      "status": "missing",
-      "implementation": null,
+      "status": "partial-dedicated-prototype",
+      "implementation": {
+        "provider": "universal",
+        "module": "universal.nezarec",
+        "status": "partial-dedicated-prototype",
+        "animations": [
+          "idle"
+        ],
+        "lods": [
+          0,
+          1,
+          2
+        ],
+        "views": [
+          "environment"
+        ],
+        "gallery": "docs/universal-library/lot-c/nezarec/README.md",
+        "galleryV1Status": "pending-real-renders",
+        "protectedFiles": []
+      },
       "family": "pyramid",
       "familyCandidates": [
         "pyramid"
@@ -16707,8 +16854,26 @@
       "nature": null,
       "priority": false,
       "atlasVisualStatus": "modular-reconstruction",
-      "status": "missing",
-      "implementation": null,
+      "status": "partial-dedicated-prototype",
+      "implementation": {
+        "provider": "universal",
+        "module": "universal.oryx",
+        "status": "partial-dedicated-prototype",
+        "animations": [
+          "idle"
+        ],
+        "lods": [
+          0,
+          1,
+          2
+        ],
+        "views": [
+          "environment"
+        ],
+        "gallery": "docs/universal-library/lot-c/oryx/README.md",
+        "galleryV1Status": "pending-real-renders",
+        "protectedFiles": []
+      },
       "family": "hive",
       "familyCandidates": [
         "hive"

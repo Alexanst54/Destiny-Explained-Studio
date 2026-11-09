@@ -14,9 +14,13 @@ def plan(include_prototypes=False):
         impl=e['implementation']
         if not impl or impl['status'].startswith('partial') and not include_prototypes:
             backlog.append(dict(id=e['id'],status=e['status'],composition=e['composition'],nature=e['nature'],parentBossId=e['parentBossId'],activityIds=e['activityIds']));continue
-        animation=next((a for a in ['walk','attack','rotate','move','temporal'] if a in impl['animations']),'idle')
-        for view in ['front','three-quarter','silhouette','environment','animation']:
+        animation=next((a for a in ['walk','attack','rotate','combat','signature','move','temporal'] if a in impl['animations']),'idle')
+        if impl.get('reviewGrid'):animation=impl['reviewGrid']['animation']
+        views=['front','profile','three-quarter','cinematic','environment','animation'] if 'profile' in impl.get('views',[]) else ['front','three-quarter','silhouette','environment','animation']
+        for view in views:
             jobs.append(dict(id=e['id']+'/'+view,selection=e['id'],view='environment' if view=='animation' else view,animation=animation if view=='animation' else 'idle',quality='balanced' if view=='animation' else 'cinematic',lod=0,width=480 if view=='animation' else 640,height=360 if view=='animation' else 800,frames=24 if view=='animation' else 1,fps=24,video=view=='animation',modelStatus=impl['status']))
+            if 'profile' in impl.get('views',[]):
+                grid=impl['reviewGrid'];jobs[-1].update(width=480 if view=='animation' else grid['width'],height=360 if view=='animation' else grid['height'],frames=grid['frames'] if view=='animation' else 1,fps=grid['fps'])
     return dict(version=1,jobs=jobs,backlog=backlog,qualityGate='A successful render is technical evidence, not automatic artistic approval.')
 
 def main():

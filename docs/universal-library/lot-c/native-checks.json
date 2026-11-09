@@ -1,0 +1,131 @@
+{
+  "oryx": {
+    "evaluations": 240,
+    "views": 5,
+    "clipProjectionFrames": 36,
+    "maxClipOverflow": 0,
+    "maxNormalizedOverflow": 0,
+    "staticResources": true,
+    "randomAccess": true,
+    "articulatedMotion": true,
+    "bounds": {
+      "front": {
+        "minX": 0.08654593676328659,
+        "maxX": 0.9134540557861328,
+        "minY": 0.1448640674352646,
+        "maxY": 0.8177027106285095
+      },
+      "profile": {
+        "minX": 0.45426321029663086,
+        "maxX": 0.5791326761245728,
+        "minY": 0.14606797695159912,
+        "maxY": 0.9597874879837036
+      },
+      "three-quarter": {
+        "minX": 0.2752758264541626,
+        "maxX": 0.9124259352684021,
+        "minY": 0.1369602084159851,
+        "maxY": 0.9045315384864807
+      },
+      "cinematic": {
+        "minX": 0.19672568142414093,
+        "maxX": 0.8653169274330139,
+        "minY": 0.21463549137115479,
+        "maxY": 0.7866448163986206
+      },
+      "environment": {
+        "minX": 0.3148166239261627,
+        "maxX": 0.6724249124526978,
+        "minY": 0.32792142033576965,
+        "maxY": 0.6364247798919678
+      }
+    },
+    "physicalFootContactValidated": false
+  },
+  "rhulk": {
+    "evaluations": 240,
+    "views": 5,
+    "clipProjectionFrames": 36,
+    "maxClipOverflow": 0,
+    "maxNormalizedOverflow": 0,
+    "staticResources": true,
+    "randomAccess": true,
+    "articulatedMotion": true,
+    "bounds": {
+      "front": {
+        "minX": 0.3312818109989166,
+        "maxX": 0.6993041038513184,
+        "minY": 0.1497410535812378,
+        "maxY": 0.8779847025871277
+      },
+      "profile": {
+        "minX": 0.4203358590602875,
+        "maxX": 0.5595273971557617,
+        "minY": 0.151664599776268,
+        "maxY": 0.8776436448097229
+      },
+      "three-quarter": {
+        "minX": 0.35152310132980347,
+        "maxX": 0.6644865870475769,
+        "minY": 0.14543010294437408,
+        "maxY": 0.8800623416900635
+      },
+      "cinematic": {
+        "minX": 0.33916667103767395,
+        "maxX": 0.6817871332168579,
+        "minY": 0.18040727078914642,
+        "maxY": 0.8510288000106812
+      },
+      "environment": {
+        "minX": 0.3451105058193207,
+        "maxX": 0.534794807434082,
+        "minY": 0.30224165320396423,
+        "maxY": 0.675258219242096
+      }
+    },
+    "physicalFootContactValidated": false
+  },
+  "nezarec": {
+    "evaluations": 240,
+    "views": 5,
+    "clipProjectionFrames": 36,
+    "maxClipOverflow": 0,
+    "maxNormalizedOverflow": 0,
+    "staticResources": true,
+    "randomAccess": true,
+    "articulatedMotion": true,
+    "bounds": {
+      "front": {
+        "minX": 0.02837260626256466,
+        "maxX": 0.7981512546539307,
+        "minY": 0.1512010246515274,
+        "maxY": 0.8779383897781372
+      },
+      "profile": {
+        "minX": 0.3753243088722229,
+        "maxX": 0.7366584539413452,
+        "minY": 0.1307756006717682,
+        "maxY": 0.9026919007301331
+      },
+      "three-quarter": {
+        "minX": 0.22953404486179352,
+        "maxX": 0.8745007514953613,
+        "minY": 0.13104969263076782,
+        "maxY": 0.8826070427894592
+      },
+      "cinematic": {
+        "minX": 0.11102288216352463,
+        "maxX": 0.8015421032905579,
+        "minY": 0.1805068999528885,
+        "maxY": 0.8583972454071045
+      },
+      "environment": {
+        "minX": 0.2288641780614853,
+        "maxX": 0.62047278881073,
+        "minY": 0.2974725365638733,
+        "maxY": 0.6718714833259583
+      }
+    },
+    "physicalFootContactValidated": false
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "seed": 42,
+  "lod": 0,
+  "stills": {"quality": "cinematic", "views": ["front", "profile", "three-quarter", "cinematic", "environment"]},
+  "clip": {"quality": "balanced", "view": "cinematic", "frames": 36, "fps": 24, "width": 480, "height": 360},
+  "bosses": [
+    {"id": "boss-oryx", "slug": "oryx", "arena": "arena-threshold", "width": 768, "height": 576, "animation": "signature"},
+    {"id": "boss-rhulk", "slug": "rhulk", "arena": "vow-of-disciple", "width": 640, "height": 800, "animation": "combat"},
+    {"id": "boss-nezarec", "slug": "nezarec", "arena": "root-of-nightmares", "width": 640, "height": 640, "animation": "combat"}
+  ]
+}

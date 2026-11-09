@@ -1,6 +1,6 @@
 """Versioned opt-in request. Historical renderer contracts remain unchanged."""
 from .registry import resolve
-VIEWS=('front','three-quarter','silhouette','environment','reveal','close-up')
+VIEWS=('front','three-quarter','silhouette','environment','reveal','close-up','profile','cinematic')
 
 def request(selection,quality='balanced',seed=42,lod=0,frames=1,fps=24,width=640,height=800,start_frame=0,animation='idle',view='environment',arena=None,variant=None,family_study=False,family=None,environment_variant='sanctum'):
     for key,value,lo,hi in [('seed',seed,0,2147483647),('lod',lod,0,2),('frames',frames,1,120),('width',width,320,1920),('height',height,240,1920),('start_frame',start_frame,0,17999)]:
@@ -9,6 +9,9 @@ def request(selection,quality='balanced',seed=42,lod=0,frames=1,fps=24,width=640
     if quality not in ['draft','balanced','cinematic'] or view not in VIEWS or environment_variant not in ['sanctum','causeway','courtyard']:raise ValueError('Unknown quality, view or environment variant')
     binding=resolve(selection,arena,variant,family_study,family)
     if binding['entity']['kind']=='environment' and view!='environment':raise ValueError('Environment selections require --view environment; anatomical views require a dedicated boss')
+    if view in ['profile','cinematic']:
+        from .providers import load
+        if binding['provider']!='universal' or view not in getattr(load(binding['selectionId']),'SUPPORTED_VIEWS',()):raise ValueError('View unsupported by this provider')
     animations=binding['entity']['implementation']['animations'] if binding['entity']['implementation'] else ['idle']
     if animation not in animations:raise ValueError('Unsupported animation for selected implementation')
     return dict(version=1,selectionId=selection,variantId=variant,binding=binding,quality=quality,seed=seed,lod=lod,frames=frames,fps=fps,width=width,height=height,startFrame=start_frame,animation=animation,view=view,environmentVariant=environment_variant)

@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "baseline": "docs/universal-library/crota/front.png",
+  "repeat": "crota-front.png",
+  "repeatSha256": "5bf260eb956cfd620fc7879a3de200c49f209e05f89c908e7bd30d03af3ea983",
+  "report": "crota-front-report.json",
+  "reportSha256": "1cad04559a3f99885a17011583cd00798048dd658a90b3f5c7a4ddd4a7683dac",
+  "rgbSha256": "a3bf8739b3ee6bb5d78b78dea55e47f2d041ec91b17c28aeda91a8f73778eca8",
+  "identicalDecodedRgb": true,
+  "differentChannelSamples": 0
+}

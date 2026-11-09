@@ -1564,6 +1564,11 @@
       "sha256": "2e4865453d10c92ba8c47fef84435cab7ff37be95ab726b791ddc9853285bf93"
     },
     {
+      "path": "remotion/blender/Lot-C-Colab-Pro.ipynb",
+      "bytes": 7907,
+      "sha256": "a1cd46fa1b365409846baa67834191fed166c2f3acf5fab0d6c1a9fc586fb17c"
+    },
+    {
       "path": "remotion/blender/README.md",
       "bytes": 6394,
       "sha256": "71367c2154ea904928b14a24fbb49afb6e03975d0b5e290a3d9698e9348fb2ff"
@@ -1810,13 +1815,18 @@
     },
     {
       "path": "remotion/blender/tests/test_crota_library.py",
-      "bytes": 3906,
-      "sha256": "6bec112222e8b799cfd37f4f5d63aa54cc220130321fd8697c80328cb8b4f95b"
+      "bytes": 3910,
+      "sha256": "919953b60a5bebfc56fd7007f590c669ce718a67e4ec3496e4deca28ed65de26"
     },
     {
       "path": "remotion/blender/tests/test_environment.py",
       "bytes": 2705,
       "sha256": "63ffec34bf8a1accc54f9522e4bd733425b00fb722755488883072125837ba29"
+    },
+    {
+      "path": "remotion/blender/tests/test_lot_c.py",
+      "bytes": 6060,
+      "sha256": "2ea4f57526da7894f9b98107696315130a50b41dd55d803011e4c3204fe1cafc"
     },
     {
       "path": "remotion/blender/tests/test_render_one.py",
@@ -1855,13 +1865,13 @@
     },
     {
       "path": "remotion/blender/universal/batch.py",
-      "bytes": 3246,
-      "sha256": "ff7ece51293c1e885e98a1589f21fd80815dc6b612e27a8aeb88bfe60cc0d2cc"
+      "bytes": 3754,
+      "sha256": "4372e9499ca9574a8d674acd018d469d9318f54f094ffe845206b3af01a38729"
     },
     {
       "path": "remotion/blender/universal/build_index.py",
-      "bytes": 3201,
-      "sha256": "30fc8d7327bde17a8d94af0bc20c2a2bd03cbd480daccf5359e9d69aa0778b25"
+      "bytes": 3874,
+      "sha256": "17cf4fa47dbf262aac70aa13d6b8ea362169eb7c72dfc7eceab2a6e68f5447c3"
     },
     {
       "path": "remotion/blender/universal/cache.py",
@@ -1904,14 +1914,49 @@
       "sha256": "c336ff607c3ef74c3458690e7e0238619cf1d0ca6e901d432d9fc08090621200"
     },
     {
+      "path": "remotion/blender/universal/lot_c_check.py",
+      "bytes": 3444,
+      "sha256": "ffdb1d393b7372fc17d44a83f3dd95238c5b9fd3be2e979024dde877a7e6ed80"
+    },
+    {
+      "path": "remotion/blender/universal/lot_c_evidence.py",
+      "bytes": 8032,
+      "sha256": "14cb3059a55b4d45ebb66804d8533a1c091cfae4a606ba31286cb0d4a795f621"
+    },
+    {
+      "path": "remotion/blender/universal/lot_c_render.py",
+      "bytes": 2306,
+      "sha256": "e0ee8694b2834398859e6d8a6aea205722ebce6d0d4d240988a681d78bbb94c7"
+    },
+    {
+      "path": "remotion/blender/universal/lot_c_shots.json",
+      "bytes": 664,
+      "sha256": "36761eb321660eeebd38f636868b15b7393a08f943d90fe159cab453dc0684f6"
+    },
+    {
       "path": "remotion/blender/universal/models.json",
-      "bytes": 4542,
-      "sha256": "0d84b36845146a09f08c7ac0630d5d133827ec151e1af13ab49072896bc2124d"
+      "bytes": 8033,
+      "sha256": "449343780f4e4e06d7b4c1a7edcbe816f794fd8944b8f9bd9d556090ea82f2ec"
+    },
+    {
+      "path": "remotion/blender/universal/nezarec.py",
+      "bytes": 8701,
+      "sha256": "c7294b0db7ab47e9cb6866263e2aaa53b53c41d227cdcb0c1ad96b373434029b"
+    },
+    {
+      "path": "remotion/blender/universal/oryx.py",
+      "bytes": 8483,
+      "sha256": "ab13b04873cb166b835aac6cbfe5a72776788f9895d9cdf3ce045fa6c2111b50"
     },
     {
       "path": "remotion/blender/universal/providers.py",
       "bytes": 796,
       "sha256": "606a99a104658f06cf9100b8415cd3ccc42235d1558f37064093ada4856a73e7"
+    },
+    {
+      "path": "remotion/blender/universal/raid_shapes.py",
+      "bytes": 4519,
+      "sha256": "9b8b6d1e17cf26ebf3be49dc888d3f77567d3693a07022f1172bcbf2aad8c9b9"
     },
     {
       "path": "remotion/blender/universal/registry.py",
@@ -1925,8 +1970,13 @@
     },
     {
       "path": "remotion/blender/universal/request.py",
-      "bytes": 2249,
-      "sha256": "8c3d246dc08c27c29d42b5837883cd03555a5171b615cf2259d7d84facd8fd7c"
+      "bytes": 2519,
+      "sha256": "dc360eb172575834010007ad35debbffd598e04709df58cd22682657d23a80d3"
+    },
+    {
+      "path": "remotion/blender/universal/rhulk.py",
+      "bytes": 8161,
+      "sha256": "002ae69016463ef92a1062266a05f0c1dea77a0c59fad8fe4dd64752233dfd3a"
     },
     {
       "path": "remotion/blender/universal/verify_crota.py",
@@ -1940,8 +1990,8 @@
     },
     {
       "path": "remotion/blender/universal/worker.py",
-      "bytes": 12039,
-      "sha256": "e8e9b9866d39359788df4f44a9d087c733a0b0a75bbda3876cae42dfd80129d5"
+      "bytes": 13511,
+      "sha256": "5b85d584e1511394c8f734d625f01f6c4003f2135808baf7850a3c3d34780fd8"
     },
     {
       "path": "remotion/blender/validation-evidence.json",
