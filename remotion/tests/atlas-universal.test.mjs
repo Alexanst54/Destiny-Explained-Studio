@@ -179,7 +179,7 @@ test('pinned revisions validate source identity, date, host, revision ID and cov
  }
 });
 
-test('reuse plans cover every boss, form and environment without promoting them to implemented models',()=>{
+test('reuse plans cover every entity and only the two validated Vex bosses have implemented models',()=>{
  const targets=[...atlas.bosses,...atlas.bossVariants,...atlas.locations,...atlas.locationVariants];assert.equal(atlas.assetReusePlans.length,targets.length);
  for(const target of targets)assert.equal(atlas.assetReusePlans.filter(p=>p.entityId===target.id).length,1);
  for(const b of [...atlas.bosses,...atlas.bossVariants]){assert.equal(b.remotionAssetId,null);if(['boss-atheon','boss-templar'].includes(b.id)){assert.equal(b.visualStatus,'dedicated');assert.ok(b.blenderAssetId);}else{assert.equal(b.visualStatus,'placeholder');assert.equal(b.blenderAssetId,null);}}

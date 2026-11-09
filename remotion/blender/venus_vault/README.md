@@ -37,6 +37,7 @@ Vénus représente une portion artistique de l’Académie Ishtar et de sa jungl
 Le sélecteur Python et `atlas/universal/blender.ts` vérifient les IDs, assets et relations boss → rencontre → arène. Ils lisent le même registre `atlas-bindings.json`. Exemple API Node 22.23.4, depuis `remotion/` :
 
 ```sh
+mkdir -p ../work
 node --experimental-strip-types scripts/select-blender-asset.mjs boss-atheon ../work/atheon-request.json '{"animation":"temporal","startFrame":30}'
 ```
 

@@ -1,12 +1,14 @@
-# Audit des assets — première étape de l’issue #18
+# Audit des assets — Atlas et extension Blender Vénus/Caveau
 
 Audit du 2026-11-09. Branche observée au départ : `feat/gpu-render-optimization-0.8.4` (`146d43e`, PR #17). Implémentation indépendante depuis `main` (`1effd88`). Aucun asset existant supprimé ou remplacé.
+
+Extension visuelle sur `feat/venus-vault-blender-0.9.0`, basée sur la branche de PR #19 à `eb6c4de`. Les observations de branche ci-dessus décrivent l’audit initial ; aucune modification de PR #17 ou PR #19.
 
 ## Méthode et preuve reproductible
 
 Exécuter depuis `remotion/` : `npm run audit:assets` ; vérifier sans réécriture : `npm run audit:assets -- --check`. [asset-audit.json](../remotion/atlas/universal/asset-audit.json) contient chemins, tailles, SHA-256 et références par épisode. Les schémas historiques sont exécutés. L’audit fonctionne hors ligne.
 
-L’inventaire porte sur **152 fichiers suivis**, **12 épisodes JSON**, les catalogues, moteurs, bridges et assets compilés. Les médias Kokoro et caches ignorés ne sont pas des fichiers d’assets versionnés ; les références à générer sont signalées séparément. Un fichier présent ou une référence textuelle ne démontre pas son rendu ni sa fidélité canonique.
+L’inventaire porte sur **153 fichiers suivis**, **12 épisodes JSON**, les catalogues, moteurs, bridges et assets compilés. Les médias Kokoro et caches ignorés ne sont pas des fichiers d’assets versionnés ; les références à générer sont signalées séparément. Un fichier présent ou une référence textuelle ne démontre pas son rendu ni sa fidélité canonique.
 
 ## Inventaire réel
 

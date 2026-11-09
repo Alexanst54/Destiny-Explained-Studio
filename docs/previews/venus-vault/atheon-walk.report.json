@@ -1,0 +1,1101 @@
+{
+  "status": "success",
+  "request": {
+    "version": 1,
+    "selectionId": "boss-atheon",
+    "environmentId": "arena-glass-throne",
+    "bossId": "boss-atheon",
+    "quality": "draft",
+    "seed": 42,
+    "camera": "orbit",
+    "animation": "walk",
+    "frames": 48,
+    "fps": 24,
+    "width": 480,
+    "height": 270,
+    "startFrame": 0
+  },
+  "blenderVersion": "4.3.2",
+  "frames": [
+    {
+      "frame": 0,
+      "file": "frame-0000.png",
+      "seconds": 11.484,
+      "bytes": 197254,
+      "sha256": "89739604951b06c8d85d33a936a13bf4d6e7f5837df004899c06a29527c974ca",
+      "camera": {
+        "position": [
+          -14.776933617327451,
+          -19.383837528937097,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 1,
+      "file": "frame-0001.png",
+      "seconds": 11.258,
+      "bytes": 197144,
+      "sha256": "b4bdc31c88284ef625231d005ef024dec91dd60345c6d248be643b8d7b3a1c29",
+      "camera": {
+        "position": [
+          -14.587381060382672,
+          -19.481718940386813,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 2,
+      "file": "frame-0002.png",
+      "seconds": 11.795,
+      "bytes": 198239,
+      "sha256": "6e87834fda2a02acf0f0d03d73af7b03d6a43267f35e04e415889d9f0e026af2",
+      "camera": {
+        "position": [
+          -14.39718017779199,
+          -19.578334502349737,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 3,
+      "file": "frame-0003.png",
+      "seconds": 12.6,
+      "bytes": 198684,
+      "sha256": "92754f9ce9b1beb3db45ade7127917a23527eade0e53c5e4ef16c9b07e2292d2",
+      "camera": {
+        "position": [
+          -14.20633942289663,
+          -19.67367992081681,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 4,
+      "file": "frame-0004.png",
+      "seconds": 12.067,
+      "bytes": 199116,
+      "sha256": "fdf18f974cd3d877ae157a4f60004b9b95e5896ae8c8249ce922fd89ef97d7c9",
+      "camera": {
+        "position": [
+          -14.014867277476517,
+          -19.767750958229563,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 5,
+      "file": "frame-0005.png",
+      "seconds": 11.789,
+      "bytes": 199760,
+      "sha256": "abbad2a248fc897ffe8062eb90018b4541efa9fc1a9b63faa5377d1e65d8baf6",
+      "camera": {
+        "position": [
+          -13.82277225137328,
+          -19.860543433668482,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 6,
+      "file": "frame-0006.png",
+      "seconds": 11.508,
+      "bytes": 200773,
+      "sha256": "d3e9d2f8b6483282d3929d3502c9fb7bd76411d00359c16af932f66e7d1c5d49",
+      "camera": {
+        "position": [
+          -13.630062882111984,
+          -19.95205322303883,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 7,
+      "file": "frame-0007.png",
+      "seconds": 12.0,
+      "bytes": 201338,
+      "sha256": "299c21d4125c4b50f57bb5570661da233a73b06ad90b9f46e0308752029ccc54",
+      "camera": {
+        "position": [
+          -13.436747734521779,
+          -20.04227625925392,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 8,
+      "file": "frame-0008.png",
+      "seconds": 11.956,
+      "bytes": 201769,
+      "sha256": "0e2fcabba2b6cd546329a5f588fb0e29fd6e274cf79d8e5333abad822658e31a",
+      "camera": {
+        "position": [
+          -13.242835400355192,
+          -20.131208532415872,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 9,
+      "file": "frame-0009.png",
+      "seconds": 12.829,
+      "bytes": 202432,
+      "sha256": "3e0514a81190905fe1d733d1187890565e10c19b470b07ac5c4e6b059221edf0",
+      "camera": {
+        "position": [
+          -13.048334497906241,
+          -20.218846089993868,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 10,
+      "file": "frame-0010.png",
+      "seconds": 11.486,
+      "bytes": 201600,
+      "sha256": "4664acef59a78ea87c4fa3026792892774ca887a246f60e895bbc160c5bdca2c",
+      "camera": {
+        "position": [
+          -12.853253671627485,
+          -20.30518503699976,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 11,
+      "file": "frame-0011.png",
+      "seconds": 11.902,
+      "bytes": 200732,
+      "sha256": "2d36972902abb8e67529b2ad8a87620eb8ebc05dbba598837c677e3d12ec3177",
+      "camera": {
+        "position": [
+          -12.657601591745747,
+          -20.39022153616123,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 12,
+      "file": "frame-0012.png",
+      "seconds": 11.898,
+      "bytes": 200091,
+      "sha256": "031179eea20d8483d1bffcb0b85cceebe0ad09900726c012b17293c878d87802",
+      "camera": {
+        "position": [
+          -12.461386953876811,
+          -20.473951808092323,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 13,
+      "file": "frame-0013.png",
+      "seconds": 14.999,
+      "bytes": 199884,
+      "sha256": "1207782682a3715ee3fdb362a2947f5fca595773de262e4bb7efd9765954d2d2",
+      "camera": {
+        "position": [
+          -12.264618478638964,
+          -20.556372131461394,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 14,
+      "file": "frame-0014.png",
+      "seconds": 18.405,
+      "bytes": 200096,
+      "sha256": "917ac6177d02f1f42e9e9503b924193ce7a6d83f16d886c25d8ea328b25bbb91",
+      "camera": {
+        "position": [
+          -12.067304911265374,
+          -20.637478843156526,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 15,
+      "file": "frame-0015.png",
+      "seconds": 17.945,
+      "bytes": 200538,
+      "sha256": "be1604f6967fcb9a3899205df9af0f0ba0624db0ef577c98636afa672cf83149",
+      "camera": {
+        "position": [
+          -11.86945502121544,
+          -20.71726833844833,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 16,
+      "file": "frame-0016.png",
+      "seconds": 11.811,
+      "bytes": 199987,
+      "sha256": "7d782275fa616c8cc46fa98a1b931f44df692a50df16e04da4ceb73ce7e67e25",
+      "camera": {
+        "position": [
+          -11.671077601785054,
+          -20.79573707115015,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 17,
+      "file": "frame-0017.png",
+      "seconds": 11.827,
+      "bytes": 200033,
+      "sha256": "0d1d80e0d8de0649a0092fb5bfb09329e13369e5afee20b31e043c3e5544c2d7",
+      "camera": {
+        "position": [
+          -11.47218146971575,
+          -20.872881553775667,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 18,
+      "file": "frame-0018.png",
+      "seconds": 11.917,
+      "bytes": 199676,
+      "sha256": "cbe2ce54ae671256944a9f3f63700f0a033a105e5da19a37aa4b966e56b55bde",
+      "camera": {
+        "position": [
+          -11.272775464802873,
+          -20.948698357693917,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 19,
+      "file": "frame-0019.png",
+      "seconds": 11.846,
+      "bytes": 199528,
+      "sha256": "987f181d19b6c17c7f8e07a13544c4e804399587ca2fc9c2231f5ec13bf8bd77",
+      "camera": {
+        "position": [
+          -11.072868449502723,
+          -21.02318411328164,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 20,
+      "file": "frame-0020.png",
+      "seconds": 11.305,
+      "bytes": 199033,
+      "sha256": "fbbfc0779055d6f88a5fab5af95ed7746ae1d7e8ee651e4c6db89d3136ae8b5a",
+      "camera": {
+        "position": [
+          -10.87246930853862,
+          -21.09633551007308,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 21,
+      "file": "frame-0021.png",
+      "seconds": 11.635,
+      "bytes": 198419,
+      "sha256": "72ec3c9fba346be7bea09f3ddbf1049da9f32c19350064172e474429ef74e199",
+      "camera": {
+        "position": [
+          -10.671586948506054,
+          -21.16814929690708,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 22,
+      "file": "frame-0022.png",
+      "seconds": 11.399,
+      "bytes": 197919,
+      "sha256": "0b4db8a4a7641258202d6fb8a193f7f171c92a1c1830bb197663f05c3c3531f1",
+      "camera": {
+        "position": [
+          -10.470230297476867,
+          -21.238622282071606,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 23,
+      "file": "frame-0023.png",
+      "seconds": 13.347,
+      "bytes": 197169,
+      "sha256": "928108ceae144adbe5c7ba9a83bde8384cef7a7571c2685848b5eb324a56f0a4",
+      "camera": {
+        "position": [
+          -10.268408304602396,
+          -21.307751333445584,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 24,
+      "file": "frame-0024.png",
+      "seconds": 12.618,
+      "bytes": 197088,
+      "sha256": "17b20d632242576abb1c258140c870bd570cf10ab77bc26509738aa8a662134d",
+      "camera": {
+        "position": [
+          -10.066129939715768,
+          -21.375533378638107,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 25,
+      "file": "frame-0025.png",
+      "seconds": 11.32,
+      "bytes": 196571,
+      "sha256": "8381273f813aa148a12ec8fee9f43dbac7d3190dba506d2874d83ac800975f2f",
+      "camera": {
+        "position": [
+          -9.863404192933231,
+          -21.441965405124996,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 26,
+      "file": "frame-0026.png",
+      "seconds": 12.278,
+      "bytes": 196692,
+      "sha256": "8fe7b28704a63364a1a0ac538da53c6c799e4954af6c124d960d0e0bb58039be",
+      "camera": {
+        "position": [
+          -9.660240074254618,
+          -21.507044460382673,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 27,
+      "file": "frame-0027.png",
+      "seconds": 13.493,
+      "bytes": 197048,
+      "sha256": "a282c9e2cea1a31fb17536fae7f247ac1166304feb2e053eaf3a146042e8ac75",
+      "camera": {
+        "position": [
+          -9.456646613162865,
+          -21.57076765201939,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 28,
+      "file": "frame-0028.png",
+      "seconds": 13.641,
+      "bytes": 196576,
+      "sha256": "2a14813a7738defcd35252eb61823f3d2f8c2d0c4152630f7e58dbf8e5900e3e",
+      "camera": {
+        "position": [
+          -9.252632858222725,
+          -21.633132147903797,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 29,
+      "file": "frame-0029.png",
+      "seconds": 11.8,
+      "bytes": 196765,
+      "sha256": "b4a9a52c04de2ce20f64a7965efe70a47fdd48a3104eabf03b6233e57772cf49",
+      "camera": {
+        "position": [
+          -9.048207876678623,
+          -21.69413517629078,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 30,
+      "file": "frame-0030.png",
+      "seconds": 11.498,
+      "bytes": 196676,
+      "sha256": "9cc926c1b0bb6a60781ba7ce264059bc3924a86b81c5138a0b7ed2345129a4aa",
+      "camera": {
+        "position": [
+          -8.843380754051639,
+          -21.753774025944672,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 31,
+      "file": "frame-0031.png",
+      "seconds": 12.496,
+      "bytes": 196507,
+      "sha256": "628245f66c209be6ee34415671cfb77009be02a36be0e9cd8561664bb91dce74",
+      "camera": {
+        "position": [
+          -8.638160593735721,
+          -21.812046046259752,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 32,
+      "file": "frame-0032.png",
+      "seconds": 12.505,
+      "bytes": 196873,
+      "sha256": "015382908d73a4aa66eefa56fed736827dda4e4b76098fda3d934955c58f1b22",
+      "camera": {
+        "position": [
+          -8.432556516593118,
+          -21.868948647378048,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 33,
+      "file": "frame-0033.png",
+      "seconds": 12.21,
+      "bytes": 196749,
+      "sha256": "7fa40d5794e2d4a42a86f2425de25f18510ab33f469a11d3b2ff2c2ce2b2d753",
+      "camera": {
+        "position": [
+          -8.226577660548962,
+          -21.924479300304423,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 34,
+      "file": "frame-0034.png",
+      "seconds": 11.846,
+      "bytes": 196913,
+      "sha256": "dd7b4466b05625e120ac5936b2ea231f36faeffefc9b0ebb0416e0f0b860a29c",
+      "camera": {
+        "position": [
+          -8.02023318018517,
+          -21.978635537019006,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 35,
+      "file": "frame-0035.png",
+      "seconds": 11.361,
+      "bytes": 196809,
+      "sha256": "ac3c74ea7b672df78d36319457e3a847761046c8e2f5fd7064347252749470d8",
+      "camera": {
+        "position": [
+          -7.813532246333565,
+          -22.031414950586857,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 36,
+      "file": "frame-0036.png",
+      "seconds": 15.032,
+      "bytes": 196322,
+      "sha256": "efd2371dcf1f81ad7d575bbf89c807f040c47a87004f2dc320c3675f2c527643",
+      "camera": {
+        "position": [
+          -7.606484045668305,
+          -22.08281519526495,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 37,
+      "file": "frame-0037.png",
+      "seconds": 11.509,
+      "bytes": 196813,
+      "sha256": "8a05cc2a91ecf9198a7e4c9cb2a7e24f0d59596eb8a6e718bd1fc85f07b02e9a",
+      "camera": {
+        "position": [
+          -7.399097780297554,
+          -22.13283398660642,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 38,
+      "file": "frame-0038.png",
+      "seconds": 12.086,
+      "bytes": 196459,
+      "sha256": "f34fe2fbcb25f8b5f5677cefcc231eb670e7282b2b8b8e04e226a834f00aff16",
+      "camera": {
+        "position": [
+          -7.191382667354518,
+          -22.18146910156212,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 39,
+      "file": "frame-0039.png",
+      "seconds": 12.306,
+      "bytes": 196833,
+      "sha256": "4b3e5272a85a6dcdc380c0074be6af4c0de3e57e345e4935d1f26903f25c4c29",
+      "camera": {
+        "position": [
+          -6.983347938587816,
+          -22.228718378579376,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 40,
+      "file": "frame-0040.png",
+      "seconds": 12.202,
+      "bytes": 197421,
+      "sha256": "6ca3d5cb7dcb3dfedbf34586412b2c90947653dbbaa61cab845de9ed37bc9381",
+      "camera": {
+        "position": [
+          -6.775002839951141,
+          -22.27457971769811,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 41,
+      "file": "frame-0041.png",
+      "seconds": 12.214,
+      "bytes": 197087,
+      "sha256": "6dcc9530f77d556a1bcbf3de890e957c16ee7171d8df312fe14ef7c4abb26739",
+      "camera": {
+        "position": [
+          -6.566356631192353,
+          -22.31905108064413,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 42,
+      "file": "frame-0042.png",
+      "seconds": 11.606,
+      "bytes": 197130,
+      "sha256": "0f69795c51fc0110cc75b9e7be0ac7c89662bab3396687bd801dedde3cba7a4b",
+      "camera": {
+        "position": [
+          -6.357418585441955,
+          -22.362130490919732,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 43,
+      "file": "frame-0043.png",
+      "seconds": 11.756,
+      "bytes": 196840,
+      "sha256": "73aadb5f2f41dd039750f0ec118f3ad2f124ae066ab741905abf36c8484e7299",
+      "camera": {
+        "position": [
+          -6.148197988800914,
+          -22.403816033891555,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 44,
+      "file": "frame-0044.png",
+      "seconds": 12.973,
+      "bytes": 196908,
+      "sha256": "0a092e4c31759a557874d4a0f3f9cd054f8a3a0cb3276447a20c700fcbb15623",
+      "camera": {
+        "position": [
+          -5.9387041399279665,
+          -22.444105856875662,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 45,
+      "file": "frame-0045.png",
+      "seconds": 14.008,
+      "bytes": 196291,
+      "sha256": "6980c8c9b50dd9dd55b097267c527b9c911ff01cfa0694b210330874034af08f",
+      "camera": {
+        "position": [
+          -5.72894634962637,
+          -22.482998169219886,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 46,
+      "file": "frame-0046.png",
+      "seconds": 11.745,
+      "bytes": 196462,
+      "sha256": "b4b2f18afcf832ae03fd132acf9fa4a4c806d015377b880da5eb7040369fb5ac",
+      "camera": {
+        "position": [
+          -5.518933940430047,
+          -22.52049124238341,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    },
+    {
+      "frame": 47,
+      "file": "frame-0047.png",
+      "seconds": 12.498,
+      "bytes": 196302,
+      "sha256": "94cf07669a1666dfd2c35b95f274a2ed18c93e51f912f858f37df4021ffe43f7",
+      "camera": {
+        "position": [
+          -5.3086762461892745,
+          -22.5565834100136,
+          12
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 38,
+        "near": 0.1,
+        "far": 250
+      }
+    }
+  ],
+  "configuration": {
+    "requested": "auto",
+    "selected": "CPU",
+    "backend": null,
+    "devices": [],
+    "notes": [
+      "No compatible Cycles GPU found; CPU fallback selected."
+    ],
+    "samples": 16,
+    "bounces": 3,
+    "denoise": true,
+    "threads": 3,
+    "hazeDensity": 0.002,
+    "viewTransform": "AgX",
+    "environmentBoxes": 705,
+    "bossBoxes": 129,
+    "batchedMeshes": 46,
+    "particles": 24,
+    "designSha256": "21932f04360ad714a6dcfec3e1a35045168b7da668d2d179c887846240e849aa"
+  },
+  "buildSeconds": 0.072,
+  "secondsInsideBlender": 598.208,
+  "peakProcessRssKiB": 504192,
+  "memoryScope": "Linux Blender process peak RSS; GPU memory/utilization not measured."
+}

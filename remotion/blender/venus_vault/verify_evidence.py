@@ -17,6 +17,7 @@ ROOT=Path(__file__).resolve().parents[3]
 def verify(root=ROOT):
     root=Path(root);directory=root/'docs/previews/venus-vault';e=json.loads((directory/'evidence.json').read_text())
     def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
+    for p,h in e['protectedInputHashes'].items():assert sha(root/p)==h, 'Historical input changed: '+p
     for p,h in e['renderInputHashes'].items():assert sha(root/p)==h, 'Render input changed: '+p
     for item in e['renders']:
         report=json.loads((directory/item['report']).read_text());r=validate(report['request'])

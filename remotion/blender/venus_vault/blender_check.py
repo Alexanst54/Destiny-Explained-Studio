@@ -12,7 +12,7 @@ from characters.vex_bosses import pose
 
 checked=0
 for boss,animation in [('boss-atheon','walk'),('boss-atheon','temporal'),('boss-templar','attack')]:
-    state=build_scene(select(boss,quality='draft',camera='reveal',animation=animation),'cpu',2)
+    state=build_scene(select(boss,quality='draft',camera='reveal',animation=animation,fps=24 if animation=='walk' else 30),'cpu',2)
     scene=state['scene'];ids={o.as_pointer() for o in scene.objects};meshes=len(bpy.data.meshes)
     rest=state['joints']['head'].matrix_world.copy()
     for frame in [0,15,30,45,12,0]:
@@ -27,11 +27,17 @@ for boss,animation in [('boss-atheon','walk'),('boss-atheon','temporal'),('boss-
         checked+=1
     for preset in PRESETS:
         state['request']['camera']=preset
-        for f in [0,30,45]:
+        for f in ([0,30,45]+list(range(48)) if animation=='walk' and preset=='orbit' else [0,30,45]):
             update_frame(state,f)
             eye=state['joints']['head'].matrix_world.translation
             p=world_to_camera_view(scene,scene.camera,eye)
             assert 0<p.x<1 and 0<p.y<1 and p.z>0,(boss,preset,f,tuple(p))
+            if preset in ['wide','reveal','orbit']:
+                for obj in scene.objects:
+                    if obj.type=='MESH' and obj.parent in state['joints'].values():
+                        for corner in obj.bound_box:
+                            v=world_to_camera_view(scene,scene.camera,obj.matrix_world@Vector(corner))
+                            assert .005<v.x<.995 and .005<v.y<.995 and v.z>0,('Boss silhouette clipped',boss,preset,f,obj.name,tuple(v))
             checked+=1
     update_frame(state,0)
     assert max(abs(state['joints']['head'].matrix_world[i][j]-rest[i][j]) for i in range(4) for j in range(4))<1e-5,'Random-access pose drift'

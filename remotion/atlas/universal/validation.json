@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "scope": "Recensement #18 sur PR #19 : rencontres principales de 19 raids de base et 11 donjons ; assauts, missions, arènes et variantes encore partiels. Aucun nouveau modèle.",
+  "scope": "Atlas #18 et première extension visuelle Blender Vénus/Caveau : trois décors, deux boss originaux, cinq vues et clip court CPU. Aucune validation GPU/Colab/Android.",
   "checkedAt": "2026-11-09",
   "node": "22.23.4",
   "nodeInstallation": "Archive officielle nodejs.org vérifiée contre SHASUMS256.txt",
@@ -8,15 +8,15 @@
   "checks": [
     {
       "name": "Node universal + legacy suites",
-      "tests": 90,
-      "passed": 90,
+      "tests": 94,
+      "passed": 94,
       "failed": 0,
-      "command": "node --experimental-strip-types --test tests/atlas-universal.test.mjs tests/atlas.test.mjs tests/library.test.mjs tests/living.test.mjs tests/animation.test.mjs tests/hybrid.test.mjs tests/polish.test.mjs blender/tests/export.test.mjs blender/tests/sequences.test.mjs ../editor/model.test.mjs"
+      "command": "node --experimental-strip-types --test tests/atlas-universal.test.mjs tests/venus-vault.test.mjs tests/atlas.test.mjs tests/library.test.mjs tests/living.test.mjs tests/animation.test.mjs tests/hybrid.test.mjs tests/polish.test.mjs blender/tests/export.test.mjs blender/tests/sequences.test.mjs ../editor/model.test.mjs"
     },
     {
-      "name": "Python Blender unit tests",
-      "tests": 12,
-      "passed": 12,
+      "name": "Python Blender legacy and Venus/Vault tests",
+      "tests": 21,
+      "passed": 21,
       "failed": 0,
       "command": "python -m unittest discover -s blender/tests"
     },
@@ -69,19 +69,39 @@
       "modifiedExistingFiles": [
         "remotion/package.json"
       ],
-      "note": "Seuls quatre scripts npm sont ajoutés au package existant ; pas de modification du moteur, catalogues historiques, épisodes, assets, notebooks ou bundles."
+      "note": "Seuls quatre scripts npm sont ajoutés au package existant ; pas de modification du moteur, catalogues historiques, épisodes, assets, notebooks ou bundles.",
+      "historical": true
     },
     {
       "name": "Protected paths unchanged since initial PR #19 delivery",
       "status": "passed",
-      "baseline": "ff45f30",
-      "note": "136 fichiers et 12 épisodes comparés via les empreintes de l’audit initial ; aucun changement du moteur, des anciens catalogues, épisodes, assets Blender ou notebooks."
+      "baseline": "eb6c4de78c726555d3a99b03d88eb7124f9bb17b",
+      "note": "Les 136 fichiers historiques et 12 épisodes gardent leurs empreintes. Les nouveaux fichiers Blender sont additionnels ; les fichiers du moteur et notebooks historiques ne changent pas."
+    },
+    {
+      "name": "Native Blender articulation and camera integration",
+      "status": "passed",
+      "evaluations": 111,
+      "command": "blender --background --factory-startup --python-exit-code 1 --python blender/venus_vault/blender_check.py",
+      "note": "Blender 4.3.2 officiel ; toutes les 48 frames de marche à 24 FPS, silhouettes complètes wide/reveal/orbit, accès hors ordre, stabilité des objets et meshes."
+    },
+    {
+      "name": "Shipped render media and historical hashes",
+      "status": "passed",
+      "renders": 6,
+      "command": "python blender/venus_vault/verify_evidence.py",
+      "note": "Cinq vues et clip 48 frames, dimensions, SHA-256, géométrie, caméras, ffprobe H.264/yuv420p/2s ; 136 fichiers historiques inchangés."
+    },
+    {
+      "name": "Colab notebook code cells syntax",
+      "status": "passed",
+      "note": "Cellules compilées avec Python ; pas exécutées sur Colab ni Android."
     }
   ],
   "validatedInputs": [
     {
       "path": "remotion/atlas/universal/schema.ts",
-      "sha256": "da7fe329f893bfbaf8ec7606f5b257dff57ba59dfd3719a5e50833964362017f"
+      "sha256": "6aec37b288ff9072812426520f9468c7f08cc7fc12b704535e71a1c4f147712f"
     },
     {
       "path": "remotion/atlas/universal/index.ts",
@@ -89,7 +109,7 @@
     },
     {
       "path": "remotion/atlas/universal/catalog.json",
-      "sha256": "5015d6515cc2e02d57acdfa0504a5f46f69539198f01661a7549c1aa9e068ea6"
+      "sha256": "a12f3734b40f5b45d5b4c3a22a84d2cd877fba45bc7bebfbbfaa7fffd1e72e1e"
     },
     {
       "path": "remotion/atlas/universal/source-evidence.json",
@@ -97,28 +117,94 @@
     },
     {
       "path": "remotion/scripts/asset-audit.mjs",
-      "sha256": "bb3f540437482c0d3c193433f445cf8c0974dd8e0d57812cd71cb92470f5160a"
+      "sha256": "292f2cae577696835990ed1fb2ed7c3b23a7439d0bd458c43996f0755492e53a"
     },
     {
       "path": "remotion/scripts/atlas-coverage.mjs",
-      "sha256": "4c62947e945333256c3d11dd291f217958bc423d67c29fb2543b32a7131b2f3a"
+      "sha256": "bec36f74342417a978cd6a5b767a4f5dcbfb1dbf3b1958e740b74604e1165f2c"
     },
     {
       "path": "remotion/tests/atlas-universal.test.mjs",
-      "sha256": "fa649d64ca1dcfb33298199c37d0ab69e28dd1c728f80bdf95e3e4e87efd383f"
+      "sha256": "5ff3d92a1e6771547a047f69837a386549596681b0c466c933340cde4a6af829"
     },
     {
       "path": "remotion/atlas/universal/foundation-ids.json",
       "sha256": "36db594fb4afcef010dddc64f5d4fc41b2546913b8d61248759698f4028504f0"
+    },
+    {
+      "path": "remotion/atlas/universal/blender.ts",
+      "sha256": "2c6eaeeca841b9d5c0f63b75ca266f684eb4dea470726c7f3ee3e078c88af9ed"
+    },
+    {
+      "path": "remotion/scripts/select-blender-asset.mjs",
+      "sha256": "fb95738ac84082807db0570de407c8ad43f3deb99d3467938b7c1466a3efa6e2"
+    },
+    {
+      "path": "remotion/tests/venus-vault.test.mjs",
+      "sha256": "00bb4d06857672dd2b72ce79e544e7ceef512d86846216c7fa7b534783e0b0fc"
+    },
+    {
+      "path": "remotion/blender/Venus-Vault-Colab-Pro.ipynb",
+      "sha256": "09b632f5ca4f74897009dd3b88d733c02a500cd8b0c3a5a32bcd5de3122092da"
+    },
+    {
+      "path": "remotion/blender/render_venus_vault.py",
+      "sha256": "40636486d6ab92ea80606eda66dce3550f4efbb997ddaa96e8f57749b289ca80"
+    },
+    {
+      "path": "remotion/blender/tests/test_venus_vault.py",
+      "sha256": "43f976e2628f8361e475e682f323db107e7f23c3980f0ea071e49824daa20be3"
+    },
+    {
+      "path": "remotion/blender/characters/vex_bosses.py",
+      "sha256": "63dbbc8b1e893abc9dd13442041fbfc6c75aedd79b11fb7c35006f413364fa52"
+    },
+    {
+      "path": "remotion/blender/environments/venus.py",
+      "sha256": "f6baf34cca0bb20c8c3be6e26df208fc0e05f3e82dde32b6c61d0cc3506d9d05"
+    },
+    {
+      "path": "remotion/blender/environments/vault_of_glass.py",
+      "sha256": "9be42b4608575606f1ea8f0f96a1a78a85a2d8164e50d7a9800db8f8bc879f6f"
+    },
+    {
+      "path": "remotion/blender/venus_vault/request.py",
+      "sha256": "481623534d26e1a2bf295ea0f31d9f91ffb3669b121c343cb166c83177fa267e"
+    },
+    {
+      "path": "remotion/blender/venus_vault/renderer.py",
+      "sha256": "e0edfd245166ebd5c96862ef03ac4a2d3804eacbf0da72e0cc2a47335e5bfda5"
+    },
+    {
+      "path": "remotion/blender/venus_vault/design.py",
+      "sha256": "8f8b19eccc3d7ba5d85afd5416829dda7f02d04cc0035a330d9135fe3161a041"
+    },
+    {
+      "path": "remotion/blender/venus_vault/verify_evidence.py",
+      "sha256": "e5946ccb7c964071bdb6ef5132c4fa55aef76a34c20556be5ab2e0df0b6119dd"
+    },
+    {
+      "path": "remotion/blender/venus_vault/geometry.py",
+      "sha256": "f10fbdf71160b0ee5b7f4f64ee7c642567f93861c99d78d19753831d062afd0a"
+    },
+    {
+      "path": "remotion/blender/venus_vault/camera.py",
+      "sha256": "0d9c308e21859f2fdbdc6eec3a5a2997304da58ff13c90633f756cde6710534c"
+    },
+    {
+      "path": "remotion/blender/venus_vault/blender_check.py",
+      "sha256": "1bdd53b4cab4530f156e412f52d34ba8b5633e406522770e0ef7f43f64bc2e60"
     }
   ],
   "limitations": [
-    "Rencontres principales relues ; variantes, modes, parcours d’assauts/missions et plusieurs arènes restent partiels. Les sources secondaires épinglées ne remplacent pas une validation visuelle en jeu.",
-    "Aucun nouveau rendu, modèle Blender, filtre éditeur ou import incrémental de production.",
-    "Les listes de disponibilité sont datées ; un retrait historique ne garantit pas un retrait permanent.",
-    "PR #17 indépendante et non fusionnée ; aucun rendu de 35 secondes."
+    "Géométrie voxel artistique originale ; pas de carte exacte ni modèle extrait du jeu.",
+    "Pas d’IK de contact, de simulation de combat/projectiles ou de portail récursif.",
+    "Cinq vues Balanced ; clip Draft 480×270 / 48 frames / 24 FPS. Pas de mesure Cinematic ou GPU.",
+    "Colab Pro, T4 et Android non testés ; notebook reproductible fourni.",
+    "API/CLI et formulaire Colab ; menu éditeur historique inchangé.",
+    "Pas de reprise automatique de cette extension ; sorties/logs conservés.",
+    "PR #17 et #19 inchangées, aucune fusion ; aucun épisode complet ou rendu de 35 secondes."
   ],
-  "catalogCheckpoint": "bfa64c4d8bca74bfaaa4a261a74cbd983a6621ea",
   "catalogCounts": {
     "baseRaidsReviewed": 19,
     "dungeonsReviewed": 11,
@@ -127,7 +213,24 @@
     "bossEntries": 128,
     "bossForms": 25,
     "reusePlans": 314,
-    "reuseProfiles": 52,
-    "pinnedWikiRevisions": 186
-  }
+    "reuseProfiles": 56,
+    "pinnedWikiRevisions": 186,
+    "dedicatedBlenderBosses": 2,
+    "dedicatedEnvironmentGenerators": 3
+  },
+  "previousValidation": {
+    "commit": "eb6c4de78c726555d3a99b03d88eb7124f9bb17b",
+    "path": "remotion/atlas/universal/validation.json",
+    "nodeTests": 90,
+    "pythonTests": 16,
+    "note": "Validation de la fondation PR #19 conservée dans l’historique Git ; base inchangée de cette extension."
+  },
+  "extensionBase": "eb6c4de78c726555d3a99b03d88eb7124f9bb17b",
+  "renderEvidence": {
+    "path": "docs/previews/venus-vault/evidence.json",
+    "sha256": "b80d8f0232f62ce2d492b8591564dc8211f7e3d5e3dae8817dc3aa68dc199686",
+    "device": "CPU",
+    "gpuMeasurements": null
+  },
+  "foundationCatalogCheckpoint": "bfa64c4d8bca74bfaaa4a261a74cbd983a6621ea"
 }

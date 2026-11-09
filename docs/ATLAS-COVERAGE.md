@@ -339,54 +339,54 @@ Le Puppeteer est conservé comme une identité distincte d’Atraks-1 malgré le
 
 ## Familles et composants réutilisables par boss / forme
 
-| Boss ou forme | Profil(s) | Templates / rigs candidats | État de réemploi |
+| Boss ou forme | Profil(s) | Templates / rigs historiques | État de réemploi |
 | --- | --- | --- | --- |
-| boss-templar | Hydre Templier Blender originale | aucun template fidèle / aucun rig dédié | implemented-stylized |
-| boss-atheon | Minotaure Athéon Blender original | aucun template fidèle / aucun rig dédié | implemented-stylized |
-| boss-ir-yut | Ruche : Prêtresse flottante | hive-acolyte / aucun rig dédié | no-suitable-model |
+| boss-templar | Hydre Templier Blender originale | aucun template fidèle / nouveau rig Blender dédié | implemented-stylized |
+| boss-atheon | Minotaure Athéon Blender original | aucun template fidèle / nouveau rig Blender dédié | implemented-stylized |
+| boss-ir-yut | Ruche : Prêtresse flottante | hive-acolyte / aucun rig historique adapté | no-suitable-model |
 | boss-crota | Ruche : géant ailé / Ascendant | hive-acolyte / humanoid | adaptation-required |
-| boss-crypt-security | Bray : système de sécurité | rasputin / aucun rig dédié | adaptation-required |
+| boss-crypt-security | Bray : système de sécurité | rasputin / aucun rig historique adapté | adaptation-required |
 | boss-atraks | Éliksni Exo : quatre bras et châssis Bray | eliksni-captain, exo-scientist / four-arm | adaptation-required |
 | boss-taniks | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
-| boss-vorgeth | Corrompu : Ogre | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-dul-incaru | Ruche : Prêtresse flottante | hive-acolyte / aucun rig dédié | no-suitable-model |
-| boss-gorgons | Vex : Harpie / Gorgone | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-vorgeth | Corrompu : Ogre | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-dul-incaru | Ruche : Prêtresse flottante | hive-acolyte / aucun rig historique adapté | no-suitable-model |
+| boss-gorgons | Vex : Harpie / Gorgone | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-warpriest | Ruche : Chevalier / Darkblade | hive-acolyte / humanoid | adaptation-required |
-| boss-golgoroth | Ruche : Ogre / Abomination lourde | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-ir-anuk | Ruche : Prêtresse flottante | hive-acolyte / aucun rig dédié | no-suitable-model |
-| boss-ir-halak | Ruche : Prêtresse flottante | hive-acolyte / aucun rig dédié | no-suitable-model |
+| boss-golgoroth | Ruche : Ogre / Abomination lourde | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-ir-anuk | Ruche : Prêtresse flottante | hive-acolyte / aucun rig historique adapté | no-suitable-model |
+| boss-ir-halak | Ruche : Prêtresse flottante | hive-acolyte / aucun rig historique adapté | no-suitable-model |
 | boss-oryx | Ruche : géant ailé / Ascendant | hive-acolyte / humanoid | adaptation-required |
 | boss-vosik | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
-| boss-siege-engine | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-aksis | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-siege-engine | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-aksis | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-meksis | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
 | boss-rahndel | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
-| boss-royal-beasts | Cabal : Bête de guerre | scorn-screeb / aucun rig dédié | adaptation-required |
+| boss-royal-beasts | Cabal : Bête de guerre | scorn-screeb / aucun rig historique adapté | adaptation-required |
 | boss-calus | Cabal : Centurion / Gladiateur / Colosse | cabal-soldier / humanoid | adaptation-required |
-| boss-argos | Vex : Hydre flottante | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-argos | Vex : Hydre flottante | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-val-cauor | Cabal : Centurion / Gladiateur / Colosse | cabal-soldier / humanoid | adaptation-required |
-| boss-kalli | Corrompu : Tékienne éveillée | awoken-guard / aucun rig dédié | no-suitable-model |
-| boss-shuro-chi | Corrompu : Tékienne éveillée | awoken-guard / aucun rig dédié | no-suitable-model |
-| boss-morgeth | Corrompu : Ogre | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-riven | Ahamkara : créature draconique | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-kalli | Corrompu : Tékienne éveillée | awoken-guard / aucun rig historique adapté | no-suitable-model |
+| boss-shuro-chi | Corrompu : Tékienne éveillée | awoken-guard / aucun rig historique adapté | no-suitable-model |
+| boss-morgeth | Corrompu : Ogre | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-riven | Ahamkara : créature draconique | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-ablazed-glory | Éliksni : Servitor | eliksni-servitor / servitor | adaptation-required |
-| boss-insurrection-prime | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-insurrection-prime | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-gahlran | Cabal : Centurion / Gladiateur / Colosse | cabal-soldier / humanoid | adaptation-required |
-| boss-consecrated-mind | Vex : Harpie / Gorgone | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-consecrated-mind | Vex : Harpie / Gorgone | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-sanctified-mind | Vex : Minotaure / Hobgobelin | vex-goblin / humanoid | adaptation-required |
-| boss-caretaker | Scorn : Abomination / Chef | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-caretaker | Scorn : Abomination / Chef | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-rhulk | Pyramide : humanoïde longiligne (Disciple / Tisseur) | human-scientist / humanoid | adaptation-required |
-| boss-dulna | Corrompu : silhouette de Prêtresse Hive | hive-acolyte / aucun rig dédié | no-suitable-model |
-| boss-maryn | Corrompu : silhouette de Prêtresse Hive | hive-acolyte / aucun rig dédié | no-suitable-model |
-| boss-xenodoti | Corrompu : silhouette de Prêtresse Hive | hive-acolyte / aucun rig dédié | no-suitable-model |
+| boss-dulna | Corrompu : silhouette de Prêtresse Hive | hive-acolyte / aucun rig historique adapté | no-suitable-model |
+| boss-maryn | Corrompu : silhouette de Prêtresse Hive | hive-acolyte / aucun rig historique adapté | no-suitable-model |
+| boss-xenodoti | Corrompu : silhouette de Prêtresse Hive | hive-acolyte / aucun rig historique adapté | no-suitable-model |
 | boss-zoaurc | Cabal : Centurion / Gladiateur / Colosse | cabal-soldier / humanoid | adaptation-required |
-| boss-nezarec | Pyramide : silhouette unique de Nezarec | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-nezarec | Pyramide : silhouette unique de Nezarec | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-herald-finality | Corrompu : Capitaine | eliksni-captain / captain | adaptation-required |
-| boss-witness | Témoin : silhouette collective unique | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-epoptes | Vex : Hydre flottante | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-witness | Témoin : silhouette collective unique | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-epoptes | Vex : Hydre flottante | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-agraios | Vex : Minotaure / Hobgobelin | vex-goblin / humanoid | adaptation-required |
-| boss-iatros | Vex : Wyverne | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-koregos | Vex : Harpie / Gorgone | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-iatros | Vex : Wyverne | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-koregos | Vex : Harpie / Gorgone | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-labyrinth-architects | Corrompu : Chevalier / Darkblade; Corrompu : châssis Vex; Corrompu : Centurion / Phalange; Corrompu : Capitaine | hive-acolyte, vex-goblin, cabal-soldier, eliksni-captain / humanoid, captain | adaptation-required |
 | boss-asterion | Corrompu : Capitaine | eliksni-captain / captain | adaptation-required |
 | boss-alak-tor | Ruche : Chevalier / Darkblade | hive-acolyte / humanoid | adaptation-required |
@@ -395,16 +395,16 @@ Le Puppeteer est conservé comme une identité distincte d’Atraks-1 malgré le
 | boss-querim | Corrompu : châssis Vex | vex-goblin / humanoid | adaptation-required |
 | boss-theratos | Corrompu : châssis Vex | vex-goblin / humanoid | adaptation-required |
 | boss-eriviks | Corrompu : Capitaine | eliksni-captain / captain | adaptation-required |
-| boss-xavoth | Corrompu : Ogre | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-xavoth | Corrompu : Ogre | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-zulmak | Ruche : Chevalier / Darkblade | hive-acolyte / humanoid | adaptation-required |
-| boss-volmar | Ruche : Prêtresse flottante | hive-acolyte / aucun rig dédié | no-suitable-model |
+| boss-volmar | Ruche : Prêtresse flottante | hive-acolyte / aucun rig historique adapté | no-suitable-model |
 | boss-phalanx-echo | Corrompu : Centurion / Phalange | cabal-soldier / humanoid | adaptation-required |
 | boss-kell-echo | Corrompu : Capitaine | eliksni-captain / captain | adaptation-required |
 | boss-paracausal-invaders | Corrompu : châssis Vex; Ruche : Chevalier / Darkblade | vex-goblin, hive-acolyte / humanoid | adaptation-required |
-| boss-phryzhia | Ruche : Ogre / Abomination lourde | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-fallen-shield | Éliksni : bouclier et générateurs | aucun template fidèle / aucun rig dédié | adaptation-required |
+| boss-phryzhia | Ruche : Ogre / Abomination lourde | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-fallen-shield | Éliksni : bouclier et générateurs | aucun template fidèle / aucun rig historique adapté | adaptation-required |
 | boss-avarokk | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
-| boss-rm80 | Éliksni : Shank / drone mécanique | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-rm80 | Éliksni : Shank / drone mécanique | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-grisprax | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
 | boss-caiatl | Cabal : Centurion / Gladiateur / Colosse | cabal-soldier / humanoid | adaptation-required |
 | boss-emonut | Cauchemar : représentation Cabal | cabal-soldier / humanoid | adaptation-required |
@@ -413,70 +413,70 @@ Le Puppeteer est conservé comme une identité distincte d’Atraks-1 malgré le
 | boss-houdal | Cauchemar : représentation Cabal | cabal-soldier / humanoid | adaptation-required |
 | boss-kanok | Cauchemar : représentation Cabal | cabal-soldier / humanoid | adaptation-required |
 | boss-regor | Cauchemar : représentation Cabal | cabal-soldier / humanoid | adaptation-required |
-| boss-akelous | Vex : Harpie / Gorgone | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-persys | Vex : Wyverne | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-amphion | Vex : Hydre flottante | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-akelous | Vex : Harpie / Gorgone | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-persys | Vex : Wyverne | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-amphion | Vex : Hydre flottante | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-ohmon | Vex : Minotaure / Hobgobelin | vex-goblin / humanoid | adaptation-required |
 | boss-ecthar | Ruche : Chevalier / Darkblade | hive-acolyte / humanoid | adaptation-required |
 | boss-vorlog | Ruche : Chevalier / Darkblade | hive-acolyte / humanoid | adaptation-required |
-| boss-simmumah | Ruche : Prêtresse flottante | hive-acolyte / aucun rig dédié | no-suitable-model |
+| boss-simmumah | Ruche : Prêtresse flottante | hive-acolyte / aucun rig historique adapté | no-suitable-model |
 | boss-thul-ar | Ruche : Acolyte / Acolyte porteur de Lumière | hive-acolyte / humanoid | adaptation-required |
 | boss-kalul | Ruche : Acolyte / Acolyte porteur de Lumière | hive-acolyte / humanoid | adaptation-required |
 | boss-rathil | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
-| boss-locus-grief | Corrompu : Ogre | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-hefnd-vengeance | Chimère corrompue : noyau sphérique et appendices | eliksni-servitor / aucun rig dédié | adaptation-required |
+| boss-locus-grief | Corrompu : Ogre | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-hefnd-vengeance | Chimère corrompue : noyau sphérique et appendices | eliksni-servitor / aucun rig historique adapté | adaptation-required |
 | boss-malaris | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
 | boss-vrysiks | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
 | boss-nymeks | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
 | boss-sirloks | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
-| boss-wish-twisted | Scorn : Abomination / Chef | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-thressia | Corrompu : silhouette de Prêtresse Hive | hive-acolyte / aucun rig dédié | no-suitable-model |
+| boss-wish-twisted | Scorn : Abomination / Chef | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-thressia | Corrompu : silhouette de Prêtresse Hive | hive-acolyte / aucun rig historique adapté | no-suitable-model |
 | boss-raneiks | Éliksni : Servitor | eliksni-servitor / servitor | adaptation-required |
 | boss-corrupted-puppeteer | Éliksni Exo : quatre bras et châssis Bray | eliksni-captain, exo-scientist / four-arm | adaptation-required |
-| boss-zoetic-lockset | Ruche : Hurleur / verrou vivant | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-zoetic-lockset | Ruche : Hurleur / verrou vivant | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-kerrev | Pyramide : humanoïde longiligne (Disciple / Tisseur) | human-scientist / humanoid | adaptation-required |
 | boss-harrow | Cabal : Centurion / Gladiateur / Colosse | cabal-soldier / humanoid | adaptation-required |
 | boss-sere | Humain / Dredgen | human-scientist / humanoid | adaptation-required |
-| boss-wolf-walker | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-perfected-walker | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-sekrion | Vex : Hydre flottante | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-wolf-walker | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-perfected-walker | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-sekrion | Vex : Hydre flottante | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-sepiks | Éliksni : Servitor | eliksni-servitor / servitor | adaptation-required |
 | boss-naksis | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
-| boss-devil-walker | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-devil-walker | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-dresiks | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
-| boss-rakta | Ruche : Prêtresse flottante | hive-acolyte / aucun rig dédié | no-suitable-model |
-| boss-sedia | Corrompu : Tékienne éveillée | awoken-guard / aucun rig dédié | no-suitable-model |
+| boss-rakta | Ruche : Prêtresse flottante | hive-acolyte / aucun rig historique adapté | no-suitable-model |
+| boss-sedia | Corrompu : Tékienne éveillée | awoken-guard / aucun rig historique adapté | no-suitable-model |
 | boss-grask | Corrompu : Centurion / Phalange | cabal-soldier / humanoid | adaptation-required |
 | boss-gorath | Corrompu : Centurion / Phalange | cabal-soldier / humanoid | adaptation-required |
-| boss-baimogg | Chimère corrompue : noyau sphérique et appendices | eliksni-servitor / aucun rig dédié | adaptation-required |
+| boss-baimogg | Chimère corrompue : noyau sphérique et appendices | eliksni-servitor / aucun rig historique adapté | adaptation-required |
 | boss-taaurc | Cabal : Centurion / Gladiateur / Colosse | cabal-soldier / humanoid | adaptation-required |
 | boss-drevis | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
 | boss-urzok | Ruche : Chevalier / Darkblade | hive-acolyte / humanoid | adaptation-required |
-| boss-tulgorh | Corrompu : Ogre | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-tulgorh | Corrompu : Ogre | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-siriks | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
 | boss-mimiks-0 | Éliksni : Servitor | eliksni-servitor / servitor | adaptation-required |
 | boss-mimiks-1 | Éliksni : Servitor | eliksni-servitor / servitor | adaptation-required |
 | boss-mimiks-2 | Éliksni : Servitor | eliksni-servitor / servitor | adaptation-required |
 | boss-locus-communion | Scorn : Ravageur bipède | eliksni-dreg / humanoid | adaptation-required |
-| boss-darkmind | Scorn : Abomination / Chef | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-darkmind | Scorn : Abomination / Chef | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-brakion | Vex : Minotaure / Hobgobelin | vex-goblin / humanoid | adaptation-required |
-| boss-data-nullifier | Vex : Hydre flottante | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-digital-tracker | Vex : Wyverne | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-digital-neutralizer | Vex : Wyverne | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-data-nullifier | Vex : Hydre flottante | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-digital-tracker | Vex : Wyverne | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-digital-neutralizer | Vex : Wyverne | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-haroktha | Ruche : Chevalier / Darkblade | hive-acolyte / humanoid | adaptation-required |
 | boss-praksis | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
 | boss-baaruk | Cabal : Centurion / Gladiateur / Colosse | cabal-soldier / humanoid | adaptation-required |
 | boss-qabix | Cabal : Psion | human-scientist / humanoid | adaptation-required |
 | boss-ixion | Vex : Minotaure / Hobgobelin | vex-goblin / humanoid | adaptation-required |
-| boss-akardon | Vex : Hydre flottante | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-akardon | Vex : Hydre flottante | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-taniks-variant-reborn | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
-| boss-taniks-variant-abomination | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-taniks-variant-abomination | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-oryx-variant-shade | Ruche : géant ailé / Ascendant | hive-acolyte / humanoid | adaptation-required |
-| boss-aksis-variant-stationary | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig dédié | no-suitable-model |
-| boss-aksis-variant-mobile | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-aksis-variant-stationary | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
+| boss-aksis-variant-mobile | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-calus-variant-automaton | Cabal : Centurion / Gladiateur / Colosse | cabal-soldier / humanoid | adaptation-required |
 | boss-gahlran-variant-deception | Cabal : Centurion / Gladiateur / Colosse | cabal-soldier / humanoid | adaptation-required |
-| boss-koregos-variant-fractured | Vex : Harpie / Gorgone | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-koregos-variant-fractured | Vex : Harpie / Gorgone | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-gahlran-variant-nightmare | Cauchemar : représentation Cabal | cabal-soldier / humanoid | adaptation-required |
 | boss-caiatl-variant-nightmare | Cauchemar : représentation Cabal | cabal-soldier / humanoid | adaptation-required |
 | boss-ecthar-variant-lucent | Ruche : Chevalier / Darkblade | hive-acolyte / humanoid | adaptation-required |
@@ -489,13 +489,13 @@ Le Puppeteer est conservé comme une identité distincte d’Atraks-1 malgré le
 | boss-drevis-variant-aspect | Corrompu : Capitaine | eliksni-captain / captain | adaptation-required |
 | boss-urzok-variant-aspect | Corrompu : Chevalier / Darkblade | hive-acolyte / humanoid | adaptation-required |
 | boss-siriks-variant-salvation | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
-| boss-siriks-variant-brig | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig dédié | no-suitable-model |
+| boss-siriks-variant-brig | Éliksni : machine / Walker / châssis lourd | aucun template fidèle / aucun rig historique adapté | no-suitable-model |
 | boss-brakion-variant-repurposed | Vex : Minotaure / Hobgobelin | vex-goblin / humanoid | adaptation-required |
 | boss-praksis-variant-defiled | Éliksni : Capitaine / Vandale | eliksni-captain, eliksni-vandal / captain, vandal | adaptation-required |
 | boss-raneiks-variant-unified | Éliksni : Servitor | eliksni-servitor / servitor | adaptation-required |
 | boss-raneiks-variant-separated | Éliksni : Servitor | eliksni-servitor / servitor | adaptation-required |
 
-Ces plans sont des possibilités d’adaptation, jamais des modèles prêts. Exemples : Servitor et rig servitor pour les composants de Raneiks ; quatre bras/Exo pour Atraks/Puppeteer ; blocs/écrans Bray pour Crypt Security ; conventions Vex pour Hydres/Harpies/Wyvernes avec deux silhouettes originales implémentées pour Athéon et le Templier seulement. Kerrev est un Tisseur, Harrow un Gladiateur Cabal et Dredgen Sere un Humain d’après leurs infobox : ils ne sont pas tous affectés au même personnage. Riven et le Témoin n’ont pas de template adapté ; les apparences unknown ne peuvent pas servir de modèle.
+Les plans ordinaires sont des possibilités d’adaptation ; implemented-stylized signale un générateur Blender original réellement affecté, avec ses limites restantes. Exemples : Servitor et rig servitor pour les composants de Raneiks ; quatre bras/Exo pour Atraks/Puppeteer ; blocs/écrans Bray pour Crypt Security ; conventions Vex pour Hydres/Harpies/Wyvernes avec deux silhouettes originales implémentées pour Athéon et le Templier seulement. Kerrev est un Tisseur, Harrow un Gladiateur Cabal et Dredgen Sere un Humain d’après leurs infobox : ils ne sont pas tous affectés au même personnage. Riven et le Témoin n’ont pas de template adapté ; les apparences unknown ne peuvent pas servir de modèle.
 
 Chaque profil indique fichiers/symboles existants, familles, modules, templates, rigs, composants réutilisables, travaux requis et limites. Chaque plan indique silhouette attribuée, sources et statut. Les recettes historiques exactes (baseEnvironment et modules, y compris overrides) sont capturées depuis le vrai atlasRecipe et comparées au moteur existant. Les nouveaux lieux n’inventent pas d’AtlasReference directement résoluble. Les détails sont dans catalog.json (reuseProfiles / assetReusePlans), vérifiés hors ligne ; Athéon et le Templier ont un blenderAssetId dédié ; les autres boss et toutes les formes restent placeholders. Les plans décrivent les besoins d’adaptation ; la disponibilité effective est indiquée par le blenderAssetId et son registre.
 
@@ -515,7 +515,7 @@ Chaque profil indique fichiers/symboles existants, familles, modules, templates,
 | earth | human / environment-human | atlas-family-human | oui | modular-reconstruction |
 | moon | hive / environment-hive | atlas-family-hive | oui | modular-reconstruction |
 | mercury | vex / environment-vex | atlas-family-vex | oui | modular-reconstruction |
-| venus | vex / environment-vex | atlas-family-vex ; blender-venus-v1 | oui | dedicated |
+| venus | vex / reuse-blender-venus | atlas-family-vex ; blender-venus-v1 | oui | dedicated |
 | mars | human / environment-human | atlas-family-human | oui | modular-reconstruction |
 | io | vex / environment-vex | atlas-family-vex | oui | modular-reconstruction |
 | titan | ocean / environment-ocean | atlas-family-ocean | oui | modular-reconstruction |
@@ -545,7 +545,7 @@ Chaque profil indique fichiers/symboles existants, familles, modules, templates,
 | riis | eliksni / environment-eliksni | atlas-family-eliksni | oui | modular-reconstruction |
 | deep-stone-site | bray / environment-bray | atlas-family-bray | oui | modular-reconstruction |
 | plaguelands | human / environment-human | atlas-family-human | oui | modular-reconstruction |
-| vault-of-glass | vex / environment-vex | atlas-family-vex ; blender-templars-well-v1 | oui | dedicated |
+| vault-of-glass | vex / reuse-blender-vault | atlas-family-vex ; blender-templars-well-v1 | oui | dedicated |
 | crotas-end | hive / environment-hive | atlas-family-hive | oui | modular-reconstruction |
 | kings-fall | hive / environment-hive | atlas-family-hive | oui | modular-reconstruction |
 | wrath-of-machine | human / environment-human | atlas-family-human | oui | modular-reconstruction |
@@ -574,8 +574,8 @@ Chaque profil indique fichiers/symboles existants, familles, modules, templates,
 | equilibrium | cabal / environment-cabal | atlas-family-cabal | oui | modular-reconstruction |
 | whisper | vex / environment-vex | atlas-family-vex | oui | modular-reconstruction |
 | menagerie | cabal / environment-cabal | atlas-family-cabal | oui | modular-reconstruction |
-| arena-templars-well | vex / environment-vex | atlas-family-vex ; blender-templars-well-v1 | non — famille candidate seulement | dedicated |
-| arena-glass-throne | vex / environment-vex | atlas-family-vex ; blender-glass-throne-v1 | non — famille candidate seulement | dedicated |
+| arena-templars-well | vex / reuse-blender-vault | atlas-family-vex ; blender-templars-well-v1 | non — générateur Blender séparé | dedicated |
+| arena-glass-throne | vex / reuse-blender-vault | atlas-family-vex ; blender-glass-throne-v1 | non — générateur Blender séparé | dedicated |
 | oversoul-throne | hive / environment-hive | atlas-family-hive | non — famille candidate seulement | modular-reconstruction |
 | dsc-morning-star | bray / environment-bray | atlas-family-bray | non — famille candidate seulement | modular-reconstruction |
 | dsc-restricted | bray / environment-bray | atlas-family-bray | non — famille candidate seulement | modular-reconstruction |
