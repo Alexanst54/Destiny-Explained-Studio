@@ -3,7 +3,7 @@ from venus_vault.geometry import Design
 import math
 
 
-def generate(seed=42, quality='balanced', arena='arena-templars-well'):
+def generate_v090(seed=42, quality='balanced', arena='arena-templars-well'):
     if arena not in ['arena-templars-well','arena-glass-throne']:raise ValueError('Unknown Vault arena')
     d=Design(arena,seed,quality);r=d.rng;throne=arena=='arena-glass-throne'
     d.box('abyss',(0,10,-4),(100,100,2),'basalt')
@@ -57,3 +57,11 @@ def generate(seed=42, quality='balanced', arena='arena-templars-well'):
             d.box(f'oracle-{i}',(x,y,z),(.7,.7,.7),'oracle',rot=(.5,.4,.6))
             d.ring(f'oracle-halo-{i}',(x,y,z),1,'oracle',.04,16,'xz')
     return d.result()
+
+
+def generate(seed=42, quality='balanced', arena='arena-templars-well', lod=0):
+    if type(lod) is not int or lod not in [0,1,2]:raise ValueError('LOD must be 0, 1 or 2')
+    if arena=='arena-glass-throne':
+        from cinematic_vex.throne import generate as throne
+        return throne(seed,quality,lod)
+    return generate_v090(seed,quality,arena)

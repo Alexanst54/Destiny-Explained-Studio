@@ -1,0 +1,99 @@
+{
+  "status": "success",
+  "phase": "before",
+  "presentation": "shared-studio",
+  "adaptiveThreshold": 0.02500000037252903,
+  "shot": {
+    "id": "head-torso",
+    "selection": "boss-atheon",
+    "camera": "close-up",
+    "width": 800,
+    "height": 640,
+    "beforeVerticalAlignment": -5.1,
+    "sharedCamera": {
+      "position": [
+        9,
+        -13,
+        9.9
+      ],
+      "target": [
+        0,
+        9,
+        9.200000000000001
+      ],
+      "lens": 51,
+      "sensorFit": "VERTICAL",
+      "sensorHeight": 24,
+      "near": 0.1,
+      "far": 350
+    }
+  },
+  "request": {
+    "version": 1,
+    "selectionId": "boss-atheon",
+    "environmentId": "arena-glass-throne",
+    "bossId": "boss-atheon",
+    "quality": "cinematic",
+    "seed": 42,
+    "camera": "wide",
+    "animation": "idle",
+    "frames": 1,
+    "fps": 30,
+    "width": 800,
+    "height": 640,
+    "startFrame": 0
+  },
+  "blenderVersion": "4.3.2",
+  "configuration": {
+    "requested": "auto",
+    "selected": "CPU",
+    "backend": null,
+    "devices": [],
+    "notes": [
+      "No compatible Cycles GPU found; CPU fallback selected."
+    ],
+    "samples": 128,
+    "bounces": 7,
+    "denoise": true,
+    "threads": 3,
+    "hazeDensity": 0.0045,
+    "viewTransform": "AgX",
+    "environmentBoxes": 705,
+    "bossBoxes": 129,
+    "batchedMeshes": 46,
+    "particles": 120,
+    "designSha256": "5f1b75dea1ed23612b52b4f33283c1bcf66f36b3c9c1171858a559568816db6e"
+  },
+  "buildSeconds": 0.07,
+  "cameraMatrixWorld": [
+    [
+      0.9255469441413879,
+      -0.011145555414259434,
+      0.378468781709671,
+      9.0
+    ],
+    [
+      0.37863287329673767,
+      0.027244724333286285,
+      -0.9251458644866943,
+      -13.0
+    ],
+    [
+      -1.3719303026960006e-08,
+      0.9995666742324829,
+      0.029436344280838966,
+      9.899999618530273
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "renderSeconds": 32.252,
+  "pngBytes": 479988,
+  "pngSha256": "58ffc127ac897d0272c2356a1f74f9f476bd1fe04bd0c0dc7aa0304449193cc7",
+  "secondsInsideBlender": 32.322,
+  "peakProcessRssKiB": 782332
+}

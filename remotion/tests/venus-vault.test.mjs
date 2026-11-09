@@ -36,3 +36,14 @@ test('boss generator scope cannot be used as another boss, environment or Remoti
  assert.equal(atlas.locations.find(l=>l.id==='venus').remotionAssetId,'atlas-family-vex');
  assert.equal(atlas.assets.find(a=>a.id==='atlas-family-vex').fidelity,'modular-reconstruction');
 });
+
+test('explicit LOD is bounded and does not follow preview resolution or sample quality',()=>{
+ for(const options of [{width:320,height:240,quality:'draft'},{width:1920,height:1080,quality:'cinematic'}])assert.equal(selectBlenderAsset('boss-atheon',options).lod,0);
+ for(const lod of [0,1,2])assert.equal(selectBlenderAsset('boss-templar',{lod}).lod,lod);
+ for(const lod of [-1,3,true,.5,'0',null])assert.throws(()=>selectBlenderAsset('boss-atheon',{lod}));
+});
+
+test('old controls coexist with added reveal and anatomical camera presets',()=>{
+ for(const animation of ['idle','walk','combat','temporal','reveal'])assert.equal(selectBlenderAsset('boss-atheon',{animation}).animation,animation);
+ for(const camera of ['wide','reveal','orbit','low-angle','close-up','front','profile','ground-reveal','mechanism','temporal'])assert.equal(selectBlenderAsset('boss-atheon',{camera}).camera,camera);
+});

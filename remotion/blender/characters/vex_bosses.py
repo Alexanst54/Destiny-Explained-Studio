@@ -5,7 +5,7 @@ import math
 from venus_vault.geometry import Design
 
 
-def generate(boss_id='boss-atheon', seed=42, quality='balanced'):
+def generate_v090(boss_id='boss-atheon', seed=42, quality='balanced'):
     if boss_id not in ['boss-atheon','boss-templar']:raise ValueError('Unknown Vex boss')
     d=Design(boss_id,seed,quality)
     d.joint('root',(0,9,1.35))
@@ -83,7 +83,7 @@ def generate(boss_id='boss-atheon', seed=42, quality='balanced'):
     return d.result()
 
 
-def pose(boss_id, animation='idle', frame=0, fps=30):
+def pose_v090(boss_id, animation='idle', frame=0, fps=30):
     """Random-access pose; never accumulates deltas, so resume and out-of-order frames agree."""
     allowed={'boss-atheon':['idle','walk','combat','temporal'], 'boss-templar':['idle','rotate','move','attack']}
     if boss_id not in allowed or animation not in allowed[boss_id]:raise ValueError('Unsupported boss animation')
@@ -115,3 +115,14 @@ def pose(boss_id, animation='idle', frame=0, fps=30):
         if animation=='move':positions['root']=(math.sin(t*.7)*2,9+math.sin(t)*1.3,1.35)
         if animation=='attack':rot['pelvis']=(.08*max(0,s),0,.12*math.sin(t*2))
     return dict(rotation=rot,position=positions,emissionPulse=1+.15*math.sin(t*4))
+
+
+def generate(boss_id='boss-atheon', seed=42, quality='balanced', lod=0):
+    from cinematic_vex import atheon,templar
+    if boss_id not in ['boss-atheon','boss-templar']:raise ValueError('Unknown Vex boss')
+    return (atheon if boss_id=='boss-atheon' else templar).generate(seed,quality,lod)
+
+
+def pose(boss_id, animation='idle', frame=0, fps=30):
+    from cinematic_vex.animation import evaluate
+    return evaluate(boss_id,animation,frame,fps)

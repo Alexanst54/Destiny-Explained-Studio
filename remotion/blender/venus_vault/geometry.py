@@ -27,6 +27,9 @@ PALETTE = {
     'shield':('#95e4ff',.2,.2,2),
 }
 
+from cinematic_vex.materials import MATERIALS
+PALETTE.update(MATERIALS)
+
 class Design:
     def __init__(self, name, seed=42, quality='balanced'):
         if type(seed) is not int or not 0 <= seed <= 2147483647 or quality not in QUALITY:

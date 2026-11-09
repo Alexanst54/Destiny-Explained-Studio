@@ -7,7 +7,7 @@ BINDINGS=json.loads(Path(__file__).with_name('atlas-bindings.json').read_text())
 ATLAS=Path(__file__).resolve().parents[2]/'atlas/universal/catalog.json'
 
 
-def select(entity_id, quality='balanced', seed=42, camera='wide', animation='idle', frames=1, fps=30, width=960, height=540, start_frame=0):
+def select(entity_id, quality='balanced', seed=42, camera='wide', animation='idle', frames=1, fps=30, width=960, height=540, start_frame=0, lod=0):
     catalog=json.loads(ATLAS.read_text())
     locations={p['id']:p for p in catalog['locations']};bosses={p['id']:p for p in catalog['bosses']}
     if entity_id in BINDINGS['bosses']:
@@ -21,11 +21,12 @@ def select(entity_id, quality='balanced', seed=42, camera='wide', animation='idl
     else:raise ValueError('Selection is outside the implemented Venus/Vault extension')
     if locations.get(env,{}).get('blenderAssetId')!=BINDINGS['environments'][env]['assetId']:raise ValueError('Environment Atlas binding differs')
     return validate(dict(version=1,selectionId=entity_id,environmentId=BINDINGS['environments'][env]['generator'],bossId=boss,
-                         quality=quality,seed=seed,camera=camera,animation=animation,frames=frames,fps=fps,width=width,height=height,startFrame=start_frame))
+                         quality=quality,seed=seed,camera=camera,animation=animation,frames=frames,fps=fps,width=width,height=height,startFrame=start_frame,lod=lod))
 
 
 def validate(r):
-    fields={'version','selectionId','environmentId','bossId','quality','seed','camera','animation','frames','fps','width','height','startFrame'}
+    if isinstance(r,dict) and 'lod' not in r:r={**r,'lod':0}
+    fields={'version','selectionId','environmentId','bossId','quality','seed','camera','animation','frames','fps','width','height','startFrame','lod'}
     if not isinstance(r,dict) or set(r)!=fields or type(r['version']) is not int or r['version']!=1:raise ValueError('Unsupported render request')
     if r['selectionId'] in BINDINGS['bosses']:
         b=BINDINGS['bosses'][r['selectionId']]
@@ -34,7 +35,7 @@ def validate(r):
         if r['bossId'] is not None or r['environmentId']!=BINDINGS['environments'][r['selectionId']]['generator'] or r['animation']!='idle':raise ValueError('Invalid environment-only request')
     else:raise ValueError('Unknown Atlas selection')
     if r['quality'] not in QUALITY or r['camera'] not in PRESETS:raise ValueError('Unknown quality or camera')
-    for k,lo,hi in [('startFrame',0,17999),('seed',0,2147483647),('frames',1,120),('width',320,1920),('height',240,1920)]:
+    for k,lo,hi in [('lod',0,2),('startFrame',0,17999),('seed',0,2147483647),('frames',1,120),('width',320,1920),('height',240,1920)]:
         if type(r[k]) is not int or not lo<=r[k]<=hi:raise ValueError('Invalid '+k)
     if type(r['fps']) is not int or r['fps'] not in [24,30] or r['width']%2 or r['height']%2:raise ValueError('Invalid dimensions or fps')
     if r['startFrame']+r['frames']>18000:raise ValueError('Frame range exceeds bound')

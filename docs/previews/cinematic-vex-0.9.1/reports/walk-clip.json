@@ -1,0 +1,1201 @@
+{
+  "status": "success",
+  "request": {
+    "version": 1,
+    "selectionId": "boss-atheon",
+    "environmentId": "arena-glass-throne",
+    "bossId": "boss-atheon",
+    "quality": "balanced",
+    "seed": 42,
+    "camera": "orbit",
+    "animation": "walk",
+    "frames": 48,
+    "fps": 24,
+    "width": 480,
+    "height": 360,
+    "startFrame": 0,
+    "lod": 0
+  },
+  "blenderVersion": "4.3.2",
+  "frames": [
+    {
+      "frame": 0,
+      "file": "frame-0000.png",
+      "seconds": 104.282,
+      "bytes": 264407,
+      "sha256": "9fe5f7efceb9f0e847030c6c29b66f6524163bb1b0c8a335d83418238efa8ccf",
+      "camera": {
+        "position": [
+          -16.459094757861667,
+          -36.089890216674185,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 1,
+      "file": "frame-0001.png",
+      "seconds": 104.985,
+      "bytes": 264565,
+      "sha256": "7ab34e7a8531fe179648af2bdc55ae7ae45523cd2e0338fcb12fb5cc414f47fc",
+      "camera": {
+        "position": [
+          -16.27107788503045,
+          -36.15807817499847,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 2,
+      "file": "frame-0002.png",
+      "seconds": 76.663,
+      "bytes": 264769,
+      "sha256": "64a385321017df1ad2e8c28e0d4df5af098bfdd4a826e0751530a0b4f052f1ea",
+      "camera": {
+        "position": [
+          -16.082778528616863,
+          -36.225482140044235,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 3,
+      "file": "frame-0003.png",
+      "seconds": 68.504,
+      "bytes": 264741,
+      "sha256": "21411801186d23cc9163e5e8a2d43aa508fbe9c1dd559505a3608b8ee67855b7",
+      "camera": {
+        "position": [
+          -15.894199957702224,
+          -36.29210094160546,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 4,
+      "file": "frame-0004.png",
+      "seconds": 72.302,
+      "bytes": 265509,
+      "sha256": "86e3c5ae94d716399cd593d05d583c0d1fa3c527096134e1e5718dac3335351e",
+      "camera": {
+        "position": [
+          -15.705345446215311,
+          -36.357933423107404,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 5,
+      "file": "frame-0005.png",
+      "seconds": 74.537,
+      "bytes": 265711,
+      "sha256": "6ac644b221fe0047a1f4d4f9b1755a8f41f32f59c9597011b88a5bcda9de0368",
+      "camera": {
+        "position": [
+          -15.516218272875548,
+          -36.42297844162669,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 6,
+      "file": "frame-0006.png",
+      "seconds": 72.547,
+      "bytes": 265849,
+      "sha256": "0e2e7b8f5c153cc4cd282143ee6087f067eaf86c2e7f2dc563fe729ddf492910",
+      "camera": {
+        "position": [
+          -15.326821721136051,
+          -36.487234867911155,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 7,
+      "file": "frame-0007.png",
+      "seconds": 69.385,
+      "bytes": 265864,
+      "sha256": "2f90879ea5803585e567acf3474cceb1746410cbed122695b64fc79d727e284f",
+      "camera": {
+        "position": [
+          -15.137159079126642,
+          -36.550701586399455,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 8,
+      "file": "frame-0008.png",
+      "seconds": 66.982,
+      "bytes": 265630,
+      "sha256": "0c31aa40129a771bc81eb1766beac78e963c394e872d7c7e84cbc3e26548d981",
+      "camera": {
+        "position": [
+          -14.94723363959675,
+          -36.61337749524044,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 9,
+      "file": "frame-0009.png",
+      "seconds": 73.274,
+      "bytes": 266204,
+      "sha256": "81d609c1ab80844bffdd39282ce23296b22eb8d7df20c654cbd69be7e5c4dc74",
+      "camera": {
+        "position": [
+          -14.757048699858277,
+          -36.67526150631227,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 10,
+      "file": "frame-0010.png",
+      "seconds": 40.41,
+      "bytes": 267015,
+      "sha256": "8b54855ab008696879a6e6b9140db2c897d6784b704eeeec8c2f17d95f66c5af",
+      "camera": {
+        "position": [
+          -14.566607561728317,
+          -36.73635254524129,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 11,
+      "file": "frame-0011.png",
+      "seconds": 33.819,
+      "bytes": 266617,
+      "sha256": "d39a85503cd981ea582da081bdfec92cfab9f8c1c3d195996ec5009d6a422215",
+      "camera": {
+        "position": [
+          -14.375913531471838,
+          -36.796649551420735,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 12,
+      "file": "frame-0012.png",
+      "seconds": 33.67,
+      "bytes": 266969,
+      "sha256": "baddcc549d644c7ee0830a98c22789584e2775037b4a9cf6edb1fac2e8e1d31f",
+      "camera": {
+        "position": [
+          -14.184969919744297,
+          -36.85615147802909,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 13,
+      "file": "frame-0013.png",
+      "seconds": 32.25,
+      "bytes": 267545,
+      "sha256": "5e496482d89af6a1fa5860e4c1ebf5f7c86e36d84d5b192569178e1545f967d0",
+      "camera": {
+        "position": [
+          -13.993780041534166,
+          -36.914857292048296,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 14,
+      "file": "frame-0014.png",
+      "seconds": 40.651,
+      "bytes": 267448,
+      "sha256": "c256dd178973ad67f8307323e04878dc66e21adae88c76f3c0be7765b4fe433f",
+      "camera": {
+        "position": [
+          -13.802347216105352,
+          -36.97276597428165,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 15,
+      "file": "frame-0015.png",
+      "seconds": 36.254,
+      "bytes": 266867,
+      "sha256": "fea6a8ae300e01c807b142e12acb4665ef58e9d2c5c7bdcb5dfa9e60c46283a5",
+      "camera": {
+        "position": [
+          -13.610674766939605,
+          -37.02987651937156,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 16,
+      "file": "frame-0016.png",
+      "seconds": 35.457,
+      "bytes": 267930,
+      "sha256": "a0a6293d69a07dcd8d3143166ebbe7cd635bc6b57171ecc378176ec53df32402",
+      "camera": {
+        "position": [
+          -13.418766021678794,
+          -37.08618793581694,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 17,
+      "file": "frame-0017.png",
+      "seconds": 34.077,
+      "bytes": 267819,
+      "sha256": "4b21626819850c6c0c0b96a907f05aeff12784afd4ce255fe798e7fa57ca68ea",
+      "camera": {
+        "position": [
+          -13.226624312067152,
+          -37.14169924599044,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 18,
+      "file": "frame-0018.png",
+      "seconds": 37.2,
+      "bytes": 268173,
+      "sha256": "77e3068a1bed86b6482b7b232e75c82499fa6b7905c4abbd8dd6451fd2428c06",
+      "camera": {
+        "position": [
+          -13.03425297389342,
+          -37.196409486155424,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 19,
+      "file": "frame-0019.png",
+      "seconds": 41.407,
+      "bytes": 267592,
+      "sha256": "32763ea7aa544d56eeb9f155ff672ab6f1506e362e4bf645f9e40d6e9553f956",
+      "camera": {
+        "position": [
+          -12.841655346932944,
+          -37.25031770648272,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 20,
+      "file": "frame-0020.png",
+      "seconds": 68.801,
+      "bytes": 267402,
+      "sha256": "e0ea9a74d8c5e44fbbaab43999dc5b864a902797858f407c800daeebb4815968",
+      "camera": {
+        "position": [
+          -12.64883477488969,
+          -37.303422971067064,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 21,
+      "file": "frame-0021.png",
+      "seconds": 69.191,
+      "bytes": 267976,
+      "sha256": "ddf5bdbc882d818e971c553797d0a9dd938679588b32df5b6db4246da16c1846",
+      "camera": {
+        "position": [
+          -12.455794605338184,
+          -37.355724357943416,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 22,
+      "file": "frame-0022.png",
+      "seconds": 64.508,
+      "bytes": 268386,
+      "sha256": "07788b953bf6490a6ba0423daf39381158d57a6d20d356eada9c0aaa1be98aa2",
+      "camera": {
+        "position": [
+          -12.262538189665404,
+          -37.40722095910288,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 23,
+      "file": "frame-0023.png",
+      "seconds": 70.964,
+      "bytes": 268230,
+      "sha256": "d8b41151f945140588c39ef1ba35a2b7af3d268ba3e69d5ed99e14546215cf7c",
+      "camera": {
+        "position": [
+          -12.069068883012621,
+          -37.45791188050854,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 24,
+      "file": "frame-0024.png",
+      "seconds": 73.821,
+      "bytes": 267879,
+      "sha256": "59a0793bfc830f846fd90e5ed1a618d5158661f32798ed1e1d0955944f84bef5",
+      "camera": {
+        "position": [
+          -11.875390044217099,
+          -37.507796242110956,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 25,
+      "file": "frame-0025.png",
+      "seconds": 69.604,
+      "bytes": 268363,
+      "sha256": "222a0650200ebf493fde8629b8e449567ea498adc69f6fd5a4871850a79ec255",
+      "camera": {
+        "position": [
+          -11.681505035753805,
+          -37.55687317786342,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 26,
+      "file": "frame-0026.png",
+      "seconds": 68.343,
+      "bytes": 268230,
+      "sha256": "05d5c9e29c2cfde90a04514c1569d75d9dee2985bda213a20d564b44aab97704",
+      "camera": {
+        "position": [
+          -11.487417223677053,
+          -37.60514183573705,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 27,
+      "file": "frame-0027.png",
+      "seconds": 72.101,
+      "bytes": 268968,
+      "sha256": "ea20cd38e0de9192dc0220c8fba5dcbd1c5e540f377f3655285cb307e10b71e0",
+      "camera": {
+        "position": [
+          -11.293129977562032,
+          -37.65260137773552,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 28,
+      "file": "frame-0028.png",
+      "seconds": 64.653,
+      "bytes": 268381,
+      "sha256": "ead32e694036e7b28d09fba6beb9f960f6b72d93f290be5a4e6488551d13bc37",
+      "camera": {
+        "position": [
+          -11.098646670446332,
+          -37.699250979909635,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 29,
+      "file": "frame-0029.png",
+      "seconds": 74.235,
+      "bytes": 268688,
+      "sha256": "c5ce6bdce3b4f751aed5197b7213ffaf330a06d2f163e8cf0847d59c6edc5b18",
+      "camera": {
+        "position": [
+          -10.90397067877137,
+          -37.74508983237164,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 30,
+      "file": "frame-0030.png",
+      "seconds": 68.317,
+      "bytes": 269803,
+      "sha256": "b79c5020806eeae4d1da4bd41c9d726ad982e53889e698e08ca8c46dabe1aca4",
+      "camera": {
+        "position": [
+          -10.709105382323783,
+          -37.79011713930928,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 31,
+      "file": "frame-0031.png",
+      "seconds": 69.089,
+      "bytes": 270322,
+      "sha256": "c7999eb94575aac5b345ed7f5f3a14f1e6a60c0754261f091c17f669e1b51b0a",
+      "camera": {
+        "position": [
+          -10.514054164176736,
+          -37.8343321189996,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 32,
+      "file": "frame-0032.png",
+      "seconds": 70.397,
+      "bytes": 269705,
+      "sha256": "e789346b29381127babd14ca8a560e03350fcbbb8079c19e098cf3eda3836b6e",
+      "camera": {
+        "position": [
+          -10.3188204106312,
+          -37.87773400382255,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 33,
+      "file": "frame-0033.png",
+      "seconds": 70.787,
+      "bytes": 269671,
+      "sha256": "1c0c93c5baa337ae1aea5a2d55a53325e21cac7814bae416509510615f8b2b8a",
+      "camera": {
+        "position": [
+          -10.123407511157163,
+          -37.920322040274264,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 34,
+      "file": "frame-0034.png",
+      "seconds": 66.183,
+      "bytes": 270096,
+      "sha256": "e8245de012f9f287ca1dd5baf11a385874e2acf3d18047488c361727b6988235",
+      "camera": {
+        "position": [
+          -9.927818858334774,
+          -37.96209548898018,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 35,
+      "file": "frame-0035.png",
+      "seconds": 33.826,
+      "bytes": 269677,
+      "sha256": "3974f01b0fdb53d85eed7c061e4af8fef0581f3fc0ade11dfd4d56660a566822",
+      "camera": {
+        "position": [
+          -9.732057847795454,
+          -38.00305362470786,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 36,
+      "file": "frame-0036.png",
+      "seconds": 33.96,
+      "bytes": 269463,
+      "sha256": "d4f449d541ad65cd8d811c11ce9c4a1637e87c86b0ad3ba66e92402f2ecd742b",
+      "camera": {
+        "position": [
+          -9.536127878162944,
+          -38.0431957363796,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 37,
+      "file": "frame-0037.png",
+      "seconds": 35.148,
+      "bytes": 270845,
+      "sha256": "f24b9ec47737076b602d6f7fe53b18e4c3c4b1efca133a47b5fddc7db5269294",
+      "camera": {
+        "position": [
+          -9.340032350994282,
+          -38.08252112708473,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 38,
+      "file": "frame-0038.png",
+      "seconds": 35.279,
+      "bytes": 270728,
+      "sha256": "49366d156ee0010abd44dd2b03cbea48fd15521d78383982db9bbcc987c15782",
+      "camera": {
+        "position": [
+          -9.14377467072081,
+          -38.121029114091776,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 39,
+      "file": "frame-0039.png",
+      "seconds": 35.509,
+      "bytes": 270954,
+      "sha256": "e35b417b80ff1946d5e5d32615cec04df9f34874ccb5eae208df8b2bc0c01b7f",
+      "camera": {
+        "position": [
+          -8.947358244588951,
+          -38.158719028860254,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 40,
+      "file": "frame-0040.png",
+      "seconds": 33.215,
+      "bytes": 271165,
+      "sha256": "c4cfafefba2234a647913f3007c6218080e2a2cc71400a4ce045bd50bd83a960",
+      "camera": {
+        "position": [
+          -8.750786482601201,
+          -38.19559021705231,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 41,
+      "file": "frame-0041.png",
+      "seconds": 33.331,
+      "bytes": 270229,
+      "sha256": "965b8589bb6496608a538d547f7e226a09864e7580617995eb33e4555129fd0f",
+      "camera": {
+        "position": [
+          -8.554062797456815,
+          -38.23164203854409,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 42,
+      "file": "frame-0042.png",
+      "seconds": 35.245,
+      "bytes": 270310,
+      "sha256": "25b0ea3901294ab135a135470c3d7ece306410e96ece859279176f10dfd339ee",
+      "camera": {
+        "position": [
+          -8.357190604492605,
+          -38.26687386743681,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 43,
+      "file": "frame-0043.png",
+      "seconds": 34.171,
+      "bytes": 270784,
+      "sha256": "92ae7535483bee975e12d4997a117531d7fde77a60572ad54657c007a235a82e",
+      "camera": {
+        "position": [
+          -8.160173321623645,
+          -38.30128509206765,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 44,
+      "file": "frame-0044.png",
+      "seconds": 34.434,
+      "bytes": 270773,
+      "sha256": "00e782e6af4f1e748bc3bab1134d4e4dbe5ede7574bf6449815c66b9b9ecb371",
+      "camera": {
+        "position": [
+          -7.963014369283922,
+          -38.3348751150204,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 45,
+      "file": "frame-0045.png",
+      "seconds": 31.961,
+      "bytes": 271782,
+      "sha256": "75241080aed5aa8d5753716cb53ee7df1cdf3b735878260bc7ffb366ac0665d8",
+      "camera": {
+        "position": [
+          -7.765717170366965,
+          -38.367643353135776,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 46,
+      "file": "frame-0046.png",
+      "seconds": 34.21,
+      "bytes": 272060,
+      "sha256": "f47ca09a47621bae01b4ec533543dba9500b89dcb6cb27ad2cbe53e1f0099990",
+      "camera": {
+        "position": [
+          -7.56828515016641,
+          -38.39958923752157,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    },
+    {
+      "frame": 47,
+      "file": "frame-0047.png",
+      "seconds": 33.02,
+      "bytes": 271698,
+      "sha256": "4656107e8c0efeae4c734779d1973c1517aa01b63fa62785cf3b348845627125",
+      "camera": {
+        "position": [
+          -7.370721736316539,
+          -38.43071221356254,
+          10.5
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 42,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24,
+        "near": 0.1,
+        "far": 350
+      }
+    }
+  ],
+  "configuration": {
+    "requested": "auto",
+    "selected": "CPU",
+    "backend": null,
+    "devices": [],
+    "notes": [
+      "No compatible Cycles GPU found; CPU fallback selected."
+    ],
+    "lod": 0,
+    "adaptiveThreshold": 0.05999999865889549,
+    "persistentData": true,
+    "samples": 48,
+    "bounces": 5,
+    "denoise": true,
+    "threads": 3,
+    "hazeDensity": 0.0019249999895691872,
+    "viewTransform": "AgX",
+    "environmentBoxes": 4349,
+    "bossBoxes": 3245,
+    "batchedMeshes": 88,
+    "particles": 65,
+    "designSha256": "0717020ccc6f2eb7f1d4ff6f3e763e1a07548269d9425f5665faf1fb9a2ba9da"
+  },
+  "buildSeconds": 0.905,
+  "secondsInsideBlender": 2634.118,
+  "peakProcessRssKiB": 602080,
+  "memoryScope": "Linux Blender process peak RSS; GPU memory/utilization not measured."
+}

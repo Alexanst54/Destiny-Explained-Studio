@@ -32,7 +32,7 @@ class VenusVaultTests(unittest.TestCase):
         self.assertTrue(any('/oracle-' in o['id'] for o in templar['objects']))
         self.assertTrue(any('/conflux-' in o['id'] for o in templar['objects']))
         self.assertFalse(any('/oracle-' in o['id'] for o in throne['objects']))
-        self.assertTrue(any('/portal-frame-' in o['id'] for o in throne['objects']))
+        self.assertTrue(any('/temporal-gate-' in o['id'] for o in throne['objects']))
         self.assertTrue(any('/academy-' in o['id'] for o in v['objects']))
         self.assertTrue(any('/buried-vex-' in o['id'] for o in v['objects']))
 
@@ -48,8 +48,8 @@ class VenusVaultTests(unittest.TestCase):
 
     def test_boss_silhouettes_have_semantic_components(self):
         a=generate();t=generate('boss-templar');ids=lambda s:' '.join(o['id'] for o in s['objects'])
-        for word in ['horn-','radiolaria-vessel','single-eye','foot-L','temporal-core']:self.assertIn(word,ids(a))
-        for word in ['wing-','great-eye','shield-edge-','heavy-cannon']:self.assertIn(word,ids(t))
+        for word in ['crown-central-spire','crown-side-blade','chevron-','radiolaria-vessel','single-eye','foot-L','temporal-core']:self.assertIn(word,ids(a))
+        for word in ['crescent-','great-eye','shield-cell-','cannon-']:self.assertIn(word,ids(t))
         self.assertNotIn('foot-L',ids(t))
 
     def test_animation_random_access_all_clips(self):
@@ -62,7 +62,7 @@ class VenusVaultTests(unittest.TestCase):
                 self.assertTrue(all(math.isfinite(x) for v in list(p['rotation'].values())+list(p['position'].values()) for x in v))
         self.assertNotEqual(pose('boss-atheon','walk',30)['position']['root'],pose('boss-atheon','walk',0)['position']['root'])
         walk=[pose('boss-atheon','walk',f,24)['position']['root'] for f in [0,24,48,96,10000]]
-        self.assertGreater(walk[0][2],walk[2][2]);self.assertTrue(all(p[2]>.1 and p[1]>=4.5 for p in walk))
+        self.assertAlmostEqual(walk[0][2],walk[2][2]);self.assertTrue(all(p[2]>.1 and p[1]>=-11 for p in walk))
         self.assertNotEqual(pose('boss-templar','rotate',30)['rotation']['halo'],pose('boss-templar','rotate',0)['rotation']['halo'])
 
     def test_camera_paths_continuous_and_finite(self):

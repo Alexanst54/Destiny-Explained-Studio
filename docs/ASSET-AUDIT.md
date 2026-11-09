@@ -2,13 +2,13 @@
 
 Audit du 2026-11-09. Branche observée au départ : `feat/gpu-render-optimization-0.8.4` (`146d43e`, PR #17). Implémentation indépendante depuis `main` (`1effd88`). Aucun asset existant supprimé ou remplacé.
 
-Extension visuelle sur `feat/venus-vault-blender-0.9.0`, basée sur la branche de PR #19 à `eb6c4de`. Les observations de branche ci-dessus décrivent l’audit initial ; aucune modification de PR #17 ou PR #19.
+Refonte visuelle 0.9.1 sur `feat/cinematic-vex-overhaul-0.9.1`, basée sur PR #20 à `b1fd922`. Les observations ci-dessus décrivent l’audit initial ; PR #17, #19 et #20 restent inchangées.
 
 ## Méthode et preuve reproductible
 
 Exécuter depuis `remotion/` : `npm run audit:assets` ; vérifier sans réécriture : `npm run audit:assets -- --check`. [asset-audit.json](../remotion/atlas/universal/asset-audit.json) contient chemins, tailles, SHA-256 et références par épisode. Les schémas historiques sont exécutés. L’audit fonctionne hors ligne.
 
-L’inventaire porte sur **153 fichiers suivis**, **12 épisodes JSON**, les catalogues, moteurs, bridges et assets compilés. Les médias Kokoro et caches ignorés ne sont pas des fichiers d’assets versionnés ; les références à générer sont signalées séparément. Un fichier présent ou une référence textuelle ne démontre pas son rendu ni sa fidélité canonique.
+L’inventaire porte sur **173 fichiers suivis**, **12 épisodes JSON**, les catalogues, moteurs, bridges et assets compilés. Les médias Kokoro et caches ignorés ne sont pas des fichiers d’assets versionnés ; les références à générer sont signalées séparément. Un fichier présent ou une référence textuelle ne démontre pas son rendu ni sa fidélité canonique.
 
 ## Inventaire réel
 
@@ -32,7 +32,7 @@ L’inventaire porte sur **153 fichiers suivis**, **12 épisodes JSON**, les cat
 | black-garden | voxel-black-garden-v1 — VoxelEnvironment | Export de scène limité ; géométrie complète de ce décor non transférée |
 | tower | voxel-tower-v1 — VoxelEnvironment | Export de scène limité ; géométrie complète de ce décor non transférée |
 
-Les recettes sont dans `remotion/atlas/recipes.ts`, les 16 modules dans `geometry.ts`, les décors dans `src/voxel/library/Library.tsx` et `layout.ts`. Les recettes historiques restent intactes ; Vénus/Caveau dispose maintenant de générateurs Blender séparés, stylisés et non cartographiquement fidèles. Mars et Lune/Cropta restent à adapter.
+Les recettes sont dans `remotion/atlas/recipes.ts`, les 16 modules dans `geometry.ts`, les décors dans `src/voxel/library/Library.tsx` et `layout.ts`. Les recettes historiques restent intactes ; Vénus/Caveau dispose de générateurs Blender séparés. La refonte 0.9.1 ajoute une anatomie Vex détaillée, un LOD explicite et des contacts IK, sans reproduction cartographique exacte. Mars et Lune/Cropta restent à adapter.
 
 ### Personnages, animation et composition
 
@@ -56,7 +56,7 @@ Assets de boss absents dans le nouveau registre : boss-ir-yut, boss-crota, boss-
 - Le bridge n’exporte pas les `atlasBoxes` complets ni les décors dédiés : scène de base simplifiée, blocs polish, props terminal et rigs. La présence d’un lieu dans le catalogue ne prouve pas sa géométrie Blender.
 - Sky gradient, brouillard, particules, decals, weather geometry et éléments voxel historiques ne sont pas transférés intégralement. Les omissions sont déclarées dans les snapshots. Kokoro, captions, labels et montage restent dans Remotion.
 - `blender/environments/riis.py::generate` est un générateur réutilisable existant, limité à `riis/before-whirlwind`. Il utilise les primitives, matériaux, profils et haze existants ; ce n’est ni un fichier .blend ni un générateur universel Vex/Ruche/Cabal.
-- Extension Vénus/Caveau opt-in : trois décors et deux boss originaux, géométrie voxel, couleurs, détection GPU et logs partagés avec le bridge. Les rendus CPU sont documentés séparément dans `blender/venus_vault/VALIDATION.md` ; ils ne valident pas Colab/T4.
+- Extension Vénus/Caveau opt-in : trois décors et deux boss originaux, géométrie voxel, couleurs, détection GPU et logs partagés avec le bridge. Les rendus CPU sont documentés séparément dans `blender/cinematic_vex/README.md` ; ils ne valident pas Colab/T4.
 - Les exemples de snapshots, contrats TS/Python, importeur et deux notebooks existants sont conservés. Aucun test de rendu GPU/Colab/Android n’est ajouté ou revendiqué par cet audit statique.
 
 ## Branche initiale et indépendance de la PR #17

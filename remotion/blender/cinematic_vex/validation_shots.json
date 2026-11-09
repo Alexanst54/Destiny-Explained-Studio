@@ -1,0 +1,77 @@
+{
+  "baseline": "b1fd922fd495037daf897c9eca7713fcf69c4f1a",
+  "seed": 42,
+  "stills": [
+    {
+      "id": "front",
+      "selection": "boss-atheon",
+      "camera": "front",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "id": "profile",
+      "selection": "boss-atheon",
+      "camera": "profile",
+      "width": 640,
+      "height": 800
+    },
+    {
+      "id": "low-angle",
+      "selection": "boss-atheon",
+      "camera": "low-angle",
+      "width": 800,
+      "height": 640
+    },
+    {
+      "id": "head-torso",
+      "selection": "boss-atheon",
+      "camera": "close-up",
+      "width": 800,
+      "height": 640,
+      "beforeVerticalAlignment": -5.1
+    },
+    {
+      "id": "throne",
+      "selection": "boss-atheon",
+      "camera": "wide",
+      "width": 960,
+      "height": 640
+    },
+    {
+      "id": "templar",
+      "selection": "boss-templar",
+      "camera": "front",
+      "width": 640,
+      "height": 800
+    }
+  ],
+  "clips": [
+    {
+      "id": "walk",
+      "selection": "boss-atheon",
+      "camera": "orbit",
+      "animation": "walk",
+      "width": 480,
+      "height": 360,
+      "frames": 48,
+      "startFrame": 0,
+      "fps": 24,
+      "quality": "balanced",
+      "lod": 0
+    },
+    {
+      "id": "temporal",
+      "selection": "boss-atheon",
+      "camera": "temporal",
+      "animation": "temporal",
+      "width": 480,
+      "height": 360,
+      "frames": 36,
+      "startFrame": 12,
+      "fps": 24,
+      "quality": "balanced",
+      "lod": 0
+    }
+  ]
+}

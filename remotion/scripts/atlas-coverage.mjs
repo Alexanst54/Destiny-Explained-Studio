@@ -28,7 +28,7 @@ export function coverageMarkdown() {
  const stats=coverage();
  return [
   '# Atlas universel D1/D2 — rencontres, boss et réemploi des assets','',
-  `Revue : ${c.reviewedAt}. Issue [#18](https://github.com/Alexanst54/Destiny-Explained-Studio/issues/18), fondation PR #19 et extension Blender Vénus/Caveau. **Couverture encore partielle** : une revue des rencontres principales ne signifie ni inventaire de tous les ennemis/défis, ni arènes modélisées, ni variantes exhaustives.`,
+  `Revue : ${c.reviewedAt}. Issue [#18](https://github.com/Alexanst54/Destiny-Explained-Studio/issues/18), fondation PR #19, extension PR #20 et refonte visuelle 0.9.1. **Couverture encore partielle** : une revue des rencontres principales ne signifie ni inventaire de tous les ennemis/défis, ni arènes modélisées, ni variantes exhaustives.`,
   '', '## Périmètre vérifié','',
   `**${stats.baseRaidsWithReviewedMainEncounters}/${stats.baseRaids} raids de base** par jeu/version et **${stats.dungeonsWithReviewedMainEncounters}/11 donjons D2** ont leurs rencontres principales relues. Le Désert perpétuel Epic reste une édition séparée et partielle, comme la documentation de sa source. Les autres assauts et missions exotiques sont ajoutés progressivement et gardent leur statut partial.`,
   '', `Le catalogue contient **${stats.activities} activités**, **${stats.encounters} étapes** (${Object.entries(stats.encounterCategories).map(([k,v])=>`${v} ${k}`).join(', ')}), **${stats.bossIdentities} entrées de boss** et **${stats.bossVariants} formes/variantes**. Les boss comprennent des identités, des collectifs et des mécanismes : pas ${stats.bossIdentities} personnes distinctes. Les membres de Raneiks ou des Bêtes royales ne sont pas des variantes d’un individu.`,
@@ -59,7 +59,7 @@ export function coverageMarkdown() {
   '', '## Environnements réutilisés','',
   '| Lieu / variante | Famille / profil | Référence existante | Recette historique exacte | Fidélité |','| --- | --- | --- | --- | --- |',
   ...[...c.locations,...c.locationVariants].map(l=>`| ${l.id} | ${l.environmentFamily} / ${c.assetReusePlans.find(p=>p.entityId===l.id)?.profileIds.join(', ')} | ${l.remotionAssetId??'aucune'}${l.blenderAssetId?' ; '+l.blenderAssetId:''} | ${c.assetReusePlans.find(p=>p.entityId===l.id)?.existingRecipe?'oui':l.blenderAssetId?'non — générateur Blender séparé':'non — famille candidate seulement'} | ${l.visualStatus} |`),
-  '', 'Le décor dédié existant est une évocation voxel, pas une carte exacte. Les autres arènes partagent les recettes de famille. Aucun fichier propriétaire ni transfert complet de géométrie historique. Riis reste inchangé ; Vénus, le Puits du Templier et le Trône de verre ont des générateurs séparés et deux rigs dédiés. Voir blender/venus_vault/VALIDATION.md pour les vrais rendus et leurs limites.',
+  '', 'Le décor dédié existant est une évocation voxel, pas une carte exacte. Les autres arènes partagent les recettes de famille. Aucun fichier propriétaire ni transfert complet de géométrie historique. Riis reste inchangé ; Vénus, le Puits du Templier et le Trône de verre ont des générateurs séparés et deux rigs dédiés. La refonte 0.9.1 conserve les IDs et ajoute anatomie détaillée, IK et LOD indépendants de la résolution. Voir blender/cinematic_vex/README.md et docs/previews/cinematic-vex-0.9.1 pour les comparatifs et limites.',
   '', '## Corrections sourcées sans migration du catalogue historique','',
   ...c.legacyCorrections.map(r=>`- ${r.locationId} : ${r.field} = ${r.originalValue} dans le catalogue historique, ${r.correctedValue} dans universal. ${r.note} Sources : ${r.sources.map(linkSource).join('; ')}.`),
   '', 'Pour Equilibrium, les objectifs/transcript placent Harrow sur Imperium Carrier puis Sere dans Malphas Contemptus ; une phrase du walkthrough mélange l’ordre d’embarquement. Le désaccord est conservé dans la revue plutôt que masqué. Les noms français non vérifiés restent untranslated ; aucune traduction officielle n’est inventée.',
@@ -69,7 +69,7 @@ export function coverageMarkdown() {
   '', '## Lacunes maintenues','',...c.knownGaps.map(g=>'- '+g),
   '', '## Vérification et indépendance','',
   'Depuis remotion/ : `npm run test:atlas:universal`, `npm run typecheck:atlas:universal`, `npm run audit:assets -- --check`, `npm run report:atlas:coverage -- --check`. Voir atlas/universal/VALIDATION.md pour les commandes réellement exécutées. Les contrôles n’ont pas besoin du réseau.',
-  '', 'Extension visuelle sur une branche dédiée, ciblant la branche de PR #19, sans modifier PR #19. Les anciens épisodes, le moteur vidéo, les assets existants et la PR #17 restent inchangés ; aucune fusion automatique. Les anciens IDs de la fondation sont conservés et testés. Nouveaux modèles procéduraux limités à Athéon et au Templier ; aucun rendu de 35 secondes.', '',
+  '', 'Refonte 0.9.1 sur une branche dédiée ciblant la branche de PR #20 ; PR #17, #19 et #20 restent indépendantes. Les anciens épisodes, le moteur vidéo, les assets existants et la PR #17 restent inchangés ; aucune fusion automatique. Les anciens IDs de la fondation sont conservés et testés. Nouveaux modèles procéduraux limités à Athéon et au Templier ; aucun rendu de 35 secondes.', '',
  ].join('\n');
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)) {

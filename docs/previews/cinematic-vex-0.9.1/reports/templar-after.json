@@ -1,0 +1,122 @@
+{
+  "status": "success",
+  "sourceInputHashes": {
+    "import_scene.py": "6957ffaef2eb50ff8b5057186820ef5b8ffbd06ca48c77354e2dc9da9ad8f287",
+    "contract.py": "19f8231c60a6ba20e82735c90bab2a34c1185a5a727b6e01d6cd74f41f5e3c2b",
+    "characters/vex_bosses.py": "e372a2df2dfde4bca1242f115877a2e60df0a188f54dc0b7f3b74d56bff41951",
+    "environments/venus.py": "f6baf34cca0bb20c8c3be6e26df208fc0e05f3e82dde32b6c61d0cc3506d9d05",
+    "environments/vault_of_glass.py": "cd6cab89cd66a41976f744ffccbaaac4061e508e84cfcc18985e6dfcbb13fcaf",
+    "venus_vault/geometry.py": "846d0f5b21269c3ccd69640232dc0149c7b45e4e3e8297faa405cf7313391072",
+    "venus_vault/request.py": "8112f167aadc72a987ae26d522f36ccf1f038d20781b685e27049eb3c0bd12e4",
+    "venus_vault/camera.py": "abcca47de931b0df3dc693e38ebc87e7e0337cdecc44033a98d475abd46d2491",
+    "venus_vault/design.py": "f2f2c97656e820cfb5028ef978fd448a3c36c68bb6abd7cb7e2e6ad872f02823",
+    "venus_vault/renderer.py": "13c548f3d016cd68ccac46364cdec8a5d025af764ea5d234f03dd9f77494d4b5",
+    "venus_vault/atlas-bindings.json": "daf438b634df37cf940f4309e281a27081b21706a741a903348f2364f412323e",
+    "cinematic_vex/atheon.py": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f",
+    "cinematic_vex/templar.py": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5",
+    "cinematic_vex/animation.py": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a",
+    "cinematic_vex/materials.py": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542",
+    "cinematic_vex/shapes.py": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea",
+    "cinematic_vex/throne.py": "9e99f13f7c06edc66a05e90ba2ea396e14cc7bec435418948302d439e9ac81fd",
+    "comparison_worker": "14599d8b56c9108eae4af7f6a6b7e7bc2945ebd5b7cae1af0e338bd4b95b4c44"
+  },
+  "phase": "after",
+  "presentation": "complete-arena",
+  "adaptiveThreshold": 0.02500000037252903,
+  "shot": {
+    "id": "templar",
+    "selection": "boss-templar",
+    "camera": "front",
+    "width": 640,
+    "height": 800,
+    "sharedCamera": {
+      "position": [
+        4,
+        -25,
+        8.5
+      ],
+      "target": [
+        0,
+        9,
+        7.5
+      ],
+      "lens": 44,
+      "sensorFit": "VERTICAL",
+      "sensorHeight": 24,
+      "near": 0.1,
+      "far": 350
+    }
+  },
+  "request": {
+    "version": 1,
+    "selectionId": "boss-templar",
+    "environmentId": "arena-templars-well",
+    "bossId": "boss-templar",
+    "quality": "cinematic",
+    "seed": 42,
+    "camera": "front",
+    "animation": "idle",
+    "frames": 1,
+    "fps": 30,
+    "width": 640,
+    "height": 800,
+    "startFrame": 0,
+    "lod": 0
+  },
+  "blenderVersion": "4.3.2",
+  "configuration": {
+    "requested": "auto",
+    "selected": "CPU",
+    "backend": null,
+    "devices": [],
+    "notes": [
+      "No compatible Cycles GPU found; CPU fallback selected."
+    ],
+    "lod": 0,
+    "adaptiveThreshold": 0.02500000037252903,
+    "persistentData": true,
+    "samples": 128,
+    "bounces": 7,
+    "denoise": true,
+    "threads": 3,
+    "hazeDensity": 0.0044999998062849045,
+    "viewTransform": "AgX",
+    "environmentBoxes": 549,
+    "bossBoxes": 1835,
+    "batchedMeshes": 54,
+    "particles": 120,
+    "designSha256": "ed8aad9cc673deeeaf712c7c2031797df2e142223d602b7f6aa37e38b48660f9"
+  },
+  "buildSeconds": 0.503,
+  "cameraMatrixWorld": [
+    [
+      0.9931505918502808,
+      -0.003411502344533801,
+      0.11679143458604813,
+      4.0
+    ],
+    [
+      0.11684124916791916,
+      0.02899780310690403,
+      -0.9927271604537964,
+      -25.0
+    ],
+    [
+      -3.931226011388844e-09,
+      0.9995736479759216,
+      0.02919778972864151,
+      8.5
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "renderSeconds": 463.959,
+  "pngBytes": 638024,
+  "pngSha256": "3c5d685a43816d421377b3f7c9aed96884bcf4673030edadf3fc77fb9298c02b",
+  "secondsInsideBlender": 464.471,
+  "peakProcessRssKiB": 807396
+}

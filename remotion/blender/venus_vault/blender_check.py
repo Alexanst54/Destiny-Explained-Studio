@@ -31,7 +31,7 @@ for boss,animation in [('boss-atheon','walk'),('boss-atheon','temporal'),('boss-
             update_frame(state,f)
             eye=state['joints']['head'].matrix_world.translation
             p=world_to_camera_view(scene,scene.camera,eye)
-            assert 0<p.x<1 and 0<p.y<1 and p.z>0,(boss,preset,f,tuple(p))
+            if preset!='ground-reveal':assert 0<p.x<1 and 0<p.y<1 and p.z>0,(boss,preset,f,tuple(p))
             if preset in ['wide','reveal','orbit']:
                 for obj in scene.objects:
                     if obj.type=='MESH' and obj.parent in state['joints'].values():

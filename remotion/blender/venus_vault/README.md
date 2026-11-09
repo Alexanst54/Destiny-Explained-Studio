@@ -1,4 +1,6 @@
-# Vénus et le Caveau de verre — extension Blender 0.9.0
+# Vénus et le Caveau de verre — livraison historique 0.9.0
+
+Ce document décrit la PR #20 au commit `b1fd922`. La version courante de cette branche est la [refonte cinématographique 0.9.1](../cinematic_vex/README.md) ; les limites de modèles et d’IK ci-dessous décrivent la version historique. Les preuves et le notebook 0.9.0 sont conservés.
 
 Trois décors indépendants et deux boss voxel originaux, sélectionnés par les IDs de l’Atlas universel. Aucun modèle, texture, carte ou animation propriétaire importé. Les sources épinglées de l’Atlas attestent les identités et les lieux ; cette géométrie est une interprétation artistique, pas une mesure de la carte du jeu.
 

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "atheon-full",
+    "page": "File:Atheon1.jpg",
+    "url": "https://www.destinypedia.com/File%3AAtheon1.jpg",
+    "revisionId": 377629,
+    "imageUrl": "https://destiny.wiki.gallery/images/9/94/Atheon1.jpg",
+    "observedFileSha256": "ebbb40cfea8cdd5e9204c8d91d3478cf0a758124026ad8cdafeb444abddd09e9",
+    "checkedAt": "2026-11-09",
+    "observations": [
+      "Couronne cristalline à trois lames, épaules en chevron, taille radiolaire étroite.",
+      "Jambes longues, pieds à griffes et canon volumineux asymétrique."
+    ],
+    "use": "Visual observation only; not an imported render texture or mesh."
+  },
+  {
+    "id": "atheon-detail",
+    "page": "File:Atheon2.jpg",
+    "url": "https://www.destinypedia.com/File%3AAtheon2.jpg",
+    "revisionId": 54212,
+    "imageUrl": "https://destiny.wiki.gallery/images/6/63/Atheon2.jpg",
+    "observedFileSha256": "ae51bb2bb5be8b1b3bbb735184632aea5078df8f12f4f44f6e90ffe66c2a32cd",
+    "checkedAt": "2026-11-09",
+    "observations": [
+      "Plastron en V, structures superposées, œil blanc/cyan et articulations exposées."
+    ],
+    "use": "Visual observation only; not an imported render texture or mesh."
+  },
+  {
+    "id": "templar-card",
+    "page": "File:TheTemplarGrimoireCard.jpg",
+    "url": "https://www.destinypedia.com/File%3ATheTemplarGrimoireCard.jpg",
+    "revisionId": 51893,
+    "imageUrl": "https://destiny.wiki.gallery/images/b/b7/TheTemplarGrimoireCard.jpg",
+    "observedFileSha256": "7fed78813bc9ddcce6582aa1f390fbcd008a6c7d4f0e6bdb123d933c33d245f8",
+    "checkedAt": "2026-11-09",
+    "observations": [
+      "Coque à croissants, œil imposant, corps vertical segmenté et effilé."
+    ],
+    "use": "Visual observation only; not an imported render texture or mesh."
+  }
+]
