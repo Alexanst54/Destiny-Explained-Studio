@@ -71,7 +71,10 @@ def build_scene(data,profile=None,device='auto',scale=100,threads=None):
     if profile not in PROFILES or device not in ['auto','cpu'] or type(scale) is not int or not 10<=scale<=100:raise ValueError('Invalid render options')
     if not bpy.app.build_options.cycles:raise RuntimeError('This Blender build has no Cycles support; install a Cycles-enabled Blender build.')
     scene=bpy.data.scenes.new('DestinyBridge');scene.render.engine='CYCLES';settings=PROFILES[profile]
-    scene.cycles.samples=settings['samples'];scene.cycles.max_bounces=settings['bounces'];scene.cycles.use_denoising=settings['denoise'];scene.cycles.seed=int(data['source']['projectSha256'][:8],16)%2147483647;scene.cycles.use_animated_seed=False
+    import _cycles
+    denoise_supported=bool(getattr(_cycles,'with_openimagedenoise',False))
+    denoise=settings['denoise'] and denoise_supported
+    scene.cycles.samples=settings['samples'];scene.cycles.max_bounces=settings['bounces'];scene.cycles.use_denoising=denoise;scene.cycles.seed=int(data['source']['projectSha256'][:8],16)%2147483647;scene.cycles.use_animated_seed=False
     scene.render.resolution_x=data['resolution']['width'];scene.render.resolution_y=data['resolution']['height'];scene.render.resolution_percentage=scale;scene.render.pixel_aspect_x=1;scene.render.pixel_aspect_y=1
     scene.render.fps=data['source']['fps'];scene.frame_set(data['source']['frame']);scene.render.image_settings.file_format='PNG';scene.render.image_settings.color_mode='RGBA';scene.render.film_transparent=False
     scene.view_settings.view_transform='Standard';scene.view_settings.exposure=0;scene.view_settings.gamma=1
@@ -106,7 +109,9 @@ def build_scene(data,profile=None,device='auto',scale=100,threads=None):
         if direction.length<1e-9:raise ValueError('Light direction cannot be zero')
         light.rotation_euler=direction.to_track_quat('-Z','Y').to_euler()
     scene['bridge_source']=json.dumps(data['source']);scene['bridge_omissions']=json.dumps(data['omissions']);scene['bridge_profile']=profile
-    info=choose_device(scene,device);info.update(bakedAffineCount=baked,profile=profile,samples=settings['samples'],bounces=settings['bounces'],denoise=settings['denoise'],cpuAvailable=available,threads=count,scalePercent=scale)
+    info=choose_device(scene,device)
+    if settings['denoise'] and not denoise_supported:info['notes'].append('OpenImageDenoise unavailable or not advertised by this build; denoising disabled.')
+    info.update(bakedAffineCount=baked,profile=profile,samples=settings['samples'],bounces=settings['bounces'],denoise=denoise,denoiseRequested=settings['denoise'],cpuAvailable=available,threads=count,scalePercent=scale)
     return scene,objects,info
 
 def main(argv=None):

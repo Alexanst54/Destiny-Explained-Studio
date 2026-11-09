@@ -21,7 +21,7 @@ assert abs(math.degrees(scene.camera.data.angle_y)-data['camera']['verticalFov']
 point=scene.camera.matrix_world.inverted()@(basis()@Vector((*data['camera']['target'],1)))
 assert abs(point.x)<1e-4 and abs(point.y)<1e-4 and point.z<0
 assert info['selected']=='CPU' and scene.cycles.samples==16
-cinema,_,config=build_scene(data,'cinematic','cpu',25,2);assert cinema.cycles.samples==64 and cinema.cycles.use_denoising
+cinema,_,config=build_scene(data,'cinematic','cpu',25,2);assert cinema.cycles.samples==64 and cinema.cycles.use_denoising==config['denoise'];assert config['denoise'] or config['notes']
 print('PASS Blender import: axes, all mesh matrices, camera/FOV, shared geometry, profiles, scene preservation; '+str(len(objects))+' objects.')
 
 # Exercise a sheared affine mesh and the non-humanoid shared sphere geometry.

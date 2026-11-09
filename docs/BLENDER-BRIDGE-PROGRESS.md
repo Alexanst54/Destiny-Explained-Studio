@@ -18,9 +18,9 @@ Environnement constaté : Blender 4.3.2 présent, Node 22.23.4 disponible dans l
 ## Étapes suivantes
 
 2. Export JSON versionné et tests ciblés : terminé. Contrat v1 / exporterVersion 0.8.1 indépendant des versions de projet ; matrices colonne majeure, caméra réelle 0.7 et omissions explicites. Exemple compact Riis avec six acteurs et détail de décor réduit à 6.
-3. Importeur Blender, axes/caméras/lumières et premier PNG CPU : terminé. Test complémentaire cinematic miniature et détection automatique en cours.
-4. Notebook Pro avec détection GPU et repli CPU, guides et rapport : à faire.
-5. Vérification finale ciblée et PR : à faire. Le contrat/exporteur constitue le premier ensemble cohérent ; publication en PR brouillon maintenant, avant le rendu Blender.
+3. Importeur Blender, axes/caméras/lumières et premier PNG CPU : terminé. Cinematic miniature réussi après détection du débruitage non compilé ; sélection automatique CPU validée.
+4. Notebook Pro avec détection GPU et repli CPU, guides et rapport : terminés et validés structurellement. Colab Pro distant et GPU réel non exécutés.
+5. Vérification finale ciblée terminée ; PR #14 ouverte, prête pour revue après publication du checkpoint final.
 
 ## Reprise
 
@@ -43,3 +43,26 @@ Environnement constaté : Blender 4.3.2 présent, Node 22.23.4 disponible dans l
 - Aucun module 0.7 réécrit. L’import crée une nouvelle scène Blender, les meshes partagent les géométries unitaires ; les cisaillements sont préservés dans les sommets si Blender ne peut les stocker en LRS.
 
 Prochaine reprise : terminer le notebook et le guide, collecter le petit PNG cinematic et son rapport, puis tests ciblés/checkpoint final. PR brouillon : https://github.com/Alexanst54/Destiny-Explained-Studio/pull/14
+
+## Checkpoint 4 — notebook et dégradation explicite
+
+- Premier petit essai cinematic : refus OpenImageDenoise non compilé. Analyse du code Cycles installé, ajout du garde-fou `_cycles.with_openimagedenoise`, puis seconde tentative : **réussie**, 270×480, 64 samples, 8,057 s processus, RSS 273 188 Kio. Pas de GPU compatible ; CPU choisi automatiquement. Débruitage désactivé et noté.
+- Notebook `remotion/blender/Blender-Colab-Pro.ipynb` prêt à tester dans Colab : installation/détection, upload JSON, 1–3 frames, CPU/GPU, ZIP. Aucun résultat distant supposé.
+- Tests finaux ciblés réussis : 18 tests Node (bridge + animation 0.7), 3 tests Python (contrat/notebook), TypeScript, assets statiques et import Blender. Aucune suite Chromium ni vidéo.
+- Preuves numériques : `remotion/blender/validation-evidence.json` ; rapport : `remotion/blender/REPORT.md`.
+
+## Reprendre demain matin
+
+```sh
+git fetch origin
+git switch feat/blender-bridge-0.8.1
+git pull --ff-only
+cat docs/BLENDER-BRIDGE-PROGRESS.md
+cd remotion
+npm ci
+npm run test:blender
+npm run test:blender:python
+npm run test:blender:import  # Blender doit être installé
+```
+
+Ouvrir `remotion/blender/Blender-Colab-Pro.ipynb` dans Colab Pro, choisir REF `feat/blender-bridge-0.8.1` avant fusion, conserver standard/25 % et au plus trois frames. Télécharger les PNG, rapports et logs. Restent à valider : runtime Colab distant, GPU réel et panne GPU. Aucun rendu vidéo demandé. Les limites d’export sont dans README/REPORT et dans chaque snapshot. Aucun blocage pour le chemin local CPU démontré.

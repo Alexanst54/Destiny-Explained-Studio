@@ -1,0 +1,157 @@
+{
+  "baseCommit": "baf79ed8a32957ed2359334f376bbc89c46971ae",
+  "blender": "4.3.2",
+  "gpuExecution": "not tested; no compatible GPU detected",
+  "colabProRemote": "not executed",
+  "chromiumSuites": "not rerun; no editor changes",
+  "videoRendering": "not executed",
+  "renders": {
+    "standard": {
+      "process": {
+        "exitCode": 0,
+        "wallSeconds": 31.312,
+        "maxChildRssKiB": 390620
+      },
+      "report": {
+        "bridgeVersion": 1,
+        "blenderVersion": "4.3.2",
+        "source": {
+          "projectId": "hybrid-riis-07",
+          "projectVersion": "0.7.0",
+          "projectSha256": "83fcf3992464e97a366aed547d3b45851ffd68142057538132235386c7eaa54a",
+          "sceneId": "riis-before",
+          "shotId": "riis-before-camera",
+          "frame": 210,
+          "localFrame": 90,
+          "fps": 30,
+          "timing": "estimated",
+          "loreMode": "reconstruction",
+          "visualStatus": "artistic-reconstruction",
+          "atlas": {
+            "locationId": "riis",
+            "variantId": "before-whirlwind"
+          },
+          "sourceIds": [
+            "wiki-riis",
+            "wiki-eliksni-civilian"
+          ]
+        },
+        "objects": 176,
+        "sharedGeometryCount": 1,
+        "configuration": {
+          "requested": "cpu",
+          "selected": "CPU",
+          "backend": null,
+          "devices": [],
+          "notes": [],
+          "profile": "standard",
+          "samples": 16,
+          "bounces": 2,
+          "denoise": false,
+          "cpuAvailable": 3,
+          "threads": 2,
+          "scalePercent": 100
+        },
+        "rendered": true,
+        "output": "/workspace/Destiny-Explained-Studio/remotion/out/blender/riis-standard-210.png",
+        "width": 1080,
+        "height": 1920,
+        "secondsInsideBlender": 29.761,
+        "maxProcessRssKiB": 390620,
+        "memoryScope": "This Blender process maximum RSS on Linux; not total GPU/driver memory.",
+        "omissions": [
+          "Atlas/base stage is an explicitly simplified reconstruction: procedural blocks and a ground only.",
+          "Sky gradient, fog, particles, contact-shadow decals and visual event effects are not exported.",
+          "Narration, captions, montage and transitions remain in the original Remotion project.",
+          "Camera cue timing is estimated because inline aligned words are absent.",
+          "guide: additional equipment panels from the Three.js renderer are omitted; base rig accessories are retained.",
+          "Example explicitly reduces procedural detailBudget to 6; the original Riis project is unchanged."
+        ]
+      },
+      "png": {
+        "width": 1080,
+        "height": 1920,
+        "bytes": 2932803,
+        "sha256": "dd093adfde06cc647c747a10b5241c51e1e1d8720d2eacaf04a6311cfc142b5b"
+      }
+    },
+    "cinematic": {
+      "process": {
+        "exitCode": 0,
+        "wallSeconds": 8.057,
+        "maxChildRssKiB": 273188
+      },
+      "report": {
+        "bridgeVersion": 1,
+        "blenderVersion": "4.3.2",
+        "source": {
+          "projectId": "hybrid-riis-07",
+          "projectVersion": "0.7.0",
+          "projectSha256": "83fcf3992464e97a366aed547d3b45851ffd68142057538132235386c7eaa54a",
+          "sceneId": "riis-before",
+          "shotId": "riis-before-camera",
+          "frame": 210,
+          "localFrame": 90,
+          "fps": 30,
+          "timing": "estimated",
+          "loreMode": "reconstruction",
+          "visualStatus": "artistic-reconstruction",
+          "atlas": {
+            "locationId": "riis",
+            "variantId": "before-whirlwind"
+          },
+          "sourceIds": [
+            "wiki-riis",
+            "wiki-eliksni-civilian"
+          ]
+        },
+        "objects": 176,
+        "sharedGeometryCount": 2,
+        "configuration": {
+          "requested": "auto",
+          "selected": "CPU",
+          "backend": null,
+          "devices": [],
+          "notes": [
+            "No compatible Cycles GPU found; CPU fallback selected.",
+            "OpenImageDenoise unavailable or not advertised by this build; denoising disabled."
+          ],
+          "bakedAffineCount": 1,
+          "profile": "cinematic",
+          "samples": 64,
+          "bounces": 4,
+          "denoise": false,
+          "denoiseRequested": true,
+          "cpuAvailable": 3,
+          "threads": 2,
+          "scalePercent": 25
+        },
+        "rendered": true,
+        "output": "/workspace/Destiny-Explained-Studio/remotion/out/blender/riis-cinematic-210.png",
+        "width": 270,
+        "height": 480,
+        "secondsInsideBlender": 6.593,
+        "maxProcessRssKiB": 272420,
+        "memoryScope": "This Blender process maximum RSS on Linux; not total GPU/driver memory.",
+        "omissions": [
+          "Atlas/base stage is an explicitly simplified reconstruction: procedural blocks and a ground only.",
+          "Sky gradient, fog, particles, contact-shadow decals and visual event effects are not exported.",
+          "Narration, captions, montage and transitions remain in the original Remotion project.",
+          "Camera cue timing is estimated because inline aligned words are absent.",
+          "guide: additional equipment panels from the Three.js renderer are omitted; base rig accessories are retained.",
+          "Example explicitly reduces procedural detailBudget to 6; the original Riis project is unchanged."
+        ]
+      },
+      "png": {
+        "width": 270,
+        "height": 480,
+        "bytes": 158244,
+        "sha256": "2cc5a1b3af692f01df385c1e780087c71217150cc72bd8b88a7bd3a303038c39"
+      }
+    }
+  },
+  "diagnostics": [
+    "time utility absent; measured with Python stdlib instead, before any Blender render attempt.",
+    "First cinematic attempt failed because OpenImageDenoise is not compiled. Capability checked in installed Cycles code; optional denoising gated via _cycles.with_openimagedenoise, second attempt succeeded without denoise."
+  ]
+}
