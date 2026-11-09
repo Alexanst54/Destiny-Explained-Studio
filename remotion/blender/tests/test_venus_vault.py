@@ -61,6 +61,8 @@ class VenusVaultTests(unittest.TestCase):
                 self.assertTrue(set(p['rotation'])|set(p['position'])<=joints)
                 self.assertTrue(all(math.isfinite(x) for v in list(p['rotation'].values())+list(p['position'].values()) for x in v))
         self.assertNotEqual(pose('boss-atheon','walk',30)['position']['root'],pose('boss-atheon','walk',0)['position']['root'])
+        walk=[pose('boss-atheon','walk',f,24)['position']['root'] for f in [0,24,48,96,10000]]
+        self.assertGreater(walk[0][2],walk[2][2]);self.assertTrue(all(p[2]>.1 and p[1]>=4.5 for p in walk))
         self.assertNotEqual(pose('boss-templar','rotate',30)['rotation']['halo'],pose('boss-templar','rotate',0)['rotation']['halo'])
 
     def test_camera_paths_continuous_and_finite(self):

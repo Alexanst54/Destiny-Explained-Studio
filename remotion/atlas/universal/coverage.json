@@ -196,11 +196,12 @@
   ],
   "reusePlans": 314,
   "exactLegacyRecipes": 105,
-  "reuseProfiles": 52,
+  "reuseProfiles": 56,
   "reuseStatuses": {
-    "adaptation-required": 98,
-    "no-suitable-model": 55,
-    "proxy-only": 161
+    "adaptation-required": 97,
+    "implemented-stylized": 6,
+    "no-suitable-model": 54,
+    "proxy-only": 157
   },
   "retrievedSources": 189,
   "inheritedSources": 95,

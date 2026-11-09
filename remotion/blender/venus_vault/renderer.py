@@ -11,7 +11,8 @@ import sys
 import time
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from import_scene import mesh_data, linear_color, choose_device
-from venus_vault.geometry import PALETTE, QUALITY, Design, digest
+from venus_vault.geometry import PALETTE, QUALITY, digest
+from venus_vault.design import generate_design
 from venus_vault.request import validate, select
 from venus_vault.camera import camera_pose
 from environments import venus, vault_of_glass
@@ -65,22 +66,18 @@ def build_scene(request, device='auto', threads=3):
         bsdf.inputs['Base Color'].default_value=linear_color(color);bsdf.inputs['Roughness'].default_value=rough;bsdf.inputs['Metallic'].default_value=metal
         bsdf.inputs['Emission Color'].default_value=linear_color(color);bsdf.inputs['Emission Strength'].default_value=emission
         mats[name]=mat
-    env=venus.generate(r['seed'],r['quality']) if outside else vault_of_glass.generate(r['seed'],r['quality'],r['environmentId'])
+    env,boss,dust_spec=generate_design(r)
     env_col=bpy.data.collections.new('Environment/'+r['environmentId']);scene.collection.children.link(env_col)
-    meshes=compile_design(env,mats,env_col);joints={};boss=None
+    meshes=compile_design(env,mats,env_col);joints={}
     if r['bossId']:
-        boss=vex_bosses.generate(r['bossId'],r['seed'],r['quality']);col=bpy.data.collections.new('Boss/'+r['bossId']);scene.collection.children.link(col)
+        col=bpy.data.collections.new('Boss/'+r['bossId']);scene.collection.children.link(col)
         for j in boss['joints']:
             ob=bpy.data.objects.new(j['id'],None);col.objects.link(ob);ob.location=j['position']
             if j['parent']:ob.parent=joints[j['parent']]
             joints[j['id']]=ob
         meshes+=compile_design(boss,mats,col,joints)
     # Repeatable luminous dust motes; geometry, not an unseeded simulation/particle cache.
-    dust=Design('particles',r['seed']+1 if r['seed']<2147483647 else 0,r['quality'])
-    for i in range(settings['particles']):
-        x=dust.rng.uniform(-14,14);y=dust.rng.uniform(0,26);z=dust.rng.uniform(1,15);size=dust.rng.uniform(.018,.055)
-        dust.box(str(i),(x,y,z),(size,size,size),'oracle' if outside else 'cyan')
-    dust_spec=dust.result();dust_objects=compile_design(dust_spec,mats,env_col)
+    dust_objects=compile_design(dust_spec,mats,env_col)
     # Bounded homogeneous volume, volumetric light shafts, no simulated weather claim.
     haze=bpy.data.materials.new('VenusMist');haze.use_nodes=True;n=haze.node_tree.nodes;n.clear()
     out=n.new('ShaderNodeOutputMaterial');vol=n.new('ShaderNodeVolumePrincipled');vol.inputs['Density'].default_value=settings['haze']

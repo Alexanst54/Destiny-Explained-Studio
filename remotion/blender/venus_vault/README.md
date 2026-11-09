@@ -32,6 +32,8 @@ Sorties : `request.json`, `frame-0000.png`…, `render-report.json` (paramètres
 | `boss-templar` | Hydre, coque, œil, canons, bouclier segmenté ; Puits du Templier |
 | `boss-atheon` | Minotaure, armure, cornes, radiolaria, canon et énergie ; Trône de verre |
 
+Vénus représente une portion artistique de l’Académie Ishtar et de sa jungle ; le site Caveau sélectionne par défaut le Puits du Templier, sans prétendre couvrir les autres salles.
+
 Le sélecteur Python et `atlas/universal/blender.ts` vérifient les IDs, assets et relations boss → rencontre → arène. Ils lisent le même registre `atlas-bindings.json`. Exemple API Node 22.23.4, depuis `remotion/` :
 
 ```sh

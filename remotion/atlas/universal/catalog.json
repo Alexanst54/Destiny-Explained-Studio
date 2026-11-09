@@ -5797,7 +5797,7 @@
       "environmentFamily": "vex",
       "blenderAssetId": "blender-venus-v1",
       "remotionAssetId": "atlas-family-vex",
-      "note": "Original procedural voxel interpretation implemented by the Venus/Vault extension; not a canonical map or extracted game asset. See blender/venus_vault/VALIDATION.md for actual render evidence and limits.",
+      "note": "Original procedural voxel interpretation implemented by the Venus/Vault extension; not a canonical map or extracted game asset. See blender/venus_vault/VALIDATION.md for actual render evidence and limits. Representative Ishtar/jungle slice only, not a model of the whole destination or planet.",
       "type": "stellar-body",
       "parentId": "solar-system",
       "legacyLocationId": "venus"
@@ -6841,7 +6841,7 @@
       "environmentFamily": "vex",
       "blenderAssetId": "blender-templars-well-v1",
       "remotionAssetId": "atlas-family-vex",
-      "note": "Original procedural voxel interpretation implemented by the Venus/Vault extension; not a canonical map or extracted game asset. See blender/venus_vault/VALIDATION.md for actual render evidence and limits.",
+      "note": "Original procedural voxel interpretation implemented by the Venus/Vault extension; not a canonical map or extracted game asset. See blender/venus_vault/VALIDATION.md for actual render evidence and limits. Site selection defaults to the Templar’s Well set; other raid rooms are not implied to be implemented.",
       "type": "activity-site",
       "parentId": "venus",
       "legacyLocationId": "vault-of-glass"
@@ -7817,7 +7817,7 @@
           "sources": [
             "wiki-vog"
           ],
-          "note": "Lieu nommé dans la source ; famille modulaire existante, aucune arène fidèle ni modèle individuel créé. Visual implementation is an original stylized reconstruction; sources attest identity, not exact geometry."
+          "note": "Lieu nommé dans la source ; décor Blender original et stylisé implémenté séparément, sans prétendre reproduire la carte exacte."
         }
       ],
       "canonStatus": "attested",
@@ -7850,7 +7850,7 @@
           "sources": [
             "wiki-vog"
           ],
-          "note": "Lieu nommé dans la source ; famille modulaire existante, aucune arène fidèle ni modèle individuel créé. Visual implementation is an original stylized reconstruction; sources attest identity, not exact geometry."
+          "note": "Lieu nommé dans la source ; décor Blender original et stylisé implémenté séparément, sans prétendre reproduire la carte exacte."
         }
       ],
       "canonStatus": "attested",
@@ -20651,7 +20651,7 @@
           "sources": [
             "wiki-vog"
           ],
-          "note": "Identité attestée ; traduction française et modèle dédié non vérifiés. Ne réutilise pas arbitrairement un personnage générique. Visual implementation is an original stylized reconstruction; sources attest identity, not exact geometry."
+          "note": "Identité attestée ; nom français conservé sans validation de traduction officielle. Le modèle Blender est une interprétation voxel originale, indépendante du registre historique ; la source ne valide pas sa géométrie."
         },
         {
           "kind": "gameplay",
@@ -20694,7 +20694,7 @@
           "sources": [
             "wiki-vog"
           ],
-          "note": "Identité attestée ; traduction française et modèle dédié non vérifiés. Ne réutilise pas arbitrairement un personnage générique. Visual implementation is an original stylized reconstruction; sources attest identity, not exact geometry."
+          "note": "Identité attestée ; nom français conservé sans validation de traduction officielle. Le modèle Blender est une interprétation voxel originale, indépendante du registre historique ; la source ne valide pas sa géométrie."
         },
         {
           "kind": "gameplay",
@@ -31972,15 +31972,15 @@
       "entityId": "venus",
       "target": "location",
       "profileIds": [
-        "environment-vex"
+        "reuse-blender-venus"
       ],
-      "status": "proxy-only",
+      "status": "implemented-stylized",
       "silhouette": "Environnement vex — proxy de famille",
       "sources": [
         "legacy-bungie-d2-destinyplacedefinition-3871070152",
         "legacy-wiki-vex-history"
       ],
-      "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
+      "note": "Générateur Blender original affecté et rendu ; aucune migration Remotion. Les limites restent déclarées dans le profil et blender/venus_vault/VALIDATION.md.",
       "existingRecipe": {
         "locationId": "venus",
         "variantId": null,
@@ -32640,15 +32640,15 @@
       "entityId": "vault-of-glass",
       "target": "location",
       "profileIds": [
-        "environment-vex"
+        "reuse-blender-vault"
       ],
-      "status": "proxy-only",
+      "status": "implemented-stylized",
       "silhouette": "Environnement vex — proxy de famille",
       "sources": [
         "legacy-bungie-d2-destinyactivitydefinition-3711931140",
         "legacy-wiki-age-of-triumph"
       ],
-      "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
+      "note": "Générateur Blender original affecté et rendu ; aucune migration Remotion. Les limites restent déclarées dans le profil et blender/venus_vault/VALIDATION.md.",
       "existingRecipe": {
         "locationId": "vault-of-glass",
         "variantId": null,
@@ -33285,28 +33285,28 @@
       "entityId": "arena-templars-well",
       "target": "location",
       "profileIds": [
-        "environment-vex"
+        "reuse-blender-vault"
       ],
-      "status": "proxy-only",
+      "status": "implemented-stylized",
       "silhouette": "Environnement vex — proxy de famille",
       "sources": [
         "wiki-vog"
       ],
-      "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
+      "note": "Générateur Blender original affecté et rendu ; aucune migration Remotion. Les limites restent déclarées dans le profil et blender/venus_vault/VALIDATION.md.",
       "existingRecipe": null
     },
     {
       "entityId": "arena-glass-throne",
       "target": "location",
       "profileIds": [
-        "environment-vex"
+        "reuse-blender-vault"
       ],
-      "status": "proxy-only",
+      "status": "implemented-stylized",
       "silhouette": "Environnement vex — proxy de famille",
       "sources": [
         "wiki-vog"
       ],
-      "note": "Réutilise uniquement la recette/famille et les actifs déjà référencés. Le détail géographique et la fidélité restent distincts de la couverture documentaire.",
+      "note": "Générateur Blender original affecté et rendu ; aucune migration Remotion. Les limites restent déclarées dans le profil et blender/venus_vault/VALIDATION.md.",
       "existingRecipe": null
     },
     {
@@ -34854,30 +34854,30 @@
       "entityId": "boss-templar",
       "target": "boss",
       "profileIds": [
-        "boss-vex-hydra"
+        "reuse-blender-templar"
       ],
-      "status": "no-suitable-model",
+      "status": "implemented-stylized",
       "silhouette": "Infobox inspectée : Vex / Hydra ; proportions exactes non mesurées.",
       "sources": [
         "wiki-vog",
         "wiki-boss-the-templar"
       ],
-      "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
+      "note": "Générateur Blender original affecté et rendu ; aucune migration Remotion. Les limites restent déclarées dans le profil et blender/venus_vault/VALIDATION.md.",
       "existingRecipe": null
     },
     {
       "entityId": "boss-atheon",
       "target": "boss",
       "profileIds": [
-        "boss-vex-humanoid"
+        "reuse-blender-atheon"
       ],
-      "status": "adaptation-required",
+      "status": "implemented-stylized",
       "silhouette": "Infobox inspectée : Vex / Minotaur ; proportions exactes non mesurées.",
       "sources": [
         "wiki-vog",
         "wiki-boss-atheon-time-s-conflux"
       ],
-      "note": "Plan éditorial de réemploi des composants, pas un nouveau modèle ni une affectation de personnage générique au boss. Les sources décrivent la silhouette ; les familles décrivent seulement les outils artistiques réutilisables.",
+      "note": "Générateur Blender original affecté et rendu ; aucune migration Remotion. Les limites restent déclarées dans le profil et blender/venus_vault/VALIDATION.md.",
       "existingRecipe": null
     },
     {
@@ -38978,6 +38978,126 @@
       "limitations": [
         "Un proxy de famille ne reproduit pas la carte officielle du lieu.",
         "Le bridge Blender actuel ne transfère pas toutes les géométries et effets de Remotion."
+      ]
+    },
+    {
+      "id": "reuse-blender-venus",
+      "label": "Vénus / Ishtar Blender original",
+      "kind": "environment",
+      "familyIds": [
+        "vex"
+      ],
+      "moduleIds": [],
+      "characterTemplateIds": [],
+      "rigArchetypes": [],
+      "reusableFiles": [
+        {
+          "path": "remotion/blender/environments/venus.py",
+          "symbol": "generate"
+        },
+        {
+          "path": "remotion/blender/import_scene.py",
+          "symbol": "choose_device"
+        }
+      ],
+      "reusableParts": [
+        "Générateur original implémenté, palette métallique et émissions, géométrie voxel partagée et paramètres de graine."
+      ],
+      "requiredWork": [
+        "Topographie et détails architecturaux exacts non reconstruits."
+      ],
+      "limitations": [
+        "Interprétation artistique originale ; voir les rendus de validation, pas une carte ou un modèle officiel."
+      ]
+    },
+    {
+      "id": "reuse-blender-vault",
+      "label": "Arènes du Caveau Blender originales",
+      "kind": "environment",
+      "familyIds": [
+        "vex"
+      ],
+      "moduleIds": [],
+      "characterTemplateIds": [],
+      "rigArchetypes": [],
+      "reusableFiles": [
+        {
+          "path": "remotion/blender/environments/vault_of_glass.py",
+          "symbol": "generate"
+        },
+        {
+          "path": "remotion/blender/import_scene.py",
+          "symbol": "choose_device"
+        }
+      ],
+      "reusableParts": [
+        "Générateur original implémenté, palette métallique et émissions, géométrie voxel partagée et paramètres de graine."
+      ],
+      "requiredWork": [
+        "Portails sans monde récursif ; disposition stylisée, pas géométrie de jeu."
+      ],
+      "limitations": [
+        "Interprétation artistique originale ; voir les rendus de validation, pas une carte ou un modèle officiel."
+      ]
+    },
+    {
+      "id": "reuse-blender-templar",
+      "label": "Hydre Templier Blender originale",
+      "kind": "boss",
+      "familyIds": [
+        "vex"
+      ],
+      "moduleIds": [],
+      "characterTemplateIds": [],
+      "rigArchetypes": [],
+      "reusableFiles": [
+        {
+          "path": "remotion/blender/characters/vex_bosses.py",
+          "symbol": "generate"
+        },
+        {
+          "path": "remotion/blender/import_scene.py",
+          "symbol": "choose_device"
+        }
+      ],
+      "reusableParts": [
+        "Générateur original implémenté, palette métallique et émissions, géométrie voxel partagée et paramètres de graine."
+      ],
+      "requiredWork": [
+        "Pas de projectiles simulés, de collision ni de mécanique de dégâts ; coque et bouclier stylisés."
+      ],
+      "limitations": [
+        "Interprétation artistique originale ; voir les rendus de validation, pas une carte ou un modèle officiel."
+      ]
+    },
+    {
+      "id": "reuse-blender-atheon",
+      "label": "Minotaure Athéon Blender original",
+      "kind": "boss",
+      "familyIds": [
+        "vex"
+      ],
+      "moduleIds": [],
+      "characterTemplateIds": [],
+      "rigArchetypes": [],
+      "reusableFiles": [
+        {
+          "path": "remotion/blender/characters/vex_bosses.py",
+          "symbol": "generate"
+        },
+        {
+          "path": "remotion/blender/import_scene.py",
+          "symbol": "choose_device"
+        }
+      ],
+      "reusableParts": [
+        "Générateur original implémenté, palette métallique et émissions, géométrie voxel partagée et paramètres de graine."
+      ],
+      "requiredWork": [
+        "Pas d’IK de contact au sol ni de mécanique temporelle jouable ; fidélité artistique, pas modèle du jeu."
+      ],
+      "limitations": [
+        "Interprétation artistique originale ; voir les rendus de validation, pas une carte ou un modèle officiel."
       ]
     }
   ]

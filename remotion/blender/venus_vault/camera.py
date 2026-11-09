@@ -16,7 +16,7 @@ def camera_pose(environment, preset='wide', frame=0, fps=30):
         if preset=='low-angle':pos=(5,-12,2);target=(0,20,10);lens=27
         if preset=='close-up':pos=(8,6,9);target=(12,18,6);lens=50
     else:
-        if preset=='wide':pos=(26,-33,22);target=(0,11,7);lens=34
+        if preset=='wide':pos=(8,-36,20) if environment=='arena-glass-throne' else (26,-33,22);target=(0,11,7);lens=34
         elif preset=='reveal':pos=(12-smooth*4,-24+smooth*9,10);target=(0,9,7);lens=43
         elif preset=='orbit':a=-math.pi/2-.48+t*.16;pos=(25*math.cos(a),9+25*math.sin(a),11);lens=43
         elif preset=='low-angle':pos=(9,-10,2.5);target=(0,9,8);lens=32

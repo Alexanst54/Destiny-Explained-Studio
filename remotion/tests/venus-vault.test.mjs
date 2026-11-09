@@ -29,7 +29,7 @@ test('bounded options reject unsupported models, animation, dimensions and timin
 });
 
 test('boss generator scope cannot be used as another boss, environment or Remotion asset',()=>{
- for(const mutate of [c=>c.bosses.find(b=>b.id==='boss-templar').blenderAssetId='blender-atheon-v1',c=>c.locations.find(b=>b.id==='venus').blenderAssetId='blender-atheon-v1',c=>c.assets.find(a=>a.id==='blender-atheon-v1').bossIds=[],c=>c.bosses.find(b=>b.id==='boss-atheon').remotionAssetId='blender-atheon-v1']){
+ for(const mutate of [c=>c.bosses.find(b=>b.id==='boss-templar').blenderAssetId='blender-atheon-v1',c=>c.locations.find(b=>b.id==='venus').blenderAssetId='blender-atheon-v1',c=>c.assets.find(a=>a.id==='blender-atheon-v1').bossIds=[],c=>c.assetReusePlans.find(p=>p.entityId==='boss-riven').status='implemented-stylized',c=>c.bosses.find(b=>b.id==='boss-atheon').remotionAssetId='blender-atheon-v1']){
   const c=structuredClone(atlas);mutate(c);assert.throws(()=>validateUniversalCatalog(c));
  }
  // A dedicated Blender set retains its modular Remotion fallback, without upgrading its fidelity.

@@ -43,7 +43,7 @@ export const universalCatalogSchema = z.object({
   activityRelations: z.array(z.object({...edge, fromId: id, toId: id, relation: z.enum(['reprisal-of', 'variant-of'])}).strict()),
   legacyCorrections: z.array(z.object({locationId: id, field: z.literal('parentId'), originalValue: id.nullable(), correctedValue: id.nullable(), sources, note: text}).strict()).default([]),
   reuseProfiles: z.array(z.object({id, label: text, kind: z.enum(['boss', 'environment']), familyIds: z.array(z.enum(families)).min(1), moduleIds: z.array(z.enum(modules)), characterTemplateIds: ids, rigArchetypes: z.array(z.enum(rigArchetypes)), reusableFiles: z.array(z.object({path: text.regex(/^remotion\/(?!.*\.\.).+\.(?:tsx?|py)$/), symbol: text.regex(/^[A-Za-z_][A-Za-z0-9_]*$/)}).strict()).min(1), reusableParts: z.array(text).min(1), requiredWork: z.array(text), limitations: z.array(text).min(1)}).strict()).default([]),
-  assetReusePlans: z.array(z.object({entityId: id, target: z.enum(['location', 'location-variant', 'boss', 'boss-variant']), profileIds: ids.min(1), status: z.enum(['proxy-only', 'adaptation-required', 'no-suitable-model']), silhouette: text, existingRecipe: z.object({locationId: id, variantId: id.nullable(), baseEnvironment: z.enum(['the-tower', 'europa', 'black-garden', 'pyramid-interior']).nullable(), moduleIds: z.array(z.enum(modules))}).strict().nullable().default(null), sources, note: text}).strict()).default([]),
+  assetReusePlans: z.array(z.object({entityId: id, target: z.enum(['location', 'location-variant', 'boss', 'boss-variant']), profileIds: ids.min(1), status: z.enum(['proxy-only', 'adaptation-required', 'no-suitable-model', 'implemented-stylized']), silhouette: text, existingRecipe: z.object({locationId: id, variantId: id.nullable(), baseEnvironment: z.enum(['the-tower', 'europa', 'black-garden', 'pyramid-interior']).nullable(), moduleIds: z.array(z.enum(modules))}).strict().nullable().default(null), sources, note: text}).strict()).default([]),
   knownGaps: z.array(text).min(1),
 }).strict().superRefine((c, ctx) => {
   const fail = (path: (string | number)[], message: string) => ctx.addIssue({code: 'custom', path, message});
@@ -118,11 +118,11 @@ export const universalCatalogSchema = z.object({
   function uniqueReuseChecks() {
     const profiles = new Map(c.reuseProfiles.map(p => [p.id, p]));
     if (profiles.size !== c.reuseProfiles.length) fail(['reuseProfiles'], 'Duplicate reuse profile');
-    const targets = new Map<string, {kind: string; family: string | null; placeholder: boolean}>([
-      ...c.locations.map(x => [x.id, {kind: 'location', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
-      ...c.locationVariants.map(x => [x.id, {kind: 'location-variant', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
-      ...c.bosses.map(x => [x.id, {kind: 'boss', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
-      ...c.bossVariants.map(x => [x.id, {kind: 'boss-variant', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
+    const targets = new Map<string, {kind: string; family: string | null; placeholder: boolean; blenderId: string | null}>([
+      ...c.locations.map(x => [x.id, {kind: 'location', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder', blenderId: x.blenderAssetId}] as const),
+      ...c.locationVariants.map(x => [x.id, {kind: 'location-variant', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder', blenderId: x.blenderAssetId}] as const),
+      ...c.bosses.map(x => [x.id, {kind: 'boss', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder', blenderId: x.blenderAssetId}] as const),
+      ...c.bossVariants.map(x => [x.id, {kind: 'boss-variant', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder', blenderId: x.blenderAssetId}] as const),
     ]);
     const planned = new Set<string>();
     c.assetReusePlans.forEach((p, i) => {
@@ -130,6 +130,7 @@ export const universalCatalogSchema = z.object({
       if (!target || target.kind !== p.target) fail(['assetReusePlans', i], 'Unknown or wrong-kind reuse target');
       if (planned.has(p.entityId)) fail(['assetReusePlans', i], 'Duplicate reuse plan'); planned.add(p.entityId);
       cite(p.sources, ['assetReusePlans', i]);
+      if (p.status === 'implemented-stylized' && (target?.placeholder || !target?.blenderId)) fail(['assetReusePlans', i], 'Implemented plan requires a real assigned Blender asset');
       const selected = p.profileIds.map(id => profiles.get(id));
       if (selected.some(x => !x)) fail(['assetReusePlans', i], 'Unknown reuse profile');
       const bossTarget = p.target.startsWith('boss');

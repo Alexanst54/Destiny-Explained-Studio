@@ -1,0 +1,67 @@
+{
+  "status": "success",
+  "request": {
+    "version": 1,
+    "selectionId": "boss-templar",
+    "environmentId": "arena-templars-well",
+    "bossId": "boss-templar",
+    "quality": "balanced",
+    "seed": 42,
+    "camera": "reveal",
+    "animation": "attack",
+    "frames": 1,
+    "fps": 30,
+    "width": 960,
+    "height": 540,
+    "startFrame": 12
+  },
+  "blenderVersion": "4.3.2",
+  "frames": [
+    {
+      "frame": 12,
+      "file": "frame-0000.png",
+      "seconds": 257.202,
+      "bytes": 597343,
+      "sha256": "1d34f15063c0d5567ab98f6a18f3024d5176f20c4891e78a0ed4716b2e633c4f",
+      "camera": {
+        "position": [
+          11.888,
+          -23.748,
+          10
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 43,
+        "near": 0.1,
+        "far": 250
+      }
+    }
+  ],
+  "configuration": {
+    "requested": "auto",
+    "selected": "CPU",
+    "backend": null,
+    "devices": [],
+    "notes": [
+      "No compatible Cycles GPU found; CPU fallback selected."
+    ],
+    "samples": 48,
+    "bounces": 5,
+    "denoise": true,
+    "threads": 3,
+    "hazeDensity": 0.0035,
+    "viewTransform": "AgX",
+    "environmentBoxes": 549,
+    "bossBoxes": 130,
+    "batchedMeshes": 17,
+    "particles": 65,
+    "designSha256": "e882af331a2a129d60270f7b1b57f922e2494a8c957e14e78b208880b50b25f2"
+  },
+  "buildSeconds": 0.265,
+  "secondsInsideBlender": 257.469,
+  "peakProcessRssKiB": 796304,
+  "memoryScope": "Linux Blender process peak RSS; GPU memory/utilization not measured."
+}

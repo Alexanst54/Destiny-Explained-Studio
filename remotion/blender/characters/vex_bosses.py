@@ -92,7 +92,13 @@ def pose(boss_id, animation='idle', frame=0, fps=30):
     if boss_id=='boss-atheon':
         rot['torso']=(.025*math.sin(t*2),0,.025*math.sin(t));rot['head']=(0,0,.06*math.sin(t*1.3))
         if animation=='walk':
-            positions['root']=(0,9-t*1.1,1.35+abs(s)*.08)
+            y=9-min(t,4)*1.1
+            # Smooth follow of the set's stepped dais; not foot IK or collision simulation.
+            support=.31
+            for step in range(1,8):
+                u=max(0,min(1,(y+.25-(3.5+step*.75)+.15)/.3))
+                support+=.13*u*u*(3-2*u)
+            positions['root']=(0,y,support+.13+abs(s)*.08)
             for side,name in [(-1,'L'),(1,'R')]:
                 rot['hip'+name]=(s*side*.23,0,0);rot['knee'+name]=(max(0,-s*side)*.35,0,0)
                 rot['foot'+name]=(-max(0,-s*side)*.13,0,0)

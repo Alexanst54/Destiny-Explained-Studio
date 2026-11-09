@@ -1,0 +1,67 @@
+{
+  "status": "success",
+  "request": {
+    "version": 1,
+    "selectionId": "boss-atheon",
+    "environmentId": "arena-glass-throne",
+    "bossId": "boss-atheon",
+    "quality": "balanced",
+    "seed": 42,
+    "camera": "reveal",
+    "animation": "temporal",
+    "frames": 1,
+    "fps": 30,
+    "width": 960,
+    "height": 540,
+    "startFrame": 30
+  },
+  "blenderVersion": "4.3.2",
+  "frames": [
+    {
+      "frame": 30,
+      "file": "frame-0000.png",
+      "seconds": 129.192,
+      "bytes": 648269,
+      "sha256": "ee6548576bf443d2fc8a017afbe168436d7c7da686c0efd9d2ffc34e3ec04da2",
+      "camera": {
+        "position": [
+          11.375,
+          -22.59375,
+          10
+        ],
+        "target": [
+          0,
+          9,
+          7
+        ],
+        "lens": 43,
+        "near": 0.1,
+        "far": 250
+      }
+    }
+  ],
+  "configuration": {
+    "requested": "auto",
+    "selected": "CPU",
+    "backend": null,
+    "devices": [],
+    "notes": [
+      "No compatible Cycles GPU found; CPU fallback selected."
+    ],
+    "samples": 48,
+    "bounces": 5,
+    "denoise": true,
+    "threads": 3,
+    "hazeDensity": 0.0035,
+    "viewTransform": "AgX",
+    "environmentBoxes": 705,
+    "bossBoxes": 129,
+    "batchedMeshes": 46,
+    "particles": 65,
+    "designSha256": "2d998abccd0f68092330811db59294541b599c52cb8d80cb326d289f3b4e149a"
+  },
+  "buildSeconds": 0.069,
+  "secondsInsideBlender": 129.261,
+  "peakProcessRssKiB": 803960,
+  "memoryScope": "Linux Blender process peak RSS; GPU memory/utilization not measured."
+}

@@ -32,6 +32,17 @@ def generate(seed=42, quality='balanced'):
     d.box('central-arch-lintel',(0,22,9),(14,3,2),'ishtar')
     # Golden Age relief, deliberately invented academy motif, no official emblem claim.
     for i in range(7):d.box(f'facade-relief-{i}',(-2.4+i*.8,20.42,9),(.35,.16,1.2 if i%2 else .7),'vex-edge')
+    # Reclaimed academy: roof moss, hanging vines and shattered foreground wall fragments.
+    for side in [-1,1]:
+        for i in range(12):
+            x=side*12+r.uniform(-4.5,4.5);y=r.uniform(17,25)
+            d.box(f'roof-moss-{side}-{i}',(x,y,11.1),(r.uniform(.5,2),r.uniform(.5,2),.18),'moss')
+            if i<8:
+                length=r.uniform(1,4)
+                for k in range(int(length*3)):
+                    d.box(f'vine-{side}-{i}-{k}',(x+math.sin(k*.8)*.16,13.65,9-k*.3),(.25,.3,.42),'leaf' if k%2 else 'moss')
+        for i in range(4):
+            d.box(f'broken-wall-{side}-{i}',(side*(7+i*1.2),8-i*1.4,.5+i*.2),(1.3,1.4,1.3+i*.35),'ishtar',rot=(.15,side*.2,.2))
     # Vex structure partially buried in the jungle behind the academy.
     for side in [-1,1]:
         for i in range(3):d.pillar(f'vex-spire-{side}-{i}',side*(9+i*5),32+i*5,13+i*3,2.4,base=-3)
@@ -56,4 +67,13 @@ def generate(seed=42, quality='balanced'):
         for j in range(4):
             for side in [-1,1]:
                 d.box(f'fern-{i}-{j}-{side}',(x+side*(j+1)*.14,y+j*.15,.35+j*.13),(.5-j*.06,.18,.12),'leaf-light' if j%2 else 'leaf',rot=(0,side*.2,a))
+    # Dense understorey along the avenue: stepped broad leaves, shrubs and pale shoots.
+    for i in range(QUALITY[quality]['vegetation']):
+        x=r.choice([-1,1])*r.uniform(4.8,20);y=r.uniform(-14,26);h=r.uniform(.7,1.8)
+        for j in range(5):
+            a=j*math.tau/5+i*.7
+            for tier in range(3):
+                reach=(tier+1)*.34
+                d.box(f'understorey-{i}-{j}-{tier}',(x+math.cos(a)*reach,y+math.sin(a)*reach,h-tier*.24),(.7-tier*.1,.35,.18),'leaf-light' if tier==2 else 'leaf',rot=(0,.18,a))
+        d.box(f'understorey-shoot-{i}',(x,y,h*.7),(.1,.12,h*1.3),'moss')
     return d.result()

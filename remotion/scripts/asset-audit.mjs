@@ -36,7 +36,7 @@ export function validateAssetFiles(catalog,root=ROOT) {
     const path=resolve(root,reference.path);
     if (!existsSync(path)||!realpathSync(path).startsWith(realpathSync(root)+'/')) throw Error('Missing reuse component: '+profile.id+'/'+reference.path);
     const code=readFileSync(path,'utf8');
-    if (!new RegExp(`export (?:const|function) ${reference.symbol}\\b`).test(code)) throw Error('Reuse component symbol absent: '+profile.id+'/'+reference.symbol);
+    if (!(reference.path.endsWith('.py') ? new RegExp(`^def ${reference.symbol}\\(`,'m') : new RegExp(`export (?:const|function) ${reference.symbol}\\b`)).test(code)) throw Error('Reuse component symbol absent: '+profile.id+'/'+reference.symbol);
   }
   if (sha(readFileSync(resolve(root,catalog.legacy.catalogPath)))!==catalog.legacy.catalogSha256) throw Error('Legacy catalog checksum changed; explicit incremental review required');
 }
@@ -119,13 +119,14 @@ export function auditMarkdown(a) {
     '- Le bridge n’exporte pas les `atlasBoxes` complets ni les décors dédiés : scène de base simplifiée, blocs polish, props terminal et rigs. La présence d’un lieu dans le catalogue ne prouve pas sa géométrie Blender.',
     '- Sky gradient, brouillard, particules, decals, weather geometry et éléments voxel historiques ne sont pas transférés intégralement. Les omissions sont déclarées dans les snapshots. Kokoro, captions, labels et montage restent dans Remotion.',
     '- `blender/environments/riis.py::generate` est un générateur réutilisable existant, limité à `riis/before-whirlwind`. Il utilise les primitives, matériaux, profils et haze existants ; ce n’est ni un fichier .blend ni un générateur universel Vex/Ruche/Cabal.',
+    '- Extension Vénus/Caveau opt-in : trois décors et deux boss originaux, géométrie voxel, couleurs, détection GPU et logs partagés avec le bridge. Les rendus CPU sont documentés séparément dans `blender/venus_vault/VALIDATION.md` ; ils ne valident pas Colab/T4.',
     '- Les exemples de snapshots, contrats TS/Python, importeur et deux notebooks existants sont conservés. Aucun test de rendu GPU/Colab/Android n’est ajouté ou revendiqué par cet audit statique.',
     '', '## Branche initiale et indépendance de la PR #17','',
     `Les ${a.context.sharedInputs.length} entrées de catalogue/géométrie/export comparées sont identiques entre main et la branche initiale : **${a.context.sharedInputs.every(f=>f.unchangedBetweenBranches)?'oui':'non — voir JSON'}**. Les différences de PR #17 sont consignées, sans les importer.`,
     '', 'PR #17 ajoute notamment le worker Blender persistant, CUDA/telemetry, les tests de reprise et la preuve MP4. Ces changements ne sont pas sur main. Cette fondation ne les recopie pas, ne les fusionne pas et ne dépend pas de leur exécution. La prise en charge GPU persistante reste un travail indépendant.',
     '', '## Adaptations suivantes, après cette première étape','',
     '1. Relire et compléter les relations et la provenance ; dédoublonner par IDs stables, sans supprimer les fiches historiques homonymes.',
-    '2. Adapter les primitives et familles existantes pour les pilotes Vénus/Caveau, Mars et Lune/Cropta ; documenter les écarts visuels avant tout asset dédié.',
+    '2. Vénus/Caveau constitue le premier pilote rendu ; poursuivre la revue visuelle, puis adapter Mars et Lune/Cropta avec les mêmes exigences de preuve.',
     '3. Ajouter l’import incrémental puis les filtres éditeur ; conserver le contrat d’épisode et les timelines existants.',
     '', 'Voir [ATLAS-COVERAGE.md](ATLAS-COVERAGE.md) pour les sources, relations et lacunes de cette tranche. Aucun rendu intégral de 35 secondes ni remplacement destructif.', '',
   ];
