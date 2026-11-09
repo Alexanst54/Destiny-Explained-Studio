@@ -155,6 +155,7 @@
       }
     },
     "physicalFootContactValidated": false,
+    "unoccludedEyeRays": 7,
     "lowerLodConstructionChecks": [
       {
         "lod": 1,

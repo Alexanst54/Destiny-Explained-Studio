@@ -30,7 +30,7 @@ def generate(seed=42,quality='balanced',lod=0):
  for s in [-1,1]:
   taper(d,'swept-horn-'+str(s),(s*.55,.05,1),(s*1.15,.25,3),.6,.55,'nezarec-mask','head',lod)
   taper(d,'horn-forward-keel-'+str(s),(s*.4,-.5,.9),(s*.7,-.45,2.5),.28,.2,'nezarec-armor','head',lod)
- for i,(x,z) in enumerate([(0,.2),(-.19,.22),(.19,.22),(-.26,.42),(.26,.42),(-.15,.64),(.15,.64)]):d.box('seven-eye-'+str(i),(x,-.91,z),(.1,.08,.1),'nezarec-eye',joint='head')
+ for i,(x,z) in enumerate([(0,.2),(-.19,.22),(.19,.22),(-.26,.42),(.26,.42),(-.15,.64),(.15,.64)]):d.box('seven-eye-'+str(i),(x,-1.22,z),(.13,.08,.13),'nezarec-eye',joint='head')
  for s,n in [(-1,'L'),(1,'R')]:
   d.joint('thigh'+n,(s*1.85,.1,-.35),'haunches');d.joint('knee'+n,(s*.3,.25,-2.6),'thigh'+n);d.joint('foot'+n,(0,-.1,-2.3),'knee'+n)
   limb(d,'thick-thigh-'+n,(0,0,-.2),(s*.25,.2,-2.4),1.7,1.7,'nezarec-armor','nezarec-ridge','thigh'+n,lod)

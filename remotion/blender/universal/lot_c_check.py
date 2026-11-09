@@ -15,6 +15,16 @@ def main():
  for name,(width,height) in DIMENSIONS.items():
   with tempfile.TemporaryDirectory() as tmp:
    r=request('boss-'+name,quality='draft',view='front',width=width,height=height);state=build(r,'cpu',3,Path(tmp));objects=len(bpy.data.objects);meshes=len(bpy.data.meshes);evaluations=0
+   visible_eyes=None
+   if name=='nezarec':
+    update(state,r,0);visible_eyes=0;depsgraph=bpy.context.evaluated_depsgraph_get()
+    for piece in state['providerModule'].generate()['objects']:
+     if piece['material']!='nezarec-eye':continue
+     target=state['joints']['head'].matrix_world@Vector(piece['position']);origin=target+Vector((0,-6,0))
+     hit,location,normal,face,obj,matrix=state['scene'].ray_cast(depsgraph,origin,Vector((0,1,0)),distance=6.2)
+     assert hit and obj.material_slots[obj.data.polygons[face].material_index].material.name=='nezarec-eye','Eye occluded by mask geometry'
+     visible_eyes+=1
+    assert visible_eyes==7
    for mode in ['idle','move','combat','signature','reveal']:
     r['animation']=mode;seen=set()
     for frame in range(48):
@@ -44,6 +54,7 @@ def main():
       p=world_to_camera_view(state['scene'],state['scene'].camera,obj.matrix_world@Vector(corner));overflow=max(0,-p.x,p.x-1,-p.y,p.y-1);clip_worst=max(clip_worst,overflow)
       assert p.z>0 and overflow<.01,(name,'clip',frame,obj.name,tuple(p))
    results[name]=dict(evaluations=evaluations,views=5,clipProjectionFrames=36,maxClipOverflow=clip_worst,maxNormalizedOverflow=worst,staticResources=True,randomAccess=True,articulatedMotion=True,bounds=bounds,physicalFootContactValidated=False)
+   if visible_eyes is not None:results[name]['unoccludedEyeRays']=visible_eyes
   bpy.ops.wm.read_factory_settings(use_empty=True)
   lod_checks=[]
   for lod in [1,2]:
