@@ -10,6 +10,7 @@ import time
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from contract import load,validate
 
+ENV_PROFILES={'draft':{'samples':8,'bounces':2,'denoise':False},'balanced':{'samples':32,'bounces':3,'denoise':True},'cinematic':{'samples':96,'bounces':5,'denoise':True}}
 PROFILES={'standard':{'samples':16,'bounces':2,'denoise':False},'cinematic':{'samples':64,'bounces':4,'denoise':True}}
 
 def source_matrix(values):
@@ -67,10 +68,12 @@ def build_scene(data,profile=None,device='auto',scale=100,threads=None):
     import bpy
     from mathutils import Vector
     validate(data)
+    environment=data.get('environment')
+    settings=ENV_PROFILES[environment['detail']] if environment and profile is None else PROFILES.get(profile or data['profile'])
     if profile is None:profile=data['profile']
     if profile not in PROFILES or device not in ['auto','cpu'] or type(scale) is not int or not 10<=scale<=100:raise ValueError('Invalid render options')
     if not bpy.app.build_options.cycles:raise RuntimeError('This Blender build has no Cycles support; install a Cycles-enabled Blender build.')
-    scene=bpy.data.scenes.new('DestinyBridge');scene.render.engine='CYCLES';settings=PROFILES[profile]
+    scene=bpy.data.scenes.new('DestinyBridge');scene.render.engine='CYCLES'
     import _cycles
     denoise_supported=bool(getattr(_cycles,'with_openimagedenoise',False))
     denoise=settings['denoise'] and denoise_supported
@@ -78,6 +81,10 @@ def build_scene(data,profile=None,device='auto',scale=100,threads=None):
     scene.render.resolution_x=data['resolution']['width'];scene.render.resolution_y=data['resolution']['height'];scene.render.resolution_percentage=scale;scene.render.pixel_aspect_x=1;scene.render.pixel_aspect_y=1
     scene.render.fps=data['source']['fps'];scene.frame_set(data['source']['frame']);scene.render.image_settings.file_format='PNG';scene.render.image_settings.color_mode='RGBA';scene.render.film_transparent=False
     scene.view_settings.view_transform='Standard';scene.view_settings.exposure=0;scene.view_settings.gamma=1
+    if environment:
+        try:scene.view_settings.view_transform='AgX'
+        except TypeError:pass  # Standard remains available on older Blender builds.
+        scene.cycles.sample_clamp_indirect=3
     available=len(os.sched_getaffinity(0)) if hasattr(os,'sched_getaffinity') else os.cpu_count() or 1
     count=min(available,4) if threads is None else threads
     if type(count) is not int or not 1<=count<=64:raise ValueError('Threads must be 1–64')
@@ -87,7 +94,7 @@ def build_scene(data,profile=None,device='auto',scale=100,threads=None):
     for spec in data['materials']:
         mat=bpy.data.materials.new(spec['id']);mat.use_nodes=True;nodes=mat.node_tree.nodes;nodes.clear();output=nodes.new('ShaderNodeOutputMaterial')
         shader=nodes.new('ShaderNodeEmission' if spec['emission'] else 'ShaderNodeBsdfPrincipled');shader.inputs['Color' if spec['emission'] else 'Base Color'].default_value=linear_color(spec['color'])
-        if spec['emission']:shader.inputs['Strength'].default_value=1
+        if spec['emission']:shader.inputs['Strength'].default_value=3 if environment and spec['id'].startswith('riis/') else 1
         else:shader.inputs['Roughness'].default_value=spec['roughness']
         mat.node_tree.links.new(shader.outputs[0],output.inputs['Surface']);materials[spec['id']]=mat
     geometries={};objects={};conversion=basis();baked=0
@@ -102,6 +109,11 @@ def build_scene(data,profile=None,device='auto',scale=100,threads=None):
             obj.data=geometries[kind].copy();obj.data.transform(actual.inverted()@wanted);obj.matrix_world=actual;baked+=1
         obj.material_slots[0].link='OBJECT';obj.material_slots[0].material=materials[spec['material']]
         obj['bridge_id']=spec['id'];obj['source_actor_id']=spec.get('actorId','');objects[spec['id']]=obj
+    if environment and environment['hazeDensity']>0:
+        fog=bpy.data.materials.new('RiisDepthHaze');fog.use_nodes=True;n= fog.node_tree.nodes;n.clear()
+        out=n.new('ShaderNodeOutputMaterial');volume=n.new('ShaderNodeVolumePrincipled');volume.inputs['Density'].default_value=environment['hazeDensity'];volume.inputs['Color'].default_value=linear_color('#a8bed0');volume.inputs['Anisotropy'].default_value=.15;fog.node_tree.links.new(volume.outputs['Volume'],out.inputs['Volume'])
+        haze=bpy.data.objects.new('RiisDepthHaze',mesh_data('box'));scene.collection.objects.link(haze);haze.data.materials.append(fog)
+        haze.location=(0,55,15);haze.scale=(110,85,40)  # (x,-z,y), bounded behind the actor plaza.
     camera_data=bpy.data.cameras.new('BridgeCamera');camera=bpy.data.objects.new('BridgeCamera',camera_data);scene.collection.objects.link(camera);camera.matrix_world=conversion@source_matrix(data['camera']['matrixWorld']);camera_data.sensor_fit='VERTICAL';camera_data.sensor_height=24;camera_data.lens=24/(2*math.tan(math.radians(data['camera']['verticalFov'])/2));camera_data.clip_start=data['camera']['near'];camera_data.clip_end=data['camera']['far'];scene.camera=camera
     for spec in data['lights']:
         light_data=bpy.data.lights.new(spec['id'],'SUN');light_data.energy=spec['intensity'];light_data.color=linear_color(spec['color'])[:3];light_data.angle=math.radians(2 if profile=='standard' else 5);light=bpy.data.objects.new(spec['id'],light_data);scene.collection.objects.link(light)
@@ -111,7 +123,7 @@ def build_scene(data,profile=None,device='auto',scale=100,threads=None):
     scene['bridge_source']=json.dumps(data['source']);scene['bridge_omissions']=json.dumps(data['omissions']);scene['bridge_profile']=profile
     info=choose_device(scene,device)
     if settings['denoise'] and not denoise_supported:info['notes'].append('OpenImageDenoise unavailable or not advertised by this build; denoising disabled.')
-    info.update(bakedAffineCount=baked,profile=profile,samples=settings['samples'],bounces=settings['bounces'],denoise=denoise,denoiseRequested=settings['denoise'],cpuAvailable=available,threads=count,scalePercent=scale)
+    info.update(environmentDetail=environment['detail'] if environment else None,viewTransform=scene.view_settings.view_transform,hazeDensity=environment['hazeDensity'] if environment else 0,bakedAffineCount=baked,profile=profile,samples=settings['samples'],bounces=settings['bounces'],denoise=denoise,denoiseRequested=settings['denoise'],cpuAvailable=available,threads=count,scalePercent=scale)
     return scene,objects,info
 
 def main(argv=None):
@@ -127,7 +139,7 @@ def main(argv=None):
         except RuntimeError as error:
             if info['selected']!='GPU' or args.device!='auto':raise
             info['notes'].append('GPU render failed; one CPU retry: '+str(error));scene.cycles.device='CPU';info['selected']='CPU';info['backend']=None;bpy.ops.render.render(write_still=True,scene=scene.name)
-    report={'bridgeVersion':1,'blenderVersion':bpy.app.version_string,'source':data['source'],'objects':len(objects),'sharedGeometryCount':len({o.data.as_pointer() for o in objects.values()}),'configuration':info,'rendered':not args.check_only,'output':str(output) if not args.check_only else None,'width':int(scene.render.resolution_x*args.scale/100),'height':int(scene.render.resolution_y*args.scale/100),'secondsInsideBlender':round(time.monotonic()-started,3),'maxProcessRssKiB':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,'memoryScope':'This Blender process maximum RSS on Linux; not total GPU/driver memory.','omissions':data['omissions']}
+    report={'bridgeVersion':1,'blenderVersion':bpy.app.version_string,'source':data['source'],'environment':data.get('environment'),'objects':len(objects),'sharedGeometryCount':len({o.data.as_pointer() for o in objects.values()}),'configuration':info,'rendered':not args.check_only,'output':str(output) if not args.check_only else None,'width':int(scene.render.resolution_x*args.scale/100),'height':int(scene.render.resolution_y*args.scale/100),'secondsInsideBlender':round(time.monotonic()-started,3),'maxProcessRssKiB':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,'memoryScope':'This Blender process maximum RSS on Linux; not total GPU/driver memory.','omissions':data['omissions']}
     output.with_suffix('.report.json').write_text(json.dumps(report,indent=2)+'\n');print('BRIDGE_RESULT '+json.dumps(report),flush=True)
 
 if __name__=='__main__':main(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else [])

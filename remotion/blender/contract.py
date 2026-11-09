@@ -25,8 +25,14 @@ def matrix(m):
 def color(x):
     if not isinstance(x,str) or not re.fullmatch(r'#[0-9a-fA-F]{6}',x):raise BridgeError('Invalid color')
 def validate(d):
-    keys(d,['format','version','exporterVersion','coordinateSystem','matrixLayout','profile','source','resolution','camera','world','lights','materials','actors','meshes','omissions'])
-    if (d['format'],d['version'],d['exporterVersion'],d['coordinateSystem'],d['matrixLayout'])!=('destiny-blender-scene',1,'0.8.1','RIGHT_HANDED_Y_UP','column-major') or type(d['version']) is not int:raise BridgeError('Unsupported contract/version/axes')
+    keys(d,['format','version','exporterVersion','coordinateSystem','matrixLayout','profile','source','resolution','camera','world','lights','materials','actors','meshes','omissions'],['environment'])
+    if (d['format'],d['version'],d['coordinateSystem'],d['matrixLayout'])!=('destiny-blender-scene',1,'RIGHT_HANDED_Y_UP','column-major') or d['exporterVersion'] not in ['0.8.1','0.8.2'] or type(d['version']) is not int:raise BridgeError('Unsupported contract/version/axes')
+    if 'environment' in d:
+        e=d['environment'];keys(e,['generator','version','detail','seed','lighting','hazeDensity','replacedMeshIds','visualStatus'])
+        if e['generator']!='riis-before-whirlwind' or type(e['version']) is not int or e['version']!=1 or e['detail'] not in ['draft','balanced','cinematic'] or e['lighting'] not in ['dawn','blue-hour'] or e['visualStatus']!='artistic-reconstruction':raise BridgeError('Invalid environment metadata')
+        number(e['seed'],0,2147483647,True);number(e['hazeDensity'],0,.02);items(e['replacedMeshIds'],4096)
+        for v in e['replacedMeshIds']:text(v)
+        if len(set(e['replacedMeshIds']))!=len(e['replacedMeshIds']):raise BridgeError('Duplicate replacement id')
     if d['profile'] not in ['standard','cinematic']:raise BridgeError('Unknown profile')
     s=d['source'];keys(s,['projectId','projectVersion','projectSha256','sceneId','shotId','frame','localFrame','fps','timing','loreMode','visualStatus','sourceIds'],['atlas'])
     for k in ['projectId','projectVersion','sceneId','shotId','loreMode']:text(s[k])
