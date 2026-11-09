@@ -50,7 +50,7 @@ def cache_hit(folder,index,key,width,height):
     png=folder/f'{index:05d}.png';done=png.with_suffix('.done.json')
     try:
         d=json.loads(done.read_text());return d['key']==key and png_valid(png,width,height) and d['pngSha256']==sha(png)
-    except (OSError,ValueError,KeyError):return False
+    except (OSError,ValueError,KeyError,TypeError):return False
 
 def run(project,cache,start=120,count=90,detail='draft',scale=10,device='auto',seed=42,lighting='dawn',timeout=180,node='node',blender='blender',threads=2,max_new=90,public=None,renderer='persistent',fallback=True):
     if type(start) is not int or start<0 or type(count) is not int or not 1<=count<=90 or type(scale) is not int or scale not in [10,25,50,100] or type(max_new) is not int or not 1<=max_new<=90:raise ValueError('Invalid sequence range/scale/work limit')
@@ -69,7 +69,7 @@ def run(project,cache,start=120,count=90,detail='draft',scale=10,device='auto',s
             try:
                 previous=json.loads(candidate.read_text());other={**previous,'scale':100}
                 if previous['scale']<100 and other==identity and all(cache_hit(candidate.parent,i,identity['snapshots'][i],1080*previous['scale']//100,1920*previous['scale']//100) for i in range(count)):approved=True;break
-            except (OSError,ValueError,KeyError):continue
+            except (OSError,ValueError,KeyError,TypeError):continue
         if not approved:raise ValueError('Full HD requires a complete matching lower-resolution preview in this cache first')
     key=digest(identity);folder=Path(cache).resolve()/key;folder.mkdir(parents=True,exist_ok=True)
     width=1080*scale//100;height=1920*scale//100;started=time.monotonic();new=0;hits=0;monitor=GpuMonitor()

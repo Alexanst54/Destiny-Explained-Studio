@@ -43,6 +43,13 @@ class Persistent(unittest.TestCase):
             self.assertEqual(json.loads((cache/'sequence-report.json').read_text())['completed'],1)
             self.assertEqual(fallback.call_count,1)
 
+    def test_malformed_completion_marker_is_a_cache_miss(self):
+        with tempfile.TemporaryDirectory() as folder:
+            root=Path(folder);(root/'00000.png').write_bytes(png(2,3))
+            for invalid in ([],None,42,{'key':'expected'}):
+                sequence.atomic(root/'00000.done.json',invalid)
+                self.assertFalse(sequence.cache_hit(root,0,'expected',2,3))
+
     def test_png_crc_and_compressed_data(self):
         with tempfile.TemporaryDirectory() as folder:
             path=Path(folder)/'frame.png';path.write_bytes(png(2,3))
