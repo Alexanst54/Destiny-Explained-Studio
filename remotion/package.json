@@ -66,7 +66,11 @@
     "test:blender:import": "blender --background --factory-startup --python-exit-code 1 --python blender/tests/blender_check.py -- blender/examples/riis-frame-210.json",
     "prepare:blender:riis": "python blender/environments/riis.py blender/examples/riis-frame-210.json out/riis-cinematic.json --detail cinematic",
     "render:blender:riis": "python blender/render_one.py out/riis-cinematic.json out/riis-cinematic.png --scale 25 --timeout 600",
-    "test:blender:environment": "blender --background --factory-startup --python-exit-code 1 --python blender/tests/environment_check.py"
+    "test:blender:environment": "blender --background --factory-startup --python-exit-code 1 --python blender/tests/environment_check.py",
+    "audit:assets": "node --experimental-strip-types scripts/asset-audit.mjs",
+    "report:atlas:coverage": "node --experimental-strip-types scripts/atlas-coverage.mjs",
+    "test:atlas:universal": "node --experimental-strip-types --test tests/atlas-universal.test.mjs",
+    "typecheck:atlas:universal": "tsc --noEmit -p atlas/universal/tsconfig.json"
   },
   "dependencies": {
     "@react-three/fiber": "8.18.0",
