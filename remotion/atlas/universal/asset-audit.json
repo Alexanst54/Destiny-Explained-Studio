@@ -1,0 +1,1847 @@
+{
+  "auditDate": "2026-11-09",
+  "context": {
+    "auditDate": "2026-11-09",
+    "initialBranch": "feat/gpu-render-optimization-0.8.4",
+    "initialBranchRevision": "146d43e0f5003a668896cdc2e7aed76f4f982290",
+    "baseBranch": "main",
+    "baseRevision": "1effd88e089ef4726600a223f97de8fe9abafe78",
+    "dependencyPolicy": "PR #17 reste indépendante et non fusionnée ; cette branche part de main et conserve les anciens catalogues et épisodes.",
+    "initialBranchDifferences": [
+      "docs/assets/blender-video-084-cpu-draft.mp4",
+      "docs/images/blender-video-084-preview.png",
+      "remotion/blender/Blender-Video-Colab-Pro.ipynb",
+      "remotion/blender/GPU-REPORT.md",
+      "remotion/blender/VIDEO-README.md",
+      "remotion/blender/benchmark.py",
+      "remotion/blender/gpu-benchmark-cpu.json",
+      "remotion/blender/gpu-resume-validation.json",
+      "remotion/blender/gpu-video-validation.json",
+      "remotion/blender/import_scene.py",
+      "remotion/blender/persistent_scene.py",
+      "remotion/blender/render_batch.py",
+      "remotion/blender/render_one.py",
+      "remotion/blender/sequence.py",
+      "remotion/blender/telemetry.py",
+      "remotion/blender/tests/persistent_check.py",
+      "remotion/blender/tests/png_fixture.py",
+      "remotion/blender/tests/test_devices.py",
+      "remotion/blender/tests/test_persistent.py",
+      "remotion/blender/tests/test_render_one.py",
+      "remotion/blender/tests/test_sequence.py",
+      "remotion/blender/verify-video.py"
+    ],
+    "sharedInputHashes": [
+      {
+        "path": "remotion/atlas/catalog.json",
+        "sha256": "2148a2b328fb2a3d9998ce164d193d9c43ff4df3150512c737c81646f651791c"
+      },
+      {
+        "path": "remotion/characters/catalog.json",
+        "sha256": "3e506b9a0a0c632d7d86aa2bb4e78eb6d4bba832d0905d4020014ef65752c3af"
+      },
+      {
+        "path": "remotion/atlas/recipes.ts",
+        "sha256": "443810b21e35dd389999ba3513b49bd289a815e6475ea0f70db214b0c530d741"
+      },
+      {
+        "path": "remotion/src/voxel/library/Library.tsx",
+        "sha256": "f8520cad38f584a03c7daf77b10cd17bfe41112c062f8a54a6ce7f8101c99cdc"
+      },
+      {
+        "path": "remotion/blender/export.ts",
+        "sha256": "6d0c1c27ee1d0ba7dfef663f72d20d9770fab55e35445f89a8cb2e64de2d0e2b"
+      },
+      {
+        "path": "remotion/blender/environments/riis.py",
+        "sha256": "a5a46f84d3aa2913a1727123d21a2ad6c2a56fbec1f6ac2fc081bad8b9c88fba"
+      }
+    ],
+    "observationNote": "Observation conservée de la branche initiale. La régénération ne nécessite ni checkout ni objets Git de la PR #17.",
+    "sharedInputs": [
+      {
+        "path": "remotion/atlas/catalog.json",
+        "unchangedBetweenBranches": true
+      },
+      {
+        "path": "remotion/characters/catalog.json",
+        "unchangedBetweenBranches": true
+      },
+      {
+        "path": "remotion/atlas/recipes.ts",
+        "unchangedBetweenBranches": true
+      },
+      {
+        "path": "remotion/src/voxel/library/Library.tsx",
+        "unchangedBetweenBranches": true
+      },
+      {
+        "path": "remotion/blender/export.ts",
+        "unchangedBetweenBranches": true
+      },
+      {
+        "path": "remotion/blender/environments/riis.py",
+        "unchangedBetweenBranches": true
+      }
+    ]
+  },
+  "method": "Fichiers Git suivis, schémas exécutés, références structurées des 12 épisodes fournis. Pas de recherche exhaustive de reachability dynamique, pas de téléchargement ni rendu. Fichiers ignorés (Kokoro, caches) hors inventaire versionné.",
+  "legacy": {
+    "locationCount": 468,
+    "variantCount": 17,
+    "dedicatedLocations": [
+      {
+        "id": "europa",
+        "family": "ice",
+        "mode": "dedicated",
+        "environment": "europa"
+      },
+      {
+        "id": "europan-pyramid",
+        "family": "pyramid",
+        "mode": "dedicated",
+        "environment": "pyramid-interior"
+      },
+      {
+        "id": "black-garden",
+        "family": "garden",
+        "mode": "dedicated",
+        "environment": "black-garden"
+      },
+      {
+        "id": "tower",
+        "family": "human",
+        "mode": "dedicated",
+        "environment": "the-tower"
+      }
+    ],
+    "modularLocationCount": 464,
+    "families": [
+      "human",
+      "golden-age",
+      "vex",
+      "hive",
+      "cabal",
+      "eliksni",
+      "awoken",
+      "pyramid",
+      "bray",
+      "future-city",
+      "cosmic",
+      "ocean",
+      "ice",
+      "garden"
+    ],
+    "modules": [
+      "terrain",
+      "human",
+      "golden-age",
+      "vex",
+      "hive",
+      "cabal",
+      "eliksni",
+      "awoken",
+      "pyramid",
+      "bray",
+      "future-city",
+      "cosmic",
+      "vegetation",
+      "ocean",
+      "snow",
+      "weather"
+    ],
+    "sourceCount": 159
+  },
+  "characters": {
+    "count": 33,
+    "variantCount": 41,
+    "modelKindsUsed": {
+      "beast": 1,
+      "drone": 2,
+      "four-arm": 6,
+      "heavy": 3,
+      "hive": 2,
+      "humanoid": 11,
+      "krill": 4,
+      "sphere": 1,
+      "terminal": 1,
+      "unknown": 1,
+      "vex": 1
+    },
+    "rigArchetypes": [
+      "humanoid",
+      "four-arm",
+      "dreg",
+      "vandal",
+      "captain",
+      "servitor",
+      "civilian",
+      "elder"
+    ],
+    "rigAnimations": [
+      "idle",
+      "walk",
+      "run",
+      "sprint",
+      "stop",
+      "turn",
+      "look-around",
+      "point",
+      "talk-gesture",
+      "react",
+      "fear",
+      "flee",
+      "fall",
+      "kneel",
+      "celebrate",
+      "look-at-sky"
+    ]
+  },
+  "versioned3dModels": [],
+  "fixtures": [
+    {
+      "path": "remotion/episodes/atlas_demo.json",
+      "schemaVersion": "0.3.0",
+      "composition": "VoxelCinematicEpisode",
+      "durationFrames": 720,
+      "sha256": "cbcec854bbc82bd08f0aa5d0d10638d99218ac8b270e3225a193a81b86231f92"
+    },
+    {
+      "path": "remotion/episodes/hybrid_black_garden.json",
+      "schemaVersion": "0.5.0",
+      "composition": "HybridShort",
+      "durationFrames": 600,
+      "sha256": "5c3fc4aeb03aef68e4eb0df36399885407daca7743d678538fc22108bf38ffc2"
+    },
+    {
+      "path": "remotion/episodes/hybrid_oryx.json",
+      "schemaVersion": "0.5.0",
+      "composition": "HybridShort",
+      "durationFrames": 600,
+      "sha256": "ca2312ba3b18e984f92d637b69d8d87e44057e7a244b2304917055cfdb660e77"
+    },
+    {
+      "path": "remotion/episodes/hybrid_riis.json",
+      "schemaVersion": "0.5.0",
+      "composition": "HybridShort",
+      "durationFrames": 1050,
+      "sha256": "ddb8436328d607b9b0b2b722e6a4c330affabf96219ebc55897fdf5080648eea"
+    },
+    {
+      "path": "remotion/episodes/hybrid_riis_06.json",
+      "schemaVersion": "0.6.0",
+      "composition": "HybridShort",
+      "durationFrames": 1050,
+      "sha256": "fa21354dda909db21fcafe26fe033604281af5e70eae907b4331717a441831d4"
+    },
+    {
+      "path": "remotion/episodes/hybrid_riis_07.json",
+      "schemaVersion": "0.7.0",
+      "composition": "HybridShort",
+      "durationFrames": 1050,
+      "sha256": "061270479607a6417adac4df207fbde46da1fd295a9ef1ca5abb167468b5412d"
+    },
+    {
+      "path": "remotion/episodes/living_europa.json",
+      "schemaVersion": "0.4.0",
+      "composition": "VoxelCinematicEpisode",
+      "durationFrames": 720,
+      "sha256": "7e8efafbd08fe353b82b69f6a0d3280b0fe2dbe3c265590bb4e27c03467c51d7"
+    },
+    {
+      "path": "remotion/episodes/living_fundament.json",
+      "schemaVersion": "0.4.0",
+      "composition": "VoxelCinematicEpisode",
+      "durationFrames": 720,
+      "sha256": "248f3b189d4705908b62ba8d76bd6c0d010c6d19783e98a4cc4a23abdd4bc438"
+    },
+    {
+      "path": "remotion/episodes/living_whirlwind.json",
+      "schemaVersion": "0.4.0",
+      "composition": "VoxelCinematicEpisode",
+      "durationFrames": 720,
+      "sha256": "5b02089b271a1d41a4c4aad8d52b5adefccfbd0fb15bceb140f191c90491a0bf"
+    },
+    {
+      "path": "remotion/episodes/traveler_episode_002.json",
+      "schemaVersion": "0.1.0-draft",
+      "composition": "VoxelEpisode",
+      "durationFrames": 1800,
+      "sha256": "1783dc2778b2d569e9bcdb493dd6d925e35e856c33fba1d4fe791503929b8299"
+    },
+    {
+      "path": "remotion/episodes/traveler_episode_002_cinematic.json",
+      "schemaVersion": "0.1.0-draft",
+      "composition": "VoxelCinematicEpisode",
+      "durationFrames": 1800,
+      "sha256": "2ef78c46dc45902bd5082b750946b15894caac856420c1fe5a414a66f0d5a7b9"
+    },
+    {
+      "path": "remotion/episodes/voxel_worlds_demo.json",
+      "schemaVersion": "0.1.0-draft",
+      "composition": "VoxelCinematicEpisode",
+      "durationFrames": 480,
+      "sha256": "0528ef19f942fc60af6086ac9b73293568b7e75cf39f78d04884f8b5f2eaacd8"
+    }
+  ],
+  "usage": {
+    "locations": {
+      "black-garden": [
+        "remotion/episodes/hybrid_black_garden.json"
+      ],
+      "europa": [
+        "remotion/episodes/atlas_demo.json",
+        "remotion/episodes/living_europa.json"
+      ],
+      "fundament": [
+        "remotion/episodes/atlas_demo.json",
+        "remotion/episodes/hybrid_oryx.json",
+        "remotion/episodes/living_fundament.json"
+      ],
+      "mercury": [
+        "remotion/episodes/atlas_demo.json"
+      ],
+      "riis": [
+        "remotion/episodes/atlas_demo.json",
+        "remotion/episodes/hybrid_riis.json",
+        "remotion/episodes/hybrid_riis_06.json",
+        "remotion/episodes/hybrid_riis_07.json",
+        "remotion/episodes/living_whirlwind.json"
+      ]
+    },
+    "variants": {
+      "europa/bray-golden-age": [
+        "remotion/episodes/living_europa.json"
+      ],
+      "europa/bray-ruins": [
+        "remotion/episodes/atlas_demo.json"
+      ],
+      "fundament/krill-origins": [
+        "remotion/episodes/atlas_demo.json",
+        "remotion/episodes/hybrid_oryx.json",
+        "remotion/episodes/living_fundament.json"
+      ],
+      "mercury/golden-age": [
+        "remotion/episodes/atlas_demo.json"
+      ],
+      "riis/after-whirlwind": [
+        "remotion/episodes/hybrid_riis.json",
+        "remotion/episodes/hybrid_riis_06.json",
+        "remotion/episodes/hybrid_riis_07.json"
+      ],
+      "riis/before-whirlwind": [
+        "remotion/episodes/atlas_demo.json",
+        "remotion/episodes/hybrid_riis.json",
+        "remotion/episodes/hybrid_riis_06.json",
+        "remotion/episodes/hybrid_riis_07.json",
+        "remotion/episodes/living_whirlwind.json"
+      ]
+    },
+    "characters": {
+      "aurash": [
+        "remotion/episodes/hybrid_oryx.json",
+        "remotion/episodes/living_fundament.json"
+      ],
+      "eliksni-civilian": [
+        "remotion/episodes/hybrid_riis.json",
+        "remotion/episodes/hybrid_riis_06.json",
+        "remotion/episodes/hybrid_riis_07.json",
+        "remotion/episodes/living_whirlwind.json"
+      ],
+      "eliksni-elder": [
+        "remotion/episodes/hybrid_riis_07.json"
+      ],
+      "exo-scientist": [
+        "remotion/episodes/living_europa.json"
+      ],
+      "human-scientist": [
+        "remotion/episodes/living_europa.json"
+      ],
+      "krill-civilian": [
+        "remotion/episodes/living_fundament.json"
+      ],
+      "sathona": [
+        "remotion/episodes/living_fundament.json"
+      ],
+      "xi-ro": [
+        "remotion/episodes/living_fundament.json"
+      ]
+    },
+    "environments": {
+      "black-garden": [
+        "remotion/episodes/voxel_worlds_demo.json"
+      ],
+      "europa": [
+        "remotion/episodes/atlas_demo.json",
+        "remotion/episodes/living_europa.json",
+        "remotion/episodes/voxel_worlds_demo.json"
+      ],
+      "pyramid-interior": [
+        "remotion/episodes/voxel_worlds_demo.json"
+      ],
+      "the-tower": [
+        "remotion/episodes/atlas_demo.json",
+        "remotion/episodes/hybrid_black_garden.json",
+        "remotion/episodes/hybrid_oryx.json",
+        "remotion/episodes/hybrid_riis.json",
+        "remotion/episodes/hybrid_riis_06.json",
+        "remotion/episodes/hybrid_riis_07.json",
+        "remotion/episodes/living_fundament.json",
+        "remotion/episodes/living_whirlwind.json",
+        "remotion/episodes/traveler_episode_002.json",
+        "remotion/episodes/traveler_episode_002_cinematic.json",
+        "remotion/episodes/voxel_worlds_demo.json"
+      ]
+    }
+  },
+  "notReferencedByFixtures": {
+    "locations": [
+      "destiny-universe",
+      "solar-system",
+      "reef",
+      "ascendant-plane",
+      "vex-network",
+      "nine-realms",
+      "jupiter",
+      "saturn",
+      "oort-cloud",
+      "earth",
+      "moon",
+      "venus",
+      "mars",
+      "io",
+      "titan",
+      "nessus",
+      "neptune",
+      "cosmodrome",
+      "zone-cosmodrome-1432145396",
+      "zone-cosmodrome-1142232514",
+      "zone-cosmodrome-1788937158",
+      "zone-cosmodrome-1788937179",
+      "zone-cosmodrome-3252170476",
+      "zone-cosmodrome-635041241",
+      "zone-cosmodrome-3922935516",
+      "zone-cosmodrome-1799766936",
+      "zone-cosmodrome-992774748",
+      "zone-cosmodrome-1723549208",
+      "zone-cosmodrome-2192450996",
+      "zone-cosmodrome-3601670414",
+      "zone-cosmodrome-3252170478",
+      "zone-cosmodrome-1469172845",
+      "edz",
+      "zone-edz-3331349367",
+      "zone-edz-3331349364",
+      "zone-edz-3340296448",
+      "zone-edz-3077328792",
+      "zone-edz-3077328795",
+      "zone-edz-3077328794",
+      "zone-edz-48807190",
+      "zone-edz-4206151375",
+      "zone-edz-3854937584",
+      "zone-edz-1943701544",
+      "zone-edz-2212414297",
+      "zone-edz-698761453",
+      "zone-edz-698761454",
+      "zone-edz-698761455",
+      "zone-edz-119587106",
+      "zone-edz-491961918",
+      "zone-edz-3861059923",
+      "zone-edz-486266603",
+      "zone-edz-3891926329",
+      "zone-edz-488775310",
+      "zone-edz-1094980045",
+      "zone-edz-2917555721",
+      "zone-edz-2917555722",
+      "zone-edz-3600472775",
+      "zone-edz-1594246838",
+      "zone-edz-2168129096",
+      "zone-edz-3091570009",
+      "zone-edz-3221637869",
+      "zone-edz-3221637870",
+      "zone-edz-3221637871",
+      "zone-edz-2886912260",
+      "zone-edz-4200309587",
+      "zone-edz-656412907",
+      "zone-edz-656412904",
+      "zone-edz-656412905",
+      "zone-edz-702543394",
+      "zone-edz-1663138818",
+      "zone-edz-3796420578",
+      "last-city",
+      "zone-last-city-4101540847",
+      "zone-last-city-2372580540",
+      "zone-last-city-2871560606",
+      "zone-last-city-2192450996",
+      "farm",
+      "europa-regions",
+      "zone-europa-regions-2379681761",
+      "zone-europa-regions-2724165023",
+      "zone-europa-regions-1190179400",
+      "zone-europa-regions-1142232514",
+      "zone-europa-regions-1690293884",
+      "zone-europa-regions-1675523467",
+      "zone-europa-regions-1375449673",
+      "zone-europa-regions-1439553579",
+      "zone-europa-regions-1747045785",
+      "zone-europa-regions-4129597795",
+      "zone-europa-regions-578926554",
+      "zone-europa-regions-2575972120",
+      "zone-europa-regions-2188131170",
+      "zone-europa-regions-396959363",
+      "zone-europa-regions-1247760733",
+      "zone-europa-regions-2912349828",
+      "zone-europa-regions-2868856804",
+      "zone-europa-regions-3723853248",
+      "zone-europa-regions-2854982003",
+      "zone-europa-regions-1894007759",
+      "echo-mesa",
+      "zone-echo-mesa-2647120390",
+      "zone-echo-mesa-368757528",
+      "zone-echo-mesa-1329445049",
+      "zone-echo-mesa-577912749",
+      "zone-echo-mesa-4012600681",
+      "zone-echo-mesa-4012600682",
+      "zone-echo-mesa-3787534291",
+      "zone-echo-mesa-2701633580",
+      "zone-echo-mesa-2160621994",
+      "zone-echo-mesa-697305512",
+      "zone-echo-mesa-2815380496",
+      "zone-echo-mesa-2241206483",
+      "zone-echo-mesa-1161967626",
+      "zone-echo-mesa-2243000836",
+      "new-pacific-arcology",
+      "zone-new-pacific-arcology-1843052824",
+      "zone-new-pacific-arcology-326882937",
+      "zone-new-pacific-arcology-1291433366",
+      "zone-new-pacific-arcology-3286847986",
+      "zone-new-pacific-arcology-3327797828",
+      "zone-new-pacific-arcology-334231652",
+      "zone-new-pacific-arcology-4035573696",
+      "zone-new-pacific-arcology-964095576",
+      "zone-new-pacific-arcology-964095579",
+      "zone-new-pacific-arcology-414380065",
+      "arcadian-valley",
+      "zone-arcadian-valley-3395411000",
+      "zone-arcadian-valley-3254430284",
+      "zone-arcadian-valley-537009175",
+      "zone-arcadian-valley-4205285323",
+      "zone-arcadian-valley-2382012660",
+      "zone-arcadian-valley-516030978",
+      "zone-arcadian-valley-3710329679",
+      "zone-arcadian-valley-2201652505",
+      "zone-arcadian-valley-1429357501",
+      "zone-arcadian-valley-2132187573",
+      "zone-arcadian-valley-1702304883",
+      "zone-arcadian-valley-802293100",
+      "zone-arcadian-valley-4187350074",
+      "zone-arcadian-valley-1542076334",
+      "zone-arcadian-valley-2457589080",
+      "zone-arcadian-valley-4121279259",
+      "zone-arcadian-valley-3625361391",
+      "zone-arcadian-valley-1593380505",
+      "zone-arcadian-valley-286037220",
+      "zone-arcadian-valley-233911558",
+      "zone-arcadian-valley-1585439207",
+      "zone-arcadian-valley-2848447175",
+      "zone-arcadian-valley-2276627657",
+      "zone-arcadian-valley-3554616919",
+      "zone-arcadian-valley-607400847",
+      "zone-arcadian-valley-150774996",
+      "zone-arcadian-valley-1094010869",
+      "zone-arcadian-valley-2612265741",
+      "zone-arcadian-valley-1039684450",
+      "zone-arcadian-valley-1497819644",
+      "zone-arcadian-valley-2595761189",
+      "zone-arcadian-valley-2315741596",
+      "zone-arcadian-valley-2751096463",
+      "zone-arcadian-valley-3886363207",
+      "zone-arcadian-valley-4011944429",
+      "zone-arcadian-valley-3311195705",
+      "zone-arcadian-valley-542273287",
+      "zone-arcadian-valley-2224987225",
+      "zone-arcadian-valley-2724699327",
+      "zone-arcadian-valley-933267223",
+      "zone-arcadian-valley-896012584",
+      "zone-arcadian-valley-701006849",
+      "zone-arcadian-valley-2560872303",
+      "zone-arcadian-valley-3503630224",
+      "zone-arcadian-valley-1266022411",
+      "zone-arcadian-valley-597444871",
+      "zone-arcadian-valley-2670041043",
+      "zone-arcadian-valley-3740799821",
+      "zone-arcadian-valley-4135982017",
+      "zone-arcadian-valley-1394697041",
+      "zone-arcadian-valley-2807589494",
+      "dreaming-city",
+      "zone-dreaming-city-4058265372",
+      "zone-dreaming-city-706937272",
+      "zone-dreaming-city-278887670",
+      "zone-dreaming-city-1585801249",
+      "zone-dreaming-city-735161098",
+      "zone-dreaming-city-3366050756",
+      "zone-dreaming-city-544256237",
+      "zone-dreaming-city-1091325847",
+      "zone-dreaming-city-3202673012",
+      "zone-dreaming-city-3118644576",
+      "zone-dreaming-city-2856378140",
+      "zone-dreaming-city-1189331611",
+      "zone-dreaming-city-2000651678",
+      "zone-dreaming-city-2762866308",
+      "zone-dreaming-city-768261954",
+      "zone-dreaming-city-3522109173",
+      "zone-dreaming-city-685403470",
+      "tangled-shore",
+      "zone-tangled-shore-168097881",
+      "zone-tangled-shore-1690293884",
+      "zone-tangled-shore-2067748134",
+      "zone-tangled-shore-2126142572",
+      "zone-tangled-shore-1026950430",
+      "zone-tangled-shore-699959402",
+      "zone-tangled-shore-3520035140",
+      "zone-tangled-shore-1090543652",
+      "zone-tangled-shore-4195387640",
+      "zone-tangled-shore-831797607",
+      "zone-tangled-shore-1608679832",
+      "zone-tangled-shore-2299503584",
+      "zone-tangled-shore-2403500745",
+      "zone-tangled-shore-3904624892",
+      "zone-tangled-shore-1635947699",
+      "zone-tangled-shore-628920395",
+      "zone-tangled-shore-45224797",
+      "zone-tangled-shore-824533556",
+      "zone-tangled-shore-869203377",
+      "zone-tangled-shore-2128740634",
+      "zone-tangled-shore-974268702",
+      "prison-of-elders",
+      "zone-prison-of-elders-1580778829",
+      "zone-prison-of-elders-1830090260",
+      "zone-prison-of-elders-1182229350",
+      "zone-prison-of-elders-4176762636",
+      "zone-prison-of-elders-2535232994",
+      "hellas-basin",
+      "zone-hellas-basin-3899539020",
+      "zone-hellas-basin-1461622515",
+      "zone-hellas-basin-24063045",
+      "zone-hellas-basin-4204472107",
+      "zone-hellas-basin-1254321814",
+      "zone-hellas-basin-158407403",
+      "zone-hellas-basin-158822960",
+      "zone-hellas-basin-833227926",
+      "zone-hellas-basin-3638799958",
+      "zone-hellas-basin-886825768",
+      "zone-hellas-basin-422252418",
+      "mercury-fields",
+      "zone-mercury-fields-1727945837",
+      "zone-mercury-fields-4131361479",
+      "zone-mercury-fields-417490929",
+      "zone-mercury-fields-3817728376",
+      "zone-mercury-fields-1206537455",
+      "zone-mercury-fields-1206537452",
+      "zone-mercury-fields-1206537453",
+      "zone-mercury-fields-1206537450",
+      "zone-mercury-fields-1206537448",
+      "zone-mercury-fields-1206537449",
+      "zone-mercury-fields-590634609",
+      "zone-mercury-fields-2822410613",
+      "zone-mercury-fields-1018391425",
+      "zone-mercury-fields-4036634340",
+      "zone-mercury-fields-1627031569",
+      "zone-mercury-fields-1516811538",
+      "zone-mercury-fields-1516811537",
+      "zone-mercury-fields-1516811543",
+      "moon-regions",
+      "zone-moon-regions-3326367698",
+      "zone-moon-regions-3107092550",
+      "zone-moon-regions-1835313730",
+      "zone-moon-regions-417490937",
+      "zone-moon-regions-848710979",
+      "zone-moon-regions-1596760925",
+      "zone-moon-regions-4195493657",
+      "zone-moon-regions-730551779",
+      "zone-moon-regions-3679336794",
+      "zone-moon-regions-2685756106",
+      "zone-moon-regions-3800422194",
+      "zone-moon-regions-877913945",
+      "zone-moon-regions-286194652",
+      "zone-moon-regions-4025450777",
+      "zone-moon-regions-2367480803",
+      "zone-moon-regions-3924595249",
+      "zone-moon-regions-240420607",
+      "zone-moon-regions-2204642885",
+      "zone-moon-regions-1973847113",
+      "zone-moon-regions-422252418",
+      "zone-moon-regions-1008270286",
+      "zone-moon-regions-3259346071",
+      "zone-moon-regions-1149128373",
+      "zone-moon-regions-1873893295",
+      "zone-moon-regions-4033993124",
+      "zone-moon-regions-4066175629",
+      "ishtar-sink",
+      "eternity",
+      "zone-eternity-2294590554",
+      "savathun-throne-world",
+      "zone-savathun-throne-world-364517505",
+      "zone-savathun-throne-world-865867155",
+      "zone-savathun-throne-world-3375528975",
+      "zone-savathun-throne-world-2957496409",
+      "zone-savathun-throne-world-409878074",
+      "zone-savathun-throne-world-1852691886",
+      "zone-savathun-throne-world-1988240518",
+      "zone-savathun-throne-world-2871560606",
+      "zone-savathun-throne-world-2761606855",
+      "zone-savathun-throne-world-3602785820",
+      "zone-savathun-throne-world-3056690829",
+      "zone-savathun-throne-world-2503595015",
+      "zone-savathun-throne-world-742875862",
+      "zone-savathun-throne-world-3114432735",
+      "zone-savathun-throne-world-689805894",
+      "zone-savathun-throne-world-442576059",
+      "zone-savathun-throne-world-508917060",
+      "zone-savathun-throne-world-13604068",
+      "zone-savathun-throne-world-2377309655",
+      "zone-savathun-throne-world-207115916",
+      "zone-savathun-throne-world-1030072502",
+      "zone-savathun-throne-world-927680281",
+      "europan-pyramid",
+      "zone-europan-pyramid-3922162912",
+      "derelict-leviathan",
+      "neomuna",
+      "zone-neomuna-473462131",
+      "zone-neomuna-3578268109",
+      "zone-neomuna-4146409015",
+      "zone-neomuna-50825255",
+      "zone-neomuna-3565738319",
+      "zone-neomuna-3773756244",
+      "zone-neomuna-2445979888",
+      "zone-neomuna-3421540315",
+      "zone-neomuna-772299873",
+      "zone-neomuna-1211504318",
+      "zone-neomuna-4158493479",
+      "zone-neomuna-1594226865",
+      "zone-neomuna-1551333077",
+      "zone-neomuna-2725633440",
+      "zone-neomuna-444855738",
+      "zone-neomuna-3197566186",
+      "zone-neomuna-3968314772",
+      "zone-neomuna-38892619",
+      "dreadnaught",
+      "themis-cluster",
+      "pirate-ketch",
+      "seraph-facility",
+      "zone-black-garden-2194784404",
+      "zone-black-garden-1594246838",
+      "pale-heart",
+      "zone-pale-heart-2860009032",
+      "zone-pale-heart-2867160342",
+      "zone-pale-heart-59266754",
+      "zone-pale-heart-2754720187",
+      "zone-pale-heart-222602036",
+      "zone-pale-heart-2593565447",
+      "zone-pale-heart-1014300310",
+      "zone-pale-heart-3312665301",
+      "zone-pale-heart-3476143229",
+      "zone-pale-heart-157412126",
+      "zone-pale-heart-137712726",
+      "zone-pale-heart-813744898",
+      "zone-pale-heart-2777909764",
+      "zone-pale-heart-1219968656",
+      "zone-pale-heart-2277599019",
+      "zone-pale-heart-2719829530",
+      "zone-pale-heart-2432117166",
+      "zone-pale-heart-2546784302",
+      "zone-pale-heart-3955241859",
+      "kepler",
+      "zone-kepler-345157604",
+      "zone-kepler-2788217022",
+      "zone-kepler-3517691271",
+      "zone-kepler-3779811074",
+      "zone-kepler-3244232520",
+      "zone-kepler-3344617116",
+      "zone-kepler-316714196",
+      "zone-kepler-1968432014",
+      "zone-kepler-1834394558",
+      "meridian-bay",
+      "ocean-of-storms",
+      "phobos-fleetbase",
+      "caloris-spires",
+      "tower",
+      "traveler",
+      "phobos",
+      "leviathan",
+      "almighty",
+      "helm",
+      "derelict",
+      "glykon",
+      "seraph-station",
+      "vesper-station",
+      "essence",
+      "lure",
+      "infinite-forest",
+      "distributary",
+      "torobatl",
+      "lubrae",
+      "witness-homeworld",
+      "athenaeum-world-x",
+      "ana-harmony",
+      "volantis",
+      "deep-stone-site",
+      "bray-exoscience",
+      "plaguelands",
+      "felwinter-peak",
+      "twilight-gap",
+      "mare-imbrium",
+      "eliksni-quarter",
+      "tribute-hall",
+      "corridors-of-time",
+      "shattered-realm",
+      "mindscape",
+      "athenaeum",
+      "imbaru-engine",
+      "riven-lair",
+      "lawless-frontier",
+      "vault-of-glass",
+      "crotas-end",
+      "kings-fall",
+      "wrath-of-machine",
+      "leviathan-raid",
+      "eater-of-worlds",
+      "spire-of-stars",
+      "last-wish",
+      "scourge-of-past",
+      "crown-of-sorrow",
+      "garden-of-salvation",
+      "deep-stone-crypt",
+      "vow-of-disciple",
+      "root-of-nightmares",
+      "salvations-edge",
+      "desert-perpetual",
+      "shattered-throne",
+      "pit-of-heresy",
+      "prophecy",
+      "grasp-of-avarice",
+      "duality",
+      "spire-of-watcher",
+      "ghosts-of-deep",
+      "warlords-ruin",
+      "vespers-host",
+      "sundered-doctrine",
+      "equilibrium",
+      "whisper",
+      "zero-hour",
+      "harbinger",
+      "presage",
+      "vox-obscura",
+      "seraph-shield",
+      "avalon",
+      "starcrossed",
+      "encore",
+      "menagerie",
+      "sundial",
+      "interference",
+      "expunge",
+      "ketchcrash",
+      "deep-dive",
+      "tomb-of-elders",
+      "nether",
+      "edz-seraph-bunker",
+      "moon-seraph-bunker",
+      "io-seraph-bunker",
+      "dual-destiny",
+      "kells-fall",
+      "derealize",
+      "other-side",
+      "paradox",
+      "first-firewall",
+      "lost-to-light",
+      "sun",
+      "uranus",
+      "pluto",
+      "enceladus",
+      "deimos",
+      "cocytus"
+    ],
+    "characters": [
+      "cayde-6",
+      "zavala",
+      "ikora-rey",
+      "saint-14",
+      "osiris",
+      "eris-morn",
+      "mara-sov",
+      "uldren-sov",
+      "eramis",
+      "mithrax",
+      "clovis-bray",
+      "traveler",
+      "rasputin",
+      "ghost-unit",
+      "awoken-guard",
+      "hive-acolyte",
+      "cabal-soldier",
+      "vex-goblin",
+      "taken-thrall",
+      "scorn-screeb",
+      "precursor",
+      "eliksni-dreg",
+      "eliksni-vandal",
+      "eliksni-captain",
+      "eliksni-servitor"
+    ]
+  },
+  "missingReferences": [],
+  "mediaReferences": [
+    {
+      "episode": "remotion/episodes/atlas_demo.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/atlas_demo.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/hybrid_black_garden.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/hybrid_black_garden.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/hybrid_oryx.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/hybrid_oryx.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/hybrid_riis.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/hybrid_riis.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/hybrid_riis_06.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/hybrid_riis_06.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/hybrid_riis_07.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/hybrid_riis_07.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/living_europa.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/living_europa.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/living_fundament.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/living_fundament.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/living_whirlwind.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/living_whirlwind.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/traveler_episode_002.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/traveler_episode_002.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/traveler_episode_002_cinematic.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/traveler_episode_002_cinematic.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/voxel_worlds_demo.json",
+      "path": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "tracked": false
+    },
+    {
+      "episode": "remotion/episodes/voxel_worlds_demo.json",
+      "path": "assets/subtitles/traveler-en.words.json",
+      "status": "pending-voiceover-alignment",
+      "tracked": false
+    }
+  ],
+  "universalAssetRegistrations": [
+    {
+      "id": "voxel-tower-v1",
+      "kind": "remotion-environment",
+      "path": "remotion/src/voxel/library/Library.tsx",
+      "selector": "location=the-tower"
+    },
+    {
+      "id": "voxel-europa-v1",
+      "kind": "remotion-environment",
+      "path": "remotion/src/voxel/library/Library.tsx",
+      "selector": "location=europa"
+    },
+    {
+      "id": "voxel-black-garden-v1",
+      "kind": "remotion-environment",
+      "path": "remotion/src/voxel/library/Library.tsx",
+      "selector": "location=black-garden"
+    },
+    {
+      "id": "voxel-pyramid-v1",
+      "kind": "remotion-environment",
+      "path": "remotion/src/voxel/library/Library.tsx",
+      "selector": "location=pyramid-interior"
+    },
+    {
+      "id": "atlas-family-human",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=human"
+    },
+    {
+      "id": "atlas-family-golden-age",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=golden-age"
+    },
+    {
+      "id": "atlas-family-vex",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=vex"
+    },
+    {
+      "id": "atlas-family-hive",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=hive"
+    },
+    {
+      "id": "atlas-family-cabal",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=cabal"
+    },
+    {
+      "id": "atlas-family-eliksni",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=eliksni"
+    },
+    {
+      "id": "atlas-family-awoken",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=awoken"
+    },
+    {
+      "id": "atlas-family-pyramid",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=pyramid"
+    },
+    {
+      "id": "atlas-family-bray",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=bray"
+    },
+    {
+      "id": "atlas-family-future-city",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=future-city"
+    },
+    {
+      "id": "atlas-family-cosmic",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=cosmic"
+    },
+    {
+      "id": "atlas-family-ocean",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=ocean"
+    },
+    {
+      "id": "atlas-family-ice",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=ice"
+    },
+    {
+      "id": "atlas-family-garden",
+      "kind": "remotion-family",
+      "path": "remotion/atlas/recipes.ts",
+      "selector": "family=garden"
+    },
+    {
+      "id": "blender-riis-v1",
+      "kind": "blender-generator",
+      "path": "remotion/blender/environments/riis.py",
+      "selector": "atlas=riis/before-whirlwind"
+    }
+  ],
+  "missingBossAssets": [
+    "boss-templar",
+    "boss-atheon",
+    "boss-ir-yut",
+    "boss-crota",
+    "boss-crypt-security",
+    "boss-atraks",
+    "boss-taniks",
+    "boss-vorgeth",
+    "boss-dul-incaru"
+  ],
+  "files": [
+    {
+      "path": "docs/assets/editor.css",
+      "bytes": 14905,
+      "sha256": "caf7bec4a4734b3dcb164f5af0cd4cfdeb3f9750770d51f33ccf846721fbc053"
+    },
+    {
+      "path": "docs/assets/editor.js",
+      "bytes": 1168565,
+      "sha256": "45149290425bb17562a132128390fb867e29e53da26d4132945040084a09ca35"
+    },
+    {
+      "path": "docs/assets/hybrid-preview.js",
+      "bytes": 2417759,
+      "sha256": "37eef4da1d50f8aa397ab738dc50f593fb33f8b5b4ffd1ffb0fb95ab8e9d708b"
+    },
+    {
+      "path": "docs/images/blender-082/riis-cinematic.png",
+      "bytes": 235716,
+      "sha256": "03a96dff8a41eba611dc99c79341f6080e9b99c33cb6a159a8ae18ae81fa85c5"
+    },
+    {
+      "path": "docs/images/blender-082/riis-legacy.png",
+      "bytes": 196256,
+      "sha256": "466c16391c93685c887a239e78e7b1ccdd0df6e7c0bf177018cf1620a28bcb21"
+    },
+    {
+      "path": "docs/images/blender-video-083-preview.png",
+      "bytes": 42454,
+      "sha256": "f24648f34e0a6150c63fbd052a75e61814a360d6ccdbd2ee58428732e74ad664"
+    },
+    {
+      "path": "editor/animation-model.mjs",
+      "bytes": 3636,
+      "sha256": "7d4ee53330d75f38561f536a1f3763c1a46e6290da7dbc895ad4f3ca0a8988c3"
+    },
+    {
+      "path": "editor/animation.browser.test.cjs",
+      "bytes": 6853,
+      "sha256": "0458562b211f5d1544f65eb9b9574992cb1d0d2a60566475fc7d4085d3fd45a1"
+    },
+    {
+      "path": "editor/app.mjs",
+      "bytes": 102992,
+      "sha256": "5c2ae8402d26d5bf45c876d6c2bfd0aad2a982fdeebf2acebccd875a85774af6"
+    },
+    {
+      "path": "editor/browser.test.cjs",
+      "bytes": 11418,
+      "sha256": "79c8c52a0269a464f6b66cf38c43faed64a81ab86f229cc234e22a765bf2f70b"
+    },
+    {
+      "path": "editor/hybrid-model.mjs",
+      "bytes": 1629,
+      "sha256": "041ddb02e6f201482e78d4c07e0be2e62c13738337cd5db1a08ad4fddad18e37"
+    },
+    {
+      "path": "editor/hybrid-preview.jsx",
+      "bytes": 1795,
+      "sha256": "f8a6d2f8740fd7696d91b5626f710e6ff04c66ffa385e7b7dea67a1507ab9948"
+    },
+    {
+      "path": "editor/hybrid.browser.test.cjs",
+      "bytes": 5432,
+      "sha256": "87a80a9fef5005246a062c2c6e364f36a075a373be5706a8c6ab8bbb8023a5b6"
+    },
+    {
+      "path": "editor/living.browser.test.cjs",
+      "bytes": 4056,
+      "sha256": "8cb10d3f7c68a570c1928e136bf15f279180ca6cb0af7cc4ed253e1df6460276"
+    },
+    {
+      "path": "editor/local-audio.mjs",
+      "bytes": 1296,
+      "sha256": "4798b8e902aa3d328cd4a8f4a72b6affdfb2a4140a7973d7af63a78f9142835b"
+    },
+    {
+      "path": "editor/model.mjs",
+      "bytes": 16928,
+      "sha256": "9e6ca762192ef4249979ac99e96bf1d6928c1b052cb76964f956a08633923c26"
+    },
+    {
+      "path": "editor/model.test.mjs",
+      "bytes": 3690,
+      "sha256": "7b02f07c69c0d4a24c4b122af42aa9ec4400d90da9543c5a20855d84bb1aa32c"
+    },
+    {
+      "path": "editor/offline.browser.test.cjs",
+      "bytes": 1983,
+      "sha256": "747103a92330dd6fd0cfab1d24ff3e6e151a7cbf1c549920799c42937ebafc89"
+    },
+    {
+      "path": "editor/polish-model.mjs",
+      "bytes": 712,
+      "sha256": "34c945ee953acf782845aabd964824f8157ec0dbff67c2cebcd8463ebc58e7ba"
+    },
+    {
+      "path": "editor/polish.browser.test.cjs",
+      "bytes": 7931,
+      "sha256": "18a91f14e0fe9b6187ba981922dbbfafb29240ee7a289ff215850d9147bc2d29"
+    },
+    {
+      "path": "editor/service-worker.js",
+      "bytes": 795,
+      "sha256": "b19cc694c636a239199d48301a2512a78800897dd48a8878807376ce2fd260ca"
+    },
+    {
+      "path": "remotion/animation/COMPARISON.md",
+      "bytes": 3365,
+      "sha256": "c6ead4e7dd3a90c0c436adc46a1ac88257645b66f63e2a520ffb701f93558d19"
+    },
+    {
+      "path": "remotion/animation/FILES.md",
+      "bytes": 1801,
+      "sha256": "d388804c6ff7942f1d78b78c725b71b68704782fa28fc2ae58446708f6ef1fd7"
+    },
+    {
+      "path": "remotion/animation/INSPECTION.md",
+      "bytes": 1459,
+      "sha256": "f3a1cebf836dc76d940657f46c02877a9699df49f0fb41cabedc4f1d5c402c83"
+    },
+    {
+      "path": "remotion/animation/MOBILE.md",
+      "bytes": 4380,
+      "sha256": "1325a28c83b81b79a98e3a243f47a47abe9059ef59457ccf6aadbf7a0be10e2b"
+    },
+    {
+      "path": "remotion/animation/README.md",
+      "bytes": 9486,
+      "sha256": "fca39538ad5010586fd593d13ffbb1fd1e5a0266fed30132e4423a1f598db1a3"
+    },
+    {
+      "path": "remotion/animation/REPORT.md",
+      "bytes": 11906,
+      "sha256": "3fa8c6863235383ddfe511dc3ba7ce1e8a1d13ae60c5e87171a72cef9446cecb"
+    },
+    {
+      "path": "remotion/animation/RigCharacter.tsx",
+      "bytes": 2798,
+      "sha256": "f922854958d16e2e198966b2cdb5ab1b97a64128e4721c2f859bd31f4a84f0fb"
+    },
+    {
+      "path": "remotion/animation/camera.ts",
+      "bytes": 2342,
+      "sha256": "2af71a01622396473981c2dc992557967c36232e0dab7788c1e709f45ee6c43b"
+    },
+    {
+      "path": "remotion/animation/director.ts",
+      "bytes": 8727,
+      "sha256": "7050519a55728adb61810600cbb7aceda523375f0c6d9561f7ef8794a52e21d4"
+    },
+    {
+      "path": "remotion/animation/pack.ts",
+      "bytes": 1341,
+      "sha256": "a12646b02350a9b925ca945288fec8c4df830210e276496624d6c07bea85d1e5"
+    },
+    {
+      "path": "remotion/animation/rig.ts",
+      "bytes": 7851,
+      "sha256": "70871fdb32f797d286a4d2b8c69d1b9518ab527ef2cfc37b85629cab7b7f4dd3"
+    },
+    {
+      "path": "remotion/animation/schema.ts",
+      "bytes": 3688,
+      "sha256": "f64f7ae6ac993a6fa3d04a33d55b16fac2cb25c90bff9436c07e75d1dc6d95f0"
+    },
+    {
+      "path": "remotion/animation/validation-evidence.json",
+      "bytes": 56945,
+      "sha256": "84e8db21f24f427bd1c96c8616767a294dbbdaed9167081a6814f660a0e4bec1"
+    },
+    {
+      "path": "remotion/atlas/README.md",
+      "bytes": 11264,
+      "sha256": "0bff91d7c7880ca0c7f91c883def7b66df7161543c89c3f0273df1a9db3dd49b"
+    },
+    {
+      "path": "remotion/atlas/REPORT.md",
+      "bytes": 5878,
+      "sha256": "ad3c252ec2ddde3e7b8f7b52caf40c4f3b7f004fcb8cc3f3df8d413cba5b76c4"
+    },
+    {
+      "path": "remotion/atlas/VALIDATION.md",
+      "bytes": 8444,
+      "sha256": "e30e41ad3c5426cd1fcc2ea63a67d19ceccb618d2bfdee46f20faf21f6397972"
+    },
+    {
+      "path": "remotion/atlas/catalog.json",
+      "bytes": 666086,
+      "sha256": "2148a2b328fb2a3d9998ce164d193d9c43ff4df3150512c737c81646f651791c"
+    },
+    {
+      "path": "remotion/atlas/geometry.ts",
+      "bytes": 4827,
+      "sha256": "66a3753287e10cb3852daa969cab8c6f24fe0d8beb93f7a8bce827ccef63ff4f"
+    },
+    {
+      "path": "remotion/atlas/import_manifest.py",
+      "bytes": 7252,
+      "sha256": "f188ec39c1c92957a297be38da7bc7d9de47924a645dc72477e179f9298896da"
+    },
+    {
+      "path": "remotion/atlas/index.ts",
+      "bytes": 3005,
+      "sha256": "bb42777d424d12a3aa6853acd27461302599dcffc0b285985ba446486fddf6a7"
+    },
+    {
+      "path": "remotion/atlas/manifest-evidence.json",
+      "bytes": 218970,
+      "sha256": "0b19866c806008424ee7ab9cfc0697f67dffc732287c04fe748493e0a65a4bb8"
+    },
+    {
+      "path": "remotion/atlas/recipes.ts",
+      "bytes": 2816,
+      "sha256": "443810b21e35dd389999ba3513b49bd289a815e6475ea0f70db214b0c530d741"
+    },
+    {
+      "path": "remotion/atlas/schema.ts",
+      "bytes": 5048,
+      "sha256": "29db5196a094fb1d4ab23c2f619ea78c0f29bbfdf1abf9e696eb03b7e2f1191d"
+    },
+    {
+      "path": "remotion/blender/Blender-Colab-Pro.ipynb",
+      "bytes": 12277,
+      "sha256": "cffae7c5be326cbf2dc68a5048f9487794ba7e4f20ceef28d64900ca03e93eeb"
+    },
+    {
+      "path": "remotion/blender/Blender-Video-Colab-Pro.ipynb",
+      "bytes": 12442,
+      "sha256": "250abb8bf058deae11db90fd581b0ac3245c081211a10f624fc7acbc3b66f6a6"
+    },
+    {
+      "path": "remotion/blender/ENVIRONMENTS-REPORT.md",
+      "bytes": 7655,
+      "sha256": "55b9e13e451c8100f794bf0add628494e25f1ad18f1b45af94b0e3d8a04dce96"
+    },
+    {
+      "path": "remotion/blender/ENVIRONMENTS.md",
+      "bytes": 8753,
+      "sha256": "2e4865453d10c92ba8c47fef84435cab7ff37be95ab726b791ddc9853285bf93"
+    },
+    {
+      "path": "remotion/blender/README.md",
+      "bytes": 6394,
+      "sha256": "71367c2154ea904928b14a24fbb49afb6e03975d0b5e290a3d9698e9348fb2ff"
+    },
+    {
+      "path": "remotion/blender/REPORT.md",
+      "bytes": 6247,
+      "sha256": "60d7eb09ac352c27d2d1a6932fe9a540c2b1522ffb355c42a7f81d2bab3f1f1f"
+    },
+    {
+      "path": "remotion/blender/VIDEO-README.md",
+      "bytes": 6677,
+      "sha256": "cfec03647f0b993338877dcee8f55aa49fa34647854d0aaa325fc00807fa4026"
+    },
+    {
+      "path": "remotion/blender/VIDEO-REPORT.md",
+      "bytes": 6712,
+      "sha256": "fe91f2e68078306e1bbf0b95d3c270d85df6db5e9c3a403291cf1700fd5f3345"
+    },
+    {
+      "path": "remotion/blender/contract.py",
+      "bytes": 6225,
+      "sha256": "19f8231c60a6ba20e82735c90bab2a34c1185a5a727b6e01d6cd74f41f5e3c2b"
+    },
+    {
+      "path": "remotion/blender/environment-validation.json",
+      "bytes": 12841,
+      "sha256": "d6e4332633fd2408e9fe146e1a69446eea77a1fbc04dec89bb4a2b306d712d76"
+    },
+    {
+      "path": "remotion/blender/environments/riis.py",
+      "bytes": 8507,
+      "sha256": "a5a46f84d3aa2913a1727123d21a2ad6c2a56fbec1f6ac2fc081bad8b9c88fba"
+    },
+    {
+      "path": "remotion/blender/examples/generate.mjs",
+      "bytes": 593,
+      "sha256": "505982202e24b5df14e5662c879d07aec88b34a6f4f62867bbec5dd06d24fa6a"
+    },
+    {
+      "path": "remotion/blender/examples/riis-before-whirlwind.json",
+      "bytes": 173087,
+      "sha256": "b405d794c8c620a8345fbc5dbfac868e606910467fec35c93f976de7058a44ca"
+    },
+    {
+      "path": "remotion/blender/examples/riis-frame-210.json",
+      "bytes": 87434,
+      "sha256": "78f7996d9ec126a37dc024e5e03899185c490c5a0de196d850d98aeb9ace8ece"
+    },
+    {
+      "path": "remotion/blender/export-sequence.mjs",
+      "bytes": 1035,
+      "sha256": "ff9f713618ca3f7836c83a41efd3c0f540fdd9c8218bd9b79d19b32770a8d138"
+    },
+    {
+      "path": "remotion/blender/export.mjs",
+      "bytes": 954,
+      "sha256": "37cf881bd37fa1634ef83d96a43f9309127dde22874fae1795447d59e7877a76"
+    },
+    {
+      "path": "remotion/blender/export.ts",
+      "bytes": 8403,
+      "sha256": "6d0c1c27ee1d0ba7dfef663f72d20d9770fab55e35445f89a8cb2e64de2d0e2b"
+    },
+    {
+      "path": "remotion/blender/import_scene.py",
+      "bytes": 12049,
+      "sha256": "6957ffaef2eb50ff8b5057186820ef5b8ffbd06ca48c77354e2dc9da9ad8f287"
+    },
+    {
+      "path": "remotion/blender/render_one.py",
+      "bytes": 4229,
+      "sha256": "c84fe26507952f2a10ba25106f016a579f930e68151ac1ab37a98e1e3180af81"
+    },
+    {
+      "path": "remotion/blender/schema.ts",
+      "bytes": 3404,
+      "sha256": "9ef309210694e31b9083f003642616be45ba80d7c03abf50c8facef7e576207f"
+    },
+    {
+      "path": "remotion/blender/sequence.py",
+      "bytes": 7127,
+      "sha256": "17a94b5a2f905b0b0e2c38ab26e4560e2bdcee417452793fa236090e87e2916c"
+    },
+    {
+      "path": "remotion/blender/sequences.ts",
+      "bytes": 1501,
+      "sha256": "a1eecdcc09f115b5b3aab02e904dbcd520e92835ca0ecf55b45f1b0e483117b0"
+    },
+    {
+      "path": "remotion/blender/tests/blender_check.py",
+      "bytes": 2433,
+      "sha256": "b2387474fb84faa1d4c68fcb6e48583f9edf52ee353b73835531db1c175a1caa"
+    },
+    {
+      "path": "remotion/blender/tests/environment_check.py",
+      "bytes": 1485,
+      "sha256": "69c36ddf2c32e001ea846b4c44a4068b40c944d90fe6295adb1f5f278c82e1d7"
+    },
+    {
+      "path": "remotion/blender/tests/export.test.mjs",
+      "bytes": 3925,
+      "sha256": "bb564c7fa7fca3f012e945fc53861189cea6d4c6bfbfc07c769e8fc6672aaa78"
+    },
+    {
+      "path": "remotion/blender/tests/sequences.test.mjs",
+      "bytes": 1250,
+      "sha256": "04993c3d983f16b53cc309a5b35a4b1a7b3b5aa492a965991064a67756c6890a"
+    },
+    {
+      "path": "remotion/blender/tests/test_contract.py",
+      "bytes": 1851,
+      "sha256": "fccf2b998773d8a1281afec1fb794421f205e3498cd071f4cd3ca9798b6c0e54"
+    },
+    {
+      "path": "remotion/blender/tests/test_environment.py",
+      "bytes": 2705,
+      "sha256": "63ffec34bf8a1accc54f9522e4bd733425b00fb722755488883072125837ba29"
+    },
+    {
+      "path": "remotion/blender/tests/test_render_one.py",
+      "bytes": 2475,
+      "sha256": "1808d304713654cb97243091fc6dacc864ce206fa801ec4186ce0ad67c941ccc"
+    },
+    {
+      "path": "remotion/blender/tests/test_sequence.py",
+      "bytes": 3127,
+      "sha256": "d5da1164f3697a9135ed9a015f5e397c47ad27c6200ff88b6bf33db9be748bb6"
+    },
+    {
+      "path": "remotion/blender/validation-evidence.json",
+      "bytes": 5960,
+      "sha256": "3ef328dc3c21ae380da20823f28eb114a5962d85e647ca52510382e43104a8aa"
+    },
+    {
+      "path": "remotion/blender/verify-video.py",
+      "bytes": 3217,
+      "sha256": "ee6a6714d2de6c097fb7ab836cb94a9a2c228252a56e985262848f8cf5d23317"
+    },
+    {
+      "path": "remotion/blender/video-validation.json",
+      "bytes": 4848,
+      "sha256": "6bdd9a67f787b41f8a1d003f6fda92257b664323d430fea3543e8ee5861e6484"
+    },
+    {
+      "path": "remotion/characters/animations/state.ts",
+      "bytes": 5043,
+      "sha256": "beaa9635b62cc73200e25ea45761b4bd3c01ff24cbe0a5845a848e1d692ebef9"
+    },
+    {
+      "path": "remotion/characters/catalog.json",
+      "bytes": 97601,
+      "sha256": "3e506b9a0a0c632d7d86aa2bb4e78eb6d4bba832d0905d4020014ef65752c3af"
+    },
+    {
+      "path": "remotion/characters/index.ts",
+      "bytes": 1198,
+      "sha256": "51fd300e7037c51566b8477c6bdb8bf85c08d55edacd55860475839173a9cd0d"
+    },
+    {
+      "path": "remotion/characters/models/VoxelCharacter.tsx",
+      "bytes": 5031,
+      "sha256": "15c6d339803b2f593c930b73ba821dd8443434dfbffc8877d3821c3de8d3fe21"
+    },
+    {
+      "path": "remotion/characters/schema.ts",
+      "bytes": 2749,
+      "sha256": "07cac3027c5afd41f6815c903d02dd72f2e90b6b1e434636f7157c5d71e5ee49"
+    },
+    {
+      "path": "remotion/characters/source-evidence.json",
+      "bytes": 8209,
+      "sha256": "8fe8fca9a3557c6a426c341f77486d3d39f55b6d3226d2588be92adfb91d83e1"
+    },
+    {
+      "path": "remotion/episodes/atlas_demo.json",
+      "bytes": 17743,
+      "sha256": "cbcec854bbc82bd08f0aa5d0d10638d99218ac8b270e3225a193a81b86231f92"
+    },
+    {
+      "path": "remotion/episodes/hybrid_black_garden.json",
+      "bytes": 8673,
+      "sha256": "5c3fc4aeb03aef68e4eb0df36399885407daca7743d678538fc22108bf38ffc2"
+    },
+    {
+      "path": "remotion/episodes/hybrid_oryx.json",
+      "bytes": 9152,
+      "sha256": "ca2312ba3b18e984f92d637b69d8d87e44057e7a244b2304917055cfdb660e77"
+    },
+    {
+      "path": "remotion/episodes/hybrid_riis.json",
+      "bytes": 15274,
+      "sha256": "ddb8436328d607b9b0b2b722e6a4c330affabf96219ebc55897fdf5080648eea"
+    },
+    {
+      "path": "remotion/episodes/hybrid_riis_06.json",
+      "bytes": 18809,
+      "sha256": "fa21354dda909db21fcafe26fe033604281af5e70eae907b4331717a441831d4"
+    },
+    {
+      "path": "remotion/episodes/hybrid_riis_07.json",
+      "bytes": 37825,
+      "sha256": "061270479607a6417adac4df207fbde46da1fd295a9ef1ca5abb167468b5412d"
+    },
+    {
+      "path": "remotion/episodes/living_europa.json",
+      "bytes": 8092,
+      "sha256": "7e8efafbd08fe353b82b69f6a0d3280b0fe2dbe3c265590bb4e27c03467c51d7"
+    },
+    {
+      "path": "remotion/episodes/living_fundament.json",
+      "bytes": 7901,
+      "sha256": "248f3b189d4705908b62ba8d76bd6c0d010c6d19783e98a4cc4a23abdd4bc438"
+    },
+    {
+      "path": "remotion/episodes/living_whirlwind.json",
+      "bytes": 7576,
+      "sha256": "5b02089b271a1d41a4c4aad8d52b5adefccfbd0fb15bceb140f191c90491a0bf"
+    },
+    {
+      "path": "remotion/episodes/traveler_episode_002.json",
+      "bytes": 3765,
+      "sha256": "1783dc2778b2d569e9bcdb493dd6d925e35e856c33fba1d4fe791503929b8299"
+    },
+    {
+      "path": "remotion/episodes/traveler_episode_002_cinematic.json",
+      "bytes": 32936,
+      "sha256": "2ef78c46dc45902bd5082b750946b15894caac856420c1fe5a414a66f0d5a7b9"
+    },
+    {
+      "path": "remotion/episodes/voxel_worlds_demo.json",
+      "bytes": 18821,
+      "sha256": "0528ef19f942fc60af6086ac9b73293568b7e75cf39f78d04884f8b5f2eaacd8"
+    },
+    {
+      "path": "remotion/hybrid/COLAB.md",
+      "bytes": 3565,
+      "sha256": "5ba52bdf30bdf9bcf3ab8f76b6d92e39c9d36f0bcb50c520b097045b78dc30e5"
+    },
+    {
+      "path": "remotion/hybrid/CaptionLayer.tsx",
+      "bytes": 1840,
+      "sha256": "a1bba9f1de13b6c43525f889a597024d56da4bb2098867667f44164cd1d083e6"
+    },
+    {
+      "path": "remotion/hybrid/HybridShort.tsx",
+      "bytes": 6108,
+      "sha256": "3ab9460752e163bbfcb2aa3d5077d41a7faa2fbb3b068f04a82b1ddc25b7191e"
+    },
+    {
+      "path": "remotion/hybrid/INSPECTION.md",
+      "bytes": 3346,
+      "sha256": "6789d9f756236869e64a79aa9f9070afc38b4e8ec059a52c6a5cf00407a60a3f"
+    },
+    {
+      "path": "remotion/hybrid/MOBILE.md",
+      "bytes": 3782,
+      "sha256": "c5bdacc1be52807791059cd45366f40979ce885218cb87da5d975b39fd37bd72"
+    },
+    {
+      "path": "remotion/hybrid/README.md",
+      "bytes": 9363,
+      "sha256": "e8c4d31500cb757c911c19fc328241c56cc9631ecdee6a8c7e83749ad91f2597"
+    },
+    {
+      "path": "remotion/hybrid/REPORT.md",
+      "bytes": 11879,
+      "sha256": "b8aa96d0d644a68e88a9304cb14eec736166da8d37baadf83257faf94661611c"
+    },
+    {
+      "path": "remotion/hybrid/Visuals.tsx",
+      "bytes": 5562,
+      "sha256": "e8cea57c1ae5cea710bbc1761d45c9b2d871475dc5bb71428faae9452d2b7016"
+    },
+    {
+      "path": "remotion/hybrid/adapter.ts",
+      "bytes": 470,
+      "sha256": "5dcab7785537f00974e3520f8128e870b565bf60765273031ada082a9f8e3043"
+    },
+    {
+      "path": "remotion/hybrid/schema.ts",
+      "bytes": 6127,
+      "sha256": "f0a0462e37785cdba281aafbca7adf709ddd984952be164cbf5e538ab4f86226"
+    },
+    {
+      "path": "remotion/hybrid/state.ts",
+      "bytes": 5108,
+      "sha256": "8c2d7f7119cae23d6d9f0ff3d60e64b75678324bc656173aa70793ecd46f5ec3"
+    },
+    {
+      "path": "remotion/hybrid/templates.ts",
+      "bytes": 4017,
+      "sha256": "80574aa4a271ba27eea076211a94f47c09d2f031adaa377132a6e78e2ab43f61"
+    },
+    {
+      "path": "remotion/hybrid/validation-evidence.json",
+      "bytes": 4920,
+      "sha256": "5186dd409acf73c742c4db9bf9c61bd265cd40970937c75dacc7ea77c396d2a3"
+    },
+    {
+      "path": "remotion/living/LivingWorldLayer.tsx",
+      "bytes": 1856,
+      "sha256": "a31d893410a1df5233252e765b6c1f1fd5e39109872751ea61c8ff0d424c8e02"
+    },
+    {
+      "path": "remotion/living/README.md",
+      "bytes": 8113,
+      "sha256": "8980b7ae60e4c6c0c1abe3439256395ad770a9579b6ac99066e46880992f4649"
+    },
+    {
+      "path": "remotion/living/REPORT.md",
+      "bytes": 10561,
+      "sha256": "1a5da133bd850ea5f12e7c4ec622457e5dadeddee66530da29263b5ddc44f2cc"
+    },
+    {
+      "path": "remotion/living/director.ts",
+      "bytes": 3337,
+      "sha256": "1c9b7bbe0e4dce1fd42d7d888beacf62b65e8162a856b45cf079950a47946a5b"
+    },
+    {
+      "path": "remotion/living/schema.ts",
+      "bytes": 5363,
+      "sha256": "411c39f99f5cfe4487abbda5957bbf880184cd4757c200747ad51c153e3063b4"
+    },
+    {
+      "path": "remotion/living/validation-evidence.json",
+      "bytes": 2893,
+      "sha256": "9f49cf809edc039f25e6fc2eb3d08e5be3c0f345ee83d28e71809baaa79689a8"
+    },
+    {
+      "path": "remotion/polish/COMPARISON.md",
+      "bytes": 2980,
+      "sha256": "e5cc7ec8dad2e948e4c467e04dd40ae384e304a36e8528e13558fdce7bbdef8d"
+    },
+    {
+      "path": "remotion/polish/EnvironmentLayer.tsx",
+      "bytes": 2322,
+      "sha256": "6fd793471366182f27b7c6ef5042528dead075562007bdf4051b1f202137ba1a"
+    },
+    {
+      "path": "remotion/polish/FILES.md",
+      "bytes": 2161,
+      "sha256": "cf7c1c99cabe018ece7c5c3a27bd2a007de7b597772ff463f56e5961cee469ab"
+    },
+    {
+      "path": "remotion/polish/INSPECTION.md",
+      "bytes": 1435,
+      "sha256": "979239d65db01304fd84815122e1831df166ed55711469748e676067aa960b45"
+    },
+    {
+      "path": "remotion/polish/MOBILE.md",
+      "bytes": 3509,
+      "sha256": "04e280fba703d7bd8124e40604aa002b6fdc1a3ac0b3ec299eb41026f7df9fa8"
+    },
+    {
+      "path": "remotion/polish/PolishedCaptions.tsx",
+      "bytes": 2043,
+      "sha256": "a149935868db461254dc64a79426bb811a953943c308b5ad309a72988147ce2a"
+    },
+    {
+      "path": "remotion/polish/README.md",
+      "bytes": 5505,
+      "sha256": "18b19e9ced63e111ba74b781143764d8668e40e8f57474c4180c48f0de7e75fb"
+    },
+    {
+      "path": "remotion/polish/REPORT.md",
+      "bytes": 7501,
+      "sha256": "daaa792ae52099cca7dc711e06e03f1a4d4f99e77cc711d66398e83931a142f6"
+    },
+    {
+      "path": "remotion/polish/advice.ts",
+      "bytes": 2709,
+      "sha256": "2771701775fc976efd3cceffb869af813a0455e34887d3d11f8a3dccc6f5ca59"
+    },
+    {
+      "path": "remotion/polish/camera.ts",
+      "bytes": 2913,
+      "sha256": "c00d7b8ee65d1c3920582d164a5c476ff610b2a818dde7ac5626129bfd954bd8"
+    },
+    {
+      "path": "remotion/polish/captions.ts",
+      "bytes": 1058,
+      "sha256": "570d7da27569905020d576236ebf2ac540c3cf80a4263508b4d32ccf292bd2f8"
+    },
+    {
+      "path": "remotion/polish/characters.ts",
+      "bytes": 3482,
+      "sha256": "e75b0e9a0c9c42a7a045dcc2ac25d3f2c7817f9c6953b5b1b63b73a89577b184"
+    },
+    {
+      "path": "remotion/polish/compare.ts",
+      "bytes": 887,
+      "sha256": "a260a144647c95c34fa711ee9ba6164704dfe8ce8829249d990451b1a54794ab"
+    },
+    {
+      "path": "remotion/polish/environment.ts",
+      "bytes": 2460,
+      "sha256": "242846af7c4d564bc86db49226f429bd761892699d250a76ff15da63bf0f18f4"
+    },
+    {
+      "path": "remotion/polish/schema.ts",
+      "bytes": 3173,
+      "sha256": "63fdf52c2eea244bd9402b55ca23a8b051eb9789b4ca86fe5436e61b07869d31"
+    },
+    {
+      "path": "remotion/polish/validation-evidence.json",
+      "bytes": 10982,
+      "sha256": "0aee7b50b323c7e9b426e2d30cc3f203afb42f61e2794e01af8ae871fbc14956"
+    },
+    {
+      "path": "remotion/src/voxel/library/AtlasEnvironment.tsx",
+      "bytes": 941,
+      "sha256": "ff7c35fc5c28eac1e6d7e3a6f71a52c1b9c95cf77c0a2918f8da94bce8f6d673"
+    },
+    {
+      "path": "remotion/src/voxel/library/Library.tsx",
+      "bytes": 4384,
+      "sha256": "f8520cad38f584a03c7daf77b10cd17bfe41112c062f8a54a6ce7f8101c99cdc"
+    },
+    {
+      "path": "remotion/src/voxel/library/README.md",
+      "bytes": 6919,
+      "sha256": "fd620e2c1b0a9598c6970f0437c124b1472b6d5d36c2f45aff2ee939b401715a"
+    },
+    {
+      "path": "remotion/src/voxel/library/VALIDATION.md",
+      "bytes": 4909,
+      "sha256": "aa9db46521265e7d29509aa524016736c35034a66843ebc4272d3bf381d02abb"
+    },
+    {
+      "path": "remotion/src/voxel/library/catalog.ts",
+      "bytes": 4503,
+      "sha256": "4b8b838bfd7ee860985944a0dbb61efce0941e1f044af899f38033ce64440b48"
+    },
+    {
+      "path": "remotion/src/voxel/library/layout.ts",
+      "bytes": 4401,
+      "sha256": "1daec929be14c76b4feb47dbe992eb3b4602e9171ad7274fc668f4f2145f84bb"
+    }
+  ]
+}

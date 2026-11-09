@@ -1,0 +1,59 @@
+{
+  "auditDate": "2026-11-09",
+  "initialBranch": "feat/gpu-render-optimization-0.8.4",
+  "initialBranchRevision": "146d43e0f5003a668896cdc2e7aed76f4f982290",
+  "baseBranch": "main",
+  "baseRevision": "1effd88e089ef4726600a223f97de8fe9abafe78",
+  "dependencyPolicy": "PR #17 reste indépendante et non fusionnée ; cette branche part de main et conserve les anciens catalogues et épisodes.",
+  "initialBranchDifferences": [
+    "docs/assets/blender-video-084-cpu-draft.mp4",
+    "docs/images/blender-video-084-preview.png",
+    "remotion/blender/Blender-Video-Colab-Pro.ipynb",
+    "remotion/blender/GPU-REPORT.md",
+    "remotion/blender/VIDEO-README.md",
+    "remotion/blender/benchmark.py",
+    "remotion/blender/gpu-benchmark-cpu.json",
+    "remotion/blender/gpu-resume-validation.json",
+    "remotion/blender/gpu-video-validation.json",
+    "remotion/blender/import_scene.py",
+    "remotion/blender/persistent_scene.py",
+    "remotion/blender/render_batch.py",
+    "remotion/blender/render_one.py",
+    "remotion/blender/sequence.py",
+    "remotion/blender/telemetry.py",
+    "remotion/blender/tests/persistent_check.py",
+    "remotion/blender/tests/png_fixture.py",
+    "remotion/blender/tests/test_devices.py",
+    "remotion/blender/tests/test_persistent.py",
+    "remotion/blender/tests/test_render_one.py",
+    "remotion/blender/tests/test_sequence.py",
+    "remotion/blender/verify-video.py"
+  ],
+  "sharedInputHashes": [
+    {
+      "path": "remotion/atlas/catalog.json",
+      "sha256": "2148a2b328fb2a3d9998ce164d193d9c43ff4df3150512c737c81646f651791c"
+    },
+    {
+      "path": "remotion/characters/catalog.json",
+      "sha256": "3e506b9a0a0c632d7d86aa2bb4e78eb6d4bba832d0905d4020014ef65752c3af"
+    },
+    {
+      "path": "remotion/atlas/recipes.ts",
+      "sha256": "443810b21e35dd389999ba3513b49bd289a815e6475ea0f70db214b0c530d741"
+    },
+    {
+      "path": "remotion/src/voxel/library/Library.tsx",
+      "sha256": "f8520cad38f584a03c7daf77b10cd17bfe41112c062f8a54a6ce7f8101c99cdc"
+    },
+    {
+      "path": "remotion/blender/export.ts",
+      "sha256": "6d0c1c27ee1d0ba7dfef663f72d20d9770fab55e35445f89a8cb2e64de2d0e2b"
+    },
+    {
+      "path": "remotion/blender/environments/riis.py",
+      "sha256": "a5a46f84d3aa2913a1727123d21a2ad6c2a56fbec1f6ac2fc081bad8b9c88fba"
+    }
+  ],
+  "observationNote": "Observation conservée de la branche initiale. La régénération ne nécessite ni checkout ni objets Git de la PR #17."
+}

@@ -1,0 +1,130 @@
+{
+  "reviewedAt": "2026-11-09",
+  "status": "partial",
+  "legacyLocationsPreserved": 468,
+  "locations": 78,
+  "legacyLocationsLinked": 71,
+  "newNamedLocations": 7,
+  "locationVariants": 14,
+  "activities": 32,
+  "activityTypes": {
+    "dungeon": 11,
+    "exotic-mission": 1,
+    "raid": 19,
+    "seasonal-activity": 1
+  },
+  "encounters": 27,
+  "bossIdentities": 9,
+  "bossVariants": 2,
+  "activitiesWithEncounters": 6,
+  "activitiesWithoutEncounters": [
+    "activity-kings-fall-d1",
+    "activity-wrath-of-machine-d1",
+    "activity-last-wish-d2",
+    "activity-garden-of-salvation-d2",
+    "activity-vow-of-disciple-d2",
+    "activity-kings-fall-d2",
+    "activity-root-of-nightmares-d2",
+    "activity-salvations-edge-d2",
+    "activity-desert-perpetual-d2",
+    "activity-leviathan-raid-d2",
+    "activity-eater-of-worlds-d2",
+    "activity-spire-of-stars-d2",
+    "activity-scourge-of-past-d2",
+    "activity-crown-of-sorrow-d2",
+    "activity-pit-of-heresy-d2",
+    "activity-prophecy-d2",
+    "activity-grasp-of-avarice-d2",
+    "activity-duality-d2",
+    "activity-spire-of-watcher-d2",
+    "activity-ghosts-of-deep-d2",
+    "activity-warlords-ruin-d2",
+    "activity-vespers-host-d2",
+    "activity-sundered-doctrine-d2",
+    "activity-equilibrium-d2",
+    "activity-whisper-d2",
+    "activity-menagerie-d2"
+  ],
+  "bossesWithoutAssets": 9,
+  "retrievedSources": 8,
+  "inheritedSources": 84,
+  "missingPlayableBossModels": [
+    "boss-templar",
+    "boss-atheon",
+    "boss-ir-yut",
+    "boss-crota",
+    "boss-crypt-security",
+    "boss-atraks",
+    "boss-taniks",
+    "boss-vorgeth",
+    "boss-dul-incaru"
+  ],
+  "inventories": [
+    {
+      "sourceId": "bungie-activities",
+      "locator": "List of currently available dungeons",
+      "type": "dungeon",
+      "game": "D2",
+      "availability": "current",
+      "activityIds": [
+        "activity-shattered-throne-d2",
+        "activity-pit-of-heresy-d2",
+        "activity-prophecy-d2",
+        "activity-grasp-of-avarice-d2",
+        "activity-duality-d2",
+        "activity-spire-of-watcher-d2",
+        "activity-ghosts-of-deep-d2",
+        "activity-warlords-ruin-d2",
+        "activity-vespers-host-d2",
+        "activity-sundered-doctrine-d2",
+        "activity-equilibrium-d2"
+      ]
+    },
+    {
+      "sourceId": "bungie-activities",
+      "locator": "List of currently available raids",
+      "type": "raid",
+      "game": "D2",
+      "availability": "current",
+      "activityIds": [
+        "activity-last-wish-d2",
+        "activity-garden-of-salvation-d2",
+        "activity-deep-stone-crypt-d2",
+        "activity-vault-of-glass-d2",
+        "activity-vow-of-disciple-d2",
+        "activity-kings-fall-d2",
+        "activity-root-of-nightmares-d2",
+        "activity-crotas-end-d2",
+        "activity-salvations-edge-d2",
+        "activity-desert-perpetual-d2"
+      ]
+    },
+    {
+      "sourceId": "bungie-vault",
+      "locator": "Années passées → An 4 → Raids",
+      "type": "raid",
+      "game": "D2",
+      "availability": "vaulted",
+      "activityIds": [
+        "activity-leviathan-raid-d2",
+        "activity-eater-of-worlds-d2",
+        "activity-spire-of-stars-d2",
+        "activity-scourge-of-past-d2",
+        "activity-crown-of-sorrow-d2"
+      ]
+    },
+    {
+      "sourceId": "bungie-years",
+      "locator": "Destiny → Years 1, 2, 3 → Raids",
+      "type": "raid",
+      "game": "D1",
+      "availability": "historical",
+      "activityIds": [
+        "activity-vault-of-glass-d1",
+        "activity-crotas-end-d1",
+        "activity-kings-fall-d1",
+        "activity-wrath-of-machine-d1"
+      ]
+    }
+  ]
+}
