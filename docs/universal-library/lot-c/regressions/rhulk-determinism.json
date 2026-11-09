@@ -1,0 +1,29 @@
+{
+  "status": "passed",
+  "bossId": "boss-rhulk",
+  "frames": [
+    {
+      "frame": 0,
+      "rgbSha256": "31cb62fc31ec173fb48e804ce99ff26a6c2dcb1c73889d5cc30c82274af3d784",
+      "differentChannelSamples": 0
+    },
+    {
+      "frame": 1,
+      "rgbSha256": "d17b75be3659ac85ddd92d1a5a72f985cf48268a41f12fec3c0961bb161a4dcf",
+      "differentChannelSamples": 0
+    },
+    {
+      "frame": 2,
+      "rgbSha256": "06747a260d94f81a3dcd7c942f9c2a583c1e484a7bf7302f5edbc57e006c4299",
+      "differentChannelSamples": 0
+    },
+    {
+      "frame": 3,
+      "rgbSha256": "dfaab96378d48c2adb658389a296cb9475a57384e19314217317ecde6a8ed3fb",
+      "differentChannelSamples": 0
+    }
+  ],
+  "original": "rhulk-original.png",
+  "repeat": "rhulk-repeat.png",
+  "note": "Independent actual Draft CPU sequences. The repeat frame 2 was rendered again after deliberate corruption. PNG metadata differs; decoded RGB is identical. The first sequence completed normally; its interruption harness did not force a crash, and is not claimed as the recovery pass."
+}

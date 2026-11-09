@@ -5,10 +5,14 @@
       "id": "boss-oryx",
       "evidence": "oryx/evidence.json",
       "sha256": "57a98aeb47f5eddaaed5a8955bd13531b2c3a2d241168d0d1b469c9d9ec18102"
+    },
+    {
+      "id": "boss-rhulk",
+      "evidence": "rhulk/evidence.json",
+      "sha256": "83a6c955b3e612fbd4a15a18ce2b8c8101efc0d3daa684e246b281f2b5dd5289"
     }
   ],
   "missingEvidence": [
-    "boss-rhulk",
     "boss-nezarec"
   ],
   "protectedFiles": 121,

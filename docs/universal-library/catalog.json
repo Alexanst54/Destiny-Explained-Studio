@@ -3091,7 +3091,7 @@
           "close-up"
         ],
         "gallery": "docs/universal-library/lot-c/rhulk/README.md",
-        "galleryV1Status": "pending-real-renders",
+        "galleryV1Status": "technical-grid-rendered-artistic-review-pending",
         "protectedFiles": [],
         "environmentId": "vow-of-disciple",
         "reviewGrid": {
@@ -3157,7 +3157,39 @@
         "lure",
         "savathun-throne-world"
       ],
-      "previews": []
+      "previews": [
+        {
+          "view": "front",
+          "path": "docs/universal-library/lot-c/rhulk/front.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "profile",
+          "path": "docs/universal-library/lot-c/rhulk/profile.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "three-quarter",
+          "path": "docs/universal-library/lot-c/rhulk/three-quarter.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "cinematic",
+          "path": "docs/universal-library/lot-c/rhulk/cinematic.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "environment",
+          "path": "docs/universal-library/lot-c/rhulk/environment.png",
+          "quality": "cinematic"
+        }
+      ],
+      "videoPreviews": [
+        {
+          "path": "docs/universal-library/lot-c/rhulk/animation.mp4",
+          "label": "Prototype — combat (Balanced)"
+        }
+      ]
     },
     {
       "id": "boss-dulna",
@@ -15092,7 +15124,7 @@
           "environment"
         ],
         "gallery": "docs/universal-library/lot-c/rhulk/README.md",
-        "galleryV1Status": "pending-real-renders",
+        "galleryV1Status": "technical-grid-rendered-artistic-review-pending",
         "protectedFiles": []
       },
       "family": "pyramid",

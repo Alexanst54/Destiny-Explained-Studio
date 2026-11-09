@@ -29,3 +29,7 @@ Observed in NezarecInfobox and NezarecCharge: heavy red barrel torso contrasted 
 Authored reconstruction: a broad segmented body with a rig distinct from Rhulk, branching back structures, a crescent scythe and crouch/lunge/slam poses. Pale organic roots cut across broken dark Pyramid terraces with separated Light/Dark seeds. The paired effects communicate an artistic signature, not a complete mechanics simulator. No cloth/fluids or extracted textures.
 
 All three remain **partial dedicated prototypes pending visual review**. Piece count and successful tests do not constitute artistic approval. Athéon, Templar, Cropta and their existing evidence are preserved byte for byte.
+
+## Internal inspection notes (not user approval)
+
+Actual Oryx and Rhulk stills were inspected at front/profile/three-quarter/cinematic/arena views. Oryx's wing span, crown and three eyes read clearly; rigid fan-like membrane panels still need art review. Rhulk's elongated six-eyed mask, long legs, collar and glaive distinguish him from Oryx and Cropta; hip volume and the blade's simplified outline merit review. Choreographed contacts are not physical IK. These observations do not promote either prototype to a validated final asset.

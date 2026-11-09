@@ -18,3 +18,7 @@ Le statut « validé utilisateur » s’applique aux silhouettes d’Athéon et 
 L’audit ci-dessus décrit l’état au début du chantier. Pendant le travail, GitHub attribue au compte `Alexanst54` les fusions de #19 à 15:38:52 UTC, #20 à 15:39:17 UTC et #21 à 15:39:36 UTC le 9 novembre 2026. L’assistant n’a exécuté aucune fusion. Les commits de tête de ces PR restent ceux de la table initiale.
 
 La PR #22 cible désormais `main` (qui contient le commit validé 9488dd8) ; la PR #23 reste empilée sur `feat/universal-cinematic-library-1.0`. Les deux nouvelles PR restent en brouillon, sans fusion automatique. La PR #17 reste ouverte en brouillon et non fusionnée ; son commit 146d43e n’est ancêtre ni de la branche livrée ni du `main` observé. Aucun changement extérieur n’a été annulé ni fusionné par l’assistant.
+
+## Lot C continuation — 2026-11-09
+
+Before modifications, PR #22 and PR #23 were inspected open/draft. Latest Lot B head was `2baffffecfaebe3f803efb3a5d8f5ca001b364cf`; Lot C branched directly from that commit as `feat/library-iconic-raid-bosses-lot-c-1.0`. PR [#24](https://github.com/Alexanst54/Destiny-Explained-Studio/pull/24) is a separate stacked draft targeting `feat/library-crota-lot-b-1.0`, with auto-merge unset. PR #23's head was rechecked unchanged after opening it. No merge or cherry-pick was performed; PR #17's head is not an ancestor. Earlier external merges are historical context, not operations performed for Lot C. The source/evidence preservation baseline is [lot-c/preservation.json](lot-c/preservation.json).

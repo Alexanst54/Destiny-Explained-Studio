@@ -1834,6 +1834,11 @@
       "sha256": "2ea4f57526da7894f9b98107696315130a50b41dd55d803011e4c3204fe1cafc"
     },
     {
+      "path": "remotion/blender/tests/test_lot_c_evidence.py",
+      "bytes": 1844,
+      "sha256": "9f4937b0963a49997f260a06ab039747c9a5fb4968559d3b6bccb19f7e556cc6"
+    },
+    {
       "path": "remotion/blender/tests/test_render_one.py",
       "bytes": 2475,
       "sha256": "1808d304713654cb97243091fc6dacc864ce206fa801ec4186ce0ad67c941ccc"

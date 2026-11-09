@@ -55,4 +55,6 @@ python remotion/blender/universal/verify_crota.py
 python remotion/blender/universal/approved_gallery.py --check
 ```
 
+The full unit suite uses the Lot B base commit for regression comparisons; use a full clone, or fetch that commit before testing a shallow clone. The render-time preservation check uses the embedded original bindings and works without Git history.
+
 The shipped evidence includes actual device settings, camera matrices/lenses, source hashes, geometry/pose digests, durations and process peak RSS. The collector requires real successful Blender outputs before publishing previews. Existing evidence is checked against [preservation.json](preservation.json) and the prior verifiers, never rewritten to fit new geometry.
