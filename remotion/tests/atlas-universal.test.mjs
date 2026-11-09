@@ -22,10 +22,11 @@ test('reviewed inventories contain 11 Bungie dungeons, 4 D1 raids, 10 current an
     assert.deepEqual([...list.activityIds].sort(),rows.map(r=>r.id).sort());
   }
   assert.ok(atlas.activities.some(a=>a.id==='activity-equilibrium-d2'));
+  assert.equal(atlas.activities.find(a=>a.id==='activity-menagerie-d2').availabilityEvidence.asOf,'2020-11-10');
 });
 
 test('source inventories reject wrong membership, duplicates, removed groups and unverified sources',()=>{
-  for(const change of [p=>p.inventories[0].activityIds.pop(),p=>p.inventories[0].activityIds.push(p.inventories[0].activityIds[0]),p=>p.inventories=[],p=>p.inventories[0].sourceId='legacy-wiki-riis',p=>p.reviewedAt='2026-11-08']) {
+  for(const change of [p=>p.inventories[0].activityIds.pop(),p=>p.inventories[0].activityIds.push(p.inventories[0].activityIds[0]),p=>p.inventories=[],p=>p.inventories[0].sourceId='legacy-wiki-riis',p=>p.reviewedAt='2026-11-08',p=>p.inventories[0].asOf='2020-01-01',p=>p.inventories[0].asOf='2099-01-01']) {
     const copy=structuredClone(sourceInventories);change(copy);assert.throws(()=>validateSourceInventories(copy,atlas));
   }
 });

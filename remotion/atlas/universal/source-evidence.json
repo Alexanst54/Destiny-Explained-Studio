@@ -20,7 +20,8 @@
         "activity-vespers-host-d2",
         "activity-sundered-doctrine-d2",
         "activity-equilibrium-d2"
-      ]
+      ],
+      "asOf": "2026-11-09"
     },
     {
       "sourceId": "bungie-activities",
@@ -39,7 +40,8 @@
         "activity-crotas-end-d2",
         "activity-salvations-edge-d2",
         "activity-desert-perpetual-d2"
-      ]
+      ],
+      "asOf": "2026-11-09"
     },
     {
       "sourceId": "bungie-vault",
@@ -53,7 +55,8 @@
         "activity-spire-of-stars-d2",
         "activity-scourge-of-past-d2",
         "activity-crown-of-sorrow-d2"
-      ]
+      ],
+      "asOf": "2020-11-10"
     },
     {
       "sourceId": "bungie-years",
@@ -66,7 +69,8 @@
         "activity-crotas-end-d1",
         "activity-kings-fall-d1",
         "activity-wrath-of-machine-d1"
-      ]
+      ],
+      "asOf": "2026-11-09"
     }
   ],
   "relationshipReview": [

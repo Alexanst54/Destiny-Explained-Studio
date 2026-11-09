@@ -66,6 +66,7 @@
       "type": "dungeon",
       "game": "D2",
       "availability": "current",
+      "asOf": "2026-11-09",
       "activityIds": [
         "activity-shattered-throne-d2",
         "activity-pit-of-heresy-d2",
@@ -86,6 +87,7 @@
       "type": "raid",
       "game": "D2",
       "availability": "current",
+      "asOf": "2026-11-09",
       "activityIds": [
         "activity-last-wish-d2",
         "activity-garden-of-salvation-d2",
@@ -105,6 +107,7 @@
       "type": "raid",
       "game": "D2",
       "availability": "vaulted",
+      "asOf": "2020-11-10",
       "activityIds": [
         "activity-leviathan-raid-d2",
         "activity-eater-of-worlds-d2",
@@ -119,6 +122,7 @@
       "type": "raid",
       "game": "D1",
       "availability": "historical",
+      "asOf": "2026-11-09",
       "activityIds": [
         "activity-vault-of-glass-d1",
         "activity-crotas-end-d1",

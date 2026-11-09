@@ -28,14 +28,14 @@ export function validateUniversalCatalog(input: unknown): UniversalCatalog {
   for (const entity of [...catalog.locations, ...catalog.locationVariants, ...catalog.activities, ...catalog.encounters, ...catalog.bosses, ...catalog.bossVariants]) {
     for (const release of [entity.expansion, entity.firstSeen?.releaseId].filter(Boolean)) if (!atlas.coverage.some(r => r.id === release)) throw new Error('Unknown release: ' + release);
   }
-  const models = new Set(Object.values(environmentDefinitions).map(d => d.model));
-  for (const asset of catalog.assets) if (asset.kind === 'remotion-environment' && !models.has(asset.id as typeof environmentDefinitions.europa.model)) throw new Error('Unknown existing environment: ' + asset.id);
+  const models = new Set<string>(Object.values(environmentDefinitions).map(d => d.model));
+  for (const asset of catalog.assets) if (asset.kind === 'remotion-environment' && !models.has(asset.id)) throw new Error('Unknown existing environment: ' + asset.id);
   return catalog;
 }
 
 const inventorySchema = z.object({
   reviewedAt: z.iso.date(), method: z.string().min(1),
-  inventories: z.array(z.object({sourceId: z.string().min(1), locator: z.string().min(1), type: z.enum(['raid', 'dungeon']), game: z.enum(['D1', 'D2']), availability: z.enum(['current', 'vaulted', 'historical']), activityIds: z.array(z.string().min(1)).min(1)}).strict()),
+  inventories: z.array(z.object({sourceId: z.string().min(1), locator: z.string().min(1), type: z.enum(['raid', 'dungeon']), game: z.enum(['D1', 'D2']), availability: z.enum(['current', 'vaulted', 'historical']), asOf: z.iso.date(), activityIds: z.array(z.string().min(1)).min(1)}).strict()),
   relationshipReview: z.array(z.object({sourceId: z.string().min(1), locator: z.string().min(1), note: z.string().min(1)}).strict()),
 }).strict();
 export function validateSourceInventories(input: unknown, catalog: UniversalCatalog) {
@@ -45,11 +45,13 @@ export function validateSourceInventories(input: unknown, catalog: UniversalCata
   for (const group of proof.inventories) {
     const source = catalog.sources.find(s => s.id === group.sourceId);
     if (!source || source.verification !== 'retrieved' || !source.supports.includes('availability')) throw new Error('Inventory needs a retrieved availability source');
+    if (group.asOf > proof.reviewedAt) throw new Error('Future inventory status date');
     const key = [group.game, group.type, group.availability].join(':');
     if (groups.has(key)) throw new Error('Duplicate inventory group'); groups.add(key);
     if (new Set(group.activityIds).size !== group.activityIds.length) throw new Error('Duplicate inventory membership');
     const actual = catalog.activities.filter(a => a.type === group.type && a.game === group.game && a.availability === group.availability).map(a => a.id).sort();
     if (JSON.stringify(actual) !== JSON.stringify([...group.activityIds].sort())) throw new Error('Activity inventory differs from reviewed source list: ' + key);
+    if (group.activityIds.some(id => catalog.activities.find(a => a.id === id)?.availabilityEvidence?.asOf !== group.asOf)) throw new Error('Inventory availability date mismatch');
     if (group.activityIds.some(id => !catalog.activities.find(a => a.id === id)?.availabilityEvidence?.sources.includes(source.id))) throw new Error('Inventory membership missing its primary availability citation');
   }
   for (const activity of catalog.activities) {

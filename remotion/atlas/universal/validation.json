@@ -1,0 +1,111 @@
+{
+  "status": "passed",
+  "scope": "Première étape documentaire de #18 ; pas validation exhaustive de l’Atlas ou de nouveaux modèles.",
+  "checkedAt": "2026-11-09",
+  "node": "22.23.4",
+  "nodeInstallation": "Archive officielle nodejs.org vérifiée contre SHASUMS256.txt",
+  "python": "3.12.14",
+  "checks": [
+    {
+      "name": "Node universal + legacy suites",
+      "tests": 81,
+      "passed": 81,
+      "failed": 0,
+      "command": "node --experimental-strip-types --test tests/atlas-universal.test.mjs tests/atlas.test.mjs tests/library.test.mjs tests/living.test.mjs tests/animation.test.mjs tests/hybrid.test.mjs tests/polish.test.mjs blender/tests/export.test.mjs blender/tests/sequences.test.mjs ../editor/model.test.mjs"
+    },
+    {
+      "name": "Python Blender unit tests",
+      "tests": 12,
+      "passed": 12,
+      "failed": 0,
+      "command": "python -m unittest discover -s blender/tests"
+    },
+    {
+      "name": "Python offline manifest import",
+      "tests": 4,
+      "passed": 4,
+      "failed": 0,
+      "command": "python -m unittest discover -s tests -p 'test_manifest_import.py'"
+    },
+    {
+      "name": "TypeScript legacy",
+      "command": "npm run typecheck",
+      "status": "passed"
+    },
+    {
+      "name": "TypeScript universal schema/API",
+      "command": "npm run typecheck:atlas:universal",
+      "status": "passed"
+    },
+    {
+      "name": "Audit regenerates exactly",
+      "command": "npm run audit:assets -- --check",
+      "status": "passed"
+    },
+    {
+      "name": "Coverage regenerates exactly",
+      "command": "npm run report:atlas:coverage -- --check",
+      "status": "passed"
+    },
+    {
+      "name": "Existing Atlas report",
+      "command": "node --experimental-strip-types scripts/atlas-report.mjs --check",
+      "status": "passed"
+    },
+    {
+      "name": "Existing static editor bundle",
+      "command": "node scripts/build-editor.mjs --check",
+      "status": "passed"
+    },
+    {
+      "name": "Shallow single-branch clone",
+      "command": "git clone --no-local --depth 1 --single-branch --branch feat/universal-atlas-foundation-0.9.0 LOCAL_REPO work/fresh-atlas; run both report checks",
+      "status": "passed",
+      "note": "Test au checkpoint 3a49b50, sans objets Git PR #17 ; l’observation initiale est stockée dans audit-context.json."
+    },
+    {
+      "name": "Existing asset and episode paths unchanged vs main",
+      "status": "passed",
+      "modifiedExistingFiles": [
+        "remotion/package.json"
+      ],
+      "note": "Seuls quatre scripts npm sont ajoutés au package existant ; pas de modification du moteur, catalogues historiques, épisodes, assets, notebooks ou bundles."
+    }
+  ],
+  "validatedInputs": [
+    {
+      "path": "remotion/atlas/universal/schema.ts",
+      "sha256": "3ef2e8a228cda72f20ae74ea21c5a8330918e3e93868b96d8f1f55a291422a6a"
+    },
+    {
+      "path": "remotion/atlas/universal/index.ts",
+      "sha256": "c8766ec55f2412fc78580803248f3cae2b512d23b5720acfa56089c6fe825731"
+    },
+    {
+      "path": "remotion/atlas/universal/catalog.json",
+      "sha256": "b8605d3c124ff7f6bd2cc565456687bbe68b24599cf77633882fe6ac7a361129"
+    },
+    {
+      "path": "remotion/atlas/universal/source-evidence.json",
+      "sha256": "a18273ea525c07bd1fd3cf2f419fdc1e3ad6cb7490e6246c112264cb45e6e443"
+    },
+    {
+      "path": "remotion/scripts/asset-audit.mjs",
+      "sha256": "17f68c05e8476c1ff0f995e679a095a3b85edcc5dff1e5b710bb7b59929c4709"
+    },
+    {
+      "path": "remotion/scripts/atlas-coverage.mjs",
+      "sha256": "4b353fbcbf35209f3d9544615c6fa551a3be2bf5f2db0cb6a2bee578fc84d21f"
+    },
+    {
+      "path": "remotion/tests/atlas-universal.test.mjs",
+      "sha256": "07cd148f80ad8a1fbdb4f7646b5a9a8d0233ad52dcaef1e81ba5041dbe879aa4"
+    }
+  ],
+  "limitations": [
+    "Inventaire partiel des rencontres et boss, pas expertise exhaustive de toutes les références héritées.",
+    "Aucun nouveau rendu, modèle Blender, filtre éditeur ou import incrémental de production.",
+    "Les listes de disponibilité sont datées ; un retrait historique ne garantit pas un retrait permanent.",
+    "PR #17 indépendante et non fusionnée ; aucun rendu de 35 secondes."
+  ]
+}

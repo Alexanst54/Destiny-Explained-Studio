@@ -8,12 +8,12 @@ Le catalogue historique conserve **468 lieux et 17 variantes**. La nouvelle couc
 
 Tranche : **32 activités**, **27 rencontres**, **9 identités de boss**, **2 variantes de boss**. **6 activités** ont des rencontres pilotes ; les **26 autres** restent explicitement not-started. Les activités pilotes restent partial, pas « exhaustives ».
 
-| Inventaire de noms observé | Activités par jeu/version | Source |
-| --- | ---: | --- |
-| D2 — dungeon — current | 11 | [bungie-activities](https://help.bungie.net/hc/en-us/articles/46668136913172--10-Activities) · List of currently available dungeons |
-| D2 — raid — current | 10 | [bungie-activities](https://help.bungie.net/hc/en-us/articles/46668136913172--10-Activities) · List of currently available raids |
-| D2 — raid — vaulted | 5 | [bungie-vault](https://help.bungie.net/hc/fr/articles/360049202971-Coffre-de-contenu-de-Destiny) · Années passées → An 4 → Raids |
-| D1 — raid — historical | 4 | [bungie-years](https://help.bungie.net/hc/en-us/articles/4408041224852-Years-of-Destiny) · Destiny → Years 1, 2, 3 → Raids |
+| Inventaire de noms observé | Activités par jeu/version | État attesté au | Source |
+| --- | ---: | --- | --- |
+| D2 — dungeon — current | 11 | 2026-11-09 | [bungie-activities](https://help.bungie.net/hc/en-us/articles/46668136913172--10-Activities) · List of currently available dungeons |
+| D2 — raid — current | 10 | 2026-11-09 | [bungie-activities](https://help.bungie.net/hc/en-us/articles/46668136913172--10-Activities) · List of currently available raids |
+| D2 — raid — vaulted | 5 | 2020-11-10 | [bungie-vault](https://help.bungie.net/hc/fr/articles/360049202971-Coffre-de-contenu-de-Destiny) · Années passées → An 4 → Raids |
+| D1 — raid — historical | 4 | 2026-11-09 | [bungie-years](https://help.bungie.net/hc/en-us/articles/4408041224852-Years-of-Destiny) · Destiny → Years 1, 2, 3 → Raids |
 
 Les raids repris en D2 sont des activités distinctes de leurs versions D1 ; les 19 lignes de raid ne signifient pas 19 raids narrativement uniques. Eater of Worlds et Spire of Stars sont inclus dans l’inventaire des raids, comme dans la liste historique Bungie. Les 11 donjons correspondent à la liste Bungie consultée à cette date, pas à une constante imposée à toutes les versions futures du schéma.
 
@@ -110,7 +110,7 @@ Les lieux classés lore-world, notamment Riis et Fundament, ne deviennent pas de
 | activity-whisper-d2 | D2 | The Whisper | exotic-mission | current | 0 (not-started) | à recenser |
 | activity-menagerie-d2 | D2 | The Menagerie | seasonal-activity | vaulted | 0 (not-started) | à recenser |
 
-current signifie présence dans la liste Bungie observée, sans promesse de droits d’accès, matchmaking ou rotation. vaulted est daté et sourcé par le document historique, sans affirmer un retrait permanent. historical pour D1 signifie sortie attestée, pas fermeture de ses serveurs. unknown conserve l’incertitude. `expansion` identifie une ère de sortie ; pour une reprise gratuite, ce champ n’est pas un prérequis de possession.
+current signifie présence dans la liste Bungie observée, sans promesse de droits d’accès, matchmaking ou rotation. vaulted est daté du retrait attesté (2020-11-10 ici), distinct de la date de consultation 2026-11-09 ; il ne garantit pas un retrait permanent. historical pour D1 signifie sortie attestée, pas fermeture de ses serveurs. unknown conserve l’incertitude. `expansion` identifie une ère de sortie ; pour une reprise gratuite, ce champ n’est pas un prérequis de possession.
 
 ## Rencontres et arènes pilotes
 
