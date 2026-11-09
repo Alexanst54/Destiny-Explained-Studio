@@ -9,7 +9,7 @@ Un même programme couvre les lots A à F ; aucune nouvelle instruction par boss
 | C — Autres raids | Backlog issu des rencontres ; Taniks/formes, Aksis, Calus, Atraks-1, Golgoroth, Gahlran, Insurrection Prime prioritaires | Formes physiques, projections, mécanismes et collectifs traités distinctement |
 | D — Donjons | 11 donjons documentés ; modèles et arènes manquants visibles dans l’index | Géométrie propre et preuves par rencontre principale |
 | E — Autres activités | Assauts/missions exotiques documentés partiellement ; campagnes à étendre | Sources relues et vrais assets, pas de couverture déclarative |
-| F — Intégration | Galerie/selection JSON additionnelles ; éditeur historique intact | Export vidéo intégré, grille complète et test réel T4/Colab/Android |
+| F — Intégration | Galerie/sélection JSON additionnelles, grilles Vex et prototype Cropta ; éditeur historique intact | Export vidéo intégré, grille complète et test réel T4/Colab/Android |
 
 Pour chaque boss : lire les sources épinglées et les liens Atlas, examiner des références visuelles sans importer de ressources propriétaires, définir les repères de silhouette et morphologie, construire un générateur dédié avec LOD explicite, rig adapté et poses déterministes, développer l’arène, rendre face/trois-quarts/silhouette/environnement/animation dans Blender, inspecter les images et consigner les limites. L’index conserve les manquants et les preuves incomplètes.
 

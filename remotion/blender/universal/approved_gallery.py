@@ -1,6 +1,8 @@
 """Assemble and verify the v1 review grids without modifying approved Vex geometry."""
 import hashlib,json,shutil,subprocess,sys
 from pathlib import Path
+# This script's directory contains environments.py; keep it out of unqualified legacy imports.
+sys.path[:]=[p for p in sys.path if Path(p).resolve()!=Path(__file__).resolve().parent]
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from universal.registry import ROOT,check_registry
 from universal.cache import atomic_json,valid_png

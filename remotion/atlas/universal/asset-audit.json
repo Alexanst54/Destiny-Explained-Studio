@@ -1850,8 +1850,8 @@
     },
     {
       "path": "remotion/blender/universal/approved_gallery.py",
-      "bytes": 7080,
-      "sha256": "d981b48d98bd22a9eaecbd8673ee7a5459595a5a7d2f3639daec5f53b2811e5e"
+      "bytes": 7263,
+      "sha256": "7d9b98ecf23a84dd1f2dc9f4411c60a9b7eacfd4b186d5462086d5ea3dfaa6a6"
     },
     {
       "path": "remotion/blender/universal/batch.py",
@@ -1905,8 +1905,8 @@
     },
     {
       "path": "remotion/blender/universal/models.json",
-      "bytes": 4550,
-      "sha256": "0fa78066115ad4688ede52cd26f240152ca32021808c66bf6e1ef47a77f72739"
+      "bytes": 4542,
+      "sha256": "0d84b36845146a09f08c7ac0630d5d133827ec151e1af13ab49072896bc2124d"
     },
     {
       "path": "remotion/blender/universal/providers.py",

@@ -1,0 +1,24 @@
+{
+  "cinematicVex": {
+    "evaluations": 136,
+    "maxAnkleErrorMetres": 1.1920928955078125e-06,
+    "maxStanceSlidingMetres": 1.7192608239479013e-06,
+    "maxNominalPlanePenetrationMetres": 7.152557373046875e-07,
+    "maxTerrainLayerContactErrorMetres": 0.030000686645507812,
+    "staticResources": true,
+    "linkedGeometryReuse": true
+  },
+  "compatibilityVex": {
+    "evaluations": 156,
+    "status": "passed"
+  },
+  "crota": {
+    "status": "passed",
+    "evaluations": 192,
+    "cameraViews": 3,
+    "maxNormalizedBoundsOverflow": 0,
+    "staticResources": true,
+    "randomAccess": true,
+    "physicalGroundContactValidated": false
+  }
+}

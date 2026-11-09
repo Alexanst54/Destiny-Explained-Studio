@@ -15,8 +15,8 @@
       1,
       2
     ],
-    "gallery": "docs/previews/cinematic-vex-0.9.1/README.md",
-    "galleryV1Status": "partial-existing-evidence",
+    "gallery": "docs/universal-library/approved/README.md",
+    "galleryV1Status": "technical-grid-rendered",
     "protectedFiles": [
       {
         "path": "remotion/blender/cinematic_vex/atheon.py",
@@ -56,8 +56,8 @@
       1,
       2
     ],
-    "gallery": "docs/previews/cinematic-vex-0.9.1/README.md",
-    "galleryV1Status": "partial-existing-evidence",
+    "gallery": "docs/universal-library/approved/README.md",
+    "galleryV1Status": "technical-grid-rendered",
     "protectedFiles": [
       {
         "path": "remotion/blender/cinematic_vex/atheon.py",

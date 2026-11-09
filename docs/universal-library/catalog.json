@@ -30,8 +30,8 @@
           1,
           2
         ],
-        "gallery": "docs/previews/cinematic-vex-0.9.1/README.md",
-        "galleryV1Status": "partial-existing-evidence",
+        "gallery": "docs/universal-library/approved/README.md",
+        "galleryV1Status": "technical-grid-rendered",
         "protectedFiles": [
           {
             "path": "remotion/blender/cinematic_vex/atheon.py",
@@ -128,9 +128,30 @@
       ],
       "previews": [
         {
-          "view": "existing-evidence",
+          "view": "front",
           "path": "docs/previews/cinematic-vex-0.9.1/after/templar.png",
           "quality": "cinematic"
+        },
+        {
+          "view": "three-quarter",
+          "path": "docs/universal-library/approved/boss-templar-three-quarter.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "silhouette",
+          "path": "docs/universal-library/approved/boss-templar-silhouette.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "environment",
+          "path": "docs/universal-library/approved/boss-templar-environment.png",
+          "quality": "cinematic"
+        }
+      ],
+      "videoPreviews": [
+        {
+          "path": "docs/universal-library/approved/boss-templar-rotate.mp4",
+          "label": "Animation Balanced"
         }
       ]
     },
@@ -162,8 +183,8 @@
           1,
           2
         ],
-        "gallery": "docs/previews/cinematic-vex-0.9.1/README.md",
-        "galleryV1Status": "partial-existing-evidence",
+        "gallery": "docs/universal-library/approved/README.md",
+        "galleryV1Status": "technical-grid-rendered",
         "protectedFiles": [
           {
             "path": "remotion/blender/cinematic_vex/atheon.py",
@@ -260,9 +281,30 @@
       ],
       "previews": [
         {
-          "view": "existing-evidence",
+          "view": "front",
           "path": "docs/previews/cinematic-vex-0.9.1/after/front.png",
           "quality": "cinematic"
+        },
+        {
+          "view": "environment",
+          "path": "docs/previews/cinematic-vex-0.9.1/after/throne.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "three-quarter",
+          "path": "docs/universal-library/approved/boss-atheon-three-quarter.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "silhouette",
+          "path": "docs/universal-library/approved/boss-atheon-silhouette.png",
+          "quality": "cinematic"
+        }
+      ],
+      "videoPreviews": [
+        {
+          "path": "docs/previews/cinematic-vex-0.9.1/clips/walk.mp4",
+          "label": "Animation Balanced"
         }
       ]
     },
