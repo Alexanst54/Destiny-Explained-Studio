@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "scope": "Première étape documentaire de #18 ; pas validation exhaustive de l’Atlas ou de nouveaux modèles.",
+  "scope": "Recensement #18 sur PR #19 : rencontres principales de 19 raids de base et 11 donjons ; assauts, missions, arènes et variantes encore partiels. Aucun nouveau modèle.",
   "checkedAt": "2026-11-09",
   "node": "22.23.4",
   "nodeInstallation": "Archive officielle nodejs.org vérifiée contre SHASUMS256.txt",
@@ -8,8 +8,8 @@
   "checks": [
     {
       "name": "Node universal + legacy suites",
-      "tests": 81,
-      "passed": 81,
+      "tests": 90,
+      "passed": 90,
       "failed": 0,
       "command": "node --experimental-strip-types --test tests/atlas-universal.test.mjs tests/atlas.test.mjs tests/library.test.mjs tests/living.test.mjs tests/animation.test.mjs tests/hybrid.test.mjs tests/polish.test.mjs blender/tests/export.test.mjs blender/tests/sequences.test.mjs ../editor/model.test.mjs"
     },
@@ -70,42 +70,64 @@
         "remotion/package.json"
       ],
       "note": "Seuls quatre scripts npm sont ajoutés au package existant ; pas de modification du moteur, catalogues historiques, épisodes, assets, notebooks ou bundles."
+    },
+    {
+      "name": "Protected paths unchanged since initial PR #19 delivery",
+      "status": "passed",
+      "baseline": "ff45f30",
+      "note": "136 fichiers et 12 épisodes comparés via les empreintes de l’audit initial ; aucun changement du moteur, des anciens catalogues, épisodes, assets Blender ou notebooks."
     }
   ],
   "validatedInputs": [
     {
       "path": "remotion/atlas/universal/schema.ts",
-      "sha256": "3ef2e8a228cda72f20ae74ea21c5a8330918e3e93868b96d8f1f55a291422a6a"
+      "sha256": "da7fe329f893bfbaf8ec7606f5b257dff57ba59dfd3719a5e50833964362017f"
     },
     {
       "path": "remotion/atlas/universal/index.ts",
-      "sha256": "c8766ec55f2412fc78580803248f3cae2b512d23b5720acfa56089c6fe825731"
+      "sha256": "9525fe6d3ac5fdfeac59b73a45571438abe3823251586fa646ba7c0ebff1c808"
     },
     {
       "path": "remotion/atlas/universal/catalog.json",
-      "sha256": "b8605d3c124ff7f6bd2cc565456687bbe68b24599cf77633882fe6ac7a361129"
+      "sha256": "5015d6515cc2e02d57acdfa0504a5f46f69539198f01661a7549c1aa9e068ea6"
     },
     {
       "path": "remotion/atlas/universal/source-evidence.json",
-      "sha256": "a18273ea525c07bd1fd3cf2f419fdc1e3ad6cb7490e6246c112264cb45e6e443"
+      "sha256": "bcf11b41a13c8bbea461990fa177dbe41b36aaffb01a446007bfd09cbf18d6ad"
     },
     {
       "path": "remotion/scripts/asset-audit.mjs",
-      "sha256": "17f68c05e8476c1ff0f995e679a095a3b85edcc5dff1e5b710bb7b59929c4709"
+      "sha256": "bb3f540437482c0d3c193433f445cf8c0974dd8e0d57812cd71cb92470f5160a"
     },
     {
       "path": "remotion/scripts/atlas-coverage.mjs",
-      "sha256": "4b353fbcbf35209f3d9544615c6fa551a3be2bf5f2db0cb6a2bee578fc84d21f"
+      "sha256": "4c62947e945333256c3d11dd291f217958bc423d67c29fb2543b32a7131b2f3a"
     },
     {
       "path": "remotion/tests/atlas-universal.test.mjs",
-      "sha256": "07cd148f80ad8a1fbdb4f7646b5a9a8d0233ad52dcaef1e81ba5041dbe879aa4"
+      "sha256": "fa649d64ca1dcfb33298199c37d0ab69e28dd1c728f80bdf95e3e4e87efd383f"
+    },
+    {
+      "path": "remotion/atlas/universal/foundation-ids.json",
+      "sha256": "36db594fb4afcef010dddc64f5d4fc41b2546913b8d61248759698f4028504f0"
     }
   ],
   "limitations": [
-    "Inventaire partiel des rencontres et boss, pas expertise exhaustive de toutes les références héritées.",
+    "Rencontres principales relues ; variantes, modes, parcours d’assauts/missions et plusieurs arènes restent partiels. Les sources secondaires épinglées ne remplacent pas une validation visuelle en jeu.",
     "Aucun nouveau rendu, modèle Blender, filtre éditeur ou import incrémental de production.",
     "Les listes de disponibilité sont datées ; un retrait historique ne garantit pas un retrait permanent.",
     "PR #17 indépendante et non fusionnée ; aucun rendu de 35 secondes."
-  ]
+  ],
+  "catalogCheckpoint": "bfa64c4d8bca74bfaaa4a261a74cbd983a6621ea",
+  "catalogCounts": {
+    "baseRaidsReviewed": 19,
+    "dungeonsReviewed": 11,
+    "activities": 49,
+    "encounters": 213,
+    "bossEntries": 128,
+    "bossForms": 25,
+    "reusePlans": 314,
+    "reuseProfiles": 52,
+    "pinnedWikiRevisions": 186
+  }
 }

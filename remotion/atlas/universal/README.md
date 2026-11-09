@@ -6,8 +6,8 @@ Première étape de l’[issue #18](https://github.com/Alexanst54/Destiny-Explai
 - [Couverture sourcée](../../../docs/ATLAS-COVERAGE.md), produite par `scripts/atlas-coverage.mjs` ; les lacunes restent visibles.
 - `schema.ts` : tables strictes et intégrité relationnelle.
 - `index.ts` : validation, listes de sources et API de lecture, **aucun branchement automatique dans l’éditeur ou Remotion**.
-- `catalog.json` : première tranche, avec références aux assets procéduraux existants ; les 468 lieux historiques restent dans leur catalogue d’origine.
-- `source-evidence.json` : listes Bungie normalisées et notes de revue des rencontres.
+- `catalog.json` : catalogue étendu des rencontres, avec références aux assets procéduraux existants ; les 468 lieux historiques restent dans leur catalogue d’origine.
+- `source-evidence.json` : listes Bungie normalisées, ensembles de rencontres relus et 186 révisions wiki épinglées (URL, numéro de révision et empreinte du texte consulté).
 - `audit-context.json` : branche initialement observée et base main, afin de ne pas incorporer la PR #17.
 
 ## Tables et relations
@@ -34,6 +34,16 @@ Les entités portent `game` (D1/D2/both), `type`, `enName`, `frName`, statut de 
 `firstSeen=null` signifie non vérifié ; une association à une extension ne prouve pas la première apparition. Les dates exactes ne sont renseignées que lorsque consultées. `expansion` est une ère de sortie, pas une exigence de possession. Les sites historiques qui portent un nom d’activité conservent leur ID comme lieu documentaire et sont reliés à de nouvelles activités `activity-…-d1/d2`. Aucune ancienne référence n’est renommée.
 
 `visualStatus=dedicated` décrit une réalisation stylisée existante, pas une carte officielle. `modular-reconstruction` réutilise une famille, pas un nouveau modèle individuel. `placeholder` ne peut déclarer d’asset implémenté. Les boss absents du registre restent placeholders ; un Vex générique ne devient pas Atheon par renommage. Les arènes nommées dans les sources utilisent les familles existantes sans prétendre à leur géométrie exacte.
+
+## Recensement des rencontres et réemploi
+
+Les 19 raids de base (éditions D1/D2 séparées) et les 11 donjons ont leurs rencontres principales relues. Le catalogue compte 213 étapes, 128 entrées de boss (dont collectifs et mécanismes), 25 formes, huit éditions d’assauts et neuf éditions de missions exotiques. Les routes d’assauts/missions, variantes, modes et certains noms d’arènes restent partiels ; l’édition Epic du Désert perpétuel est recensée séparément. La Ménagerie reste à commencer.
+
+`category` distingue rencontres principales, traversées et étapes optionnelles ; `conditions` conserve les catalyseurs, quêtes et Rite of Nine. `encounterOrdering` distingue ordre fixe, rotation hebdomadaire et sélection libre. Les relations portent leur issue (`cleanse`, `repel`, `escape`, etc.) : rencontrer un boss ne prouve pas sa mort. `composition`/`members` distinguent collectifs et individus, `nature` distingue formes, automates, projections et configurations de combat.
+
+Les 314 `assetReusePlans` couvrent chaque boss, forme, lieu et variante de lieu. Ils pointent vers 52 `reuseProfiles` : familles, modules, personnages candidats, rigs et fonctions réellement présents, parties réutilisables, adaptations et limites. Les recettes `existingRecipe` des références historiques sont vérifiées contre `atlasRecipe` ; les nouvelles arènes n’en inventent aucune. Ces plans ne sont pas des affectations de modèles. Tous les boss restent placeholders et aucune nouvelle géométrie Blender n’est créée.
+
+`activityReviews` conserve les ensembles exacts de rencontres et boss relus, avec des axes distincts rencontres/boss/arènes/variantes et des lacunes obligatoires. `retrievals` permet de retrouver les versions wiki inspectées sans télécharger leur contenu pendant les tests. `foundation-ids.json` protège les IDs de la première livraison. La correction sourcée du parent du Désert perpétuel (Périphérie inconnue, au lieu de Kepler) est inscrite dans `legacyCorrections` pour cette couche uniquement ; le catalogue historique reste intact.
 
 ## Extension et compatibilité
 
