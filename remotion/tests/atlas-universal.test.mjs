@@ -94,7 +94,7 @@ test('D1/D2 reprises retain separate encounters and branching derivation cycles 
 
 test('asset reuse checks actual files, entry points, selectors, family and Riis variant restrictions',()=>{
   validateAssetFiles(atlas);
-  for(const change of [c=>c.locations[0].remotionAssetId='imaginary-mesh',c=>c.locations[0].visualStatus='dedicated',c=>c.bosses[0].remotionAssetId='atlas-family-vex',c=>c.locations[0].blenderAssetId=c.locations[0].remotionAssetId])rejected(change);
+  for(const change of [c=>c.locations[0].remotionAssetId='imaginary-mesh',c=>c.locations[0].visualStatus='dedicated',c=>c.bosses.find(b=>b.visualStatus==='placeholder').remotionAssetId='atlas-family-vex',c=>c.locations[0].blenderAssetId=c.locations[0].remotionAssetId])rejected(change);
   rejected(c=>c.locationVariants.find(v=>v.blenderAssetId).legacyVariantId='after-whirlwind');
   for(const change of [c=>c.assets[0].path='remotion/missing.ts',c=>c.assets[0].symbol='MissingComponent',c=>c.assets[0].selector='location=made-up'])assert.throws(()=>validateAssetFiles(mutate(change)));
   assert.throws(()=>validateAssetFiles(mutate(c=>c.legacy.catalogSha256='0'.repeat(64))));
@@ -182,7 +182,7 @@ test('pinned revisions validate source identity, date, host, revision ID and cov
 test('reuse plans cover every boss, form and environment without promoting them to implemented models',()=>{
  const targets=[...atlas.bosses,...atlas.bossVariants,...atlas.locations,...atlas.locationVariants];assert.equal(atlas.assetReusePlans.length,targets.length);
  for(const target of targets)assert.equal(atlas.assetReusePlans.filter(p=>p.entityId===target.id).length,1);
- for(const b of [...atlas.bosses,...atlas.bossVariants]){assert.equal(b.visualStatus,'placeholder');assert.equal(b.remotionAssetId,null);assert.equal(b.blenderAssetId,null);}
+ for(const b of [...atlas.bosses,...atlas.bossVariants]){assert.equal(b.remotionAssetId,null);if(['boss-atheon','boss-templar'].includes(b.id)){assert.equal(b.visualStatus,'dedicated');assert.ok(b.blenderAssetId);}else{assert.equal(b.visualStatus,'placeholder');assert.equal(b.blenderAssetId,null);}}
  const plan=id=>atlas.assetReusePlans.find(p=>p.entityId===id),profiles=id=>plan(id).profileIds.map(p=>atlas.reuseProfiles.find(r=>r.id===p));
  assert.ok(profiles('boss-sere').some(p=>p.characterTemplateIds.includes('human-scientist')));
  assert.ok(profiles('boss-harrow').some(p=>p.characterTemplateIds.includes('cabal-soldier')));

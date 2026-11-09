@@ -30,7 +30,7 @@ const bossVariant = z.object({...base, type: z.literal('boss-variant'), bossId: 
 const edge = {sources, note: text};
 const source = z.object({id, kind: z.enum(['primary', 'secondary', 'inherited']), title: text, url: z.url().refine(s => s.startsWith('https://'), 'HTTPS required'), checkedAt: date, verification: z.enum(['retrieved', 'inherited-not-rechecked']), locator: text,
   supports: z.array(z.enum(['identity', 'availability', 'release', 'appearance', 'relationship'])).min(1), legacySourceId: text.nullable(), note: text}).strict();
-const asset = z.object({id, kind: z.enum(['remotion-environment', 'remotion-family', 'blender-generator']), path: text.regex(/^remotion\/(?!.*\.\.).+\.(?:tsx?|py)$/), symbol: text.regex(/^[A-Za-z_][A-Za-z0-9_]*$/), selector: text, families: z.array(z.enum(families)).min(1), locationIds: ids, variantIds: ids, fidelity: z.enum(['dedicated', 'modular-reconstruction'])}).strict();
+const asset = z.object({id, kind: z.enum(['remotion-environment', 'remotion-family', 'blender-generator', 'blender-boss']), path: text.regex(/^remotion\/(?!.*\.\.).+\.(?:tsx?|py)$/), symbol: text.regex(/^[A-Za-z_][A-Za-z0-9_]*$/), selector: text, families: z.array(z.enum(families)).min(1), locationIds: ids, variantIds: ids, bossIds: ids.default([]), fidelity: z.enum(['dedicated', 'modular-reconstruction'])}).strict();
 
 export const universalCatalogSchema = z.object({
   schemaVersion: z.literal('0.9.0'), reviewedAt: date, scope: text,
@@ -87,20 +87,26 @@ export const universalCatalogSchema = z.object({
     const activeAssets = [row.remotionAssetId, row.blenderAssetId].filter((a): a is string => a !== null);
     if (row.visualStatus === 'placeholder' && activeAssets.length) fail(path, 'Placeholder cannot claim an implemented asset');
     if (row.visualStatus !== 'placeholder' && !activeAssets.length) fail(path, 'Rendered visual status needs an existing asset');
+    if (row.visualStatus === 'dedicated' && !activeAssets.some(id => assetMap.get(id)?.fidelity === 'dedicated')) fail(path, 'Dedicated status needs at least one dedicated renderer asset');
     for (const [field, ref] of [['remotionAssetId', row.remotionAssetId], ['blenderAssetId', row.blenderAssetId]] as const) {
       if (!ref) continue;
       const a = assetMap.get(ref);
       if (!a) {fail([...path, field], 'Unknown asset'); continue;}
-      if ((field === 'blenderAssetId') !== (a.kind === 'blender-generator')) fail([...path, field], 'Asset renderer mismatch');
+      if ((field === 'blenderAssetId') !== (a.kind.startsWith('blender-'))) fail([...path, field], 'Asset renderer mismatch');
       if (!row.environmentFamily || !a.families.includes(row.environmentFamily)) fail([...path, field], 'Asset family mismatch');
-      if (row.visualStatus === 'dedicated' && a.fidelity !== 'dedicated') fail(path, 'Modular asset cannot claim dedicated fidelity');
       const locationId = table === 'locationVariants' ? (row as z.infer<typeof locationVariant>).locationId : row.id;
       if (a.locationIds.length && !a.locationIds.includes(locationId)) fail(path, 'Asset outside supported locations');
+      if (a.kind === 'blender-boss' && (table !== 'bosses' || !a.bossIds.includes(row.id))) fail(path, 'Boss asset outside supported identity');
       if (a.variantIds.length && (table !== 'locationVariants' || !a.variantIds.includes((row as z.infer<typeof locationVariant>).legacyVariantId ?? ''))) fail(path, 'Asset outside supported variants');
     }
   });
   c.sources.forEach((s, i) => {if (s.checkedAt > c.reviewedAt) fail(['sources', i], 'Future source check'); if ((s.kind === 'inherited') !== (s.verification === 'inherited-not-rechecked')) fail(['sources', i], 'Inherited provenance mismatch');});
-  c.assets.forEach((a, i) => a.locationIds.forEach(ref => {if (!locationMap.has(ref)) fail(['assets', i, 'locationIds'], 'Unknown asset location scope');}));
+  c.assets.forEach((a, i) => {
+    a.locationIds.forEach(ref => {if (!locationMap.has(ref)) fail(['assets', i, 'locationIds'], 'Unknown asset location scope');});
+    a.bossIds.forEach(ref => {if (!bossMap.has(ref)) fail(['assets', i, 'bossIds'], 'Unknown asset boss scope');});
+    if (a.kind === 'blender-boss' && (!a.bossIds.length || a.locationIds.length || a.variantIds.length)) fail(['assets', i], 'Boss generator requires an exclusive boss scope');
+    if (a.kind !== 'blender-boss' && a.bossIds.length) fail(['assets', i], 'Only boss generators can declare boss scope');
+  });
   c.locations.forEach((l, i) => {
     if (l.parentId && !locationMap.has(l.parentId)) fail(['locations', i, 'parentId'], 'Unknown parent');
     const seen = new Set([l.id]); let parent = l.parentId;

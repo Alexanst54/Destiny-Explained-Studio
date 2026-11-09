@@ -1,6 +1,6 @@
 # Atlas universel D1/D2 — rencontres, boss et réemploi des assets
 
-Revue : 2026-11-09. Issue [#18](https://github.com/Alexanst54/Destiny-Explained-Studio/issues/18), PR #19. **Couverture encore partielle** : une revue des rencontres principales ne signifie ni inventaire de tous les ennemis/défis, ni arènes modélisées, ni variantes exhaustives.
+Revue : 2026-11-09. Issue [#18](https://github.com/Alexanst54/Destiny-Explained-Studio/issues/18), fondation PR #19 et extension Blender Vénus/Caveau. **Couverture encore partielle** : une revue des rencontres principales ne signifie ni inventaire de tous les ennemis/défis, ni arènes modélisées, ni variantes exhaustives.
 
 ## Périmètre vérifié
 
@@ -8,7 +8,7 @@ Revue : 2026-11-09. Issue [#18](https://github.com/Alexanst54/Destiny-Explained-
 
 Le catalogue contient **49 activités**, **213 étapes** (154 main, 16 optional, 43 traversal), **128 entrées de boss** et **25 formes/variantes**. Les boss comprennent des identités, des collectifs et des mécanismes : pas 128 personnes distinctes. Les membres de Raneiks ou des Bêtes royales ne sont pas des variantes d’un individu.
 
-Les **468 lieux historiques et 17 variantes** restent intacts. Cette couche relie 91 IDs existants, documente 56 lieux/arènes supplémentaires et 14 variantes historiques. Les 314 plans de réemploi couvrent chaque lieu, variante de lieu, boss et forme ; **aucun modèle nouveau n’est créé ou affecté**.
+Les **468 lieux historiques et 17 variantes** restent intacts. Cette couche relie 91 IDs existants, documente 56 lieux/arènes supplémentaires et 14 variantes historiques. Les 314 plans de réemploi couvrent chaque lieu, variante de lieu, boss et forme ; **deux boss et trois décors Blender dédiés sont implémentés dans l’extension Vénus/Caveau** (interprétations voxel originales, pas cartes exactes).
 
 | Liste primaire de noms | Nombre | État attesté au | Source |
 | --- | ---: | --- | --- |
@@ -495,9 +495,9 @@ Le Puppeteer est conservé comme une identité distincte d’Atraks-1 malgré le
 | boss-raneiks-variant-unified | Éliksni : Servitor | eliksni-servitor / servitor | adaptation-required |
 | boss-raneiks-variant-separated | Éliksni : Servitor | eliksni-servitor / servitor | adaptation-required |
 
-Ces plans sont des possibilités d’adaptation, jamais des modèles prêts. Exemples : Servitor et rig servitor pour les composants de Raneiks ; quatre bras/Exo pour Atraks/Puppeteer ; blocs/écrans Bray pour Crypt Security ; conventions Vex pour Hydres/Harpies/Wyvernes mais aucune silhouette prête de ces classes. Kerrev est un Tisseur, Harrow un Gladiateur Cabal et Dredgen Sere un Humain d’après leurs infobox : ils ne sont pas tous affectés au même personnage. Riven et le Témoin n’ont pas de template adapté ; les apparences unknown ne peuvent pas servir de modèle.
+Ces plans sont des possibilités d’adaptation, jamais des modèles prêts. Exemples : Servitor et rig servitor pour les composants de Raneiks ; quatre bras/Exo pour Atraks/Puppeteer ; blocs/écrans Bray pour Crypt Security ; conventions Vex pour Hydres/Harpies/Wyvernes avec deux silhouettes originales implémentées pour Athéon et le Templier seulement. Kerrev est un Tisseur, Harrow un Gladiateur Cabal et Dredgen Sere un Humain d’après leurs infobox : ils ne sont pas tous affectés au même personnage. Riven et le Témoin n’ont pas de template adapté ; les apparences unknown ne peuvent pas servir de modèle.
 
-Chaque profil indique fichiers/symboles existants, familles, modules, templates, rigs, composants réutilisables, travaux requis et limites. Chaque plan indique silhouette attribuée, sources et statut. Les recettes historiques exactes (baseEnvironment et modules, y compris overrides) sont capturées depuis le vrai atlasRecipe et comparées au moteur existant. Les nouveaux lieux n’inventent pas d’AtlasReference directement résoluble. Les détails sont dans catalog.json (reuseProfiles / assetReusePlans), vérifiés hors ligne ; tous les boss gardent characterId/remotionAssetId/blenderAssetId nuls et visualStatus=placeholder.
+Chaque profil indique fichiers/symboles existants, familles, modules, templates, rigs, composants réutilisables, travaux requis et limites. Chaque plan indique silhouette attribuée, sources et statut. Les recettes historiques exactes (baseEnvironment et modules, y compris overrides) sont capturées depuis le vrai atlasRecipe et comparées au moteur existant. Les nouveaux lieux n’inventent pas d’AtlasReference directement résoluble. Les détails sont dans catalog.json (reuseProfiles / assetReusePlans), vérifiés hors ligne ; Athéon et le Templier ont un blenderAssetId dédié ; les autres boss et toutes les formes restent placeholders. Les plans décrivent les besoins d’adaptation ; la disponibilité effective est indiquée par le blenderAssetId et son registre.
 
 ## Environnements réutilisés
 
@@ -515,7 +515,7 @@ Chaque profil indique fichiers/symboles existants, familles, modules, templates,
 | earth | human / environment-human | atlas-family-human | oui | modular-reconstruction |
 | moon | hive / environment-hive | atlas-family-hive | oui | modular-reconstruction |
 | mercury | vex / environment-vex | atlas-family-vex | oui | modular-reconstruction |
-| venus | vex / environment-vex | atlas-family-vex | oui | modular-reconstruction |
+| venus | vex / environment-vex | atlas-family-vex ; blender-venus-v1 | oui | dedicated |
 | mars | human / environment-human | atlas-family-human | oui | modular-reconstruction |
 | io | vex / environment-vex | atlas-family-vex | oui | modular-reconstruction |
 | titan | ocean / environment-ocean | atlas-family-ocean | oui | modular-reconstruction |
@@ -545,7 +545,7 @@ Chaque profil indique fichiers/symboles existants, familles, modules, templates,
 | riis | eliksni / environment-eliksni | atlas-family-eliksni | oui | modular-reconstruction |
 | deep-stone-site | bray / environment-bray | atlas-family-bray | oui | modular-reconstruction |
 | plaguelands | human / environment-human | atlas-family-human | oui | modular-reconstruction |
-| vault-of-glass | vex / environment-vex | atlas-family-vex | oui | modular-reconstruction |
+| vault-of-glass | vex / environment-vex | atlas-family-vex ; blender-templars-well-v1 | oui | dedicated |
 | crotas-end | hive / environment-hive | atlas-family-hive | oui | modular-reconstruction |
 | kings-fall | hive / environment-hive | atlas-family-hive | oui | modular-reconstruction |
 | wrath-of-machine | human / environment-human | atlas-family-human | oui | modular-reconstruction |
@@ -574,8 +574,8 @@ Chaque profil indique fichiers/symboles existants, familles, modules, templates,
 | equilibrium | cabal / environment-cabal | atlas-family-cabal | oui | modular-reconstruction |
 | whisper | vex / environment-vex | atlas-family-vex | oui | modular-reconstruction |
 | menagerie | cabal / environment-cabal | atlas-family-cabal | oui | modular-reconstruction |
-| arena-templars-well | vex / environment-vex | atlas-family-vex | non — famille candidate seulement | modular-reconstruction |
-| arena-glass-throne | vex / environment-vex | atlas-family-vex | non — famille candidate seulement | modular-reconstruction |
+| arena-templars-well | vex / environment-vex | atlas-family-vex ; blender-templars-well-v1 | non — famille candidate seulement | dedicated |
+| arena-glass-throne | vex / environment-vex | atlas-family-vex ; blender-glass-throne-v1 | non — famille candidate seulement | dedicated |
 | oversoul-throne | hive / environment-hive | atlas-family-hive | non — famille candidate seulement | modular-reconstruction |
 | dsc-morning-star | bray / environment-bray | atlas-family-bray | non — famille candidate seulement | modular-reconstruction |
 | dsc-restricted | bray / environment-bray | atlas-family-bray | non — famille candidate seulement | modular-reconstruction |
@@ -665,7 +665,7 @@ Chaque profil indique fichiers/symboles existants, familles, modules, templates,
 | riis-variant-before-whirlwind | eliksni / environment-eliksni | atlas-family-eliksni ; blender-riis-v1 | oui | modular-reconstruction |
 | riis-variant-after-whirlwind | eliksni / environment-eliksni | atlas-family-eliksni | oui | modular-reconstruction |
 
-Le décor dédié existant est une évocation voxel, pas une carte exacte. Les autres arènes partagent les recettes de famille. Aucun fichier .blend, aucun transfert complet de géométrie, aucun matériau de boss ou rig spécifique nouveau n’est livré. Riis avant le Tourbillon reste le seul générateur Blender référencé dans son périmètre existant.
+Le décor dédié existant est une évocation voxel, pas une carte exacte. Les autres arènes partagent les recettes de famille. Aucun fichier propriétaire ni transfert complet de géométrie historique. Riis reste inchangé ; Vénus, le Puits du Templier et le Trône de verre ont des générateurs séparés et deux rigs dédiés. Voir blender/venus_vault/VALIDATION.md pour les vrais rendus et leurs limites.
 
 ## Corrections sourcées sans migration du catalogue historique
 
@@ -691,11 +691,11 @@ Source-evidence.json conserve les inventaires primaires, les ensembles exacts d�
 - Encore, Kell’s Fall et les autres exotiques déjà présents dans le catalogue historique ne sont pas tous reliés ici ; leurs itérations et identités de boss nécessitent des éditions séparées.
 - Le nouveau Bracus Zahn de la version remaniée de The Arms Dealer pose une incertitude d’identité dans le dialogue ; aucun lien de résurrection/succession définitif n’est inventé ici.
 - Noms FR de rencontres, arènes et boss non vérifiés : anglais conservé avec untranslated. Les objectifs éditoriaux ne sont pas des noms officiels.
-- Tous les boss restent des placeholders de rendu. Chaque boss/forme et chaque environnement dispose d’un plan de composants réutilisables, avec besoins d’adaptation et absences explicites.
-- Aucun modèle Blender, moteur vidéo, ancien épisode, catalogue 0.3, notebook ou contenu de la PR #17 n’est modifié. Pas de rendu de 35 secondes.
+- Athéon et le Templier ont deux modèles Blender procéduraux dédiés et testés ; les autres boss restent placeholders. Les plans de réemploi ne sont pas des modèles implémentés.
+- Extension Blender Vénus/Caveau séparée et opt-in ; moteur vidéo, ancien épisode, catalogue 0.3 et PR #17 inchangés. Aucun rendu de 35 secondes.
 
 ## Vérification et indépendance
 
 Depuis remotion/ : `npm run test:atlas:universal`, `npm run typecheck:atlas:universal`, `npm run audit:assets -- --check`, `npm run report:atlas:coverage -- --check`. Voir atlas/universal/VALIDATION.md pour les commandes réellement exécutées. Les contrôles n’ont pas besoin du réseau.
 
-Même branche et PR #19 en brouillon. Les anciens épisodes, le moteur vidéo, les assets existants et la PR #17 restent inchangés ; aucune fusion automatique. Les anciens IDs de la fondation sont conservés et testés. Aucun nouveau modèle Blender, aucun rendu de 35 secondes.
+Extension visuelle sur une branche dédiée, ciblant la branche de PR #19, sans modifier PR #19. Les anciens épisodes, le moteur vidéo, les assets existants et la PR #17 restent inchangés ; aucune fusion automatique. Les anciens IDs de la fondation sont conservés et testés. Nouveaux modèles procéduraux limités à Athéon et au Templier ; aucun rendu de 35 secondes.

@@ -23,14 +23,14 @@ export function validateAssetFiles(catalog,root=ROOT) {
     const path=resolve(root,asset.path);
     if (!existsSync(path) || !realpathSync(path).startsWith(realpathSync(root)+'/')) throw Error('Missing or out-of-repository asset: '+asset.id);
     const code=readFileSync(path,'utf8');
-    const declaration=asset.kind==='blender-generator'?new RegExp(`^def ${asset.symbol}\\(`,'m'):new RegExp(`export (?:const|function) ${asset.symbol}\\b`);
+    const declaration=asset.kind.startsWith('blender-')?new RegExp(`^def ${asset.symbol}\\(`,'m'):new RegExp(`export (?:const|function) ${asset.symbol}\\b`);
     if (!declaration.test(code)) throw Error('Asset entry point absent: '+asset.id);
     if (asset.kind==='remotion-family' && (asset.path!=='remotion/atlas/recipes.ts'||asset.symbol!=='atlasRecipe'||asset.selector!=='family='+asset.families[0]||!families.includes(asset.families[0]))) throw Error('Unknown existing family selector: '+asset.id);
     if (asset.kind==='remotion-environment') {
       const key=asset.selector.replace(/^location=/,'');
       if (environmentDefinitions[key]?.model!==asset.id||asset.path!=='remotion/src/voxel/library/Library.tsx'||asset.symbol!=='VoxelEnvironment') throw Error('Unknown existing environment selector: '+asset.id);
     }
-    if (asset.kind==='blender-generator' && (asset.id!=='blender-riis-v1'||asset.path!=='remotion/blender/environments/riis.py'||asset.symbol!=='generate'||asset.selector!=='atlas=riis/before-whirlwind')) throw Error('New Blender generator needs explicit audit support: '+asset.id);
+    if (asset.kind.startsWith('blender-') && !({ 'blender-riis-v1':['remotion/blender/environments/riis.py','atlas=riis/before-whirlwind'], 'blender-venus-v1':['remotion/blender/environments/venus.py','atlas=venus'], 'blender-templars-well-v1':['remotion/blender/environments/vault_of_glass.py','arena=arena-templars-well'], 'blender-glass-throne-v1':['remotion/blender/environments/vault_of_glass.py','arena=arena-glass-throne'], 'blender-templar-v1':['remotion/blender/characters/vex_bosses.py','boss=boss-templar'], 'blender-atheon-v1':['remotion/blender/characters/vex_bosses.py','boss=boss-atheon']}[asset.id]?.every((v,i)=>v===[asset.path,asset.selector][i]) && asset.symbol==='generate')) throw Error('New Blender generator needs explicit audit support: '+asset.id);
   }
   for (const profile of catalog.reuseProfiles) for (const reference of profile.reusableFiles) {
     const path=resolve(root,reference.path);
@@ -105,7 +105,7 @@ export function auditMarkdown(a) {
     '', '### Décors à réutiliser','',
     '| Lieu Atlas | Modèle / bibliothèque existante | Compatibilité Blender actuelle |','| --- | --- | --- |',
     ...a.legacy.dedicatedLocations.map(p=>`| ${p.id} | ${environmentDefinitions[p.environment].model} — VoxelEnvironment | Export de scène limité ; géométrie complète de ce décor non transférée |`),
-    '', 'Les recettes sont dans `remotion/atlas/recipes.ts`, les 16 modules dans `geometry.ts`, les décors dans `src/voxel/library/Library.tsx` et `layout.ts`. Réutiliser ces familles pour Vénus/Caveau de verre, Mars et Lune/Cropta ; aucun nouveau décor fidèle n’est annoncé dans cette PR.',
+    '', 'Les recettes sont dans `remotion/atlas/recipes.ts`, les 16 modules dans `geometry.ts`, les décors dans `src/voxel/library/Library.tsx` et `layout.ts`. Les recettes historiques restent intactes ; Vénus/Caveau dispose maintenant de générateurs Blender séparés, stylisés et non cartographiquement fidèles. Mars et Lune/Cropta restent à adapter.',
     '', '### Personnages, animation et composition','',
     `Styles utilisés par le registre : ${Object.entries(a.characters.modelKindsUsed).map(([k,n])=>`${k} (${n})`).join(', ')}. Le style unknown est un marqueur, pas une apparence attestée. Rigs : ${a.characters.rigArchetypes.join(', ')}.`,
     '', 'Réutiliser `characters/models/VoxelCharacter.tsx`, `living/` (cast/groupes), `animation/rig.ts`, `director.ts` et `camera.ts`, `polish/` (variation, environnement, caméra) et `hybrid/` (composition, sources, audio/captions). Une silhouette générique n’est pas un modèle de boss validé. Les '+a.missingBossAssets.length+' entrées de boss recensées restent sans modèle dédié assigné ; leurs plans de réemploi sont documentaires.',
@@ -113,7 +113,7 @@ export function auditMarkdown(a) {
     `Les ${a.fixtures.length} épisodes suivis passent le schéma historique : ${Object.entries(counts(a.fixtures,f=>f.schemaVersion)).map(([k,n])=>`${k} (${n})`).join(', ')}. Le JSON de chaque épisode est empreinté ; aucune timeline, voix ou caption n’est modifiée.`,
     '',`Références explicites dans ces fixtures : **${Object.keys(a.usage.locations).length} lieux Atlas**, **${Object.keys(a.usage.characters).length} personnages**, **${Object.keys(a.usage.environments).length} décors** ; références catalogue inconnues : **${a.missingReferences.length}**. Détails fichier par fichier dans le JSON.`,
     '',`**${a.notReferencedByFixtures.locations.length} lieux** et **${a.notReferencedByFixtures.characters.length} personnages** n’ont pas de référence explicite dans ces épisodes. Cela ne prouve pas qu’ils sont inutilisés : l’éditeur et les sélections dynamiques peuvent les utiliser. Aucun nettoyage n’est proposé.`,
-    '', `Assets de boss absents dans le nouveau registre : ${a.missingBossAssets.join(', ')}. Ce sont des placeholders documentaires. Les arènes nouvellement nommées réutilisent des familles modulaires ; aucun modèle spécifique n’a été construit.`,
+    '', `Assets de boss absents dans le nouveau registre : ${a.missingBossAssets.join(', ')}. Ce sont des placeholders documentaires. Athéon et le Templier sont les deux modèles Blender dédiés de cette extension ; les autres arènes restent des plans de réemploi, sauf les trois décors Vénus/Caveau explicitement enregistrés.`,
     '', '## Compatibilité Blender : limites constatées dans le code','',
     '- `blender/export.ts` exporte des primitives box/sphere et matrices de rigs 0.7 pour les plans voxel dirigés. Les Guardian/Ghost historiques et acteurs actifs sans rig sont rejetés explicitement ; aucun acteur n’est silencieusement supprimé.',
     '- Le bridge n’exporte pas les `atlasBoxes` complets ni les décors dédiés : scène de base simplifiée, blocs polish, props terminal et rigs. La présence d’un lieu dans le catalogue ne prouve pas sa géométrie Blender.',

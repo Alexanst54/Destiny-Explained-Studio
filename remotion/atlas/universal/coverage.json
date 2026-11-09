@@ -65,10 +65,8 @@
     "named": 2,
     "site-only": 20
   },
-  "bossesWithoutAssets": 128,
+  "bossesWithoutAssets": 126,
   "missingPlayableBossModels": [
-    "boss-templar",
-    "boss-atheon",
     "boss-ir-yut",
     "boss-crota",
     "boss-crypt-security",
