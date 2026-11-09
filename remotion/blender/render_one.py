@@ -11,23 +11,25 @@ import time
 from contract import load
 
 
-def stream_process(command,log,timeout=600,heartbeat=15):
+def stream_process(command,log,timeout=600,heartbeat=15,on_tick=None):
     if not isinstance(timeout,(int,float)) or isinstance(timeout,bool) or not 1<=timeout<=7200:raise ValueError('Timeout must be 1–7200 seconds')
-    started=time.monotonic();last=started;log=Path(log);log.parent.mkdir(parents=True,exist_ok=True)
+    started=time.monotonic();last=started;progress=started;log=Path(log);log.parent.mkdir(parents=True,exist_ok=True)
     with log.open('wb') as sink:
         process=subprocess.Popen(command,stdout=subprocess.PIPE,stderr=subprocess.STDOUT,start_new_session=True)
         selector=selectors.DefaultSelector();selector.register(process.stdout,selectors.EVENT_READ)
         try:
             while selector.get_map():
                 now=time.monotonic()
-                if now-started>timeout:raise TimeoutError(f'Render exceeded {timeout}s; process group stopped. See {log}')
-                for key,_ in selector.select(timeout=min(.5,max(.01,timeout-(now-started)))):
+                if on_tick and on_tick():progress=time.monotonic()
+                elapsed=now-(progress if on_tick else started)
+                if elapsed>timeout:raise TimeoutError(f'Render exceeded {timeout}s; process group stopped. See {log}')
+                for key,_ in selector.select(timeout=min(.5,max(.01,timeout-elapsed))):
                     chunk=os.read(key.fileobj.fileno(),8192)
                     if not chunk:selector.unregister(key.fileobj);continue
                     sink.write(chunk);sink.flush();print(chunk.decode('utf-8',errors='replace'),end='',flush=True)
                 if time.monotonic()-last>=heartbeat:
                     print(f'[Blender running: {time.monotonic()-started:.0f}s / {timeout}s; log {log.name}]',flush=True);last=time.monotonic()
-            remaining=timeout-(time.monotonic()-started)
+            remaining=timeout-(time.monotonic()-(progress if on_tick else started))
             if remaining<=0:raise TimeoutError(f'Render exceeded {timeout}s')
             code=process.wait(timeout=remaining)
             if code:raise RuntimeError(f'Blender exited {code}; see {log}')
