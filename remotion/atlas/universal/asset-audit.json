@@ -1419,6 +1419,11 @@
       "sha256": "b19cc694c636a239199d48301a2512a78800897dd48a8878807376ce2fd260ca"
     },
     {
+      "path": "editor/universal-library.browser.test.cjs",
+      "bytes": 1794,
+      "sha256": "b202176379ad754ce13e07eb2406fc5e0c8ff2e5c169a622304f33322c349526"
+    },
+    {
       "path": "remotion/animation/COMPARISON.md",
       "bytes": 3365,
       "sha256": "c6ead4e7dd3a90c0c436adc46a1ac88257645b66f63e2a520ffb701f93558d19"
@@ -1744,6 +1749,11 @@
       "sha256": "c84fe26507952f2a10ba25106f016a579f930e68151ac1ab37a98e1e3180af81"
     },
     {
+      "path": "remotion/blender/render_universal.py",
+      "bytes": 5246,
+      "sha256": "e601755cce35ae0bc7d379ed8bbe039b37e31d6616970d07433d79da6bc20534"
+    },
+    {
       "path": "remotion/blender/render_venus_vault.py",
       "bytes": 3442,
       "sha256": "d5824624135db894bf0f33f442f477fad331f2b80dd932a68aecbe23f059b550"
@@ -1809,9 +1819,74 @@
       "sha256": "d5da1164f3697a9135ed9a015f5e397c47ad27c6200ff88b6bf33db9be748bb6"
     },
     {
+      "path": "remotion/blender/tests/test_universal_library.py",
+      "bytes": 4230,
+      "sha256": "75b9851a5d17b0e9144910f0a57e4738258204a1dab5421f273b26002fdbf31d"
+    },
+    {
       "path": "remotion/blender/tests/test_venus_vault.py",
       "bytes": 5714,
       "sha256": "ba1911feee53e609e56139e5d828f0a51507a1969a8b98a089146d012e549f2f"
+    },
+    {
+      "path": "remotion/blender/universal/README.md",
+      "bytes": 4697,
+      "sha256": "be95bebffcbdc36b6db401133259f796cb7244da95bd9f5ccc0f39376dca63a0"
+    },
+    {
+      "path": "remotion/blender/universal/__init__.py",
+      "bytes": 77,
+      "sha256": "5075a41322dc0093e43dabd1212a1240faf29c0659d5b26d43a6c0224ecf6496"
+    },
+    {
+      "path": "remotion/blender/universal/build_index.py",
+      "bytes": 1120,
+      "sha256": "d0c487ad57f14e0f9ec49ffc733d57740a5e0cc88672bd60c79686a0c83f4639"
+    },
+    {
+      "path": "remotion/blender/universal/cache.py",
+      "bytes": 2149,
+      "sha256": "7cd7401b7ae38d7503ab083a7e803e017f2461146969d314551ada63c8004a44"
+    },
+    {
+      "path": "remotion/blender/universal/collect_studies.py",
+      "bytes": 1654,
+      "sha256": "93eb46883a852ba0b76232b581a89b603a323a90ffd65bf7f0210ab9ee88e429"
+    },
+    {
+      "path": "remotion/blender/universal/environments.py",
+      "bytes": 4677,
+      "sha256": "67f7ac1597c28ee8b21a925d90a8f340534daa37dfa80ebdfb349e8f056fcf54"
+    },
+    {
+      "path": "remotion/blender/universal/families.json",
+      "bytes": 6174,
+      "sha256": "c336ff607c3ef74c3458690e7e0238619cf1d0ca6e901d432d9fc08090621200"
+    },
+    {
+      "path": "remotion/blender/universal/models.json",
+      "bytes": 3727,
+      "sha256": "9319912b1f012393c014b69e7539dd42bb881d840ec8aa7a63e425e46d07d2ca"
+    },
+    {
+      "path": "remotion/blender/universal/registry.py",
+      "bytes": 5336,
+      "sha256": "007743d9fee5a395bb508b7fb47adc59b1fba087faef9659877373b9fd211de6"
+    },
+    {
+      "path": "remotion/blender/universal/request.py",
+      "bytes": 2064,
+      "sha256": "0c235a52d9eb8cafa88128086c2563f4968fb715179709bb677dea47d150d7e0"
+    },
+    {
+      "path": "remotion/blender/universal/verify_media.py",
+      "bytes": 1558,
+      "sha256": "d17114ffc4c3d6f69717ccfac94620cb0beee6064e720506c75a429b043a229e"
+    },
+    {
+      "path": "remotion/blender/universal/worker.py",
+      "bytes": 8829,
+      "sha256": "55802f5818c3daa3e1ac9debe52aa981475fb8d712f9dff7ef2efa8f76cf88b0"
     },
     {
       "path": "remotion/blender/validation-evidence.json",

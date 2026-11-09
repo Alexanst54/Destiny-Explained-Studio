@@ -1,0 +1,37 @@
+{
+  "status": "lot-a-passed-library-incomplete",
+  "checkedAt": "2026-11-09",
+  "nodeTests": 100,
+  "pythonBlenderTests": 36,
+  "pythonManifestTests": 4,
+  "browser": "Chromium 412x915: 300 entries, filters, variants, actual image, JSON download, no overflow or page errors",
+  "typecheck": [
+    "legacy passed",
+    "universal passed"
+  ],
+  "historicalEvidence": "Both frozen media verifiers passed; 136 protected files and 12 episodes unchanged",
+  "realBlenderStudies": 10,
+  "device": "CPU",
+  "gpuValidated": false,
+  "resume": {
+    "fullCacheHits": 2,
+    "newFrames": 0,
+    "corruptFrameRecovery": {
+      "cacheHits": 1,
+      "newFrames": 1
+    },
+    "interruption": {
+      "status": "passed",
+      "interruptedAfterFrames": 1,
+      "resumedCacheHits": 1,
+      "renderedAfterResume": 3
+    }
+  },
+  "limitations": [
+    "No complete universal library claim",
+    "No new dedicated boss in Lot A",
+    "No persisted .blend across sessions",
+    "No GPU/Colab/Android execution",
+    "Existing Atheon/Templar gallery grid remains partial for v1.0"
+  ]
+}

@@ -2,13 +2,13 @@
 
 Audit du 2026-11-09. Branche observée au départ : `feat/gpu-render-optimization-0.8.4` (`146d43e`, PR #17). Implémentation indépendante depuis `main` (`1effd88`). Aucun asset existant supprimé ou remplacé.
 
-Refonte visuelle 0.9.1 sur `feat/cinematic-vex-overhaul-0.9.1`, basée sur PR #20 à `b1fd922`. Les observations ci-dessus décrivent l’audit initial ; PR #17, #19 et #20 restent inchangées.
+Chantier v1.0 sur `feat/universal-cinematic-library-1.0`, basé sur les modèles validés de PR #21 à `9488dd8`. Les observations ci-dessus décrivent l’audit initial ; PR #17, #19, #20 et #21 restent inchangées.
 
 ## Méthode et preuve reproductible
 
 Exécuter depuis `remotion/` : `npm run audit:assets` ; vérifier sans réécriture : `npm run audit:assets -- --check`. [asset-audit.json](../remotion/atlas/universal/asset-audit.json) contient chemins, tailles, SHA-256 et références par épisode. Les schémas historiques sont exécutés. L’audit fonctionne hors ligne.
 
-L’inventaire porte sur **173 fichiers suivis**, **12 épisodes JSON**, les catalogues, moteurs, bridges et assets compilés. Les médias Kokoro et caches ignorés ne sont pas des fichiers d’assets versionnés ; les références à générer sont signalées séparément. Un fichier présent ou une référence textuelle ne démontre pas son rendu ni sa fidélité canonique.
+L’inventaire porte sur **188 fichiers suivis**, **12 épisodes JSON**, les catalogues, moteurs, bridges et assets compilés. Les médias Kokoro et caches ignorés ne sont pas des fichiers d’assets versionnés ; les références à générer sont signalées séparément. Un fichier présent ou une référence textuelle ne démontre pas son rendu ni sa fidélité canonique.
 
 ## Inventaire réel
 
@@ -32,7 +32,7 @@ L’inventaire porte sur **173 fichiers suivis**, **12 épisodes JSON**, les cat
 | black-garden | voxel-black-garden-v1 — VoxelEnvironment | Export de scène limité ; géométrie complète de ce décor non transférée |
 | tower | voxel-tower-v1 — VoxelEnvironment | Export de scène limité ; géométrie complète de ce décor non transférée |
 
-Les recettes sont dans `remotion/atlas/recipes.ts`, les 16 modules dans `geometry.ts`, les décors dans `src/voxel/library/Library.tsx` et `layout.ts`. Les recettes historiques restent intactes ; Vénus/Caveau dispose de générateurs Blender séparés. La refonte 0.9.1 ajoute une anatomie Vex détaillée, un LOD explicite et des contacts IK, sans reproduction cartographique exacte. Mars et Lune/Cropta restent à adapter.
+Les recettes sont dans `remotion/atlas/recipes.ts`, les 16 modules dans `geometry.ts`, les décors dans `src/voxel/library/Library.tsx` et `layout.ts`. Les recettes historiques restent intactes ; Vénus/Caveau dispose de générateurs Blender séparés. La refonte 0.9.1 ajoute une anatomie Vex détaillée, un LOD explicite et des contacts IK, sans reproduction cartographique exacte. Le registre et les dix études de familles sont additionnels ; une étude ne valide aucune arène nommée. Voir docs/universal-library/WORKSTREAM.md.
 
 ### Personnages, animation et composition
 

@@ -1,0 +1,316 @@
+[
+  {
+    "id": "vex",
+    "atlasFamilies": [
+      "vex",
+      "garden"
+    ],
+    "label": "Vex / Jardin noir",
+    "colors": [
+      "#70684b",
+      "#1e3331",
+      "#61f4ed"
+    ],
+    "architecture": "stepped",
+    "effect": "gate",
+    "status": "procedural-study-unvalidated",
+    "variants": [
+      "sanctum",
+      "causeway",
+      "courtyard"
+    ],
+    "modules": [
+      "floor",
+      "columns",
+      "arch",
+      "platform",
+      "hero-prop",
+      "atmosphere"
+    ],
+    "limitations": [
+      "Editorial family candidate, not a canonical species classification or complete named arena."
+    ]
+  },
+  {
+    "id": "hive",
+    "atlasFamilies": [
+      "hive"
+    ],
+    "label": "Ruche",
+    "colors": [
+      "#777061",
+      "#202623",
+      "#9be05c"
+    ],
+    "architecture": "ribbed",
+    "effect": "altar",
+    "status": "procedural-study-unvalidated",
+    "variants": [
+      "sanctum",
+      "causeway",
+      "courtyard"
+    ],
+    "modules": [
+      "floor",
+      "columns",
+      "arch",
+      "platform",
+      "hero-prop",
+      "atmosphere"
+    ],
+    "limitations": [
+      "Editorial family candidate, not a canonical species classification or complete named arena."
+    ]
+  },
+  {
+    "id": "taken",
+    "atlasFamilies": [
+      "awoken"
+    ],
+    "label": "Corrompus / Ascendant",
+    "colors": [
+      "#4d445e",
+      "#11121e",
+      "#ddeaff"
+    ],
+    "architecture": "fractured",
+    "effect": "rift",
+    "status": "procedural-study-unvalidated",
+    "variants": [
+      "sanctum",
+      "causeway",
+      "courtyard"
+    ],
+    "modules": [
+      "floor",
+      "columns",
+      "arch",
+      "platform",
+      "hero-prop",
+      "atmosphere"
+    ],
+    "limitations": [
+      "Editorial family candidate, not a canonical species classification or complete named arena."
+    ]
+  },
+  {
+    "id": "cabal",
+    "atlasFamilies": [
+      "cabal"
+    ],
+    "label": "Cabals / Léviathan",
+    "colors": [
+      "#8e6e3d",
+      "#392b32",
+      "#e0ab51"
+    ],
+    "architecture": "fortified",
+    "effect": "banner",
+    "status": "procedural-study-unvalidated",
+    "variants": [
+      "sanctum",
+      "causeway",
+      "courtyard"
+    ],
+    "modules": [
+      "floor",
+      "columns",
+      "arch",
+      "platform",
+      "hero-prop",
+      "atmosphere"
+    ],
+    "limitations": [
+      "Editorial family candidate, not a canonical species classification or complete named arena."
+    ]
+  },
+  {
+    "id": "eliksni",
+    "atlasFamilies": [
+      "eliksni"
+    ],
+    "label": "Éliksni / SIVA",
+    "colors": [
+      "#68514a",
+      "#263544",
+      "#f55c42"
+    ],
+    "architecture": "industrial",
+    "effect": "conduit",
+    "status": "procedural-study-unvalidated",
+    "variants": [
+      "sanctum",
+      "causeway",
+      "courtyard"
+    ],
+    "modules": [
+      "floor",
+      "columns",
+      "arch",
+      "platform",
+      "hero-prop",
+      "atmosphere"
+    ],
+    "limitations": [
+      "Editorial family candidate, not a canonical species classification or complete named arena."
+    ]
+  },
+  {
+    "id": "pyramid",
+    "atlasFamilies": [
+      "pyramid"
+    ],
+    "label": "Pyramides / Résonance",
+    "colors": [
+      "#514333",
+      "#15191b",
+      "#efa75c"
+    ],
+    "architecture": "monolith",
+    "effect": "resonance",
+    "status": "procedural-study-unvalidated",
+    "variants": [
+      "sanctum",
+      "causeway",
+      "courtyard"
+    ],
+    "modules": [
+      "floor",
+      "columns",
+      "arch",
+      "platform",
+      "hero-prop",
+      "atmosphere"
+    ],
+    "limitations": [
+      "Editorial family candidate, not a canonical species classification or complete named arena."
+    ]
+  },
+  {
+    "id": "bray",
+    "atlasFamilies": [
+      "bray",
+      "human",
+      "ice"
+    ],
+    "label": "Âge d’or / Bray",
+    "colors": [
+      "#cad6dc",
+      "#3e505e",
+      "#70dfff"
+    ],
+    "architecture": "laboratory",
+    "effect": "reactor",
+    "status": "procedural-study-unvalidated",
+    "variants": [
+      "sanctum",
+      "causeway",
+      "courtyard"
+    ],
+    "modules": [
+      "floor",
+      "columns",
+      "arch",
+      "platform",
+      "hero-prop",
+      "atmosphere"
+    ],
+    "limitations": [
+      "Editorial family candidate, not a canonical species classification or complete named arena."
+    ]
+  },
+  {
+    "id": "nine",
+    "atlasFamilies": [
+      "cosmic"
+    ],
+    "label": "Neuf",
+    "colors": [
+      "#d7d2c6",
+      "#252d3d",
+      "#f8f3d5"
+    ],
+    "architecture": "abstract",
+    "effect": "sphere",
+    "status": "procedural-study-unvalidated",
+    "variants": [
+      "sanctum",
+      "causeway",
+      "courtyard"
+    ],
+    "modules": [
+      "floor",
+      "columns",
+      "arch",
+      "platform",
+      "hero-prop",
+      "atmosphere"
+    ],
+    "limitations": [
+      "Editorial family candidate, not a canonical species classification or complete named arena."
+    ]
+  },
+  {
+    "id": "neomuna",
+    "atlasFamilies": [
+      "future-city"
+    ],
+    "label": "Néomuna",
+    "colors": [
+      "#35415f",
+      "#221936",
+      "#ed62ee"
+    ],
+    "architecture": "city",
+    "effect": "neon",
+    "status": "procedural-study-unvalidated",
+    "variants": [
+      "sanctum",
+      "causeway",
+      "courtyard"
+    ],
+    "modules": [
+      "floor",
+      "columns",
+      "arch",
+      "platform",
+      "hero-prop",
+      "atmosphere"
+    ],
+    "limitations": [
+      "Editorial family candidate, not a canonical species classification or complete named arena."
+    ]
+  },
+  {
+    "id": "pale-heart",
+    "atlasFamilies": [
+      "garden",
+      "cosmic"
+    ],
+    "label": "Voyageur / Cœur pâle",
+    "colors": [
+      "#c3bdae",
+      "#384b46",
+      "#f9d9a0"
+    ],
+    "architecture": "surreal",
+    "effect": "roots",
+    "status": "procedural-study-unvalidated",
+    "variants": [
+      "sanctum",
+      "causeway",
+      "courtyard"
+    ],
+    "modules": [
+      "floor",
+      "columns",
+      "arch",
+      "platform",
+      "hero-prop",
+      "atmosphere"
+    ],
+    "limitations": [
+      "Editorial family candidate, not a canonical species classification or complete named arena."
+    ]
+  }
+]
