@@ -190,6 +190,24 @@ class OpenAIProvider:
             return audio, words_from_tokens(text, tokens, len(audio) / SAMPLE_RATE)
 
 
+def narration_units(episode):
+    """Optional contiguous shot groups share a single synthesis phrase; no text changes."""
+    scenes = episode["scenes"]
+    groups = episode["audio"]["voiceover"].get("groups", [])
+    by_id = {scene["id"]: i for i, scene in enumerate(scenes)}
+    grouped, starts = set(), {}
+    for ids in groups:
+        indices = [by_id.get(id, -1) for id in ids]
+        if len(ids) < 2 or any(i < 0 for i in indices) or indices != list(range(indices[0], indices[0]+len(indices))) or any(id in grouped for id in ids):
+            raise ValueError("Narration groups require unique known contiguous scenes")
+        grouped.update(ids)
+        unit = copy.deepcopy(scenes[indices[0]])
+        unit["narration"] = " ".join(scenes[i]["narration"] for i in indices)
+        unit["durationFrames"] = sum(scenes[i]["durationFrames"] for i in indices)
+        starts[ids[0]] = unit
+    return [starts[scene["id"]] if scene["id"] in starts else scene for scene in scenes if scene["id"] not in grouped or scene["id"] in starts]
+
+
 def generate(args):
     import numpy as np
     import soundfile as sf
@@ -214,7 +232,7 @@ def generate(args):
     episode = read_json(source)
     fps = episode["format"]["fps"]
     slug(episode["id"])
-    for scene in episode["scenes"]:
+    for scene in narration_units(episode):
         slug(scene["id"])
     key = fingerprint({"pipeline": PIPELINE_VERSION, "episode": episode,
                        "provider": provider_name, "config": selected, "leadIn": config["leadInSeconds"]})[:16]
@@ -227,7 +245,7 @@ def generate(args):
     track = np.zeros(total_samples, dtype=np.float32)
     all_words, reports = [], []
     provider = None  # No model or paid provider is loaded for valid cached scenes.
-    for scene in episode["scenes"]:
+    for scene in narration_units(episode):
         audio_path = folder / f"{scene['id']}.wav"
         cache_path = folder / f"{scene['id']}.cache.json"
         cached = read_json(cache_path) if cache_path.exists() and not args.force else None

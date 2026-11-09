@@ -54,6 +54,6 @@ export function expandGroup(g:Group):Cast[]{
  const x=g.formation==='line'?i-(g.count-1)/2:g.formation==='grid'?i%5-2:(random(g.seed,i*3)-.5)*5;
  const z=g.formation==='grid'?Math.floor(i/5):g.formation==='scatter'?(random(g.seed,i*3+1)-.5)*4:0;
  const offset=[x*g.spacing,0,z*g.spacing];const shift=(v:number[])=>bounded(v.map((n,j)=>n+offset[j]));
- return {...g.member,...(g.member.director?{director:{...g.member.director,seed:(g.member.director.seed+i*7919)%2147483647}}:{}),id:`${g.id}:${i}`,position:shift(g.member.position),scale:clamp(g.member.scale*(1+(random(g.seed,i*3+2)-.5)*2*g.sizeVariation),.5,1.5),animation:g.behavior==='idle'?g.member.animation:g.behavior,path:g.member.path?{...g.member.path,waypoints:g.member.path.waypoints.map(p=>({...p,position:shift(p.position)}))}:undefined};
+ return {...g.member,...(g.member.rig?{rig:{...g.member.rig,seed:(g.member.rig.seed+i*7919)%2147483647,phaseOffset:(g.member.rig.phaseOffset+i*7)%90}}:{}),...(g.member.director?{director:{...g.member.director,seed:(g.member.director.seed+i*7919)%2147483647}}:{}),id:`${g.id}:${i}`,position:shift(g.member.position),scale:clamp(g.member.scale*(1+(random(g.seed,i*3+2)-.5)*2*g.sizeVariation),.5,1.5),animation:g.behavior==='idle'?g.member.animation:g.behavior,path:g.member.path?{...g.member.path,waypoints:g.member.path.waypoints.map(p=>({...p,position:shift(p.position)}))}:undefined};
  });
 }

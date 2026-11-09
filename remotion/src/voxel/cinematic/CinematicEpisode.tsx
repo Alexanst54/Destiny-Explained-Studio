@@ -1,3 +1,5 @@
+import {evaluateStudio,lodFor} from '../../../animation/director';
+import {composeCamera} from '../../../animation/camera';
 import {Color} from 'three';
 import {weatherColors} from '../../../weather/WeatherLayer';
 import {EnvironmentLayer} from '../../../polish/EnvironmentLayer';
@@ -31,8 +33,12 @@ export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alig
   const frame=useCurrentFrame(),{width,height}=useVideoConfig();
   const {scene,shot,events}=atFrame(timeline,frame);
   const guardian=actorPose('guardian',scene.actions,frame,timeline.intensity),ghost=actorPose('ghost',scene.actions,frame,timeline.intensity);
-  const camera=directCamera(cameraState(timeline,scene,shot,reducedMotion&&scenePolish?.camera?shot.start:frame,events),scenePolish?.camera,frame-scene.start,reducedMotion),transition=transitionState(timeline,shot,frame);
   const sourceScene=valid.scenes.find(s=>s.id===scene.sceneId)!;
+  const studio=shot.livingWorld?.studio??sourceScene.livingWorld?.studio;
+  const directedCamera=directCamera(cameraState(timeline,scene,shot,reducedMotion&&(scenePolish?.camera||studio)?shot.start:frame,events),scenePolish?.camera,frame-scene.start,reducedMotion),transition=transitionState(timeline,shot,frame);
+  const actorFrames=useMemo(()=>studio||[...(shot.livingWorld?.cast??sourceScene.livingWorld?.cast??[]),...(shot.livingWorld?.groups??sourceScene.livingWorld?.groups??[]).map(g=>g.member)].some(a=>a.rig)?evaluateStudio(sourceScene.livingWorld,shot.livingWorld,frame-scene.start,reducedMotion,shot.start-scene.start):undefined,[sourceScene,shot,frame,scene.start,reducedMotion,studio]);
+  const camera=composeCamera(directedCamera,studio?.camera,actorFrames??[],frame-scene.start,reducedMotion);
+  if(actorFrames)for(const actor of actorFrames)actor.lod=lodFor(preview&&draftQuality?'draft':studio?.profile??'balanced',Math.hypot(...actor.position.map((v,j)=>v-camera.position[j])));
   const environment=resolveEnvironment(shot.environment,sourceScene.location);
   const atlasReference=shot.atlas??(shot.environment==='scene'?sourceScene.atlas:undefined);
   const atlasState=atlasReference?atlasRecipe(atlasReference):undefined;
@@ -50,7 +56,7 @@ export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alig
   const captions=captionWords(findScene(valid,frame),frame,preview?undefined:words);
   const halo=valid.scenes.find(s=>s.id===scene.sceneId)!.effects.includes('traveler-halo');
   return <AbsoluteFill style={{backgroundColor:'#101a2b'}}>
-    <ThreeCanvas width={width} height={height} dpr={draftQuality?.5:1} camera={{fov:42,near:0.1,far:80,position:[0,4.4,13]}} gl={{antialias:true,alpha:false}}>
+    <ThreeCanvas width={width} height={height} dpr={draftQuality?.5:1} camera={{fov:42,near:0.1,far:studio?400:80,position:[0,4.4,13]}} gl={{antialias:true,alpha:false}}>
       <color attach="background" args={[directedSky]}/>
       <fog attach="fog" args={[directedSky,fogNear,fogFar]}/>
       <FilmCameraRig pose={camera}/>
@@ -59,7 +65,7 @@ export const CinematicEpisode:React.FC<VoxelEpisodeProps>=({episode,preview,alig
       <directionalLight position={[-5,4,-3]} intensity={2*weatherLight} color={style.fill}/>
       {light&&<pointLight position={[0,6,-6]} color="#ffe9a6" intensity={25} distance={15}/>}
       <>{atlasReference?<AtlasEnvironment reference={atlasReference} frame={frame-scene.start} halo={halo}/>:<Stage environment={environment} halo={halo}/>}</>
-      <LivingWorldLayer world={sourceScene.livingWorld} shot={shot.livingWorld} weather={weather} frame={frame-scene.start} shotStart={shot.start-scene.start} quality={draftQuality?'draft':'final'} contactShadows={projectPolish?.contactShadows??true} manageAtmosphere={!projectPolish}/>
+      <LivingWorldLayer world={sourceScene.livingWorld} shot={shot.livingWorld} weather={weather} frame={frame-scene.start} shotStart={shot.start-scene.start} quality={draftQuality?'draft':'final'} contactShadows={projectPolish?.contactShadows??true} manageAtmosphere={!projectPolish} actorFrames={actorFrames} reducedMotion={reducedMotion}/>
       {scenePolish?.environment&&<EnvironmentLayer config={scenePolish.environment} frame={frame-scene.start} detailCount={budget.details} particleCount={budget.atmosphere} reducedMotion={reducedMotion}/>}
       <VoxelElements items={shot.elements??sourceScene.elements??[]} frame={frame-scene.start}/>
       {shot.actors.guardian&&<Guardian rise={guardian.rise} t={frame/30} pose={guardian.joints}

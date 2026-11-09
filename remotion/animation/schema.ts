@@ -1,0 +1,25 @@
+import {z} from 'zod';
+export const rigArchetypes=['humanoid','four-arm','dreg','vandal','captain','servitor','civilian','elder'] as const;
+export const rigAnimations=['idle','walk','run','sprint','stop','turn','look-around','point','talk-gesture','react','fear','flee','fall','kneel','celebrate','look-at-sky'] as const;
+export const profiles=['draft','balanced','final'] as const;
+export const interactionKinds=['look-at','face','walk-together','follow','react','point','form','disperse','flee'] as const;
+export const composerModes=['actor','two-shot','follow','group','reaction','reverse','reveal','wide-close'] as const;
+const frame=z.number().int().min(0).max(18000),duration=z.number().int().min(1).max(18000);
+const id=z.string().regex(/^[a-zA-Z0-9_:-]+$/);
+export const point=z.tuple([z.number().min(-18).max(18),z.number().min(0).max(12),z.number().min(-18).max(18)]);
+export const rigSchema=z.object({version:z.literal(1),archetype:z.enum(rigArchetypes),height:z.number().min(.6).max(3.5).default(2.3),width:z.number().min(.6).max(1.6).default(1),limbLength:z.number().min(.7).max(1.3).default(1),seed:z.number().int().min(0).max(2147483647).default(42),animation:z.enum(rigAnimations).default('idle'),phaseOffset:z.number().int().min(0).max(90).default(0),clips:z.array(z.object({animation:z.enum(rigAnimations),startFrame:frame,durationFrames:duration,transitionFrames:z.number().int().min(0).max(45).default(12)}).strict()).max(32).default([])}).strict();
+export const interactionSchema=z.object({id,kind:z.enum(interactionKinds),actors:z.array(id).min(1).max(32),targetId:id.optional(),targetPoint:point.optional(),startFrame:frame,durationFrames:duration,transitionFrames:z.number().int().min(0).max(45).default(12),spacing:z.number().min(.5).max(4).default(1.3),intensity:z.number().min(0).max(1).default(1)}).strict().superRefine((x,ctx)=>{
+ const fail=(message:string)=>ctx.addIssue({code:'custom',message});
+ if(new Set(x.actors).size!==x.actors.length)fail('Duplicate interaction actor');
+ if(['face','follow'].includes(x.kind)&&!x.targetId)fail('Interaction requires a character target');
+ if(['look-at','point'].includes(x.kind)&&!x.targetId&&!x.targetPoint)fail('Point interaction requires an object or point');
+ if(x.targetId&&x.actors.includes(x.targetId))fail('Interaction cannot target itself');
+});
+export const composerSchema=z.object({mode:z.enum(composerModes),targets:z.array(id).min(1).max(32),startFrame:frame.default(0),durationFrames:duration,intensity:z.number().min(0).max(1).default(.6),margin:z.number().min(1.1).max(2).default(1.35),side:z.enum(['left','right']).default('left')}).strict().superRefine((c,ctx)=>{if(new Set(c.targets).size!==c.targets.length)ctx.addIssue({code:'custom',message:'Duplicate camera target'});if(['two-shot','reverse'].includes(c.mode)&&c.targets.length!==2)ctx.addIssue({code:'custom',message:'Two-shot/reverse requires exactly two targets'});});
+export const studioSchema=z.object({version:z.literal(1),profile:z.enum(profiles).default('balanced'),avoidCollisions:z.boolean().default(true),collisionRadius:z.number().min(.2).max(1.2).default(.65),interactions:z.array(interactionSchema).max(24).default([]),camera:composerSchema.optional()}).strict().superRefine((s,ctx)=>{if(new Set(s.interactions.map(x=>x.id)).size!==s.interactions.length)ctx.addIssue({code:'custom',message:'Duplicate interaction id'});});
+export type Rig=z.infer<typeof rigSchema>;
+export type Studio=z.infer<typeof studioSchema>;
+export type Interaction=z.infer<typeof interactionSchema>;
+export type Composer=z.infer<typeof composerSchema>;
+export type RigAnimation=typeof rigAnimations[number];
+export type Profile=typeof profiles[number];

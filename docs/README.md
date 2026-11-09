@@ -106,3 +106,7 @@ Les boutons **Démo Tourbillon**, **Démo Europe** et **Démo Fundament** charge
 ### Visual Polish 0.6
 
 Le storyboard propose quatre styles de captions supplémentaires, caméras, expressions, atmosphères à budgets, conseils éditoriaux et annuler/rétablir. Démo Riis 0.6 et comparaison avant/après conservent le scénario 0.5. Une narration WAV/MP3 locale peut accompagner le lecteur, sans téléversement ni sauvegarde du fichier dans le JSON. [Guide mobile](../remotion/polish/MOBILE.md) et [mesures réelles](../remotion/polish/REPORT.md).
+
+### Voxel Animation Studio 0.7
+
+Dans un plan voxel, activer le Blocking Studio pour ajouter le pack éliksni, placer les personnages, programmer leurs actions, sélectionner les participants aux relations et cadrer leurs mouvements. La démo Riis 0.7 garde la voix et les sources, avec sept plans de cinq types. [Guide mobile et Colab](../remotion/animation/MOBILE.md).
