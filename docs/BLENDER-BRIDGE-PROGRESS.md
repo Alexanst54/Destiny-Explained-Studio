@@ -18,7 +18,7 @@ Environnement constaté : Blender 4.3.2 présent, Node 22.23.4 disponible dans l
 ## Étapes suivantes
 
 2. Export JSON versionné et tests ciblés : terminé. Contrat v1 / exporterVersion 0.8.1 indépendant des versions de projet ; matrices colonne majeure, caméra réelle 0.7 et omissions explicites. Exemple compact Riis avec six acteurs et détail de décor réduit à 6.
-3. Importeur Blender, axes/caméras/lumières et premier PNG CPU : à faire.
+3. Importeur Blender, axes/caméras/lumières et premier PNG CPU : terminé. Test complémentaire cinematic miniature et détection automatique en cours.
 4. Notebook Pro avec détection GPU et repli CPU, guides et rapport : à faire.
 5. Vérification finale ciblée et PR : à faire. Le contrat/exporteur constitue le premier ensemble cohérent ; publication en PR brouillon maintenant, avant le rendu Blender.
 
@@ -33,3 +33,13 @@ Environnement constaté : Blender 4.3.2 présent, Node 22.23.4 disponible dans l
 - `blender --background --factory-startup --python-expr ...` : Blender 4.3.2, Cycles compilé disponible. Aucun rendu encore exécuté.
 - `node --experimental-strip-types remotion/blender/examples/generate.mjs` : exemple généré.
 - Aucun paquet installé ; aucune suite Chromium ni vidéo relancée.
+
+## Checkpoint 3 — import et PNG standard fonctionnels
+
+- `blender --background --factory-startup --python-exit-code 1 --python remotion/blender/tests/blender_check.py -- remotion/blender/examples/riis-frame-210.json` : réussi, 176 objets ; matrices, axes, FOV, préservation des scènes existantes, géométrie partagée et réglages des deux profils. Cisaillement affine et sphère également vérifiés sans rendu.
+- `blender ... --python remotion/blender/import_scene.py -- remotion/blender/examples/riis-frame-210.json remotion/out/blender/riis-standard-210.png --device cpu --threads 2` : réussi, PNG 1080×1920, Cycles CPU 16 samples, 31,312 s processus complet ; RSS maximal du processus 390 620 Kio. Image inspectée.
+- Le programme `/usr/bin/time` étant absent, aucun paquet n’a été installé : mesure via Python standard `time.monotonic` et `resource`. L’absence du chronomètre n’a pas lancé Blender ni créé de rendu échoué.
+- Sorties ignorées par Git : `remotion/out/blender/`. Aucun MP4, aucune suite Chromium.
+- Aucun module 0.7 réécrit. L’import crée une nouvelle scène Blender, les meshes partagent les géométries unitaires ; les cisaillements sont préservés dans les sommets si Blender ne peut les stocker en LRS.
+
+Prochaine reprise : terminer le notebook et le guide, collecter le petit PNG cinematic et son rapport, puis tests ciblés/checkpoint final. PR brouillon : https://github.com/Alexanst54/Destiny-Explained-Studio/pull/14

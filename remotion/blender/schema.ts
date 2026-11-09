@@ -1,7 +1,7 @@
 import {z} from 'zod';
 const finite=z.number().finite().min(-10000).max(10000),vec=z.tuple([finite,finite,finite]);
 const id=z.string().min(1).max(200),color=z.string().regex(/^#[0-9a-fA-F]{6}$/);
-export const matrixSchema=z.array(finite).length(16).refine(m=>m[3]===0&&m[7]===0&&m[11]===0&&m[15]===1,'Expected affine column-major matrix');
+export const matrixSchema=z.array(finite).length(16).refine(m=>m[3]===0&&m[7]===0&&m[11]===0&&m[15]===1,'Expected affine column-major matrix').refine(m=>Math.abs(m[0]*(m[5]*m[10]-m[9]*m[6])-m[4]*(m[1]*m[10]-m[9]*m[2])+m[8]*(m[1]*m[6]-m[5]*m[2]))>=1e-12,'Singular transform');
 export const bridgeSchema=z.object({format:z.literal('destiny-blender-scene'),version:z.literal(1),exporterVersion:z.literal('0.8.1'),coordinateSystem:z.literal('RIGHT_HANDED_Y_UP'),matrixLayout:z.literal('column-major'),profile:z.enum(['standard','cinematic']),
  source:z.object({projectId:id,projectVersion:z.string(),projectSha256:z.string().regex(/^[a-f0-9]{64}$/),sceneId:id,shotId:id,frame:z.number().int().min(0).max(17999),localFrame:z.number().int().min(0).max(17999),fps:z.literal(30),timing:z.enum(['aligned','estimated']),loreMode:z.string(),visualStatus:z.literal('artistic-reconstruction'),atlas:z.object({locationId:z.string(),variantId:z.string().optional()}).optional(),sourceIds:z.array(id).max(128)}).strict(),
  resolution:z.object({width:z.literal(1080),height:z.literal(1920)}).strict(),
