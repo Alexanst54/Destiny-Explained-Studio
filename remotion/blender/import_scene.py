@@ -53,12 +53,12 @@ def choose_device(scene,requested):
     scene.cycles.device='CPU';info={'requested':requested,'selected':'CPU','backend':None,'devices':[],'notes':[]}
     if requested=='cpu':return info
     prefs=bpy.context.preferences.addons['cycles'].preferences
-    for backend in ['OPTIX','CUDA','HIP','ONEAPI','METAL']:
+    for backend in ['CUDA','OPTIX','HIP','ONEAPI','METAL']:
         try:
             prefs.compute_device_type=backend;prefs.get_devices()
-            gpus=[d for d in prefs.devices if d.type!='CPU']
+            gpus=[d for d in prefs.devices if d.type==backend]
             if not gpus:continue
-            for d in prefs.devices:d.use=d.type!='CPU'
+            for d in prefs.devices:d.use=d.type==backend
             scene.cycles.device='GPU';info.update(selected='GPU',backend=backend,devices=[d.name for d in gpus]);return info
         except (TypeError,RuntimeError):continue
     info['notes'].append('No compatible Cycles GPU found; CPU fallback selected.')
@@ -140,7 +140,7 @@ def main(argv=None):
         try:bpy.ops.render.render(write_still=True,scene=scene.name)
         except RuntimeError as error:
             if info['selected']!='GPU' or args.device!='auto':raise
-            info['notes'].append('GPU render failed; one CPU retry: '+str(error));scene.cycles.device='CPU';info['selected']='CPU';info['backend']=None;bpy.ops.render.render(write_still=True,scene=scene.name)
+            info['notes'].append('GPU render failed; one CPU retry: '+str(error));scene.cycles.device='CPU';info['selected']='CPU';info['backend']=None;info['devices']=[];bpy.ops.render.render(write_still=True,scene=scene.name)
     report={'bridgeVersion':1,'blenderVersion':bpy.app.version_string,'source':data['source'],'environment':data.get('environment'),'objects':len(objects),'sharedGeometryCount':len({o.data.as_pointer() for o in objects.values()}),'configuration':info,'rendered':not args.check_only,'output':str(output) if not args.check_only else None,'width':int(scene.render.resolution_x*args.scale/100),'height':int(scene.render.resolution_y*args.scale/100),'secondsInsideBlender':round(time.monotonic()-started,3),'maxProcessRssKiB':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,'memoryScope':'This Blender process maximum RSS on Linux; not total GPU/driver memory.','omissions':data['omissions']}
     output.with_suffix('.report.json').write_text(json.dumps(report,indent=2)+'\n');print('BRIDGE_RESULT '+json.dumps(report),flush=True)
 

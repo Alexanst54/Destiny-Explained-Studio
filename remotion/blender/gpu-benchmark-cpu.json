@@ -1,0 +1,159 @@
+{
+  "status": "complete",
+  "projectSha256": "944c2b9d20108680a271176c4cd1814fd3766041da7a1f5a92abd870954a5f54",
+  "baselineRevision": "1effd88e089ef4726600a223f97de8fe9abafe78",
+  "candidateRevision": "71dcdc408447a03ca7a95624cce40eb141279252",
+  "candidateDiff": "",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "cpuModel": "AMD EPYC 9V74 80-Core Processor",
+  "cpuAffinity": [
+    0,
+    1,
+    2
+  ],
+  "blender": "Blender 4.3.2",
+  "node": "v24.22.1",
+  "frameCount": 90,
+  "fps": 30,
+  "seed": 42,
+  "lighting": "dawn",
+  "deviceRequested": "cpu",
+  "threads": 2,
+  "results": [
+    {
+      "quality": "draft",
+      "scale": 10,
+      "mode": "baseline",
+      "folder": "/workspace/Destiny-Explained-Studio/work/benchmark-draft/draft/baseline/cache/ed5dd041ddbe1db478640db06cd83670d971088f99544397e564dcebe641787d",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/Destiny-Explained-Studio/work/baseline/remotion/blender/sequence.py",
+        "/workspace/Destiny-Explained-Studio/remotion/out/hybrid_riis_07-ready.json",
+        "/workspace/Destiny-Explained-Studio/work/benchmark-draft/draft/baseline/cache",
+        "--count",
+        "90",
+        "--start",
+        "120",
+        "--detail",
+        "draft",
+        "--scale",
+        "10",
+        "--device",
+        "cpu",
+        "--threads",
+        "2",
+        "--timeout",
+        "600",
+        "--seed",
+        "42",
+        "--lighting",
+        "dawn",
+        "--node",
+        "node",
+        "--blender",
+        "blender",
+        "--public",
+        "/workspace/Destiny-Explained-Studio/work/benchmark-draft/draft/baseline/public"
+      ],
+      "totalSeconds": 135.37797449899995,
+      "averageSecondsPerFrame": 1.504199716655555,
+      "sequenceSeconds": 132.896,
+      "peakBlenderRssKiB": 286736,
+      "gpu": {
+        "scope": "Device-wide samples every >=5s; may include other processes and miss peaks.",
+        "sampleCount": 0,
+        "samples": [],
+        "peakMemoryMiB": null,
+        "meanUtilizationPercent": null,
+        "note": "nvidia-smi unavailable"
+      },
+      "effectiveConfigurations": [
+        [
+          "CPU",
+          null,
+          []
+        ]
+      ],
+      "allFramesGpu": false
+    },
+    {
+      "quality": "draft",
+      "scale": 10,
+      "mode": "persistent",
+      "folder": "/workspace/Destiny-Explained-Studio/work/benchmark-draft/draft/persistent/cache/7b07f3c00a33623e3d425d5ae8d112c648de3548f84bdcefd83bc8e1e607a056",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/Destiny-Explained-Studio/remotion/blender/sequence.py",
+        "/workspace/Destiny-Explained-Studio/remotion/out/hybrid_riis_07-ready.json",
+        "/workspace/Destiny-Explained-Studio/work/benchmark-draft/draft/persistent/cache",
+        "--count",
+        "90",
+        "--start",
+        "120",
+        "--detail",
+        "draft",
+        "--scale",
+        "10",
+        "--device",
+        "cpu",
+        "--threads",
+        "2",
+        "--timeout",
+        "600",
+        "--seed",
+        "42",
+        "--lighting",
+        "dawn",
+        "--node",
+        "node",
+        "--blender",
+        "blender",
+        "--public",
+        "/workspace/Destiny-Explained-Studio/work/benchmark-draft/draft/persistent/public",
+        "--renderer",
+        "persistent",
+        "--no-fallback"
+      ],
+      "totalSeconds": 27.072551180999994,
+      "averageSecondsPerFrame": 0.30080612423333325,
+      "sequenceSeconds": 24.878,
+      "peakBlenderRssKiB": 276868,
+      "gpu": {
+        "scope": "Device-wide samples every >=5s; may include other processes and miss peaks.",
+        "sampleCount": 0,
+        "samples": [],
+        "peakMemoryMiB": null,
+        "meanUtilizationPercent": null,
+        "note": "nvidia-smi unavailable"
+      },
+      "effectiveConfigurations": [
+        [
+          "CPU",
+          null,
+          []
+        ]
+      ],
+      "allFramesGpu": false
+    }
+  ],
+  "limitations": [
+    "Sequential single trial per quality, baseline first; repeat with reversed order to assess host variability.",
+    "GPU telemetry is device-wide sampled data, not process-exclusive peaks.",
+    "No GPU speed claim unless both successful runs actually rendered all frames on GPU with matching devices/backends."
+  ],
+  "comparisons": [
+    {
+      "quality": "draft",
+      "baselineOverPersistent": 5.000562141111055,
+      "pixels": {
+        "status": "measured",
+        "frames": 90,
+        "identicalDecodedFrames": 90,
+        "maxChannelError8bit": 0,
+        "meanAbsoluteRgbError8bit": 0.0,
+        "scope": "Decoded image comparison; does not validate narration, captions or subjective quality."
+      },
+      "gpuComparisonEligible": false
+    }
+  ]
+}
