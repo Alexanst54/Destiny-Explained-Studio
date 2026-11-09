@@ -1,3 +1,5 @@
+import {studioReferences} from '../../../animation/director.ts';
+import {directWorld} from '../../../living/director.ts';
 import {scenePolishSchema} from '../../../polish/schema.ts';
 import {hybridVisualSchema,shortsSchema} from '../../../hybrid/schema.ts';
 import {allSourceIds,visualReferences,hybridWarnings} from '../../../hybrid/state.ts';
@@ -27,12 +29,12 @@ const scene = z.object({id: text, startFrame: frames,
   effects: z.array(z.enum(effects)), narration: text}).strict();
 
 export const episodeSchema = z.object({
-  schemaVersion: z.enum(['0.1.0-draft','0.1','0.1.0','0.2','0.2.0','0.3.0','0.4.0','0.5.0','0.6.0']), id: text, title: text, language: z.literal('en-US'),
+  schemaVersion: z.enum(['0.1.0-draft','0.1','0.1.0','0.2','0.2.0','0.3.0','0.4.0','0.5.0','0.6.0','0.7.0']), id: text, title: text, language: z.literal('en-US'),
   format: z.object({width: z.literal(1080), height: z.literal(1920), fps: z.literal(30),
     durationFrames: z.number().int().positive().max(18000)}).strict(),
   style: z.literal('classic-voxel'), setting: locationSchema, disclaimer: text,
   audio: z.object({voiceover: z.object({enabled: z.boolean(), language: z.literal('en-US'),
-    source: publicPath, status: z.enum(['to-generate', 'ready'])}).strict(), music: z.null()}).strict(),
+    source: publicPath, groups:z.array(z.array(z.string().min(1)).min(2).max(16)).max(8).optional(), status: z.enum(['to-generate', 'ready'])}).strict(), music: z.null()}).strict(),
   characters: z.array(z.discriminatedUnion('id', [
     z.object({id: z.literal('guardian'), model: z.literal('voxel-guardian-v1')}).strict(),
     z.object({id: z.literal('ghost'), model: z.literal('voxel-ghost-v1')}).strict(),
@@ -61,6 +63,9 @@ export const episodeSchema = z.object({
     if(!declared.has(scene.location))issue(['scenes',i,'location'],'Environment must be declared');
     const plan=episode.direction?.scenes.find(p=>p.sceneId===scene.id);
     const checkLiving=(shot:import('../../../living/schema').LivingShot|undefined,weather:typeof scene.weather,path:(string|number)[])=>{
+      const studio=shot?.studio??scene.livingWorld?.studio;
+      if(studio?.camera&&episode.render.composition==='VoxelEpisode')issue(path,'Character camera requires a cinematic or hybrid composition');
+      if(studio)try{for(const message of studioReferences(directWorld(scene.livingWorld,shot),studio,scene.durationFrames,scene.livingWorld?.props??[]))issue(path,message);}catch(e){issue(path,(e as Error).message);}
       const cast=shot?.cast??scene.livingWorld?.cast??[],groups=shot?.groups??scene.livingWorld?.groups??[];
       if(cast.length+groups.reduce((n,g)=>n+g.count,0)>32)issue(path,'CPU population budget exceeds 32');
       const keys=[...cast.map(a=>a.id),...groups.map(g=>g.id)];if(new Set(keys).size!==keys.length)issue(path,'Duplicate living world id');
@@ -82,7 +87,7 @@ export const episodeSchema = z.object({
     issue(['render','composition'], 'Direction requires the cinematic composition');
   if(episode.render.composition==='HybridShort'){
     if(new TextEncoder().encode(JSON.stringify(episode)).byteLength>2*1024*1024)issue(['shorts'],'Hybrid project exceeds the 2 MiB editor/Colab transfer limit');
-    if(!['0.5.0','0.6.0'].includes(episode.schemaVersion)||!episode.shorts||!episode.direction)issue(['shorts'],'HybridShort requires version 0.5.0 or 0.6.0, shorts settings and direction');
+    if(!['0.5.0','0.6.0','0.7.0'].includes(episode.schemaVersion)||!episode.shorts||!episode.direction)issue(['shorts'],'HybridShort requires version 0.5.0 or 0.6.0, shorts settings and direction');
     if(episode.format.durationFrames<450||episode.format.durationFrames>1800)issue(['format','durationFrames'],'Hybrid Shorts must last 15–60 seconds');
     const sourceIds=new Set([...allSourceIds,...(episode.shorts?.sources.map(s=>s.id)??[])]);
     for(const id of episode.shorts?.sources.map(s=>s.id)??[])if(allSourceIds.has(id))issue(['shorts','sources'],'Project source shadows an existing source id');
@@ -96,6 +101,8 @@ export const episodeSchema = z.object({
     });
     for(const t of episode.shorts?.audio.tracks??[])if(t.startFrame+t.durationFrames>episode.format.durationFrames)issue(['shorts','audio'],'Audio track exceeds project duration');
   }else if(episode.shorts||episode.scenes.some(s=>s.visual||s.polish))issue(['render','composition'],'Hybrid content requires HybridShort; no silent omission');
+  const grouped=new Set<string>();
+  for(const group of episode.audio.voiceover.groups??[]){let previous=-1;for(const id of group){const at=episode.scenes.findIndex(s=>s.id===id);if(at<0||grouped.has(id)||previous>=0&&at!==previous+1)issue(['audio','voiceover','groups'],'Narration groups require unique, known, contiguous scene ids');grouped.add(id);previous=at;}}
   const ids = new Set<string>();
   let cursor = 0;
   episode.scenes.forEach((s, i) => {

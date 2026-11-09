@@ -1,0 +1,1965 @@
+{
+  "baseCommit": "da07baab103b5b1b9534bdd03bb22528ec1f1e62",
+  "branch": "feat/voxel-animation-0.7",
+  "dateUTC": "2026-11-08",
+  "baseline": {
+    "nodePassed": 65,
+    "pythonPassed": 11
+  },
+  "tests": {
+    "nodePassed": 79,
+    "pythonPassed": 14,
+    "typecheck": "passed",
+    "staticBuild": "passed",
+    "chromiumSuites": 6,
+    "widths": [
+      320,
+      360,
+      393,
+      1280
+    ],
+    "physicalAndroid": "not executed",
+    "remoteColab": "not executed",
+    "browserResults": {
+      "browser": "PASS: 4 viewports, import/export payloads (download click mocked), unknown fields, XSS text, storage/reload, invalid draft, plans, durations, library scene/shot selection, element editing, Atlas filters/variants/scene+shot selection/persistence; no page errors.",
+      "living.browser": "PASS Living Worlds: touch, 4 widths, search, add cast, animation, weather transition, warning, save/reload, renderer export.",
+      "offline.browser": "PASS: cached static editor reloads offline with saved scene and searchable character catalog.",
+      "hybrid.browser": "PASS Hybrid: touch storyboard, reorder/duplicate/delete, content, captions, shared preview, persistence/export, four widths, reduced motion, seven caption styles with long tokens, no page errors.",
+      "polish.browser": "PASS 0.6: four widths, touch targets, foldouts, presets, undo/redo, local WAV play/pause/seek/resume/mute and MP3 playback, before/after, no upload or blob in JSON, persistence, no page errors.",
+      "animation.browser": "PASS Animation Studio: 4 widths, touch controls, rig/height/action/waypoints, undo/redo, composer, exact frame preview, grouped narration, lossless type changes/export/save/reload and reduced motion; no page errors."
+    },
+    "editorSequentialChangesPreserved": true
+  },
+  "narration": {
+    "words": 64,
+    "durationFrames": 1050,
+    "fps": 30,
+    "regeneratedWithRealKokoro": true,
+    "regeneratedWavBinaryIdenticalToOriginal": true,
+    "regeneratedWordsIdenticalToOriginal": true,
+    "originalWavSha256": "8d7d611e2c228cb7b50b8dc7a2ea052d6c917bc530b3f7f155e20c907e9ab470",
+    "originalWordsSha256": "bd3a5e28d0aea7d23365795eeac114d7800930c3ad72dd69fe2a8ea13c25ed54",
+    "regenerationReport": {
+      "provider": "kokoro",
+      "voice": "af_heart",
+      "speed": 1.0,
+      "model": {
+        "repo": "hexgrad/Kokoro-82M",
+        "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+        "voice": "af_heart",
+        "speed": 1.0,
+        "language": "a",
+        "threads": 2
+      },
+      "sourceSha256": "061270479607a6417adac4df207fbde46da1fd295a9ef1ca5abb167468b5412d",
+      "sampleRate": 24000,
+      "timelineSeconds": 35.0,
+      "speechSeconds": 29.45,
+      "wordCount": 64,
+      "scenes": [
+        {
+          "id": "hook",
+          "source": "assets/narration/hybrid-riis-07/kokoro-b77fb6d6268e6546/hook.wav",
+          "startFrame": 0,
+          "budgetSeconds": 4.0,
+          "audioSeconds": 2.35,
+          "speechSeconds": 2.35,
+          "paddingSeconds": 1.65,
+          "wordCount": 6,
+          "alignment": "kokoro-predicted-phoneme-durations"
+        },
+        {
+          "id": "riis-before",
+          "source": "assets/narration/hybrid-riis-07/kokoro-b77fb6d6268e6546/riis-before.wav",
+          "startFrame": 120,
+          "budgetSeconds": 7.0,
+          "audioSeconds": 5.25,
+          "speechSeconds": 5.25,
+          "paddingSeconds": 1.75,
+          "wordCount": 13,
+          "alignment": "kokoro-predicted-phoneme-durations"
+        },
+        {
+          "id": "departure-map",
+          "source": "assets/narration/hybrid-riis-07/kokoro-b77fb6d6268e6546/departure-map.wav",
+          "startFrame": 330,
+          "budgetSeconds": 6.0,
+          "audioSeconds": 5.05,
+          "speechSeconds": 5.05,
+          "paddingSeconds": 0.9500000000000002,
+          "wordCount": 12,
+          "alignment": "kokoro-predicted-phoneme-durations"
+        },
+        {
+          "id": "exodus",
+          "source": "assets/narration/hybrid-riis-07/kokoro-b77fb6d6268e6546/exodus.wav",
+          "startFrame": 510,
+          "budgetSeconds": 10.0,
+          "audioSeconds": 9.35,
+          "speechSeconds": 9.35,
+          "paddingSeconds": 0.6500000000000004,
+          "wordCount": 17,
+          "alignment": "kokoro-predicted-phoneme-durations"
+        },
+        {
+          "id": "history-timeline",
+          "source": "assets/narration/hybrid-riis-07/kokoro-b77fb6d6268e6546/history-timeline.wav",
+          "startFrame": 810,
+          "budgetSeconds": 8.0,
+          "audioSeconds": 7.45,
+          "speechSeconds": 7.45,
+          "paddingSeconds": 0.5499999999999998,
+          "wordCount": 16,
+          "alignment": "kokoro-predicted-phoneme-durations"
+        }
+      ],
+      "readyEpisode": "out/hybrid_riis_07-ready.json"
+    }
+  },
+  "initialFindings": [
+    "Per-shot TTS exceeded the timeline shot by 0.1 s; contiguous narration groups preserve the original complete phrase and timestamps.",
+    "First benchmark output path was rejected by the existing flat out/name.mp4 schema before rendering; benchmark paths corrected without weakening the schema."
+  ],
+  "performance": {
+    "comparison": [
+      {
+        "label": "sample-0.5",
+        "exitCode": 0,
+        "wallSeconds": 16.03,
+        "memory": {
+          "rssKiB": 1801376,
+          "pssKiB": 1450862,
+          "categories": {
+            "node": {
+              "rssKiB": 906152,
+              "pssKiB": 858064,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 874392,
+              "pssKiB": 573471,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 184912,
+              "pssKiB": 183343,
+              "processes": 2
+            }
+          },
+          "samples": 43,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 903740,
+                "pssKiB": 855623,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 874392,
+                "pssKiB": 573471,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 23244,
+                "pssKiB": 21768,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1801376,
+            "pssKiB": 1450862,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 903740,
+                "pssKiB": 855623,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 874392,
+                "pssKiB": 573471,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 23244,
+                "pssKiB": 21768,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1801376,
+            "pssKiB": 1450862,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 163177,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      },
+      {
+        "label": "sample-0.6",
+        "exitCode": 0,
+        "wallSeconds": 15.77,
+        "memory": {
+          "rssKiB": 1637400,
+          "pssKiB": 1311455,
+          "categories": {
+            "node": {
+              "rssKiB": 748748,
+              "pssKiB": 700660,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 868976,
+              "pssKiB": 566482,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 221780,
+              "pssKiB": 220199,
+              "processes": 2
+            }
+          },
+          "samples": 42,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 748044,
+                "pssKiB": 699927,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 868976,
+                "pssKiB": 566482,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20380,
+                "pssKiB": 18904,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1637400,
+            "pssKiB": 1285313,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 748424,
+                "pssKiB": 700329,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 622204,
+                "pssKiB": 390927,
+                "processes": 6
+              },
+              "other": {
+                "rssKiB": 221780,
+                "pssKiB": 220199,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1592408,
+            "pssKiB": 1311455,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 211312,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      },
+      {
+        "label": "sample-0.7",
+        "exitCode": 0,
+        "wallSeconds": 16.1,
+        "memory": {
+          "rssKiB": 1646008,
+          "pssKiB": 1330085,
+          "categories": {
+            "node": {
+              "rssKiB": 753144,
+              "pssKiB": 705114,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 872732,
+              "pssKiB": 570376,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 237260,
+              "pssKiB": 235683,
+              "processes": 2
+            }
+          },
+          "samples": 39,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 752804,
+                "pssKiB": 704751,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 872732,
+                "pssKiB": 570376,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20472,
+                "pssKiB": 18996,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1646008,
+            "pssKiB": 1294123,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 753144,
+                "pssKiB": 705114,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 620456,
+                "pssKiB": 389288,
+                "processes": 6
+              },
+              "other": {
+                "rssKiB": 237260,
+                "pssKiB": 235683,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1610860,
+            "pssKiB": 1330085,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 180176,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      }
+    ],
+    "profiles": [
+      {
+        "label": "draft-4",
+        "exitCode": 0,
+        "wallSeconds": 15.11,
+        "memory": {
+          "rssKiB": 1640712,
+          "pssKiB": 1303276,
+          "categories": {
+            "node": {
+              "rssKiB": 752340,
+              "pssKiB": 704310,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 869184,
+              "pssKiB": 568191,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 218712,
+              "pssKiB": 217131,
+              "processes": 2
+            }
+          },
+          "samples": 38,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 751148,
+                "pssKiB": 703095,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 869184,
+                "pssKiB": 568191,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20380,
+                "pssKiB": 18904,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1640712,
+            "pssKiB": 1290190,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 752340,
+                "pssKiB": 704310,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 613228,
+                "pssKiB": 381835,
+                "processes": 6
+              },
+              "other": {
+                "rssKiB": 218712,
+                "pssKiB": 217131,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1584280,
+            "pssKiB": 1303276,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 123463,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      },
+      {
+        "label": "draft-8",
+        "exitCode": 0,
+        "wallSeconds": 15.34,
+        "memory": {
+          "rssKiB": 1645096,
+          "pssKiB": 1303061,
+          "categories": {
+            "node": {
+              "rssKiB": 749888,
+              "pssKiB": 701861,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 875220,
+              "pssKiB": 574559,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 213592,
+              "pssKiB": 212015,
+              "processes": 2
+            }
+          },
+          "samples": 40,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 749312,
+                "pssKiB": 701259,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 875220,
+                "pssKiB": 574559,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20564,
+                "pssKiB": 19088,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1645096,
+            "pssKiB": 1294906,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 749588,
+                "pssKiB": 701558,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 620708,
+                "pssKiB": 389488,
+                "processes": 6
+              },
+              "other": {
+                "rssKiB": 213592,
+                "pssKiB": 212015,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1583888,
+            "pssKiB": 1303061,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 126900,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      },
+      {
+        "label": "draft-16",
+        "exitCode": 0,
+        "wallSeconds": 16.03,
+        "memory": {
+          "rssKiB": 1639100,
+          "pssKiB": 1306802,
+          "categories": {
+            "node": {
+              "rssKiB": 749744,
+              "pssKiB": 701688,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 869312,
+              "pssKiB": 566275,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 225036,
+              "pssKiB": 223455,
+              "processes": 2
+            }
+          },
+          "samples": 41,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 749468,
+                "pssKiB": 701389,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 869312,
+                "pssKiB": 566275,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20320,
+                "pssKiB": 18844,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1639100,
+            "pssKiB": 1286508,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 749744,
+                "pssKiB": 701688,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 612980,
+                "pssKiB": 381659,
+                "processes": 6
+              },
+              "other": {
+                "rssKiB": 225036,
+                "pssKiB": 223455,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1587760,
+            "pssKiB": 1306802,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 126246,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      },
+      {
+        "label": "balanced-4",
+        "exitCode": 0,
+        "wallSeconds": 15.08,
+        "memory": {
+          "rssKiB": 1641756,
+          "pssKiB": 1330595,
+          "categories": {
+            "node": {
+              "rssKiB": 759468,
+              "pssKiB": 711454,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 862092,
+              "pssKiB": 559923,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 231384,
+              "pssKiB": 229807,
+              "processes": 2
+            }
+          },
+          "samples": 36,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 759180,
+                "pssKiB": 711127,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 862000,
+                "pssKiB": 559747,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20576,
+                "pssKiB": 19100,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1641756,
+            "pssKiB": 1289974,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 759468,
+                "pssKiB": 711454,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 620452,
+                "pssKiB": 389334,
+                "processes": 6
+              },
+              "other": {
+                "rssKiB": 231384,
+                "pssKiB": 229807,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1611304,
+            "pssKiB": 1330595,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 123463,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      },
+      {
+        "label": "balanced-8",
+        "exitCode": 0,
+        "wallSeconds": 15.15,
+        "memory": {
+          "rssKiB": 1624704,
+          "pssKiB": 1272611,
+          "categories": {
+            "node": {
+              "rssKiB": 741744,
+              "pssKiB": 693729,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 863748,
+              "pssKiB": 561184,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 175236,
+              "pssKiB": 173655,
+              "processes": 2
+            }
+          },
+          "samples": 40,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 740608,
+                "pssKiB": 692555,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 863748,
+                "pssKiB": 561184,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20348,
+                "pssKiB": 18872,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1624704,
+            "pssKiB": 1272611,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 740608,
+                "pssKiB": 692555,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 863748,
+                "pssKiB": 561184,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20348,
+                "pssKiB": 18872,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1624704,
+            "pssKiB": 1272611,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 126900,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      },
+      {
+        "label": "balanced-16",
+        "exitCode": 0,
+        "wallSeconds": 15.29,
+        "memory": {
+          "rssKiB": 1633328,
+          "pssKiB": 1291724,
+          "categories": {
+            "node": {
+              "rssKiB": 740040,
+              "pssKiB": 692265,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 873392,
+              "pssKiB": 570651,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 218560,
+              "pssKiB": 217031,
+              "processes": 7
+            }
+          },
+          "samples": 39,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 739468,
+                "pssKiB": 691671,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 873392,
+                "pssKiB": 570651,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20468,
+                "pssKiB": 18992,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1633328,
+            "pssKiB": 1281314,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 740040,
+                "pssKiB": 692265,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 613628,
+                "pssKiB": 382428,
+                "processes": 6
+              },
+              "other": {
+                "rssKiB": 218560,
+                "pssKiB": 217031,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1572228,
+            "pssKiB": 1291724,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 126246,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      },
+      {
+        "label": "final-4",
+        "exitCode": 0,
+        "wallSeconds": 14.07,
+        "memory": {
+          "rssKiB": 1657536,
+          "pssKiB": 1308896,
+          "categories": {
+            "node": {
+              "rssKiB": 750068,
+              "pssKiB": 702038,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 889060,
+              "pssKiB": 589949,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 206112,
+              "pssKiB": 204531,
+              "processes": 2
+            }
+          },
+          "samples": 36,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 748324,
+                "pssKiB": 700271,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 889060,
+                "pssKiB": 589949,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20152,
+                "pssKiB": 18676,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1657536,
+            "pssKiB": 1308896,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 748324,
+                "pssKiB": 700271,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 889060,
+                "pssKiB": 589949,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20152,
+                "pssKiB": 18676,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1657536,
+            "pssKiB": 1308896,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 123463,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      },
+      {
+        "label": "final-8",
+        "exitCode": 0,
+        "wallSeconds": 14.09,
+        "memory": {
+          "rssKiB": 1643648,
+          "pssKiB": 1333689,
+          "categories": {
+            "node": {
+              "rssKiB": 750456,
+              "pssKiB": 702426,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 874496,
+              "pssKiB": 571954,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 242772,
+              "pssKiB": 241191,
+              "processes": 2
+            }
+          },
+          "samples": 36,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 750144,
+                "pssKiB": 702091,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 873468,
+                "pssKiB": 570807,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20036,
+                "pssKiB": 18560,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1643648,
+            "pssKiB": 1291458,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 750456,
+                "pssKiB": 702426,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 621380,
+                "pssKiB": 390072,
+                "processes": 6
+              },
+              "other": {
+                "rssKiB": 242772,
+                "pssKiB": 241191,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1614608,
+            "pssKiB": 1333689,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 126900,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      },
+      {
+        "label": "final-16",
+        "exitCode": 0,
+        "wallSeconds": 14.73,
+        "memory": {
+          "rssKiB": 1630156,
+          "pssKiB": 1300000,
+          "categories": {
+            "node": {
+              "rssKiB": 741944,
+              "pssKiB": 693930,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 868584,
+              "pssKiB": 565998,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 217648,
+              "pssKiB": 216067,
+              "processes": 2
+            }
+          },
+          "samples": 37,
+          "allSamplesPssComplete": true,
+          "atPeakrssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 741672,
+                "pssKiB": 693619,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 868248,
+                "pssKiB": 565383,
+                "processes": 7
+              },
+              "other": {
+                "rssKiB": 20236,
+                "pssKiB": 18760,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1630156,
+            "pssKiB": 1277762,
+            "pssComplete": true
+          },
+          "atPeakpssKiB": {
+            "categories": {
+              "node": {
+                "rssKiB": 741944,
+                "pssKiB": 693930,
+                "processes": 2
+              },
+              "chromium": {
+                "rssKiB": 621280,
+                "pssKiB": 390003,
+                "processes": 6
+              },
+              "other": {
+                "rssKiB": 217648,
+                "pssKiB": 216067,
+                "processes": 2
+              }
+            },
+            "rssKiB": 1580872,
+            "pssKiB": 1300000,
+            "pssComplete": true
+          }
+        },
+        "sampleIntervalSeconds": 0.25,
+        "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+        "framesRequested": 12,
+        "bytes": 126246,
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "0.400000",
+              "nb_frames": "12",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "0.405000",
+              "nb_frames": "21"
+            }
+          ]
+        }
+      }
+    ],
+    "full": {
+      "label": "full-0.7",
+      "exitCode": 0,
+      "wallSeconds": 536.22,
+      "memory": {
+        "rssKiB": 2222420,
+        "pssKiB": 1870301,
+        "categories": {
+          "node": {
+            "rssKiB": 754956,
+            "pssKiB": 706911,
+            "processes": 2
+          },
+          "chromium": {
+            "rssKiB": 965868,
+            "pssKiB": 620091,
+            "processes": 8
+          },
+          "other": {
+            "rssKiB": 563928,
+            "pssKiB": 562340,
+            "processes": 2
+          }
+        },
+        "samples": 1067,
+        "allSamplesPssComplete": true,
+        "atPeakrssKiB": {
+          "categories": {
+            "node": {
+              "rssKiB": 754956,
+              "pssKiB": 706911,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 908440,
+              "pssKiB": 605941,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 559024,
+              "pssKiB": 557449,
+              "processes": 2
+            }
+          },
+          "rssKiB": 2222420,
+          "pssKiB": 1870301,
+          "pssComplete": true
+        },
+        "atPeakpssKiB": {
+          "categories": {
+            "node": {
+              "rssKiB": 754956,
+              "pssKiB": 706911,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 908440,
+              "pssKiB": 605941,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 559024,
+              "pssKiB": 557449,
+              "processes": 2
+            }
+          },
+          "rssKiB": 2222420,
+          "pssKiB": 1870301,
+          "pssComplete": true
+        }
+      },
+      "sampleIntervalSeconds": 0.25,
+      "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+      "framesRequested": 1050,
+      "bytes": 12496448,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "r_frame_rate": "30/1",
+            "duration": "35.000000",
+            "nb_frames": "1050",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0",
+            "duration": "35.008000",
+            "nb_frames": "1643"
+          }
+        ]
+      }
+    },
+    "historicalFullRendersFrom06": [
+      {
+        "version": "0.5",
+        "exitCode": 0,
+        "wallSeconds": 292.4,
+        "maxChildRssKiB": 639304,
+        "concurrency": 1,
+        "gl": "swangle",
+        "memoryScope": "Maximum observed child RSS; not total concurrent Chromium memory",
+        "bytes": 7005278,
+        "sha256": "aed4e002a437268c4a5fb83f1bfd87ed775137b535d60a850b697470369a23a5",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "35.000000",
+              "nb_frames": "1050",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "35.008000",
+              "nb_frames": "1643"
+            }
+          ],
+          "format": {
+            "duration": "35.008000",
+            "size": "7005278"
+          }
+        }
+      },
+      {
+        "version": "0.6",
+        "exitCode": 0,
+        "wallSeconds": 371.91,
+        "maxChildRssKiB": 630308,
+        "concurrency": 1,
+        "gl": "swangle",
+        "memoryScope": "Maximum observed child RSS; not total concurrent Chromium memory",
+        "bytes": 11926108,
+        "sha256": "9a43ccd68214959f6b8814979f7fc55f87a118e1d1994dec8c6f620ab6361669",
+        "probe": {
+          "programs": [],
+          "stream_groups": [],
+          "streams": [
+            {
+              "codec_name": "h264",
+              "width": 1080,
+              "height": 1920,
+              "r_frame_rate": "30/1",
+              "duration": "35.000000",
+              "nb_frames": "1050",
+              "side_data_list": [
+                {}
+              ]
+            },
+            {
+              "codec_name": "aac",
+              "sample_rate": "48000",
+              "channels": 2,
+              "r_frame_rate": "0/0",
+              "duration": "35.008000",
+              "nb_frames": "1643"
+            }
+          ],
+          "format": {
+            "duration": "35.008000",
+            "size": "11926108"
+          }
+        }
+      }
+    ],
+    "failedBenchmarkOutputPath": {
+      "mode": "comparison",
+      "results": [
+        {
+          "label": "sample-0.5",
+          "exitCode": 1,
+          "wallSeconds": 0.71,
+          "memory": {
+            "rssKiB": 105360,
+            "pssKiB": 104332,
+            "categories": {
+              "node": {
+                "rssKiB": 105360,
+                "pssKiB": 104332,
+                "processes": 1
+              },
+              "chromium": {
+                "rssKiB": 0,
+                "pssKiB": 0,
+                "processes": 0
+              },
+              "other": {
+                "rssKiB": 0,
+                "pssKiB": 0,
+                "processes": 0
+              }
+            },
+            "samples": 2,
+            "allSamplesPssComplete": true,
+            "atPeakrssKiB": {
+              "categories": {
+                "node": {
+                  "rssKiB": 105360,
+                  "pssKiB": 104332,
+                  "processes": 1
+                },
+                "chromium": {
+                  "rssKiB": 0,
+                  "pssKiB": 0,
+                  "processes": 0
+                },
+                "other": {
+                  "rssKiB": 0,
+                  "pssKiB": 0,
+                  "processes": 0
+                }
+              },
+              "rssKiB": 105360,
+              "pssKiB": 104332,
+              "pssComplete": true
+            },
+            "atPeakpssKiB": {
+              "categories": {
+                "node": {
+                  "rssKiB": 105360,
+                  "pssKiB": 104332,
+                  "processes": 1
+                },
+                "chromium": {
+                  "rssKiB": 0,
+                  "pssKiB": 0,
+                  "processes": 0
+                },
+                "other": {
+                  "rssKiB": 0,
+                  "pssKiB": 0,
+                  "processes": 0
+                }
+              },
+              "rssKiB": 105360,
+              "pssKiB": 104332,
+              "pssComplete": true
+            }
+          },
+          "sampleIntervalSeconds": 0.25,
+          "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+          "framesRequested": 12
+        }
+      ]
+    },
+    "firstFullRun": {
+      "label": "full-0.7",
+      "exitCode": 0,
+      "wallSeconds": 393.13,
+      "memory": {
+        "rssKiB": 2195416,
+        "pssKiB": 1843269,
+        "categories": {
+          "node": {
+            "rssKiB": 730984,
+            "pssKiB": 682926,
+            "processes": 2
+          },
+          "chromium": {
+            "rssKiB": 996860,
+            "pssKiB": 651405,
+            "processes": 8
+          },
+          "other": {
+            "rssKiB": 557268,
+            "pssKiB": 555674,
+            "processes": 2
+          }
+        },
+        "samples": 922,
+        "allSamplesPssComplete": true,
+        "atPeakrssKiB": {
+          "categories": {
+            "node": {
+              "rssKiB": 730984,
+              "pssKiB": 682926,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 911908,
+              "pssKiB": 609400,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 552524,
+              "pssKiB": 550943,
+              "processes": 2
+            }
+          },
+          "rssKiB": 2195416,
+          "pssKiB": 1843269,
+          "pssComplete": true
+        },
+        "atPeakpssKiB": {
+          "categories": {
+            "node": {
+              "rssKiB": 730984,
+              "pssKiB": 682926,
+              "processes": 2
+            },
+            "chromium": {
+              "rssKiB": 911908,
+              "pssKiB": 609400,
+              "processes": 7
+            },
+            "other": {
+              "rssKiB": 552524,
+              "pssKiB": 550943,
+              "processes": 2
+            }
+          },
+          "rssKiB": 2195416,
+          "pssKiB": 1843269,
+          "pssComplete": true
+        }
+      },
+      "sampleIntervalSeconds": 0.25,
+      "scope": "Render process and observable descendants. RSS sums count shared pages more than once; PSS apportions shared pages. Category peaks need not coincide. Sampling can miss short peaks.",
+      "framesRequested": 1050,
+      "bytes": 12496448,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "width": 1080,
+            "height": 1920,
+            "r_frame_rate": "30/1",
+            "duration": "35.000000",
+            "nb_frames": "1050",
+            "side_data_list": [
+              {}
+            ]
+          },
+          {
+            "codec_name": "aac",
+            "sample_rate": "48000",
+            "channels": 2,
+            "r_frame_rate": "0/0",
+            "duration": "35.008000",
+            "nb_frames": "1643"
+          }
+        ]
+      }
+    }
+  },
+  "audio": {
+    "durationSeconds": 35.0,
+    "words": 64,
+    "wordsWithAudio": 64,
+    "minWordRms": 0.019097888842225075,
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "audioDurationSeconds": 35.008,
+    "videoDurationSeconds": 35.0,
+    "audioChecks": [
+      {
+        "scene": "hook",
+        "lagMs": 0.0,
+        "correlation": 0.9985038638114929,
+        "windowSeconds": 1.0
+      },
+      {
+        "scene": "riis-before",
+        "lagMs": 0.0,
+        "correlation": 0.9999544024467468,
+        "windowSeconds": 1.0
+      },
+      {
+        "scene": "departure-map",
+        "lagMs": 0.0,
+        "correlation": 0.9972258806228638,
+        "windowSeconds": 1.0
+      },
+      {
+        "scene": "exodus",
+        "lagMs": 0.0,
+        "correlation": 0.9994442462921143,
+        "windowSeconds": 1.0
+      },
+      {
+        "scene": "history-timeline",
+        "lagMs": 0.0,
+        "correlation": 0.9994331002235413,
+        "windowSeconds": 1.0
+      },
+      {
+        "scene": "reading-graphic",
+        "lagMs": 0.0,
+        "correlation": 0.9998842477798462,
+        "windowSeconds": 1.0
+      },
+      {
+        "scene": "conclusion",
+        "lagMs": 0.0,
+        "correlation": 0.9998728632926941,
+        "windowSeconds": 1.0
+      }
+    ],
+    "method": "Source waveform vs decoded AAC, not an independent annotation of word boundaries"
+  },
+  "fullVideoSha256": "4405db1cfcb0cad7cbbf9786da371b7a3d271e6a885d0ee9fc291392c0742f8a",
+  "machine": {
+    "cpu": "Intel Xeon Platinum 8370C, 3 exposed CPUs",
+    "totalMemoryMiB": 9968,
+    "node": "22.23.4",
+    "python": "3.12.14",
+    "chromium": "156.0.8078.79",
+    "remotion": "4.0.541",
+    "concurrency": 1,
+    "gl": "swangle"
+  },
+  "fullRenderRepeatByteIdentical": true,
+  "visual": {
+    "legacyMatches": 6,
+    "randomOrder": true,
+    "alignedVoxelPreviewFinal": true,
+    "reducedMotionRandomOrder": true,
+    "stills": [
+      {
+        "name": "legacy-hybrid_riis",
+        "frame": 45,
+        "sha256": "752e29293a422403000a13e9d3e0eb0b84e84857cf343111b2f5e195f662f187"
+      },
+      {
+        "name": "legacy-traveler_episode_002",
+        "frame": 120,
+        "sha256": "4d17f2e72480d20ae0355a7552dc236cad122792e25f5811d98fc1482dd12def"
+      },
+      {
+        "name": "legacy-atlas_demo",
+        "frame": 120,
+        "sha256": "2d9723bb392d73fee27104bfbb0f372c2077ecb426b9c4cd5c43ac583cbaad19"
+      },
+      {
+        "name": "legacy-living_europa",
+        "frame": 120,
+        "sha256": "4434d67392d6d08770112f1880a63b132a3cdf1fa18eb7fc88259891fc1572df"
+      },
+      {
+        "name": "legacy-polish-210",
+        "frame": 210,
+        "sha256": "bdc42fad7c4714a0dd887158c3060a89ffdbcc86ff259e5bc62a21ba368a6108"
+      },
+      {
+        "name": "legacy-polish-660",
+        "frame": 660,
+        "sha256": "1d60bcef043e7b305eb00858342eed98538b1f22af7f37a5c2e4a353aea6c059"
+      },
+      {
+        "name": "v05-0",
+        "frame": 45,
+        "sha256": "705532c1868dc0d3b4411f13c2b47b4c29a2b564f9d3af557a2f3be1a4396c6b"
+      },
+      {
+        "name": "v06-0",
+        "frame": 45,
+        "sha256": "43073574199c35670c40d19af312190fe8ae5c14b702be832b65044a942e743c"
+      },
+      {
+        "name": "v07-0",
+        "frame": 45,
+        "sha256": "43073574199c35670c40d19af312190fe8ae5c14b702be832b65044a942e743c"
+      },
+      {
+        "name": "v05-1",
+        "frame": 210,
+        "sha256": "83bfd2eaabc9e57795b35fa57ec9549ae3a7afb6fdd416c88698ab54cffdb68b"
+      },
+      {
+        "name": "v06-1",
+        "frame": 210,
+        "sha256": "bdc42fad7c4714a0dd887158c3060a89ffdbcc86ff259e5bc62a21ba368a6108"
+      },
+      {
+        "name": "v07-1",
+        "frame": 210,
+        "sha256": "3bf95151a07756170075cde9300206e2986546e9e622c26d7d04b21cc739c6cf"
+      },
+      {
+        "name": "v05-2",
+        "frame": 300,
+        "sha256": "bd2658778e63bda181665cb2703aa6159c64ba46705c2b31fef30e8656f7bfa6"
+      },
+      {
+        "name": "v06-2",
+        "frame": 300,
+        "sha256": "3524c9433aa18c9a8b4299a3b39beb4102e17383cfb0c40264fcab9080e9a44a"
+      },
+      {
+        "name": "v07-2",
+        "frame": 300,
+        "sha256": "572469601fcef3bf5a7eb44491bb0bee9308f5d3c9a69814e111fa9c5de89389"
+      },
+      {
+        "name": "v05-3",
+        "frame": 420,
+        "sha256": "dbab389b4bb8d24eb9b44ab7774b453cdc557586505863cb04e803873d9b10e6"
+      },
+      {
+        "name": "v06-3",
+        "frame": 420,
+        "sha256": "77ecdfef6977256b0201a5ca3bd423ed55d583247b7a0cc946ba97c396555c65"
+      },
+      {
+        "name": "v07-3",
+        "frame": 420,
+        "sha256": "77ecdfef6977256b0201a5ca3bd423ed55d583247b7a0cc946ba97c396555c65"
+      },
+      {
+        "name": "v05-4",
+        "frame": 660,
+        "sha256": "14f4bddae38612415094676db0d854d3c927fa9302efba0eee553d4bb884f051"
+      },
+      {
+        "name": "v06-4",
+        "frame": 660,
+        "sha256": "1d60bcef043e7b305eb00858342eed98538b1f22af7f37a5c2e4a353aea6c059"
+      },
+      {
+        "name": "v07-4",
+        "frame": 660,
+        "sha256": "cd305382d13ebff69ec42aa61030d768a317005d0f99a018c03633b8a9bba28d"
+      },
+      {
+        "name": "v05-5",
+        "frame": 850,
+        "sha256": "9a1a0eb2eda043eb82d7762fc6ff47d601d4991baed986cc9b76c71dc48ca969"
+      },
+      {
+        "name": "v06-5",
+        "frame": 850,
+        "sha256": "cdc4ee1e9cacbf6248d9192c44570305d2b79a87d152d588efb22ebbc33d83a0"
+      },
+      {
+        "name": "v07-5",
+        "frame": 850,
+        "sha256": "c3f4af23c0b13c75cdcc4dde763b628fd9c40306e74068abdac890eadedc9589"
+      },
+      {
+        "name": "v05-6",
+        "frame": 960,
+        "sha256": "7049186295ae4968a5904b253733fdd8074150375395744b93199bf842bc2263"
+      },
+      {
+        "name": "v06-6",
+        "frame": 960,
+        "sha256": "a1a89e15db038e9bc2c64f90ec514439c2f963bdee7cf5b92526e529e09edac4"
+      },
+      {
+        "name": "v07-6",
+        "frame": 960,
+        "sha256": "3f2e91edd96bad0845a28e0a044cc332b105fa89b316de327312be9663466a67"
+      },
+      {
+        "name": "v05-7",
+        "frame": 1020,
+        "sha256": "a11b063de452a37fe22d7be1ee666b8bfc2dd4f034da33948f1d7c2a9388ddfe"
+      },
+      {
+        "name": "v06-7",
+        "frame": 1020,
+        "sha256": "b6d8b7599171dbb2e579a66364c61e272f12eb61879085ef19b852f8cbcbece0"
+      },
+      {
+        "name": "v07-7",
+        "frame": 1020,
+        "sha256": "8d00f2a07fef6fa26fc941bc105aa7ded6928a4197eead4ae20afdeeebb81c78"
+      },
+      {
+        "name": "seek-a",
+        "frame": 660,
+        "sha256": "cd305382d13ebff69ec42aa61030d768a317005d0f99a018c03633b8a9bba28d"
+      },
+      {
+        "name": "seek-between",
+        "frame": 210,
+        "sha256": "3bf95151a07756170075cde9300206e2986546e9e622c26d7d04b21cc739c6cf"
+      },
+      {
+        "name": "seek-b",
+        "frame": 660,
+        "sha256": "cd305382d13ebff69ec42aa61030d768a317005d0f99a018c03633b8a9bba28d"
+      },
+      {
+        "name": "aligned-preview",
+        "frame": 210,
+        "sha256": "3bf95151a07756170075cde9300206e2986546e9e622c26d7d04b21cc739c6cf"
+      },
+      {
+        "name": "reduced-a",
+        "frame": 210,
+        "sha256": "ea6f53b52b87abedddaf21b7fb798b9bad5636202ee4f589c574483a499b1a85"
+      },
+      {
+        "name": "reduced-between",
+        "frame": 45,
+        "sha256": "d2b580141df06f4c94b5d0c469fff7e1f2a8d7f12cc1488fa329ebdc10f3f8e4"
+      },
+      {
+        "name": "reduced-b",
+        "frame": 210,
+        "sha256": "ea6f53b52b87abedddaf21b7fb798b9bad5636202ee4f589c574483a499b1a85"
+      }
+    ]
+  }
+}

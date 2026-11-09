@@ -233,6 +233,38 @@
       "kind": "primary",
       "locator": "I: Predators; II: The Hateful Verse; V: Needle and Worm; IX: The Bargain; XXVI: star by star by star",
       "verification": "retrieved"
+    },
+    {
+      "id": "wiki-eliksni-dreg",
+      "title": "Dreg — morphology",
+      "url": "https://www.destinypedia.com/Dreg",
+      "kind": "secondary",
+      "locator": "Overview and morphology, consulted 2026-11-08. Dreg: two arms after docking; Vandal/Captain: four arms; Servitor: floating spherical machine. Numeric proportions and costumes are artistic.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-eliksni-vandal",
+      "title": "Vandal — morphology",
+      "url": "https://www.destinypedia.com/Vandal",
+      "kind": "secondary",
+      "locator": "Overview and morphology, consulted 2026-11-08. Dreg: two arms after docking; Vandal/Captain: four arms; Servitor: floating spherical machine. Numeric proportions and costumes are artistic.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-eliksni-captain",
+      "title": "Captain — morphology",
+      "url": "https://www.destinypedia.com/Captain",
+      "kind": "secondary",
+      "locator": "Overview and morphology, consulted 2026-11-08. Dreg: two arms after docking; Vandal/Captain: four arms; Servitor: floating spherical machine. Numeric proportions and costumes are artistic.",
+      "verification": "retrieved"
+    },
+    {
+      "id": "wiki-eliksni-servitor",
+      "title": "Servitor — morphology",
+      "url": "https://www.destinypedia.com/Servitor",
+      "kind": "secondary",
+      "locator": "Overview and morphology, consulted 2026-11-08. Dreg: two arms after docking; Vandal/Captain: four arms; Servitor: floating spherical machine. Numeric proportions and costumes are artistic.",
+      "verification": "retrieved"
     }
   ],
   "characters": [
@@ -3143,6 +3175,425 @@
       "locations": [],
       "sources": [
         "wiki-precursor"
+      ]
+    },
+    {
+      "id": "eliksni-dreg",
+      "names": {
+        "fr": "Rebut éliksni",
+        "en": "Dreg"
+      },
+      "civilization": "eliksni",
+      "faction": "unspecified",
+      "affiliations": [],
+      "archetype": "soldier",
+      "identityNote": "Generic procedural archetype, not a named historical person. Visual reconstruction; no canonical costume or numeric size claimed.",
+      "visual": {
+        "model": "humanoid",
+        "silhouette": "Dreg procedural abstraction",
+        "palette": [
+          "#78634e",
+          "#c7aa73",
+          "#9eddf4"
+        ],
+        "equipment": [
+          "hood"
+        ],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "No proprietary model. Two arms; docking practices must not be assumed on ancient Riis."
+      },
+      "variants": [
+        {
+          "id": "reconstruction",
+          "names": {
+            "fr": "Rebut éliksni",
+            "en": "Dreg"
+          },
+          "change": "baseline",
+          "civilization": "eliksni",
+          "eras": [
+            "post-whirlwind"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-eliksni-dreg"
+          ],
+          "visual": {
+            "model": "humanoid",
+            "silhouette": "Dreg procedural abstraction",
+            "palette": [
+              "#78634e",
+              "#c7aa73",
+              "#9eddf4"
+            ],
+            "equipment": [
+              "hood"
+            ],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "No proprietary model. Two arms; docking practices must not be assumed on ancient Riis."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [],
+      "sources": [
+        "wiki-eliksni-dreg"
+      ]
+    },
+    {
+      "id": "eliksni-vandal",
+      "names": {
+        "fr": "Vandale éliksni",
+        "en": "Vandal"
+      },
+      "civilization": "eliksni",
+      "faction": "unspecified",
+      "affiliations": [],
+      "archetype": "soldier",
+      "identityNote": "Generic procedural archetype, not a named historical person. Visual reconstruction; no canonical costume or numeric size claimed.",
+      "visual": {
+        "model": "four-arm",
+        "silhouette": "Vandal procedural abstraction",
+        "palette": [
+          "#78634e",
+          "#c7aa73",
+          "#9eddf4"
+        ],
+        "equipment": [
+          "hood"
+        ],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "No proprietary model. Four arms. Modern military archetype; ancient costume unknown."
+      },
+      "variants": [
+        {
+          "id": "reconstruction",
+          "names": {
+            "fr": "Vandale éliksni",
+            "en": "Vandal"
+          },
+          "change": "baseline",
+          "civilization": "eliksni",
+          "eras": [
+            "post-whirlwind"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-eliksni-vandal"
+          ],
+          "visual": {
+            "model": "four-arm",
+            "silhouette": "Vandal procedural abstraction",
+            "palette": [
+              "#78634e",
+              "#c7aa73",
+              "#9eddf4"
+            ],
+            "equipment": [
+              "hood"
+            ],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "No proprietary model. Four arms. Modern military archetype; ancient costume unknown."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [],
+      "sources": [
+        "wiki-eliksni-vandal"
+      ]
+    },
+    {
+      "id": "eliksni-captain",
+      "names": {
+        "fr": "Capitaine éliksni",
+        "en": "Captain"
+      },
+      "civilization": "eliksni",
+      "faction": "unspecified",
+      "affiliations": [],
+      "archetype": "leader",
+      "identityNote": "Generic procedural archetype, not a named historical person. Visual reconstruction; no canonical costume or numeric size claimed.",
+      "visual": {
+        "model": "four-arm",
+        "silhouette": "Captain procedural abstraction",
+        "palette": [
+          "#78634e",
+          "#c7aa73",
+          "#9eddf4"
+        ],
+        "equipment": [
+          "pauldrons"
+        ],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "No proprietary model. Four arms. Modern military archetype; ancient costume unknown."
+      },
+      "variants": [
+        {
+          "id": "reconstruction",
+          "names": {
+            "fr": "Capitaine éliksni",
+            "en": "Captain"
+          },
+          "change": "baseline",
+          "civilization": "eliksni",
+          "eras": [
+            "post-whirlwind"
+          ],
+          "events": [],
+          "sources": [
+            "wiki-eliksni-captain",
+            "wiki-eliksni-civilian"
+          ],
+          "visual": {
+            "model": "four-arm",
+            "silhouette": "Captain procedural abstraction",
+            "palette": [
+              "#78634e",
+              "#c7aa73",
+              "#9eddf4"
+            ],
+            "equipment": [
+              "pauldrons"
+            ],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "No proprietary model. Four arms. Modern military archetype; ancient costume unknown."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [],
+      "sources": [
+        "wiki-eliksni-captain",
+        "wiki-eliksni-civilian"
+      ]
+    },
+    {
+      "id": "eliksni-servitor",
+      "names": {
+        "fr": "Serviteur éliksni",
+        "en": "Servitor"
+      },
+      "civilization": "eliksni",
+      "faction": "unspecified",
+      "affiliations": [],
+      "archetype": "drone",
+      "identityNote": "Generic procedural archetype, not a named historical person. Visual reconstruction; no canonical costume or numeric size claimed.",
+      "visual": {
+        "model": "drone",
+        "silhouette": "Servitor procedural abstraction",
+        "palette": [
+          "#78634e",
+          "#c7aa73",
+          "#9eddf4"
+        ],
+        "equipment": [],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "No proprietary model. Non-humanoid floating machine; no limbs."
+      },
+      "variants": [
+        {
+          "id": "reconstruction",
+          "names": {
+            "fr": "Serviteur éliksni",
+            "en": "Servitor"
+          },
+          "change": "baseline",
+          "civilization": "eliksni",
+          "eras": [],
+          "events": [],
+          "sources": [
+            "wiki-eliksni-servitor"
+          ],
+          "visual": {
+            "model": "drone",
+            "silhouette": "Servitor procedural abstraction",
+            "palette": [
+              "#78634e",
+              "#c7aa73",
+              "#9eddf4"
+            ],
+            "equipment": [],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "No proprietary model. Non-humanoid floating machine; no limbs."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [],
+      "sources": [
+        "wiki-eliksni-servitor"
+      ]
+    },
+    {
+      "id": "eliksni-elder",
+      "names": {
+        "fr": "Ancien éliksni",
+        "en": "Community elder"
+      },
+      "civilization": "eliksni",
+      "faction": "unspecified",
+      "affiliations": [],
+      "archetype": "leader",
+      "identityNote": "Generic procedural archetype, not a named historical person. Visual reconstruction; no canonical costume or numeric size claimed.",
+      "visual": {
+        "model": "four-arm",
+        "silhouette": "Community elder procedural abstraction",
+        "palette": [
+          "#78634e",
+          "#c7aa73",
+          "#9eddf4"
+        ],
+        "equipment": [
+          "coat"
+        ],
+        "scale": 1,
+        "certainty": "reconstruction",
+        "note": "No proprietary model. Four arms. Community elder is an artistic social role, not a documented rank."
+      },
+      "variants": [
+        {
+          "id": "reconstruction",
+          "names": {
+            "fr": "Ancien éliksni",
+            "en": "Community elder"
+          },
+          "change": "baseline",
+          "civilization": "eliksni",
+          "eras": [],
+          "events": [],
+          "sources": [
+            "wiki-eliksni-civilian"
+          ],
+          "visual": {
+            "model": "four-arm",
+            "silhouette": "Community elder procedural abstraction",
+            "palette": [
+              "#78634e",
+              "#c7aa73",
+              "#9eddf4"
+            ],
+            "equipment": [
+              "coat"
+            ],
+            "scale": 1,
+            "certainty": "reconstruction",
+            "note": "No proprietary model. Four arms. Community elder is an artistic social role, not a documented rank."
+          },
+          "datedBySource": null
+        }
+      ],
+      "animations": [
+        "idle",
+        "walk",
+        "run",
+        "flee",
+        "look",
+        "salute",
+        "talk",
+        "interact",
+        "observe",
+        "kneel",
+        "fall",
+        "combat",
+        "attack",
+        "hit",
+        "terminal",
+        "appear",
+        "disappear"
+      ],
+      "events": [],
+      "locations": [],
+      "sources": [
+        "wiki-eliksni-civilian"
       ]
     }
   ]

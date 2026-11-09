@@ -1,0 +1,11 @@
+import {readFileSync,writeFileSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import assert from 'node:assert/strict';
+import {episodeSchema,validateWords} from '../src/voxel/episode/schema.ts';
+process.chdir(fileURLToPath(new URL('..',import.meta.url)));
+const original=episodeSchema.parse(JSON.parse(readFileSync('episodes/hybrid_riis.json'))),next=episodeSchema.parse(JSON.parse(readFileSync('episodes/hybrid_riis_07.json'))),ready=episodeSchema.parse(JSON.parse(readFileSync('out/hybrid_riis-ready.json')));
+assert.equal(next.scenes.map(s=>s.narration).join(' '),original.scenes.map(s=>s.narration).join(' '));assert.equal(next.format.durationFrames,1050);
+if(!ready.audio.voiceover.enabled||ready.audio.voiceover.status!=='ready')throw new Error('Generate the original Riis Kokoro voice first.');
+const words=validateWords(JSON.parse(readFileSync('public/'+ready.subtitles.source)),next);assert.equal(words.length,64);
+next.audio={...next.audio,voiceover:{...next.audio.voiceover,...structuredClone(ready.audio.voiceover)}};next.subtitles=structuredClone(ready.subtitles);next.shorts.alignedWords=words;
+writeFileSync('out/hybrid_riis_07-ready.json',JSON.stringify(episodeSchema.parse(next),null,2)+'\n');console.log('Ready: 0.7 uses the exact original Riis WAV and 64 timestamps, across seven shots and all five visual types.');

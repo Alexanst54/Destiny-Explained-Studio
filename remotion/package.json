@@ -54,7 +54,12 @@
     "test:polish:browser": "node ../editor/polish.browser.test.cjs",
     "prepare:polish:comparison": "node --experimental-strip-types scripts/prepare-riis-comparison.mjs",
     "render:polish:comparison": "python scripts/render-riis-comparison.py",
-    "verify:polish:render": "node scripts/verify-polish-render.mjs"
+    "verify:polish:render": "node scripts/verify-polish-render.mjs",
+    "test:animation": "node --experimental-strip-types --test tests/animation.test.mjs",
+    "test:animation:browser": "node ../editor/animation.browser.test.cjs",
+    "prepare:animation": "node --experimental-strip-types scripts/prepare-animation-demo.mjs",
+    "verify:animation:render": "node scripts/verify-animation-render.mjs",
+    "benchmark:animation": "python scripts/benchmark-animation.py"
   },
   "dependencies": {
     "@react-three/fiber": "8.18.0",

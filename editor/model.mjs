@@ -234,7 +234,7 @@ export function setAtlasReference(raw,path,locationId,variantId){
  let old=raw;for(const key of path)old=old?.[key];
  const ref=object(old)?clone(old):{};ref.locationId=locationId;
  if(variantId)ref.variantId=variantId;else delete ref.variantId;
- const next=patch(raw,path,ref);next.schemaVersion=['0.4.0','0.5.0','0.6.0'].includes(next.schemaVersion)?next.schemaVersion:'0.3.0';
+ const next=patch(raw,path,ref);next.schemaVersion=['0.4.0','0.5.0','0.6.0','0.7.0'].includes(next.schemaVersion)?next.schemaVersion:'0.3.0';
  if(path[0]==='direction'){
   const shotPath=path.slice(0,-1);let shot=next;for(const key of shotPath)shot=shot[key];shot.environment='scene';
  }

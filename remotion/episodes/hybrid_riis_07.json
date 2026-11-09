@@ -1,0 +1,1546 @@
+{
+  "schemaVersion": "0.7.0",
+  "id": "hybrid-riis-07",
+  "title": "Why Did the Traveler Leave Riis? — Cinematic Edition",
+  "language": "en-US",
+  "format": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "durationFrames": 1050
+  },
+  "style": "classic-voxel",
+  "setting": "the-tower",
+  "disclaimer": "Unofficial fan-made educational video. Not affiliated with Bungie.",
+  "audio": {
+    "voiceover": {
+      "enabled": true,
+      "language": "en-US",
+      "source": "assets/audio/traveler-en.wav",
+      "status": "to-generate",
+      "groups": [
+        [
+          "history-timeline",
+          "reading-graphic",
+          "conclusion"
+        ]
+      ]
+    },
+    "music": null
+  },
+  "characters": [
+    {
+      "id": "guardian",
+      "model": "voxel-guardian-v1"
+    },
+    {
+      "id": "ghost",
+      "model": "voxel-ghost-v1"
+    }
+  ],
+  "environments": [
+    {
+      "id": "the-tower",
+      "model": "voxel-tower-v1",
+      "props": [
+        "traveler-sphere",
+        "last-city-silhouette",
+        "tower-balcony"
+      ]
+    },
+    {
+      "id": "europa",
+      "model": "voxel-europa-v1",
+      "props": [
+        "ice-ridges",
+        "snowfield",
+        "research-outpost"
+      ]
+    },
+    {
+      "id": "black-garden",
+      "model": "voxel-black-garden-v1",
+      "props": [
+        "vex-gate",
+        "garden-terraces",
+        "red-flowers"
+      ]
+    },
+    {
+      "id": "pyramid-interior",
+      "model": "voxel-pyramid-v1",
+      "props": [
+        "stepped-walls",
+        "resonant-altar",
+        "amber-trim"
+      ]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "hook",
+      "startFrame": 0,
+      "durationFrames": 120,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "Why did the Traveler leave Riis?",
+      "visual": {
+        "type": "text",
+        "headline": "Why did the Traveler leave Riis?",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        },
+        "body": "A lost homeworld. A question that needs care.",
+        "kind": "hook"
+      },
+      "polish": {
+        "camera": {
+          "preset": "push-in",
+          "startFrame": 0,
+          "durationFrames": 120,
+          "intensity": 0.75,
+          "curve": "smooth",
+          "screenTarget": [
+            50,
+            35
+          ],
+          "seed": 42
+        }
+      }
+    },
+    {
+      "id": "riis-before",
+      "startFrame": 120,
+      "durationFrames": 210,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "Riis was the Eliksni homeworld. They revered the Traveler as their Great Machine.",
+      "visual": {
+        "type": "voxel",
+        "headline": "Riis · before the Whirlwind",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        }
+      },
+      "atlas": {
+        "locationId": "riis",
+        "variantId": "before-whirlwind"
+      },
+      "livingWorld": {
+        "mode": "reconstruction",
+        "era": "pre-whirlwind",
+        "cast": [
+          {
+            "id": "guide",
+            "characterId": "eliksni-elder",
+            "position": [
+              -1.1,
+              0,
+              -2
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 210,
+            "animation": "idle",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "elder",
+              "height": 2.45,
+              "width": 0.9,
+              "limbLength": 1,
+              "seed": 2027,
+              "phaseOffset": 0,
+              "animation": "idle",
+              "clips": [
+                {
+                  "animation": "look-at-sky",
+                  "startFrame": 115,
+                  "durationFrames": 95,
+                  "transitionFrames": 16
+                }
+              ]
+            },
+            "palette": [
+              "#3b5967",
+              "#c8a876",
+              "#90dce4"
+            ]
+          },
+          {
+            "id": "resident-1",
+            "characterId": "eliksni-civilian",
+            "position": [
+              0.8,
+              0,
+              -2.3
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 210,
+            "animation": "idle",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "civilian",
+              "height": 2.245,
+              "width": 0.925,
+              "limbLength": 1,
+              "seed": 9946,
+              "phaseOffset": 7,
+              "animation": "talk-gesture",
+              "clips": [
+                {
+                  "animation": "look-at-sky",
+                  "startFrame": 115,
+                  "durationFrames": 95,
+                  "transitionFrames": 16
+                }
+              ]
+            },
+            "palette": [
+              "#5b4d65",
+              "#b6a1b2",
+              "#9be0df"
+            ]
+          },
+          {
+            "id": "resident-2",
+            "characterId": "eliksni-civilian",
+            "position": [
+              -2.8,
+              0,
+              -4
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 210,
+            "animation": "idle",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "civilian",
+              "height": 2.29,
+              "width": 0.9500000000000001,
+              "limbLength": 1,
+              "seed": 17865,
+              "phaseOffset": 14,
+              "animation": "idle",
+              "clips": [
+                {
+                  "animation": "look-at-sky",
+                  "startFrame": 115,
+                  "durationFrames": 95,
+                  "transitionFrames": 16
+                }
+              ]
+            },
+            "palette": [
+              "#5d6d59",
+              "#b4ac84",
+              "#aae0e5"
+            ]
+          },
+          {
+            "id": "resident-3",
+            "characterId": "eliksni-civilian",
+            "position": [
+              2.5,
+              0,
+              -4
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 210,
+            "animation": "idle",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "civilian",
+              "height": 2.335,
+              "width": 0.9750000000000001,
+              "limbLength": 1,
+              "seed": 25784,
+              "phaseOffset": 21,
+              "animation": "idle",
+              "clips": [
+                {
+                  "animation": "look-at-sky",
+                  "startFrame": 115,
+                  "durationFrames": 95,
+                  "transitionFrames": 16
+                }
+              ]
+            },
+            "palette": [
+              "#577682",
+              "#b5a17a",
+              "#a1dce6"
+            ]
+          },
+          {
+            "id": "resident-4",
+            "characterId": "eliksni-civilian",
+            "position": [
+              -0.9,
+              0,
+              -5.2
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 210,
+            "animation": "idle",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "civilian",
+              "height": 2.3800000000000003,
+              "width": 1.0,
+              "limbLength": 1,
+              "seed": 33703,
+              "phaseOffset": 28,
+              "animation": "idle",
+              "clips": [
+                {
+                  "animation": "look-at-sky",
+                  "startFrame": 115,
+                  "durationFrames": 95,
+                  "transitionFrames": 16
+                }
+              ]
+            },
+            "palette": [
+              "#5b4d65",
+              "#b6a1b2",
+              "#9be0df"
+            ]
+          },
+          {
+            "id": "resident-5",
+            "characterId": "eliksni-civilian",
+            "position": [
+              1,
+              0,
+              -5.5
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 210,
+            "animation": "idle",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "civilian",
+              "height": 2.4250000000000003,
+              "width": 1.025,
+              "limbLength": 1,
+              "seed": 41622,
+              "phaseOffset": 35,
+              "animation": "idle",
+              "clips": [
+                {
+                  "animation": "look-at-sky",
+                  "startFrame": 115,
+                  "durationFrames": 95,
+                  "transitionFrames": 16
+                }
+              ]
+            },
+            "palette": [
+              "#5d6d59",
+              "#b4ac84",
+              "#aae0e5"
+            ]
+          }
+        ],
+        "groups": [],
+        "props": [],
+        "studio": {
+          "version": 1,
+          "profile": "final",
+          "avoidCollisions": true,
+          "collisionRadius": 0.6,
+          "interactions": [
+            {
+              "id": "conversation",
+              "kind": "face",
+              "actors": [
+                "resident-1"
+              ],
+              "targetId": "guide",
+              "startFrame": 0,
+              "durationFrames": 105,
+              "transitionFrames": 16,
+              "spacing": 1.3,
+              "intensity": 1
+            },
+            {
+              "id": "look-up",
+              "kind": "look-at",
+              "actors": [
+                "guide",
+                "resident-1",
+                "resident-2",
+                "resident-3",
+                "resident-4",
+                "resident-5"
+              ],
+              "targetPoint": [
+                0,
+                9,
+                -6
+              ],
+              "startFrame": 115,
+              "durationFrames": 95,
+              "transitionFrames": 18,
+              "spacing": 1.3,
+              "intensity": 1
+            }
+          ],
+          "camera": {
+            "mode": "two-shot",
+            "targets": [
+              "guide",
+              "resident-1"
+            ],
+            "startFrame": 0,
+            "durationFrames": 210,
+            "intensity": 0.65,
+            "margin": 1.2,
+            "side": "left"
+          }
+        }
+      },
+      "polish": {
+        "camera": {
+          "preset": "none",
+          "startFrame": 0,
+          "durationFrames": 210,
+          "intensity": 0.75,
+          "curve": "smooth",
+          "screenTarget": [
+            50,
+            35
+          ],
+          "seed": 42
+        },
+        "environment": {
+          "preset": "calm-riis",
+          "intensity": 0.5,
+          "depth": 0.7,
+          "parallax": 0.6,
+          "lightVariation": 0.08,
+          "seed": 2718
+        }
+      }
+    },
+    {
+      "id": "departure-map",
+      "startFrame": 330,
+      "durationFrames": 180,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "The Traveler departed during the Whirlwind. This map shows a schematic journey.",
+      "visual": {
+        "type": "map",
+        "headline": "A departure, not an explanation",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        },
+        "nodes": [
+          {
+            "id": "riis",
+            "label": "Riis",
+            "locationId": "riis",
+            "position": [
+              24,
+              35
+            ]
+          },
+          {
+            "id": "stars",
+            "label": "Across the stars",
+            "position": [
+              68,
+              65
+            ]
+          }
+        ],
+        "routes": [
+          {
+            "from": "riis",
+            "to": "stars",
+            "label": "Schematic departure"
+          }
+        ],
+        "camera": {
+          "from": [
+            50,
+            50
+          ],
+          "to": [
+            47,
+            47
+          ],
+          "zoomFrom": 1,
+          "zoomTo": 1.14
+        }
+      },
+      "polish": {
+        "camera": {
+          "preset": "map-to-voxel",
+          "startFrame": 0,
+          "durationFrames": 180,
+          "intensity": 0.85,
+          "curve": "smooth",
+          "screenTarget": [
+            68,
+            65
+          ],
+          "seed": 42
+        }
+      }
+    },
+    {
+      "id": "exodus",
+      "startFrame": 510,
+      "durationFrames": 300,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "The catastrophe shattered Eliksni civilization. Survivors fled Riis. Many pursued the Traveler across the stars, remembering Riis.",
+      "visual": {
+        "type": "voxel",
+        "headline": "The Whirlwind · exile and survival",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 12
+        }
+      },
+      "atlas": {
+        "locationId": "riis",
+        "variantId": "after-whirlwind"
+      },
+      "livingWorld": {
+        "mode": "reconstruction",
+        "era": "post-whirlwind",
+        "cast": [
+          {
+            "id": "guide",
+            "characterId": "eliksni-elder",
+            "position": [
+              -1.1,
+              0,
+              -2
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 300,
+            "animation": "flee",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "elder",
+              "height": 2.45,
+              "width": 0.9,
+              "limbLength": 1,
+              "seed": 2027,
+              "phaseOffset": 0,
+              "animation": "flee",
+              "clips": []
+            },
+            "palette": [
+              "#3b5967",
+              "#c8a876",
+              "#90dce4"
+            ],
+            "path": {
+              "speed": 1.4,
+              "waypoints": [
+                {
+                  "position": [
+                    -1.1,
+                    0,
+                    -2
+                  ],
+                  "pauseFrames": 45
+                },
+                {
+                  "position": [
+                    -4.1,
+                    0,
+                    2
+                  ],
+                  "pauseFrames": 0
+                }
+              ]
+            }
+          },
+          {
+            "id": "resident-1",
+            "characterId": "eliksni-civilian",
+            "position": [
+              0.8,
+              0,
+              -2.3
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 300,
+            "animation": "flee",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "civilian",
+              "height": 2.245,
+              "width": 0.925,
+              "limbLength": 1,
+              "seed": 9946,
+              "phaseOffset": 7,
+              "animation": "flee",
+              "clips": []
+            },
+            "palette": [
+              "#5b4d65",
+              "#b6a1b2",
+              "#9be0df"
+            ],
+            "path": {
+              "speed": 1.25,
+              "waypoints": [
+                {
+                  "position": [
+                    0.8,
+                    0,
+                    -2.3
+                  ],
+                  "pauseFrames": 47
+                },
+                {
+                  "position": [
+                    -2.2,
+                    0,
+                    1.7000000000000002
+                  ],
+                  "pauseFrames": 0
+                }
+              ]
+            }
+          },
+          {
+            "id": "resident-2",
+            "characterId": "eliksni-civilian",
+            "position": [
+              -2.8,
+              0,
+              -4
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 300,
+            "animation": "flee",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "civilian",
+              "height": 2.29,
+              "width": 0.9500000000000001,
+              "limbLength": 1,
+              "seed": 17865,
+              "phaseOffset": 14,
+              "animation": "flee",
+              "clips": []
+            },
+            "palette": [
+              "#5d6d59",
+              "#b4ac84",
+              "#aae0e5"
+            ],
+            "path": {
+              "speed": 1.25,
+              "waypoints": [
+                {
+                  "position": [
+                    -2.8,
+                    0,
+                    -4
+                  ],
+                  "pauseFrames": 49
+                },
+                {
+                  "position": [
+                    -5.8,
+                    0,
+                    0
+                  ],
+                  "pauseFrames": 0
+                }
+              ]
+            }
+          },
+          {
+            "id": "resident-3",
+            "characterId": "eliksni-civilian",
+            "position": [
+              2.5,
+              0,
+              -4
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 300,
+            "animation": "flee",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "civilian",
+              "height": 2.335,
+              "width": 0.9750000000000001,
+              "limbLength": 1,
+              "seed": 25784,
+              "phaseOffset": 21,
+              "animation": "flee",
+              "clips": []
+            },
+            "palette": [
+              "#577682",
+              "#b5a17a",
+              "#a1dce6"
+            ],
+            "path": {
+              "speed": 1.25,
+              "waypoints": [
+                {
+                  "position": [
+                    2.5,
+                    0,
+                    -4
+                  ],
+                  "pauseFrames": 51
+                },
+                {
+                  "position": [
+                    -0.5,
+                    0,
+                    0
+                  ],
+                  "pauseFrames": 0
+                }
+              ]
+            }
+          },
+          {
+            "id": "resident-4",
+            "characterId": "eliksni-civilian",
+            "position": [
+              -0.9,
+              0,
+              -5.2
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 300,
+            "animation": "flee",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "civilian",
+              "height": 2.3800000000000003,
+              "width": 1.0,
+              "limbLength": 1,
+              "seed": 33703,
+              "phaseOffset": 28,
+              "animation": "flee",
+              "clips": []
+            },
+            "palette": [
+              "#5b4d65",
+              "#b6a1b2",
+              "#9be0df"
+            ],
+            "path": {
+              "speed": 1.25,
+              "waypoints": [
+                {
+                  "position": [
+                    -0.9,
+                    0,
+                    -5.2
+                  ],
+                  "pauseFrames": 53
+                },
+                {
+                  "position": [
+                    -3.9,
+                    0,
+                    -1.2000000000000002
+                  ],
+                  "pauseFrames": 0
+                }
+              ]
+            }
+          },
+          {
+            "id": "resident-5",
+            "characterId": "eliksni-civilian",
+            "position": [
+              1,
+              0,
+              -5.5
+            ],
+            "rotation": 0,
+            "scale": 1,
+            "startFrame": 0,
+            "durationFrames": 300,
+            "animation": "flee",
+            "clips": [],
+            "rig": {
+              "version": 1,
+              "archetype": "civilian",
+              "height": 2.4250000000000003,
+              "width": 1.025,
+              "limbLength": 1,
+              "seed": 41622,
+              "phaseOffset": 35,
+              "animation": "flee",
+              "clips": []
+            },
+            "palette": [
+              "#5d6d59",
+              "#b4ac84",
+              "#aae0e5"
+            ],
+            "path": {
+              "speed": 1.25,
+              "waypoints": [
+                {
+                  "position": [
+                    1,
+                    0,
+                    -5.5
+                  ],
+                  "pauseFrames": 55
+                },
+                {
+                  "position": [
+                    -2,
+                    0,
+                    -1.5
+                  ],
+                  "pauseFrames": 0
+                }
+              ]
+            }
+          }
+        ],
+        "groups": [],
+        "props": [],
+        "studio": {
+          "version": 1,
+          "profile": "final",
+          "avoidCollisions": true,
+          "collisionRadius": 0.6,
+          "interactions": [
+            {
+              "id": "shock",
+              "kind": "react",
+              "actors": [
+                "guide",
+                "resident-1",
+                "resident-2",
+                "resident-3",
+                "resident-4",
+                "resident-5"
+              ],
+              "targetPoint": [
+                0,
+                9,
+                -8
+              ],
+              "startFrame": 0,
+              "durationFrames": 75,
+              "transitionFrames": 12,
+              "spacing": 1.3,
+              "intensity": 1
+            },
+            {
+              "id": "follow-guide",
+              "kind": "follow",
+              "actors": [
+                "resident-1",
+                "resident-2",
+                "resident-3",
+                "resident-4",
+                "resident-5"
+              ],
+              "targetId": "guide",
+              "startFrame": 45,
+              "durationFrames": 255,
+              "transitionFrames": 20,
+              "spacing": 1.35,
+              "intensity": 1
+            }
+          ],
+          "camera": {
+            "mode": "follow",
+            "targets": [
+              "guide",
+              "resident-1",
+              "resident-2"
+            ],
+            "startFrame": 0,
+            "durationFrames": 300,
+            "intensity": 0.65,
+            "margin": 1.2,
+            "side": "left"
+          }
+        }
+      },
+      "weather": {
+        "type": "thunderstorm",
+        "intensity": 0.7,
+        "windDirection": 45,
+        "windSpeed": 14,
+        "visibility": 0.5,
+        "startFrame": 0,
+        "durationFrames": 300,
+        "seed": 42,
+        "transitionFrames": 60,
+        "dayPhase": 0.4,
+        "particleBudget": 48
+      },
+      "polish": {
+        "camera": {
+          "preset": "none",
+          "startFrame": 0,
+          "durationFrames": 300,
+          "intensity": 0.75,
+          "curve": "smooth",
+          "screenTarget": [
+            50,
+            35
+          ],
+          "seed": 42
+        },
+        "environment": {
+          "preset": "whirlwind",
+          "intensity": 0.9,
+          "depth": 0.9,
+          "parallax": 0.6,
+          "lightVariation": 0.08,
+          "seed": 31415
+        }
+      }
+    },
+    {
+      "id": "history-timeline",
+      "startFrame": 810,
+      "durationFrames": 96,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "That sequence does not prove one simple motive.",
+      "visual": {
+        "type": "timeline",
+        "headline": "History is not the same as motive.",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 8
+        },
+        "events": [
+          {
+            "id": "riis",
+            "label": "Riis",
+            "period": "Before the Whirlwind",
+            "date": null,
+            "confidence": "partial",
+            "sources": [
+              "wiki-riis"
+            ]
+          },
+          {
+            "id": "exile",
+            "label": "Exile and survival",
+            "period": "After the Whirlwind",
+            "date": null,
+            "confidence": "partial",
+            "sources": [
+              "wiki-riis"
+            ]
+          }
+        ]
+      },
+      "polish": {
+        "camera": {
+          "preset": "reveal",
+          "startFrame": 0,
+          "durationFrames": 96,
+          "intensity": 0.75,
+          "curve": "smooth",
+          "screenTarget": [
+            50,
+            35
+          ],
+          "seed": 42
+        }
+      }
+    },
+    {
+      "id": "reading-graphic",
+      "startFrame": 906,
+      "durationFrames": 87,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "The Traveler's intentions demand careful reading,",
+      "visual": {
+        "type": "graphic",
+        "headline": "History is not the same as motive.",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 8
+        },
+        "cards": [
+          {
+            "id": "reading",
+            "title": "Careful reading",
+            "body": "One simple motive is not established here.",
+            "position": [
+              46,
+              42
+            ]
+          }
+        ],
+        "connections": []
+      },
+      "polish": {
+        "camera": {
+          "preset": "reveal",
+          "startFrame": 0,
+          "durationFrames": 87,
+          "intensity": 0.75,
+          "curve": "smooth",
+          "screenTarget": [
+            50,
+            35
+          ],
+          "seed": 42
+        }
+      }
+    },
+    {
+      "id": "conclusion",
+      "startFrame": 993,
+      "durationFrames": 57,
+      "location": "the-tower",
+      "camera": "medium-guardian",
+      "actions": [
+        {
+          "actor": "guardian",
+          "animation": "idle"
+        }
+      ],
+      "effects": [],
+      "narration": "not certainty.",
+      "visual": {
+        "type": "text",
+        "headline": "Not certainty.",
+        "sources": [
+          "wiki-riis"
+        ],
+        "transition": {
+          "type": "fade",
+          "durationFrames": 8
+        },
+        "kind": "conclusion",
+        "body": "The Traveler’s intentions demand careful reading."
+      },
+      "polish": {
+        "camera": {
+          "preset": "reveal",
+          "startFrame": 0,
+          "durationFrames": 57,
+          "intensity": 0.75,
+          "curve": "smooth",
+          "screenTarget": [
+            50,
+            35
+          ],
+          "seed": 42
+        }
+      }
+    }
+  ],
+  "subtitles": {
+    "mode": "word-aligned",
+    "language": "en-US",
+    "source": "assets/subtitles/traveler-en.words.json",
+    "status": "pending-voiceover-alignment",
+    "maxLines": 2,
+    "safeAreaBottomPx": 340
+  },
+  "render": {
+    "composition": "HybridShort",
+    "output": "out/hybrid-riis-07.mp4",
+    "codec": "h264"
+  },
+  "notes": [
+    "No confirmed motive is assigned where the sources do not establish one.",
+    "All voxel appearances are artistic reconstructions; map positions are schematic.",
+    "0.6 cinematic comparison: exact 0.5 script and timing, optional procedural visual direction only.",
+    "0.7 artistic rig and blocking. The conclusion is subdivided at existing silences to demonstrate all five hybrid types; exact original WAV and 64 aligned words are retained."
+  ],
+  "direction": {
+    "version": 1,
+    "intensity": "balanced",
+    "scenes": [
+      {
+        "sceneId": "hook",
+        "shots": [
+          {
+            "id": "hook-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "riis-before",
+        "shots": [
+          {
+            "id": "riis-before-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "departure-map",
+        "shots": [
+          {
+            "id": "departure-map-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "exodus",
+        "shots": [
+          {
+            "id": "exodus-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "history-timeline",
+        "shots": [
+          {
+            "id": "history-timeline-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "reading-graphic",
+        "shots": [
+          {
+            "id": "reading-graphic-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      },
+      {
+        "sceneId": "conclusion",
+        "shots": [
+          {
+            "id": "conclusion-camera",
+            "at": {
+              "sceneFrame": 0
+            },
+            "purpose": "Establish the world and historical context described in the narration.",
+            "environment": "scene",
+            "actors": {
+              "guardian": false,
+              "ghost": false
+            },
+            "camera": {
+              "mode": "dolly",
+              "from": [
+                2,
+                3.6,
+                13
+              ],
+              "to": [
+                1,
+                3.4,
+                12
+              ],
+              "targetFrom": [
+                0,
+                1.6,
+                -3
+              ],
+              "targetTo": [
+                0,
+                1.8,
+                -4
+              ],
+              "fovFrom": 48,
+              "fovTo": 46
+            },
+            "transition": {
+              "type": "cut",
+              "durationFrames": 0
+            }
+          }
+        ],
+        "actions": [],
+        "events": []
+      }
+    ]
+  },
+  "shorts": {
+    "version": 1,
+    "template": "destiny-mysteries",
+    "mode": "reconstruction",
+    "confidence": "partial",
+    "sources": [],
+    "captions": {
+      "style": "kinetic-words",
+      "bottomPx": 350,
+      "maxWords": 5,
+      "fontSize": 50,
+      "color": "#f7fbff",
+      "accent": "#ffe297",
+      "leftPx": 80,
+      "rightPx": 180,
+      "emphasis": [
+        "Traveler",
+        "Riis",
+        "Whirlwind",
+        "survivors",
+        "motive",
+        "certainty"
+      ]
+    },
+    "audio": {
+      "voiceVolume": 1,
+      "tracks": []
+    },
+    "quality": "cpu",
+    "polish": {
+      "version": 1,
+      "quality": "final",
+      "previewQuality": "draft",
+      "previewEffectScale": 0.4,
+      "particleBudget": 96,
+      "detailBudget": 30,
+      "contactShadows": true,
+      "pacingProfile": "mysterious"
+    }
+  }
+}

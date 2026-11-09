@@ -54,3 +54,7 @@ Le [storyboard hybride](remotion/hybrid/README.md) réunit voxel, cartes schéma
 ## Viral Editing & Visual Polish 0.6
 
 [Extensions cinématographiques](remotion/polish/README.md) : quatre nouveaux styles de captions, caméras, personnages expressifs, atmosphères à budgets CPU et narration locale facultative en aperçu. [Guide téléphone](remotion/polish/MOBILE.md), [comparaison Riis 0.5/0.6](remotion/polish/COMPARISON.md) et [rapport de validation](remotion/polish/REPORT.md). La démo `hybrid_riis_06.json` conserve le scénario prudent et les 35 secondes de 0.5.
+
+## Voxel Animation Studio 0.7
+
+[Rigs procéduraux et relations](remotion/animation/README.md), pack éliksni, blocking tactile et cadrage des personnages animés. La démo Riis 0.7 conserve 35 secondes et les 64 mots Kokoro, avec les cinq types hybrides. [Guide téléphone/Colab](remotion/animation/MOBILE.md), [comparaison](remotion/animation/COMPARISON.md) et [validation mesurée](remotion/animation/REPORT.md).

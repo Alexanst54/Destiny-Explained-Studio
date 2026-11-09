@@ -38,11 +38,14 @@ def verify(ready_path, video_path):
     if len(decoded) < len(source):
         raise ValueError("Decoded narration is shorter than the source")
     checks = []
-    # AAC can add trailing packet padding. Compare content in six one-second
-    # windows, one per scene, allowing a 50 ms search around the expected offset.
+    # AAC can add trailing padding. Compare one window inside each scene;
+    # shorten it for brief shots, with a 50 ms lag search on each side.
     for scene in episode["scenes"]:
-        begin = round((scene["startFrame"]/30 + 2)*sr)
-        count, radius = sr, round(sr*0.05)
+        radius = round(sr*0.05)
+        scene_samples = round(scene["durationFrames"]/30*sr)
+        count = min(sr, max(1, scene_samples-2*radius))
+        offset = min(2, max(radius/sr, (scene_samples-count)/sr/2))
+        begin = round((scene["startFrame"]/30 + offset)*sr)
         ref = source[begin:begin+count]
         chunk = decoded[begin-radius:begin+count+radius]
         lag = int(np.argmax(np.correlate(chunk,ref,mode="valid"))) - radius
@@ -50,7 +53,7 @@ def verify(ready_path, video_path):
         correlation = float(np.dot(ref,actual)/(np.linalg.norm(ref)*np.linalg.norm(actual)))
         if abs(lag/sr) > 0.01 or correlation < 0.95:
             raise ValueError(f"Encoded audio drifts in {scene['id']}: {lag/sr}s, correlation {correlation}")
-        checks.append({"scene":scene["id"],"lagMs":lag/sr*1000,"correlation":correlation})
+        checks.append({"scene":scene["id"],"lagMs":lag/sr*1000,"correlation":correlation,"windowSeconds":count/sr})
     rms = [float(np.sqrt(np.mean(source[round(w["start"]*sr):round(w["end"]*sr)]**2))) for w in words]
     if not rms or not all(np.isfinite(v) and v>1e-5 for v in rms):
         raise ValueError("An aligned word has no measurable source audio")
