@@ -14,7 +14,7 @@ const preview = args.includes('--preview');
 const allowed = /^(--preview|--frames=\d+-\d+|--browser-executable=.+|--concurrency=[1-4]|--blender-sequences=.+|--scale=(0\.[1-9][0-9]*|1))$/;
 try {
   if (!['validate','render'].includes(command) || args.some(a => !allowed.test(a)))
-    throw new Error('Usage: episode.mjs validate|render [episode.json] [--preview] [--frames=start-end] [--browser-executable=path] [--concurrency=1-4]');
+    throw new Error('Usage: episode.mjs validate|render [episode.json] [--preview] [--frames=start-end] [--browser-executable=path] [--concurrency=1-4] [--blender-sequences=manifest.json] [--scale=0.1]');
   const episode = episodeSchema.parse(JSON.parse(readFileSync(resolve(root,source),'utf8')));
   console.log(`${episode.id}: ${episode.scenes.length} scenes, ${episode.format.durationFrames} frames, ${episode.format.durationFrames/episode.format.fps}s`);
   let alignedWords;
@@ -55,7 +55,7 @@ try {
   if (command === 'render') {
     mkdirSync(resolve(root,'out'),{recursive:true});
     const propsPath = resolve(root,'out',`.episode-props-${process.pid}.json`);
-    const output = preview ? episode.render.output.replace(/\.mp4$/, '-preview.mp4') : episode.render.output;
+    const output = blenderSequences ? episode.render.output.replace(/\.mp4$/, '-blender.mp4') : preview ? episode.render.output.replace(/\.mp4$/, '-preview.mp4') : episode.render.output;
     try {
       writeFileSync(propsPath,JSON.stringify({episode,preview,alignedWords,blenderSequences}));
       const result = spawnSync(process.execPath,[resolve(root,'node_modules/@remotion/cli/remotion-cli.js'),

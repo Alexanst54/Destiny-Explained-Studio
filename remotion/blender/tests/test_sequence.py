@@ -35,3 +35,12 @@ class Sequence(unittest.TestCase):
             with self.assertRaises(ValueError):sequence.run('x','x',**option)
 
 if __name__=='__main__':unittest.main()
+
+class Notebook(unittest.TestCase):
+    def test_sequence_notebook_compiles_and_limits_work(self):
+        import ast
+        data=json.loads((ROOT/'Blender-Video-Colab-Pro.ipynb').read_text());code=[]
+        for c in data['cells']:
+            if c['cell_type']=='code':
+                self.assertEqual(c['outputs'],[]);self.assertIsNone(c['execution_count']);ast.parse(''.join(c['source']));code.append(''.join(c['source']))
+        text='\n'.join(code);self.assertIn('count=90',text);self.assertIn('--frames=120-209',text);self.assertIn('drive.mount',text);self.assertIn('MAX_NEW_FRAMES',text);self.assertIn('FRAME_TIMEOUT',text)

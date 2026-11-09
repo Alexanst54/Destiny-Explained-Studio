@@ -61,7 +61,7 @@
     "verify:animation:render": "node scripts/verify-animation-render.mjs",
     "benchmark:animation": "python scripts/benchmark-animation.py",
     "export:blender": "node --experimental-strip-types blender/export.mjs",
-    "test:blender": "node --experimental-strip-types --test blender/tests/export.test.mjs",
+    "test:blender": "node --experimental-strip-types --test blender/tests/export.test.mjs blender/tests/sequences.test.mjs",
     "test:blender:python": "python -m unittest discover -s blender/tests",
     "test:blender:import": "blender --background --factory-startup --python-exit-code 1 --python blender/tests/blender_check.py -- blender/examples/riis-frame-210.json",
     "prepare:blender:riis": "python blender/environments/riis.py blender/examples/riis-frame-210.json out/riis-cinematic.json --detail cinematic",
