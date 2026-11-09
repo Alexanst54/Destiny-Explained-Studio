@@ -1,0 +1,198 @@
+{
+  "version": 1,
+  "fingerprint": "1225869d763db4d4a5f583a811f51a14744eee5b70c0857ff76ff0e5603d76c2",
+  "request": {
+    "version": 1,
+    "selectionId": "pale-heart",
+    "variantId": null,
+    "binding": {
+      "entity": {
+        "id": "pale-heart",
+        "name": "Le C\u0153ur p\u00e2le",
+        "enName": "The Pale Heart",
+        "kind": "environment",
+        "parentBossId": null,
+        "composition": null,
+        "members": [],
+        "nature": null,
+        "priority": false,
+        "atlasVisualStatus": "modular-reconstruction",
+        "status": "missing",
+        "implementation": null,
+        "family": "cosmic",
+        "familyCandidates": [
+          "nine",
+          "pale-heart"
+        ],
+        "arenaIds": [],
+        "encounterIds": [],
+        "activityIds": [],
+        "activityTypes": [],
+        "variants": [],
+        "encounterBindings": [],
+        "sourceIds": [
+          "legacy-bungie-d2-destinydestinationdefinition-3998251206"
+        ],
+        "reusePlans": [
+          {
+            "entityId": "pale-heart",
+            "target": "location",
+            "profileIds": [
+              "environment-cosmic"
+            ],
+            "status": "proxy-only",
+            "silhouette": "Environnement cosmic \u2014 proxy de famille",
+            "sources": [
+              "legacy-bungie-d2-destinydestinationdefinition-3998251206"
+            ],
+            "note": "R\u00e9utilise uniquement la recette/famille et les actifs d\u00e9j\u00e0 r\u00e9f\u00e9renc\u00e9s. Le d\u00e9tail g\u00e9ographique et la fid\u00e9lit\u00e9 restent distincts de la couverture documentaire.",
+            "existingRecipe": {
+              "locationId": "pale-heart",
+              "variantId": null,
+              "baseEnvironment": null,
+              "moduleIds": [
+                "terrain",
+                "cosmic"
+              ]
+            }
+          }
+        ]
+      },
+      "provider": "family-study",
+      "selectionId": "pale-heart",
+      "environmentId": "pale-heart",
+      "familyId": "pale-heart",
+      "status": "partial-family-study"
+    },
+    "quality": "draft",
+    "seed": 42,
+    "lod": 0,
+    "frames": 1,
+    "fps": 24,
+    "width": 480,
+    "height": 360,
+    "startFrame": 0,
+    "animation": "idle",
+    "view": "environment",
+    "environmentVariant": "sanctum"
+  },
+  "sources": {
+    "remotion/atlas/universal/catalog.json": "ce9d778a03e337b76909aa7967488d2c7bd312eacad693e5bfc06bae378a2711",
+    "remotion/blender/characters/vex_bosses.py": "e372a2df2dfde4bca1242f115877a2e60df0a188f54dc0b7f3b74d56bff41951",
+    "remotion/blender/cinematic_vex/animation.py": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a",
+    "remotion/blender/cinematic_vex/atheon.py": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f",
+    "remotion/blender/cinematic_vex/blender_check.py": "f359068ddbb2a1d1f052c75f59cb430cc7580b9e261e6b55640d7b0c4f3938c2",
+    "remotion/blender/cinematic_vex/collect_evidence.py": "5cf811adad24ebd0210c1d7712de19c28c8db6bc8e3377e9c974334b77a6dada",
+    "remotion/blender/cinematic_vex/comparison_worker.py": "14599d8b56c9108eae4af7f6a6b7e7bc2945ebd5b7cae1af0e338bd4b95b4c44",
+    "remotion/blender/cinematic_vex/instancing.py": "5b8355c351a63859614c0669c2dc22850435d373890b1f22100d4a81a09af5e6",
+    "remotion/blender/cinematic_vex/materials.py": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542",
+    "remotion/blender/cinematic_vex/provenance.py": "dca99552488387fcc0a65fc3613642a1bdc4951bae3de23ae798a0d62d5ddd4b",
+    "remotion/blender/cinematic_vex/render_validation.py": "a56ba3a245d09554057ea1684b500f6951d5ea2651932af74f8cdd9c9f054d06",
+    "remotion/blender/cinematic_vex/shapes.py": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea",
+    "remotion/blender/cinematic_vex/templar.py": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5",
+    "remotion/blender/cinematic_vex/throne.py": "9e99f13f7c06edc66a05e90ba2ea396e14cc7bec435418948302d439e9ac81fd",
+    "remotion/blender/cinematic_vex/validation_shots.json": "0a6fec6cbeeff359247d4800bb6705b9910ba37be68db3a277e14ae4492346fa",
+    "remotion/blender/cinematic_vex/verify_evidence.py": "9f7ebc923b30ef3ee15590ac906ee5be226586425a8e6ca4abd742177571fb5c",
+    "remotion/blender/cinematic_vex/visual-references.json": "b4bc47641fe7cb0f2801a62bd2a0c2e13461e33bf52238cfa6c82696f214996f",
+    "remotion/blender/contract.py": "19f8231c60a6ba20e82735c90bab2a34c1185a5a727b6e01d6cd74f41f5e3c2b",
+    "remotion/blender/environments/riis.py": "a5a46f84d3aa2913a1727123d21a2ad6c2a56fbec1f6ac2fc081bad8b9c88fba",
+    "remotion/blender/environments/vault_of_glass.py": "cd6cab89cd66a41976f744ffccbaaac4061e508e84cfcc18985e6dfcbb13fcaf",
+    "remotion/blender/environments/venus.py": "f6baf34cca0bb20c8c3be6e26df208fc0e05f3e82dde32b6c61d0cc3506d9d05",
+    "remotion/blender/import_scene.py": "6957ffaef2eb50ff8b5057186820ef5b8ffbd06ca48c77354e2dc9da9ad8f287",
+    "remotion/blender/render_universal.py": "e601755cce35ae0bc7d379ed8bbe039b37e31d6616970d07433d79da6bc20534",
+    "remotion/blender/universal/__init__.py": "5075a41322dc0093e43dabd1212a1240faf29c0659d5b26d43a6c0224ecf6496",
+    "remotion/blender/universal/build_index.py": "d0c487ad57f14e0f9ec49ffc733d57740a5e0cc88672bd60c79686a0c83f4639",
+    "remotion/blender/universal/cache.py": "7cd7401b7ae38d7503ab083a7e803e017f2461146969d314551ada63c8004a44",
+    "remotion/blender/universal/environments.py": "67f7ac1597c28ee8b21a925d90a8f340534daa37dfa80ebdfb349e8f056fcf54",
+    "remotion/blender/universal/families.json": "c336ff607c3ef74c3458690e7e0238619cf1d0ca6e901d432d9fc08090621200",
+    "remotion/blender/universal/models.json": "9319912b1f012393c014b69e7539dd42bb881d840ec8aa7a63e425e46d07d2ca",
+    "remotion/blender/universal/registry.py": "007743d9fee5a395bb508b7fb47adc59b1fba087faef9659877373b9fd211de6",
+    "remotion/blender/universal/request.py": "0c235a52d9eb8cafa88128086c2563f4968fb715179709bb677dea47d150d7e0",
+    "remotion/blender/universal/worker.py": "55802f5818c3daa3e1ac9debe52aa981475fb8d712f9dff7ef2efa8f76cf88b0",
+    "remotion/blender/venus_vault/atlas-bindings.json": "daf438b634df37cf940f4309e281a27081b21706a741a903348f2364f412323e",
+    "remotion/blender/venus_vault/blender_check.py": "a13c928e8c99ec4e811f2704d1ce2344a40a7d61c3e952a682f7de82091eb231",
+    "remotion/blender/venus_vault/camera.py": "d56b814d3d247dc539639899ef90bbdabef4e9e256041515201c191f02d728cf",
+    "remotion/blender/venus_vault/design.py": "f2f2c97656e820cfb5028ef978fd448a3c36c68bb6abd7cb7e2e6ad872f02823",
+    "remotion/blender/venus_vault/geometry.py": "846d0f5b21269c3ccd69640232dc0149c7b45e4e3e8297faa405cf7313391072",
+    "remotion/blender/venus_vault/renderer.py": "fb0943bc37142290dbd86d99c9900d72dd412c115542b534b246a9792600d39f",
+    "remotion/blender/venus_vault/request.py": "8112f167aadc72a987ae26d522f36ccf1f038d20781b685e27049eb3c0bd12e4",
+    "remotion/blender/venus_vault/verify_evidence.py": "1aa18c9301519db403365ebd5a9068635a56bd881e17ee6f0a10d8928858c036"
+  },
+  "frames": {
+    "0": {
+      "file": "frame-0000.png",
+      "sourceFrame": 0,
+      "sha256": "a5bef15654f3d511c2aaa82b57d731fd82874ea73225d0dc5f0bce53408fea96",
+      "seconds": 9.649057287999312,
+      "cameraMatrix": [
+        [
+          0.9868953824043274,
+          -0.025529809296131134,
+          0.15932902693748474,
+          8.056330680847168
+        ],
+        [
+          0.161361426115036,
+          0.1561417281627655,
+          -0.9744651317596436,
+          -29.272966384887695
+        ],
+        [
+          -3.6343728027077304e-10,
+          0.9874047040939331,
+          0.15821507573127747,
+          15.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "samples": 16,
+        "lod": 0,
+        "threads": 3,
+        "designSha256": "f466f9d87ce07f9e158609858f8b0b4bc515aca85aad4ae0c07c829356e7262c",
+        "boxes": 378,
+        "designCacheHit": false,
+        "batchedMeshes": 3,
+        "persistentData": true
+      }
+    }
+  },
+  "status": "success",
+  "cacheHits": 0,
+  "renderedThisRun": 1,
+  "configuration": {
+    "requested": "auto",
+    "selected": "CPU",
+    "backend": null,
+    "devices": [],
+    "notes": [
+      "No compatible Cycles GPU found; CPU fallback selected."
+    ],
+    "samples": 16,
+    "lod": 0,
+    "threads": 3,
+    "designSha256": "f466f9d87ce07f9e158609858f8b0b4bc515aca85aad4ae0c07c829356e7262c",
+    "boxes": 378,
+    "designCacheHit": false,
+    "batchedMeshes": 3,
+    "persistentData": true
+  },
+  "blenderVersion": "4.3.2",
+  "buildSeconds": 0.0749013009990449,
+  "workerSeconds": 9.72553119299846,
+  "peakProcessRssKiB": 521792,
+  "gpuMemoryAndUtilization": null,
+  "lastRunWallSeconds": 10.09112689199901
+}

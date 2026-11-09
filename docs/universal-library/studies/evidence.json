@@ -1,0 +1,106 @@
+{
+  "status": "family-studies-only",
+  "studies": [
+    {
+      "familyId": "vex",
+      "status": "partial-family-study",
+      "image": "vex.png",
+      "sha256": "037a233828ad89563b5cf6ffa6d30cd9cf2fd535419c93bf003869115f558a4d",
+      "report": "vex-report.json",
+      "reportSha256": "0cbf23f2f0064faa94d68e8d2142ef96f9be02ca85dbf34467f6c6da1a5d1790",
+      "quality": "draft",
+      "lod": 0
+    },
+    {
+      "familyId": "hive",
+      "status": "partial-family-study",
+      "image": "hive.png",
+      "sha256": "74e1c59ee86874b8c511f3bb1f3f768b6115ed34f724110390f8a0890426d60f",
+      "report": "hive-report.json",
+      "reportSha256": "ca063fb106906558ef3f3a354d82b4597f91edc14439b680212ede3045ede7a7",
+      "quality": "draft",
+      "lod": 0
+    },
+    {
+      "familyId": "taken",
+      "status": "partial-family-study",
+      "image": "taken.png",
+      "sha256": "7749f0873918735482397376f1d8ebf01b3bbb2885fa573f268cdb5db3b84198",
+      "report": "taken-report.json",
+      "reportSha256": "3a017faa21a4d89fe5af33a917e0d8d0df3514437d467df759e98a42478ea60c",
+      "quality": "draft",
+      "lod": 0
+    },
+    {
+      "familyId": "cabal",
+      "status": "partial-family-study",
+      "image": "cabal.png",
+      "sha256": "0fbf117918e02a0f23023a549b8bde56d83e009a33f8c08a5930b64d3c626f83",
+      "report": "cabal-report.json",
+      "reportSha256": "16593cb39ab3305291fb200ab858246154b0a9dd57b292672038e267b7925229",
+      "quality": "draft",
+      "lod": 0
+    },
+    {
+      "familyId": "eliksni",
+      "status": "partial-family-study",
+      "image": "eliksni.png",
+      "sha256": "5636fae5f3b296c5c4c6a85e96d388209dcbe3bb67427d089f70c503dc9351d5",
+      "report": "eliksni-report.json",
+      "reportSha256": "89d383cb5b9ddf4ed1c0d2195f7c7ee3145c9c563d5da57e7a62b2953e56ae94",
+      "quality": "draft",
+      "lod": 0
+    },
+    {
+      "familyId": "pyramid",
+      "status": "partial-family-study",
+      "image": "pyramid.png",
+      "sha256": "60ea9f14d9e1652186e65f295c14a701f1e9b3ea993d619abbda21ff73a7e0d8",
+      "report": "pyramid-report.json",
+      "reportSha256": "aa213a6757fba81463a8204d0e9aac76f4af63e284501a909e57b11b1a4d6d47",
+      "quality": "draft",
+      "lod": 0
+    },
+    {
+      "familyId": "bray",
+      "status": "partial-family-study",
+      "image": "bray.png",
+      "sha256": "3cced0c75e8a731193bc5a0ad6ef50a7717cd1d2fead7e782a180c029ebaa306",
+      "report": "bray-report.json",
+      "reportSha256": "7e748af98d48f4ee2efc56868c425866a57112e6f70330167e73a5d121d253a2",
+      "quality": "draft",
+      "lod": 0
+    },
+    {
+      "familyId": "nine",
+      "status": "partial-family-study",
+      "image": "nine.png",
+      "sha256": "2d316163694b8ef7ff1c1593ede4cb2d53cc8d87a65115cb99a7d71e7304ae3a",
+      "report": "nine-report.json",
+      "reportSha256": "bcbc6e49dc3b35fc8b960bb8f12de782b8cbb306314cfd274e0df9ee7385cb7c",
+      "quality": "draft",
+      "lod": 0
+    },
+    {
+      "familyId": "neomuna",
+      "status": "partial-family-study",
+      "image": "neomuna.png",
+      "sha256": "b8c9f04ef4aa4810e718906dcddfb1963d96aa12227f2587f5520fb000fbb4a2",
+      "report": "neomuna-report.json",
+      "reportSha256": "c03fa18d0ec0156b2d7d7d25bd1418c0679deb33651b9c4e6b40e0eb0c8c2e60",
+      "quality": "draft",
+      "lod": 0
+    },
+    {
+      "familyId": "pale-heart",
+      "status": "partial-family-study",
+      "image": "pale-heart.png",
+      "sha256": "a5bef15654f3d511c2aaa82b57d731fd82874ea73225d0dc5f0bce53408fea96",
+      "report": "pale-heart-report.json",
+      "reportSha256": "776bc36e6b3d009f5b73a91a346b81b086a9c729507783aedd5088193935179d",
+      "quality": "draft",
+      "lod": 0
+    }
+  ],
+  "gpuValidated": false
+}

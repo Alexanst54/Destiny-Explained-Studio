@@ -69,7 +69,7 @@ export function coverageMarkdown() {
   '', '## Lacunes maintenues','',...c.knownGaps.map(g=>'- '+g),
   '', '## Vérification et indépendance','',
   'Depuis remotion/ : `npm run test:atlas:universal`, `npm run typecheck:atlas:universal`, `npm run audit:assets -- --check`, `npm run report:atlas:coverage -- --check`. Voir atlas/universal/VALIDATION.md pour les commandes réellement exécutées. Les contrôles n’ont pas besoin du réseau.',
-  '', 'Refonte 0.9.1 sur une branche dédiée ciblant la branche de PR #20 ; PR #17, #19 et #20 restent indépendantes. Les anciens épisodes, le moteur vidéo, les assets existants et la PR #17 restent inchangés ; aucune fusion automatique. Les anciens IDs de la fondation sont conservés et testés. Nouveaux modèles procéduraux limités à Athéon et au Templier ; aucun rendu de 35 secondes.', '',
+  '', 'Chantier v1.0 basé sur la refonte validée de PR #21 ; PR #17, #19, #20 et #21 restent indépendantes. Les anciens épisodes, le moteur vidéo, les assets existants et la PR #17 restent inchangés ; aucune fusion automatique. Les anciens IDs de la fondation sont conservés et testés. Le registre additionnel conserve les boss manquants et les formes séparées ; dix études de familles ne valident pas leurs arènes nommées. Voir docs/universal-library/WORKSTREAM.md ; aucun rendu de 35 secondes.', '',
  ].join('\n');
 }
 if(process.argv[1]&&resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
