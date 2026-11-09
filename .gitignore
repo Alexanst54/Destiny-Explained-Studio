@@ -10,3 +10,5 @@ out/
 __pycache__/
 .cache/
 remotion/public/assets/narration/
+
+remotion/public/assets/blender-video/
