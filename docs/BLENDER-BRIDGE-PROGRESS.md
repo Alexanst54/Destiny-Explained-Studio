@@ -7,7 +7,7 @@ Branche : `feat/blender-bridge-0.8.1`. Base main vérifiée : `baf79ed8a32957ed2
 Interfaces réutilisables :
 
 - `episodeSchema`, `validateWords`, `resolveDirection`, `atFrame` : projet validé, scène/plan effectif et frame locale ; les timestamps embarqués 0.7 évitent toute dépendance audio pour une image.
-- `evaluateStudio` : poses et déplacements déterministes après héritage et interactions ; `rigBones` : hiérarchie originale des géométries. La petite définition d’équipement du renderer sera extraite en fonction partagée, sans changer ses résultats.
+- `evaluateStudio` : poses et déplacements déterministes après héritage et interactions ; `rigBones` : hiérarchie originale des géométries. Les accessoires présents dans rigBones sont exportés ; les panneaux d’équipement additionnels du renderer sont signalés comme omis. Aucun module fonctionnel n’est réécrit.
 - `cameraState`, `directCamera`, `composeCamera`, `lodFor` : caméra effective et niveaux de détail, conservés dans cet ordre.
 - `environmentBlocks`, `atmosphere`, `environmentStyle` : décor procédural borné et couleurs. Le premier pont n’exportera pas tout l’Atlas : sol et bâtiments procéduraux, avec omissions explicites.
 - `episode.mjs` : conventions Node 22, chemins locaux, rendu Remotion conservé. Le nouveau CLI sera indépendant et ne lancera aucune vidéo.
@@ -17,11 +17,19 @@ Environnement constaté : Blender 4.3.2 présent, Node 22.23.4 disponible dans l
 
 ## Étapes suivantes
 
-2. Export JSON versionné et tests ciblés : à faire.
+2. Export JSON versionné et tests ciblés : terminé. Contrat v1 / exporterVersion 0.8.1 indépendant des versions de projet ; matrices colonne majeure, caméra réelle 0.7 et omissions explicites. Exemple compact Riis avec six acteurs et détail de décor réduit à 6.
 3. Importeur Blender, axes/caméras/lumières et premier PNG CPU : à faire.
 4. Notebook Pro avec détection GPU et repli CPU, guides et rapport : à faire.
-5. Vérification finale ciblée et PR : à faire. Ouvrir une PR dès le premier ensemble cohérent.
+5. Vérification finale ciblée et PR : à faire. Le contrat/exporteur constitue le premier ensemble cohérent ; publication en PR brouillon maintenant, avant le rendu Blender.
 
 ## Reprise
 
 `git switch feat/blender-bridge-0.8.1`, puis `git status --short`. Lire ce fichier avant tout essai. Les commandes et résultats seront ajoutés à chaque checkpoint. Ne pas lancer toutes les suites Chromium ni un film complet. Après deux échecs d’une approche, analyser avant nouvel essai.
+
+## Checkpoint 2 — commandes exécutées
+
+- `node --experimental-strip-types --test remotion/blender/tests/export.test.mjs` (Node 22.23.4) : **4 tests réussis**, incluant validation Python, export/import JSON, immutabilité, frames hors ordre et positions des articulations (tolérance 1e-9).
+- `node remotion/node_modules/typescript/bin/tsc --noEmit --project remotion/tsconfig.json` : réussi.
+- `blender --background --factory-startup --python-expr ...` : Blender 4.3.2, Cycles compilé disponible. Aucun rendu encore exécuté.
+- `node --experimental-strip-types remotion/blender/examples/generate.mjs` : exemple généré.
+- Aucun paquet installé ; aucune suite Chromium ni vidéo relancée.
