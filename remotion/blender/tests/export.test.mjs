@@ -1,0 +1,17 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync,mkdtempSync,writeFileSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {join} from 'node:path';
+import {execFileSync} from 'node:child_process';
+import {Vector3,Matrix4} from 'three';
+import {exportFrame} from '../export.ts';
+import {bridgeSchema} from '../schema.ts';
+import {evaluateStudio} from '../../animation/director.ts';
+import {episodeSchema} from '../../src/voxel/episode/schema.ts';
+import {jointPositions,rigBones} from '../../animation/rig.ts';
+const project=()=>JSON.parse(readFileSync(new URL('../../episodes/hybrid_riis_07.json',import.meta.url)));
+test('versioned export is lossless at source and deterministic out of order',()=>{const e=project(),before=structuredClone(e),a=exportFrame(e,210);exportFrame(e,660);assert.deepEqual(exportFrame(e,210),a);assert.deepEqual(e,before);assert.equal(a.actors.length,6);assert.equal(a.source.localFrame,90);assert.equal(a.source.atlas.locationId,'riis');assert.ok(a.omissions.length);bridgeSchema.parse(JSON.parse(JSON.stringify(a)));});
+test('matrices reproduce 0.7 joint positions across animations',()=>{const e=episodeSchema.parse(project());for(const f of [150,210,300,600,660]){const out=exportFrame(e,f),s=e.scenes.find(s=>f>=s.startFrame&&f<s.startFrame+s.durationFrames),states=evaluateStudio(s.livingWorld,undefined,f-s.startFrame);for(const state of states){const a=out.actors.find(a=>a.id===state.actor.id),positions=jointPositions(rigBones(state.actor.rig),state.pose),root=new Matrix4().fromArray(a.rootMatrix);assert.deepEqual(a.position,state.position);assert.equal(a.yaw,state.yaw);for(const j of a.joints){const expected=new Vector3(...positions[j.id]).applyMatrix4(root),actual=new Vector3().setFromMatrixPosition(new Matrix4().fromArray(j.matrixWorld));assert.ok(expected.distanceTo(actual)<1e-9);}}}assert.notDeepEqual(exportFrame(e,150).actors[1].joints,exportFrame(e,300).actors[1].joints);});
+test('invalid frames, graphics and unsupported actors fail explicitly',()=>{for(const f of [-1,1.5,1050,NaN])assert.throws(()=>exportFrame(project(),f));assert.throws(()=>exportFrame(project(),30),/voxel/);const p=project();delete p.scenes[1].livingWorld.cast[0].rig;assert.throws(()=>exportFrame(p,210),/requires rig/);const q=project();q.direction.scenes[1].shots[0].actors.guardian=true;assert.throws(()=>exportFrame(q,210),/Legacy Guardian/);});
+test('Python accepts exported JSON and rejects bad versions, matrices and references',()=>{const folder=mkdtempSync(join(tmpdir(),'bridge-'));try{const path=join(folder,'scene.json'),data=exportFrame(project(),210),code="import sys;sys.path.insert(0,sys.argv[1]);from contract import load;load(sys.argv[2]);print('valid')",root=new URL('..',import.meta.url).pathname;writeFileSync(path,JSON.stringify(data));assert.match(execFileSync('python',['-c',code,root,path],{encoding:'utf8'}),/valid/);for(const change of [d=>d.version=2,d=>d.meshes[0].material='missing',d=>d.camera.matrixWorld[15]=0,d=>d.actors.push(d.actors[0])]){const bad=structuredClone(data);change(bad);writeFileSync(path,JSON.stringify(bad));assert.throws(()=>execFileSync('python',['-c',code,root,path],{stdio:'pipe'}));}}finally{rmSync(folder,{recursive:true,force:true});}});
