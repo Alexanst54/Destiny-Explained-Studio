@@ -157,8 +157,9 @@
       2
     ],
     "gallery": "docs/universal-library/crota/README.md",
-    "galleryV1Status": "pending-real-renders",
-    "protectedFiles": []
+    "galleryV1Status": "technical-grid-rendered-artistic-partial",
+    "protectedFiles": [],
+    "module": "universal.crota"
   },
   "oversoul-throne": {
     "provider": "universal",
@@ -172,7 +173,8 @@
       2
     ],
     "gallery": "docs/universal-library/crota/README.md",
-    "galleryV1Status": "pending-real-renders",
-    "protectedFiles": []
+    "galleryV1Status": "technical-grid-rendered-artistic-partial",
+    "protectedFiles": [],
+    "module": "universal.crota"
   }
 }

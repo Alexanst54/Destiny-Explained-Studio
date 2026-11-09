@@ -23,9 +23,8 @@ def build(r,device,threads,out):
         if provider not in ['family-study','universal']:raise ValueError('Unknown universal provider')
         PALETTE.update(palette())
         if provider=='universal':
-            from universal import crota
-            if r['binding']['selectionId'] not in ['boss-crota','oversoul-throne']:raise ValueError('No dedicated provider for this entity')
-            crota.setup()
+            from universal.providers import load
+            module=load(r['binding']['selectionId']);module.setup()
         key=hashlib.sha256(json.dumps({k:r[k] for k in ['seed','quality','lod','environmentVariant']},sort_keys=True).encode()+r['binding'].get('familyId',r['binding']['selectionId']).encode()).hexdigest()
         cache=out/'design-cache.json';design=None
         if cache.exists():
@@ -35,7 +34,7 @@ def build(r,device,threads,out):
             except (ValueError,KeyError):pass
         cache_hit=design is not None
         if design is None:
-            design=crota.arena(r['seed'],r['quality'],r['lod']) if provider=='universal' else generate(r['binding']['familyId'],r['seed'],r['quality'],r['lod'],r['environmentVariant'])
+            design=module.arena(r['seed'],r['quality'],r['lod']) if provider=='universal' else generate(r['binding']['familyId'],r['seed'],r['quality'],r['lod'],r['environmentVariant'])
             atomic_json(cache,dict(key=key,sha256=digest(design),design=design))
         scene=bpy.data.scenes.new('Universal family study');bpy.context.window.scene=scene;scene.render.engine='CYCLES';settings=QUALITY[r['quality']]
         scene.cycles.samples=settings['samples'];scene.cycles.max_bounces=settings['bounces'];scene.cycles.use_adaptive_sampling=True;scene.cycles.adaptive_threshold={'draft':.12,'balanced':.06,'cinematic':.025}[r['quality']];scene.cycles.seed=r['seed'];scene.render.use_persistent_data=True
@@ -57,22 +56,22 @@ def build(r,device,threads,out):
         from import_scene import mesh_data
         fog=bpy.data.objects.new('Bounded family mist',mesh_data('box'));collection.objects.link(fog);fog.location=(0,22,15);fog.scale=(70,90,35);fog.data.materials.append(haze)
         data=bpy.data.cameras.new('Universal camera');cam=bpy.data.objects.new('Universal camera',data);scene.collection.objects.link(cam);scene.camera=cam
-        info=choose_device(scene,device);info.update(samples=settings['samples'],lod=r['lod'],threads=threads,designSha256=digest(design),boxes=len(design['objects']),designCacheHit=cache_hit,batchedMeshes=len(meshes),persistentData=True)
+        info=choose_device(scene,device);info.update(samples=settings['samples'],lod=r['lod'],threads=threads,designSha256=digest(design),boxes=len(design['objects']),designCacheHit=cache_hit,batchedMeshes=len(meshes),batchedEnvironmentMeshes=len(meshes),batchedBossMeshes=0,persistentData=True,bounces=scene.cycles.max_bounces,denoise=scene.cycles.use_denoising,adaptiveThreshold=scene.cycles.adaptive_threshold,hazeDensity=v.inputs['Density'].default_value,viewTransform=scene.view_settings.view_transform)
         state=dict(scene=scene,provider=provider,configuration=info)
-        if provider=='universal' and r['binding']['entity']['kind']=='boss':
-            if r['binding']['selectionId']!='boss-crota':raise ValueError('No dedicated provider for this boss')
-            boss=crota.generate(r['seed'],r['quality'],r['lod']);joints={};col=bpy.data.collections.new('Dedicated boss/Crota');scene.collection.children.link(col)
+        if provider=='universal':state['providerModule']=module
+        if provider=='universal' and r['binding']['entity']['kind'] in ['boss','form']:
+            boss=module.generate(r['seed'],r['quality'],r['lod']);joints={};col=bpy.data.collections.new('Dedicated boss/Crota');scene.collection.children.link(col)
             for j in boss['joints']:
                 ob=bpy.data.objects.new(j['id'],None);col.objects.link(ob);ob.location=j['position']
                 if j['parent']:ob.parent=joints[j['parent']]
                 joints[j['id']]=ob
-            compile_design(boss,mats,col,joints);state.update(boss=boss,joints=joints,materials=mats)
+            boss_meshes=compile_design(boss,mats,col,joints);info.update(batchedBossMeshes=len(boss_meshes),batchedMeshes=len(meshes)+len(boss_meshes));state.update(boss=boss,joints=joints,materials=mats)
             info.update(bossBoxes=len(boss['objects']),bossDesignSha256=digest(boss),joints=len(joints))
         if provider=='universal' and r['view']!='environment':collection.hide_render=True
     if r['view']=='silhouette':
         # Original geometry, black emission override, isolated against a white world.
         m=bpy.data.materials.new('Silhouette override');m.use_nodes=True;n=m.node_tree.nodes;n.clear();em=n.new('ShaderNodeEmission');em.inputs['Color'].default_value=(0,0,0,1);o=n.new('ShaderNodeOutputMaterial');m.node_tree.links.new(em.outputs[0],o.inputs['Surface']);state['scene'].view_layers[0].material_override=m
-        if provider=='venus-vault' and r['binding']['entity']['kind']=='boss':
+        if provider=='venus-vault' and r['binding']['entity']['kind'] in ['boss','form']:
             for c in state['scene'].collection.children:
                 if c.name.startswith('Environment/'):c.hide_render=True
         state['scene'].world.node_tree.nodes['Background'].inputs['Color'].default_value=(1,1,1,1);state['scene'].world.node_tree.nodes['Background'].inputs['Strength'].default_value=1
@@ -87,20 +86,16 @@ def update(state,r,frame):
         scene=state['scene'];scene.frame_set(frame);cam=scene.camera;t=frame/r['fps'];a=-math.pi/2+.18+t*.035
         cam.location=(45*math.cos(a),15+45*math.sin(a),15);cam.rotation_euler=(Vector((0,20,7))-cam.location).to_track_quat('-Z','Y').to_euler();cam.data.lens=32;cam.data.clip_end=300
         if state['provider']=='universal':
-            # Four repeatable physical framings for the dedicated Crota proportions.
-            target=(-1.2,10,7.8);position=(-1.2,-28,8.8);lens=40
-            if r['view']=='three-quarter':position=(23,-26,9);lens=40
-            if r['view']=='environment':position=(20,-39,16);target=(0,22,11);lens=30
-            if r['view']=='reveal':position=(7,-35,2+min(t/2,1)*8);target=(0,10,4+min(t/2,1)*5);lens=36
-            if r['view']=='close-up':position=(7,-12,12);target=(0,10,10);lens=48
-            cam.location=position;cam.rotation_euler=(Vector(target)-cam.location).to_track_quat('-Z','Y').to_euler();cam.data.lens=lens;cam.data.sensor_fit='VERTICAL';cam.data.sensor_height=24
+            framing=state['providerModule'].camera(r['view'],frame,r['fps'])
+            cam.location=framing['position'];cam.rotation_euler=(Vector(framing['target'])-cam.location).to_track_quat('-Z','Y').to_euler();cam.data.lens=framing['lens'];cam.data.sensor_fit=framing['sensorFit'];cam.data.sensor_height=framing['sensorHeight'];cam.data.clip_end=framing['far']
             if state.get('boss'):
-                from universal.crota import pose,MATERIALS
-                p=pose(r['animation'],frame,r['fps'])
+                module=state['providerModule'];p=module.pose(r['animation'],frame,r['fps'])
                 for j in state['boss']['joints']:
-                    ob=state['joints'][j['id']];ob.location=p['position'].get(j['id'],j['position']);ob.rotation_euler=p['rotation'].get(j['id'],(0,0,0));ob.scale=p['scale'].get(j['id'],(1,1,1))
-                for name in ['crota-soul','crota-eye']:
-                    state['materials'][name].node_tree.nodes['Principled BSDF'].inputs['Emission Strength'].default_value=MATERIALS[name][3]*p['emissionPulse']
+                    ob=state['joints'][j['id']];ob.location=p['position'].get(j['id'],j['position']);ob.scale=p.get('scale',{}).get(j['id'],(1,1,1))
+                    if j['id'] in p.get('quaternion',{}):ob.rotation_mode='QUATERNION';ob.rotation_quaternion=p['quaternion'][j['id']]
+                    else:ob.rotation_mode='XYZ';ob.rotation_euler=p['rotation'].get(j['id'],(0,0,0))
+                for name in module.EMISSION_MATERIALS:
+                    state['materials'][name].node_tree.nodes['Principled BSDF'].inputs['Emission Strength'].default_value=module.MATERIALS[name][3]*p['emissionPulse']
     state['scene'].view_layers[0].update()
 
 def main():

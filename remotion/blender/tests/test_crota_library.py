@@ -22,6 +22,17 @@ class CrotaLibrary(unittest.TestCase):
   for mode in ['idle','move','attack','reveal']:
    first=crota.pose(mode,24,24);crota.pose(mode,3);self.assertEqual(first,crota.pose(mode,24,24));self.assertEqual(first,crota.pose(mode,30,30));self.assertNotEqual(first,crota.pose(mode,0))
    self.assertTrue(all(set(first[k])<=names for k in ['rotation','position','scale']));self.assertTrue(all(math.isfinite(x) for k in ['rotation','position','scale'] for v in first[k].values() for x in v))
+ def test_provider_cannot_impersonate_an_unrelated_boss(self):
+  from universal.providers import load
+  from unittest.mock import patch
+  self.assertIs(load('boss-crota'),crota)
+  from universal.registry import check_registry,implementations
+  entries=implementations();entries['boss-crota']={**entries['boss-crota'],'status':'implemented-user-approved'}
+  with patch('universal.registry.implementations',return_value=entries):
+   with self.assertRaisesRegex(ValueError,'approval'):check_registry()
+  with self.assertRaises(ValueError):load('boss-oryx')
+  with patch('universal.providers.implementations',return_value={'boss-oryx':{'provider':'universal','module':'universal.crota'}}):
+   with self.assertRaisesRegex(ValueError,'identity'):load('boss-oryx')
  def test_batch_keeps_missing_models_and_requires_prototype_opt_in(self):
   from universal.batch import plan
   standard=plan();extended=plan(True)

@@ -1,0 +1,111 @@
+{
+  "status": "partial-dedicated-prototype",
+  "userApproved": false,
+  "selectionId": "boss-crota",
+  "environmentId": "oversoul-throne",
+  "views": [
+    {
+      "view": "front",
+      "status": "partial-dedicated-prototype",
+      "report": "front-report.json",
+      "reportSha256": "ee792cc2550afd3d861914fdc1e88551b3e43690b78908a730379dca7e7a47e6",
+      "images": [
+        {
+          "path": "front.png",
+          "index": 0,
+          "sha256": "7347592018e01bb1fa8ae87ea017573007fb18e44ce29bcac739c13deabf8888"
+        }
+      ]
+    },
+    {
+      "view": "three-quarter",
+      "status": "partial-dedicated-prototype",
+      "report": "three-quarter-report.json",
+      "reportSha256": "fbb13f7d77f43ef750914e1dc71048d63549d6ddedb36bd62ba777140c2a762f",
+      "images": [
+        {
+          "path": "three-quarter.png",
+          "index": 0,
+          "sha256": "10a799dcca31ed7a6d7e51cf214c38accc0702643b30baafef8e0dac5cf0411b"
+        }
+      ]
+    },
+    {
+      "view": "silhouette",
+      "status": "partial-dedicated-prototype",
+      "report": "silhouette-report.json",
+      "reportSha256": "702d7ed38ccbd9585b9ccb2c1c66018cb1bb01bd3600c9288c1cb349b54e3e81",
+      "images": [
+        {
+          "path": "silhouette.png",
+          "index": 0,
+          "sha256": "c1cdbea2d10926c5facbb40e4f7f67e3f30dcf43c88633c7544d1fcaabc954e2"
+        }
+      ]
+    },
+    {
+      "view": "environment",
+      "status": "partial-dedicated-prototype",
+      "report": "environment-report.json",
+      "reportSha256": "cb20a416062f3409b9952a4b01ae64c3b1b1a9bea36b2c87e92748a3a639b5fd",
+      "images": [
+        {
+          "path": "environment.png",
+          "index": 0,
+          "sha256": "0d9fbe3999c6d4fbe53dc2d23e839138a7b1e8a4ca8fcd68c29a96fe2ad359ff"
+        }
+      ]
+    },
+    {
+      "view": "attack",
+      "status": "partial-dedicated-prototype",
+      "report": "attack-report.json",
+      "reportSha256": "9dfc1e82a349e139042028a2f9b4c11eec00d50d9540a51b2bd9d8071ef92160",
+      "images": [
+        {
+          "path": "attack-0000.png",
+          "index": 0,
+          "sha256": "9b678bda9659bcd8455f7780395101e97297c53382364de3f5efe4ed4e2e81da"
+        },
+        {
+          "path": "attack-0012.png",
+          "index": 12,
+          "sha256": "9a88ad9d2d1588e3fe1db0326acd7f235124bdd7548fb8c24fb67f972195f7e9"
+        },
+        {
+          "path": "attack-0023.png",
+          "index": 23,
+          "sha256": "87854ee0f8fc11cea9d1f1deaf134dd8b0bfa57fe079b1728d8555be66505e5a"
+        }
+      ],
+      "video": {
+        "path": "attack.mp4",
+        "sha256": "a1bb579050f2d7b6316dcc401aaf5ed8ca89b8ee494270c56ff747ba7edacaae"
+      }
+    }
+  ],
+  "nativeBlender": {
+    "status": "passed",
+    "evaluations": 192,
+    "cameraViews": 3,
+    "maxNormalizedBoundsOverflow": 0,
+    "staticResources": true,
+    "randomAccess": true,
+    "physicalGroundContactValidated": false
+  },
+  "providerRefactorRegression": {
+    "image": "regression-front.png",
+    "sha256": "59ce651039f50ff29e4375605766b81c418ac94c5710f1baad752dea678b5172",
+    "report": "regression-front-report.json",
+    "reportSha256": "d131447d7f9305eaba012dbe62a9dfb4a3fa7360291073d0ba7b0895acd1c228",
+    "rgbPixelIdentity": true,
+    "rgbSha256": "a3bf8739b3ee6bb5d78b78dea55e47f2d041ec91b17c28aeda91a8f73778eca8",
+    "differentChannelSamples": 0,
+    "note": "PNG metadata timestamps differ; decoded RGB is exactly identical."
+  },
+  "notes": [
+    "Original dedicated geometry; no artistic completion claim.",
+    "Move is a floating staging motion, not foot-contact walking.",
+    "GPU/Colab/Android untested."
+  ]
+}

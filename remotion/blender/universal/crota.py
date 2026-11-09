@@ -120,3 +120,15 @@ def pose(animation,frame,fps=24):
     if animation=='reveal':
         u=min(t/2,1);u=u*u*(3-2*u);rot['skull']=(.28*(1-u),0,0);rot['ribcage']=(.1*(1-u),0,-.12*(1-u));scale['soulAura']=(.6+u*.4,)*3
     return dict(rotation=rot,position=pos,scale=scale,emissionPulse=1+.18*math.sin(t*2.1))
+
+# New modules register only their own authored IDs, never arbitrary same-family bosses.
+SUPPORTED_ENTITIES=('boss-crota','oversoul-throne')
+EMISSION_MATERIALS=('crota-soul','crota-eye')
+
+def camera(view,frame=0,fps=24):
+    t=frame/fps;target=(-1.2,10,7.8);position=(-1.2,-28,8.8);lens=40
+    if view=='three-quarter':position=(23,-26,9);lens=40
+    if view=='environment':position=(20,-39,16);target=(0,22,11);lens=30
+    if view=='reveal':position=(7,-35,2+min(t/2,1)*8);target=(0,10,4+min(t/2,1)*5);lens=36
+    if view=='close-up':position=(7,-12,12);target=(0,10,10);lens=48
+    return dict(position=position,target=target,lens=lens,sensorHeight=24,sensorFit='VERTICAL',far=300)

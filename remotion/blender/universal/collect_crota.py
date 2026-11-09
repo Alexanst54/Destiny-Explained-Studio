@@ -1,5 +1,5 @@
 """Copy the actual Crota review grid, retaining a partial artistic status."""
-import hashlib,json,shutil,sys
+import hashlib,json,shutil,sys,subprocess
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]))
 from universal.registry import ROOT
@@ -7,7 +7,7 @@ from universal.cache import atomic_json,valid_png
 from universal.crota import generate,arena
 from venus_vault.geometry import digest
 
-def collect(source,native_log):
+def collect(source,native_log,regression=None):
     source=Path(source);out=ROOT/'docs/universal-library/crota';out.mkdir(parents=True,exist_ok=True);items=[]
     for view in ['front','three-quarter','silhouette','environment','attack']:
         folder=source/view;report=json.loads((folder/'progress.json').read_text());r=report['request'];clip=view=='attack';count=24 if clip else 1
@@ -24,6 +24,15 @@ def collect(source,native_log):
             shutil.copyfile(folder/'sequence.mp4',out/'attack.mp4');item['video']=dict(path='attack.mp4',sha256=hashlib.sha256((out/'attack.mp4').read_bytes()).hexdigest())
         items.append(item)
     line=next(l for l in Path(native_log).read_text().splitlines() if l.startswith('CROTA_BLENDER_CHECK '));metrics=json.loads(line.removeprefix('CROTA_BLENDER_CHECK '))
-    atomic_json(out/'evidence.json',dict(status='partial-dedicated-prototype',userApproved=False,selectionId='boss-crota',environmentId='oversoul-throne',views=items,nativeBlender=metrics,notes=['Original dedicated geometry; no artistic completion claim.','Move is a floating staging motion, not foot-contact walking.','GPU/Colab/Android untested.']))
+    regression_proof=None
+    if regression:
+        regression=Path(regression);r=json.loads((regression/'progress.json').read_text());original=out/'front.png';repeat=regression/'frame-0000.png'
+        if r['status']!='success' or not valid_png(repeat,640,800,r['frames']['0']['sha256']):raise ValueError('Invalid repeated Blender render')
+        def rgb(path):return subprocess.check_output(['ffmpeg','-v','error','-i',str(path),'-f','rawvideo','-pix_fmt','rgb24','-'])
+        a,b=rgb(original),rgb(repeat)
+        if a!=b:raise ValueError('Refactor changed RGB pixels')
+        shutil.copyfile(repeat,out/'regression-front.png');shutil.copyfile(regression/'progress.json',out/'regression-front-report.json')
+        regression_proof=dict(image='regression-front.png',sha256=r['frames']['0']['sha256'],report='regression-front-report.json',reportSha256=hashlib.sha256((out/'regression-front-report.json').read_bytes()).hexdigest(),rgbPixelIdentity=True,rgbSha256=hashlib.sha256(a).hexdigest(),differentChannelSamples=0,note='PNG metadata timestamps differ; decoded RGB is exactly identical.')
+    atomic_json(out/'evidence.json',dict(status='partial-dedicated-prototype',userApproved=False,selectionId='boss-crota',environmentId='oversoul-throne',views=items,nativeBlender=metrics,providerRefactorRegression=regression_proof,notes=['Original dedicated geometry; no artistic completion claim.','Move is a floating staging motion, not foot-contact walking.','GPU/Colab/Android untested.']))
 
-if __name__=='__main__':collect(sys.argv[1],sys.argv[2])
+if __name__=='__main__':collect(sys.argv[1],sys.argv[2],sys.argv[3] if len(sys.argv)>3 else None)

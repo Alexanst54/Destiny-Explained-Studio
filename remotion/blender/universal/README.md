@@ -53,3 +53,15 @@ La grille fixe est face/trois-quarts/silhouette/environnement en Cinematic, plus
 Le notebook additionnel [Universal-Library-Colab-Pro.ipynb](../Universal-Library-Colab-Pro.ipynb) clone la branche du lot B et expose les options par formulaire. Son code est compilé localement ; aucune exécution distante ni compatibilité Android réelle n’est revendiquée. Les notebooks précédents restent intacts.
 
 Le catalogue documentaire Atlas conserve son statut placeholder pour Cropta : le registre de la bibliothèque expose un prototype expérimental séparé et ne promeut aucun statut Atlas sans validation spécifique. Les autres identités et toutes les formes non implémentées restent manquantes.
+
+## Ajouter un vrai provider dédié
+
+Un module local original déclare `SUPPORTED_ENTITIES`, `MATERIALS`, `EMISSION_MATERIALS` et les fonctions pures `generate(seed, quality, lod)`, `arena(seed, quality, lod)`, `pose(animation, frame, fps)`, `camera(view, frame, fps)`, plus `setup()` pour sa palette. Les designs utilisent la même grammaire `Design` et une hiérarchie de joints adaptée à la morphologie. `models.json` référence explicitement le module. Le loader refuse un ID absent de `SUPPORTED_ENTITIES` : attribuer le module de Cropta à Oryx ne fonctionne pas. Aucun import dynamique déduit uniquement d’une famille ou du nom d’un boss.
+
+Le provider hérité `venus-vault` continue de déléguer au code validé sans modification. Pour les nouveaux modèles, enregistrer d’abord un état partiel, développer leur arène et leurs tests natifs, puis produire leur grille. Une réussite technique n’autorise jamais à annoncer une approbation artistique de l’utilisateur.
+
+Le test d’intégration `python remotion/blender/universal/reliability_check.py work/library-cache-check --blender /chemin/blender` vérifie avec Blender réel : hits complets, réemploi du design JSON, refus d’un seed différent ou de deux writers, reconstruction d’un design corrompu et nouveau rendu du seul PNG corrompu. Il exige un dossier neuf ; ses logs et résultats restent inspectables. Le test d’interruption forcée du lot A est consigné séparément dans la validation historique du checkpoint.
+
+Un futur état `implemented-reviewed` permet d’avancer après revue interne, sans attendre une instruction par boss : il exige une note artistique et un hook `verify_evidence(ROOT, entity_id)` du provider qui vérifie les preuves réelles. Il est distinct de `implemented-user-approved`, réservé aux deux modèles explicitement validés dans cette mission. Cropta reste partiel tant que ses limites artistiques ne sont pas résolues.
+
+Limites d’infrastructure restantes : le LOD est **explicite**, sans politique automatique fondée sur la distance ; il ne baisse jamais à cause d’une résolution de preview. Le cache inter-session contient le design JSON et les rendus, pas une scène `.blend`. L’export du compagnon web est une sélection JSON, sans migration ni composition audio automatique d’un épisode. Ces éléments restent au programme des lots suivants ; ils ne sont pas déclarés terminés.

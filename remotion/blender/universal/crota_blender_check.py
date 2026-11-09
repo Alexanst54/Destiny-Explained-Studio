@@ -12,11 +12,20 @@ def main():
     evaluated=0;worst=0
     with tempfile.TemporaryDirectory() as tmp:
         r=request('boss-crota',quality='draft',width=640,height=800,view='front');state=build(r,'cpu',3,Path(tmp));objects=len(bpy.data.objects);meshes=len(bpy.data.meshes)
+        assert state['configuration']['batchedMeshes']==state['configuration']['batchedEnvironmentMeshes']+state['configuration']['batchedBossMeshes']
+        assert state['configuration']['batchedBossMeshes']>0
         for mode in ['idle','move','attack','reveal']:
             for frame in range(48):
                 r['animation']=mode;update(state,r,frame);evaluated+=1
                 for obj in state['joints'].values():assert all(math.isfinite(v) for row in obj.matrix_world for v in row)
                 assert len(bpy.data.objects)==objects and len(bpy.data.meshes)==meshes
+        from unittest.mock import patch
+        module=state['providerModule'];original=module.pose
+        def quaternion_pose(*args):
+            p=original(*args);p['quaternion']={'skull':(1,0,0,0)};return p
+        with patch.object(module,'pose',side_effect=quaternion_pose):
+            update(state,r,1);assert state['joints']['skull'].rotation_mode=='QUATERNION'
+        update(state,r,2);assert state['joints']['skull'].rotation_mode=='XYZ'
         r['animation']='idle';update(state,r,12);before={k:tuple(v.matrix_world.translation) for k,v in state['joints'].items()};update(state,r,43);update(state,r,12);assert before=={k:tuple(v.matrix_world.translation) for k,v in state['joints'].items()}
         for view in ['front','three-quarter','silhouette']:
             r['view']=view;update(state,r,0)

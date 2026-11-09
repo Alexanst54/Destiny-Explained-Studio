@@ -22,6 +22,7 @@ class UniversalLibrary(unittest.TestCase):
   self.assertEqual(resolve('arena-golgoroth-s-cellar',allow_family_study=True)['status'],'partial-family-study')
   with self.assertRaises(ValueError):resolve('black-garden',allow_family_study=True)
   with self.assertRaises(ValueError):resolve('arena-golgoroth-s-cellar',allow_family_study=True,family_id='neomuna')
+  with self.assertRaises(ValueError):request('arena-golgoroth-s-cellar',family_study=True,family='hive',view='silhouette')
  def test_all_family_variants_determinism_and_geometry(self):
   for f in index()['families']:
    for variant in f['variants']:

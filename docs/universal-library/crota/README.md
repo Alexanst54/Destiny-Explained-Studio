@@ -11,9 +11,11 @@ Repères travaillés : trois yeux, crâne à épines, épaules osseuses dentelé
 | Silhouette monochrome | ![Silhouette de Cropta](silhouette.png) |
 | Trône de l’Âme | ![Cropta dans son arène](environment.png) |
 
-**Animation Balanced en cours de rendu CPU.** Elle sera ajoutée avec ses preuves après validation des 24 frames ; aucune animation terminée n’est annoncée dans ce checkpoint.
+[Animation d’attaque Balanced](attack.mp4) : 24 frames, 24 FPS, une seconde, H.264/yuv420p, 480×360, LOD0, muette.
 
-Les quatre fixes sont Cinematic, 640×800, LOD0, Cycles128 maximum ; le clip utilise Balanced48 maximum. Graine 42, Blender officiel 4.3.2, débruitage OIDN, AgX. CPU AMD EPYC 9V74, trois threads, GPU absent. Les durées et pics RSS du processus sont dans les rapports techniques associés aux PNG (le manifeste final sera ajouté après le clip), avec matrices caméra, hashes et réglages effectifs. Pas de mesure VRAM ni gain GPU revendiqué.
+![Début](attack-0000.png) ![Milieu](attack-0012.png) ![Fin](attack-0023.png)
+
+Les quatre fixes sont Cinematic, 640×800, LOD0, Cycles128 maximum ; le clip utilise Balanced48 maximum. Graine 42, Blender officiel 4.3.2, débruitage OIDN, AgX. CPU AMD EPYC 9V74, trois threads, GPU absent. Les durées et pics RSS du processus sont dans les [preuves techniques](evidence.json), avec matrices caméra, hashes et réglages effectifs. Pas de mesure VRAM ni gain GPU revendiqué.
 
 Géométrie : **4143 / 922 / 294** pièces pour les LOD0/1/2, **18 articulations** stables. Arène : **2599 / 943 / 499** pièces. Matériaux de chitine/minéral/âme propres à Cropta, microrelief procédural sans texture d’image. Les grandes architectures en arcs et l’Âme suspendue constituent une interprétation artistique, pas une carte exacte.
 
@@ -29,3 +31,19 @@ blender --background --factory-startup --python-exit-code 1 --python remotion/bl
 ```
 
 Ajouter `--blender /chemin/blender` si nécessaire. Pour reprendre, conserver les sources et options puis ajouter `--resume`. Colab/T4/Android non exécutés ; le guide du lot A donne le protocole de test.
+
+Les rapports conservent les snapshots du registre au moment des rendus ; leur état de galerie peut donc encore indiquer « pending ». Dans ces rapports initiaux, `batchedMeshes` compte les lots **de l’environnement seulement**. Le renderer courant distingue désormais `batchedEnvironmentMeshes` et `batchedBossMeshes`, avec un total correct. Cette correction de métadonnées ne change pas les pixels, les modèles ou les matériaux rendus.
+
+Un second rendu Blender de face après généralisation du loader est fourni : [image](regression-front.png), [rapport](regression-front-report.json). Les pixels RGB décodés sont **strictement identiques** au premier rendu (zéro canal différent). Les fichiers PNG ont des empreintes différentes car Blender y inscrit l’heure et la durée de rendu. Cette mesure porte sur cette vue et cette graine, pas sur une garantie de pixels identiques entre matériels différents.
+
+## Mesures CPU de cette grille
+
+| Vue | Rendu cumulé | Moyenne par frame | Pic RSS du processus |
+| --- | --- | --- | --- |
+| front | 28.38 s | 28.38 s | 796.9 MiB |
+| three-quarter | 24.92 s | 24.92 s | 798.6 MiB |
+| silhouette | 11.18 s | 11.18 s | 794.1 MiB |
+| environment | 212.52 s | 212.52 s | 825.1 MiB |
+| attack | 1657.65 s | 69.07 s | 590.7 MiB |
+
+Mesures avec contention CPU possible ; pas de comparaison de performances contrôlée.

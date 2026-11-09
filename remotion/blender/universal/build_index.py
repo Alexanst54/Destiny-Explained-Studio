@@ -23,6 +23,14 @@ def build():
         if e['id']=='boss-crota' and (ROOT/'docs/universal-library/crota/evidence.json').exists():
             proof=json.loads((ROOT/'docs/universal-library/crota/evidence.json').read_text())
             e['previews']=[dict(view=v['view'],path='docs/universal-library/crota/'+v['images'][0]['path'],quality='balanced' if v['view']=='attack' else 'cinematic') for v in proof['views']]
+        approved=ROOT/'docs/universal-library/approved/evidence.json'
+        if e['id'] in d['userApprovedModels'] and approved.exists():
+            proof=json.loads(approved.read_text());model=next(x for x in proof['models'] if x['id']==e['id'])
+            e['previews']=[dict(view=v['view'],path=v['path'],quality=v['quality']) for v in model['views']]
+            e['videoPreviews']=[dict(path=model['animation']['path'],label='Animation Balanced')]
+            e['implementation']['gallery']='docs/universal-library/approved/README.md'
+            e['implementation']['galleryV1Status']=model['galleryStatus']
+        if e['id']=='boss-crota' and (ROOT/'docs/universal-library/crota/evidence.json').exists():e['videoPreviews']=[dict(path='docs/universal-library/crota/attack.mp4',label='Prototype — attaque Balanced')]
         # A study belongs to a family, never grants a named Atlas environment implemented status.
     used={i for e in d['entities'] for i in e['destinationIds']};d['destinations']=[l for l in d['locations'] if l['id'] in used]
     return json.dumps(d,ensure_ascii=False,indent=2)+'\n'

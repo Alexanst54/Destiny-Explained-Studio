@@ -8,6 +8,7 @@ def request(selection,quality='balanced',seed=42,lod=0,frames=1,fps=24,width=640
     if type(fps) is not int or fps not in [24,30] or width%2 or height%2 or start_frame+frames>18000:raise ValueError('Invalid frame range or dimensions')
     if quality not in ['draft','balanced','cinematic'] or view not in VIEWS or environment_variant not in ['sanctum','causeway','courtyard']:raise ValueError('Unknown quality, view or environment variant')
     binding=resolve(selection,arena,variant,family_study,family)
+    if binding['entity']['kind']=='environment' and view!='environment':raise ValueError('Environment selections require --view environment; anatomical views require a dedicated boss')
     animations=binding['entity']['implementation']['animations'] if binding['entity']['implementation'] else ['idle']
     if animation not in animations:raise ValueError('Unsupported animation for selected implementation')
     return dict(version=1,selectionId=selection,variantId=variant,binding=binding,quality=quality,seed=seed,lod=lod,frames=frames,fps=fps,width=width,height=height,startFrame=start_frame,animation=animation,view=view,environmentVariant=environment_variant)
