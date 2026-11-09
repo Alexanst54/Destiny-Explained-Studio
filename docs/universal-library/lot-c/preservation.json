@@ -123,5 +123,186 @@
     "remotion/blender/characters/vex_bosses.py": "e372a2df2dfde4bca1242f115877a2e60df0a188f54dc0b7f3b74d56bff41951",
     "remotion/blender/environments/vault_of_glass.py": "cd6cab89cd66a41976f744ffccbaaac4061e508e84cfcc18985e6dfcbb13fcaf",
     "remotion/blender/environments/venus.py": "f6baf34cca0bb20c8c3be6e26df208fc0e05f3e82dde32b6c61d0cc3506d9d05"
-  }
+  },
+  "registryBindings": {
+    "boss-templar": {
+      "provider": "venus-vault",
+      "status": "implemented-user-approved",
+      "environmentId": "arena-templars-well",
+      "animations": [
+        "idle",
+        "rotate",
+        "move",
+        "attack",
+        "reveal"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/universal-library/approved/README.md",
+      "galleryV1Status": "technical-grid-rendered",
+      "protectedFiles": [
+        {
+          "path": "remotion/blender/cinematic_vex/atheon.py",
+          "sha256": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/templar.py",
+          "sha256": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/animation.py",
+          "sha256": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/shapes.py",
+          "sha256": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/materials.py",
+          "sha256": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542"
+        }
+      ]
+    },
+    "boss-atheon": {
+      "provider": "venus-vault",
+      "status": "implemented-user-approved",
+      "environmentId": "arena-glass-throne",
+      "animations": [
+        "idle",
+        "walk",
+        "combat",
+        "temporal",
+        "reveal"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/universal-library/approved/README.md",
+      "galleryV1Status": "technical-grid-rendered",
+      "protectedFiles": [
+        {
+          "path": "remotion/blender/cinematic_vex/atheon.py",
+          "sha256": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/templar.py",
+          "sha256": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/animation.py",
+          "sha256": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/shapes.py",
+          "sha256": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/materials.py",
+          "sha256": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542"
+        }
+      ]
+    },
+    "venus": {
+      "provider": "venus-vault",
+      "status": "implemented",
+      "animations": [
+        "idle"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/previews/venus-vault/README.md",
+      "galleryV1Status": "partial-existing-evidence",
+      "protectedFiles": []
+    },
+    "vault-of-glass": {
+      "provider": "venus-vault",
+      "status": "implemented",
+      "animations": [
+        "idle"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/previews/venus-vault/README.md",
+      "galleryV1Status": "partial-existing-evidence",
+      "protectedFiles": []
+    },
+    "arena-templars-well": {
+      "provider": "venus-vault",
+      "status": "implemented",
+      "animations": [
+        "idle"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/previews/venus-vault/README.md",
+      "galleryV1Status": "partial-existing-evidence",
+      "protectedFiles": []
+    },
+    "arena-glass-throne": {
+      "provider": "venus-vault",
+      "status": "implemented",
+      "animations": [
+        "idle"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/previews/venus-vault/README.md",
+      "galleryV1Status": "partial-existing-evidence",
+      "protectedFiles": []
+    },
+    "boss-crota": {
+      "provider": "universal",
+      "status": "partial-dedicated-prototype",
+      "environmentId": "oversoul-throne",
+      "animations": [
+        "idle",
+        "move",
+        "attack",
+        "reveal"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/universal-library/crota/README.md",
+      "galleryV1Status": "technical-grid-rendered-artistic-partial",
+      "protectedFiles": [],
+      "module": "universal.crota"
+    },
+    "oversoul-throne": {
+      "provider": "universal",
+      "status": "partial-dedicated-prototype",
+      "animations": [
+        "idle"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/universal-library/crota/README.md",
+      "galleryV1Status": "technical-grid-rendered-artistic-partial",
+      "protectedFiles": [],
+      "module": "universal.crota"
+    }
+  },
+  "registryFileSha256": "0d84b36845146a09f08c7ac0630d5d133827ec151e1af13ab49072896bc2124d"
 }

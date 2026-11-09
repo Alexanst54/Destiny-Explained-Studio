@@ -45,5 +45,15 @@ def main():
       assert p.z>0 and overflow<.01,(name,'clip',frame,obj.name,tuple(p))
    results[name]=dict(evaluations=evaluations,views=5,clipProjectionFrames=36,maxClipOverflow=clip_worst,maxNormalizedOverflow=worst,staticResources=True,randomAccess=True,articulatedMotion=True,bounds=bounds,physicalFootContactValidated=False)
   bpy.ops.wm.read_factory_settings(use_empty=True)
+  lod_checks=[]
+  for lod in [1,2]:
+   with tempfile.TemporaryDirectory() as tmp:
+    lower=request('boss-'+name,quality='draft',view='front',width=width,height=height,lod=lod);lower_state=build(lower,'cpu',3,Path(tmp));before_objects=len(bpy.data.objects);before_meshes=len(bpy.data.meshes)
+    for mode in ['idle','move','combat','signature','reveal']:
+     lower['animation']=mode;update(lower_state,lower,18)
+     assert len(bpy.data.objects)==before_objects and len(bpy.data.meshes)==before_meshes
+    lod_checks.append(dict(lod=lod,bossBoxes=lower_state['configuration']['bossBoxes'],joints=len(lower_state['joints']),animationModes=5))
+   bpy.ops.wm.read_factory_settings(use_empty=True)
+  results[name]['lowerLodConstructionChecks']=lod_checks
  print('LOT_C_CHECK '+json.dumps(results),flush=True)
 if __name__=='__main__':main()

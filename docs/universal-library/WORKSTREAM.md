@@ -20,3 +20,7 @@ Limites de ressources : environnement de travail CPU seulement (3 threads). Les 
 ## Suite du lot B
 
 Cropta est développé sur `feat/library-crota-lot-b-1.0`, en PR empilée ciblant la branche d’intégration du lot A. Sa grille technique ne constitue pas une approbation artistique : le statut reste partiel et les autres boss restent manquants. Les limites de morphologie, d’enveloppe spectrale et de mouvement sont consignées dans la galerie. Le planificateur `universal/batch.py` produit automatiquement la grille des modèles enregistrés et le backlog des 150 autres entrées boss/formes ; les prototypes demandent un opt-in explicite.
+
+## Livraison empilée Lot C — boss emblématiques
+
+La demande spécifique du lot C ajoute Oryx, Rhulk et Nezarec au-dessus de la dernière tête du lot B (`2baffffecfaebe3f803efb3a5d8f5ca001b364cf`). Chaque prototype possède sa propre anatomie, son rig et son arène ; les formes ne sont pas héritées du parent. Les trois restent partiels, sans approbation artistique prétendue. Le Témoin, Riven, les autres raids/donjons et toutes les formes manquantes restent au backlog : 122 entrées de boss et 25 formes, soit 147 entrées distinctes, pas 147 individus. Voir [Lot C](lot-c/README.md). Aucun épisode historique ni modèle validé n’est modifié, et PR #17 reste exclue.

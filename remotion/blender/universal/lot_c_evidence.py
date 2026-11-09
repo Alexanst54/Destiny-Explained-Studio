@@ -15,7 +15,7 @@ def preserve():
  p=json.loads((FOLDER/'preservation.json').read_text())
  for path,value in p['protected'].items():
   if sha(ROOT/path)!=value:raise ValueError('Preserved input/evidence changed: '+path)
- old=json.loads(subprocess.check_output(['git','show',p['base']+':remotion/blender/universal/models.json'],text=True))
+ old=p['registryBindings']
  for key,value in old.items():
   if implementations()[key]!=value:raise ValueError('Previous registry binding changed: '+key)
  return len(p['protected'])
@@ -43,9 +43,10 @@ def validate_report(report,job):
   if abs(actual['lens']-camera['lens'])>1e-4 or actual['sensorFit']!=camera['sensorFit'] or abs(actual['sensorHeight']-24)>1e-4:raise ValueError('Physical camera settings differ')
  return True
 
-def collect(source,native_log):
- source=Path(source);records={name:[] for name in ['oryx','rhulk','nezarec']};preserve()
+def collect(source,native_log,only=None):
+ source=Path(source);records={name:[] for name in ['oryx','rhulk','nezarec'] if only is None or name==only};preserve()
  for job in plan():
+  if job['slug'] not in records:continue
   src=source/job['slug']/job['name'];report=json.loads((src/'progress.json').read_text());validate_report(report,job);out=FOLDER/job['slug'];out.mkdir(parents=True,exist_ok=True)
   for f in report['frames'].values():
    if not valid_png(src/f['file'],job['width'],job['height'],f['sha256']):raise ValueError('Invalid completed PNG')
@@ -59,12 +60,16 @@ def collect(source,native_log):
  for name,entries in records.items():
   module=load('boss-'+name);counts=[dict(lod=l,boxes=len(module.generate(lod=l)['objects']),joints=len(module.generate(lod=l)['joints']),environmentBoxes=len(module.arena(lod=l)['objects'])) for l in range(3)]
   atomic_json(FOLDER/name/'evidence.json',dict(status='partial-dedicated-prototype',userApproved=False,bossId='boss-'+name,arenaId=resolve('boss-'+name)['environmentId'],renders=entries,native=native[name],geometry=counts,hardware='Actual device/backend/threads in each raw report; GPU memory/utilization not measured.'))
- atomic_json(FOLDER/'evidence.json',dict(status='three-prototypes-awaiting-visual-review',bosses=[dict(id='boss-'+n,evidence=n+'/evidence.json',sha256=sha(FOLDER/n/'evidence.json')) for n in records],protectedFiles=preserve(),fullLibraryComplete=False))
+ available=[n for n in ['oryx','rhulk','nezarec'] if (FOLDER/n/'evidence.json').exists()]
+ missing=['boss-'+n for n in ['oryx','rhulk','nezarec'] if n not in available]
+ atomic_json(FOLDER/'evidence.json',dict(status='evidence-in-progress' if missing else 'three-prototypes-awaiting-visual-review',bosses=[dict(id='boss-'+n,evidence=n+'/evidence.json',sha256=sha(FOLDER/n/'evidence.json')) for n in available],missingEvidence=missing,protectedFiles=preserve(),fullLibraryComplete=False))
 
-def verify():
+def verify(only=None):
  protected=preserve();index=json.loads((FOLDER/'evidence.json').read_text());jobs={(j['slug'],j['name']):j for j in plan()}
- if len(index['bosses'])!=3 or index['fullLibraryComplete']:raise ValueError('Wrong prototype scope')
- for item in index['bosses']:
+ if (only is None and len(index['bosses'])!=3) or index['fullLibraryComplete']:raise ValueError('Wrong prototype scope')
+ selected=[item for item in index['bosses'] if only is None or item['id']=='boss-'+only]
+ if not selected:raise ValueError('Missing selected prototype evidence')
+ for item in selected:
   p=FOLDER/item['evidence'];e=json.loads(p.read_text());folder=p.parent;slug=folder.name
   if sha(p)!=item['sha256'] or e['status']!='partial-dedicated-prototype' or e['userApproved'] or e['bossId']!=item['id']:raise ValueError('Incorrect model status/identity')
   if {r['name'] for r in e['renders']}!={'front','profile','three-quarter','cinematic','environment','animation'}:raise ValueError('Missing requested view')
@@ -82,8 +87,8 @@ def verify():
     data=subprocess.check_output(['ffmpeg','-v','error','-i',str(video),'-f','framemd5','-']).decode();hashes=[l.rsplit(',',1)[-1].strip() for l in data.splitlines() if l and not l.startswith('#')]
     if len(hashes)!=36 or len(set(hashes))<33:raise ValueError('Frozen/incomplete decoded clip')
   if e['native']['evaluations']!=240 or e['native']['clipProjectionFrames']!=36 or e['native']['maxNormalizedOverflow']!=0 or e['native']['maxClipOverflow']!=0:raise ValueError('Native framing/animation check failed')
- return dict(prototypes=3,cinematicStills=15,balancedFrames=108,protectedFiles=protected)
+ return dict(prototypes=len(selected),cinematicStills=5*len(selected),balancedFrames=36*len(selected),protectedFiles=protected)
 
 if __name__=='__main__':
- if len(sys.argv)>1 and sys.argv[1]!='--check':collect(sys.argv[1],sys.argv[2])
- else:print('LOT_C_EVIDENCE '+json.dumps(verify()))
+ if len(sys.argv)>1 and sys.argv[1]!='--check':collect(sys.argv[1],sys.argv[2],sys.argv[3] if len(sys.argv)>3 else None)
+ else:print('LOT_C_EVIDENCE '+json.dumps(verify(sys.argv[2] if len(sys.argv)>2 else None)))

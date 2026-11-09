@@ -40,7 +40,21 @@
         "maxY": 0.6364247798919678
       }
     },
-    "physicalFootContactValidated": false
+    "physicalFootContactValidated": false,
+    "lowerLodConstructionChecks": [
+      {
+        "lod": 1,
+        "bossBoxes": 1816,
+        "joints": 23,
+        "animationModes": 5
+      },
+      {
+        "lod": 2,
+        "bossBoxes": 590,
+        "joints": 23,
+        "animationModes": 5
+      }
+    ]
   },
   "rhulk": {
     "evaluations": 240,
@@ -83,7 +97,21 @@
         "maxY": 0.675258219242096
       }
     },
-    "physicalFootContactValidated": false
+    "physicalFootContactValidated": false,
+    "lowerLodConstructionChecks": [
+      {
+        "lod": 1,
+        "bossBoxes": 1697,
+        "joints": 22,
+        "animationModes": 5
+      },
+      {
+        "lod": 2,
+        "bossBoxes": 610,
+        "joints": 22,
+        "animationModes": 5
+      }
+    ]
   },
   "nezarec": {
     "evaluations": 240,
@@ -126,6 +154,20 @@
         "maxY": 0.6718714833259583
       }
     },
-    "physicalFootContactValidated": false
+    "physicalFootContactValidated": false,
+    "lowerLodConstructionChecks": [
+      {
+        "lod": 1,
+        "bossBoxes": 2069,
+        "joints": 23,
+        "animationModes": 5
+      },
+      {
+        "lod": 2,
+        "bossBoxes": 715,
+        "joints": 23,
+        "animationModes": 5
+      }
+    ]
   }
 }

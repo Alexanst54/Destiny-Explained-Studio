@@ -34,3 +34,7 @@ Les anciens rendus d’Athéon et du Templier restent accessibles dans l’index
 ## Lot B en cours
 
 [Cropta et son arène](crota/README.md) : premier prototype dédié partiel, quatre fixes Cinematic et animation Balanced. Le statut reste partiel, avec les limites artistiques et de mouvement explicites. Cette extension est en PR empilée ; la bibliothèque complète n’est pas déclarée terminée. Le notebook additionnel [Universal-Library-Colab-Pro.ipynb](../../remotion/blender/Universal-Library-Colab-Pro.ipynb) fournit la sélection d’ID, le LOD, les études explicites et la reprise Drive ; ses cellules sont vérifiées syntaxiquement, sans exécution Colab/T4.
+
+## Lot C — Oryx, Rhulk, Nezarec
+
+Trois générateurs dédiés supplémentaires, chacun avec géométrie, rig, matériaux, cinq animations, arène et LOD 0/1/2 propres. Ils restent des **prototypes partiels en attente de revue artistique**. Voir le [guide de reproduction et Colab](lot-c/README.md), les [références et reconstructions](lot-c/ART-DIRECTION.md), les galeries [Oryx](lot-c/oryx/README.md), [Rhulk](lot-c/rhulk/README.md) et [Nezarec](lot-c/nezarec/README.md). Les preuves sont publiées seulement après rendu Blender réel et vérification. Athéon, le Templier et Cropta restent protégés ; aucune intégration de PR #17.

@@ -1415,7 +1415,7 @@
           "close-up"
         ],
         "gallery": "docs/universal-library/lot-c/oryx/README.md",
-        "galleryV1Status": "pending-real-renders",
+        "galleryV1Status": "technical-grid-rendered-artistic-review-pending",
         "protectedFiles": [],
         "environmentId": "arena-threshold",
         "reviewGrid": {
@@ -1524,7 +1524,39 @@
         "dreadnaught",
         "saturn"
       ],
-      "previews": []
+      "previews": [
+        {
+          "view": "front",
+          "path": "docs/universal-library/lot-c/oryx/front.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "profile",
+          "path": "docs/universal-library/lot-c/oryx/profile.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "three-quarter",
+          "path": "docs/universal-library/lot-c/oryx/three-quarter.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "cinematic",
+          "path": "docs/universal-library/lot-c/oryx/cinematic.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "environment",
+          "path": "docs/universal-library/lot-c/oryx/environment.png",
+          "quality": "cinematic"
+        }
+      ],
+      "videoPreviews": [
+        {
+          "path": "docs/universal-library/lot-c/oryx/animation.mp4",
+          "label": "Prototype — signature (Balanced)"
+        }
+      ]
     },
     {
       "id": "boss-vosik",
@@ -16871,7 +16903,7 @@
           "environment"
         ],
         "gallery": "docs/universal-library/lot-c/oryx/README.md",
-        "galleryV1Status": "pending-real-renders",
+        "galleryV1Status": "technical-grid-rendered-artistic-review-pending",
         "protectedFiles": []
       },
       "family": "hive",

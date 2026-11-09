@@ -36,7 +36,7 @@ Add `--blender /path/to/blender`. Existing Athéon/Templar/Cropta controls and t
 
 Each new boss supports `idle`, `move`, `combat`, `signature`, `reveal`. Oryx hovers, flexes wings/claws and raises his arms for a ritual; Rhulk strides/dashes, extends a kick and manipulates resonance; Nezarec lunges, sweeps the scythe and performs a jump/slam-like Light/Dark gesture. Limbs, weapons and secondary structures articulate independently. Poses are direct functions of time, with no accumulated simulation state.
 
-These are choreographed prototypes: no physical mass, collision/damage, cloth, fluid, terrain-aware foot IK or complete raid-mechanics simulation. Ground contacts and foot sliding are not physically validated. The arenas evoke the final encounters, without claiming exact maps or canonical metre measurements. Oryx's optional sword is campaign-inspired and intentionally editorial in the raid setting. All three stay partial until visual review; successful tests do not declare artistic completion.
+These are choreographed prototypes: no physical mass, collision/damage, cloth, fluid, terrain-aware foot IK or complete raid-mechanics simulation. Ground contacts and foot sliding are not physically validated. The arenas evoke the final encounters, without claiming exact maps or canonical metre measurements. Oryx's carried sword is a campaign-inspired editorial staging choice and not a separately selectable sword-free raid form; it is intentionally used in the raid setting. All three stay partial until visual review; successful tests do not declare artistic completion.
 
 ## Colab / Tesla T4
 

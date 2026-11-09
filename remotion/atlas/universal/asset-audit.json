@@ -1389,6 +1389,11 @@
       "sha256": "4798b8e902aa3d328cd4a8f4a72b6affdfb2a4140a7973d7af63a78f9142835b"
     },
     {
+      "path": "editor/lot-c.browser.test.cjs",
+      "bytes": 2244,
+      "sha256": "93cd01b66cfe14cf56595290fea9627e4049dc357e82d621d9100655c44f089d"
+    },
+    {
       "path": "editor/model.mjs",
       "bytes": 16928,
       "sha256": "9e6ca762192ef4249979ac99e96bf1d6928c1b052cb76964f956a08633923c26"
@@ -1915,13 +1920,18 @@
     },
     {
       "path": "remotion/blender/universal/lot_c_check.py",
-      "bytes": 3444,
-      "sha256": "ffdb1d393b7372fc17d44a83f3dd95238c5b9fd3be2e979024dde877a7e6ed80"
+      "bytes": 4196,
+      "sha256": "55460b410f6b690ce1498dd5a7b6a130585488c352f451c86f809b97b8784d99"
     },
     {
       "path": "remotion/blender/universal/lot_c_evidence.py",
-      "bytes": 8032,
-      "sha256": "14cb3059a55b4d45ebb66804d8533a1c091cfae4a606ba31286cb0d4a795f621"
+      "bytes": 8557,
+      "sha256": "189e2263af3a27bc0d762c91d183f993cebbfe49a81ea339774d545510bdfd90"
+    },
+    {
+      "path": "remotion/blender/universal/lot_c_recovery.py",
+      "bytes": 3488,
+      "sha256": "18d588aa8efe74bad3c0c2a1727eb60f15080c890f611fc1448e23d33d8d36f6"
     },
     {
       "path": "remotion/blender/universal/lot_c_render.py",
@@ -1935,8 +1945,8 @@
     },
     {
       "path": "remotion/blender/universal/models.json",
-      "bytes": 8033,
-      "sha256": "449343780f4e4e06d7b4c1a7edcbe816f794fd8944b8f9bd9d556090ea82f2ec"
+      "bytes": 8087,
+      "sha256": "a003e8bf6e70d267bdee2742984ed59e472ca02efb459f793d31d6bbb3d6a522"
     },
     {
       "path": "remotion/blender/universal/nezarec.py",

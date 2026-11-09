@@ -1,0 +1,16 @@
+{
+  "status": "evidence-in-progress",
+  "bosses": [
+    {
+      "id": "boss-oryx",
+      "evidence": "oryx/evidence.json",
+      "sha256": "57a98aeb47f5eddaaed5a8955bd13531b2c3a2d241168d0d1b469c9d9ec18102"
+    }
+  ],
+  "missingEvidence": [
+    "boss-rhulk",
+    "boss-nezarec"
+  ],
+  "protectedFiles": 121,
+  "fullLibraryComplete": false
+}
