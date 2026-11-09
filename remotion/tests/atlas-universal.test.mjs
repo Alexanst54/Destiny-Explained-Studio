@@ -70,9 +70,9 @@ test('relationships validate endpoints, ordering, games, encounter arenas and du
   ])rejected(change);
 });
 
-test('Taniks is one identity with two linked forms; descent is a pursuer encounter, not a kill objective',()=>{
+test('Taniks is one identity with four linked forms; descent is a pursuer encounter, not a kill objective',()=>{
   assert.equal(atlas.bosses.filter(b=>b.id==='boss-taniks').length,1);
-  assert.equal(atlas.bossVariants.filter(v=>v.bossId==='boss-taniks').length,2);
+  assert.equal(atlas.bossVariants.filter(v=>v.bossId==='boss-taniks').length,4);
   const links=bossesForActivity('activity-deep-stone-crypt-d2').filter(r=>r.boss.id==='boss-taniks');
   assert.deepEqual(links.map(r=>[r.variant.id,r.role]),[['boss-taniks-variant-reborn','pursuer'],['boss-taniks-variant-abomination','primary']]);
   rejected(c=>{c.encounterBosses.find(r=>r.bossVariantId).bossId='boss-atheon';});
@@ -114,4 +114,103 @@ test('reports regenerate exactly; historical fixture hashes and editor render co
     const content=read('../../'+fixture.path),raw=JSON.parse(content),parsed=episodeSchema.parse(raw);
     assert.equal(createHash('sha256').update(content).digest('hex'),fixture.sha256);assert.deepEqual(compatibleCopy(raw),raw);assert.equal(parsed.format.durationFrames,raw.format.durationFrames);assert.equal(parsed.schemaVersion,raw.schemaVersion);
   }
+});
+
+test('all 19 base raids and 11 dungeons have reviewed main encounters; Epic and route samples stay partial',()=>{
+ const primary=sourceInventories.inventories.flatMap(g=>g.activityIds);
+ assert.equal(new Set(primary).size,30);
+ for(const id of primary){
+  const activity=atlas.activities.find(a=>a.id===id),review=sourceInventories.activityReviews.find(r=>r.activityId===id);
+  assert.equal(activity.encounterCoverage,'reviewed-main-encounters',id);assert.ok(review.mainEncounterIds.length>0,id);
+  assert.ok(bossesForActivity(id).some(r=>r.role==='primary'),id);
+ }
+ const epic=atlas.activities.find(a=>a.id==='activity-desert-perpetual-epic-d2');assert.equal(epic.encounterCoverage,'partial');assert.equal(epic.availability,'unknown');
+ assert.ok(atlas.activityRelations.some(r=>r.fromId===epic.id&&r.toId==='activity-desert-perpetual-d2'&&r.relation==='variant-of'));
+ assert.equal(atlas.activities.find(a=>a.id==='activity-leviathan-raid-d2').encounterOrdering,'weekly-rotation');
+ assert.equal(atlas.activities.find(a=>a.id==='activity-desert-perpetual-d2').encounterOrdering,'selectable');
+ for(const a of atlas.activities.filter(a=>a.type==='strike'||a.type==='exotic-mission'))assert.equal(a.encounterCoverage,'partial');
+});
+
+test('all 11 dungeon final bosses and important grouped fights are explicitly related',()=>{
+ const finals={'shattered-throne':'boss-dul-incaru','pit-of-heresy':'boss-zulmak','prophecy':'boss-kell-echo','grasp-of-avarice':'boss-avarokk','duality':'boss-caiatl','spire-of-watcher':'boss-persys','ghosts-of-deep':'boss-simmumah','warlords-ruin':'boss-hefnd-vengeance','vespers-host':'boss-corrupted-puppeteer','sundered-doctrine':'boss-kerrev','equilibrium':'boss-sere'};
+ for(const [activity,boss]of Object.entries(finals))assert.ok(bossesForActivity('activity-'+activity+'-d2').some(r=>r.boss.id===boss&&r.role==='primary'),activity);
+ const daughters=bossesForActivity('activity-kings-fall-d1').filter(r=>r.encounterId.endsWith('-daughters'));
+ assert.deepEqual(daughters.map(r=>r.bossId).sort(),['boss-ir-anuk','boss-ir-halak']);
+ assert.ok(encountersForActivity('activity-last-wish-d2').some(e=>e.id.endsWith('-queenswalk')));
+ assert.equal(bossesForActivity('activity-last-wish-d2').filter(r=>r.encounterId.endsWith('-queenswalk')).length,0);
+});
+
+test('catalysts, quests and Rite opponents remain conditional and collective members are not variants',()=>{
+ const optional=atlas.encounters.filter(e=>e.category==='optional');assert.ok(optional.length>=15);assert.ok(optional.every(e=>e.conditions.length));
+ const rite=optional.filter(e=>e.conditions.includes('Rite of the Nine'));assert.equal(rite.length,4);
+ for(const e of rite)assert.ok(e.conditions.includes('Eternity or Ultimatum difficulty'));
+ assert.ok(optional.some(e=>e.conditions.some(x=>x.includes('Xenophage'))));
+ assert.ok(optional.some(e=>e.conditions.some(x=>x.includes('Buried Bloodline'))));
+ const beasts=atlas.bosses.find(b=>b.id==='boss-royal-beasts');assert.equal(beasts.members.filter(m=>m.condition===null).length,6);assert.equal(beasts.members.filter(m=>m.condition==='Prestige only').length,2);
+ const raneiks=atlas.bosses.find(b=>b.id==='boss-raneiks');assert.equal(raneiks.members.length,10);assert.equal(new Set(raneiks.members.map(m=>m.id)).size,10);
+ assert.equal(atlas.bossVariants.filter(v=>v.bossId==='boss-raneiks').length,2);
+ rejected(c=>{c.encounters.find(e=>e.category==='optional').conditions=[];});
+ rejected(c=>{c.bosses.find(b=>b.id==='boss-raneiks').members.push(c.bosses.find(b=>b.id==='boss-raneiks').members[0]);});
+});
+
+test('representations and outcomes do not invent deaths or conflate physical identities',()=>{
+ for(const [activity,id]of [['last-wish','boss-kalli'],['last-wish','boss-shuro-chi'],['corrupted','boss-sedia']])assert.equal(bossesForActivity('activity-'+activity+'-d2').find(r=>r.bossId===id).outcome,'cleanse');
+ assert.equal(bossesForActivity('activity-salvations-edge-d2').find(r=>r.bossId==='boss-witness').outcome,'repel');
+ assert.equal(bossesForActivity('activity-leviathan-raid-d2').find(r=>r.bossId==='boss-calus').variant.nature,'automaton');
+ assert.equal(bossesForActivity('activity-duality-d2').find(r=>r.bossId==='boss-caiatl').variant.nature,'nightmare');
+ assert.notEqual(atlas.bosses.find(b=>b.id==='boss-corrupted-puppeteer').id,atlas.bosses.find(b=>b.id==='boss-atraks').id);
+ assert.ok(atlas.bossVariants.find(v=>v.id==='boss-siriks-variant-brig').appearanceEvidence.every(e=>e.kind==='simulation'));
+ assert.ok(bossesForActivity('activity-lake-of-shadows-original-d2').some(r=>r.bossId==='boss-grask'));
+ assert.ok(bossesForActivity('activity-lake-of-shadows-d2').some(r=>r.bossId==='boss-gorath'));
+});
+
+test('curated activity review sets reject deleted bosses, wrong coverage and unreviewed steps',()=>{
+ for(const change of [p=>p.activityReviews[0].mainEncounterIds.pop(),p=>p.activityReviews[0].bossIds.pop(),p=>p.activityReviews.push(p.activityReviews[0]),p=>p.activityReviews=[],p=>p.activityReviews[0].sources=['bungie-activities'],p=>p.activityReviews[0].encounterCoverage='partial']){
+  const p=structuredClone(sourceInventories);change(p);assert.throws(()=>validateSourceInventories(p,atlas));
+ }
+ const catalog=mutate(c=>{c.encounterBosses=c.encounterBosses.filter(r=>r.bossId!=='boss-kerrev');});
+ assert.throws(()=>validateSourceInventories(sourceInventories,catalog));
+});
+
+test('pinned revisions validate source identity, date, host, revision ID and coverage of inspected wikis',()=>{
+ assert.ok(sourceInventories.retrievals.length>=100);
+ for(const change of [p=>p.retrievals[0].revisionId++,p=>p.retrievals[0].pinnedUrl='https://example.com/?oldid='+p.retrievals[0].revisionId,p=>p.retrievals[0].checkedAt='2026-11-08',p=>p.retrievals.push(p.retrievals[0]),p=>p.retrievals.pop(),p=>p.retrievals[0].wikitextSha256='wrong']){
+  const p=structuredClone(sourceInventories);change(p);assert.throws(()=>validateSourceInventories(p,atlas));
+ }
+});
+
+test('reuse plans cover every boss, form and environment without promoting them to implemented models',()=>{
+ const targets=[...atlas.bosses,...atlas.bossVariants,...atlas.locations,...atlas.locationVariants];assert.equal(atlas.assetReusePlans.length,targets.length);
+ for(const target of targets)assert.equal(atlas.assetReusePlans.filter(p=>p.entityId===target.id).length,1);
+ for(const b of [...atlas.bosses,...atlas.bossVariants]){assert.equal(b.visualStatus,'placeholder');assert.equal(b.remotionAssetId,null);assert.equal(b.blenderAssetId,null);}
+ const plan=id=>atlas.assetReusePlans.find(p=>p.entityId===id),profiles=id=>plan(id).profileIds.map(p=>atlas.reuseProfiles.find(r=>r.id===p));
+ assert.ok(profiles('boss-sere').some(p=>p.characterTemplateIds.includes('human-scientist')));
+ assert.ok(profiles('boss-harrow').some(p=>p.characterTemplateIds.includes('cabal-soldier')));
+ assert.ok(plan('boss-kerrev').silhouette.includes('Weaver'));
+ assert.ok(plan('boss-digital-tracker').silhouette.includes('Wyvern'));
+ assert.equal(plan('boss-riven').status,'no-suitable-model');assert.equal(plan('boss-witness').status,'no-suitable-model');
+ for(const change of [c=>c.assetReusePlans.pop(),c=>c.assetReusePlans[0].profileIds=['missing'],c=>c.assetReusePlans.push(c.assetReusePlans[0]),c=>c.assetReusePlans.find(p=>p.target==='boss').status='proxy-only',c=>c.reuseProfiles.find(p=>p.kind==='boss').requiredWork=[]])rejected(change);
+ assert.throws(()=>validateUniversalCatalog(mutate(c=>c.reuseProfiles.find(p=>p.kind==='boss').characterTemplateIds=['precursor'])));
+ assert.throws(()=>validateAssetFiles(mutate(c=>c.reuseProfiles[0].reusableFiles[0].path='remotion/missing.ts')));
+ assert.throws(()=>validateAssetFiles(mutate(c=>c.reuseProfiles[0].reusableFiles[0].symbol='Missing')));
+});
+
+test('legacy recipe metadata matches actual modules, historical overrides and Europa/Bray reuse',()=>{
+ const plans=atlas.assetReusePlans.filter(p=>p.existingRecipe);assert.ok(plans.length>80);
+ const riis=plans.find(p=>p.entityId==='riis-variant-after-whirlwind');assert.ok(riis.existingRecipe.moduleIds.includes('weather'));
+ const europa=plans.find(p=>p.entityId==='europa');assert.equal(europa.existingRecipe.baseEnvironment,'europa');
+ const bray=plans.find(p=>p.entityId==='deep-stone-site');assert.equal(bray.existingRecipe.baseEnvironment,'europa');assert.deepEqual(bray.existingRecipe.moduleIds,['bray']);
+ assert.throws(()=>validateUniversalCatalog(mutate(c=>c.assetReusePlans.find(p=>p.existingRecipe).existingRecipe.moduleIds=['weather'])));
+ assert.throws(()=>validateUniversalCatalog(mutate(c=>c.assetReusePlans.find(p=>p.target==='boss').existingRecipe=plans[0].existingRecipe)));
+});
+
+test('foundation IDs survive and parent corrections are explicit, sourced and isolated from legacy JSON',()=>{
+ const baseline=JSON.parse(read('../atlas/universal/foundation-ids.json'));
+ for(const [table,ids]of Object.entries(baseline.ids)){const actual=new Set(atlas[table].map(r=>r.id));for(const id of ids)assert.ok(actual.has(id),table+'/'+id);}
+ assert.equal(legacy.locations.find(l=>l.id==='desert-perpetual').parentId,'kepler');
+ assert.equal(atlas.locations.find(l=>l.id==='desert-perpetual').parentId,'unknown-periphery');
+ const correction=atlas.legacyCorrections.find(r=>r.locationId==='desert-perpetual');assert.equal(correction.originalValue,'kepler');assert.ok(correction.sources.includes('wiki-desert'));
+ assert.throws(()=>validateUniversalCatalog(mutate(c=>c.legacyCorrections=[])));
+ assert.throws(()=>validateUniversalCatalog(mutate(c=>c.legacyCorrections[0].originalValue='venus')));
+ rejected(c=>c.legacyCorrections[0].sources=['legacy-wiki-riis']);
 });

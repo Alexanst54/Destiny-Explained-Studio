@@ -32,6 +32,12 @@ export function validateAssetFiles(catalog,root=ROOT) {
     }
     if (asset.kind==='blender-generator' && (asset.id!=='blender-riis-v1'||asset.path!=='remotion/blender/environments/riis.py'||asset.symbol!=='generate'||asset.selector!=='atlas=riis/before-whirlwind')) throw Error('New Blender generator needs explicit audit support: '+asset.id);
   }
+  for (const profile of catalog.reuseProfiles) for (const reference of profile.reusableFiles) {
+    const path=resolve(root,reference.path);
+    if (!existsSync(path)||!realpathSync(path).startsWith(realpathSync(root)+'/')) throw Error('Missing reuse component: '+profile.id+'/'+reference.path);
+    const code=readFileSync(path,'utf8');
+    if (!new RegExp(`export (?:const|function) ${reference.symbol}\\b`).test(code)) throw Error('Reuse component symbol absent: '+profile.id+'/'+reference.symbol);
+  }
   if (sha(readFileSync(resolve(root,catalog.legacy.catalogPath)))!==catalog.legacy.catalogSha256) throw Error('Legacy catalog checksum changed; explicit incremental review required');
 }
 
@@ -73,6 +79,7 @@ export function auditAssets() {
     notReferencedByFixtures:{locations:atlas.locations.filter(p=>!refs.locations.has(p.id)).map(p=>p.id),characters:characters.characters.filter(c=>!refs.characters.has(c.id)).map(c=>c.id)},
     missingReferences:missing,mediaReferences:media,
     universalAssetRegistrations:universalAtlas.assets.map(a=>({id:a.id,kind:a.kind,path:a.path,selector:a.selector})),
+    reusePlanCount:universalAtlas.assetReusePlans.length,reuseProfileCount:universalAtlas.reuseProfiles.length,pinnedSourceCount:universalAtlas.sources.filter(s=>s.verification==='retrieved').length,
     missingBossAssets:universalAtlas.bosses.filter(b=>b.visualStatus==='placeholder').map(b=>b.id),
     files,
   };
@@ -101,7 +108,7 @@ export function auditMarkdown(a) {
     '', 'Les recettes sont dans `remotion/atlas/recipes.ts`, les 16 modules dans `geometry.ts`, les décors dans `src/voxel/library/Library.tsx` et `layout.ts`. Réutiliser ces familles pour Vénus/Caveau de verre, Mars et Lune/Cropta ; aucun nouveau décor fidèle n’est annoncé dans cette PR.',
     '', '### Personnages, animation et composition','',
     `Styles utilisés par le registre : ${Object.entries(a.characters.modelKindsUsed).map(([k,n])=>`${k} (${n})`).join(', ')}. Le style unknown est un marqueur, pas une apparence attestée. Rigs : ${a.characters.rigArchetypes.join(', ')}.`,
-    '', 'Réutiliser `characters/models/VoxelCharacter.tsx`, `living/` (cast/groupes), `animation/rig.ts`, `director.ts` et `camera.ts`, `polish/` (variation, environnement, caméra) et `hybrid/` (composition, sources, audio/captions). Une silhouette générique n’est pas un modèle de boss validé. Les neuf boss recensés dans cette tranche n’ont pas de modèle dédié assigné.',
+    '', 'Réutiliser `characters/models/VoxelCharacter.tsx`, `living/` (cast/groupes), `animation/rig.ts`, `director.ts` et `camera.ts`, `polish/` (variation, environnement, caméra) et `hybrid/` (composition, sources, audio/captions). Une silhouette générique n’est pas un modèle de boss validé. Les '+a.missingBossAssets.length+' entrées de boss recensées restent sans modèle dédié assigné ; leurs plans de réemploi sont documentaires.',
     '', '## Références réellement utilisées et manquantes','',
     `Les ${a.fixtures.length} épisodes suivis passent le schéma historique : ${Object.entries(counts(a.fixtures,f=>f.schemaVersion)).map(([k,n])=>`${k} (${n})`).join(', ')}. Le JSON de chaque épisode est empreinté ; aucune timeline, voix ou caption n’est modifiée.`,
     '',`Références explicites dans ces fixtures : **${Object.keys(a.usage.locations).length} lieux Atlas**, **${Object.keys(a.usage.characters).length} personnages**, **${Object.keys(a.usage.environments).length} décors** ; références catalogue inconnues : **${a.missingReferences.length}**. Détails fichier par fichier dans le JSON.`,

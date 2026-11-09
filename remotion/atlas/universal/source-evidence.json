@@ -1,6 +1,6 @@
 {
   "reviewedAt": "2026-11-09",
-  "method": "Lecture des sections indiquées dans les sources. Listes normalisées d’identifiants éditoriaux ; pas un export live du jeu ni une garantie d’exhaustivité future.",
+  "method": "Listes primaires inchangées, revue de sections MediaWiki avec révisions épinglées et empreintes SHA-256 du wikitext consulté ; faits normalisés et incertitudes explicites, pas une garantie live ni une copie du texte des guides.",
   "inventories": [
     {
       "sourceId": "bungie-activities",
@@ -76,23 +76,4256 @@
   "relationshipReview": [
     {
       "sourceId": "wiki-vog",
-      "locator": "Infobox; Walkthrough stages 1–7; Bosses",
-      "note": "Rencontres D1/D2, Templar et Atheon ; variantes de mécaniques conservées par activité séparée."
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 406357",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
     },
     {
       "sourceId": "wiki-crota",
-      "locator": "Infobox; Walkthrough: Abyss, Bridge, Ir Yût, Crota; Bosses",
-      "note": "Abyss, Bridge, Ir Yût et Crota dans le monde du trône ; reprise D2 distincte."
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 407264",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-kings-fall",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 406874",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-wrath",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 390830",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-leviathan",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 391563",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-eater",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 381089",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-spire-stars",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 388159",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-last-wish",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 383849",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-scourge",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 388281",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-crown",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 393339",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-garden",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 371863",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
     },
     {
       "sourceId": "wiki-dsc",
-      "locator": "Objectives; Bosses; Walkthrough: Crypt Security, Fallen Exo, Descent, Abomination",
-      "note": "Atraks relie Clarity Control et Morning Star ; Taniks Reborn poursuit les joueurs lors de la descente, Abomination est le boss final au site Restricted."
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 400070",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-vow",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 380952",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-root",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 407158",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-salvation",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 408210",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-desert",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 406880",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
     },
     {
       "sourceId": "wiki-shattered",
-      "locator": "Infobox; Walkthrough: Erebus, Vorgeth, Dûl Incaru",
-      "note": "Eleusinia est un monde du trône, accès via la Cité des rêves ; Erebus puis Vorgeth et Dûl Incaru. Boss optionnels non encore inventoriés."
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 408399",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-pit",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 408374",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-prophecy",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 398484",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-grasp",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 399495",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-duality",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 393535",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-spire-watcher",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 401498",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-ghosts",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 381081",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-warlord",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 406515",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-vesper",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 381082",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-sundered",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 406884",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-equilibrium",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 406895",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-shadow-thief",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 400560",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-nexus",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 368373",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-devils-lair",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 391299",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-corrupted",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 394521",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-lake",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 406163",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-whisper",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 366029",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-zero-hour",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 392141",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-presage",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 408397",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-avalon",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 378241",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-seraph",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 393022",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-vox",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 339654",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    },
+    {
+      "sourceId": "wiki-starcrossed",
+      "locator": "Infobox; Objectives; Walkthrough; Bosses; Transcript; revision 399175",
+      "note": "Revue des sections de la révision épinglée ; noms et relations éditoriales dans activityReviews. Aucun contenu intégral de wiki embarqué."
+    }
+  ],
+  "activityReviews": [
+    {
+      "activityId": "activity-vault-of-glass-d1",
+      "sources": [
+        "wiki-vog"
+      ],
+      "mainEncounterIds": [
+        "encounter-vault-of-glass-d1-open-gate",
+        "encounter-vault-of-glass-d1-confluxes",
+        "encounter-vault-of-glass-d1-oracles",
+        "encounter-vault-of-glass-d1-templar",
+        "encounter-vault-of-glass-d1-gatekeepers",
+        "encounter-vault-of-glass-d1-atheon"
+      ],
+      "traversalEncounterIds": [
+        "encounter-vault-of-glass-d1-gorgons",
+        "encounter-vault-of-glass-d1-chasm"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-templar",
+        "boss-gorgons",
+        "boss-atheon"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-crotas-end-d1",
+      "sources": [
+        "wiki-crota"
+      ],
+      "mainEncounterIds": [
+        "encounter-crotas-end-d1-abyss",
+        "encounter-crotas-end-d1-bridge",
+        "encounter-crotas-end-d1-ir-yut",
+        "encounter-crotas-end-d1-crota"
+      ],
+      "traversalEncounterIds": [
+        "encounter-crotas-end-d1-shrieker-hallway"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-ir-yut",
+        "boss-crota"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-vault-of-glass-d2",
+      "sources": [
+        "wiki-vog"
+      ],
+      "mainEncounterIds": [
+        "encounter-vault-of-glass-d2-open-gate",
+        "encounter-vault-of-glass-d2-confluxes",
+        "encounter-vault-of-glass-d2-oracles",
+        "encounter-vault-of-glass-d2-templar",
+        "encounter-vault-of-glass-d2-gatekeepers",
+        "encounter-vault-of-glass-d2-atheon"
+      ],
+      "traversalEncounterIds": [
+        "encounter-vault-of-glass-d2-gorgons",
+        "encounter-vault-of-glass-d2-chasm"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-templar",
+        "boss-gorgons",
+        "boss-atheon"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-crotas-end-d2",
+      "sources": [
+        "wiki-crota"
+      ],
+      "mainEncounterIds": [
+        "encounter-crotas-end-d2-abyss",
+        "encounter-crotas-end-d2-bridge",
+        "encounter-crotas-end-d2-ir-yut",
+        "encounter-crotas-end-d2-crota"
+      ],
+      "traversalEncounterIds": [
+        "encounter-crotas-end-d2-shrieker-hallway"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-ir-yut",
+        "boss-crota"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-kings-fall-d1",
+      "sources": [
+        "wiki-kings-fall"
+      ],
+      "mainEncounterIds": [
+        "encounter-kings-fall-d1-hall-of-souls",
+        "encounter-kings-fall-d1-totems",
+        "encounter-kings-fall-d1-warpriest",
+        "encounter-kings-fall-d1-golgoroth",
+        "encounter-kings-fall-d1-daughters",
+        "encounter-kings-fall-d1-oryx"
+      ],
+      "traversalEncounterIds": [
+        "encounter-kings-fall-d1-crux-portico",
+        "encounter-kings-fall-d1-transept"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-warpriest",
+        "boss-golgoroth",
+        "boss-ir-anuk",
+        "boss-ir-halak",
+        "boss-oryx"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-kings-fall-d2",
+      "sources": [
+        "wiki-kings-fall"
+      ],
+      "mainEncounterIds": [
+        "encounter-kings-fall-d2-hall-of-souls",
+        "encounter-kings-fall-d2-totems",
+        "encounter-kings-fall-d2-warpriest",
+        "encounter-kings-fall-d2-golgoroth",
+        "encounter-kings-fall-d2-daughters",
+        "encounter-kings-fall-d2-oryx"
+      ],
+      "traversalEncounterIds": [
+        "encounter-kings-fall-d2-crux-portico",
+        "encounter-kings-fall-d2-transept"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-warpriest",
+        "boss-golgoroth",
+        "boss-ir-anuk",
+        "boss-ir-halak",
+        "boss-oryx"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-wrath-of-machine-d1",
+      "sources": [
+        "wiki-wrath"
+      ],
+      "mainEncounterIds": [
+        "encounter-wrath-of-machine-d1-vosik-intro",
+        "encounter-wrath-of-machine-d1-vosik",
+        "encounter-wrath-of-machine-d1-siege-engine",
+        "encounter-wrath-of-machine-d1-aksis-one",
+        "encounter-wrath-of-machine-d1-aksis-two"
+      ],
+      "traversalEncounterIds": [
+        "encounter-wrath-of-machine-d1-splicers-den",
+        "encounter-wrath-of-machine-d1-server-farm"
+      ],
+      "optionalEncounterIds": [
+        "encounter-wrath-of-machine-d1-rahndel"
+      ],
+      "bossIds": [
+        "boss-vosik",
+        "boss-siege-engine",
+        "boss-meksis",
+        "boss-rahndel",
+        "boss-aksis"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-leviathan-raid-d2",
+      "sources": [
+        "wiki-leviathan"
+      ],
+      "mainEncounterIds": [
+        "encounter-leviathan-raid-d2-castellum",
+        "encounter-leviathan-raid-d2-royal-pools",
+        "encounter-leviathan-raid-d2-pleasure-gardens",
+        "encounter-leviathan-raid-d2-gauntlet",
+        "encounter-leviathan-raid-d2-calus"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-royal-beasts",
+        "boss-calus"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Ordre hebdomadaire variable des trois épreuves ; les Bêtes Prestige sont des membres conditionnels, non présents en normal."
+      ]
+    },
+    {
+      "activityId": "activity-eater-of-worlds-d2",
+      "sources": [
+        "wiki-eater"
+      ],
+      "mainEncounterIds": [
+        "encounter-eater-of-worlds-d2-reactor",
+        "encounter-eater-of-worlds-d2-barrier",
+        "encounter-eater-of-worlds-d2-argos"
+      ],
+      "traversalEncounterIds": [
+        "encounter-eater-of-worlds-d2-delve"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-argos"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-spire-of-stars-d2",
+      "sources": [
+        "wiki-spire-stars"
+      ],
+      "mainEncounterIds": [
+        "encounter-spire-of-stars-d2-statue-garden",
+        "encounter-spire-of-stars-d2-fleet",
+        "encounter-spire-of-stars-d2-val-cauor"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-val-cauor"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-last-wish-d2",
+      "sources": [
+        "wiki-last-wish"
+      ],
+      "mainEncounterIds": [
+        "encounter-last-wish-d2-kalli",
+        "encounter-last-wish-d2-shuro-chi",
+        "encounter-last-wish-d2-morgeth",
+        "encounter-last-wish-d2-vault",
+        "encounter-last-wish-d2-riven",
+        "encounter-last-wish-d2-queenswalk"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-kalli",
+        "boss-shuro-chi",
+        "boss-morgeth",
+        "boss-riven"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Arènes principales documentées par des articles de lieu ; intérieur du cœur et itinéraire exact de l’escorte encore partiels.",
+        "Difficultés et défis non exhaustifs ; aucune carte officielle ni modèle fidèle créé."
+      ]
+    },
+    {
+      "activityId": "activity-scourge-of-past-d2",
+      "sources": [
+        "wiki-scourge"
+      ],
+      "mainEncounterIds": [
+        "encounter-scourge-of-past-d2-berserker",
+        "encounter-scourge-of-past-d2-vault-access",
+        "encounter-scourge-of-past-d2-insurrection-prime"
+      ],
+      "traversalEncounterIds": [
+        "encounter-scourge-of-past-d2-ablazed-glory"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-ablazed-glory",
+        "boss-insurrection-prime"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-crown-of-sorrow-d2",
+      "sources": [
+        "wiki-crown"
+      ],
+      "mainEncounterIds": [
+        "encounter-crown-of-sorrow-d2-ritual",
+        "encounter-crown-of-sorrow-d2-deception",
+        "encounter-crown-of-sorrow-d2-gahlran"
+      ],
+      "traversalEncounterIds": [
+        "encounter-crown-of-sorrow-d2-kingdom"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-gahlran"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-garden-of-salvation-d2",
+      "sources": [
+        "wiki-garden"
+      ],
+      "mainEncounterIds": [
+        "encounter-garden-of-salvation-d2-evade",
+        "encounter-garden-of-salvation-d2-summon",
+        "encounter-garden-of-salvation-d2-consecrated",
+        "encounter-garden-of-salvation-d2-sanctified"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-consecrated-mind",
+        "boss-sanctified-mind"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-deep-stone-crypt-d2",
+      "sources": [
+        "wiki-dsc"
+      ],
+      "mainEncounterIds": [
+        "encounter-deep-stone-crypt-d2-security",
+        "encounter-deep-stone-crypt-d2-atraks",
+        "encounter-deep-stone-crypt-d2-descent",
+        "encounter-deep-stone-crypt-d2-taniks"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-crypt-security",
+        "boss-atraks",
+        "boss-taniks"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-vow-of-disciple-d2",
+      "sources": [
+        "wiki-vow"
+      ],
+      "mainEncounterIds": [
+        "encounter-vow-of-disciple-d2-acquisition",
+        "encounter-vow-of-disciple-d2-caretaker",
+        "encounter-vow-of-disciple-d2-exhibition",
+        "encounter-vow-of-disciple-d2-rhulk"
+      ],
+      "traversalEncounterIds": [
+        "encounter-vow-of-disciple-d2-disciples-bog",
+        "encounter-vow-of-disciple-d2-platforming"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-caretaker",
+        "boss-dulna",
+        "boss-maryn",
+        "boss-xenodoti",
+        "boss-rhulk"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-root-of-nightmares-d2",
+      "sources": [
+        "wiki-root"
+      ],
+      "mainEncounterIds": [
+        "encounter-root-of-nightmares-d2-cataclysm",
+        "encounter-root-of-nightmares-d2-scission",
+        "encounter-root-of-nightmares-d2-macrocosm",
+        "encounter-root-of-nightmares-d2-nezarec"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-zoaurc",
+        "boss-nezarec"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-salvations-edge-d2",
+      "sources": [
+        "wiki-salvation"
+      ],
+      "mainEncounterIds": [
+        "encounter-salvations-edge-d2-substratum",
+        "encounter-salvations-edge-d2-herald",
+        "encounter-salvations-edge-d2-repository",
+        "encounter-salvations-edge-d2-verity",
+        "encounter-salvations-edge-d2-witness"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-herald-finality",
+        "boss-witness"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-desert-perpetual-d2",
+      "sources": [
+        "wiki-desert"
+      ],
+      "mainEncounterIds": [
+        "encounter-desert-perpetual-d2-epoptes",
+        "encounter-desert-perpetual-d2-agraios",
+        "encounter-desert-perpetual-d2-iatros",
+        "encounter-desert-perpetual-d2-koregos"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-epoptes",
+        "boss-agraios",
+        "boss-iatros",
+        "boss-koregos"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "named",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Les trois premières cibles sont sélectionnables dans un ordre variable ; order sert à l’index documentaire."
+      ]
+    },
+    {
+      "activityId": "activity-desert-perpetual-epic-d2",
+      "sources": [
+        "wiki-desert"
+      ],
+      "mainEncounterIds": [
+        "encounter-desert-perpetual-epic-d2-epoptes",
+        "encounter-desert-perpetual-epic-d2-agraios",
+        "encounter-desert-perpetual-epic-d2-iatros",
+        "encounter-desert-perpetual-epic-d2-koregos"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-epoptes",
+        "boss-agraios",
+        "boss-iatros",
+        "boss-koregos"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "named",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Les trois premières cibles sont sélectionnables dans un ordre variable ; order sert à l’index documentaire.",
+        "La source signale explicitement que les informations Epic sont incomplètes ; pas de complétude des mécaniques ni des variantes de phase revendiquée."
+      ]
+    },
+    {
+      "activityId": "activity-shattered-throne-d2",
+      "sources": [
+        "wiki-shattered"
+      ],
+      "mainEncounterIds": [
+        "encounter-shattered-throne-d2-erebus",
+        "encounter-shattered-throne-d2-vorgeth",
+        "encounter-shattered-throne-d2-dul-incaru"
+      ],
+      "traversalEncounterIds": [
+        "encounter-shattered-throne-d2-descent"
+      ],
+      "optionalEncounterIds": [
+        "encounter-shattered-throne-d2-wish-ender-querim",
+        "encounter-shattered-throne-d2-wish-ender-eriviks",
+        "encounter-shattered-throne-d2-wish-ender-xavoth"
+      ],
+      "bossIds": [
+        "boss-labyrinth-architects",
+        "boss-querim",
+        "boss-theratos",
+        "boss-asterion",
+        "boss-eriviks",
+        "boss-vorgeth",
+        "boss-xavoth",
+        "boss-dul-incaru",
+        "boss-alak-tor",
+        "boss-ba-kuur",
+        "boss-gaurog"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-pit-of-heresy-d2",
+      "sources": [
+        "wiki-pit"
+      ],
+      "mainEncounterIds": [
+        "encounter-pit-of-heresy-d2-necropolis",
+        "encounter-pit-of-heresy-d2-suffering",
+        "encounter-pit-of-heresy-d2-zulmak"
+      ],
+      "traversalEncounterIds": [
+        "encounter-pit-of-heresy-d2-tunnels",
+        "encounter-pit-of-heresy-d2-harrow"
+      ],
+      "optionalEncounterIds": [
+        "encounter-pit-of-heresy-d2-xenophage"
+      ],
+      "bossIds": [
+        "boss-volmar",
+        "boss-zulmak"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-prophecy-d2",
+      "sources": [
+        "wiki-prophecy"
+      ],
+      "mainEncounterIds": [
+        "encounter-prophecy-d2-phalanx",
+        "encounter-prophecy-d2-hexahedron",
+        "encounter-prophecy-d2-kell-echo"
+      ],
+      "traversalEncounterIds": [
+        "encounter-prophecy-d2-entrance",
+        "encounter-prophecy-d2-wasteland",
+        "encounter-prophecy-d2-singularity"
+      ],
+      "optionalEncounterIds": [
+        "encounter-prophecy-d2-rite-invaders"
+      ],
+      "bossIds": [
+        "boss-phalanx-echo",
+        "boss-kell-echo",
+        "boss-paracausal-invaders"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "partial",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Les Invaders de Rite sont recensés en groupe conditionnel ; ordre et distribution de leurs apparitions par édition restent partiels."
+      ]
+    },
+    {
+      "activityId": "activity-grasp-of-avarice-d2",
+      "sources": [
+        "wiki-grasp"
+      ],
+      "mainEncounterIds": [
+        "encounter-grasp-of-avarice-d2-phryzhia",
+        "encounter-grasp-of-avarice-d2-shield",
+        "encounter-grasp-of-avarice-d2-avarokk"
+      ],
+      "traversalEncounterIds": [
+        "encounter-grasp-of-avarice-d2-loot-cave",
+        "encounter-grasp-of-avarice-d2-gangplank",
+        "encounter-grasp-of-avarice-d2-sparrow"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-phryzhia",
+        "boss-fallen-shield",
+        "boss-avarokk",
+        "boss-rm80",
+        "boss-grisprax"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-duality-d2",
+      "sources": [
+        "wiki-duality"
+      ],
+      "mainEncounterIds": [
+        "encounter-duality-d2-gahlran",
+        "encounter-duality-d2-vault",
+        "encounter-duality-d2-caiatl"
+      ],
+      "traversalEncounterIds": [
+        "encounter-duality-d2-mindscape",
+        "encounter-duality-d2-dive-deeper",
+        "encounter-duality-d2-navigate-vault"
+      ],
+      "optionalEncounterIds": [
+        "encounter-duality-d2-heartshadow-houdal",
+        "encounter-duality-d2-heartshadow-kanok",
+        "encounter-duality-d2-heartshadow-regor"
+      ],
+      "bossIds": [
+        "boss-gahlran",
+        "boss-kahok",
+        "boss-emonut",
+        "boss-uroa",
+        "boss-caiatl",
+        "boss-houdal",
+        "boss-kanok",
+        "boss-regor"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Découpage géographique exact du mindscape de Calus non tous corroboré ; les noms de rencontres ne sont pas promus en noms officiels d’arènes."
+      ]
+    },
+    {
+      "activityId": "activity-spire-of-watcher-d2",
+      "sources": [
+        "wiki-spire-watcher"
+      ],
+      "mainEncounterIds": [
+        "encounter-spire-of-watcher-d2-reestablish-power",
+        "encounter-spire-of-watcher-d2-ascend",
+        "encounter-spire-of-watcher-d2-akelous",
+        "encounter-spire-of-watcher-d2-persys"
+      ],
+      "traversalEncounterIds": [
+        "encounter-spire-of-watcher-d2-descend"
+      ],
+      "optionalEncounterIds": [
+        "encounter-spire-of-watcher-d2-rite-amphion",
+        "encounter-spire-of-watcher-d2-rite-ohmon"
+      ],
+      "bossIds": [
+        "boss-akelous",
+        "boss-persys",
+        "boss-amphion",
+        "boss-ohmon"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-ghosts-of-deep-d2",
+      "sources": [
+        "wiki-ghosts"
+      ],
+      "mainEncounterIds": [
+        "encounter-ghosts-of-deep-d2-ritual",
+        "encounter-ghosts-of-deep-d2-ecthar",
+        "encounter-ghosts-of-deep-d2-simmumah"
+      ],
+      "traversalEncounterIds": [
+        "encounter-ghosts-of-deep-d2-deep-methane"
+      ],
+      "optionalEncounterIds": [
+        "encounter-ghosts-of-deep-d2-navigator",
+        "encounter-ghosts-of-deep-d2-rite-kalul"
+      ],
+      "bossIds": [
+        "boss-ecthar",
+        "boss-simmumah",
+        "boss-vorlog",
+        "boss-thul-ar",
+        "boss-kalul"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-warlords-ruin-d2",
+      "sources": [
+        "wiki-warlord"
+      ],
+      "mainEncounterIds": [
+        "encounter-warlords-ruin-d2-rathil",
+        "encounter-warlords-ruin-d2-locus",
+        "encounter-warlords-ruin-d2-hefnd"
+      ],
+      "traversalEncounterIds": [
+        "encounter-warlords-ruin-d2-prison",
+        "encounter-warlords-ruin-d2-vengeful-peak"
+      ],
+      "optionalEncounterIds": [
+        "encounter-warlords-ruin-d2-abominations",
+        "encounter-warlords-ruin-d2-buried-bloodline"
+      ],
+      "bossIds": [
+        "boss-rathil",
+        "boss-locus-grief",
+        "boss-malaris",
+        "boss-vrysiks",
+        "boss-hefnd-vengeance",
+        "boss-nymeks",
+        "boss-sirloks",
+        "boss-wish-twisted",
+        "boss-thressia"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "partial",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Le gardien de coffre secret est conditionnel ; toutes les positions des coffres et des variantes ne sont pas inventoriées."
+      ]
+    },
+    {
+      "activityId": "activity-vespers-host-d2",
+      "sources": [
+        "wiki-vesper"
+      ],
+      "mainEncounterIds": [
+        "encounter-vespers-host-d2-activation",
+        "encounter-vespers-host-d2-raneiks",
+        "encounter-vespers-host-d2-puppeteer"
+      ],
+      "traversalEncounterIds": [
+        "encounter-vespers-host-d2-embarkation",
+        "encounter-vespers-host-d2-infiltration",
+        "encounter-vespers-host-d2-acceleration"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-raneiks",
+        "boss-corrupted-puppeteer"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-sundered-doctrine-d2",
+      "sources": [
+        "wiki-sundered"
+      ],
+      "mainEncounterIds": [
+        "encounter-sundered-doctrine-d2-riddle",
+        "encounter-sundered-doctrine-d2-locks",
+        "encounter-sundered-doctrine-d2-kerrev"
+      ],
+      "traversalEncounterIds": [
+        "encounter-sundered-doctrine-d2-path",
+        "encounter-sundered-doctrine-d2-maze",
+        "encounter-sundered-doctrine-d2-vault"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-zoetic-lockset",
+        "boss-kerrev"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-equilibrium-d2",
+      "sources": [
+        "wiki-equilibrium"
+      ],
+      "mainEncounterIds": [
+        "encounter-equilibrium-d2-barant-forces",
+        "encounter-equilibrium-d2-harrow",
+        "encounter-equilibrium-d2-sere"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [
+        "encounter-equilibrium-d2-shade"
+      ],
+      "bossIds": [
+        "boss-harrow",
+        "boss-sere"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Une phrase du walkthrough place Harrow après embarquement dans Malphas, contrairement aux objectifs/transcript qui situent Harrow sur Imperium Carrier puis Sere dans Malphas. Relation ancrée aux objectifs/transcript ; détails de salle et secret Shade encore partiels."
+      ]
+    },
+    {
+      "activityId": "activity-shadow-thief-d1",
+      "sources": [
+        "wiki-shadow-thief"
+      ],
+      "mainEncounterIds": [
+        "encounter-shadow-thief-d1-walker",
+        "encounter-shadow-thief-d1-taniks"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-wolf-walker",
+        "boss-taniks"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Première tranche d’assauts : transitions et arènes intermédiaires non détaillées ; les éditions originales/remixées ne sont pas fusionnées."
+      ]
+    },
+    {
+      "activityId": "activity-shadow-thief-revisited-d1",
+      "sources": [
+        "wiki-shadow-thief"
+      ],
+      "mainEncounterIds": [
+        "encounter-shadow-thief-revisited-d1-walker",
+        "encounter-shadow-thief-revisited-d1-taniks"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-perfected-walker",
+        "boss-taniks"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Première tranche d’assauts : transitions et arènes intermédiaires non détaillées ; les éditions originales/remixées ne sont pas fusionnées."
+      ]
+    },
+    {
+      "activityId": "activity-nexus-d1",
+      "sources": [
+        "wiki-nexus"
+      ],
+      "mainEncounterIds": [
+        "encounter-nexus-d1-sekrion"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-sekrion"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Édition Subverted Mind du Dawning non importée dans cette tranche ; pas de mélange avec Sekrion original."
+      ]
+    },
+    {
+      "activityId": "activity-devils-lair-d1",
+      "sources": [
+        "wiki-devils-lair"
+      ],
+      "mainEncounterIds": [
+        "encounter-devils-lair-d1-baron",
+        "encounter-devils-lair-d1-walker",
+        "encounter-devils-lair-d1-sepiks"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-naksis",
+        "boss-devil-walker",
+        "boss-sepiks"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Version D1 seulement ; reprises D2 et cheminements secondaires attendent leur propre édition sourcée."
+      ]
+    },
+    {
+      "activityId": "activity-devils-lair-revisited-d1",
+      "sources": [
+        "wiki-devils-lair"
+      ],
+      "mainEncounterIds": [
+        "encounter-devils-lair-revisited-d1-baron",
+        "encounter-devils-lair-revisited-d1-walker",
+        "encounter-devils-lair-revisited-d1-sepiks"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-dresiks",
+        "boss-rakta",
+        "boss-perfected-walker",
+        "boss-sepiks"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Version D1 seulement ; reprises D2 et cheminements secondaires attendent leur propre édition sourcée."
+      ]
+    },
+    {
+      "activityId": "activity-corrupted-d2",
+      "sources": [
+        "wiki-corrupted"
+      ],
+      "mainEncounterIds": [
+        "encounter-corrupted-d2-sedia"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-sedia"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "partial",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Boss principal sourcé ; duo d’Ogres, claimants et adversaires de Malfeasance/Nightfall non importés ici."
+      ]
+    },
+    {
+      "activityId": "activity-lake-of-shadows-d2",
+      "sources": [
+        "wiki-lake"
+      ],
+      "mainEncounterIds": [
+        "encounter-lake-of-shadows-d2-baimogg",
+        "encounter-lake-of-shadows-d2-gorath"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-baimogg",
+        "boss-gorath"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "partial",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Grask et Gor’ath sont deux identités distinctes des deux éditions ; cheminement et autres miniboss encore partiels."
+      ]
+    },
+    {
+      "activityId": "activity-lake-of-shadows-original-d2",
+      "sources": [
+        "wiki-lake"
+      ],
+      "mainEncounterIds": [
+        "encounter-lake-of-shadows-original-d2-grask"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-grask"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "partial",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Grask et Gor’ath sont deux identités distinctes des deux éditions ; cheminement et autres miniboss encore partiels."
+      ]
+    },
+    {
+      "activityId": "activity-whisper-d2",
+      "sources": [
+        "wiki-whisper"
+      ],
+      "mainEncounterIds": [
+        "encounter-whisper-d2-aspects",
+        "encounter-whisper-d2-tulgorh"
+      ],
+      "traversalEncounterIds": [
+        "encounter-whisper-d2-traversal"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-taaurc",
+        "boss-drevis",
+        "boss-urzok",
+        "boss-tulgorh"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Tulgorh est absent de la version 2018 ; parcours, secrets et distinctions Heroic/Legend ne sont pas exhaustifs."
+      ]
+    },
+    {
+      "activityId": "activity-whisper-original-d2",
+      "sources": [
+        "wiki-whisper"
+      ],
+      "mainEncounterIds": [
+        "encounter-whisper-original-d2-aspects"
+      ],
+      "traversalEncounterIds": [
+        "encounter-whisper-original-d2-traversal"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-taaurc",
+        "boss-drevis",
+        "boss-urzok"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Tulgorh est absent de la version 2018 ; parcours, secrets et distinctions Heroic/Legend ne sont pas exhaustifs."
+      ]
+    },
+    {
+      "activityId": "activity-zero-hour-d2",
+      "sources": [
+        "wiki-zero-hour"
+      ],
+      "mainEncounterIds": [
+        "encounter-zero-hour-d2-siriks"
+      ],
+      "traversalEncounterIds": [
+        "encounter-zero-hour-d2-tower"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-siriks",
+        "boss-mimiks-0",
+        "boss-mimiks-1",
+        "boss-mimiks-2"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Routes Heroic/Legend, TR3-VR et secrets non exhaustifs ; la reprise est qualifiée de simulation par les sources, pas un nouvel épisode canonique."
+      ]
+    },
+    {
+      "activityId": "activity-zero-hour-original-d2",
+      "sources": [
+        "wiki-zero-hour"
+      ],
+      "mainEncounterIds": [
+        "encounter-zero-hour-original-d2-siriks"
+      ],
+      "traversalEncounterIds": [
+        "encounter-zero-hour-original-d2-tower"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-siriks",
+        "boss-mimiks-0",
+        "boss-mimiks-1"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Routes Heroic/Legend, TR3-VR et secrets non exhaustifs ; la reprise est qualifiée de simulation par les sources, pas un nouvel épisode canonique."
+      ]
+    },
+    {
+      "activityId": "activity-presage-d2",
+      "sources": [
+        "wiki-presage"
+      ],
+      "mainEncounterIds": [
+        "encounter-presage-d2-locus",
+        "encounter-presage-d2-darkmind"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-locus-communion",
+        "boss-darkmind"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Boss listés reliés ; toutes les positions d’Abominations et le parcours de la Glykon ne sont pas détaillés."
+      ]
+    },
+    {
+      "activityId": "activity-avalon-d2",
+      "sources": [
+        "wiki-avalon"
+      ],
+      "mainEncounterIds": [
+        "encounter-avalon-d2-data",
+        "encounter-avalon-d2-brakion",
+        "encounter-avalon-d2-digital-variants"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-data-nullifier",
+        "boss-brakion",
+        "boss-digital-tracker",
+        "boss-digital-neutralizer"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "partial",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Boss nommés recensés ; rattachement des deux Digital Variants à leurs sous-étapes et parcours exact encore partiel."
+      ]
+    },
+    {
+      "activityId": "activity-seraph-shield-d2",
+      "sources": [
+        "wiki-seraph"
+      ],
+      "mainEncounterIds": [
+        "encounter-seraph-shield-d2-haroktha",
+        "encounter-seraph-shield-d2-praksis"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-haroktha",
+        "boss-praksis"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Objectifs principaux de boss seulement ; capture, phases successives de Haroktha et secrets restent à détailler."
+      ]
+    },
+    {
+      "activityId": "activity-vox-obscura-d2",
+      "sources": [
+        "wiki-vox"
+      ],
+      "mainEncounterIds": [
+        "encounter-vox-obscura-d2-baaruk",
+        "encounter-vox-obscura-d2-qabix"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-baaruk",
+        "boss-qabix"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Segment véhicule, chronomètre et combats intermédiaires non exhaustifs ; aucun remodelage du Mars historique."
+      ]
+    },
+    {
+      "activityId": "activity-starcrossed-d2",
+      "sources": [
+        "wiki-starcrossed"
+      ],
+      "mainEncounterIds": [
+        "encounter-starcrossed-d2-ixion",
+        "encounter-starcrossed-d2-akardon"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-ixion",
+        "boss-akardon"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Boss liés ; sous-objectifs, incubateurs et secrets du Jardin noir restent partiels."
+      ]
+    }
+  ],
+  "retrievals": [
+    {
+      "sourceId": "wiki-boss-the-templar",
+      "pageTitle": "The Templar",
+      "revisionId": 407985,
+      "url": "https://www.destinypedia.com/The_Templar",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+Templar&oldid=407985",
+      "wikitextSha256": "1cc046a8884916edb304f7a451bb9d36d0efac592b348def86d407b27ab1a96f",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-atheon-time-s-conflux",
+      "pageTitle": "Atheon, Time's Conflux",
+      "revisionId": 405973,
+      "url": "https://www.destinypedia.com/Atheon%2C_Time's_Conflux",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Atheon%2C+Time%27s+Conflux&oldid=405973",
+      "wikitextSha256": "cefee3e5604673eb611c559eb4e6f3bfa67b2bab36d595dcb4222074b0baee4a",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-ir-yut-the-deathsinger",
+      "pageTitle": "Ir Yût, the Deathsinger",
+      "revisionId": 405993,
+      "url": "https://www.destinypedia.com/Ir_Y%C3%BBt%2C_the_Deathsinger",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Ir+Y%C3%BBt%2C+the+Deathsinger&oldid=405993",
+      "wikitextSha256": "2b94164baf2ce9bd6221908d9a8eb04816d32af4b040f4e63b9bb4a9054a1136",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-crota-son-of-oryx",
+      "pageTitle": "Crota, Son of Oryx",
+      "revisionId": 406986,
+      "url": "https://www.destinypedia.com/Crota%2C_Son_of_Oryx",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Crota%2C+Son+of+Oryx&oldid=406986",
+      "wikitextSha256": "014f8905533b0bbd148d0df5b4630956c7cb7c5b79c82b135cf336b2c089bc59",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-crypt-security",
+      "pageTitle": "Crypt Security",
+      "revisionId": 362507,
+      "url": "https://www.destinypedia.com/Crypt_Security",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Crypt+Security&oldid=362507",
+      "wikitextSha256": "64c1accd5f9d7c5697cba41293dcc25eb19be7dab4324e3e7f9580a6de9cbf0d",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-atraks-1-fallen-exo",
+      "pageTitle": "Atraks-1, Fallen Exo",
+      "revisionId": 405848,
+      "url": "https://www.destinypedia.com/Atraks-1%2C_Fallen_Exo",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Atraks-1%2C+Fallen+Exo&oldid=405848",
+      "wikitextSha256": "9b4efcf334a5421a837283e8691d3f43a3cf278209b30e38a5c0523e4de35eab",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-taniks",
+      "pageTitle": "Taniks, the Scarred",
+      "revisionId": 400016,
+      "url": "https://www.destinypedia.com/Taniks%2C_the_Scarred",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Taniks%2C+the+Scarred&oldid=400016",
+      "wikitextSha256": "dd17a8a02ca32e8c43eb1a07d92495bb3d86cbc436b3df33a157fabdef0ff802",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-vorgeth-the-boundless-hunger",
+      "pageTitle": "Vorgeth, the Boundless Hunger",
+      "revisionId": 398963,
+      "url": "https://www.destinypedia.com/Vorgeth%2C_the_Boundless_Hunger",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Vorgeth%2C+the+Boundless+Hunger&oldid=398963",
+      "wikitextSha256": "f6882f4405b18bff9ec963418f1465b8d1a38d4a467a789a46434a66b65e7f8e",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-dul-incaru-the-eternal-return",
+      "pageTitle": "Dûl Incaru, the Eternal Return",
+      "revisionId": 405759,
+      "url": "https://www.destinypedia.com/D%C3%BBl_Incaru%2C_the_Eternal_Return",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=D%C3%BBl+Incaru%2C+the+Eternal+Return&oldid=405759",
+      "wikitextSha256": "ff3a1ed8958f21f2aa97fde380bd88246a54ba456dee54bfc783c90fb0406cd7",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-gorgon",
+      "pageTitle": "Gorgon",
+      "revisionId": 407988,
+      "url": "https://www.destinypedia.com/Gorgon",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Gorgon&oldid=407988",
+      "wikitextSha256": "281a415d2a976aa134deada1d6f3a8c274f09855272f66863d9f2298804da2c8",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-vog",
+      "pageTitle": "Vault of Glass (raid)",
+      "revisionId": 406357,
+      "url": "https://www.destinypedia.com/Vault_of_Glass_(raid)",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Vault+of+Glass+%28raid%29&oldid=406357",
+      "wikitextSha256": "1553395cf2b74bc134db6852f0849e664e0a6219041d286c5ed5eeddbe60c68d",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-crota",
+      "pageTitle": "Crota's End",
+      "revisionId": 407264,
+      "url": "https://www.destinypedia.com/Crota's_End",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Crota%27s+End&oldid=407264",
+      "wikitextSha256": "0a1a63ddf76d36ab7af7885e6f24e15fb4f2df54e7d4f339d1ee0518e087b14b",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-warpriest",
+      "pageTitle": "Warpriest",
+      "revisionId": 398146,
+      "url": "https://www.destinypedia.com/Warpriest",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Warpriest&oldid=398146",
+      "wikitextSha256": "e41fbec5b1f16df225861092d6711eec1fe1be59f44642445076d70d03f40ab9",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-golgoroth",
+      "pageTitle": "Golgoroth",
+      "revisionId": 397835,
+      "url": "https://www.destinypedia.com/Golgoroth",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Golgoroth&oldid=397835",
+      "wikitextSha256": "54af578787ad48e8629a8d6f43740b499cc38999d1ced8a7450f27f0c58cd6b3",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-ir-anuk-deathsinger",
+      "pageTitle": "Ir Anûk, Deathsinger",
+      "revisionId": 405710,
+      "url": "https://www.destinypedia.com/Ir_An%C3%BBk%2C_Deathsinger",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Ir+An%C3%BBk%2C+Deathsinger&oldid=405710",
+      "wikitextSha256": "318c2a306d5ce57caebfe18ecd3a1bef6b8ba40eceac0077b11c53e2e76ca062",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-ir-halak-deathsinger",
+      "pageTitle": "Ir Halak, Deathsinger",
+      "revisionId": 397983,
+      "url": "https://www.destinypedia.com/Ir_Halak%2C_Deathsinger",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Ir+Halak%2C+Deathsinger&oldid=397983",
+      "wikitextSha256": "cc7bfcf8fcef174424a46c9d6f47f4503e8e988ec6f14037e004afc56b8ace86",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-oryx-the-taken-king",
+      "pageTitle": "Oryx, the Taken King",
+      "revisionId": 407096,
+      "url": "https://www.destinypedia.com/Oryx%2C_the_Taken_King",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Oryx%2C+the+Taken+King&oldid=407096",
+      "wikitextSha256": "fca22a948539e6cbb637e32fa1c11f7c95167f1e5fbb5d6a8104d2fc1d2d520e",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-kings-fall",
+      "pageTitle": "King's Fall",
+      "revisionId": 406874,
+      "url": "https://www.destinypedia.com/King's_Fall",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=King%27s+Fall&oldid=406874",
+      "wikitextSha256": "1c362438795be7935cb031b9327646ed51ead549df84d9bd164e3856bbc5c939",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-vosik-the-archpriest",
+      "pageTitle": "Vosik, the Archpriest",
+      "revisionId": 405528,
+      "url": "https://www.destinypedia.com/Vosik%2C_the_Archpriest",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Vosik%2C+the+Archpriest&oldid=405528",
+      "wikitextSha256": "195b4ae15edb2cf3ca8f76bbe67a1746c18e5c916fbfc2d9701aec480988ebf7",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-siege-engine",
+      "pageTitle": "Siege Engine",
+      "revisionId": 346149,
+      "url": "https://www.destinypedia.com/Siege_Engine",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Siege+Engine&oldid=346149",
+      "wikitextSha256": "3f93bb7d77e836faa988702f4bf8e36a4e5eb465790089e09b770229f7f6b0ae",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-aksis-archon-prime",
+      "pageTitle": "Aksis, Archon Prime",
+      "revisionId": 405946,
+      "url": "https://www.destinypedia.com/Aksis%2C_Archon_Prime",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Aksis%2C+Archon+Prime&oldid=405946",
+      "wikitextSha256": "c2a56807194220d1c32470739dc31f73193d8aea1e7ec307dab0719ff07ef669",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-meksis-siege-engineer",
+      "pageTitle": "Meksis, Siege Engineer",
+      "revisionId": 397376,
+      "url": "https://www.destinypedia.com/Meksis%2C_Siege_Engineer",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Meksis%2C+Siege+Engineer&oldid=397376",
+      "wikitextSha256": "ff84ace4a3d30b11dbc5f950260e62a2342677a3ea7ae3fb7e1702341ff7a4c9",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-rahndel-the-perfected",
+      "pageTitle": "Rahndel, the Perfected",
+      "revisionId": 397408,
+      "url": "https://www.destinypedia.com/Rahndel%2C_the_Perfected",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Rahndel%2C+the+Perfected&oldid=397408",
+      "wikitextSha256": "183750b36c687380bb477f4306c88d2af7b08ca25244d2d7b612c2593e508a49",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-wrath",
+      "pageTitle": "Wrath of the Machine",
+      "revisionId": 390830,
+      "url": "https://www.destinypedia.com/Wrath_of_the_Machine",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Wrath+of+the+Machine&oldid=390830",
+      "wikitextSha256": "3e46901cd82c3b0ef74c81278e6ffebac52c4d36be681749887d2fbd949f23ff",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-leviathan",
+      "pageTitle": "Leviathan (raid)",
+      "revisionId": 391563,
+      "url": "https://www.destinypedia.com/Leviathan_(raid)",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Leviathan+%28raid%29&oldid=391563",
+      "wikitextSha256": "1bf8d688bf0c3580f138925c61aac200e4443c59dc35d324babac0ee8db91e10",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-royal-beast",
+      "pageTitle": "Royal Beast",
+      "revisionId": 395174,
+      "url": "https://www.destinypedia.com/Royal_Beast",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Royal+Beast&oldid=395174",
+      "wikitextSha256": "04b42ab27baaad8bbd4a954d34defad9ceb711b87b7a3560ce2e84834933e167",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-emperor-calus",
+      "pageTitle": "Emperor Calus",
+      "revisionId": 405783,
+      "url": "https://www.destinypedia.com/Emperor_Calus",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Emperor+Calus&oldid=405783",
+      "wikitextSha256": "01aead7497a5ac39193f504c008a4fefd1f2ac9131ede93d61d7425fdf71c131",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-argos-planetary-core",
+      "pageTitle": "Argos, Planetary Core",
+      "revisionId": 407801,
+      "url": "https://www.destinypedia.com/Argos%2C_Planetary_Core",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Argos%2C+Planetary+Core&oldid=407801",
+      "wikitextSha256": "b23defd758f716180eff73ff979e594857d654a6ad6756bc6e988830ed900a34",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-eater",
+      "pageTitle": "Leviathan, Eater of Worlds",
+      "revisionId": 381089,
+      "url": "https://www.destinypedia.com/Leviathan%2C_Eater_of_Worlds",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Leviathan%2C+Eater+of+Worlds&oldid=381089",
+      "wikitextSha256": "0b5fb5765fddf2cfc43e492c3fb87f8dd18426e738a4ba9ac5ed806afd802ef1",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-val-ca-uor",
+      "pageTitle": "Val Ca'uor",
+      "revisionId": 396784,
+      "url": "https://www.destinypedia.com/Val_Ca'uor",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Val+Ca%27uor&oldid=396784",
+      "wikitextSha256": "44e97fa8448f40f4bca33b677951796e4594ce34f2b24d5eae08859cf378d859",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-spire-stars",
+      "pageTitle": "Leviathan, Spire of Stars",
+      "revisionId": 388159,
+      "url": "https://www.destinypedia.com/Leviathan%2C_Spire_of_Stars",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Leviathan%2C+Spire+of+Stars&oldid=388159",
+      "wikitextSha256": "d549a63c9db190f95ef60aab83d3085191c67e2f2545798051cb020861da8ff4",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-kalli",
+      "pageTitle": "Kalli",
+      "revisionId": 405930,
+      "url": "https://www.destinypedia.com/Kalli",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Kalli&oldid=405930",
+      "wikitextSha256": "87373cccac8f626608c8c4973529f87039f9c71dd007d12539c19b655e1882fd",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-shuro-chi",
+      "pageTitle": "Shuro Chi",
+      "revisionId": 406006,
+      "url": "https://www.destinypedia.com/Shuro_Chi",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Shuro+Chi&oldid=406006",
+      "wikitextSha256": "f0b928b590d5b033b582306c52772774078fc508f7d25c98e518ba5909cfb91b",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-morgeth-the-spirekeeper",
+      "pageTitle": "Morgeth, the Spirekeeper",
+      "revisionId": 407007,
+      "url": "https://www.destinypedia.com/Morgeth%2C_the_Spirekeeper",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Morgeth%2C+the+Spirekeeper&oldid=407007",
+      "wikitextSha256": "40d86caf5581612747da052b99d4be40d441fcbd30ca895f540fa249931b2c72",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-riven-of-a-thousand-voices",
+      "pageTitle": "Riven of a Thousand Voices",
+      "revisionId": 405114,
+      "url": "https://www.destinypedia.com/Riven_of_a_Thousand_Voices",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Riven+of+a+Thousand+Voices&oldid=405114",
+      "wikitextSha256": "e13c4b03f0efc0d54fd8d76b4d36229b7c5c427f9a313491efcf42377e6722da",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-last-wish",
+      "pageTitle": "Last Wish",
+      "revisionId": 383849,
+      "url": "https://www.destinypedia.com/Last_Wish",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Last+Wish&oldid=383849",
+      "wikitextSha256": "52ed2f9fedebec9ae955848e9a472ad1e2f7a37972ad4831d9d3da0a175b113d",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-ablazed-glory-kell-s-scourge",
+      "pageTitle": "Ablazed Glory, Kell's Scourge",
+      "revisionId": 398326,
+      "url": "https://www.destinypedia.com/Ablazed_Glory%2C_Kell's_Scourge",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Ablazed+Glory%2C+Kell%27s+Scourge&oldid=398326",
+      "wikitextSha256": "9ba2c03a863774f7a9cc75ea99cf14edd14c23fc52ec0b92f9041ade10431a0c",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-insurrection-prime-kell-s-scourge",
+      "pageTitle": "INSURRECTION PRIME, Kell's Scourge",
+      "revisionId": 400494,
+      "url": "https://www.destinypedia.com/INSURRECTION_PRIME%2C_Kell's_Scourge",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=INSURRECTION+PRIME%2C+Kell%27s+Scourge&oldid=400494",
+      "wikitextSha256": "ac4b08f00b8964245d3fb11126d111bc1d321ed87f7371793735151f14cb7723",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-scourge",
+      "pageTitle": "Scourge of the Past",
+      "revisionId": 388281,
+      "url": "https://www.destinypedia.com/Scourge_of_the_Past",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Scourge+of+the+Past&oldid=388281",
+      "wikitextSha256": "1592c3c93696e5fe97d2ca2bb7202e8281a7d324835969a88b6b41d52f7b2bf5",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-gahlran-the-sorrow-bearer",
+      "pageTitle": "Gahlran, the Sorrow-Bearer",
+      "revisionId": 396894,
+      "url": "https://www.destinypedia.com/Gahlran%2C_the_Sorrow-Bearer",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Gahlran%2C+the+Sorrow-Bearer&oldid=396894",
+      "wikitextSha256": "639f8d6dd3e706b45402862deb6d6cd86a860a905c63e5d842c161968dc4a794",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-crown",
+      "pageTitle": "Crown of Sorrow (raid)",
+      "revisionId": 393339,
+      "url": "https://www.destinypedia.com/Crown_of_Sorrow_(raid)",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Crown+of+Sorrow+%28raid%29&oldid=393339",
+      "wikitextSha256": "cb44cf55b452d9020fc2027f159746c6778703db7f7f1d4cc978d33f89627b73",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-consecrated-mind-sol-inherent",
+      "pageTitle": "Consecrated Mind, Sol Inherent",
+      "revisionId": 406794,
+      "url": "https://www.destinypedia.com/Consecrated_Mind%2C_Sol_Inherent",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Consecrated+Mind%2C+Sol+Inherent&oldid=406794",
+      "wikitextSha256": "ba8e910195f9494ae7926202d128b7f70917369efb62accceb41b6920db32214",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-sanctified-mind-sol-inherent",
+      "pageTitle": "Sanctified Mind, Sol Inherent",
+      "revisionId": 399117,
+      "url": "https://www.destinypedia.com/Sanctified_Mind%2C_Sol_Inherent",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Sanctified+Mind%2C+Sol+Inherent&oldid=399117",
+      "wikitextSha256": "66e7957f311566253eecd9305b6457f35108912d76d756c2b8e00eb616234153",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-garden",
+      "pageTitle": "Garden of Salvation",
+      "revisionId": 371863,
+      "url": "https://www.destinypedia.com/Garden_of_Salvation",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Garden+of+Salvation&oldid=371863",
+      "wikitextSha256": "6d5ee1a721174da9ecff584f68d5353d2dcf6e41be834bb5fbe3b3a5ddc555fa",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-dsc",
+      "pageTitle": "Deep Stone Crypt (raid)",
+      "revisionId": 400070,
+      "url": "https://www.destinypedia.com/Deep_Stone_Crypt_(raid)",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Deep+Stone+Crypt+%28raid%29&oldid=400070",
+      "wikitextSha256": "a9bbbabccc03f260c7f877659d719534defc91d3c9ff0dfc35e7b350cbc267bb",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-the-caretaker",
+      "pageTitle": "The Caretaker",
+      "revisionId": 407826,
+      "url": "https://www.destinypedia.com/The_Caretaker",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+Caretaker&oldid=407826",
+      "wikitextSha256": "c2aa72a3446236e855fb6df8495e0f8bb943a599387fc67ba26537c252bd9b41",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-rhulk-disciple-of-the-witness",
+      "pageTitle": "Rhulk, Disciple of the Witness",
+      "revisionId": 405074,
+      "url": "https://www.destinypedia.com/Rhulk%2C_Disciple_of_the_Witness",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Rhulk%2C+Disciple+of+the+Witness&oldid=405074",
+      "wikitextSha256": "627c98a5ff2d6e1f8c9fe07896757a904f5a80a2549214b0efda8627fa17ce3a",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-dul-na-the-dissector",
+      "pageTitle": "Dul'na, the Dissector",
+      "revisionId": 398800,
+      "url": "https://www.destinypedia.com/Dul'na%2C_the_Dissector",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Dul%27na%2C+the+Dissector&oldid=398800",
+      "wikitextSha256": "5be1bd032184ea4897157bd6cf4678c8926f5b98baa2c4ca84950f435f1ea85a",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-mar-y-n-the-devourer",
+      "pageTitle": "Mar'y'n, the Devourer",
+      "revisionId": 398880,
+      "url": "https://www.destinypedia.com/Mar'y'n%2C_the_Devourer",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Mar%27y%27n%2C+the+Devourer&oldid=398880",
+      "wikitextSha256": "1d9d078eb63ef1836562daeeaa56804c962dca18db37742c769480a3e3e06ffe",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-xeno-doti-the-scavenger",
+      "pageTitle": "Xeno'doti, the Scavenger",
+      "revisionId": 398976,
+      "url": "https://www.destinypedia.com/Xeno'doti%2C_the_Scavenger",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Xeno%27doti%2C+the+Scavenger&oldid=398976",
+      "wikitextSha256": "304752a3b68c1c7988d370359a45c4a21c5fa203598be15b8b3fff062eaa16d6",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-vow",
+      "pageTitle": "Vow of the Disciple",
+      "revisionId": 380952,
+      "url": "https://www.destinypedia.com/Vow_of_the_Disciple",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Vow+of+the+Disciple&oldid=380952",
+      "wikitextSha256": "7610b4c994b7e2eaa2be53df8bc09e2e30a162ca002e76757a5ce8b4fc0a2923",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-zo-aurc-explicator-of-planets",
+      "pageTitle": "Zo'aurc, Explicator of Planets",
+      "revisionId": 404249,
+      "url": "https://www.destinypedia.com/Zo'aurc%2C_Explicator_of_Planets",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Zo%27aurc%2C+Explicator+of+Planets&oldid=404249",
+      "wikitextSha256": "38645a8b477375daf6463c7cfa2c9d9645465cab0afde236bd79174c32b44fcf",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-nezarec-final-god-of-pain",
+      "pageTitle": "Nezarec, Final God of Pain",
+      "revisionId": 407833,
+      "url": "https://www.destinypedia.com/Nezarec%2C_Final_God_of_Pain",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Nezarec%2C+Final+God+of+Pain&oldid=407833",
+      "wikitextSha256": "e233d958d43664f32f13f9c5f3390800ae0296b4b3060ef8623864cda24683a1",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-root",
+      "pageTitle": "Root of Nightmares",
+      "revisionId": 407158,
+      "url": "https://www.destinypedia.com/Root_of_Nightmares",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Root+of+Nightmares&oldid=407158",
+      "wikitextSha256": "7be49b5bd60ad2ab5975e0bb1b156b685b06e7294c77cd67b348b3eeeecd0d4e",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-herald-of-finality",
+      "pageTitle": "Herald of Finality",
+      "revisionId": 407520,
+      "url": "https://www.destinypedia.com/Herald_of_Finality",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Herald+of+Finality&oldid=407520",
+      "wikitextSha256": "52251cca86acd9e014fa1a5e7a65ac7956ba470aecd82793112ff52aead34329",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-the-witness",
+      "pageTitle": "The Witness",
+      "revisionId": 408168,
+      "url": "https://www.destinypedia.com/The_Witness",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+Witness&oldid=408168",
+      "wikitextSha256": "adcc377e94813ab848f8253678c2373efc6e2335f90813c12fdce333c347d078",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-salvation",
+      "pageTitle": "Salvation's Edge",
+      "revisionId": 408210,
+      "url": "https://www.destinypedia.com/Salvation's_Edge",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Salvation%27s+Edge&oldid=408210",
+      "wikitextSha256": "4b4b8b8e3c7f457a2c3ee69884b1224861cb0a84e04ab232b0ff85e240e9d1bf",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-desert",
+      "pageTitle": "The Desert Perpetual",
+      "revisionId": 406880,
+      "url": "https://www.destinypedia.com/The_Desert_Perpetual",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+Desert+Perpetual&oldid=406880",
+      "wikitextSha256": "8a85ce28237e45437d0ba3f8e4c81bfb2c7678f77ea56f6bf19f73adfa4c9165",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-epoptes-lord-of-quanta",
+      "pageTitle": "Epoptes, Lord of Quanta",
+      "revisionId": 401847,
+      "url": "https://www.destinypedia.com/Epoptes%2C_Lord_of_Quanta",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Epoptes%2C+Lord+of+Quanta&oldid=401847",
+      "wikitextSha256": "30e2d617aaad2cbf049660ea73fcea6dfb84fb88919adecabcdf7ba8e1a4e599",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-agraios-inherent",
+      "pageTitle": "Agraios, Inherent",
+      "revisionId": 401845,
+      "url": "https://www.destinypedia.com/Agraios%2C_Inherent",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Agraios%2C+Inherent&oldid=401845",
+      "wikitextSha256": "95f46698a6ab9ef08e8f9a504bf85dd10fb3e1f6e080bcff6452ae54fe8d9d86",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-iatros-inward-turned",
+      "pageTitle": "Iatros, Inward-Turned",
+      "revisionId": 401846,
+      "url": "https://www.destinypedia.com/Iatros%2C_Inward-Turned",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Iatros%2C+Inward-Turned&oldid=401846",
+      "wikitextSha256": "482766d3111c691cedf1573ecbf7ea94ac2e1cf59ed9ff104246672559663b1c",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-koregos-the-worldline",
+      "pageTitle": "Koregos, the Worldline",
+      "revisionId": 406826,
+      "url": "https://www.destinypedia.com/Koregos%2C_the_Worldline",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Koregos%2C+the+Worldline&oldid=406826",
+      "wikitextSha256": "cabc3699880e99d18c48ec25a929a2e3633a83ae208b8fca9781a6df8c3553af",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-labyrinth-architect",
+      "pageTitle": "Labyrinth Architect",
+      "revisionId": 390408,
+      "url": "https://www.destinypedia.com/Labyrinth_Architect",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Labyrinth+Architect&oldid=390408",
+      "wikitextSha256": "953a80084a2de9d54ac46038b3e6b68974507ff9a68c3cc67e9dbd3868789ae5",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-asterion-set-apart",
+      "pageTitle": "Asterion, Set Apart",
+      "revisionId": 398762,
+      "url": "https://www.destinypedia.com/Asterion%2C_Set_Apart",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Asterion%2C+Set+Apart&oldid=398762",
+      "wikitextSha256": "56d1b33372e580034cce8e395ebaa383e1db788585b861a9ec6eee36a025fc2c",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-alak-tor-fatesmith-of-incaru",
+      "pageTitle": "Alak-Tor, Fatesmith of Incaru",
+      "revisionId": 397754,
+      "url": "https://www.destinypedia.com/Alak-Tor%2C_Fatesmith_of_Incaru",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Alak-Tor%2C+Fatesmith+of+Incaru&oldid=397754",
+      "wikitextSha256": "0f518a6907f4562266806929f10dd01ac0496a0cf6b382c83ba9429d142ab2f9",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-ba-kuur-fatesmith-of-incaru",
+      "pageTitle": "Ba-Kuur, Fatesmith of Incaru",
+      "revisionId": 397775,
+      "url": "https://www.destinypedia.com/Ba-Kuur%2C_Fatesmith_of_Incaru",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Ba-Kuur%2C+Fatesmith+of+Incaru&oldid=397775",
+      "wikitextSha256": "701e5859de7a0e3f5f5235ed8317f9c64076729216b476618f0d02d51f0328fa",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-gaurog-fatesmith-of-incaru",
+      "pageTitle": "Gaurog, Fatesmith of Incaru",
+      "revisionId": 394165,
+      "url": "https://www.destinypedia.com/Gaurog%2C_Fatesmith_of_Incaru",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Gaurog%2C+Fatesmith+of+Incaru&oldid=394165",
+      "wikitextSha256": "f6c0b3b45136a0b01aade1a858effd4138d8c649b9a9a9efb43ce2a2d91cab05",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-querim-the-waking",
+      "pageTitle": "Querim, the Waking",
+      "revisionId": 398907,
+      "url": "https://www.destinypedia.com/Querim%2C_the_Waking",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Querim%2C+the+Waking&oldid=398907",
+      "wikitextSha256": "f87aac1625614af5c98fa9f0c78b6c94410fa2472f831340992002c2cf2f9a75",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-theratos-archersbane",
+      "pageTitle": "Theratos, Archersbane",
+      "revisionId": 398935,
+      "url": "https://www.destinypedia.com/Theratos%2C_Archersbane",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Theratos%2C+Archersbane&oldid=398935",
+      "wikitextSha256": "597798e61823de97b829608632f78db31e9140ca9eaa95c310bb19a049109342",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-eriviks-the-waking",
+      "pageTitle": "Eriviks, the Waking",
+      "revisionId": 398805,
+      "url": "https://www.destinypedia.com/Eriviks%2C_the_Waking",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Eriviks%2C+the+Waking&oldid=398805",
+      "wikitextSha256": "bac84a912218c820bda23daab43aa26f328bd70361e4d32dfc5ea73c6d6bf8d7",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-xavoth-the-waking",
+      "pageTitle": "Xavoth, the Waking",
+      "revisionId": 398975,
+      "url": "https://www.destinypedia.com/Xavoth%2C_the_Waking",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Xavoth%2C+the+Waking&oldid=398975",
+      "wikitextSha256": "ecf22486694ca4b8dc104b37dcbe529a694c7dc1fda9b7d521395f41dcfa6556",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-shattered",
+      "pageTitle": "The Shattered Throne",
+      "revisionId": 408399,
+      "url": "https://www.destinypedia.com/The_Shattered_Throne",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+Shattered+Throne&oldid=408399",
+      "wikitextSha256": "ea64115d321df7a9a284c58f3d7ad6b90973e80cb4e9ba3ee5703be799d3fa30",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-zulmak-instrument-of-torment",
+      "pageTitle": "Zulmak, Instrument of Torment",
+      "revisionId": 405526,
+      "url": "https://www.destinypedia.com/Zulmak%2C_Instrument_of_Torment",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Zulmak%2C+Instrument+of+Torment&oldid=405526",
+      "wikitextSha256": "1d0aeb5416a67ed85e4c95134c56f604e42fe4b7ed0ccee679d731054998c556",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-volmar-the-tempted",
+      "pageTitle": "Volmâr, the Tempted",
+      "revisionId": 398152,
+      "url": "https://www.destinypedia.com/Volm%C3%A2r%2C_the_Tempted",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Volm%C3%A2r%2C+the+Tempted&oldid=398152",
+      "wikitextSha256": "65a5ac1fde89fa71c831b9cb6abc01523607b5a1ed4002fe88fa7a6a8621e873",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-pit",
+      "pageTitle": "Pit of Heresy",
+      "revisionId": 408374,
+      "url": "https://www.destinypedia.com/Pit_of_Heresy",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Pit+of+Heresy&oldid=408374",
+      "wikitextSha256": "df30be52f0fecccb943b1db9c974970a7a83cd916d116459427f286da292bc70",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-phalanx-echo",
+      "pageTitle": "Phalanx Echo",
+      "revisionId": 403242,
+      "url": "https://www.destinypedia.com/Phalanx_Echo",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Phalanx+Echo&oldid=403242",
+      "wikitextSha256": "e9b439c3ee71ef6d13ba1d8830322e236fb8d270aa04e24c1452aca4d275b2bb",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-kell-echo",
+      "pageTitle": "Kell Echo",
+      "revisionId": 407564,
+      "url": "https://www.destinypedia.com/Kell_Echo",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Kell+Echo&oldid=407564",
+      "wikitextSha256": "882830681218fcefb689d13001ad2bab78a4feaeab173a4d209f87a069a1b89d",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-paracausal-invader",
+      "pageTitle": "Paracausal Invader",
+      "revisionId": 404655,
+      "url": "https://www.destinypedia.com/Paracausal_Invader",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Paracausal+Invader&oldid=404655",
+      "wikitextSha256": "5f022c18cf47c1e404dd5bd224282766bfb152e8dec58435f4ae09397d3abbf3",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-prophecy",
+      "pageTitle": "Prophecy",
+      "revisionId": 398484,
+      "url": "https://www.destinypedia.com/Prophecy",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Prophecy&oldid=398484",
+      "wikitextSha256": "1d3e6c2e3dd17e38b71ddd5d77a54fac0591695dee95ff3df98eb30672bd5a21",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-phry-zhia-the-insatiable",
+      "pageTitle": "Phry'zhia, the Insatiable",
+      "revisionId": 398699,
+      "url": "https://www.destinypedia.com/Phry'zhia%2C_the_Insatiable",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Phry%27zhia%2C+the+Insatiable&oldid=398699",
+      "wikitextSha256": "50fb3a9562323b308361f6cded308a4001017392121d6fa46ec313404b98a788",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-fallen-shield",
+      "pageTitle": "Fallen Shield",
+      "revisionId": 391329,
+      "url": "https://www.destinypedia.com/Fallen_Shield",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Fallen+Shield&oldid=391329",
+      "wikitextSha256": "2e7f402d825184f70f11a803f5e7bb340f9d31d59e78b6f716c4429881141486",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-captain-avarokk-the-covetous",
+      "pageTitle": "Captain Avarokk, the Covetous",
+      "revisionId": 397186,
+      "url": "https://www.destinypedia.com/Captain_Avarokk%2C_the_Covetous",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Captain+Avarokk%2C+the+Covetous&oldid=397186",
+      "wikitextSha256": "dd0b681b7eae8453eec7b3e370b85cf9dd6530e49c9e802dfe0d93be6149e80f",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-r-m80-loyal-to-avarokk",
+      "pageTitle": "R-M80, Loyal to Avarokk",
+      "revisionId": 397588,
+      "url": "https://www.destinypedia.com/R-M80%2C_Loyal_to_Avarokk",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=R-M80%2C+Loyal+to+Avarokk&oldid=397588",
+      "wikitextSha256": "45f99ec95407f862f0424312ef8790f70b5be10992d5a1b8ab88daec61e97e0b",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-grisprax-bosun-of-avarokk",
+      "pageTitle": "Grisprax, Bosun of Avarokk",
+      "revisionId": 397311,
+      "url": "https://www.destinypedia.com/Grisprax%2C_Bosun_of_Avarokk",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Grisprax%2C+Bosun+of+Avarokk&oldid=397311",
+      "wikitextSha256": "75f7cd2a1d2618ba5ed80fd8b34521b7cced015d35f23e2fab236251fc83e76f",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-grasp",
+      "pageTitle": "Grasp of Avarice",
+      "revisionId": 399495,
+      "url": "https://www.destinypedia.com/Grasp_of_Avarice",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Grasp+of+Avarice&oldid=399495",
+      "wikitextSha256": "af1a3d019ebcd107d18509f983e2fb8ca902299fabf7e34c984d8cd48f6e24e0",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-nightmare-of-gahlran-sorrow-bearer",
+      "pageTitle": "Nightmare of Gahlran, Sorrow Bearer",
+      "revisionId": 396119,
+      "url": "https://www.destinypedia.com/Nightmare_of_Gahlran%2C_Sorrow_Bearer",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Nightmare+of+Gahlran%2C+Sorrow+Bearer&oldid=396119",
+      "wikitextSha256": "c2302777c7f5eab5d86e5d7894afeb8d819eb45416e99d96322893979f8a9397",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-nightmare-of-caiatl-princess-imperial",
+      "pageTitle": "Nightmare of Caiatl, Princess-Imperial",
+      "revisionId": 395909,
+      "url": "https://www.destinypedia.com/Nightmare_of_Caiatl%2C_Princess-Imperial",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Nightmare+of+Caiatl%2C+Princess-Imperial&oldid=395909",
+      "wikitextSha256": "2434d6a556d484c4e55d8baa84763a44cd91cf427b86c5517566092a77d1eff1",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-nightmare-of-emonut-sworn-of-moli-imoli",
+      "pageTitle": "Nightmare of Emonut, Sworn of Moli Imoli",
+      "revisionId": 396134,
+      "url": "https://www.destinypedia.com/Nightmare_of_Emonut%2C_Sworn_of_Moli_Imoli",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Nightmare+of+Emonut%2C+Sworn+of+Moli+Imoli&oldid=396134",
+      "wikitextSha256": "5d216e91fa750cc412b8f1f53f5152490711076db265ba7a88b038591aa9f851",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-nightmare-of-ka-hok-sworn-of-umun-arath",
+      "pageTitle": "Nightmare of Ka'hok, Sworn of Umun'arath",
+      "revisionId": 396147,
+      "url": "https://www.destinypedia.com/Nightmare_of_Ka'hok%2C_Sworn_of_Umun'arath",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Nightmare+of+Ka%27hok%2C+Sworn+of+Umun%27arath&oldid=396147",
+      "wikitextSha256": "7fe63742bba0e1f8e877fea0bdb67612018aabb14100cb002a571a748e90b048",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-nightmare-of-uroa-sworn-of-shayotet",
+      "pageTitle": "Nightmare of Uroa, Sworn of Shayotet",
+      "revisionId": 396182,
+      "url": "https://www.destinypedia.com/Nightmare_of_Uroa%2C_Sworn_of_Shayotet",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Nightmare+of+Uroa%2C+Sworn+of+Shayotet&oldid=396182",
+      "wikitextSha256": "8a02b5e3653e16731098945c2248c66df5e0cdae7b2938b5ce20bbfc36112940",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-nightmare-of-hou-dal-failed-assassin",
+      "pageTitle": "Nightmare of Hou'dal, Failed Assassin",
+      "revisionId": 396144,
+      "url": "https://www.destinypedia.com/Nightmare_of_Hou'dal%2C_Failed_Assassin",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Nightmare+of+Hou%27dal%2C+Failed+Assassin&oldid=396144",
+      "wikitextSha256": "ce716e1c864cd0c5b26845d0a9d5afc10b70ed5ec7d25f3e6f05076f584d8a45",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-nightmare-of-ka-nok-failed-assassin",
+      "pageTitle": "Nightmare of Ka'nok, Failed Assassin",
+      "revisionId": 396150,
+      "url": "https://www.destinypedia.com/Nightmare_of_Ka'nok%2C_Failed_Assassin",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Nightmare+of+Ka%27nok%2C+Failed+Assassin&oldid=396150",
+      "wikitextSha256": "1b491dea41e3dd810bdbd8a428adcb88dcb18e60bc309f1360785a1447f6153c",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-nightmare-of-regor-failed-assassin",
+      "pageTitle": "Nightmare of Regor, Failed Assassin",
+      "revisionId": 396163,
+      "url": "https://www.destinypedia.com/Nightmare_of_Regor%2C_Failed_Assassin",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Nightmare+of+Regor%2C+Failed+Assassin&oldid=396163",
+      "wikitextSha256": "ec2aca750ef9e37834002800dcd3dd2e0edad139460c7c6d923afd568fee42d5",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-duality",
+      "pageTitle": "Duality (dungeon)",
+      "revisionId": 393535,
+      "url": "https://www.destinypedia.com/Duality_(dungeon)",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Duality+%28dungeon%29&oldid=393535",
+      "wikitextSha256": "e50397da3ff075e569c412fadcbe5f89e082ab688572e9dc856ad186add2113c",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-akelous-the-siren-s-current",
+      "pageTitle": "Akelous, the Siren's Current",
+      "revisionId": 399197,
+      "url": "https://www.destinypedia.com/Akelous%2C_the_Siren's_Current",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Akelous%2C+the+Siren%27s+Current&oldid=399197",
+      "wikitextSha256": "59ab86ab269f5aa574c38a6da24006759143565be9b5b0c3d0f47f71996d773d",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-persys-primordial-ruin",
+      "pageTitle": "Persys, Primordial Ruin",
+      "revisionId": 406809,
+      "url": "https://www.destinypedia.com/Persys%2C_Primordial_Ruin",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Persys%2C+Primordial+Ruin&oldid=406809",
+      "wikitextSha256": "a9166b0ddbcf1c2240eddd1b4187056d477a8fcd18e36d676e4a3e230384c1f5",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-amphion-awakened-mind",
+      "pageTitle": "Amphion, Awakened Mind",
+      "revisionId": 402244,
+      "url": "https://www.destinypedia.com/Amphion%2C_Awakened_Mind",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Amphion%2C+Awakened+Mind&oldid=402244",
+      "wikitextSha256": "8ede0698ec84a4d8e02d8031bde5e52dfb86e07ec901e676d91e98d73b0d9f3c",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-ohmon-the-resistant",
+      "pageTitle": "Ohmon, the Resistant",
+      "revisionId": 402245,
+      "url": "https://www.destinypedia.com/Ohmon%2C_the_Resistant",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Ohmon%2C+the+Resistant&oldid=402245",
+      "wikitextSha256": "150d973dc73f10a248e289ba3d06c30c6f3fb0b6b22c7abf6a03d1a6f51c73ea",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-spire-watcher",
+      "pageTitle": "Spire of the Watcher",
+      "revisionId": 401498,
+      "url": "https://www.destinypedia.com/Spire_of_the_Watcher",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Spire+of+the+Watcher&oldid=401498",
+      "wikitextSha256": "0169b2cd15117864157de64ce8200d37b310db6664802a108b8b252d1b2190ef",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-ares-spire",
+      "pageTitle": "Ares Spire",
+      "revisionId": 344705,
+      "url": "https://www.destinypedia.com/Ares_Spire",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Ares+Spire&oldid=344705",
+      "wikitextSha256": "9ecbe4558e69823f533baf839f233334d9a3904ee4c51e6f68f0066d962533c3",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-ecthar-sword-of-oryx",
+      "pageTitle": "Ecthar, Sword of Oryx",
+      "revisionId": 405574,
+      "url": "https://www.destinypedia.com/Ecthar%2C_Sword_of_Oryx",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Ecthar%2C+Sword+of+Oryx&oldid=405574",
+      "wikitextSha256": "8e0b99b94578ebecdb233b9d7c0833b438af936d7be8bf734238a99502ffc76c",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-vorlog",
+      "pageTitle": "Vorlog",
+      "revisionId": 398150,
+      "url": "https://www.destinypedia.com/Vorlog",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Vorlog&oldid=398150",
+      "wikitextSha256": "7c6ffd56634d414599a9b2782c3729c5e12eddf570fbdd4f61d9eb398f227880",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-simmumah-ur-nokru",
+      "pageTitle": "Šimmumah ur-Nokru",
+      "revisionId": 398119,
+      "url": "https://www.destinypedia.com/%C5%A0immumah_ur-Nokru",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=%C5%A0immumah+ur-Nokru&oldid=398119",
+      "wikitextSha256": "be08f439afa9c13d83cafcd6db4d1f3e0fa76f74c3795ac5d817a3d4f87263b2",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-thul-ar-acolyte-of-nokris",
+      "pageTitle": "Thul-Ar, Acolyte of Nokris",
+      "revisionId": 398185,
+      "url": "https://www.destinypedia.com/Thul-Ar%2C_Acolyte_of_Nokris",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Thul-Ar%2C+Acolyte+of+Nokris&oldid=398185",
+      "wikitextSha256": "c8868e2f587a7586292547a2dfffc7aaa19d9d5cf333705a2e4661b8a3021027",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-kal-ul-runemaster",
+      "pageTitle": "Kal'ul, Runemaster",
+      "revisionId": 402248,
+      "url": "https://www.destinypedia.com/Kal'ul%2C_Runemaster",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Kal%27ul%2C+Runemaster&oldid=402248",
+      "wikitextSha256": "355d742dd53b3b7311f46f9640e3f395a512266d5a9db8521d68ee4a1f724561",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-ghosts",
+      "pageTitle": "Ghosts of the Deep",
+      "revisionId": 381081,
+      "url": "https://www.destinypedia.com/Ghosts_of_the_Deep",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Ghosts+of+the+Deep&oldid=381081",
+      "wikitextSha256": "66c0ee439df2fd7d83324fd444297b80b1e5e1feeb22b1827164eb2861047279",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-rathil-first-broken-knight-of-fikrul",
+      "pageTitle": "Rathil, First Broken Knight of Fikrul",
+      "revisionId": 405635,
+      "url": "https://www.destinypedia.com/Rathil%2C_First_Broken_Knight_of_Fikrul",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Rathil%2C+First+Broken+Knight+of+Fikrul&oldid=405635",
+      "wikitextSha256": "9c2c8ba17e16efcbd5f778d8633a11ed670a66feb1e080d2c8a00be071f0725d",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-locus-of-wailing-grief",
+      "pageTitle": "Locus of Wailing Grief",
+      "revisionId": 398874,
+      "url": "https://www.destinypedia.com/Locus_of_Wailing_Grief",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Locus+of+Wailing+Grief&oldid=398874",
+      "wikitextSha256": "948e2472a2c1670efbe4b39bb81aa33119bdc59cd60743c680bbd98b8fa447f2",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-hefnd-s-vengeance-blighted-chimaera",
+      "pageTitle": "Hefnd's Vengeance, Blighted Chimaera",
+      "revisionId": 398830,
+      "url": "https://www.destinypedia.com/Hefnd's_Vengeance%2C_Blighted_Chimaera",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Hefnd%27s+Vengeance%2C+Blighted+Chimaera&oldid=398830",
+      "wikitextSha256": "932f1d8286f3fe1510089f02544b85e048993eb2e76e35184c4f3ed1e0885c61",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-malaris-second-broken-knight",
+      "pageTitle": "Malaris, Second Broken Knight",
+      "revisionId": 396005,
+      "url": "https://www.destinypedia.com/Malaris%2C_Second_Broken_Knight",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Malaris%2C+Second+Broken+Knight&oldid=396005",
+      "wikitextSha256": "f3bb1fd18a5ea57bb3a331640ee4f1649a88ce998792a86755818bd9f8c0a50a",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-vrysiks-third-broken-knight",
+      "pageTitle": "Vrysiks, Third Broken Knight",
+      "revisionId": 396061,
+      "url": "https://www.destinypedia.com/Vrysiks%2C_Third_Broken_Knight",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Vrysiks%2C+Third+Broken+Knight&oldid=396061",
+      "wikitextSha256": "fe66afd7df947dbf6c7274fab7cd182aed8eea7e9cc2d3070accd17ed1a30448",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-nymeks-fourth-broken-knight",
+      "pageTitle": "Nymeks, Fourth Broken Knight",
+      "revisionId": 396009,
+      "url": "https://www.destinypedia.com/Nymeks%2C_Fourth_Broken_Knight",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Nymeks%2C+Fourth+Broken+Knight&oldid=396009",
+      "wikitextSha256": "4311b2ab71acfd878c3ba7754184948cbb5f908c342e95394db89ef1451c4fae",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-sirloks-fifth-broken-knight",
+      "pageTitle": "Sirloks, Fifth Broken Knight",
+      "revisionId": 396042,
+      "url": "https://www.destinypedia.com/Sirloks%2C_Fifth_Broken_Knight",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Sirloks%2C+Fifth+Broken+Knight&oldid=396042",
+      "wikitextSha256": "02fe4ca13611fc1b7d18be64a986ce220c96577ace00cde91ef1d38865c7c7e8",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-wish-twisted-abomination",
+      "pageTitle": "Wish-Twisted Abomination",
+      "revisionId": 396063,
+      "url": "https://www.destinypedia.com/Wish-Twisted_Abomination",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Wish-Twisted+Abomination&oldid=396063",
+      "wikitextSha256": "2a163bb8cbdfbe622ab6c078572cfd36a135a48e6e60ccbb9b95961b1ee4830c",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-primeval-thressia-font-of-blight",
+      "pageTitle": "Primeval Thressia, Font of Blight",
+      "revisionId": 398904,
+      "url": "https://www.destinypedia.com/Primeval_Thressia%2C_Font_of_Blight",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Primeval+Thressia%2C+Font+of+Blight&oldid=398904",
+      "wikitextSha256": "76d223286f218209663d881cbb2de2e48d7188cd24690d7e8c250aa54103bd44",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-warlord",
+      "pageTitle": "Warlord's Ruin",
+      "revisionId": 406515,
+      "url": "https://www.destinypedia.com/Warlord's_Ruin",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Warlord%27s+Ruin&oldid=406515",
+      "wikitextSha256": "f0aebb3ee9cc55df047faed196bbc2857070561eacb726e1463024f26dc3ef9d",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-vesper",
+      "pageTitle": "Vesper's Host",
+      "revisionId": 381082,
+      "url": "https://www.destinypedia.com/Vesper's_Host",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Vesper%27s+Host&oldid=381082",
+      "wikitextSha256": "c039c7eeb1a88ff007501aa930e5780a96a6470cee1c770619edd20259c819f2",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-raneiks-unified",
+      "pageTitle": "Raneiks Unified",
+      "revisionId": 397600,
+      "url": "https://www.destinypedia.com/Raneiks_Unified",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Raneiks+Unified&oldid=397600",
+      "wikitextSha256": "bd7a59dfceeb70f111d4aed5f0f07bfa55b68e18045128493a0b4993fdec13d8",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-the-corrupted-puppeteer",
+      "pageTitle": "The Corrupted Puppeteer",
+      "revisionId": 397359,
+      "url": "https://www.destinypedia.com/The_Corrupted_Puppeteer",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+Corrupted+Puppeteer&oldid=397359",
+      "wikitextSha256": "9d9a5c183e303b2a119fc93899d873541e3a1aee1c7becd554fd9ccc3f16675f",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-zoetic-lockset",
+      "pageTitle": "Zoetic Lockset",
+      "revisionId": 356254,
+      "url": "https://www.destinypedia.com/Zoetic_Lockset",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Zoetic+Lockset&oldid=356254",
+      "wikitextSha256": "9745befb26e97e4fafff6f2a319f46ae26666896741d2d87d2b0b1d5f4c1441f",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-kerrev-the-erased",
+      "pageTitle": "Kerrev, the Erased",
+      "revisionId": 406027,
+      "url": "https://www.destinypedia.com/Kerrev%2C_the_Erased",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Kerrev%2C+the+Erased&oldid=406027",
+      "wikitextSha256": "226ff90cd1d1acd9aa03ca74604807ae6f100a37a17b4c48401d1cb4d3f26563",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-sundered",
+      "pageTitle": "Sundered Doctrine",
+      "revisionId": 406884,
+      "url": "https://www.destinypedia.com/Sundered_Doctrine",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Sundered+Doctrine&oldid=406884",
+      "wikitextSha256": "fe0afbc07a967c9f90da8dd4be23a910ec9dd4011c8453a75969fa5e3198d017",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-harrow-dredgen-apprentice",
+      "pageTitle": "Harrow, Dredgen-Apprentice",
+      "revisionId": 406265,
+      "url": "https://www.destinypedia.com/Harrow%2C_Dredgen-Apprentice",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Harrow%2C+Dredgen-Apprentice&oldid=406265",
+      "wikitextSha256": "f84783666599b38eaa3d1afbaa64eaeb3dbcd9f8749fb5889d1243f6c732bb22",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-dredgen-sere",
+      "pageTitle": "Dredgen Sere",
+      "revisionId": 406334,
+      "url": "https://www.destinypedia.com/Dredgen_Sere",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Dredgen+Sere&oldid=406334",
+      "wikitextSha256": "f4cddc5817e5f032488dd990038ccfbf304672c894c81a7892fb1020c9cdd54c",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-shade-of-sere",
+      "pageTitle": "Shade of Sere",
+      "revisionId": 403237,
+      "url": "https://www.destinypedia.com/Shade_of_Sere",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Shade+of+Sere&oldid=403237",
+      "wikitextSha256": "cd7424d0460e2126869e1ca6c663dc22d3ebb71ae19f854fe2faf38b7d1e7490",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-equilibrium",
+      "pageTitle": "Equilibrium",
+      "revisionId": 406895,
+      "url": "https://www.destinypedia.com/Equilibrium",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Equilibrium&oldid=406895",
+      "wikitextSha256": "4a5863c7c4c7e6d6eeef3f99371e8d99bb1720d7efa2c15b6116ff77b6fa2a0c",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-temple-grounds",
+      "pageTitle": "Temple Grounds",
+      "revisionId": 396732,
+      "url": "https://www.destinypedia.com/Temple_Grounds",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Temple+Grounds&oldid=396732",
+      "wikitextSha256": "64aa029964878dc41ce171fe4ee3bd7c47fdee8629c804030ff60f868203c04a",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-malphas-contemptus",
+      "pageTitle": "Malphas Contemptus",
+      "revisionId": 396675,
+      "url": "https://www.destinypedia.com/Malphas_Contemptus",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Malphas+Contemptus&oldid=396675",
+      "wikitextSha256": "4a00373adabc6b199b8d2694078768c57dce7c02bdc04bba7c1f7f971a884d03",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-wolf-walker",
+      "pageTitle": "Wolf Walker",
+      "revisionId": 402093,
+      "url": "https://www.destinypedia.com/Wolf_Walker",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Wolf+Walker&oldid=402093",
+      "wikitextSha256": "7c79465a0514ef729ef3651281ffe127e219c8f91ac34524a87eab4cf9393f71",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-splicer-walker",
+      "pageTitle": "Splicer Walker",
+      "revisionId": 380353,
+      "url": "https://www.destinypedia.com/Splicer_Walker",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Splicer+Walker&oldid=380353",
+      "wikitextSha256": "c87ff8112acfd61531751703c07915ae4511dcd3a69726d395b8f80ab955dd1a",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-shadow-thief",
+      "pageTitle": "The Shadow Thief",
+      "revisionId": 400560,
+      "url": "https://www.destinypedia.com/The_Shadow_Thief",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+Shadow+Thief&oldid=400560",
+      "wikitextSha256": "179dbfe943f04b150e1ff851dc228bfe80327305bbb783da38e8f3de7f0d3d62",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-sekrion-nexus-mind",
+      "pageTitle": "Sekrion, Nexus Mind",
+      "revisionId": 406060,
+      "url": "https://www.destinypedia.com/Sekrion%2C_Nexus_Mind",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Sekrion%2C+Nexus+Mind&oldid=406060",
+      "wikitextSha256": "bf0718f7bad4977c42487a76a7ba822ee5ceb4d4a3b4632ca89ef761981f3c31",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-nexus",
+      "pageTitle": "The Nexus",
+      "revisionId": 368373,
+      "url": "https://www.destinypedia.com/The_Nexus",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+Nexus&oldid=368373",
+      "wikitextSha256": "f6220035f65689bdf7019d8a122938c7b57349a9357336943d9b7ac9ed02818f",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-sepiks-prime",
+      "pageTitle": "Sepiks Prime",
+      "revisionId": 406975,
+      "url": "https://www.destinypedia.com/Sepiks_Prime",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Sepiks+Prime&oldid=406975",
+      "wikitextSha256": "b8225c6807da422d8ec3c49f8dc90b67db57486690fb3881f09ab657fb6a36f6",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-naksis-devil-baron",
+      "pageTitle": "Naksis, Devil Baron",
+      "revisionId": 399728,
+      "url": "https://www.destinypedia.com/Naksis%2C_Devil_Baron",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Naksis%2C+Devil+Baron&oldid=399728",
+      "wikitextSha256": "79f86f5ffa0ef9a2f95d5e9d2e69d8d288f08736d8f07240cccfeb9e1801c217",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-walker",
+      "pageTitle": "Walker",
+      "revisionId": 403479,
+      "url": "https://www.destinypedia.com/Walker",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Walker&oldid=403479",
+      "wikitextSha256": "e39815489637d28214b3847fb14ecf796a3956d584d073b74c71ea53f3096207",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-dresiks-splicer-baron",
+      "pageTitle": "Dresiks, Splicer Baron",
+      "revisionId": 404489,
+      "url": "https://www.destinypedia.com/Dresiks%2C_Splicer_Baron",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Dresiks%2C+Splicer+Baron&oldid=404489",
+      "wikitextSha256": "242ee44aa12b417183bf558037e6eadf946cb5fedebf1b21407a0376423782e1",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-rakta-the-mournful",
+      "pageTitle": "Räkta, the Mournful",
+      "revisionId": 348349,
+      "url": "https://www.destinypedia.com/R%C3%A4kta%2C_the_Mournful",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=R%C3%A4kta%2C+the+Mournful&oldid=348349",
+      "wikitextSha256": "faed03a461af5901dbe9ff389c2da34adbc5672f9f8dd55ccb9feaf2f983954b",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-devils-lair",
+      "pageTitle": "The Devils' Lair (strike)",
+      "revisionId": 391299,
+      "url": "https://www.destinypedia.com/The_Devils'_Lair_(strike)",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+Devils%27+Lair+%28strike%29&oldid=391299",
+      "wikitextSha256": "a2f053388b5853da943fbee2dce3e2c01d5f2630398ecfa656de67ef8e2a3f8f",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-sedia",
+      "pageTitle": "Sedia",
+      "revisionId": 406101,
+      "url": "https://www.destinypedia.com/Sedia",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Sedia&oldid=406101",
+      "wikitextSha256": "6f23530df462c1c663c591e956a8f27990542d1dc49506cbde1009d05dfa734f",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-corrupted",
+      "pageTitle": "The Corrupted",
+      "revisionId": 394521,
+      "url": "https://www.destinypedia.com/The_Corrupted",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+Corrupted&oldid=394521",
+      "wikitextSha256": "79483a31af0394c311704bc8cc92028547eefd9760bf833f943ecc626ec68253",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-grask-the-consumed",
+      "pageTitle": "Grask, the Consumed",
+      "revisionId": 396811,
+      "url": "https://www.destinypedia.com/Grask%2C_the_Consumed",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Grask%2C+the+Consumed&oldid=396811",
+      "wikitextSha256": "42b394ef970b24087e64e5a0a588f12566bd5dd686f8fb7c35933c2946ce04a9",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-gor-ath-gath",
+      "pageTitle": "Gor'ath Gath",
+      "revisionId": 398817,
+      "url": "https://www.destinypedia.com/Gor'ath_Gath",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Gor%27ath+Gath&oldid=398817",
+      "wikitextSha256": "ee980e688ec8ad01b5756f0891844a85e58a0198e2a829bb1200455d1a9e66cf",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-baimogg-unchained-wrath",
+      "pageTitle": "Baimogg, Unchained Wrath",
+      "revisionId": 398769,
+      "url": "https://www.destinypedia.com/Baimogg%2C_Unchained_Wrath",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Baimogg%2C+Unchained+Wrath&oldid=398769",
+      "wikitextSha256": "72ad9cc287ada9b2db7073252cd9cbea720054324e1d7fab8b88cdf5235c5c7e",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-lake",
+      "pageTitle": "Lake of Shadows",
+      "revisionId": 406163,
+      "url": "https://www.destinypedia.com/Lake_of_Shadows",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Lake+of+Shadows&oldid=406163",
+      "wikitextSha256": "65d5b237b351abec04a4557667099daf58a5d5dd94b5cd07d839f52e9463df4e",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-valus-ta-aurc",
+      "pageTitle": "Valus Ta'aurc",
+      "revisionId": 405918,
+      "url": "https://www.destinypedia.com/Valus_Ta'aurc",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Valus+Ta%27aurc&oldid=405918",
+      "wikitextSha256": "991ff29da856be6bff320c134f47a2509a026a44945f740d77c251b6cea7958b",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-drevis-wolf-baroness",
+      "pageTitle": "Drevis, Wolf Baroness",
+      "revisionId": 405626,
+      "url": "https://www.destinypedia.com/Drevis%2C_Wolf_Baroness",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Drevis%2C+Wolf+Baroness&oldid=405626",
+      "wikitextSha256": "d19fc2a80b688f71561d7b29877d1f41954b5367670130819188fc2a8fb8bbe2",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-urzok-the-hated",
+      "pageTitle": "Urzok, the Hated",
+      "revisionId": 398164,
+      "url": "https://www.destinypedia.com/Urzok%2C_the_Hated",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Urzok%2C+the+Hated&oldid=398164",
+      "wikitextSha256": "0af01e7a5524e88fcc425777f88d3dbe800b88c88b092d4e29026498fa903762",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-tulgorh-aspect-of-agony",
+      "pageTitle": "Tulgorh, Aspect of Agony",
+      "revisionId": 402246,
+      "url": "https://www.destinypedia.com/Tulgorh%2C_Aspect_of_Agony",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Tulgorh%2C+Aspect+of+Agony&oldid=402246",
+      "wikitextSha256": "d11f744c81315472e634775d6377a7e2fcf8c977f11ce0cd68769ef9044df522",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-whisper",
+      "pageTitle": "The Whisper",
+      "revisionId": 366029,
+      "url": "https://www.destinypedia.com/The_Whisper",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+Whisper&oldid=366029",
+      "wikitextSha256": "4f198e877625d8b9d3f5578436677da3cbb266b968a81a8cc9d5c9bf1e304a50",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-siriks-loyal-to-eramis",
+      "pageTitle": "Siriks, Loyal to Eramis",
+      "revisionId": 397426,
+      "url": "https://www.destinypedia.com/Siriks%2C_Loyal_to_Eramis",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Siriks%2C+Loyal+to+Eramis&oldid=397426",
+      "wikitextSha256": "06bd758be7a690b9ad7a22c4d84b7e74fa61d0f5c829efc9994f036a9f8c34b4",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-mimiks-0-devil-s-scion",
+      "pageTitle": "Mimiks-0, Devil's Scion",
+      "revisionId": 397529,
+      "url": "https://www.destinypedia.com/Mimiks-0%2C_Devil's_Scion",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Mimiks-0%2C+Devil%27s+Scion&oldid=397529",
+      "wikitextSha256": "8b851438d8c9757c07ac087e82cde2685122528726552cae2e39ce4701320c24",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-mimiks-1-devil-s-scion",
+      "pageTitle": "Mimiks-1, Devil's Scion",
+      "revisionId": 397530,
+      "url": "https://www.destinypedia.com/Mimiks-1%2C_Devil's_Scion",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Mimiks-1%2C+Devil%27s+Scion&oldid=397530",
+      "wikitextSha256": "73ec1bc322c5fcc9a806019e4d8e4431320f52347e10743019e7a6af4131b795",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-mimiks-2-devil-s-scion",
+      "pageTitle": "Mimiks-2, Devil's Scion",
+      "revisionId": 402247,
+      "url": "https://www.destinypedia.com/Mimiks-2%2C_Devil's_Scion",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Mimiks-2%2C+Devil%27s+Scion&oldid=402247",
+      "wikitextSha256": "a75e3b6e57c475f9f2ab151585c4fd831a4af543ccf15e064d05726a7c8aba89",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-zero-hour",
+      "pageTitle": "Zero Hour",
+      "revisionId": 392141,
+      "url": "https://www.destinypedia.com/Zero_Hour",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Zero+Hour&oldid=392141",
+      "wikitextSha256": "4ad47d6e042c2cc48e0b70d9fda2d32fddffd0f3d10bc1ca04f7e6d298c8a955",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-locus-of-communion",
+      "pageTitle": "Locus of Communion",
+      "revisionId": 396001,
+      "url": "https://www.destinypedia.com/Locus_of_Communion",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Locus+of+Communion&oldid=396001",
+      "wikitextSha256": "79424dd92abdd07aa5fd9035a87d3d722d6248f0ac9384338d2e6958676e7b80",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-darkmind-abomination",
+      "pageTitle": "Darkmind Abomination",
+      "revisionId": 362630,
+      "url": "https://www.destinypedia.com/Darkmind_Abomination",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Darkmind+Abomination&oldid=362630",
+      "wikitextSha256": "e31eef5e9bbfc40e2e835826a45523ed611bf6ac17337599a1a4a33ab64555cd",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-presage",
+      "pageTitle": "Presage",
+      "revisionId": 408397,
+      "url": "https://www.destinypedia.com/Presage",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Presage&oldid=408397",
+      "wikitextSha256": "2f5996dda2270dafbcc90b2e2590048fa30cfb03baf2db44f8b1981d7bfd78a7",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-brakion-genesis-mind",
+      "pageTitle": "Brakion, Genesis Mind",
+      "revisionId": 396798,
+      "url": "https://www.destinypedia.com/Brakion%2C_Genesis_Mind",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Brakion%2C+Genesis+Mind&oldid=396798",
+      "wikitextSha256": "09f96bce43e23c48ff6df3e20a327a8ef182e670709f3bdf6933ba12cbef4075",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-data-nullifier",
+      "pageTitle": "Data Nullifier",
+      "revisionId": 373997,
+      "url": "https://www.destinypedia.com/Data_Nullifier",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Data+Nullifier&oldid=373997",
+      "wikitextSha256": "d8ddec9690b7a1ac44d7ea3e51c66270f87c6699a4092442794f9678bcfd79e5",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-digital-variant-tracker",
+      "pageTitle": "Digital Variant Tracker",
+      "revisionId": 399313,
+      "url": "https://www.destinypedia.com/Digital_Variant_Tracker",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Digital+Variant+Tracker&oldid=399313",
+      "wikitextSha256": "7438c80c41c8e5b032d4bfc39bb1dcd854214cd9bd8b9c21f39cd0ff285291d8",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-digital-variant-neutralizer",
+      "pageTitle": "Digital Variant Neutralizer",
+      "revisionId": 399312,
+      "url": "https://www.destinypedia.com/Digital_Variant_Neutralizer",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Digital+Variant+Neutralizer&oldid=399312",
+      "wikitextSha256": "344cb34a9d4401b4563005b6e94d20c55fc1743cea0f1e97eeebff909e089970",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-avalon",
+      "pageTitle": "NODE.OVRD.AVALON",
+      "revisionId": 378241,
+      "url": "https://www.destinypedia.com/NODE.OVRD.AVALON",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=NODE.OVRD.AVALON&oldid=378241",
+      "wikitextSha256": "754f99eb258d3fa418b1aeeed13835401bb8b8d15afb03637b1f68605a3ac16e",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-haroktha-scourge-of-the-helium-drinkers",
+      "pageTitle": "Haroktha, Scourge of the Helium Drinkers",
+      "revisionId": 397850,
+      "url": "https://www.destinypedia.com/Haroktha%2C_Scourge_of_the_Helium_Drinkers",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Haroktha%2C+Scourge+of+the+Helium+Drinkers&oldid=397850",
+      "wikitextSha256": "767cb0174da9fadd5960958d0523ee36340f979ad3cbf0dcee6f6b31a71bf6c3",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-praksis-the-technocrat",
+      "pageTitle": "Praksis, the Technocrat",
+      "revisionId": 406226,
+      "url": "https://www.destinypedia.com/Praksis%2C_the_Technocrat",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Praksis%2C+the+Technocrat&oldid=406226",
+      "wikitextSha256": "53dc68cb7684f377fca0cd608f9c2db68ed288bbcaaa3c9d8c678b93059c255f",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-seraph",
+      "pageTitle": "Operation: Seraph's Shield",
+      "revisionId": 393022,
+      "url": "https://www.destinypedia.com/Operation%3A_Seraph's_Shield",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Operation%3A+Seraph%27s+Shield&oldid=393022",
+      "wikitextSha256": "9d1b670904abf6ffae7e1ac4338f28056576c28d9352efff56b20df4e595bd12",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-ba-aruk-dissident",
+      "pageTitle": "Ba'aruk, Dissident",
+      "revisionId": 396853,
+      "url": "https://www.destinypedia.com/Ba'aruk%2C_Dissident",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Ba%27aruk%2C+Dissident&oldid=396853",
+      "wikitextSha256": "869298674853eefe5a59e65fe483860ca2cab3d70f210606e16603242aa41251",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-qabix-insurgent",
+      "pageTitle": "Qabix, Insurgent",
+      "revisionId": 395868,
+      "url": "https://www.destinypedia.com/Qabix%2C_Insurgent",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Qabix%2C+Insurgent&oldid=395868",
+      "wikitextSha256": "23fdc560d8c7602d1db3f00a57fb18dc5dbb4187217c96272a29281a467f4ca7",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-vox",
+      "pageTitle": "Vox Obscura",
+      "revisionId": 339654,
+      "url": "https://www.destinypedia.com/Vox_Obscura",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Vox+Obscura&oldid=339654",
+      "wikitextSha256": "becc73a84132ad6bd23f4cd6ec5c18cd8e54a089914cb1db1fa0e82f11d55e5f",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-ixion-covetous-mind",
+      "pageTitle": "Ixion, Covetous Mind",
+      "revisionId": 399195,
+      "url": "https://www.destinypedia.com/Ixion%2C_Covetous_Mind",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Ixion%2C+Covetous+Mind&oldid=399195",
+      "wikitextSha256": "e8b72b3a896d3e8de2d994fafd0e004c1ea53c38d9c4ba856cee6f5c0e8e8e07",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-boss-akardon-pitiless-mind",
+      "pageTitle": "Akardon, Pitiless Mind",
+      "revisionId": 399190,
+      "url": "https://www.destinypedia.com/Akardon%2C_Pitiless_Mind",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Akardon%2C+Pitiless+Mind&oldid=399190",
+      "wikitextSha256": "3f89e84321ac3cbc5fb75ecbd5035d592247dd40417d48a7dfd37168fd2d5712",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ]
+    },
+    {
+      "sourceId": "wiki-starcrossed",
+      "pageTitle": "Starcrossed",
+      "revisionId": 399175,
+      "url": "https://www.destinypedia.com/Starcrossed",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Starcrossed&oldid=399175",
+      "wikitextSha256": "e479a0ef4a765382704c4c9bdad313cc50819d86d2d62d3d86c2bf6d962dd404",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-tower-of-opened-eyes",
+      "pageTitle": "Tower of Opened Eyes",
+      "revisionId": 330388,
+      "url": "https://www.destinypedia.com/Tower_of_Opened_Eyes",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Tower+of+Opened+Eyes&oldid=330388",
+      "wikitextSha256": "27edcde19c59ece94af692635b4f7796cfbb5d90335b91d462e3ac86c460f2d0",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-the-first-spire",
+      "pageTitle": "The First Spire",
+      "revisionId": 330387,
+      "url": "https://www.destinypedia.com/The_First_Spire",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=The+First+Spire&oldid=330387",
+      "wikitextSha256": "787ef4f9128f441105544c3b9c053ad7b704fd1ea055edef769fd2110bae8488",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-keep-of-voices",
+      "pageTitle": "Keep of Voices",
+      "revisionId": 362250,
+      "url": "https://www.destinypedia.com/Keep_of_Voices",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Keep+of+Voices&oldid=362250",
+      "wikitextSha256": "d8a3e31f03e231523644ed0c21e106a2cfdcb5c80451dfc413e54ed902494fff",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-hall-of-two-souls",
+      "pageTitle": "Hall of Two Souls",
+      "revisionId": 321557,
+      "url": "https://www.destinypedia.com/Hall_of_Two_Souls",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Hall+of+Two+Souls&oldid=321557",
+      "wikitextSha256": "d55d45b073ecd5455ebb86f94d347fe4a10553524b8e250ce7969735197728cf",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-acquisition",
+      "pageTitle": "Acquisition",
+      "revisionId": 391719,
+      "url": "https://www.destinypedia.com/Acquisition",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Acquisition&oldid=391719",
+      "wikitextSha256": "0da68684caa47682bc6235977a2669a829690f98bac2da62c5efc5e38f5ac93e",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-collection",
+      "pageTitle": "Collection",
+      "revisionId": 308514,
+      "url": "https://www.destinypedia.com/Collection",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Collection&oldid=308514",
+      "wikitextSha256": "4572bac06fcb78c7b5039526cf0b889a38da2a41f793d43c71f533f431df753c",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-exhibition",
+      "pageTitle": "Exhibition",
+      "revisionId": 391720,
+      "url": "https://www.destinypedia.com/Exhibition",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Exhibition&oldid=391720",
+      "wikitextSha256": "da751baa31a1cb6f370175b12e4e292c5c2a817052a8f3f4b3d9b040775c6c97",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-cataclysm",
+      "pageTitle": "Cataclysm",
+      "revisionId": 401285,
+      "url": "https://www.destinypedia.com/Cataclysm",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Cataclysm&oldid=401285",
+      "wikitextSha256": "b44242cbe2ac3a01fbda3d0e424227919aa7432781d4977af4ccfca9e436cea0",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-scission",
+      "pageTitle": "Scission",
+      "revisionId": 321213,
+      "url": "https://www.destinypedia.com/Scission",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Scission&oldid=321213",
+      "wikitextSha256": "41f5b64e4144d0fc38ead171b3002342d41764aa52313db9dc6eac6b8acd2d01",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-macrocosm",
+      "pageTitle": "Macrocosm",
+      "revisionId": 321212,
+      "url": "https://www.destinypedia.com/Macrocosm",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Macrocosm&oldid=321212",
+      "wikitextSha256": "6469fb6341bbbb9a8bdf0cfba2869d63579ded3b7f98e824b46b936f5e98a61b",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-substratum",
+      "pageTitle": "Substratum",
+      "revisionId": 401163,
+      "url": "https://www.destinypedia.com/Substratum",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Substratum&oldid=401163",
+      "wikitextSha256": "64ce0970646d0959ab99ca5b7d4aa781a49eef35c31a525034c4b05900ad83c0",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-dissipation",
+      "pageTitle": "Dissipation",
+      "revisionId": 401167,
+      "url": "https://www.destinypedia.com/Dissipation",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Dissipation&oldid=401167",
+      "wikitextSha256": "7bba1f6538ca8481b31883ee241f4d4ad7eadefe38283cc5fce28acc26b57715",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-verity",
+      "pageTitle": "Verity",
+      "revisionId": 401057,
+      "url": "https://www.destinypedia.com/Verity",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Verity&oldid=401057",
+      "wikitextSha256": "e6db893aa1b4ca2bf003553491e16121aa78f2fa276d5677200a641dd319cc21",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
+    },
+    {
+      "sourceId": "wiki-place-zenith",
+      "pageTitle": "Zenith",
+      "revisionId": 408211,
+      "url": "https://www.destinypedia.com/Zenith",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Zenith&oldid=408211",
+      "wikitextSha256": "c89fcf8b131bf68c476f25b0f2c441225465a1ef30c943bbf23f32049f31d907",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ]
     }
   ]
 }

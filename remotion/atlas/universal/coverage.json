@@ -2,52 +2,70 @@
   "reviewedAt": "2026-11-09",
   "status": "partial",
   "legacyLocationsPreserved": 468,
-  "locations": 78,
-  "legacyLocationsLinked": 71,
-  "newNamedLocations": 7,
+  "locations": 147,
+  "legacyLocationsLinked": 91,
+  "newNamedLocations": 56,
   "locationVariants": 14,
-  "activities": 32,
+  "activities": 49,
   "activityTypes": {
     "dungeon": 11,
-    "exotic-mission": 1,
-    "raid": 19,
-    "seasonal-activity": 1
+    "exotic-mission": 9,
+    "raid": 20,
+    "seasonal-activity": 1,
+    "strike": 8
   },
-  "encounters": 27,
-  "bossIdentities": 9,
-  "bossVariants": 2,
-  "activitiesWithEncounters": 6,
+  "baseRaids": 19,
+  "variantActivities": [
+    "activity-desert-perpetual-epic-d2",
+    "activity-shadow-thief-revisited-d1",
+    "activity-devils-lair-revisited-d1",
+    "activity-lake-of-shadows-original-d2",
+    "activity-whisper-original-d2",
+    "activity-zero-hour-original-d2"
+  ],
+  "encounters": 213,
+  "encounterCategories": {
+    "main": 154,
+    "optional": 16,
+    "traversal": 43
+  },
+  "bossIdentities": 128,
+  "bossCompositions": {
+    "collective": 5,
+    "individual": 118,
+    "mechanism": 5
+  },
+  "bossVariants": 25,
+  "variantNatures": {
+    "automaton": 1,
+    "combat-configuration": 4,
+    "gameplay-edition": 4,
+    "nightmare": 2,
+    "physical-form": 8,
+    "projection": 3,
+    "taken-state": 3
+  },
+  "activitiesWithEncounters": 48,
   "activitiesWithoutEncounters": [
-    "activity-kings-fall-d1",
-    "activity-wrath-of-machine-d1",
-    "activity-last-wish-d2",
-    "activity-garden-of-salvation-d2",
-    "activity-vow-of-disciple-d2",
-    "activity-kings-fall-d2",
-    "activity-root-of-nightmares-d2",
-    "activity-salvations-edge-d2",
-    "activity-desert-perpetual-d2",
-    "activity-leviathan-raid-d2",
-    "activity-eater-of-worlds-d2",
-    "activity-spire-of-stars-d2",
-    "activity-scourge-of-past-d2",
-    "activity-crown-of-sorrow-d2",
-    "activity-pit-of-heresy-d2",
-    "activity-prophecy-d2",
-    "activity-grasp-of-avarice-d2",
-    "activity-duality-d2",
-    "activity-spire-of-watcher-d2",
-    "activity-ghosts-of-deep-d2",
-    "activity-warlords-ruin-d2",
-    "activity-vespers-host-d2",
-    "activity-sundered-doctrine-d2",
-    "activity-equilibrium-d2",
-    "activity-whisper-d2",
     "activity-menagerie-d2"
   ],
-  "bossesWithoutAssets": 9,
-  "retrievedSources": 8,
-  "inheritedSources": 84,
+  "encounterCoverage": {
+    "not-started": 1,
+    "partial": 18,
+    "reviewed-main-encounters": 30
+  },
+  "baseRaidsWithReviewedMainEncounters": 19,
+  "dungeonsWithReviewedMainEncounters": 11,
+  "bossCoverage": {
+    "partial": 6,
+    "reviewed-listed-bosses": 42
+  },
+  "arenaCoverage": {
+    "mixed": 26,
+    "named": 2,
+    "site-only": 20
+  },
+  "bossesWithoutAssets": 128,
   "missingPlayableBossModels": [
     "boss-templar",
     "boss-atheon",
@@ -57,7 +75,149 @@
     "boss-atraks",
     "boss-taniks",
     "boss-vorgeth",
-    "boss-dul-incaru"
+    "boss-dul-incaru",
+    "boss-gorgons",
+    "boss-warpriest",
+    "boss-golgoroth",
+    "boss-ir-anuk",
+    "boss-ir-halak",
+    "boss-oryx",
+    "boss-vosik",
+    "boss-siege-engine",
+    "boss-aksis",
+    "boss-meksis",
+    "boss-rahndel",
+    "boss-royal-beasts",
+    "boss-calus",
+    "boss-argos",
+    "boss-val-cauor",
+    "boss-kalli",
+    "boss-shuro-chi",
+    "boss-morgeth",
+    "boss-riven",
+    "boss-ablazed-glory",
+    "boss-insurrection-prime",
+    "boss-gahlran",
+    "boss-consecrated-mind",
+    "boss-sanctified-mind",
+    "boss-caretaker",
+    "boss-rhulk",
+    "boss-dulna",
+    "boss-maryn",
+    "boss-xenodoti",
+    "boss-zoaurc",
+    "boss-nezarec",
+    "boss-herald-finality",
+    "boss-witness",
+    "boss-epoptes",
+    "boss-agraios",
+    "boss-iatros",
+    "boss-koregos",
+    "boss-labyrinth-architects",
+    "boss-asterion",
+    "boss-alak-tor",
+    "boss-ba-kuur",
+    "boss-gaurog",
+    "boss-querim",
+    "boss-theratos",
+    "boss-eriviks",
+    "boss-xavoth",
+    "boss-zulmak",
+    "boss-volmar",
+    "boss-phalanx-echo",
+    "boss-kell-echo",
+    "boss-paracausal-invaders",
+    "boss-phryzhia",
+    "boss-fallen-shield",
+    "boss-avarokk",
+    "boss-rm80",
+    "boss-grisprax",
+    "boss-caiatl",
+    "boss-emonut",
+    "boss-kahok",
+    "boss-uroa",
+    "boss-houdal",
+    "boss-kanok",
+    "boss-regor",
+    "boss-akelous",
+    "boss-persys",
+    "boss-amphion",
+    "boss-ohmon",
+    "boss-ecthar",
+    "boss-vorlog",
+    "boss-simmumah",
+    "boss-thul-ar",
+    "boss-kalul",
+    "boss-rathil",
+    "boss-locus-grief",
+    "boss-hefnd-vengeance",
+    "boss-malaris",
+    "boss-vrysiks",
+    "boss-nymeks",
+    "boss-sirloks",
+    "boss-wish-twisted",
+    "boss-thressia",
+    "boss-raneiks",
+    "boss-corrupted-puppeteer",
+    "boss-zoetic-lockset",
+    "boss-kerrev",
+    "boss-harrow",
+    "boss-sere",
+    "boss-wolf-walker",
+    "boss-perfected-walker",
+    "boss-sekrion",
+    "boss-sepiks",
+    "boss-naksis",
+    "boss-devil-walker",
+    "boss-dresiks",
+    "boss-rakta",
+    "boss-sedia",
+    "boss-grask",
+    "boss-gorath",
+    "boss-baimogg",
+    "boss-taaurc",
+    "boss-drevis",
+    "boss-urzok",
+    "boss-tulgorh",
+    "boss-siriks",
+    "boss-mimiks-0",
+    "boss-mimiks-1",
+    "boss-mimiks-2",
+    "boss-locus-communion",
+    "boss-darkmind",
+    "boss-brakion",
+    "boss-data-nullifier",
+    "boss-digital-tracker",
+    "boss-digital-neutralizer",
+    "boss-haroktha",
+    "boss-praksis",
+    "boss-baaruk",
+    "boss-qabix",
+    "boss-ixion",
+    "boss-akardon"
+  ],
+  "reusePlans": 314,
+  "exactLegacyRecipes": 105,
+  "reuseProfiles": 52,
+  "reuseStatuses": {
+    "adaptation-required": 98,
+    "no-suitable-model": 55,
+    "proxy-only": 161
+  },
+  "retrievedSources": 189,
+  "inheritedSources": 95,
+  "pinnedRevisions": 186,
+  "legacyCorrections": [
+    {
+      "locationId": "desert-perpetual",
+      "field": "parentId",
+      "originalValue": "kepler",
+      "correctedValue": "unknown-periphery",
+      "sources": [
+        "wiki-desert"
+      ],
+      "note": "La singularité de Kepler est un contexte d’accès ; l’infobox et le récit situent le raid dans la Périphérie inconnue / Unknown Space. Correction de cette couche seulement ; catalogue 0.3 inchangé."
+    }
   ],
   "inventories": [
     {
@@ -128,6 +288,1346 @@
         "activity-crotas-end-d1",
         "activity-kings-fall-d1",
         "activity-wrath-of-machine-d1"
+      ]
+    }
+  ],
+  "activityReviews": [
+    {
+      "activityId": "activity-vault-of-glass-d1",
+      "sources": [
+        "wiki-vog"
+      ],
+      "mainEncounterIds": [
+        "encounter-vault-of-glass-d1-open-gate",
+        "encounter-vault-of-glass-d1-confluxes",
+        "encounter-vault-of-glass-d1-oracles",
+        "encounter-vault-of-glass-d1-templar",
+        "encounter-vault-of-glass-d1-gatekeepers",
+        "encounter-vault-of-glass-d1-atheon"
+      ],
+      "traversalEncounterIds": [
+        "encounter-vault-of-glass-d1-gorgons",
+        "encounter-vault-of-glass-d1-chasm"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-templar",
+        "boss-gorgons",
+        "boss-atheon"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-crotas-end-d1",
+      "sources": [
+        "wiki-crota"
+      ],
+      "mainEncounterIds": [
+        "encounter-crotas-end-d1-abyss",
+        "encounter-crotas-end-d1-bridge",
+        "encounter-crotas-end-d1-ir-yut",
+        "encounter-crotas-end-d1-crota"
+      ],
+      "traversalEncounterIds": [
+        "encounter-crotas-end-d1-shrieker-hallway"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-ir-yut",
+        "boss-crota"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-vault-of-glass-d2",
+      "sources": [
+        "wiki-vog"
+      ],
+      "mainEncounterIds": [
+        "encounter-vault-of-glass-d2-open-gate",
+        "encounter-vault-of-glass-d2-confluxes",
+        "encounter-vault-of-glass-d2-oracles",
+        "encounter-vault-of-glass-d2-templar",
+        "encounter-vault-of-glass-d2-gatekeepers",
+        "encounter-vault-of-glass-d2-atheon"
+      ],
+      "traversalEncounterIds": [
+        "encounter-vault-of-glass-d2-gorgons",
+        "encounter-vault-of-glass-d2-chasm"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-templar",
+        "boss-gorgons",
+        "boss-atheon"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-crotas-end-d2",
+      "sources": [
+        "wiki-crota"
+      ],
+      "mainEncounterIds": [
+        "encounter-crotas-end-d2-abyss",
+        "encounter-crotas-end-d2-bridge",
+        "encounter-crotas-end-d2-ir-yut",
+        "encounter-crotas-end-d2-crota"
+      ],
+      "traversalEncounterIds": [
+        "encounter-crotas-end-d2-shrieker-hallway"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-ir-yut",
+        "boss-crota"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-kings-fall-d1",
+      "sources": [
+        "wiki-kings-fall"
+      ],
+      "mainEncounterIds": [
+        "encounter-kings-fall-d1-hall-of-souls",
+        "encounter-kings-fall-d1-totems",
+        "encounter-kings-fall-d1-warpriest",
+        "encounter-kings-fall-d1-golgoroth",
+        "encounter-kings-fall-d1-daughters",
+        "encounter-kings-fall-d1-oryx"
+      ],
+      "traversalEncounterIds": [
+        "encounter-kings-fall-d1-crux-portico",
+        "encounter-kings-fall-d1-transept"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-warpriest",
+        "boss-golgoroth",
+        "boss-ir-anuk",
+        "boss-ir-halak",
+        "boss-oryx"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-kings-fall-d2",
+      "sources": [
+        "wiki-kings-fall"
+      ],
+      "mainEncounterIds": [
+        "encounter-kings-fall-d2-hall-of-souls",
+        "encounter-kings-fall-d2-totems",
+        "encounter-kings-fall-d2-warpriest",
+        "encounter-kings-fall-d2-golgoroth",
+        "encounter-kings-fall-d2-daughters",
+        "encounter-kings-fall-d2-oryx"
+      ],
+      "traversalEncounterIds": [
+        "encounter-kings-fall-d2-crux-portico",
+        "encounter-kings-fall-d2-transept"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-warpriest",
+        "boss-golgoroth",
+        "boss-ir-anuk",
+        "boss-ir-halak",
+        "boss-oryx"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-wrath-of-machine-d1",
+      "sources": [
+        "wiki-wrath"
+      ],
+      "mainEncounterIds": [
+        "encounter-wrath-of-machine-d1-vosik-intro",
+        "encounter-wrath-of-machine-d1-vosik",
+        "encounter-wrath-of-machine-d1-siege-engine",
+        "encounter-wrath-of-machine-d1-aksis-one",
+        "encounter-wrath-of-machine-d1-aksis-two"
+      ],
+      "traversalEncounterIds": [
+        "encounter-wrath-of-machine-d1-splicers-den",
+        "encounter-wrath-of-machine-d1-server-farm"
+      ],
+      "optionalEncounterIds": [
+        "encounter-wrath-of-machine-d1-rahndel"
+      ],
+      "bossIds": [
+        "boss-vosik",
+        "boss-siege-engine",
+        "boss-meksis",
+        "boss-rahndel",
+        "boss-aksis"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-leviathan-raid-d2",
+      "sources": [
+        "wiki-leviathan"
+      ],
+      "mainEncounterIds": [
+        "encounter-leviathan-raid-d2-castellum",
+        "encounter-leviathan-raid-d2-royal-pools",
+        "encounter-leviathan-raid-d2-pleasure-gardens",
+        "encounter-leviathan-raid-d2-gauntlet",
+        "encounter-leviathan-raid-d2-calus"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-royal-beasts",
+        "boss-calus"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Ordre hebdomadaire variable des trois épreuves ; les Bêtes Prestige sont des membres conditionnels, non présents en normal."
+      ]
+    },
+    {
+      "activityId": "activity-eater-of-worlds-d2",
+      "sources": [
+        "wiki-eater"
+      ],
+      "mainEncounterIds": [
+        "encounter-eater-of-worlds-d2-reactor",
+        "encounter-eater-of-worlds-d2-barrier",
+        "encounter-eater-of-worlds-d2-argos"
+      ],
+      "traversalEncounterIds": [
+        "encounter-eater-of-worlds-d2-delve"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-argos"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-spire-of-stars-d2",
+      "sources": [
+        "wiki-spire-stars"
+      ],
+      "mainEncounterIds": [
+        "encounter-spire-of-stars-d2-statue-garden",
+        "encounter-spire-of-stars-d2-fleet",
+        "encounter-spire-of-stars-d2-val-cauor"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-val-cauor"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-last-wish-d2",
+      "sources": [
+        "wiki-last-wish"
+      ],
+      "mainEncounterIds": [
+        "encounter-last-wish-d2-kalli",
+        "encounter-last-wish-d2-shuro-chi",
+        "encounter-last-wish-d2-morgeth",
+        "encounter-last-wish-d2-vault",
+        "encounter-last-wish-d2-riven",
+        "encounter-last-wish-d2-queenswalk"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-kalli",
+        "boss-shuro-chi",
+        "boss-morgeth",
+        "boss-riven"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Arènes principales documentées par des articles de lieu ; intérieur du cœur et itinéraire exact de l’escorte encore partiels.",
+        "Difficultés et défis non exhaustifs ; aucune carte officielle ni modèle fidèle créé."
+      ]
+    },
+    {
+      "activityId": "activity-scourge-of-past-d2",
+      "sources": [
+        "wiki-scourge"
+      ],
+      "mainEncounterIds": [
+        "encounter-scourge-of-past-d2-berserker",
+        "encounter-scourge-of-past-d2-vault-access",
+        "encounter-scourge-of-past-d2-insurrection-prime"
+      ],
+      "traversalEncounterIds": [
+        "encounter-scourge-of-past-d2-ablazed-glory"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-ablazed-glory",
+        "boss-insurrection-prime"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-crown-of-sorrow-d2",
+      "sources": [
+        "wiki-crown"
+      ],
+      "mainEncounterIds": [
+        "encounter-crown-of-sorrow-d2-ritual",
+        "encounter-crown-of-sorrow-d2-deception",
+        "encounter-crown-of-sorrow-d2-gahlran"
+      ],
+      "traversalEncounterIds": [
+        "encounter-crown-of-sorrow-d2-kingdom"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-gahlran"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-garden-of-salvation-d2",
+      "sources": [
+        "wiki-garden"
+      ],
+      "mainEncounterIds": [
+        "encounter-garden-of-salvation-d2-evade",
+        "encounter-garden-of-salvation-d2-summon",
+        "encounter-garden-of-salvation-d2-consecrated",
+        "encounter-garden-of-salvation-d2-sanctified"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-consecrated-mind",
+        "boss-sanctified-mind"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-deep-stone-crypt-d2",
+      "sources": [
+        "wiki-dsc"
+      ],
+      "mainEncounterIds": [
+        "encounter-deep-stone-crypt-d2-security",
+        "encounter-deep-stone-crypt-d2-atraks",
+        "encounter-deep-stone-crypt-d2-descent",
+        "encounter-deep-stone-crypt-d2-taniks"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-crypt-security",
+        "boss-atraks",
+        "boss-taniks"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-vow-of-disciple-d2",
+      "sources": [
+        "wiki-vow"
+      ],
+      "mainEncounterIds": [
+        "encounter-vow-of-disciple-d2-acquisition",
+        "encounter-vow-of-disciple-d2-caretaker",
+        "encounter-vow-of-disciple-d2-exhibition",
+        "encounter-vow-of-disciple-d2-rhulk"
+      ],
+      "traversalEncounterIds": [
+        "encounter-vow-of-disciple-d2-disciples-bog",
+        "encounter-vow-of-disciple-d2-platforming"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-caretaker",
+        "boss-dulna",
+        "boss-maryn",
+        "boss-xenodoti",
+        "boss-rhulk"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-root-of-nightmares-d2",
+      "sources": [
+        "wiki-root"
+      ],
+      "mainEncounterIds": [
+        "encounter-root-of-nightmares-d2-cataclysm",
+        "encounter-root-of-nightmares-d2-scission",
+        "encounter-root-of-nightmares-d2-macrocosm",
+        "encounter-root-of-nightmares-d2-nezarec"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-zoaurc",
+        "boss-nezarec"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-salvations-edge-d2",
+      "sources": [
+        "wiki-salvation"
+      ],
+      "mainEncounterIds": [
+        "encounter-salvations-edge-d2-substratum",
+        "encounter-salvations-edge-d2-herald",
+        "encounter-salvations-edge-d2-repository",
+        "encounter-salvations-edge-d2-verity",
+        "encounter-salvations-edge-d2-witness"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-herald-finality",
+        "boss-witness"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-desert-perpetual-d2",
+      "sources": [
+        "wiki-desert"
+      ],
+      "mainEncounterIds": [
+        "encounter-desert-perpetual-d2-epoptes",
+        "encounter-desert-perpetual-d2-agraios",
+        "encounter-desert-perpetual-d2-iatros",
+        "encounter-desert-perpetual-d2-koregos"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-epoptes",
+        "boss-agraios",
+        "boss-iatros",
+        "boss-koregos"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "named",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Les trois premières cibles sont sélectionnables dans un ordre variable ; order sert à l’index documentaire."
+      ]
+    },
+    {
+      "activityId": "activity-desert-perpetual-epic-d2",
+      "sources": [
+        "wiki-desert"
+      ],
+      "mainEncounterIds": [
+        "encounter-desert-perpetual-epic-d2-epoptes",
+        "encounter-desert-perpetual-epic-d2-agraios",
+        "encounter-desert-perpetual-epic-d2-iatros",
+        "encounter-desert-perpetual-epic-d2-koregos"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-epoptes",
+        "boss-agraios",
+        "boss-iatros",
+        "boss-koregos"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "named",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Les trois premières cibles sont sélectionnables dans un ordre variable ; order sert à l’index documentaire.",
+        "La source signale explicitement que les informations Epic sont incomplètes ; pas de complétude des mécaniques ni des variantes de phase revendiquée."
+      ]
+    },
+    {
+      "activityId": "activity-shattered-throne-d2",
+      "sources": [
+        "wiki-shattered"
+      ],
+      "mainEncounterIds": [
+        "encounter-shattered-throne-d2-erebus",
+        "encounter-shattered-throne-d2-vorgeth",
+        "encounter-shattered-throne-d2-dul-incaru"
+      ],
+      "traversalEncounterIds": [
+        "encounter-shattered-throne-d2-descent"
+      ],
+      "optionalEncounterIds": [
+        "encounter-shattered-throne-d2-wish-ender-querim",
+        "encounter-shattered-throne-d2-wish-ender-eriviks",
+        "encounter-shattered-throne-d2-wish-ender-xavoth"
+      ],
+      "bossIds": [
+        "boss-labyrinth-architects",
+        "boss-querim",
+        "boss-theratos",
+        "boss-asterion",
+        "boss-eriviks",
+        "boss-vorgeth",
+        "boss-xavoth",
+        "boss-dul-incaru",
+        "boss-alak-tor",
+        "boss-ba-kuur",
+        "boss-gaurog"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-pit-of-heresy-d2",
+      "sources": [
+        "wiki-pit"
+      ],
+      "mainEncounterIds": [
+        "encounter-pit-of-heresy-d2-necropolis",
+        "encounter-pit-of-heresy-d2-suffering",
+        "encounter-pit-of-heresy-d2-zulmak"
+      ],
+      "traversalEncounterIds": [
+        "encounter-pit-of-heresy-d2-tunnels",
+        "encounter-pit-of-heresy-d2-harrow"
+      ],
+      "optionalEncounterIds": [
+        "encounter-pit-of-heresy-d2-xenophage"
+      ],
+      "bossIds": [
+        "boss-volmar",
+        "boss-zulmak"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-prophecy-d2",
+      "sources": [
+        "wiki-prophecy"
+      ],
+      "mainEncounterIds": [
+        "encounter-prophecy-d2-phalanx",
+        "encounter-prophecy-d2-hexahedron",
+        "encounter-prophecy-d2-kell-echo"
+      ],
+      "traversalEncounterIds": [
+        "encounter-prophecy-d2-entrance",
+        "encounter-prophecy-d2-wasteland",
+        "encounter-prophecy-d2-singularity"
+      ],
+      "optionalEncounterIds": [
+        "encounter-prophecy-d2-rite-invaders"
+      ],
+      "bossIds": [
+        "boss-phalanx-echo",
+        "boss-kell-echo",
+        "boss-paracausal-invaders"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "partial",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Les Invaders de Rite sont recensés en groupe conditionnel ; ordre et distribution de leurs apparitions par édition restent partiels."
+      ]
+    },
+    {
+      "activityId": "activity-grasp-of-avarice-d2",
+      "sources": [
+        "wiki-grasp"
+      ],
+      "mainEncounterIds": [
+        "encounter-grasp-of-avarice-d2-phryzhia",
+        "encounter-grasp-of-avarice-d2-shield",
+        "encounter-grasp-of-avarice-d2-avarokk"
+      ],
+      "traversalEncounterIds": [
+        "encounter-grasp-of-avarice-d2-loot-cave",
+        "encounter-grasp-of-avarice-d2-gangplank",
+        "encounter-grasp-of-avarice-d2-sparrow"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-phryzhia",
+        "boss-fallen-shield",
+        "boss-avarokk",
+        "boss-rm80",
+        "boss-grisprax"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-duality-d2",
+      "sources": [
+        "wiki-duality"
+      ],
+      "mainEncounterIds": [
+        "encounter-duality-d2-gahlran",
+        "encounter-duality-d2-vault",
+        "encounter-duality-d2-caiatl"
+      ],
+      "traversalEncounterIds": [
+        "encounter-duality-d2-mindscape",
+        "encounter-duality-d2-dive-deeper",
+        "encounter-duality-d2-navigate-vault"
+      ],
+      "optionalEncounterIds": [
+        "encounter-duality-d2-heartshadow-houdal",
+        "encounter-duality-d2-heartshadow-kanok",
+        "encounter-duality-d2-heartshadow-regor"
+      ],
+      "bossIds": [
+        "boss-gahlran",
+        "boss-kahok",
+        "boss-emonut",
+        "boss-uroa",
+        "boss-caiatl",
+        "boss-houdal",
+        "boss-kanok",
+        "boss-regor"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Découpage géographique exact du mindscape de Calus non tous corroboré ; les noms de rencontres ne sont pas promus en noms officiels d’arènes."
+      ]
+    },
+    {
+      "activityId": "activity-spire-of-watcher-d2",
+      "sources": [
+        "wiki-spire-watcher"
+      ],
+      "mainEncounterIds": [
+        "encounter-spire-of-watcher-d2-reestablish-power",
+        "encounter-spire-of-watcher-d2-ascend",
+        "encounter-spire-of-watcher-d2-akelous",
+        "encounter-spire-of-watcher-d2-persys"
+      ],
+      "traversalEncounterIds": [
+        "encounter-spire-of-watcher-d2-descend"
+      ],
+      "optionalEncounterIds": [
+        "encounter-spire-of-watcher-d2-rite-amphion",
+        "encounter-spire-of-watcher-d2-rite-ohmon"
+      ],
+      "bossIds": [
+        "boss-akelous",
+        "boss-persys",
+        "boss-amphion",
+        "boss-ohmon"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-ghosts-of-deep-d2",
+      "sources": [
+        "wiki-ghosts"
+      ],
+      "mainEncounterIds": [
+        "encounter-ghosts-of-deep-d2-ritual",
+        "encounter-ghosts-of-deep-d2-ecthar",
+        "encounter-ghosts-of-deep-d2-simmumah"
+      ],
+      "traversalEncounterIds": [
+        "encounter-ghosts-of-deep-d2-deep-methane"
+      ],
+      "optionalEncounterIds": [
+        "encounter-ghosts-of-deep-d2-navigator",
+        "encounter-ghosts-of-deep-d2-rite-kalul"
+      ],
+      "bossIds": [
+        "boss-ecthar",
+        "boss-simmumah",
+        "boss-vorlog",
+        "boss-thul-ar",
+        "boss-kalul"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-warlords-ruin-d2",
+      "sources": [
+        "wiki-warlord"
+      ],
+      "mainEncounterIds": [
+        "encounter-warlords-ruin-d2-rathil",
+        "encounter-warlords-ruin-d2-locus",
+        "encounter-warlords-ruin-d2-hefnd"
+      ],
+      "traversalEncounterIds": [
+        "encounter-warlords-ruin-d2-prison",
+        "encounter-warlords-ruin-d2-vengeful-peak"
+      ],
+      "optionalEncounterIds": [
+        "encounter-warlords-ruin-d2-abominations",
+        "encounter-warlords-ruin-d2-buried-bloodline"
+      ],
+      "bossIds": [
+        "boss-rathil",
+        "boss-locus-grief",
+        "boss-malaris",
+        "boss-vrysiks",
+        "boss-hefnd-vengeance",
+        "boss-nymeks",
+        "boss-sirloks",
+        "boss-wish-twisted",
+        "boss-thressia"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "partial",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Le gardien de coffre secret est conditionnel ; toutes les positions des coffres et des variantes ne sont pas inventoriées."
+      ]
+    },
+    {
+      "activityId": "activity-vespers-host-d2",
+      "sources": [
+        "wiki-vesper"
+      ],
+      "mainEncounterIds": [
+        "encounter-vespers-host-d2-activation",
+        "encounter-vespers-host-d2-raneiks",
+        "encounter-vespers-host-d2-puppeteer"
+      ],
+      "traversalEncounterIds": [
+        "encounter-vespers-host-d2-embarkation",
+        "encounter-vespers-host-d2-infiltration",
+        "encounter-vespers-host-d2-acceleration"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-raneiks",
+        "boss-corrupted-puppeteer"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-sundered-doctrine-d2",
+      "sources": [
+        "wiki-sundered"
+      ],
+      "mainEncounterIds": [
+        "encounter-sundered-doctrine-d2-riddle",
+        "encounter-sundered-doctrine-d2-locks",
+        "encounter-sundered-doctrine-d2-kerrev"
+      ],
+      "traversalEncounterIds": [
+        "encounter-sundered-doctrine-d2-path",
+        "encounter-sundered-doctrine-d2-maze",
+        "encounter-sundered-doctrine-d2-vault"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-zoetic-lockset",
+        "boss-kerrev"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée."
+      ]
+    },
+    {
+      "activityId": "activity-equilibrium-d2",
+      "sources": [
+        "wiki-equilibrium"
+      ],
+      "mainEncounterIds": [
+        "encounter-equilibrium-d2-barant-forces",
+        "encounter-equilibrium-d2-harrow",
+        "encounter-equilibrium-d2-sere"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [
+        "encounter-equilibrium-d2-shade"
+      ],
+      "bossIds": [
+        "boss-harrow",
+        "boss-sere"
+      ],
+      "encounterCoverage": "reviewed-main-encounters",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Une phrase du walkthrough place Harrow après embarquement dans Malphas, contrairement aux objectifs/transcript qui situent Harrow sur Imperium Carrier puis Sere dans Malphas. Relation ancrée aux objectifs/transcript ; détails de salle et secret Shade encore partiels."
+      ]
+    },
+    {
+      "activityId": "activity-shadow-thief-d1",
+      "sources": [
+        "wiki-shadow-thief"
+      ],
+      "mainEncounterIds": [
+        "encounter-shadow-thief-d1-walker",
+        "encounter-shadow-thief-d1-taniks"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-wolf-walker",
+        "boss-taniks"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Première tranche d’assauts : transitions et arènes intermédiaires non détaillées ; les éditions originales/remixées ne sont pas fusionnées."
+      ]
+    },
+    {
+      "activityId": "activity-shadow-thief-revisited-d1",
+      "sources": [
+        "wiki-shadow-thief"
+      ],
+      "mainEncounterIds": [
+        "encounter-shadow-thief-revisited-d1-walker",
+        "encounter-shadow-thief-revisited-d1-taniks"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-perfected-walker",
+        "boss-taniks"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Première tranche d’assauts : transitions et arènes intermédiaires non détaillées ; les éditions originales/remixées ne sont pas fusionnées."
+      ]
+    },
+    {
+      "activityId": "activity-nexus-d1",
+      "sources": [
+        "wiki-nexus"
+      ],
+      "mainEncounterIds": [
+        "encounter-nexus-d1-sekrion"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-sekrion"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Édition Subverted Mind du Dawning non importée dans cette tranche ; pas de mélange avec Sekrion original."
+      ]
+    },
+    {
+      "activityId": "activity-devils-lair-d1",
+      "sources": [
+        "wiki-devils-lair"
+      ],
+      "mainEncounterIds": [
+        "encounter-devils-lair-d1-baron",
+        "encounter-devils-lair-d1-walker",
+        "encounter-devils-lair-d1-sepiks"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-naksis",
+        "boss-devil-walker",
+        "boss-sepiks"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Version D1 seulement ; reprises D2 et cheminements secondaires attendent leur propre édition sourcée."
+      ]
+    },
+    {
+      "activityId": "activity-devils-lair-revisited-d1",
+      "sources": [
+        "wiki-devils-lair"
+      ],
+      "mainEncounterIds": [
+        "encounter-devils-lair-revisited-d1-baron",
+        "encounter-devils-lair-revisited-d1-walker",
+        "encounter-devils-lair-revisited-d1-sepiks"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-dresiks",
+        "boss-rakta",
+        "boss-perfected-walker",
+        "boss-sepiks"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Version D1 seulement ; reprises D2 et cheminements secondaires attendent leur propre édition sourcée."
+      ]
+    },
+    {
+      "activityId": "activity-corrupted-d2",
+      "sources": [
+        "wiki-corrupted"
+      ],
+      "mainEncounterIds": [
+        "encounter-corrupted-d2-sedia"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-sedia"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "partial",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Boss principal sourcé ; duo d’Ogres, claimants et adversaires de Malfeasance/Nightfall non importés ici."
+      ]
+    },
+    {
+      "activityId": "activity-lake-of-shadows-d2",
+      "sources": [
+        "wiki-lake"
+      ],
+      "mainEncounterIds": [
+        "encounter-lake-of-shadows-d2-baimogg",
+        "encounter-lake-of-shadows-d2-gorath"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-baimogg",
+        "boss-gorath"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "partial",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Grask et Gor’ath sont deux identités distinctes des deux éditions ; cheminement et autres miniboss encore partiels."
+      ]
+    },
+    {
+      "activityId": "activity-lake-of-shadows-original-d2",
+      "sources": [
+        "wiki-lake"
+      ],
+      "mainEncounterIds": [
+        "encounter-lake-of-shadows-original-d2-grask"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-grask"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "partial",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Grask et Gor’ath sont deux identités distinctes des deux éditions ; cheminement et autres miniboss encore partiels."
+      ]
+    },
+    {
+      "activityId": "activity-whisper-d2",
+      "sources": [
+        "wiki-whisper"
+      ],
+      "mainEncounterIds": [
+        "encounter-whisper-d2-aspects",
+        "encounter-whisper-d2-tulgorh"
+      ],
+      "traversalEncounterIds": [
+        "encounter-whisper-d2-traversal"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-taaurc",
+        "boss-drevis",
+        "boss-urzok",
+        "boss-tulgorh"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Tulgorh est absent de la version 2018 ; parcours, secrets et distinctions Heroic/Legend ne sont pas exhaustifs."
+      ]
+    },
+    {
+      "activityId": "activity-whisper-original-d2",
+      "sources": [
+        "wiki-whisper"
+      ],
+      "mainEncounterIds": [
+        "encounter-whisper-original-d2-aspects"
+      ],
+      "traversalEncounterIds": [
+        "encounter-whisper-original-d2-traversal"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-taaurc",
+        "boss-drevis",
+        "boss-urzok"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Tulgorh est absent de la version 2018 ; parcours, secrets et distinctions Heroic/Legend ne sont pas exhaustifs."
+      ]
+    },
+    {
+      "activityId": "activity-zero-hour-d2",
+      "sources": [
+        "wiki-zero-hour"
+      ],
+      "mainEncounterIds": [
+        "encounter-zero-hour-d2-siriks"
+      ],
+      "traversalEncounterIds": [
+        "encounter-zero-hour-d2-tower"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-siriks",
+        "boss-mimiks-0",
+        "boss-mimiks-1",
+        "boss-mimiks-2"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Routes Heroic/Legend, TR3-VR et secrets non exhaustifs ; la reprise est qualifiée de simulation par les sources, pas un nouvel épisode canonique."
+      ]
+    },
+    {
+      "activityId": "activity-zero-hour-original-d2",
+      "sources": [
+        "wiki-zero-hour"
+      ],
+      "mainEncounterIds": [
+        "encounter-zero-hour-original-d2-siriks"
+      ],
+      "traversalEncounterIds": [
+        "encounter-zero-hour-original-d2-tower"
+      ],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-siriks",
+        "boss-mimiks-0",
+        "boss-mimiks-1"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Routes Heroic/Legend, TR3-VR et secrets non exhaustifs ; la reprise est qualifiée de simulation par les sources, pas un nouvel épisode canonique."
+      ]
+    },
+    {
+      "activityId": "activity-presage-d2",
+      "sources": [
+        "wiki-presage"
+      ],
+      "mainEncounterIds": [
+        "encounter-presage-d2-locus",
+        "encounter-presage-d2-darkmind"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-locus-communion",
+        "boss-darkmind"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Boss listés reliés ; toutes les positions d’Abominations et le parcours de la Glykon ne sont pas détaillés."
+      ]
+    },
+    {
+      "activityId": "activity-avalon-d2",
+      "sources": [
+        "wiki-avalon"
+      ],
+      "mainEncounterIds": [
+        "encounter-avalon-d2-data",
+        "encounter-avalon-d2-brakion",
+        "encounter-avalon-d2-digital-variants"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-data-nullifier",
+        "boss-brakion",
+        "boss-digital-tracker",
+        "boss-digital-neutralizer"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "partial",
+      "arenaCoverage": "mixed",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Boss nommés recensés ; rattachement des deux Digital Variants à leurs sous-étapes et parcours exact encore partiel."
+      ]
+    },
+    {
+      "activityId": "activity-seraph-shield-d2",
+      "sources": [
+        "wiki-seraph"
+      ],
+      "mainEncounterIds": [
+        "encounter-seraph-shield-d2-haroktha",
+        "encounter-seraph-shield-d2-praksis"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-haroktha",
+        "boss-praksis"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Objectifs principaux de boss seulement ; capture, phases successives de Haroktha et secrets restent à détailler."
+      ]
+    },
+    {
+      "activityId": "activity-vox-obscura-d2",
+      "sources": [
+        "wiki-vox"
+      ],
+      "mainEncounterIds": [
+        "encounter-vox-obscura-d2-baaruk",
+        "encounter-vox-obscura-d2-qabix"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-baaruk",
+        "boss-qabix"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Segment véhicule, chronomètre et combats intermédiaires non exhaustifs ; aucun remodelage du Mars historique."
+      ]
+    },
+    {
+      "activityId": "activity-starcrossed-d2",
+      "sources": [
+        "wiki-starcrossed"
+      ],
+      "mainEncounterIds": [
+        "encounter-starcrossed-d2-ixion",
+        "encounter-starcrossed-d2-akardon"
+      ],
+      "traversalEncounterIds": [],
+      "optionalEncounterIds": [],
+      "bossIds": [
+        "boss-ixion",
+        "boss-akardon"
+      ],
+      "encounterCoverage": "partial",
+      "bossCoverage": "reviewed-listed-bosses",
+      "arenaCoverage": "site-only",
+      "variantCoverage": "partial",
+      "gaps": [
+        "Variantes de difficulté, défis et changements de mécanique non exhaustifs ; aucune géométrie dédiée créée.",
+        "Boss liés ; sous-objectifs, incubateurs et secrets du Jardin noir restent partiels."
       ]
     }
   ]

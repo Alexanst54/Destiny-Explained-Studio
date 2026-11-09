@@ -1,5 +1,6 @@
 import {z} from 'zod';
-import {families} from '../schema.ts';
+import {families, modules} from '../schema.ts';
+import {rigArchetypes} from '../../animation/schema.ts';
 
 const text = z.string().trim().min(1);
 const id = text.regex(/^[a-z][a-z0-9]*(?:-[a-z0-9]+)*$/, 'Stable lowercase language-independent ID required');
@@ -22,10 +23,10 @@ const base = {
 };
 export const locationSchema = z.object({...base, type: z.enum(['universe-realm', 'stellar-body', 'destination-region', 'zone', 'historical-site', 'activity-site', 'ship-station', 'lore-world', 'arena']), parentId: id.nullable(), legacyLocationId: id.nullable()}).strict();
 const locationVariant = z.object({...base, type: z.literal('historical-variant'), locationId: id, legacyVariantId: id.nullable()}).strict();
-export const activitySchema = z.object({...base, type: z.enum(['raid', 'dungeon', 'strike', 'exotic-mission', 'campaign-mission', 'seasonal-activity']), encounterCoverage: z.enum(['not-started', 'partial', 'reviewed-main-encounters'])}).strict();
-export const encounterSchema = z.object({...base, type: z.enum(['combat', 'mechanic', 'traversal']), activityId: id, order: z.number().int().positive(), labelStatus: z.enum(['source-name', 'editorial-objective'])}).strict();
-const boss = z.object({...base, type: z.literal('boss'), characterId: id.nullable()}).strict();
-const bossVariant = z.object({...base, type: z.literal('boss-variant'), bossId: id}).strict();
+export const activitySchema = z.object({...base, type: z.enum(['raid', 'dungeon', 'strike', 'exotic-mission', 'campaign-mission', 'seasonal-activity']), encounterCoverage: z.enum(['not-started', 'partial', 'reviewed-main-encounters']), encounterOrdering: z.enum(['fixed', 'weekly-rotation', 'selectable', 'partial']).default('fixed')}).strict();
+export const encounterSchema = z.object({...base, type: z.enum(['combat', 'mechanic', 'traversal']), activityId: id, order: z.number().int().positive(), labelStatus: z.enum(['source-name', 'editorial-objective']), category: z.enum(['main', 'traversal', 'optional']).default('main'), conditions: z.array(text).default([])}).strict();
+const boss = z.object({...base, type: z.literal('boss'), characterId: id.nullable(), composition: z.enum(['individual', 'collective', 'mechanism']).default('individual'), compositionNote: text.nullable().default(null), members: z.array(z.object({id, enName: text, condition: text.nullable(), sources}).strict()).default([])}).strict();
+const bossVariant = z.object({...base, type: z.literal('boss-variant'), bossId: id, nature: z.enum(['physical-form', 'combat-configuration', 'nightmare', 'projection', 'automaton', 'taken-state', 'gameplay-edition']).default('physical-form')}).strict();
 const edge = {sources, note: text};
 const source = z.object({id, kind: z.enum(['primary', 'secondary', 'inherited']), title: text, url: z.url().refine(s => s.startsWith('https://'), 'HTTPS required'), checkedAt: date, verification: z.enum(['retrieved', 'inherited-not-rechecked']), locator: text,
   supports: z.array(z.enum(['identity', 'availability', 'release', 'appearance', 'relationship'])).min(1), legacySourceId: text.nullable(), note: text}).strict();
@@ -38,8 +39,11 @@ export const universalCatalogSchema = z.object({
   locations: z.array(locationSchema).min(1), locationVariants: z.array(locationVariant), activities: z.array(activitySchema), encounters: z.array(encounterSchema), bosses: z.array(boss), bossVariants: z.array(bossVariant),
   activityLocations: z.array(z.object({...edge, activityId: id, locationId: id, role: z.enum(['setting', 'entry', 'arena', 'spans'])}).strict()),
   encounterLocations: z.array(z.object({...edge, encounterId: id, locationId: id}).strict()),
-  encounterBosses: z.array(z.object({...edge, encounterId: id, bossId: id, bossVariantId: id.nullable(), role: z.enum(['primary', 'secondary', 'pursuer'])}).strict()),
+  encounterBosses: z.array(z.object({...edge, encounterId: id, bossId: id, bossVariantId: id.nullable(), role: z.enum(['primary', 'secondary', 'pursuer']), conditions: z.array(text).default([]), outcome: z.enum(['defeat', 'repel', 'escape', 'cleanse', 'disable', 'avoid', 'unknown']).default('unknown')}).strict()),
   activityRelations: z.array(z.object({...edge, fromId: id, toId: id, relation: z.enum(['reprisal-of', 'variant-of'])}).strict()),
+  legacyCorrections: z.array(z.object({locationId: id, field: z.literal('parentId'), originalValue: id.nullable(), correctedValue: id.nullable(), sources, note: text}).strict()).default([]),
+  reuseProfiles: z.array(z.object({id, label: text, kind: z.enum(['boss', 'environment']), familyIds: z.array(z.enum(families)).min(1), moduleIds: z.array(z.enum(modules)), characterTemplateIds: ids, rigArchetypes: z.array(z.enum(rigArchetypes)), reusableFiles: z.array(z.object({path: text.regex(/^remotion\/(?!.*\.\.).+\.(?:tsx?|py)$/), symbol: text.regex(/^[A-Za-z_][A-Za-z0-9_]*$/)}).strict()).min(1), reusableParts: z.array(text).min(1), requiredWork: z.array(text), limitations: z.array(text).min(1)}).strict()).default([]),
+  assetReusePlans: z.array(z.object({entityId: id, target: z.enum(['location', 'location-variant', 'boss', 'boss-variant']), profileIds: ids.min(1), status: z.enum(['proxy-only', 'adaptation-required', 'no-suitable-model']), silhouette: text, existingRecipe: z.object({locationId: id, variantId: id.nullable(), baseEnvironment: z.enum(['the-tower', 'europa', 'black-garden', 'pyramid-interior']).nullable(), moduleIds: z.array(z.enum(modules))}).strict().nullable().default(null), sources, note: text}).strict()).default([]),
   knownGaps: z.array(text).min(1),
 }).strict().superRefine((c, ctx) => {
   const fail = (path: (string | number)[], message: string) => ctx.addIssue({code: 'custom', path, message});
@@ -104,10 +108,52 @@ export const universalCatalogSchema = z.object({
     if (l.type === 'lore-world' && l.appearanceEvidence.some(e => e.kind === 'gameplay')) fail(['locations', i], 'Lore-only world cannot become a playable destination');
   });
   c.locationVariants.forEach((v, i) => {const l = locationMap.get(v.locationId); if (!l || !covers(l.game, v.game)) fail(['locationVariants', i], 'Unknown or incompatible variant location');});
+  uniqueReuseChecks();
+  function uniqueReuseChecks() {
+    const profiles = new Map(c.reuseProfiles.map(p => [p.id, p]));
+    if (profiles.size !== c.reuseProfiles.length) fail(['reuseProfiles'], 'Duplicate reuse profile');
+    const targets = new Map<string, {kind: string; family: string | null; placeholder: boolean}>([
+      ...c.locations.map(x => [x.id, {kind: 'location', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
+      ...c.locationVariants.map(x => [x.id, {kind: 'location-variant', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
+      ...c.bosses.map(x => [x.id, {kind: 'boss', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
+      ...c.bossVariants.map(x => [x.id, {kind: 'boss-variant', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
+    ]);
+    const planned = new Set<string>();
+    c.assetReusePlans.forEach((p, i) => {
+      const target = targets.get(p.entityId);
+      if (!target || target.kind !== p.target) fail(['assetReusePlans', i], 'Unknown or wrong-kind reuse target');
+      if (planned.has(p.entityId)) fail(['assetReusePlans', i], 'Duplicate reuse plan'); planned.add(p.entityId);
+      cite(p.sources, ['assetReusePlans', i]);
+      const selected = p.profileIds.map(id => profiles.get(id));
+      if (selected.some(x => !x)) fail(['assetReusePlans', i], 'Unknown reuse profile');
+      const bossTarget = p.target.startsWith('boss');
+      if (selected.some(x => x && (x.kind === 'boss') !== bossTarget)) fail(['assetReusePlans', i], 'Reuse profile target mismatch');
+      if (target?.family && !selected.some(x => x?.familyIds.includes(target.family as typeof families[number]))) fail(['assetReusePlans', i], 'Reuse family mismatch');
+      if (bossTarget && p.status === 'proxy-only') fail(['assetReusePlans', i], 'Environment proxy is not a boss model');
+      if (bossTarget && selected.some(x => x && x.requiredWork.length === 0)) fail(['assetReusePlans', i], 'Boss adaptation must declare remaining work');
+    });
+    for (const [id] of targets) if (!planned.has(id)) fail(['assetReusePlans'], 'Missing reuse plan for ' + id);
+    c.bosses.forEach((b, i) => {
+      if (b.composition === 'collective' && !b.members.length && !b.compositionNote) fail(['bosses', i], 'Collective boss requires sourced members');
+      if (b.composition !== 'collective' && b.members.length) fail(['bosses', i], 'Only a collective may declare members');
+      if (new Set(b.members.map(m => m.id)).size !== b.members.length) fail(['bosses', i], 'Duplicate collective member');
+      b.members.forEach(m => cite(m.sources, ['bosses', i, 'members'], 'identity'));
+    });
+    const corrected = new Set<string>();
+    c.legacyCorrections.forEach((r, i) => {
+      if (corrected.has(r.locationId)) fail(['legacyCorrections', i], 'Duplicate legacy correction'); corrected.add(r.locationId);
+      const location = locationMap.get(r.locationId);
+      if (!location?.legacyLocationId || location.parentId !== r.correctedValue || r.originalValue === r.correctedValue) fail(['legacyCorrections', i], 'Correction does not match location');
+      cite(r.sources, ['legacyCorrections', i], 'relationship');
+      if (!r.sources.some(id => sourceMap.get(id)?.verification === 'retrieved')) fail(['legacyCorrections', i], 'Correction needs inspected evidence');
+    });
+  }
   const orders = new Set<string>();
   c.encounters.forEach((e, i) => {
     const a = activityMap.get(e.activityId);
     if (!a || !covers(a.game, e.game)) fail(['encounters', i], 'Unknown or incompatible activity');
+    if (e.category === 'optional' && !e.conditions.length) fail(['encounters', i], 'Optional encounter needs an explicit condition');
+    if ((e.category === 'traversal') !== (e.type === 'traversal')) fail(['encounters', i], 'Traversal category/type mismatch');
     const order = e.activityId + ':' + e.order;
     if (orders.has(order)) fail(['encounters', i, 'order'], 'Duplicate encounter order in activity'); orders.add(order);
   });
