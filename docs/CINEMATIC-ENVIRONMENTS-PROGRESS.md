@@ -27,3 +27,28 @@ PR draft opened early: https://github.com/Alexanst54/Destiny-Explained-Studio/pu
 - Final cinematic and legacy CPU comparison PNGs running at 25%, with 180s deadlines. No GPU execution or full video.
 
 Remaining: inspect final PNGs, record measured results, guides and final targeted checks, publish checkpoint/PR update. No Android/remote Colab run claimed.
+
+## Checkpoint 3 — final results and handoff
+
+Final CPU renders both succeeded and were inspected: cinematic 912 meshes, 270×480, 96 samples, **61.889s**, Blender maximum RSS **293408 KiB**, **235716 bytes**; legacy unchanged 176 meshes, same resolution, 16 samples, **4.615s**, **245208 KiB**, **196256 bytes**. Both small PNGs are in docs/images/blender-082; no video/full-resolution binary committed. Raw evidence: remotion/blender/environment-validation.json.
+
+Final checks: 5/5 Node bridge tests; 9/9 Python tests; TypeScript and editor static asset check successful. Blender legacy import and final quality/geometry checks successful. One restricted-sandbox Node worker invocation failed before running tests, then the same command with normal subprocess access passed. No production render failure. No Chromium, Android physical, new GPU, remote Colab or full video run. Full reports/commands/limits: remotion/blender/ENVIRONMENTS-REPORT.md and ENVIRONMENTS.md.
+
+### Resume commands
+
+```sh
+git fetch origin
+git switch feat/cinematic-voxel-environments-0.8.2
+git pull --ff-only
+git status --short
+cat docs/CINEMATIC-ENVIRONMENTS-PROGRESS.md
+cd remotion
+# Dependencies already installed locally; fresh checkout: npm ci
+npm run test:blender
+npm run test:blender:python
+npm run test:blender:environment  # Blender required, no render
+```
+
+Next independent validation: open Blender-Colab-Pro.ipynb in Colab Pro, REF feature branch before merge, choose riis-082 / balanced / 25% / auto / 600s, render exactly one frame, download ZIP. Inspect effective backend and warnings. Then benchmark identical cinematic snapshots CPU vs real GPU with fresh folders, enough time and matching settings; follow ENVIRONMENTS.md. No new GPU times are available yet. Optional future improvements: showcase camera designed specifically for the city, richer alien silhouette details, cheaper haze, and further geometry instancing. These are not blockers to the demonstrated CPU snapshot pipeline.
+
+All implementation checkpoints pushed; PR #15 to main, no automatic merge. No remaining local implementation step is required for this handoff. Remote Colab/Android/GPU verification remains explicit.
