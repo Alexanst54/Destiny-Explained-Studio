@@ -45,3 +45,11 @@ node --experimental-strip-types scripts/episode.mjs render out/hybrid_riis_07-re
 Fresh/Colab runtime: open Blender-Video-Colab-Pro.ipynb, REF feature branch before merge; mount the same Drive path, restore/generate narration, start Draft/10%/90 frames. Completed frames are reused if keys match; do not delete old cache folders. Use MAX_NEW_FRAMES=2 to inspect first images, then 90 to finish. Desired Full HD quality must first complete its matching lower-resolution preview. Download ZIP before ending the runtime if Drive was not selected. No renderer file edits during an in-progress job.
 
 No remaining local implementation step for this handoff. Next external validation is actual Colab GPU operation and persistent Drive recovery. PR #16 must remain unmerged pending human review.
+
+## v0.8.4 — persistent GPU optimization handoff
+
+Branch `feat/gpu-render-optimization-0.8.4`, based on main `1effd88`. Persistent Blender is the default; single-frame mode remains a fallback. CUDA-first device configuration, optional NVIDIA telemetry, atomic frame completion and stronger PNG/cache validation are implemented. The Colab notebook retains its 90-frame limit and Drive/Kokoro workflow, with a renderer selector and opt-in three-quality benchmark.
+
+Measured CPU Draft/10%: actual v0.8.3 cold run 135.378s vs persistent 27.073s (5.0006×). All 90 decoded PNGs identical. Genuine Kokoro/Remotion H.264/AAC MP4 passed: 90 frames, 3.000s video, correlation .9994375, lag 0ms. Real SIGINT interruption after two frames resumed with 2 hits/88 new; full cache and corrupt-frame repair also passed. No full 35-second video rendered.
+
+Implementation, evidence and external acceptance limits: `remotion/blender/GPU-REPORT.md`. Raw CPU benchmark, video and recovery JSONs live alongside it. The short MP4 is in `docs/assets/blender-video-084-cpu-draft.mp4`. No actual GPU, Colab or physical Android test is claimed. Run the optional notebook benchmark on a T4 and validate its 3-second MP4 before longer rendering. Do not merge automatically.
