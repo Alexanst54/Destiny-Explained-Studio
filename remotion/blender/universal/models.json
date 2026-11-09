@@ -15,8 +15,8 @@
       1,
       2
     ],
-    "gallery": "docs/previews/cinematic-vex-0.9.1/README.md",
-    "galleryV1Status": "partial-existing-evidence",
+    "gallery": "docs/universal-library/approved/README.md",
+    "galleryV1Status": "technical-grid-rendered",
     "protectedFiles": [
       {
         "path": "remotion/blender/cinematic_vex/atheon.py",
@@ -56,8 +56,8 @@
       1,
       2
     ],
-    "gallery": "docs/previews/cinematic-vex-0.9.1/README.md",
-    "galleryV1Status": "partial-existing-evidence",
+    "gallery": "docs/universal-library/approved/README.md",
+    "galleryV1Status": "technical-grid-rendered",
     "protectedFiles": [
       {
         "path": "remotion/blender/cinematic_vex/atheon.py",
@@ -140,5 +140,41 @@
     "gallery": "docs/previews/venus-vault/README.md",
     "galleryV1Status": "partial-existing-evidence",
     "protectedFiles": []
+  },
+  "boss-crota": {
+    "provider": "universal",
+    "status": "partial-dedicated-prototype",
+    "environmentId": "oversoul-throne",
+    "animations": [
+      "idle",
+      "move",
+      "attack",
+      "reveal"
+    ],
+    "lods": [
+      0,
+      1,
+      2
+    ],
+    "gallery": "docs/universal-library/crota/README.md",
+    "galleryV1Status": "technical-grid-rendered-artistic-partial",
+    "protectedFiles": [],
+    "module": "universal.crota"
+  },
+  "oversoul-throne": {
+    "provider": "universal",
+    "status": "partial-dedicated-prototype",
+    "animations": [
+      "idle"
+    ],
+    "lods": [
+      0,
+      1,
+      2
+    ],
+    "gallery": "docs/universal-library/crota/README.md",
+    "galleryV1Status": "technical-grid-rendered-artistic-partial",
+    "protectedFiles": [],
+    "module": "universal.crota"
   }
 }

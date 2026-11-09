@@ -1420,8 +1420,8 @@
     },
     {
       "path": "editor/universal-library.browser.test.cjs",
-      "bytes": 1794,
-      "sha256": "b202176379ad754ce13e07eb2406fc5e0c8ff2e5c169a622304f33322c349526"
+      "bytes": 1966,
+      "sha256": "060c29eab4e0e6eac04be6d9bac1fdb2803261913bc9a3d97c44e973b07ec01b"
     },
     {
       "path": "remotion/animation/COMPARISON.md",
@@ -1572,6 +1572,11 @@
       "path": "remotion/blender/REPORT.md",
       "bytes": 6247,
       "sha256": "60d7eb09ac352c27d2d1a6932fe9a540c2b1522ffb355c42a7f81d2bab3f1f1f"
+    },
+    {
+      "path": "remotion/blender/Universal-Library-Colab-Pro.ipynb",
+      "bytes": 7167,
+      "sha256": "853dbb6548b0d7c519f8047c368c33a52919f4499f22fea536a5ec0530390dc8"
     },
     {
       "path": "remotion/blender/VIDEO-README.md",
@@ -1804,6 +1809,11 @@
       "sha256": "fccf2b998773d8a1281afec1fb794421f205e3498cd071f4cd3ca9798b6c0e54"
     },
     {
+      "path": "remotion/blender/tests/test_crota_library.py",
+      "bytes": 3906,
+      "sha256": "6bec112222e8b799cfd37f4f5d63aa54cc220130321fd8697c80328cb8b4f95b"
+    },
+    {
       "path": "remotion/blender/tests/test_environment.py",
       "bytes": 2705,
       "sha256": "63ffec34bf8a1accc54f9522e4bd733425b00fb722755488883072125837ba29"
@@ -1820,8 +1830,8 @@
     },
     {
       "path": "remotion/blender/tests/test_universal_library.py",
-      "bytes": 4230,
-      "sha256": "75b9851a5d17b0e9144910f0a57e4738258204a1dab5421f273b26002fdbf31d"
+      "bytes": 4380,
+      "sha256": "e3e5183a71b3f1bc4534824f3dd7dcdecb4c8b753326e8d51d1fb124f49ad40a"
     },
     {
       "path": "remotion/blender/tests/test_venus_vault.py",
@@ -1830,8 +1840,8 @@
     },
     {
       "path": "remotion/blender/universal/README.md",
-      "bytes": 4697,
-      "sha256": "be95bebffcbdc36b6db401133259f796cb7244da95bd9f5ccc0f39376dca63a0"
+      "bytes": 8847,
+      "sha256": "9d8301334749b4eedcd7fd606c3c405615d0f8cda0e6aca9c9a9642e372e1ae8"
     },
     {
       "path": "remotion/blender/universal/__init__.py",
@@ -1839,9 +1849,19 @@
       "sha256": "5075a41322dc0093e43dabd1212a1240faf29c0659d5b26d43a6c0224ecf6496"
     },
     {
+      "path": "remotion/blender/universal/approved_gallery.py",
+      "bytes": 7263,
+      "sha256": "7d9b98ecf23a84dd1f2dc9f4411c60a9b7eacfd4b186d5462086d5ea3dfaa6a6"
+    },
+    {
+      "path": "remotion/blender/universal/batch.py",
+      "bytes": 3246,
+      "sha256": "ff7ece51293c1e885e98a1589f21fd80815dc6b612e27a8aeb88bfe60cc0d2cc"
+    },
+    {
       "path": "remotion/blender/universal/build_index.py",
-      "bytes": 1120,
-      "sha256": "d0c487ad57f14e0f9ec49ffc733d57740a5e0cc88672bd60c79686a0c83f4639"
+      "bytes": 3201,
+      "sha256": "30fc8d7327bde17a8d94af0bc20c2a2bd03cbd480daccf5359e9d69aa0778b25"
     },
     {
       "path": "remotion/blender/universal/cache.py",
@@ -1849,9 +1869,29 @@
       "sha256": "7cd7401b7ae38d7503ab083a7e803e017f2461146969d314551ada63c8004a44"
     },
     {
+      "path": "remotion/blender/universal/collect_crota.py",
+      "bytes": 3907,
+      "sha256": "99ba02996abd017cac8640253d50d19b39a724fe7a33e25fa4f2969dbcee3b67"
+    },
+    {
       "path": "remotion/blender/universal/collect_studies.py",
       "bytes": 1654,
       "sha256": "93eb46883a852ba0b76232b581a89b603a323a90ffd65bf7f0210ab9ee88e429"
+    },
+    {
+      "path": "remotion/blender/universal/crota-visual-references.json",
+      "bytes": 955,
+      "sha256": "0c975fc9371188d44e2ab05454b0c590fc79a7ffca7cd976b72f4fc016659b12"
+    },
+    {
+      "path": "remotion/blender/universal/crota.py",
+      "bytes": 10119,
+      "sha256": "9ac9fcf5261273c9f01ad1391e80f08640505811f1b5dbcef4e5b2e63f66e45a"
+    },
+    {
+      "path": "remotion/blender/universal/crota_blender_check.py",
+      "bytes": 2714,
+      "sha256": "d56fef46ccf2ffa9d13788db43c40ab44b4d2b242b39d7da9460e0dd9a824254"
     },
     {
       "path": "remotion/blender/universal/environments.py",
@@ -1865,18 +1905,33 @@
     },
     {
       "path": "remotion/blender/universal/models.json",
-      "bytes": 3727,
-      "sha256": "9319912b1f012393c014b69e7539dd42bb881d840ec8aa7a63e425e46d07d2ca"
+      "bytes": 4542,
+      "sha256": "0d84b36845146a09f08c7ac0630d5d133827ec151e1af13ab49072896bc2124d"
+    },
+    {
+      "path": "remotion/blender/universal/providers.py",
+      "bytes": 796,
+      "sha256": "606a99a104658f06cf9100b8415cd3ccc42235d1558f37064093ada4856a73e7"
     },
     {
       "path": "remotion/blender/universal/registry.py",
-      "bytes": 5336,
-      "sha256": "007743d9fee5a395bb508b7fb47adc59b1fba087faef9659877373b9fd211de6"
+      "bytes": 6610,
+      "sha256": "7325971c3f688b093e84bd561291eb93cd30f7b655e9ea56361f253946c2e277"
+    },
+    {
+      "path": "remotion/blender/universal/reliability_check.py",
+      "bytes": 2427,
+      "sha256": "5207d904f78ead15d91b4f3634c59dc6b069a6093631b22054d6d5f3ecac8d72"
     },
     {
       "path": "remotion/blender/universal/request.py",
-      "bytes": 2064,
-      "sha256": "0c235a52d9eb8cafa88128086c2563f4968fb715179709bb677dea47d150d7e0"
+      "bytes": 2249,
+      "sha256": "8c3d246dc08c27c29d42b5837883cd03555a5171b615cf2259d7d84facd8fd7c"
+    },
+    {
+      "path": "remotion/blender/universal/verify_crota.py",
+      "bytes": 4248,
+      "sha256": "d1caf8ebbbf9b4c00377e9ea43cb6749125ead036abaf4f41ca64a1e7c5aa1ef"
     },
     {
       "path": "remotion/blender/universal/verify_media.py",
@@ -1885,8 +1940,8 @@
     },
     {
       "path": "remotion/blender/universal/worker.py",
-      "bytes": 8829,
-      "sha256": "55802f5818c3daa3e1ac9debe52aa981475fb8d712f9dff7ef2efa8f76cf88b0"
+      "bytes": 12039,
+      "sha256": "e8e9b9866d39359788df4f44a9d087c733a0b0a75bbda3876cae42dfd80129d5"
     },
     {
       "path": "remotion/blender/validation-evidence.json",

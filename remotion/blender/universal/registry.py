@@ -5,6 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[3]
 ATLAS=ROOT/'remotion/atlas/universal/catalog.json'
 HERE=Path(__file__).parent
+USER_APPROVED=('boss-atheon','boss-templar')
 PRIORITY=('boss-crota','boss-oryx','boss-rhulk','boss-nezarec','boss-witness','boss-riven','boss-taniks','boss-aksis','boss-savathun','boss-calus','boss-atraks','boss-golgoroth','boss-gahlran','boss-insurrection-prime')
 
 def catalog():return json.loads(ATLAS.read_text())
@@ -13,9 +14,21 @@ def families():return json.loads((HERE/'families.json').read_text())
 
 def check_registry():
     c=catalog();m=implementations();entities={x['id']:x for k in ['bosses','bossVariants','locations'] for x in c[k]}
+    fs=families()
+    if len({f['id'] for f in fs})!=len(fs):raise ValueError('Duplicate visual family')
     for entity,b in m.items():
+        if b['status'] not in ['implemented-user-approved','implemented-reviewed','implemented','partial-dedicated-prototype']:raise ValueError('Unknown model coverage status')
+        if b['status']=='implemented-user-approved' and (entity not in USER_APPROVED or not b['protectedFiles']):raise ValueError('No explicit user approval for this model')
+        if b['status']=='implemented' and entities.get(entity,{}).get('type')=='boss':raise ValueError('Boss completion requires specific evidence and review')
+        if not b['animations'] or len(set(b['animations']))!=len(b['animations']) or b['lods']!=[0,1,2]:raise ValueError('Invalid animation or LOD contract')
         if entity not in entities:raise ValueError('Unknown Atlas implementation '+entity)
         if b['provider'] not in ['venus-vault','universal']:raise ValueError('Unknown provider')
+        if b['provider']=='universal':
+            from .providers import load
+            module=load(entity)
+            if b['status']=='implemented-reviewed':
+                verifier=getattr(module,'verify_evidence',None)
+                if not b.get('artReview') or not callable(verifier) or not verifier(ROOT,entity):raise ValueError('Reviewed completion requires an artistic note and an actual evidence verifier')
         if b.get('environmentId'):
             links=[l for l in c['encounterBosses'] if l['bossId']==entity or l['bossVariantId']==entity]
             if not any(l['encounterId']==p['encounterId'] and p['locationId']==b['environmentId'] for l in links for p in c['encounterLocations']):raise ValueError('Unlinked arena '+entity)
@@ -43,7 +56,7 @@ def index():
               activityTypes=sorted({activities[x]['type'] for x in activity_ids}),variants=[x['id'] for x in c['bossVariants'] if x['bossId']==eid],
               encounterBindings=links,sourceIds=entity['sources'],reusePlans=profiles))
     return dict(version='1.0-workstream',atlasSha256=hashlib.sha256(ATLAS.read_bytes()).hexdigest(),entities=out,
-        activities=c['activities'],encounters=c['encounters'],locations=c['locations'],sources=c['sources'],families=fs,
+        activities=c['activities'],encounters=c['encounters'],locations=c['locations'],sources=c['sources'],families=fs,reuseProfiles=c['reuseProfiles'],
         unlistedPriorities=[x for x in PRIORITY if x not in {e['id'] for e in out}],
         note='Missing forms never inherit the parent model. Family studies do not implement named arenas or bosses.')
 

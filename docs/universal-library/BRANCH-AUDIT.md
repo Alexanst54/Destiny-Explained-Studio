@@ -12,3 +12,9 @@ Inspection avant modification : les quatre PR suivantes sont ouvertes, en brouil
 Nouvelle branche d’intégration : **feat/universal-cinematic-library-1.0**, créée directement à `9488dd8`, sans fusion/cherry-pick de #17. Sa PR doit cibler la branche de #21. Les futurs lots peuvent cibler cette branche d’intégration en PR empilées, sans fusion automatique. Les PR existantes restent inchangées.
 
 Le statut « validé utilisateur » s’applique aux silhouettes d’Athéon et du Templier 0.9.1, pas à la bibliothèque v1.0 entière ni aux nouveaux modèles à venir. L’audit n’atteste aucune exécution GPU.
+
+## État constaté à la livraison
+
+L’audit ci-dessus décrit l’état au début du chantier. Pendant le travail, GitHub attribue au compte `Alexanst54` les fusions de #19 à 15:38:52 UTC, #20 à 15:39:17 UTC et #21 à 15:39:36 UTC le 9 novembre 2026. L’assistant n’a exécuté aucune fusion. Les commits de tête de ces PR restent ceux de la table initiale.
+
+La PR #22 cible désormais `main` (qui contient le commit validé 9488dd8) ; la PR #23 reste empilée sur `feat/universal-cinematic-library-1.0`. Les deux nouvelles PR restent en brouillon, sans fusion automatique. La PR #17 reste ouverte en brouillon et non fusionnée ; son commit 146d43e n’est ancêtre ni de la branche livrée ni du `main` observé. Aucun changement extérieur n’a été annulé ni fusionné par l’assistant.

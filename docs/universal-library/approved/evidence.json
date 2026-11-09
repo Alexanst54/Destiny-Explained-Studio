@@ -1,0 +1,119 @@
+{
+  "models": [
+    {
+      "id": "boss-atheon",
+      "modelStatus": "implemented-user-approved",
+      "galleryStatus": "technical-grid-rendered",
+      "views": [
+        {
+          "view": "front",
+          "path": "docs/previews/cinematic-vex-0.9.1/after/front.png",
+          "quality": "cinematic",
+          "sha256": "dbc4a39fcf622761878bf1ba5890e99c068494e403dcd775e17f76d1605acb18"
+        },
+        {
+          "view": "environment",
+          "path": "docs/previews/cinematic-vex-0.9.1/after/throne.png",
+          "quality": "cinematic",
+          "sha256": "febd01c5f1f892b84a5cfecd3f70276f5d112d41ebdb64ba424b3401af9276ff"
+        },
+        {
+          "view": "three-quarter",
+          "path": "docs/universal-library/approved/boss-atheon-three-quarter.png",
+          "quality": "cinematic",
+          "report": "boss-atheon-three-quarter-report.json",
+          "reportSha256": "511a76711f743fb8531778618971bea835351608bf0d0d50ac1a98dc17360e32",
+          "sha256": "387b087cff9864fff16fc14be82464f41abdd9ed0eacdb59acf7633e3533fb9f"
+        },
+        {
+          "view": "silhouette",
+          "path": "docs/universal-library/approved/boss-atheon-silhouette.png",
+          "quality": "cinematic",
+          "report": "boss-atheon-silhouette-report.json",
+          "reportSha256": "dca7d43834bbaed70224d6f215621e90920fd636d4fba83f5298c26792a6720e",
+          "sha256": "a7296ce77e3f17adaf51c229d062686fd0dfd211e951898b66f79520af74c617"
+        }
+      ],
+      "animation": {
+        "path": "docs/previews/cinematic-vex-0.9.1/clips/walk.mp4",
+        "frames": 48,
+        "fps": 24,
+        "quality": "balanced",
+        "sha256": "84a4bec2ee9fbb30dbffa43c87451cef6324c362dc36ed68edcd7c680cf73d07"
+      }
+    },
+    {
+      "id": "boss-templar",
+      "modelStatus": "implemented-user-approved",
+      "galleryStatus": "technical-grid-rendered",
+      "views": [
+        {
+          "view": "front",
+          "path": "docs/previews/cinematic-vex-0.9.1/after/templar.png",
+          "quality": "cinematic",
+          "sha256": "3c5d685a43816d421377b3f7c9aed96884bcf4673030edadf3fc77fb9298c02b"
+        },
+        {
+          "view": "three-quarter",
+          "path": "docs/universal-library/approved/boss-templar-three-quarter.png",
+          "quality": "cinematic",
+          "report": "boss-templar-three-quarter-report.json",
+          "reportSha256": "e0b1480cd9e6157a4123d6ccd2ec01031ccde9e73ce38144e0565e4957be8a97",
+          "sha256": "acda341fcb03106ebda01d1fff78106b1e6ba558cd777d1e4aca7f820e8646e1"
+        },
+        {
+          "view": "silhouette",
+          "path": "docs/universal-library/approved/boss-templar-silhouette.png",
+          "quality": "cinematic",
+          "report": "boss-templar-silhouette-report.json",
+          "reportSha256": "3770dda18d673d5c1f43e8f9a7bd3a3e6260179c3654a809f06ed9bc7c4e75a7",
+          "sha256": "0be562765abcc0e1cb9ef9bc8e427c4a7a0d6630a9e6630bc48958e5ac85c424"
+        },
+        {
+          "view": "environment",
+          "path": "docs/universal-library/approved/boss-templar-environment.png",
+          "quality": "cinematic",
+          "report": "boss-templar-environment-report.json",
+          "reportSha256": "8f608cea643a27b4768e4a80ed48cc5a7b7037e4de5eef3957470931adede13d",
+          "sha256": "de988b2ba9e92259476a87a4370f6969d7295f204eabbb9c063bcb0e71c33761"
+        }
+      ],
+      "animation": {
+        "path": "docs/universal-library/approved/boss-templar-rotate.mp4",
+        "frames": 24,
+        "fps": 24,
+        "quality": "balanced",
+        "report": "boss-templar-rotate-report.json",
+        "reportSha256": "77758edc08e568fac8d44e4611a06b6684c5175813143daa667bf1702fb5b0ca",
+        "representativeImages": [
+          {
+            "path": "boss-templar-rotate-0000.png",
+            "index": 0,
+            "sha256": "a0090d4ea56ec3f7fad47870a01489e5bb134e390a2318d4d34d2d3105090671"
+          },
+          {
+            "path": "boss-templar-rotate-0012.png",
+            "index": 12,
+            "sha256": "e69e3468ef5b9cedd379297503ccee439fff8545f592f41593d7467f10ac47fc"
+          },
+          {
+            "path": "boss-templar-rotate-0023.png",
+            "index": 23,
+            "sha256": "7a6cbc5610e9a21c7c7f0cff37e0bb20941d77c2528013e3467bec325fcae51c"
+          }
+        ],
+        "sha256": "0bab083ec95e0ca0449b3a849d649a6875eddeee119d6a6bd59bbba3cc174fd5"
+      }
+    }
+  ],
+  "existingEvidence": {
+    "path": "docs/previews/cinematic-vex-0.9.1/evidence.json",
+    "sha256": "b0c1466345c99f9d8593fb7db15c145063c2d54e5812d543511f3d1e1d86f9ea"
+  },
+  "notes": [
+    "Atheon and Templar models are unchanged.",
+    "Templar has a new dedicated wide environment framing.",
+    "New camera views are technical validation, not a new user approval.",
+    "CPU only; no T4/Colab/Android execution."
+  ]
+}

@@ -1,37 +1,98 @@
 {
-  "status": "lot-a-passed-library-incomplete",
+  "status": "checkpoint-passed-universal-library-incomplete",
   "checkedAt": "2026-11-09",
-  "nodeTests": 100,
-  "pythonBlenderTests": 36,
-  "pythonManifestTests": 4,
-  "browser": "Chromium 412x915: 300 entries, filters, variants, actual image, JSON download, no overflow or page errors",
-  "typecheck": [
-    "legacy passed",
-    "universal passed"
+  "node": "22.23.4",
+  "python": "3.12.14",
+  "blender": "4.3.2 official, hash 32f5fdce0a0a",
+  "tests": {
+    "nodeTotal": 102,
+    "nodePassed": 102,
+    "pythonBlender": 43,
+    "pythonManifest": 4,
+    "typecheckLegacy": "passed",
+    "typecheckUniversal": "passed",
+    "browser": "Chromium 412x915; filters, images, selection JSON, no horizontal overflow/errors"
+  },
+  "nativeEvaluations": {
+    "cinematicVex": 136,
+    "compatibilityVex": 156,
+    "crota": 192
+  },
+  "media": {
+    "familyStudies": 10,
+    "crotaCinematicStills": 4,
+    "crotaBalancedAnimationFrames": 24,
+    "approvedVexNewCinematicStills": 5,
+    "templarBalancedFrames": 24,
+    "reusedAtheonBalancedFrames": 48,
+    "providerRegressionRgbIdentical": true
+  },
+  "missingImplementations": {
+    "boss": 125,
+    "form": 25,
+    "environment": 142
+  },
+  "unlistedPriorities": [
+    "boss-savathun"
   ],
-  "historicalEvidence": "Both frozen media verifiers passed; 136 protected files and 12 episodes unchanged",
-  "realBlenderStudies": 10,
+  "reliability": "reliability/result.json",
+  "historicalProtectedFiles": 136,
+  "historicalEpisodes": 12,
   "device": "CPU",
   "gpuValidated": false,
-  "resume": {
-    "fullCacheHits": 2,
-    "newFrames": 0,
-    "corruptFrameRecovery": {
-      "cacheHits": 1,
-      "newFrames": 1
-    },
-    "interruption": {
-      "status": "passed",
-      "interruptedAfterFrames": 1,
-      "resumedCacheHits": 1,
-      "renderedAfterResume": 3
-    }
+  "ci": {
+    "status": "blocked-before-runner-start",
+    "runUrl": "https://github.com/Alexanst54/Destiny-Explained-Studio/actions/runs/42663392430",
+    "commit": "cca246640b692c34ad4f5ad4e982577d3a4fb29b",
+    "executedTestSteps": 0,
+    "githubAnnotation": "The job was not started because your account is locked due to a billing issue.",
+    "localValidation": "102 Node, 43 Blender Python + 4 manifest, native Blender and shipped-media checks passed.",
+    "note": "Observed first CI attempt; see PR checks for current status. No false passing check or runner bypass."
   },
   "limitations": [
-    "No complete universal library claim",
-    "No new dedicated boss in Lot A",
-    "No persisted .blend across sessions",
-    "No GPU/Colab/Android execution",
-    "Existing Atheon/Templar gallery grid remains partial for v1.0"
-  ]
+    "Crota remains an artistic prototype, not user approved or completed.",
+    "Other priority bosses and raids/dungeons are not implemented; backlog is explicit.",
+    "Oblique Vex views use the existing orbital frame 0, about 20 degrees, not exact 45-degree views.",
+    "LOD is explicit; automatic distance policy is not implemented.",
+    "Inter-session cache contains JSON design and PNGs, not a .blend scene.",
+    "No new automatic audio composition or episode migration.",
+    "T4/Colab/Android and GPU failure recovery are not exercised on actual target hardware."
+  ],
+  "initialLotAValidation": {
+    "status": "lot-a-passed-library-incomplete",
+    "checkedAt": "2026-11-09",
+    "nodeTests": 100,
+    "pythonBlenderTests": 36,
+    "pythonManifestTests": 4,
+    "browser": "Chromium 412x915: 300 entries, filters, variants, actual image, JSON download, no overflow or page errors",
+    "typecheck": [
+      "legacy passed",
+      "universal passed"
+    ],
+    "historicalEvidence": "Both frozen media verifiers passed; 136 protected files and 12 episodes unchanged",
+    "realBlenderStudies": 10,
+    "device": "CPU",
+    "gpuValidated": false,
+    "resume": {
+      "fullCacheHits": 2,
+      "newFrames": 0,
+      "corruptFrameRecovery": {
+        "cacheHits": 1,
+        "newFrames": 1
+      },
+      "interruption": {
+        "status": "passed",
+        "interruptedAfterFrames": 1,
+        "resumedCacheHits": 1,
+        "renderedAfterResume": 3
+      }
+    },
+    "limitations": [
+      "No complete universal library claim",
+      "No new dedicated boss in Lot A",
+      "No persisted .blend across sessions",
+      "No GPU/Colab/Android execution",
+      "Existing Atheon/Templar gallery grid remains partial for v1.0"
+    ]
+  }
 }
