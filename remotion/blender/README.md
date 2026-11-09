@@ -44,3 +44,7 @@ Les énergies des lumières et le fond sont des approximations de conversion, **
 [Notebook Colab Pro](Blender-Colab-Pro.ipynb) : installation/détection Blender et Node, choix d’une à trois frames, upload projet/snapshot, ressources CPU/GPU, repli CPU, rendu PNG et ZIP. Pendant la revue sélectionner REF `feat/blender-bridge-0.8.1` dans le notebook de la branche ; après fusion humaine, `main`. L’installation requiert Internet. Une fois les dépendances présentes, aucun réseau n’est nécessaire au rendu. Aucun Kokoro ni service de génération n’est installé pour ces images.
 
 Tests et mesures réellement exécutés : [REPORT.md](REPORT.md). Pour reprendre demain, lire [le journal](../../docs/BLENDER-BRIDGE-PROGRESS.md). GPU et Colab Pro distant restent à tester ; aucun succès n’est supposé à partir du CPU local.
+
+## Cinematic environments 0.8.2
+
+[Riis environment guide](ENVIRONMENTS.md): deterministic modular city, three detail levels, optional atmosphere, mobile Colab live progress/timeout and CPU/GPU benchmark procedure. Existing 0.8.1 snapshots remain valid. See [validation report](ENVIRONMENTS-REPORT.md).

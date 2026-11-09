@@ -62,3 +62,5 @@ Le [storyboard hybride](remotion/hybrid/README.md) réunit voxel, cartes schéma
 ## Blender Bridge 0.8.1
 
 [Exporter une frame 0.7 vers Blender](remotion/blender/README.md), [notebook Colab Pro PNG](remotion/blender/Blender-Colab-Pro.ipynb), [rapport exécuté](remotion/blender/REPORT.md) et [journal de reprise](docs/BLENDER-BRIDGE-PROGRESS.md). Le pont reste indépendant de l’éditeur et du montage Remotion ; aucun rendu vidéo complet n’est lancé.
+
+Cinematic Voxel Environments 0.8.2: [procedural Riis, quality controls and Colab guide](remotion/blender/ENVIRONMENTS.md), with [CPU results and preview comparison](remotion/blender/ENVIRONMENTS-REPORT.md).
