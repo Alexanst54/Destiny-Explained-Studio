@@ -57,12 +57,12 @@ def run(project,cache,start=120,count=90,detail='draft',scale=10,device='auto',s
     if renderer not in ['persistent','single']:raise ValueError('Invalid renderer')
     if device not in ['auto','cpu'] or type(timeout) is not int or not 1<=timeout<=7200 or type(threads) is not int or not 1<=threads<=64:raise ValueError('Invalid rendering options')
     version=subprocess.check_output([blender,'--version'],text=True,timeout=15).splitlines()[0]
-    renderer={p:sha(Path(__file__).parent/p) for p in ['import_scene.py','contract.py','render_one.py','environments/riis.py','sequence.py','persistent_scene.py','render_batch.py','telemetry.py']}
+    renderer_hashes={p:sha(Path(__file__).parent/p) for p in ['import_scene.py','contract.py','render_one.py','environments/riis.py','sequence.py','persistent_scene.py','render_batch.py','telemetry.py']}
     with tempfile.TemporaryDirectory() as temporary:
         command=[node,'--experimental-strip-types',str(Path(__file__).with_name('export-sequence.mjs')),str(Path(project).resolve()),str(start),str(count),temporary]
         subprocess.run(command,check=True,timeout=120)
         frames=[generate(load(Path(temporary)/f'{i:05d}.json'),detail,seed,lighting) for i in range(count)]
-    identity={'version':1,'snapshots':[digest(d) for d in frames],'renderer':renderer,'blender':version,'scale':scale,'device':device,'threads':threads,'rendererMode':renderer}
+    identity={'version':1,'snapshots':[digest(d) for d in frames],'renderer':renderer_hashes,'blender':version,'scale':scale,'device':device,'threads':threads,'rendererMode':renderer}
     if scale==100:
         approved=False
         for candidate in Path(cache).glob('*/identity.json'):

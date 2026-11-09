@@ -55,6 +55,7 @@ def main(argv):
                   'maxProcessRssKiB': resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,
                   'memoryScope': 'Blender process high-water RSS on Linux; excludes GPU memory.'}
         atomic(output.with_suffix('.report.json'), report)
+        atomic(output.with_suffix('.benchmark.json'), {'status':'success','wallSeconds':report['secondsInsideBlender'],'timingScope':'Frame update and render only; see sequence wallSeconds for startup/build overhead.','report':report})
         atomic(output.with_suffix('.done.json'), {'key': digest(data), 'pngSha256': sha(output), 'configuration': info.copy()})
         print('BATCH_FRAME ' + json.dumps({'index': index, 'report': report}), flush=True)
 

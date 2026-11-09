@@ -26,6 +26,18 @@ class Runner(unittest.TestCase):
             for option in [{'scale':0},{'threads':0},{'device':'bogus'}]:
                 with self.assertRaises(ValueError):render_one(ROOT/'examples/riis-frame-210.json',Path(folder)/'x.png',**option)
             with self.assertRaises(RuntimeError):render_one(ROOT/'examples/riis-frame-210.json',Path(folder)/'x.png',blender='not-a-real-blender')
+    def test_progress_extends_timeout_but_not_silent_hang(self):
+        with tempfile.TemporaryDirectory() as folder,contextlib.redirect_stdout(io.StringIO()):
+            progress=Path(folder)/'progress';last=''
+            def tick():
+                nonlocal last
+                value=progress.read_text() if progress.exists() else ''
+                changed=value!=last;last=value;return changed
+            command=[sys.executable,'-c',"import time,pathlib; p=pathlib.Path(__import__('sys').argv[1]); [(p.write_text(str(i)),time.sleep(.65)) for i in range(4)]",str(progress)]
+            seconds=stream_process(command,Path(folder)/'batch.log',1,on_tick=tick)
+            self.assertGreater(seconds,2)
+            with self.assertRaises(TimeoutError):stream_process([sys.executable,'-c','import time;time.sleep(10)'],Path(folder)/'hung.log',1,on_tick=lambda:False)
+
     def test_failure_report_and_fresh_output(self):
         with tempfile.TemporaryDirectory() as folder,contextlib.redirect_stdout(io.StringIO()):
             out=Path(folder)/'failed.png'
