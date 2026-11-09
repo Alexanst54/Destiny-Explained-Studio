@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "environments": {
+    "venus": {"generator": "venus", "assetId": "blender-venus-v1"},
+    "vault-of-glass": {"generator": "arena-templars-well", "assetId": "blender-templars-well-v1"},
+    "arena-templars-well": {"generator": "arena-templars-well", "assetId": "blender-templars-well-v1"},
+    "arena-glass-throne": {"generator": "arena-glass-throne", "assetId": "blender-glass-throne-v1"}
+  },
+  "bosses": {
+    "boss-templar": {"environmentId": "arena-templars-well", "assetId": "blender-templar-v1", "animations": ["idle", "rotate", "move", "attack"]},
+    "boss-atheon": {"environmentId": "arena-glass-throne", "assetId": "blender-atheon-v1", "animations": ["idle", "walk", "combat", "temporal"]}
+  },
+  "presets": ["wide", "reveal", "orbit", "low-angle", "close-up"]
+}

@@ -30,7 +30,7 @@ const bossVariant = z.object({...base, type: z.literal('boss-variant'), bossId: 
 const edge = {sources, note: text};
 const source = z.object({id, kind: z.enum(['primary', 'secondary', 'inherited']), title: text, url: z.url().refine(s => s.startsWith('https://'), 'HTTPS required'), checkedAt: date, verification: z.enum(['retrieved', 'inherited-not-rechecked']), locator: text,
   supports: z.array(z.enum(['identity', 'availability', 'release', 'appearance', 'relationship'])).min(1), legacySourceId: text.nullable(), note: text}).strict();
-const asset = z.object({id, kind: z.enum(['remotion-environment', 'remotion-family', 'blender-generator']), path: text.regex(/^remotion\/(?!.*\.\.).+\.(?:tsx?|py)$/), symbol: text.regex(/^[A-Za-z_][A-Za-z0-9_]*$/), selector: text, families: z.array(z.enum(families)).min(1), locationIds: ids, variantIds: ids, fidelity: z.enum(['dedicated', 'modular-reconstruction'])}).strict();
+const asset = z.object({id, kind: z.enum(['remotion-environment', 'remotion-family', 'blender-generator', 'blender-boss']), path: text.regex(/^remotion\/(?!.*\.\.).+\.(?:tsx?|py)$/), symbol: text.regex(/^[A-Za-z_][A-Za-z0-9_]*$/), selector: text, families: z.array(z.enum(families)).min(1), locationIds: ids, variantIds: ids, bossIds: ids.default([]), fidelity: z.enum(['dedicated', 'modular-reconstruction'])}).strict();
 
 export const universalCatalogSchema = z.object({
   schemaVersion: z.literal('0.9.0'), reviewedAt: date, scope: text,
@@ -43,7 +43,7 @@ export const universalCatalogSchema = z.object({
   activityRelations: z.array(z.object({...edge, fromId: id, toId: id, relation: z.enum(['reprisal-of', 'variant-of'])}).strict()),
   legacyCorrections: z.array(z.object({locationId: id, field: z.literal('parentId'), originalValue: id.nullable(), correctedValue: id.nullable(), sources, note: text}).strict()).default([]),
   reuseProfiles: z.array(z.object({id, label: text, kind: z.enum(['boss', 'environment']), familyIds: z.array(z.enum(families)).min(1), moduleIds: z.array(z.enum(modules)), characterTemplateIds: ids, rigArchetypes: z.array(z.enum(rigArchetypes)), reusableFiles: z.array(z.object({path: text.regex(/^remotion\/(?!.*\.\.).+\.(?:tsx?|py)$/), symbol: text.regex(/^[A-Za-z_][A-Za-z0-9_]*$/)}).strict()).min(1), reusableParts: z.array(text).min(1), requiredWork: z.array(text), limitations: z.array(text).min(1)}).strict()).default([]),
-  assetReusePlans: z.array(z.object({entityId: id, target: z.enum(['location', 'location-variant', 'boss', 'boss-variant']), profileIds: ids.min(1), status: z.enum(['proxy-only', 'adaptation-required', 'no-suitable-model']), silhouette: text, existingRecipe: z.object({locationId: id, variantId: id.nullable(), baseEnvironment: z.enum(['the-tower', 'europa', 'black-garden', 'pyramid-interior']).nullable(), moduleIds: z.array(z.enum(modules))}).strict().nullable().default(null), sources, note: text}).strict()).default([]),
+  assetReusePlans: z.array(z.object({entityId: id, target: z.enum(['location', 'location-variant', 'boss', 'boss-variant']), profileIds: ids.min(1), status: z.enum(['proxy-only', 'adaptation-required', 'no-suitable-model', 'implemented-stylized']), silhouette: text, existingRecipe: z.object({locationId: id, variantId: id.nullable(), baseEnvironment: z.enum(['the-tower', 'europa', 'black-garden', 'pyramid-interior']).nullable(), moduleIds: z.array(z.enum(modules))}).strict().nullable().default(null), sources, note: text}).strict()).default([]),
   knownGaps: z.array(text).min(1),
 }).strict().superRefine((c, ctx) => {
   const fail = (path: (string | number)[], message: string) => ctx.addIssue({code: 'custom', path, message});
@@ -87,20 +87,26 @@ export const universalCatalogSchema = z.object({
     const activeAssets = [row.remotionAssetId, row.blenderAssetId].filter((a): a is string => a !== null);
     if (row.visualStatus === 'placeholder' && activeAssets.length) fail(path, 'Placeholder cannot claim an implemented asset');
     if (row.visualStatus !== 'placeholder' && !activeAssets.length) fail(path, 'Rendered visual status needs an existing asset');
+    if (row.visualStatus === 'dedicated' && !activeAssets.some(id => assetMap.get(id)?.fidelity === 'dedicated')) fail(path, 'Dedicated status needs at least one dedicated renderer asset');
     for (const [field, ref] of [['remotionAssetId', row.remotionAssetId], ['blenderAssetId', row.blenderAssetId]] as const) {
       if (!ref) continue;
       const a = assetMap.get(ref);
       if (!a) {fail([...path, field], 'Unknown asset'); continue;}
-      if ((field === 'blenderAssetId') !== (a.kind === 'blender-generator')) fail([...path, field], 'Asset renderer mismatch');
+      if ((field === 'blenderAssetId') !== (a.kind.startsWith('blender-'))) fail([...path, field], 'Asset renderer mismatch');
       if (!row.environmentFamily || !a.families.includes(row.environmentFamily)) fail([...path, field], 'Asset family mismatch');
-      if (row.visualStatus === 'dedicated' && a.fidelity !== 'dedicated') fail(path, 'Modular asset cannot claim dedicated fidelity');
       const locationId = table === 'locationVariants' ? (row as z.infer<typeof locationVariant>).locationId : row.id;
       if (a.locationIds.length && !a.locationIds.includes(locationId)) fail(path, 'Asset outside supported locations');
+      if (a.kind === 'blender-boss' && (table !== 'bosses' || !a.bossIds.includes(row.id))) fail(path, 'Boss asset outside supported identity');
       if (a.variantIds.length && (table !== 'locationVariants' || !a.variantIds.includes((row as z.infer<typeof locationVariant>).legacyVariantId ?? ''))) fail(path, 'Asset outside supported variants');
     }
   });
   c.sources.forEach((s, i) => {if (s.checkedAt > c.reviewedAt) fail(['sources', i], 'Future source check'); if ((s.kind === 'inherited') !== (s.verification === 'inherited-not-rechecked')) fail(['sources', i], 'Inherited provenance mismatch');});
-  c.assets.forEach((a, i) => a.locationIds.forEach(ref => {if (!locationMap.has(ref)) fail(['assets', i, 'locationIds'], 'Unknown asset location scope');}));
+  c.assets.forEach((a, i) => {
+    a.locationIds.forEach(ref => {if (!locationMap.has(ref)) fail(['assets', i, 'locationIds'], 'Unknown asset location scope');});
+    a.bossIds.forEach(ref => {if (!bossMap.has(ref)) fail(['assets', i, 'bossIds'], 'Unknown asset boss scope');});
+    if (a.kind === 'blender-boss' && (!a.bossIds.length || a.locationIds.length || a.variantIds.length)) fail(['assets', i], 'Boss generator requires an exclusive boss scope');
+    if (a.kind !== 'blender-boss' && a.bossIds.length) fail(['assets', i], 'Only boss generators can declare boss scope');
+  });
   c.locations.forEach((l, i) => {
     if (l.parentId && !locationMap.has(l.parentId)) fail(['locations', i, 'parentId'], 'Unknown parent');
     const seen = new Set([l.id]); let parent = l.parentId;
@@ -112,11 +118,11 @@ export const universalCatalogSchema = z.object({
   function uniqueReuseChecks() {
     const profiles = new Map(c.reuseProfiles.map(p => [p.id, p]));
     if (profiles.size !== c.reuseProfiles.length) fail(['reuseProfiles'], 'Duplicate reuse profile');
-    const targets = new Map<string, {kind: string; family: string | null; placeholder: boolean}>([
-      ...c.locations.map(x => [x.id, {kind: 'location', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
-      ...c.locationVariants.map(x => [x.id, {kind: 'location-variant', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
-      ...c.bosses.map(x => [x.id, {kind: 'boss', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
-      ...c.bossVariants.map(x => [x.id, {kind: 'boss-variant', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder'}] as const),
+    const targets = new Map<string, {kind: string; family: string | null; placeholder: boolean; blenderId: string | null}>([
+      ...c.locations.map(x => [x.id, {kind: 'location', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder', blenderId: x.blenderAssetId}] as const),
+      ...c.locationVariants.map(x => [x.id, {kind: 'location-variant', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder', blenderId: x.blenderAssetId}] as const),
+      ...c.bosses.map(x => [x.id, {kind: 'boss', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder', blenderId: x.blenderAssetId}] as const),
+      ...c.bossVariants.map(x => [x.id, {kind: 'boss-variant', family: x.environmentFamily, placeholder: x.visualStatus === 'placeholder', blenderId: x.blenderAssetId}] as const),
     ]);
     const planned = new Set<string>();
     c.assetReusePlans.forEach((p, i) => {
@@ -124,6 +130,7 @@ export const universalCatalogSchema = z.object({
       if (!target || target.kind !== p.target) fail(['assetReusePlans', i], 'Unknown or wrong-kind reuse target');
       if (planned.has(p.entityId)) fail(['assetReusePlans', i], 'Duplicate reuse plan'); planned.add(p.entityId);
       cite(p.sources, ['assetReusePlans', i]);
+      if (p.status === 'implemented-stylized' && (target?.placeholder || !target?.blenderId)) fail(['assetReusePlans', i], 'Implemented plan requires a real assigned Blender asset');
       const selected = p.profileIds.map(id => profiles.get(id));
       if (selected.some(x => !x)) fail(['assetReusePlans', i], 'Unknown reuse profile');
       const bossTarget = p.target.startsWith('boss');

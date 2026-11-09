@@ -1149,14 +1149,42 @@
       "kind": "blender-generator",
       "path": "remotion/blender/environments/riis.py",
       "selector": "atlas=riis/before-whirlwind"
+    },
+    {
+      "id": "blender-venus-v1",
+      "kind": "blender-generator",
+      "path": "remotion/blender/environments/venus.py",
+      "selector": "atlas=venus"
+    },
+    {
+      "id": "blender-templars-well-v1",
+      "kind": "blender-generator",
+      "path": "remotion/blender/environments/vault_of_glass.py",
+      "selector": "arena=arena-templars-well"
+    },
+    {
+      "id": "blender-glass-throne-v1",
+      "kind": "blender-generator",
+      "path": "remotion/blender/environments/vault_of_glass.py",
+      "selector": "arena=arena-glass-throne"
+    },
+    {
+      "id": "blender-templar-v1",
+      "kind": "blender-boss",
+      "path": "remotion/blender/characters/vex_bosses.py",
+      "selector": "boss=boss-templar"
+    },
+    {
+      "id": "blender-atheon-v1",
+      "kind": "blender-boss",
+      "path": "remotion/blender/characters/vex_bosses.py",
+      "selector": "boss=boss-atheon"
     }
   ],
   "reusePlanCount": 314,
-  "reuseProfileCount": 52,
+  "reuseProfileCount": 56,
   "pinnedSourceCount": 189,
   "missingBossAssets": [
-    "boss-templar",
-    "boss-atheon",
     "boss-ir-yut",
     "boss-crota",
     "boss-crypt-security",
@@ -1546,6 +1574,16 @@
       "sha256": "fe91f2e68078306e1bbf0b95d3c270d85df6db5e9c3a403291cf1700fd5f3345"
     },
     {
+      "path": "remotion/blender/Venus-Vault-Colab-Pro.ipynb",
+      "bytes": 6192,
+      "sha256": "09b632f5ca4f74897009dd3b88d733c02a500cd8b0c3a5a32bcd5de3122092da"
+    },
+    {
+      "path": "remotion/blender/characters/vex_bosses.py",
+      "bytes": 8314,
+      "sha256": "63dbbc8b1e893abc9dd13442041fbfc6c75aedd79b11fb7c35006f413364fa52"
+    },
+    {
       "path": "remotion/blender/contract.py",
       "bytes": 6225,
       "sha256": "19f8231c60a6ba20e82735c90bab2a34c1185a5a727b6e01d6cd74f41f5e3c2b"
@@ -1559,6 +1597,16 @@
       "path": "remotion/blender/environments/riis.py",
       "bytes": 8507,
       "sha256": "a5a46f84d3aa2913a1727123d21a2ad6c2a56fbec1f6ac2fc081bad8b9c88fba"
+    },
+    {
+      "path": "remotion/blender/environments/vault_of_glass.py",
+      "bytes": 3811,
+      "sha256": "9be42b4608575606f1ea8f0f96a1a78a85a2d8164e50d7a9800db8f8bc879f6f"
+    },
+    {
+      "path": "remotion/blender/environments/venus.py",
+      "bytes": 5028,
+      "sha256": "f6baf34cca0bb20c8c3be6e26df208fc0e05f3e82dde32b6c61d0cc3506d9d05"
     },
     {
       "path": "remotion/blender/examples/generate.mjs",
@@ -1599,6 +1647,11 @@
       "path": "remotion/blender/render_one.py",
       "bytes": 4229,
       "sha256": "c84fe26507952f2a10ba25106f016a579f930e68151ac1ab37a98e1e3180af81"
+    },
+    {
+      "path": "remotion/blender/render_venus_vault.py",
+      "bytes": 3320,
+      "sha256": "40636486d6ab92ea80606eda66dce3550f4efbb997ddaa96e8f57749b289ca80"
     },
     {
       "path": "remotion/blender/schema.ts",
@@ -1656,9 +1709,69 @@
       "sha256": "d5da1164f3697a9135ed9a015f5e397c47ad27c6200ff88b6bf33db9be748bb6"
     },
     {
+      "path": "remotion/blender/tests/test_venus_vault.py",
+      "bytes": 5666,
+      "sha256": "43f976e2628f8361e475e682f323db107e7f23c3980f0ea071e49824daa20be3"
+    },
+    {
       "path": "remotion/blender/validation-evidence.json",
       "bytes": 5960,
       "sha256": "3ef328dc3c21ae380da20823f28eb114a5962d85e647ca52510382e43104a8aa"
+    },
+    {
+      "path": "remotion/blender/venus_vault/.gitignore",
+      "bytes": 13,
+      "sha256": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b"
+    },
+    {
+      "path": "remotion/blender/venus_vault/README.md",
+      "bytes": 7401,
+      "sha256": "cfa75ee809872dfe8a3e4620a647369450fff001cb9fafe44d1c03c5b186f6a3"
+    },
+    {
+      "path": "remotion/blender/venus_vault/VALIDATION.md",
+      "bytes": 4272,
+      "sha256": "01e10d8ce0e3b7dd9a2685ca0aadf3e4a0cfe9936d20e0212c5898331c020e83"
+    },
+    {
+      "path": "remotion/blender/venus_vault/atlas-bindings.json",
+      "bytes": 793,
+      "sha256": "bc3bb90100f1b20899eccd617173598156a4c1a14ed9720edc2e52f44bedfe2c"
+    },
+    {
+      "path": "remotion/blender/venus_vault/blender_check.py",
+      "bytes": 2680,
+      "sha256": "1bdd53b4cab4530f156e412f52d34ba8b5633e406522770e0ef7f43f64bc2e60"
+    },
+    {
+      "path": "remotion/blender/venus_vault/camera.py",
+      "bytes": 1488,
+      "sha256": "0d9c308e21859f2fdbdc6eec3a5a2997304da58ff13c90633f756cde6710534c"
+    },
+    {
+      "path": "remotion/blender/venus_vault/design.py",
+      "bytes": 953,
+      "sha256": "8f8b19eccc3d7ba5d85afd5416829dda7f02d04cc0035a330d9135fe3161a041"
+    },
+    {
+      "path": "remotion/blender/venus_vault/geometry.py",
+      "bytes": 3797,
+      "sha256": "f10fbdf71160b0ee5b7f4f64ee7c642567f93861c99d78d19753831d062afd0a"
+    },
+    {
+      "path": "remotion/blender/venus_vault/renderer.py",
+      "bytes": 11617,
+      "sha256": "e0edfd245166ebd5c96862ef03ac4a2d3804eacbf0da72e0cc2a47335e5bfda5"
+    },
+    {
+      "path": "remotion/blender/venus_vault/request.py",
+      "bytes": 3201,
+      "sha256": "481623534d26e1a2bf295ea0f31d9f91ffb3669b121c343cb166c83177fa267e"
+    },
+    {
+      "path": "remotion/blender/venus_vault/verify_evidence.py",
+      "bytes": 2848,
+      "sha256": "e5946ccb7c964071bdb6ef5132c4fa55aef76a34c20556be5ab2e0df0b6119dd"
     },
     {
       "path": "remotion/blender/verify-video.py",
