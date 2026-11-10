@@ -3509,7 +3509,7 @@
           "close-up"
         ],
         "gallery": "docs/universal-library/lot-c/nezarec/README.md",
-        "galleryV1Status": "pending-real-renders",
+        "galleryV1Status": "technical-grid-rendered-artistic-review-pending",
         "protectedFiles": [],
         "environmentId": "root-of-nightmares",
         "reviewGrid": {
@@ -3574,7 +3574,39 @@
       "destinationIds": [
         "essence"
       ],
-      "previews": []
+      "previews": [
+        {
+          "view": "front",
+          "path": "docs/universal-library/lot-c/nezarec/front.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "profile",
+          "path": "docs/universal-library/lot-c/nezarec/profile.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "three-quarter",
+          "path": "docs/universal-library/lot-c/nezarec/three-quarter.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "cinematic",
+          "path": "docs/universal-library/lot-c/nezarec/cinematic.png",
+          "quality": "cinematic"
+        },
+        {
+          "view": "environment",
+          "path": "docs/universal-library/lot-c/nezarec/environment.png",
+          "quality": "cinematic"
+        }
+      ],
+      "videoPreviews": [
+        {
+          "path": "docs/universal-library/lot-c/nezarec/animation.mp4",
+          "label": "Prototype — combat (Balanced)"
+        }
+      ]
     },
     {
       "id": "boss-herald-finality",
@@ -15208,7 +15240,7 @@
           "environment"
         ],
         "gallery": "docs/universal-library/lot-c/nezarec/README.md",
-        "galleryV1Status": "pending-real-renders",
+        "galleryV1Status": "technical-grid-rendered-artistic-review-pending",
         "protectedFiles": []
       },
       "family": "pyramid",

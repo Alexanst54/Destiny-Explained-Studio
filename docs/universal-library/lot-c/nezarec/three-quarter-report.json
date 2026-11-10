@@ -1,0 +1,429 @@
+{
+  "version": 1,
+  "fingerprint": "688eaff7de45e766476ff9d82a8ba6e7ca6f5125c4839f57faa3716ed313c0c1",
+  "request": {
+    "version": 1,
+    "selectionId": "boss-nezarec",
+    "variantId": null,
+    "binding": {
+      "entity": {
+        "id": "boss-nezarec",
+        "name": "Nezarec, Final God of Pain",
+        "enName": "Nezarec, Final God of Pain",
+        "kind": "boss",
+        "parentBossId": null,
+        "composition": "individual",
+        "members": [],
+        "nature": null,
+        "priority": true,
+        "atlasVisualStatus": "placeholder",
+        "status": "partial-dedicated-prototype",
+        "implementation": {
+          "provider": "universal",
+          "module": "universal.nezarec",
+          "status": "partial-dedicated-prototype",
+          "animations": [
+            "idle",
+            "move",
+            "combat",
+            "signature",
+            "reveal"
+          ],
+          "lods": [
+            0,
+            1,
+            2
+          ],
+          "views": [
+            "front",
+            "profile",
+            "three-quarter",
+            "cinematic",
+            "environment",
+            "silhouette",
+            "reveal",
+            "close-up"
+          ],
+          "gallery": "docs/universal-library/lot-c/nezarec/README.md",
+          "galleryV1Status": "pending-real-renders",
+          "protectedFiles": [],
+          "environmentId": "root-of-nightmares",
+          "reviewGrid": {
+            "width": 640,
+            "height": 640,
+            "frames": 36,
+            "fps": 24,
+            "animation": "combat"
+          }
+        },
+        "family": "pyramid",
+        "familyCandidates": [
+          "pyramid"
+        ],
+        "arenaIds": [
+          "root-of-nightmares"
+        ],
+        "encounterIds": [
+          "encounter-root-of-nightmares-d2-nezarec"
+        ],
+        "activityIds": [
+          "activity-root-of-nightmares-d2"
+        ],
+        "activityTypes": [
+          "raid"
+        ],
+        "variants": [],
+        "encounterBindings": [
+          {
+            "encounterId": "encounter-root-of-nightmares-d2-nezarec",
+            "bossId": "boss-nezarec",
+            "bossVariantId": null,
+            "role": "primary",
+            "conditions": [],
+            "outcome": "defeat",
+            "sources": [
+              "wiki-root",
+              "wiki-boss-nezarec-final-god-of-pain"
+            ],
+            "note": "Association sourc\u00e9e ; conditions de qu\u00eate, \u00e9v\u00e9nement ou difficult\u00e9 explicites, sans promotion en boss permanent de la version standard."
+          }
+        ],
+        "sourceIds": [
+          "wiki-boss-nezarec-final-god-of-pain"
+        ],
+        "reusePlans": [
+          {
+            "entityId": "boss-nezarec",
+            "target": "boss",
+            "profileIds": [
+              "boss-pyramid-unique"
+            ],
+            "status": "no-suitable-model",
+            "silhouette": "Infobox inspect\u00e9e : Tormentor ; proportions exactes non mesur\u00e9es.",
+            "sources": [
+              "wiki-boss-nezarec-final-god-of-pain"
+            ],
+            "note": "Plan \u00e9ditorial de r\u00e9emploi des composants, pas un nouveau mod\u00e8le ni une affectation de personnage g\u00e9n\u00e9rique au boss. Les sources d\u00e9crivent la silhouette ; les familles d\u00e9crivent seulement les outils artistiques r\u00e9utilisables.",
+            "existingRecipe": null
+          }
+        ]
+      },
+      "provider": "universal",
+      "selectionId": "boss-nezarec",
+      "environmentId": "root-of-nightmares",
+      "status": "partial-dedicated-prototype"
+    },
+    "quality": "cinematic",
+    "seed": 42,
+    "lod": 0,
+    "frames": 1,
+    "fps": 24,
+    "width": 640,
+    "height": 640,
+    "startFrame": 0,
+    "animation": "idle",
+    "view": "three-quarter",
+    "environmentVariant": "sanctum"
+  },
+  "sources": {
+    "remotion/atlas/universal/catalog.json": "ce9d778a03e337b76909aa7967488d2c7bd312eacad693e5bfc06bae378a2711",
+    "remotion/blender/characters/vex_bosses.py": "e372a2df2dfde4bca1242f115877a2e60df0a188f54dc0b7f3b74d56bff41951",
+    "remotion/blender/cinematic_vex/animation.py": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a",
+    "remotion/blender/cinematic_vex/atheon.py": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f",
+    "remotion/blender/cinematic_vex/blender_check.py": "f359068ddbb2a1d1f052c75f59cb430cc7580b9e261e6b55640d7b0c4f3938c2",
+    "remotion/blender/cinematic_vex/collect_evidence.py": "5cf811adad24ebd0210c1d7712de19c28c8db6bc8e3377e9c974334b77a6dada",
+    "remotion/blender/cinematic_vex/comparison_worker.py": "14599d8b56c9108eae4af7f6a6b7e7bc2945ebd5b7cae1af0e338bd4b95b4c44",
+    "remotion/blender/cinematic_vex/instancing.py": "5b8355c351a63859614c0669c2dc22850435d373890b1f22100d4a81a09af5e6",
+    "remotion/blender/cinematic_vex/materials.py": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542",
+    "remotion/blender/cinematic_vex/provenance.py": "dca99552488387fcc0a65fc3613642a1bdc4951bae3de23ae798a0d62d5ddd4b",
+    "remotion/blender/cinematic_vex/render_validation.py": "a56ba3a245d09554057ea1684b500f6951d5ea2651932af74f8cdd9c9f054d06",
+    "remotion/blender/cinematic_vex/shapes.py": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea",
+    "remotion/blender/cinematic_vex/templar.py": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5",
+    "remotion/blender/cinematic_vex/throne.py": "9e99f13f7c06edc66a05e90ba2ea396e14cc7bec435418948302d439e9ac81fd",
+    "remotion/blender/cinematic_vex/validation_shots.json": "0a6fec6cbeeff359247d4800bb6705b9910ba37be68db3a277e14ae4492346fa",
+    "remotion/blender/cinematic_vex/verify_evidence.py": "9f7ebc923b30ef3ee15590ac906ee5be226586425a8e6ca4abd742177571fb5c",
+    "remotion/blender/cinematic_vex/visual-references.json": "b4bc47641fe7cb0f2801a62bd2a0c2e13461e33bf52238cfa6c82696f214996f",
+    "remotion/blender/contract.py": "19f8231c60a6ba20e82735c90bab2a34c1185a5a727b6e01d6cd74f41f5e3c2b",
+    "remotion/blender/environments/riis.py": "a5a46f84d3aa2913a1727123d21a2ad6c2a56fbec1f6ac2fc081bad8b9c88fba",
+    "remotion/blender/environments/vault_of_glass.py": "cd6cab89cd66a41976f744ffccbaaac4061e508e84cfcc18985e6dfcbb13fcaf",
+    "remotion/blender/environments/venus.py": "f6baf34cca0bb20c8c3be6e26df208fc0e05f3e82dde32b6c61d0cc3506d9d05",
+    "remotion/blender/import_scene.py": "6957ffaef2eb50ff8b5057186820ef5b8ffbd06ca48c77354e2dc9da9ad8f287",
+    "remotion/blender/render_universal.py": "e601755cce35ae0bc7d379ed8bbe039b37e31d6616970d07433d79da6bc20534",
+    "remotion/blender/universal/__init__.py": "5075a41322dc0093e43dabd1212a1240faf29c0659d5b26d43a6c0224ecf6496",
+    "remotion/blender/universal/approved_gallery.py": "7d9b98ecf23a84dd1f2dc9f4411c60a9b7eacfd4b186d5462086d5ea3dfaa6a6",
+    "remotion/blender/universal/batch.py": "4372e9499ca9574a8d674acd018d469d9318f54f094ffe845206b3af01a38729",
+    "remotion/blender/universal/build_index.py": "17cf4fa47dbf262aac70aa13d6b8ea362169eb7c72dfc7eceab2a6e68f5447c3",
+    "remotion/blender/universal/cache.py": "7cd7401b7ae38d7503ab083a7e803e017f2461146969d314551ada63c8004a44",
+    "remotion/blender/universal/collect_crota.py": "99ba02996abd017cac8640253d50d19b39a724fe7a33e25fa4f2969dbcee3b67",
+    "remotion/blender/universal/collect_studies.py": "93eb46883a852ba0b76232b581a89b603a323a90ffd65bf7f0210ab9ee88e429",
+    "remotion/blender/universal/crota-visual-references.json": "0c975fc9371188d44e2ab05454b0c590fc79a7ffca7cd976b72f4fc016659b12",
+    "remotion/blender/universal/crota.py": "9ac9fcf5261273c9f01ad1391e80f08640505811f1b5dbcef4e5b2e63f66e45a",
+    "remotion/blender/universal/crota_blender_check.py": "d56fef46ccf2ffa9d13788db43c40ab44b4d2b242b39d7da9460e0dd9a824254",
+    "remotion/blender/universal/environments.py": "67f7ac1597c28ee8b21a925d90a8f340534daa37dfa80ebdfb349e8f056fcf54",
+    "remotion/blender/universal/families.json": "c336ff607c3ef74c3458690e7e0238619cf1d0ca6e901d432d9fc08090621200",
+    "remotion/blender/universal/lot_c_check.py": "245976dc841ec63d5c26ceb3cd10f8858000f509610f8d139edd776a9fa8ea9e",
+    "remotion/blender/universal/lot_c_evidence.py": "189e2263af3a27bc0d762c91d183f993cebbfe49a81ea339774d545510bdfd90",
+    "remotion/blender/universal/lot_c_recovery.py": "18d588aa8efe74bad3c0c2a1727eb60f15080c890f611fc1448e23d33d8d36f6",
+    "remotion/blender/universal/lot_c_render.py": "e0ee8694b2834398859e6d8a6aea205722ebce6d0d4d240988a681d78bbb94c7",
+    "remotion/blender/universal/lot_c_shots.json": "36761eb321660eeebd38f636868b15b7393a08f943d90fe159cab453dc0684f6",
+    "remotion/blender/universal/models.json": "0bf95af3c9b7db33bf7b93ef6d51b2f4f173258b9e3f9e88d99bce45a293725a",
+    "remotion/blender/universal/nezarec.py": "80b59b6d862abc4ae0299ebceda2bbd8107965328a907d67b01ff846ba010c52",
+    "remotion/blender/universal/oryx.py": "ab13b04873cb166b835aac6cbfe5a72776788f9895d9cdf3ce045fa6c2111b50",
+    "remotion/blender/universal/providers.py": "606a99a104658f06cf9100b8415cd3ccc42235d1558f37064093ada4856a73e7",
+    "remotion/blender/universal/raid_shapes.py": "9b8b6d1e17cf26ebf3be49dc888d3f77567d3693a07022f1172bcbf2aad8c9b9",
+    "remotion/blender/universal/registry.py": "7325971c3f688b093e84bd561291eb93cd30f7b655e9ea56361f253946c2e277",
+    "remotion/blender/universal/reliability_check.py": "5207d904f78ead15d91b4f3634c59dc6b069a6093631b22054d6d5f3ecac8d72",
+    "remotion/blender/universal/request.py": "dc360eb172575834010007ad35debbffd598e04709df58cd22682657d23a80d3",
+    "remotion/blender/universal/rhulk.py": "002ae69016463ef92a1062266a05f0c1dea77a0c59fad8fe4dd64752233dfd3a",
+    "remotion/blender/universal/verify_crota.py": "d1caf8ebbbf9b4c00377e9ea43cb6749125ead036abaf4f41ca64a1e7c5aa1ef",
+    "remotion/blender/universal/verify_media.py": "d17114ffc4c3d6f69717ccfac94620cb0beee6064e720506c75a429b043a229e",
+    "remotion/blender/universal/worker.py": "5b85d584e1511394c8f734d625f01f6c4003f2135808baf7850a3c3d34780fd8",
+    "remotion/blender/venus_vault/atlas-bindings.json": "daf438b634df37cf940f4309e281a27081b21706a741a903348f2364f412323e",
+    "remotion/blender/venus_vault/blender_check.py": "a13c928e8c99ec4e811f2704d1ce2344a40a7d61c3e952a682f7de82091eb231",
+    "remotion/blender/venus_vault/camera.py": "d56b814d3d247dc539639899ef90bbdabef4e9e256041515201c191f02d728cf",
+    "remotion/blender/venus_vault/design.py": "f2f2c97656e820cfb5028ef978fd448a3c36c68bb6abd7cb7e2e6ad872f02823",
+    "remotion/blender/venus_vault/geometry.py": "846d0f5b21269c3ccd69640232dc0149c7b45e4e3e8297faa405cf7313391072",
+    "remotion/blender/venus_vault/renderer.py": "fb0943bc37142290dbd86d99c9900d72dd412c115542b534b246a9792600d39f",
+    "remotion/blender/venus_vault/request.py": "8112f167aadc72a987ae26d522f36ccf1f038d20781b685e27049eb3c0bd12e4",
+    "remotion/blender/venus_vault/verify_evidence.py": "1aa18c9301519db403365ebd5a9068635a56bd881e17ee6f0a10d8928858c036"
+  },
+  "frames": {
+    "0": {
+      "file": "frame-0000.png",
+      "sourceFrame": 0,
+      "sha256": "8df802c9bc6b253ca5cfd255a61c45b789f1e42bc004a60f383f6e79fe121253",
+      "seconds": 46.911508215998765,
+      "cameraMatrix": [
+        [
+          0.7071067690849304,
+          -0.008484643884003162,
+          0.7070558667182922,
+          26.516504287719727
+        ],
+        [
+          0.7071067690849304,
+          0.008484556339681149,
+          -0.7070558667182922,
+          -14.516504287719727
+        ],
+        [
+          6.171200794824472e-08,
+          0.9999279975891113,
+          0.011999037116765976,
+          7.800000190734863
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "samples": 128,
+        "lod": 0,
+        "threads": 3,
+        "designSha256": "7dce873fbd3b3eaaac4b5a5de080c96779b2492c7a84ccba5a66c57c2512bf10",
+        "boxes": 8149,
+        "designCacheHit": false,
+        "batchedMeshes": 53,
+        "batchedEnvironmentMeshes": 6,
+        "batchedBossMeshes": 47,
+        "persistentData": true,
+        "bounces": 7,
+        "denoise": true,
+        "adaptiveThreshold": 0.02500000037252903,
+        "hazeDensity": 0.0003375000087544322,
+        "viewTransform": "AgX",
+        "sceneStyle": {
+          "studioGround": true,
+          "worldColor": "#8998a7",
+          "worldStrength": 0.32,
+          "hazeFactor": 0.075,
+          "hazeColor": "#c9b8cf",
+          "fogPosition": [
+            0,
+            24,
+            15
+          ],
+          "fogScale": [
+            90,
+            110,
+            44
+          ],
+          "lights": [
+            [
+              "Pale root key",
+              [
+                -17,
+                -14,
+                26
+              ],
+              [
+                0,
+                12,
+                8
+              ],
+              14000,
+              "#fff0d2",
+              11
+            ],
+            [
+              "Nightmare fill",
+              [
+                18,
+                -1,
+                18
+              ],
+              [
+                0,
+                12,
+                8
+              ],
+              5000,
+              "#b38cdd",
+              11
+            ],
+            [
+              "Light rim",
+              [
+                -4,
+                30,
+                25
+              ],
+              [
+                0,
+                12,
+                9
+              ],
+              18000,
+              "#cae8ef",
+              10
+            ]
+          ]
+        },
+        "bossBoxes": 6724,
+        "bossDesignSha256": "adcb2644f8b6a4838174886e1fc324d2f17017f2bb557eb7b2ef781afde34012",
+        "joints": 23
+      },
+      "cameraSettings": {
+        "lens": 42.0,
+        "sensorFit": "VERTICAL",
+        "sensorHeight": 24.0,
+        "sensorWidth": 36.0,
+        "far": 600.0
+      },
+      "poseSha256": "f48d96c48ef3c353e43671aa4181f11edc7142304cecdc16da0061b4f10d6a8e"
+    }
+  },
+  "status": "success",
+  "cacheHits": 0,
+  "renderedThisRun": 1,
+  "configuration": {
+    "requested": "auto",
+    "selected": "CPU",
+    "backend": null,
+    "devices": [],
+    "notes": [
+      "No compatible Cycles GPU found; CPU fallback selected."
+    ],
+    "samples": 128,
+    "lod": 0,
+    "threads": 3,
+    "designSha256": "7dce873fbd3b3eaaac4b5a5de080c96779b2492c7a84ccba5a66c57c2512bf10",
+    "boxes": 8149,
+    "designCacheHit": false,
+    "batchedMeshes": 53,
+    "batchedEnvironmentMeshes": 6,
+    "batchedBossMeshes": 47,
+    "persistentData": true,
+    "bounces": 7,
+    "denoise": true,
+    "adaptiveThreshold": 0.02500000037252903,
+    "hazeDensity": 0.0003375000087544322,
+    "viewTransform": "AgX",
+    "sceneStyle": {
+      "studioGround": true,
+      "worldColor": "#8998a7",
+      "worldStrength": 0.32,
+      "hazeFactor": 0.075,
+      "hazeColor": "#c9b8cf",
+      "fogPosition": [
+        0,
+        24,
+        15
+      ],
+      "fogScale": [
+        90,
+        110,
+        44
+      ],
+      "lights": [
+        [
+          "Pale root key",
+          [
+            -17,
+            -14,
+            26
+          ],
+          [
+            0,
+            12,
+            8
+          ],
+          14000,
+          "#fff0d2",
+          11
+        ],
+        [
+          "Nightmare fill",
+          [
+            18,
+            -1,
+            18
+          ],
+          [
+            0,
+            12,
+            8
+          ],
+          5000,
+          "#b38cdd",
+          11
+        ],
+        [
+          "Light rim",
+          [
+            -4,
+            30,
+            25
+          ],
+          [
+            0,
+            12,
+            9
+          ],
+          18000,
+          "#cae8ef",
+          10
+        ]
+      ]
+    },
+    "bossBoxes": 6724,
+    "bossDesignSha256": "adcb2644f8b6a4838174886e1fc324d2f17017f2bb557eb7b2ef781afde34012",
+    "joints": 23
+  },
+  "blenderVersion": "4.3.2",
+  "buildSeconds": 0.6770614949928131,
+  "workerSeconds": 47.59467181799846,
+  "peakProcessRssKiB": 759232,
+  "gpuMemoryAndUtilization": null,
+  "lastRunWallSeconds": 48.00085371499881
+}

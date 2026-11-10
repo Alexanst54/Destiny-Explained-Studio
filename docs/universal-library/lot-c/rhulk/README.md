@@ -51,7 +51,7 @@ Native checks: **240 pose evaluations**, five view bounds, **36 clip-frame proje
 
 ## Remaining limitations
 
-The stride/dash and kick are choreographed, without physics, terrain-aware foot IK or collision/damage. Surface layering and weapon details remain stylized rather than exact.
+The stride/dash and kick are choreographed, without physics, terrain-aware foot IK or collision/damage. Surface layering and weapon details remain stylized rather than exact. Hip volume and the simplified blade outline need artistic review.
 
 All local runs selected **CPU**, with three rendering threads configured. CPU contention may affect durations; these are not controlled comparative benchmarks. RSS is process memory, not VRAM. GPU/Tesla T4/Colab Pro/Android and actual GPU failure recovery remain untested. No full-length episode, narration or historical Remotion behavior is changed.
 

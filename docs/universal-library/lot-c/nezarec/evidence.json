@@ -1,0 +1,262 @@
+{
+  "status": "partial-dedicated-prototype",
+  "userApproved": false,
+  "bossId": "boss-nezarec",
+  "arenaId": "root-of-nightmares",
+  "renders": [
+    {
+      "name": "front",
+      "settings": {
+        "boss": "boss-nezarec",
+        "slug": "nezarec",
+        "name": "front",
+        "view": "front",
+        "quality": "cinematic",
+        "width": 640,
+        "height": 640,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "front-report.json",
+      "reportSha256": "d6d2feab9a0080bd9ffe31e8a8b2b57b566339e0a7c5a69ce0f7fba14423871b",
+      "images": [
+        {
+          "path": "front.png",
+          "index": 0,
+          "sha256": "83b9dd97784ad6e6bc8250c43b2f0027030cb0e8b1a0c33618672c9dc256875d"
+        }
+      ]
+    },
+    {
+      "name": "profile",
+      "settings": {
+        "boss": "boss-nezarec",
+        "slug": "nezarec",
+        "name": "profile",
+        "view": "profile",
+        "quality": "cinematic",
+        "width": 640,
+        "height": 640,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "profile-report.json",
+      "reportSha256": "44ddc8b08aea6da44b24fd01c0a6193a27de691aec415f7622f4c68b4c709ed2",
+      "images": [
+        {
+          "path": "profile.png",
+          "index": 0,
+          "sha256": "9de8cea14543c20902c406cde4fb5f007731bb2762e729530f8265a6eb4f5f79"
+        }
+      ]
+    },
+    {
+      "name": "three-quarter",
+      "settings": {
+        "boss": "boss-nezarec",
+        "slug": "nezarec",
+        "name": "three-quarter",
+        "view": "three-quarter",
+        "quality": "cinematic",
+        "width": 640,
+        "height": 640,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "three-quarter-report.json",
+      "reportSha256": "8978f6c0eb3175df4f5cf1a17f3e1fba497e64722432687f09b734256097f199",
+      "images": [
+        {
+          "path": "three-quarter.png",
+          "index": 0,
+          "sha256": "8df802c9bc6b253ca5cfd255a61c45b789f1e42bc004a60f383f6e79fe121253"
+        }
+      ]
+    },
+    {
+      "name": "cinematic",
+      "settings": {
+        "boss": "boss-nezarec",
+        "slug": "nezarec",
+        "name": "cinematic",
+        "view": "cinematic",
+        "quality": "cinematic",
+        "width": 640,
+        "height": 640,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "cinematic-report.json",
+      "reportSha256": "b8cb135d3f7c8ab1139754493acd8260de3359eb01f0f1b455dcce00a8b99e45",
+      "images": [
+        {
+          "path": "cinematic.png",
+          "index": 0,
+          "sha256": "f9dca05766a94f96fac4bbe4cd3eadd4a39d9904157b1adf3602dc0242ebe278"
+        }
+      ]
+    },
+    {
+      "name": "environment",
+      "settings": {
+        "boss": "boss-nezarec",
+        "slug": "nezarec",
+        "name": "environment",
+        "view": "environment",
+        "quality": "cinematic",
+        "width": 960,
+        "height": 540,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "environment-report.json",
+      "reportSha256": "5787d5f95047d614699b6b35d4417c7a9c0feac5b90a3056211554c83c3b58d7",
+      "images": [
+        {
+          "path": "environment.png",
+          "index": 0,
+          "sha256": "4f2c4e434829a7da8187b063d23c2e23f3af08ea66fca87064c6603155e40dc0"
+        }
+      ]
+    },
+    {
+      "name": "animation",
+      "settings": {
+        "boss": "boss-nezarec",
+        "slug": "nezarec",
+        "name": "animation",
+        "animation": "combat",
+        "lod": 0,
+        "seed": 42,
+        "quality": "balanced",
+        "view": "cinematic",
+        "frames": 36,
+        "fps": 24,
+        "width": 480,
+        "height": 360
+      },
+      "report": "animation-report.json",
+      "reportSha256": "b908a07d8477ac42007bfe09f86e2b61d3a2b40ad3b59b4eb8ca9f12423a63c8",
+      "images": [
+        {
+          "path": "animation-0000.png",
+          "index": 0,
+          "sha256": "7d3271e518df742e9c36eb95e52b000790b941bb91fc77e09e1ad805e66ab734"
+        },
+        {
+          "path": "animation-0012.png",
+          "index": 12,
+          "sha256": "2a874332b8fa21d698fddd208b6d217445a6907581124b82aabbfe4e6f7900ac"
+        },
+        {
+          "path": "animation-0024.png",
+          "index": 24,
+          "sha256": "8496c2007d9df30ff9b30aca497b47fd977c03407e6829fb94990fbbda29e318"
+        },
+        {
+          "path": "animation-0035.png",
+          "index": 35,
+          "sha256": "b0877eb42e800b4ee8fc1911e1868f3fc4158a68d516594bc8ea946ee5d902c2"
+        }
+      ],
+      "video": {
+        "path": "animation.mp4",
+        "sha256": "dad24f6fec2d607e0e3039e6e7dbfc62ed48697a93bdeab392432b96b348db60"
+      }
+    }
+  ],
+  "native": {
+    "evaluations": 240,
+    "views": 5,
+    "clipProjectionFrames": 36,
+    "maxClipOverflow": 0,
+    "maxNormalizedOverflow": 0,
+    "staticResources": true,
+    "randomAccess": true,
+    "articulatedMotion": true,
+    "bounds": {
+      "front": {
+        "minX": 0.02837260626256466,
+        "maxX": 0.7981512546539307,
+        "minY": 0.1512010246515274,
+        "maxY": 0.8779383897781372
+      },
+      "profile": {
+        "minX": 0.3753243088722229,
+        "maxX": 0.7366584539413452,
+        "minY": 0.1307756006717682,
+        "maxY": 0.9026919007301331
+      },
+      "three-quarter": {
+        "minX": 0.22953404486179352,
+        "maxX": 0.8745007514953613,
+        "minY": 0.13104969263076782,
+        "maxY": 0.8826070427894592
+      },
+      "cinematic": {
+        "minX": 0.11102288216352463,
+        "maxX": 0.8015421032905579,
+        "minY": 0.1805068999528885,
+        "maxY": 0.8583972454071045
+      },
+      "environment": {
+        "minX": 0.2288641780614853,
+        "maxX": 0.62047278881073,
+        "minY": 0.2974725365638733,
+        "maxY": 0.6718714833259583
+      }
+    },
+    "physicalFootContactValidated": false,
+    "unoccludedEyeRays": 7,
+    "lowerLodConstructionChecks": [
+      {
+        "lod": 1,
+        "bossBoxes": 2069,
+        "joints": 23,
+        "animationModes": 5
+      },
+      {
+        "lod": 2,
+        "bossBoxes": 715,
+        "joints": 23,
+        "animationModes": 5
+      }
+    ]
+  },
+  "geometry": [
+    {
+      "lod": 0,
+      "boxes": 6724,
+      "joints": 23,
+      "environmentBoxes": 8149
+    },
+    {
+      "lod": 1,
+      "boxes": 2069,
+      "joints": 23,
+      "environmentBoxes": 2869
+    },
+    {
+      "lod": 2,
+      "boxes": 715,
+      "joints": 23,
+      "environmentBoxes": 995
+    }
+  ],
+  "hardware": "Actual device/backend/threads in each raw report; GPU memory/utilization not measured."
+}

@@ -1,0 +1,175 @@
+{
+  "status": "local-checks-passed-artistic-review-pending",
+  "date": "2026-11-10",
+  "nodeTests": 112,
+  "pythonBlenderTests": 56,
+  "pythonManifestTests": 4,
+  "checks": [
+    {
+      "check": "python",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "remotion/blender/tests"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "manifest",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "remotion/tests",
+        "-p",
+        "test_manifest_import.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "node",
+      "command": [
+        "work/node22/node-v22.23.4-linux-x64/bin/node",
+        "--experimental-strip-types",
+        "--test",
+        "remotion/tests/animation.test.mjs",
+        "remotion/tests/atlas-universal.test.mjs",
+        "remotion/tests/atlas.test.mjs",
+        "remotion/tests/cinematic.test.mjs",
+        "remotion/tests/episode.test.mjs",
+        "remotion/tests/hybrid.test.mjs",
+        "remotion/tests/library.test.mjs",
+        "remotion/tests/living.test.mjs",
+        "remotion/tests/lot-c.test.mjs",
+        "remotion/tests/polish.test.mjs",
+        "remotion/tests/universal-library.test.mjs",
+        "remotion/tests/venus-vault.test.mjs",
+        "remotion/tests/voxel-timeline.test.mjs",
+        "remotion/blender/tests/export.test.mjs",
+        "remotion/blender/tests/sequences.test.mjs"
+      ],
+      "exitCode": 0,
+      "initialExitCode": 1,
+      "resolution": "Regenerated stale asset audit; final combined rerun:112 passed, zero failed."
+    },
+    {
+      "check": "typescript",
+      "command": [
+        "work/node22/node-v22.23.4-linux-x64/bin/node",
+        "remotion/node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "-p",
+        "remotion/tsconfig.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "typescript-atlas",
+      "command": [
+        "work/node22/node-v22.23.4-linux-x64/bin/node",
+        "remotion/node_modules/typescript/bin/tsc",
+        "--noEmit",
+        "-p",
+        "remotion/atlas/universal/tsconfig.json"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "editor-static",
+      "command": [
+        "work/node22/node-v22.23.4-linux-x64/bin/node",
+        "remotion/scripts/build-editor.mjs",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "catalog",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "remotion/blender/universal/build_index.py",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "lot-c-media",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "remotion/blender/universal/lot_c_evidence.py",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "crota-media",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "remotion/blender/universal/verify_crota.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "approved-media",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "remotion/blender/universal/approved_gallery.py",
+        "--check"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "vex-media",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "remotion/blender/cinematic_vex/verify_evidence.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "venus-media",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "remotion/blender/venus_vault/verify_evidence.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "family-media",
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "remotion/blender/universal/verify_media.py"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "browser-legacy",
+      "command": [
+        "work/node22/node-v22.23.4-linux-x64/bin/node",
+        "editor/universal-library.browser.test.cjs"
+      ],
+      "exitCode": 0
+    },
+    {
+      "check": "browser-lot-c",
+      "command": [
+        "work/node22/node-v22.23.4-linux-x64/bin/node",
+        "editor/lot-c.browser.test.cjs"
+      ],
+      "exitCode": 0
+    }
+  ],
+  "cinematicStills": 15,
+  "balancedFrames": 108,
+  "clips": 3,
+  "clipSeconds": 1.5,
+  "protectedFiles": 121,
+  "gpuValidated": false,
+  "fullLibraryComplete": false,
+  "remoteActions": "Not started: account locked due to a billing issue."
+}

@@ -1925,13 +1925,13 @@
     },
     {
       "path": "remotion/blender/universal/lot_c_check.py",
-      "bytes": 4196,
-      "sha256": "55460b410f6b690ce1498dd5a7b6a130585488c352f451c86f809b97b8784d99"
+      "bytes": 4924,
+      "sha256": "245976dc841ec63d5c26ceb3cd10f8858000f509610f8d139edd776a9fa8ea9e"
     },
     {
       "path": "remotion/blender/universal/lot_c_evidence.py",
-      "bytes": 8557,
-      "sha256": "189e2263af3a27bc0d762c91d183f993cebbfe49a81ea339774d545510bdfd90"
+      "bytes": 8671,
+      "sha256": "537db1f21060d46a000935b7839b189a804651324a1e39f133048740921fe63c"
     },
     {
       "path": "remotion/blender/universal/lot_c_recovery.py",
@@ -1950,13 +1950,13 @@
     },
     {
       "path": "remotion/blender/universal/models.json",
-      "bytes": 8087,
-      "sha256": "a003e8bf6e70d267bdee2742984ed59e472ca02efb459f793d31d6bbb3d6a522"
+      "bytes": 8195,
+      "sha256": "e6b03cd69fdb5046d759f4a0cca2c7c2d8cd725375a6bfafaad511bc32b4677d"
     },
     {
       "path": "remotion/blender/universal/nezarec.py",
-      "bytes": 8701,
-      "sha256": "c7294b0db7ab47e9cb6866263e2aaa53b53c41d227cdcb0c1ad96b373434029b"
+      "bytes": 8704,
+      "sha256": "80b59b6d862abc4ae0299ebceda2bbd8107965328a907d67b01ff846ba010c52"
     },
     {
       "path": "remotion/blender/universal/oryx.py",

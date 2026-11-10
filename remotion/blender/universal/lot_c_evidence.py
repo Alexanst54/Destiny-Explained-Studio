@@ -86,6 +86,7 @@ def verify(only=None):
     if s['codec_name']!='h264' or s['pix_fmt']!='yuv420p' or int(s['nb_frames'])!=36 or s['avg_frame_rate']!='24/1' or abs(float(s['duration'])-1.5)>.02 or s['width']!=480 or s['height']!=360:raise ValueError('Invalid video settings')
     data=subprocess.check_output(['ffmpeg','-v','error','-i',str(video),'-f','framemd5','-']).decode();hashes=[l.rsplit(',',1)[-1].strip() for l in data.splitlines() if l and not l.startswith('#')]
     if len(hashes)!=36 or len(set(hashes))<33:raise ValueError('Frozen/incomplete decoded clip')
+  if slug=='nezarec' and e['native'].get('unoccludedEyeRays')!=7:raise ValueError('Missing eye visibility check')
   if e['native']['evaluations']!=240 or e['native']['clipProjectionFrames']!=36 or e['native']['maxNormalizedOverflow']!=0 or e['native']['maxClipOverflow']!=0:raise ValueError('Native framing/animation check failed')
  return dict(prototypes=len(selected),cinematicStills=5*len(selected),balancedFrames=36*len(selected),protectedFiles=protected)
 

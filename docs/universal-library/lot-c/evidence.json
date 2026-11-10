@@ -1,5 +1,5 @@
 {
-  "status": "evidence-in-progress",
+  "status": "three-prototypes-awaiting-visual-review",
   "bosses": [
     {
       "id": "boss-oryx",
@@ -10,11 +10,14 @@
       "id": "boss-rhulk",
       "evidence": "rhulk/evidence.json",
       "sha256": "83a6c955b3e612fbd4a15a18ce2b8c8101efc0d3daa684e246b281f2b5dd5289"
+    },
+    {
+      "id": "boss-nezarec",
+      "evidence": "nezarec/evidence.json",
+      "sha256": "a85806d59066ae3324f93cfdf3f64bb99ee1dac446aab8bf6e1206c197c794ac"
     }
   ],
-  "missingEvidence": [
-    "boss-nezarec"
-  ],
+  "missingEvidence": [],
   "protectedFiles": 121,
   "fullLibraryComplete": false
 }
