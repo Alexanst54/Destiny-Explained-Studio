@@ -30,6 +30,11 @@ def validate(config):
  if frames>18000:raise ValueError('Maximum : 18000 frames.')
  return c
 
+def smoke_config(config):
+ c=dict(config);scale=max(320/c['width'],240/c['height'])
+ c.update(duration=2,width=math.ceil(c['width']*scale/2)*2,height=math.ceil(c['height']*scale/2)*2,narration='Voici ce boss.',quality='draft',music='',musicCredit='')
+ return c
+
 def chunks(c):
  return [dict(start=start,frames=min(120,c['frames']-start)) for start in range(0,c['frames'],120)]
 
@@ -153,7 +158,7 @@ def verify(video,c):
 
 def main():
  p=argparse.ArgumentParser();p.add_argument('config');p.add_argument('output');p.add_argument('--blender',default='blender');p.add_argument('--node',default='node');p.add_argument('--chrome');p.add_argument('--smoke',action='store_true');a=p.parse_args();config=json.loads(Path(a.config).read_text());folder=Path(a.output).resolve()
- if a.smoke:config.update(duration=2,width=320,height=240,narration='Voici ce boss.',quality='draft',music='',musicCredit='');folder=folder/'smoke'
+ if a.smoke:config=smoke_config(validate(config));folder=folder/'smoke'
  else:
   proof=folder/'smoke/validation.json';project=folder/'smoke/project.json'
   if not proof.exists() or json.loads(proof.read_text()).get('status')!='passed' or not project.exists():raise ValueError('Exécutez le smoke-test avant la production complète.')

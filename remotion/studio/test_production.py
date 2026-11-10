@@ -1,6 +1,6 @@
 import copy,json,pathlib,sys,tempfile,unittest
 sys.path.insert(0,str(pathlib.Path(__file__).parent))
-from production import options,validate,chunks,prepare,ROOT,speech_chunks
+from production import options,validate,chunks,prepare,ROOT,speech_chunks,smoke_config
 
 def config(boss='boss-rhulk'):
  m=next(x for x in options() if x['id']==boss)
@@ -32,6 +32,9 @@ class Studio(unittest.TestCase):
   text=('Athéon contrôle le temps, Oryx surgit. '*30).strip();parts=speech_chunks(text)
   self.assertEqual(' '.join(parts).split(),text.split());self.assertTrue(all(len(x)<=180 for x in parts))
   with self.assertRaises(ValueError):speech_chunks('x'*181)
+ def test_smoke_preserves_target_aspect_with_legal_minimum_dimensions(self):
+  for w,h in [(320,240),(1920,1080),(1080,1920)]:
+   c=config();c.update(width=w,height=h);small=validate(smoke_config(c));self.assertGreaterEqual(small['width'],320);self.assertGreaterEqual(small['height'],240);self.assertLess(abs(small['width']/small['height']-w/h),.01)
  def test_notebook_no_execution_outputs_and_compilable_cells(self):
   nb=json.loads((ROOT/'remotion/blender/Destiny-Studio-Colab-Pro.ipynb').read_text())
   for cell in nb['cells']:
