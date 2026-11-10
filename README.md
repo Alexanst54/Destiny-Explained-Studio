@@ -67,4 +67,4 @@ Cinematic Voxel Environments 0.8.2: [procedural Riis, quality controls and Colab
 
 ## Studio Colab autonome
 
-[Ouvrir Destiny Studio dans Colab Pro](https://colab.research.google.com/github/Alexanst54/Destiny-Explained-Studio/blob/feat/standalone-colab-production-studio/remotion/blender/Destiny-Studio-Colab-Pro.ipynb) : sélection Atlas, Blender, narration française Kokoro, sous-titres alignés et export Remotion H.264/AAC dans Google Drive. Aucun rendu ni téléchargement ne dépend de GitHub Actions. Voir le [guide de production et de reprise](docs/production-studio/README.md) et les limites de validation CPU/T4/Android.
+[Ouvrir Destiny Studio dans Colab Pro](https://colab.research.google.com/github/Alexanst54/Destiny-Explained-Studio/blob/feat/standalone-colab-production-studio/remotion/blender/Destiny-Studio-Colab-Pro.ipynb) : sélection Atlas, Blender, narration anglaise/française Kokoro, sous-titres alignés et export Remotion H.264/AAC dans Google Drive. Aucun rendu ni téléchargement ne dépend de GitHub Actions. Voir le [guide de production et de reprise](docs/production-studio/README.md) et les limites de validation CPU/T4/Android.

@@ -1,7 +1,7 @@
 """Dynamic, vertically stacked controls; no unsupported model option is displayed."""
 import json,re
 from pathlib import Path
-from production import options,validate,VOICES,RESOLUTIONS
+from production import options,validate,LANGUAGES,RESOLUTIONS
 
 def form(drive_root):
  import ipywidgets as w
@@ -15,8 +15,13 @@ def form(drive_root):
  boss.observe(update,names='value');update()
  quality=w.Dropdown(description='Qualité',options=['draft','balanced','cinematic'],value='balanced',layout=layout)
  duration=w.BoundedFloatText(description='Secondes',min=2,max=600,value=10,layout=layout)
- voice=w.Dropdown(description='Voix FR',options=VOICES,layout=layout)
- text=w.Textarea(description='Texte FR',value='Voici ce boss.',layout=w.Layout(width='100%',height='150px'))
+ language=w.Dropdown(description='Language',options=['fr-FR','en-US'],value='fr-FR',layout=layout)
+ voice=w.Dropdown(description='Voice',options=LANGUAGES['fr-FR']['voices'],layout=layout)
+ def update_language(change):
+  voice.options=LANGUAGES[language.value]['voices']
+  if text.value in [x['smoke'] for x in LANGUAGES.values()]:text.value=LANGUAGES[language.value]['smoke']
+ language.observe(update_language,names='value')
+ text=w.Textarea(description='Narration',value='Voici ce boss.',layout=w.Layout(width='100%',height='150px'))
  subtitles=w.Checkbox(description='Sous-titres',value=True)
  resolution=w.Dropdown(description='Résolution',options=list(RESOLUTIONS),value='Preview',layout=layout)
  fps=w.Dropdown(description='FPS',options=[24,30],value=24,layout=layout)
@@ -34,11 +39,11 @@ def form(drive_root):
     dest=Path(destination.value).expanduser().resolve()
     if not dest.is_relative_to(Path(drive_root).resolve()):raise ValueError('Choisissez une destination dans votre Google Drive monté.')
     width,height=RESOLUTIONS[resolution.value]
-    c=validate(dict(boss=boss.value,arena=arena.value,animation=animation.value,camera=camera.value,quality=quality.value,duration=duration.value,narration=text.value,voice=voice.value,subtitles=subtitles.value,width=width,height=height,fps=fps.value,music=music.value.strip(),musicCredit=credit.value.strip()))
+    c=validate(dict(boss=boss.value,arena=arena.value,animation=animation.value,camera=camera.value,quality=quality.value,duration=duration.value,language=language.value,narration=text.value,voice=voice.value,subtitles=subtitles.value,width=width,height=height,fps=fps.value,music=music.value.strip(),musicCredit=credit.value.strip()))
     folder=dest/project.value;folder.mkdir(parents=True,exist_ok=True);path=folder/'selection.json'
     # Selection file is editable; immutable production manifest rejects incompatible resume.
     path.write_text(json.dumps(c,ensure_ascii=False,indent=2)+'\n');state.update(config=str(path),folder=str(folder));print('Projet enregistré :',folder,'\nExécutez maintenant le smoke-test. Tout changement de paramètres de production exige un nouveau nom de projet.')
    except Exception as e:print('Configuration refusée :',str(e))
  save.on_click(commit)
- display(w.VBox([w.HTML('<b>Destiny Studio — sélection réelle de l’Atlas</b>'),boss,arena,animation,camera,quality,duration,text,voice,subtitles,resolution,fps,destination,project,music,credit,save,out],layout=layout))
+ display(w.VBox([w.HTML('<b>Destiny Studio — sélection réelle de l’Atlas</b>'),boss,arena,animation,camera,quality,duration,language,text,voice,subtitles,resolution,fps,destination,project,music,credit,save,out],layout=layout))
  return state

@@ -1,0 +1,28 @@
+{
+  "status": "audio-only-preproduction-measured",
+  "fullEpisodeRendered": false,
+  "gpuValidated": false,
+  "files": {
+    "timing.json": "b18348a78b14b2775abefbce0d1cc4ea64ef1e70a683e1c439361335a487b624",
+    "script-lock.json": "49b4ba26250320ff6f1721e6d497c0d5def6957b3181ae892e80e033e7fc9d0b",
+    "subtitles.en.srt": "f0c39e2ba1dded2d00db34707e615d16ac6bee976467bdd8b613f1a1fe328aef",
+    "06-mystery/speech.json": "1dc5db0e2221631e5469ebf656a7e946b10b606d7ab46c23cd04a5025fe3b7d7",
+    "06-mystery/selection.json": "64015aba3d595a135696cb472e906c9d0aae14c44f1de38982b687d6b8fd7b88",
+    "06-mystery/speech.wav": "7479d428cf63e164b5dbffd83a90056510fae908cff96c5b74d5d96f1979a2c4",
+    "04-time/speech.json": "a46e47c2ca51ce0851895d3baa62200ad6c0deb5b19732bc8cd586b3ad692925",
+    "04-time/selection.json": "538f65239b5a062bf1a07c5ff5c5953b2eaac97164ed61d97c0798ec137fa4b7",
+    "04-time/speech.wav": "3c2b46e9a4e9e91cbea3366b8efe540a8885d67784265398401b1d2abe24f43b",
+    "05-guardians/speech.json": "6dbea56d9f66f05f292dd9732dd6303bf0389d02cd52137985f108fa1c049aa8",
+    "05-guardians/selection.json": "b65e775220536e2cbe40fb8797d95b037de06946efd30bbb93ceb9e3252982cc",
+    "05-guardians/speech.wav": "b8a58f9527d4d3e6c2f4d4bdf5c87b856bc6388afa4eb08dfe62fd510a575f2f",
+    "02-identity/speech.json": "54e678986502c96ea966acfcb0c561a6c0246da8c8f180194d6124a6c718eb39",
+    "02-identity/selection.json": "9cbd5c848f1f4bddd4b0d098e4b4404d2eaf31c05e00214da05db016e8026ca8",
+    "02-identity/speech.wav": "4764a413a6bf8369c05d34fa70bfcc5a971d7eea1be583282b39e3d1ef6790f8",
+    "01-hook/speech.json": "9842605903f87ea86c19b8714874c9e133700cbe5c7e4835fc16d7484eec1999",
+    "01-hook/selection.json": "12441c410d037f881282f649c6b89fbac1c9709f9ca0a279ff79ee1d7677790a",
+    "01-hook/speech.wav": "bb59a50fe3bdb0abae06bf7b60cde40695bd780799f988a66b348dc43230d13a",
+    "03-vault/speech.json": "2daf7f41da5156c5ad93653a9a2036e98ebda78c7fa2b5f808a097d6ad40f4de",
+    "03-vault/selection.json": "95609e456f01bcaab537a929add70f3ca6c12f0f55e961013a4987ba4770a10b",
+    "03-vault/speech.wav": "6dfd50dd2274b287f5f142a25a023652e7740bb5e87e8871dc63988d87d352cd"
+  }
+}

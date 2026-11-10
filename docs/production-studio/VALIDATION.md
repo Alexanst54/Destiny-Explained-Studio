@@ -41,3 +41,7 @@ Le notebook propose une cellule d’acceptation qui refuse de déclarer T4 si un
 Le découpage de longues vidéos est testé aux frontières (120 + 120 + 3 frames sans trou ni doublon). Aucune vidéo longue ni épisode de 35 secondes n’a été lancé ; le rendu local démonstratif dure deux secondes. Les presets de boss restent ceux de la bibliothèque, avec leurs limites artistiques et gestes parfois ponctuels. Le smoke conserve le ratio de sortie pour permettre d’inspecter le cadrage avant production. Une prononciation parfaite des noms propres, tous les longs textes et l’inspection humaine de toutes les résolutions ne sont pas revendiqués.
 
 GitHub Actions n’est utilisé ni attendu à aucun stade. La facturation/indisponibilité de runners ne bloque pas la production Colab : installation, narration, rendu, composition, validation et export sont tous locaux au runtime et aux fichiers Drive. Le CI d’une PR reste un contrôle facultatif, distinct des résultats locaux ci-dessus.
+
+## Mise à jour linguistique du pilote anglais
+
+Les preuves françaises ci-dessus restent inchangées. Le Studio prend désormais aussi `en-US` avec `af_heart` et les timestamps natifs du pipeline Kokoro anglais. Le [pilote Atheon](../../episodes/atheon-explained-en/README.md) dispose de six mesures audio et d’un plan de 89,067 secondes en 9:16. Aucun épisode complet n’est rendu pendant ce travail ; le français est vérifié par un nouveau WAV identique à la référence. La version vocale anglaise est testée en préparation audio seule, sans nouvelle validation GPU, Colab ou Android.

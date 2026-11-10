@@ -1,0 +1,209 @@
+{
+  "key": "f31e15597f376b3d28c6d2367e3c9486e760160ea79513077c6e46e274310671",
+  "sha256": "6dfd50dd2274b287f5f142a25a023652e7740bb5e87e8871dc63988d87d352cd",
+  "seconds": 15.475,
+  "words": [
+    {
+      "text": "Inside",
+      "start": 0.3,
+      "end": 0.7125
+    },
+    {
+      "text": "the",
+      "start": 0.7125,
+      "end": 0.8
+    },
+    {
+      "text": "Vault,",
+      "start": 0.8,
+      "end": 1.3
+    },
+    {
+      "text": "the",
+      "start": 1.4,
+      "end": 1.5375
+    },
+    {
+      "text": "Vex",
+      "start": 1.5375,
+      "end": 1.875
+    },
+    {
+      "text": "possess",
+      "start": 1.875,
+      "end": 2.2625
+    },
+    {
+      "text": "powers",
+      "start": 2.2625,
+      "end": 2.75
+    },
+    {
+      "text": "that",
+      "start": 2.75,
+      "end": 2.9
+    },
+    {
+      "text": "go",
+      "start": 2.9,
+      "end": 3.125
+    },
+    {
+      "text": "far",
+      "start": 3.125,
+      "end": 3.425
+    },
+    {
+      "text": "beyond",
+      "start": 3.425,
+      "end": 3.8375
+    },
+    {
+      "text": "their",
+      "start": 3.8375,
+      "end": 4.0125
+    },
+    {
+      "text": "ordinary",
+      "start": 4.0125,
+      "end": 4.575
+    },
+    {
+      "text": "capabilities.",
+      "start": 4.575,
+      "end": 5.775
+    },
+    {
+      "text": "The",
+      "start": 5.9,
+      "end": 6.0625
+    },
+    {
+      "text": "Oracles",
+      "start": 6.0625,
+      "end": 6.575
+    },
+    {
+      "text": "can",
+      "start": 6.575,
+      "end": 6.75
+    },
+    {
+      "text": "mark",
+      "start": 6.75,
+      "end": 7.025
+    },
+    {
+      "text": "Guardians",
+      "start": 7.025,
+      "end": 7.55
+    },
+    {
+      "text": "for",
+      "start": 7.55,
+      "end": 7.675
+    },
+    {
+      "text": "erasure,",
+      "start": 7.675,
+      "end": 8.45
+    },
+    {
+      "text": "while",
+      "start": 8.55,
+      "end": 8.7375
+    },
+    {
+      "text": "the",
+      "start": 8.7375,
+      "end": 8.825
+    },
+    {
+      "text": "Templar",
+      "start": 8.825,
+      "end": 9.25
+    },
+    {
+      "text": "enforces",
+      "start": 9.25,
+      "end": 9.9
+    },
+    {
+      "text": "the",
+      "start": 9.9,
+      "end": 10.0
+    },
+    {
+      "text": "Vault's",
+      "start": 10.0,
+      "end": 10.3375
+    },
+    {
+      "text": "deadly",
+      "start": 10.3375,
+      "end": 11.2
+    },
+    {
+      "text": "rules.",
+      "start": 11.725,
+      "end": 12.375
+    },
+    {
+      "text": "Atheon",
+      "start": 12.512500000000001,
+      "end": 12.950000000000001
+    },
+    {
+      "text": "stands",
+      "start": 12.950000000000001,
+      "end": 13.2875
+    },
+    {
+      "text": "at",
+      "start": 13.2875,
+      "end": 13.3625
+    },
+    {
+      "text": "the",
+      "start": 13.3625,
+      "end": 13.4625
+    },
+    {
+      "text": "center",
+      "start": 13.4625,
+      "end": 13.8375
+    },
+    {
+      "text": "of",
+      "start": 13.8375,
+      "end": 13.912500000000001
+    },
+    {
+      "text": "this",
+      "start": 13.912500000000001,
+      "end": 14.100000000000001
+    },
+    {
+      "text": "temporal",
+      "start": 14.100000000000001,
+      "end": 14.475000000000001
+    },
+    {
+      "text": "domain.",
+      "start": 14.475000000000001,
+      "end": 15.225000000000001
+    }
+  ],
+  "voice": "af_heart",
+  "language": "en",
+  "locale": "en-US",
+  "alignment": "kokoro-predicted-phoneme-durations",
+  "kokoro": {
+    "repo": "hexgrad/Kokoro-82M",
+    "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "voice": "af_heart",
+    "speed": 1.0,
+    "language": "a",
+    "threads": 2
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "boss": "boss-atheon",
+  "arena": "arena-glass-throne",
+  "language": "en-US",
+  "voice": "af_heart",
+  "narration": "To defeat Atheon, Guardians must work together, destroy the Oracles, and use the Aegis to survive the Vault's temporal threats.\nAgainst impossible odds, they bring down the Conflux.",
+  "title": "",
+  "sceneLabel": "The Guardians",
+  "quality": "balanced",
+  "duration": 12.9,
+  "subtitles": true,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "animation": "combat",
+  "camera": "three-quarter",
+  "music": "",
+  "musicCredit": "",
+  "frames": 387
+}

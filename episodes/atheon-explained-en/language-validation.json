@@ -1,0 +1,24 @@
+{
+  "status": "audio-only-validated",
+  "englishLocale": "en-US",
+  "englishVoice": "af_heart",
+  "englishSceneCount": 6,
+  "frenchPreserved": true,
+  "frenchWavSha256": "15e736f3eda9f7ca5534414b585be0abcb815f7178bcfea78620199e0a70f2ef",
+  "frenchReference": "docs/production-studio/smoke/speech.wav",
+  "fullEpisodeRendered": false,
+  "colabT4Validated": false,
+  "measuredSpeechSeconds": 87.525,
+  "plannedEpisodeSeconds": 89.06666666666666,
+  "plannedFrames": 2672,
+  "subtitles": "audio-evidence/subtitles.en.srt",
+  "checks": {
+    "node": 114,
+    "pythonStudio": 11,
+    "pythonBlender": 56,
+    "pythonNarration": 10,
+    "pythonManifest": 4,
+    "pythonTotal": 81,
+    "typescriptConfigurations": 3
+  }
+}

@@ -14,3 +14,6 @@ stable-ts==2.19.1
 
 # Whisper dependency, pinned to avoid newer multi-GB GPU toolchains.
 triton==2.3.1
+
+# Explicit English grapheme-to-phoneme model, also used by the historical Kokoro pipeline.
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl

@@ -1,0 +1,20 @@
+{
+  "boss": "boss-atheon",
+  "arena": "arena-glass-throne",
+  "language": "en-US",
+  "voice": "af_heart",
+  "narration": "Atheon, Time's Conflux, is a powerful Vex entity and the final boss of the Vault of Glass.\nBut Atheon isn't simply another machine built for war.\nIt is connected to the Vault's mysterious experiments with time and reality.",
+  "title": "",
+  "sceneLabel": "Who Is Atheon?",
+  "quality": "balanced",
+  "duration": 15.3,
+  "subtitles": true,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "animation": "reveal",
+  "camera": "reveal",
+  "music": "",
+  "musicCredit": "",
+  "frames": 459
+}

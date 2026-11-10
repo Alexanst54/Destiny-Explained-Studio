@@ -2,15 +2,15 @@
 
 [Ouvrir le notebook dans Colab](https://colab.research.google.com/github/Alexanst54/Destiny-Explained-Studio/blob/feat/standalone-colab-production-studio/remotion/blender/Destiny-Studio-Colab-Pro.ipynb)
 
-Une seule interface, sans PC local ni terminal : Atlas → Blender → Kokoro français → alignement réel des mots → Remotion → MP4 H.264/AAC. **GitHub Actions est facultatif et ne participe à aucune étape de production, de validation ou de téléchargement.** Les outils et modèles sont téléchargés depuis leurs distributions officielles, pas depuis des artefacts Actions.
+Une seule interface, sans PC local ni terminal : Atlas → Blender → Kokoro anglais/français → horodatages des mots → Remotion → MP4 H.264/AAC. **GitHub Actions est facultatif et ne participe à aucune étape de production, de validation ou de téléchargement.** Les outils et modèles sont téléchargés depuis leurs distributions officielles, pas depuis des artefacts Actions.
 
 ## Du boss au MP4
 
 1. Ouvrir Colab dans Android Chrome, se connecter et choisir un runtime GPU T4 si disponible. Exécuter la cellule 1, autoriser le montage de son Drive. Elle installe Blender officiel 4.3.2, Node 22.23.4, les dépendances npm verrouillées et un environnement vocal isolé (Torch/torchaudio CPU 2.6, Kokoro 0.9.4, stable-ts). L’installation initiale et les modèles nécessitent plusieurs Go libres et une connexion réseau.
 2. Exécuter le formulaire. Les six boss réellement disponibles sont proposés : Athéon, Templier, Cropta, Oryx, Rhulk, Nezarec. Les quatre derniers restent des prototypes, sans nouvelle approbation artistique. Les listes d’animation/caméra/arène changent avec le boss. Une seule arène est proposée si le générateur n’en implémente qu’une. Aucun modèle générique ne remplace un boss absent.
-3. Choisir qualité, durée (2–600 secondes, arrondie à une frame), texte français, voix `ff_siwis`, sous-titres, résolution, 24/30 FPS et dossier Drive. Un fichier musical fourni est facultatif ; renseigner sa provenance/licence. Aucune musique du jeu n’est téléchargée. Enregistrer le projet.
+3. Choisir qualité, durée (2–600 secondes, arrondie à une frame), texte dans la langue choisie, langue `fr-FR`/voix `ff_siwis` ou `en-US`/voix `af_heart`, sous-titres, résolution, 24/30 FPS et dossier Drive. Un fichier musical fourni est facultatif ; renseigner sa provenance/licence. Aucune musique du jeu n’est téléchargée. Enregistrer le projet.
 4. Lancer le **smoke-test de deux secondes** : même boss/animation/caméra, Draft, résolution réduite conservant le ratio de sortie (320×240 pour Preview), LOD0, phrase française « Voici ce boss. ». Vérifier visuellement et écouter le MP4. Le smoke-test ne constitue pas une validation du rendu final HD ou de toutes les animations.
-5. Cocher l’inspection du smoke et lancer la production. Kokoro utilise le chargeur et la révision déjà épinglés du pipeline existant ; un adaptateur séparé sélectionne le français. Le modèle multilingue Whisper `base`/stable-ts aligne les mots sur la vraie parole. Les légendes n’utilisent pas des durées uniformes inventées. Les épisodes historiques et leur voix anglaise restent inchangés.
+5. Cocher l’inspection du smoke et lancer la production. Kokoro utilise le chargeur et la révision déjà épinglés du pipeline existant ; un adaptateur séparé sélectionne le français ou l’anglais. Le français utilise Whisper `base`/stable-ts pour l’alignement sur la parole réelle ; l’anglais réutilise les timestamps natifs de synthèse du pipeline Kokoro existant. Les légendes n’utilisent pas des durées uniformes inventées. Les épisodes historiques et leur voix anglaise restent inchangés.
 6. Si la narration dépasse la durée demandée, le studio refuse avant les images de production. Augmenter la durée dans **un nouveau projet**, ou raccourcir le texte. La parole n’est jamais tronquée ni accélérée. Après les images, Remotion assemble une vraie séquence, la voix et les sous-titres ; la musique fournie est mixée à faible volume et bouclée.
 7. Le dernier formulaire vérifie de nouveau le fichier, affiche la vidéo et permet son téléchargement. Une copie permanente est déjà dans Drive. Les vérifications portent sur codec H.264/yuv420p, AAC, FPS, dimensions, nombre de frames décodées, durées audio/vidéo, décodage complet et audio non silencieux.
 
@@ -49,3 +49,7 @@ La cellule 6 du notebook peut vérifier les backends/appareils réels et une rep
 - Archiver les rapports et le résultat de revue humaine dans Drive.
 
 Les tests Colab/T4/Android et les performances GPU restent non validés tant qu’ils n’ont pas été exécutés. Le rendu local et son rapport sont documentés dans [VALIDATION.md](VALIDATION.md). La facturation GitHub Actions ne peut pas bloquer ce notebook : aucune API Actions ni attente de statut CI n’est utilisée.
+
+## Pilote anglais — Atheon
+
+[Who Is Atheon, Time’s Conflux?](../../episodes/atheon-explained-en/README.md) : six scènes fournies, `en-US`, `af_heart`, titres et sous-titres anglais, format vertical 9:16. La cellule dédiée du notebook prépare uniquement la voix et les sélections de scènes dans Drive. Le plan mesuré fait 89,067 secondes sans accélération ni coupe. Le rendu complet est différé à la session Colab Tesla T4 de l’utilisateur. Le français reste disponible et ses preuves antérieures sont conservées.

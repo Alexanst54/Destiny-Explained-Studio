@@ -1,0 +1,20 @@
+{
+  "boss": "boss-atheon",
+  "arena": "arena-glass-throne",
+  "language": "en-US",
+  "voice": "af_heart",
+  "narration": "Inside the Vault, the Vex possess powers that go far beyond their ordinary capabilities.\nThe Oracles can mark Guardians for erasure, while the Templar enforces the Vault's deadly rules.\nAtheon stands at the center of this temporal domain.",
+  "title": "",
+  "sceneLabel": "The Vault of Glass",
+  "quality": "balanced",
+  "duration": 15.733333333333333,
+  "subtitles": true,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "animation": "temporal",
+  "camera": "three-quarter",
+  "music": "",
+  "musicCredit": "",
+  "frames": 472
+}

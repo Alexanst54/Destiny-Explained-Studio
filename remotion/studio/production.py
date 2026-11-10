@@ -7,7 +7,8 @@ from universal.registry import index,implementations
 from universal.request import request,VIEWS
 from universal.cache import atomic_json,valid_png,source_hashes
 VERSION=1
-VOICES=['ff_siwis']
+LANGUAGES={'fr-FR':dict(kokoro='f',alignment='fr',voices=['ff_siwis'],smoke='Voici ce boss.'),'en-US':dict(kokoro='a',alignment='en',voices=['af_heart'],smoke='Meet this boss.')}
+VOICES=[v for x in LANGUAGES.values() for v in x['voices']]
 RESOLUTIONS={'Preview':(320,240),'SD':(640,360),'HD':(1280,720),'Full HD':(1920,1080),'Portrait':(1080,1920)}
 
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -17,8 +18,9 @@ def validate(config):
  c=dict(config);model=next((e for e in options() if e['id']==c.get('boss')),None)
  if not model:raise ValueError('Boss non implémenté : aucun modèle de remplacement.')
  if c.get('camera') not in model['cameras']:raise ValueError('Caméra incompatible avec ce boss.')
- if c.get('voice') not in VOICES:raise ValueError('Voix française non prise en charge.')
- if not isinstance(c.get('narration'),str) or not c['narration'].strip():raise ValueError('Saisissez une narration française.')
+ c.setdefault('language','fr-FR')
+ if c['language'] not in LANGUAGES or c.get('voice') not in LANGUAGES[c['language']]['voices']:raise ValueError('Unsupported language/voice combination.')
+ if not isinstance(c.get('narration'),str) or not c['narration'].strip():raise ValueError('Enter narration in the selected language.')
  if type(c.get('duration')) not in [int,float] or not math.isfinite(c['duration']) or not 2<=c['duration']<=600:raise ValueError('Durée attendue : 2 à 600 secondes.')
  if type(c.get('subtitles')) is not bool:raise ValueError('Sous-titres : booléen requis.')
  if c.get('music') and not c.get('musicCredit'):raise ValueError('Indiquez la provenance ou licence de votre musique.')
@@ -32,7 +34,7 @@ def validate(config):
 
 def smoke_config(config):
  c=dict(config);scale=max(320/c['width'],240/c['height'])
- c.update(duration=2,width=math.ceil(c['width']*scale/2)*2,height=math.ceil(c['height']*scale/2)*2,narration='Voici ce boss.',quality='draft',music='',musicCredit='')
+ c.update(duration=2,width=math.ceil(c['width']*scale/2)*2,height=math.ceil(c['height']*scale/2)*2,narration=LANGUAGES[c.get('language','fr-FR')]['smoke'],quality='draft',music='',musicCredit='')
  return c
 
 def chunks(c):
@@ -66,14 +68,16 @@ def narration(c,folder):
  """Reuse pinned existing Kokoro loader; French has real multilingual forced alignment."""
  import numpy as np,soundfile as sf
  sys.path.insert(0,str(ROOT/'remotion/scripts'));from narration import KokoroProvider,words_from_tokens,SAMPLE_RATE
- cfg=json.loads((ROOT/'remotion/config/narration.json').read_text())['kokoro'];cfg.update(language='f',voice=c['voice'],threads=2,speed=1.0)
+ cfg=json.loads((ROOT/'remotion/config/narration.json').read_text())['kokoro'];locale=c.get('language','fr-FR');language=LANGUAGES[locale];cfg.update(language=language['kokoro'],voice=c['voice'],threads=2,speed=1.0)
  key=hashlib.sha256(json.dumps([c['narration'],cfg,sha(__file__)],sort_keys=True).encode()).hexdigest();audio=folder/'speech.wav';meta=folder/'speech.json'
  if meta.exists() and audio.exists():
   saved=json.loads(meta.read_text())
   if saved['key']==key and saved['sha256']==sha(audio):return saved
- print('Synthèse française Kokoro (premier téléchargement des poids si nécessaire)...',flush=True)
- provider=KokoroProvider(cfg);parts=[]
+ print('Kokoro narration: '+locale+' (model download on first use)...',flush=True)
+ provider=KokoroProvider(cfg);parts=[];native_words=[];offset=0
  for chunk in speech_chunks(c['narration']):
+  if locale=='en-US':
+   chunk_audio,words=provider.synthesize(chunk);parts.append(chunk_audio);native_words.extend(dict(text=w['text'],start=w['start']+offset,end=w['end']+offset) for w in words);offset+=len(chunk_audio)/SAMPLE_RATE;continue
   phonemes,_=provider.pipeline.g2p(chunk)
   if not phonemes or len(phonemes)>510:raise ValueError('Segment phonétique incompatible ; reformulez le texte. Aucune troncature autorisée.')
   for result in provider.pipeline(chunk,voice=provider.voice,speed=1.0,split_pattern=None):
@@ -84,13 +88,16 @@ def narration(c,folder):
  if not np.isfinite(samples).all() or np.max(np.abs(samples))<1e-5:raise ValueError('Parole invalide ou silencieuse.')
  if np.max(np.abs(samples))>.98:samples*=.98/np.max(np.abs(samples))
  sf.write(audio,samples,SAMPLE_RATE,subtype='PCM_16')
- print('Alignement français sur la parole réelle...',flush=True)
- import stable_whisper
- aligned=stable_whisper.load_model('base',device='cpu',download_root=str(Path(os.environ.get('DESTINY_MODEL_CACHE',str(folder.parent/'model-cache')))/'whisper')).align(str(audio),c['narration'],language='fr')
- if aligned is None:raise ValueError('Alignement français impossible ; aucune légende estimée ne sera inventée.')
- tokens=[dict(text=w['word'],start=w['start'],end=w['end']) for s in aligned.to_dict()['segments'] for w in s['words']]
- words=words_from_tokens(c['narration'],tokens,len(samples)/SAMPLE_RATE)
- result=dict(key=key,sha256=sha(audio),seconds=len(samples)/SAMPLE_RATE,words=words,voice=c['voice'],language='fr',alignment='stable-ts multilingual base / French forced alignment',kokoro=cfg)
+ if locale=='en-US':
+  words=native_words;method=provider.method
+ else:
+  print('Alignement français sur la parole réelle...',flush=True)
+  import stable_whisper
+  aligned=stable_whisper.load_model('base',device='cpu',download_root=str(Path(os.environ.get('DESTINY_MODEL_CACHE',str(folder.parent/'model-cache')))/'whisper')).align(str(audio),c['narration'],language='fr')
+  if aligned is None:raise ValueError('Alignement français impossible ; aucune légende estimée ne sera inventée.')
+  tokens=[dict(text=w['word'],start=w['start'],end=w['end']) for s in aligned.to_dict()['segments'] for w in s['words']]
+  words=words_from_tokens(c['narration'],tokens,len(samples)/SAMPLE_RATE);method='stable-ts multilingual base / French forced alignment'
+ result=dict(key=key,sha256=sha(audio),seconds=len(samples)/SAMPLE_RATE,words=words,voice=c['voice'],language=language['alignment'],locale=locale,alignment=method,kokoro=cfg)
  atomic_json(meta,result);return result
 
 def prepare(config,folder):
@@ -136,7 +143,7 @@ def render(c,folder,blender,node='node',chrome=None):
    f=r['frames'][str(local)];source=out/f['file'];target=public/'frames'/f'frame-{start+local:06d}.png'
    if f['sourceFrame']!=start+local or not valid_png(source,c['width'],c['height'],f['sha256']):raise ValueError('Frame Blender invalide.')
    if not valid_png(target,c['width'],c['height'],f['sha256']):shutil.copyfile(source,target)
- props=dict(width=c['width'],height=c['height'],fps=c['fps'],frames=c['frames'],words=speech['words'],subtitles=c['subtitles'],music=bool(c.get('music')));atomic_json(folder/'props.json',props)
+ props=dict(width=c['width'],height=c['height'],fps=c['fps'],frames=c['frames'],words=speech['words'],subtitles=c['subtitles'],music=bool(c.get('music')),title=c.get('title',''),sceneLabel=c.get('sceneLabel',''));atomic_json(folder/'props.json',props)
  output=folder/'video.mp4';pending=folder/'pending.mp4';cmd=[node,ROOT/'remotion/node_modules/@remotion/cli/remotion-cli.js','render',ROOT/'remotion/studio/index.tsx','DestinyProductionStudio',pending,'--props',folder/'props.json','--public-dir',public,'--codec','h264','--audio-codec','aac','--pixel-format','yuv420p','--image-format','png','--color-space','bt709','--concurrency','1']
  if chrome:cmd+=['--browser-executable',chrome]
  run_command(cmd,folder/'logs/remotion.log');proof=verify(pending,c);pending.replace(output)

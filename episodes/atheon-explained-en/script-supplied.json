@@ -1,0 +1,20 @@
+{
+  "id": "atheon-explained-en",
+  "series": "Destiny Explained",
+  "episode": 1,
+  "title": "Who Is Atheon, Time's Conflux?",
+  "language": "en-US",
+  "voice": "af_heart",
+  "targetDurationSeconds": [85, 95],
+  "format": {"width": 1080, "height": 1920, "fps": 30},
+  "boss": "boss-atheon",
+  "arena": "arena-glass-throne",
+  "scenes": [
+    {"id": "01-hook", "label": "The Hook", "camera": "environment", "animation": "idle", "narration": "What if an enemy could erase you from time itself?\nDeep beneath Venus lies the Vault of Glass, a place where the Vex bend reality to their will.\nAnd at its heart stands Atheon."},
+    {"id": "02-identity", "label": "Who Is Atheon?", "camera": "reveal", "animation": "reveal", "narration": "Atheon, Time's Conflux, is a powerful Vex entity and the final boss of the Vault of Glass.\nBut Atheon isn't simply another machine built for war.\nIt is connected to the Vault's mysterious experiments with time and reality."},
+    {"id": "03-vault", "label": "The Vault of Glass", "camera": "three-quarter", "animation": "temporal", "narration": "Inside the Vault, the Vex possess powers that go far beyond their ordinary capabilities.\nThe Oracles can mark Guardians for erasure, while the Templar enforces the Vault's deadly rules.\nAtheon stands at the center of this temporal domain."},
+    {"id": "04-time", "label": "Master of Time?", "camera": "environment", "animation": "temporal", "narration": "During the battle, Atheon sends Guardians through temporal portals, forcing them to fight across different versions of the Vault.\nBut there is an important distinction.\nThe Vex's power inside the Vault does not mean they control all of time throughout the universe."},
+    {"id": "05-guardians", "label": "The Guardians", "camera": "three-quarter", "animation": "combat", "narration": "To defeat Atheon, Guardians must work together, destroy the Oracles, and use the Aegis to survive the Vault's temporal threats.\nAgainst impossible odds, they bring down the Conflux."},
+    {"id": "06-mystery", "label": "The Mystery", "camera": "close-up", "animation": "idle", "narration": "Yet the Vault of Glass remains one of the greatest mysteries in Destiny.\nAtheon was defeated.\nBut the Vex are still searching for a future where their calculations become reality.\nAnd the question remains...\nWhat else is hidden inside the Vault?"}
+  ]
+}
