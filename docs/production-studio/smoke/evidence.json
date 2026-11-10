@@ -1,0 +1,20 @@
+{
+  "status": "actual-local-CPU-evidence",
+  "gpuValidated": false,
+  "files": {
+    "blender-report.json": "7df05e2321b58af91a4f37929c6595d1102b393a4cf3b101ec985ed0b9e54317",
+    "caption-preview.png": "257a2fc3e5262ec6c70d519e0366a62bc6240e9d97ba5528e45fc5fb194e244a",
+    "music-no-captions.mp4": "ffb4fa624658945d90345a0900b2db7b76f43c049e87367d6bc537bf5ef5b347",
+    "music-proof.json": "5944ed89fed8ac9a3c0fbbf6b37e0a67474561b7fad35d544f95878c52e7b336",
+    "music-props.json": "b8a142695ec03418fdf552fbf12b329a4d7c89e15b2b0b8173bcfe1be3bec177",
+    "music-validation.json": "0c6273e609eac18f62e3a24a0487e8226f7cacec98c0460d89b732720b54d289",
+    "project.json": "ffa5942c070450f5290d739867bc6ec52cbf1432bf2f5fcce6b0d0007abd2135",
+    "props.json": "23d6e00e2c225a1d5b2e215582a7e32050feb4a3786c686146d3ace6d76e4103",
+    "resume-proof.json": "c62258ff0ac6dd0a60431a79f060ea6d4192173b75fae54b5d63db17f0ec8445",
+    "selection.json": "59cf8c206ab74a890cb92f627c1b884815d28cdc49e4ab165bb96cec04dd1a00",
+    "speech.json": "67eb889284e7cc736c2a636b8db1e8a78b7d53d1250c0a83081415278f3e54cb",
+    "speech.wav": "15e736f3eda9f7ca5534414b585be0abcb815f7178bcfea78620199e0a70f2ef",
+    "validation.json": "2f3fb8fa5417fec5ef8e2cafe8295e01326a1ad313ef620dcfb3119e4650392a",
+    "video.mp4": "e7872ced51640a6ddb6fd6d278fcad380a0320e4f2e8420856fc9409e6f2185f"
+  }
+}

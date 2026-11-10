@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-10",
+  "status": "local-CPU-validated",
+  "node": 113,
+  "python": {
+    "studio": 7,
+    "blender": 56,
+    "manifest": 4,
+    "narration": 10,
+    "total": 77
+  },
+  "typescript": [
+    "studio",
+    "historical-app",
+    "universal-atlas"
+  ],
+  "realBlenderSmokeFrames": 48,
+  "smokeSeconds": 2,
+  "gpuValidated": false,
+  "colabValidated": false,
+  "androidValidated": false,
+  "actionsRequired": false,
+  "sourceCommit": "bb3cc119b670c67fd13c6a935e0e073ff1480ffb",
+  "fullLengthRendered": false
+}

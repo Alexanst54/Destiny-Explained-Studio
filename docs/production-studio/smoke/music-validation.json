@@ -1,0 +1,110 @@
+{
+  "duration": 2.0,
+  "frames": 48,
+  "fps": 24,
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "width": 320,
+  "height": 240,
+  "status": "passed",
+  "sha256": "ffb4fa624658945d90345a0900b2db7b76f43c049e87367d6bc537bf5ef5b347",
+  "speechSeconds": 1.775,
+  "alignedWords": 3,
+  "backends": [
+    {
+      "requested": "auto",
+      "selected": "CPU",
+      "backend": null,
+      "devices": [],
+      "notes": [
+        "No compatible Cycles GPU found; CPU fallback selected."
+      ],
+      "samples": 16,
+      "lod": 0,
+      "threads": 3,
+      "designSha256": "23e86cb30e5eb3d3a349cdb8dda1749f796a0f26d7af2a7df88dfc74b3544797",
+      "boxes": 2669,
+      "designCacheHit": true,
+      "batchedMeshes": 42,
+      "batchedEnvironmentMeshes": 4,
+      "batchedBossMeshes": 38,
+      "persistentData": true,
+      "bounces": 3,
+      "denoise": true,
+      "adaptiveThreshold": 0.11999999731779099,
+      "hazeDensity": 0.00019999999494757503,
+      "viewTransform": "AgX",
+      "sceneStyle": {
+        "studioGround": true,
+        "worldColor": "#43332d",
+        "worldStrength": 0.2,
+        "hazeFactor": 0.1,
+        "hazeColor": "#d3aa77",
+        "fogPosition": [
+          0,
+          22,
+          16
+        ],
+        "fogScale": [
+          85,
+          100,
+          40
+        ],
+        "lights": [
+          [
+            "Pyramid key",
+            [
+              -15,
+              -15,
+              27
+            ],
+            [
+              0,
+              12,
+              9
+            ],
+            16000,
+            "#eed9b1",
+            10
+          ],
+          [
+            "Red fill",
+            [
+              17,
+              1,
+              18
+            ],
+            [
+              0,
+              12,
+              10
+            ],
+            5000,
+            "#c25e48",
+            10
+          ],
+          [
+            "Resonance rim",
+            [
+              0,
+              29,
+              25
+            ],
+            [
+              0,
+              12,
+              10
+            ],
+            18000,
+            "#ffe1a7",
+            8
+          ]
+        ]
+      },
+      "bossBoxes": 5477,
+      "bossDesignSha256": "e37be30dd86bc2ade3710c84977efa28a4186888c66327139e4bf90be59c2914",
+      "joints": 22
+    }
+  ],
+  "gpuValidated": false
+}
