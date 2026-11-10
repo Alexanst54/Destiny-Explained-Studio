@@ -168,6 +168,7 @@ def preflight(folder,options,blender,node,allow_cpu=False,require_gpu=True,chrom
   if require_gpu and not allow_cpu:raise ValueError('Select a Colab GPU runtime, reconnect and prepare again. CPU is not enabled for this time-conscious episode run.')
  report=dict(status='passed',sourceCommit=project['sourceCommit'],fingerprint=project['fingerprint'],space=space,detectedDevice=device,renderingGpuValidated=False,gpuReadyForSceneRendering=gpu,preparedSpeechReused=True,frames=TOTAL_FRAMES,seconds=TOTAL_FRAMES/FPS,options=options)
  atomic_json(folder/'reports/preflight.json',report)
+ tools.update(device=device,allow_cpu=allow_cpu)
  return package,tools,project
 
 def install_inputs(folder,package,options):
@@ -228,9 +229,11 @@ def render_scene(folder,item,config,tools,scene_index,episode_done):
   report=trusted_chunk(out,config,part,tools)
   if report:reused+=part['frames'];print(f"Reused {scene_id} frames {part['start']}–{part['start']+part['frames']-1}",flush=True)
   else:
+   device=tools.get('device',{})
+   if not tools.get('allow_cpu',False) and not (device.get('selected')=='GPU' and device.get('backend') in ['OPTIX','CUDA']):raise ValueError('Missing frames need an NVIDIA OPTIX/CUDA runtime. Select a GPU and resume, or explicitly enable CPU rendering. Completed scenes are preserved.')
    # Never delete unknown/partial files. Only a manifest-bound directory can resume.
    if out.exists() and not (out/'progress.json').exists():
-    archived=folder/'recovery'/f'{scene_id}-{part["start"]}-{time.time_ns()}';archived.parent.mkdir(exist_ok=True);out.rename(archived)
+    archived=folder/'recovery'/f'{scene_id}-{part["start"]}-{time.time_ns()}';archived.parent.mkdir(exist_ok=True);out.rename(archived);print('Preserved untrusted chunk in '+str(archived),flush=True)
    cmd=[sys.executable,ROOT/'remotion/blender/render_universal.py',config['boss'],out,'--blender',tools['blender'],'--device','auto','--threads',3,'--frames',part['frames'],'--start-frame',part['start'],'--fps',FPS,'--width',config['width'],'--height',config['height'],'--quality',config['quality'],'--lod',0,'--view',config['camera'],'--animation',config['animation'],'--arena',config['arena'],'--timeout',7200]
    if out.exists():cmd+=['--resume']
    run_task(cmd,folder/'logs'/f'{scene_id}.log',progress_callback(out,config,part,episode_done,scene_index))
@@ -320,7 +323,7 @@ def main():
  opts=settings(a.width,a.height,a.quality)
  with locked(a.output) as folder:
   try:
-   package,tools,project=preflight(folder,opts,a.blender,a.node,a.allow_cpu,require_gpu=a.action in ['smoke','render'],chrome=a.chrome);install_inputs(folder,package,opts)
+   package,tools,project=preflight(folder,opts,a.blender,a.node,a.allow_cpu,require_gpu=False,chrome=a.chrome);install_inputs(folder,package,opts)
    atomic_json(folder/'reports/activity.json',dict(status='running',action=a.action))
    if a.action=='smoke':
     render_scenes(folder,package,opts,tools,[package['scenes'][0]['scene']['id']]);assemble(folder,package,opts,tools,project,True,a.chrome)

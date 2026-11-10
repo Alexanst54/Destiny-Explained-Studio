@@ -32,7 +32,7 @@ Free-space checks reserve a conservative uncompressed PNG/export bound. At the d
 4. Keep `project.json`, `public/scenes/`, `scenes/`, `inputs/`, logs and reports. `public/scenes/<scene>/frames/chunk-*/` is the actual persistent frame cache, not a disposable public-copy directory. Do not delete it until the final export is safely stored.
 5. On deliberate interruption, the dedicated notebook action sends SIGINT so the existing renderer can stop its separately-sessioned Blender worker. A still-running action retains a project lock and a second action refuses to overlap it. A lost VM releases the lock; atomic frame manifests allow recovery in a new runtime.
 
-GPU is requested automatically for scene rendering. B/C stop early without NVIDIA OPTIX/CUDA unless CPU rendering is explicitly enabled; CPU fallback during rendering is reported and can be slow. **Assembly and validation do not require a current GPU** when cached frames already exist. The report distinguishes per-frame actual devices/backends, CPU frames, and actual T4 rendering. Probe-only detection never counts as rendered GPU validation.
+GPU is requested automatically for scene rendering. B/C stop before rendering any missing frames without NVIDIA OPTIX/CUDA unless CPU rendering is explicitly enabled; CPU fallback during rendering is reported and can be slow. **Assembly and validation do not require a current GPU** when cached frames already exist. The report distinguishes per-frame actual devices/backends, CPU frames, and actual T4 rendering. Probe-only detection never counts as rendered GPU validation.
 
 ## Validation and preserved inputs
 

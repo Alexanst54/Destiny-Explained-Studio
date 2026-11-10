@@ -12,7 +12,7 @@ def fixture_png(width,height,value):
 
 class CompleteAtheon(unittest.TestCase):
  @classmethod
- def setUpClass(cls):cls.package=ep.load_package();cls.options=ep.settings();cls.tools=dict(blender='fixture-only',node='node',blenderVersion='fixture version\n')
+ def setUpClass(cls):cls.package=ep.load_package();cls.options=ep.settings();cls.tools=dict(blender='fixture-only',node='node',blenderVersion='fixture version\n',allow_cpu=True)
  def test_original_package_timing_voice_and_scene_specific_controls(self):
   p=self.package;configs=ep.configs(p,self.options)
   self.assertEqual(len(p['scenes']),6);self.assertEqual(sum(c['frames'] for c in configs),2672)
@@ -65,8 +65,9 @@ class CompleteAtheon(unittest.TestCase):
     with self.assertRaises(RuntimeError):ep.render_scene(folder,item,c,self.tools,0,0)
     resumed=ep.render_scene(folder,item,c,self.tools,0,0);self.assertEqual((resumed['framesReusedThisInvocation'],resumed['newFramesThisInvocation']),(2,1))
    with patch.object(ep,'run_task') as launch:
-    warm=ep.render_scene(folder,item,c,self.tools,0,0);launch.assert_not_called();self.assertEqual(warm['framesReusedThisInvocation'],3)
+    warm=ep.render_scene(folder,item,c,{**self.tools,'allow_cpu':False,'device':dict(selected='CPU')},0,0);launch.assert_not_called();self.assertEqual(warm['framesReusedThisInvocation'],3)
    before=ep.sha(out/'frame-0000.png');(out/'frame-0001.png').write_bytes(b'bad')
+   with self.assertRaises(ValueError):ep.render_scene(folder,item,c,{**self.tools,'allow_cpu':False,'device':dict(selected='CPU')},0,0)
    with patch.object(ep,'run_task',side_effect=worker):fixed=ep.render_scene(folder,item,c,self.tools,0,0)
    self.assertEqual((fixed['framesReusedThisInvocation'],fixed['newFramesThisInvocation']),(2,1));self.assertEqual(ep.sha(out/'frame-0000.png'),before)
    wrong=ep.read(out/'progress.json');wrong['request']['binding']['selectionId']='boss-templar';ep.atomic_json(out/'progress.json',wrong);self.assertIsNone(ep.trusted_chunk(out,c,part,self.tools))
@@ -87,7 +88,7 @@ class CompleteAtheon(unittest.TestCase):
  def test_interrupt_allows_child_controller_to_reap_separate_worker_session(self):
   with tempfile.TemporaryDirectory() as tmp:
    folder=pathlib.Path(tmp);child=folder/'child.py';marker=folder/'sigint';pidfile=folder/'worker.pid'
-   child.write_text("import os,signal,subprocess,sys,time\nfrom pathlib import Path\nworker=subprocess.Popen([sys.executable,'-c','import time;time.sleep(60)'],start_new_session=True)\nPath(sys.argv[1]).write_text(str(worker.pid))\ndef stop(sig,frame):\n Path(sys.argv[2]).write_text('SIGINT')\n os.killpg(worker.pid,signal.SIGKILL)\n worker.wait(timeout=5)\n raise KeyboardInterrupt\nsignal.signal(signal.SIGINT,stop)\nwhile True:time.sleep(.1)\n")
+   child.write_text("import os,signal,subprocess,sys,time\nfrom pathlib import Path\nworker=subprocess.Popen([sys.executable,'-c','import time;time.sleep(60)'],start_new_session=True)\ndef stop(sig,frame):\n Path(sys.argv[2]).write_text('SIGINT')\n os.killpg(worker.pid,signal.SIGKILL)\n worker.wait(timeout=5)\n raise KeyboardInterrupt\nsignal.signal(signal.SIGINT,stop)\nPath(sys.argv[1]).write_text(str(worker.pid))\nwhile True:time.sleep(.1)\n")
    code="import sys;sys.path.insert(0,sys.argv[1]);from complete_atheon import run_task;run_task([sys.executable,sys.argv[2],sys.argv[3],sys.argv[4]],sys.argv[5])"
    proc=subprocess.Popen([sys.executable,'-c',code,str(pathlib.Path(ep.__file__).parent),str(child),str(pidfile),str(marker),str(folder/'log')],stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL,start_new_session=True)
    worker=None
