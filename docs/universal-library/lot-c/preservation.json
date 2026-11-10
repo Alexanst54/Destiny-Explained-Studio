@@ -1,0 +1,308 @@
+{
+  "base": "2baffffecfaebe3f803efb3a5d8f5ca001b364cf",
+  "pr22Head": "e3a7e2c84e8c8983829c7b71164eeb108787ca0a",
+  "protected": {
+    "docs/previews/cinematic-vex-0.9.1/README.md": "dc7ea90c91507804ff56ee854cd71de4bfb144ffdb29b6baa0a56942262e99e6",
+    "docs/previews/cinematic-vex-0.9.1/after/front.png": "dbc4a39fcf622761878bf1ba5890e99c068494e403dcd775e17f76d1605acb18",
+    "docs/previews/cinematic-vex-0.9.1/after/head-torso.png": "cfcb8ac37206a5d98589dd2a1993c4aad1851ca6ce3f4eaff7d334e5ff735adb",
+    "docs/previews/cinematic-vex-0.9.1/after/low-angle.png": "56a74692569f5fe4c9f3510a6c7a84f97cdaad20f1703c76b5737a8cdb20c3b7",
+    "docs/previews/cinematic-vex-0.9.1/after/profile.png": "2cf2b0a4b6b504d3f7a9cd08e57ef3237bb0e1327dbcde41cd3eb012630eef48",
+    "docs/previews/cinematic-vex-0.9.1/after/templar.png": "3c5d685a43816d421377b3f7c9aed96884bcf4673030edadf3fc77fb9298c02b",
+    "docs/previews/cinematic-vex-0.9.1/after/throne.png": "febd01c5f1f892b84a5cfecd3f70276f5d112d41ebdb64ba424b3401af9276ff",
+    "docs/previews/cinematic-vex-0.9.1/before/front.png": "f199eb3ab7e65f3a25c123fd471369619ce667533d42c963587c12b064274a6b",
+    "docs/previews/cinematic-vex-0.9.1/before/head-torso.png": "58ffc127ac897d0272c2356a1f74f9f476bd1fe04bd0c0dc7aa0304449193cc7",
+    "docs/previews/cinematic-vex-0.9.1/before/low-angle.png": "44ce732573ccfa7a3787944637efd692abcefb22c90fcc1f3cdd5731b0c82f59",
+    "docs/previews/cinematic-vex-0.9.1/before/profile.png": "ff253cbff370ce8798f3ff2ad218bd8818523bbf4443307e9a40f9f8c0f047e4",
+    "docs/previews/cinematic-vex-0.9.1/before/templar.png": "742d7d7ad85486b5d426f9912e88ecb5962ad9e6d676235361a860bf04ed18db",
+    "docs/previews/cinematic-vex-0.9.1/before/throne.png": "8b00636f00c920413f0393efced6d879090b970a5e25d70a5c9d088ba1155a68",
+    "docs/previews/cinematic-vex-0.9.1/clips/temporal-0000.png": "44e1124b69a4d2ed82f1945575cbc0bb6d88cfe3072087de6755e66e46b2be93",
+    "docs/previews/cinematic-vex-0.9.1/clips/temporal-0018.png": "2f225eb5c9093fa3fb3b4ac495079329342ac4ebb37ff1555951adebe028c2cf",
+    "docs/previews/cinematic-vex-0.9.1/clips/temporal-0035.png": "9a1d801c5983a74ececd034dbe65f1c3ded33d99dd450d15cfdbc919d3b7bdce",
+    "docs/previews/cinematic-vex-0.9.1/clips/temporal.mp4": "b8acc7606813ae4fc2ba95044f7e8d93015fe022547fcebf35b1da9221a4ff42",
+    "docs/previews/cinematic-vex-0.9.1/clips/walk-0000.png": "9fe5f7efceb9f0e847030c6c29b66f6524163bb1b0c8a335d83418238efa8ccf",
+    "docs/previews/cinematic-vex-0.9.1/clips/walk-0018.png": "77e3068a1bed86b6482b7b232e75c82499fa6b7905c4abbd8dd6451fd2428c06",
+    "docs/previews/cinematic-vex-0.9.1/clips/walk-0047.png": "4656107e8c0efeae4c734779d1973c1517aa01b63fa62785cf3b348845627125",
+    "docs/previews/cinematic-vex-0.9.1/clips/walk.mp4": "84a4bec2ee9fbb30dbffa43c87451cef6324c362dc36ed68edcd7c680cf73d07",
+    "docs/previews/cinematic-vex-0.9.1/evidence.json": "b0c1466345c99f9d8593fb7db15c145063c2d54e5812d543511f3d1e1d86f9ea",
+    "docs/previews/cinematic-vex-0.9.1/reports/front-after.json": "92b3393767247ac2c8a2ba891caee2f669add5de59a53b4fcf4d1f46efb1a9e0",
+    "docs/previews/cinematic-vex-0.9.1/reports/front-before.json": "f4386f8b36245bf0beeedd40b2782287cc78d6e016461f07d4d603607de32f23",
+    "docs/previews/cinematic-vex-0.9.1/reports/head-torso-after.json": "dc30dfdff3be5b5cc6c4ca90c9c92af31d3bc4dcb9403264fd424d8d27488620",
+    "docs/previews/cinematic-vex-0.9.1/reports/head-torso-before.json": "595e841c00c3e1490fde0b7a9c19e53c471c7c5a1f8f90cedf8bfa3dd0b5f256",
+    "docs/previews/cinematic-vex-0.9.1/reports/low-angle-after.json": "88cb045be00fd81910ada880f50710056dc4eead253791a337d8fbb2903245d6",
+    "docs/previews/cinematic-vex-0.9.1/reports/low-angle-before.json": "6f7e3572bc7c908e926c0ff190701c9f0677f2c5d825995c55773336250f1a4d",
+    "docs/previews/cinematic-vex-0.9.1/reports/profile-after.json": "d75888232ed1197a89b759f77c7438ff9fd45a6b421f62869123a74007f9479c",
+    "docs/previews/cinematic-vex-0.9.1/reports/profile-before.json": "202cb5b5438848f6d5d8863a51928baaac88e7374cfc10124905a247f94b5671",
+    "docs/previews/cinematic-vex-0.9.1/reports/templar-after.json": "7fd96109c98ced77d1fc94d47654d29ddd3a1dc65623a18fd15249602945c96c",
+    "docs/previews/cinematic-vex-0.9.1/reports/templar-before.json": "f07585ed7e27f43f89e418ca1b8bb45336e2477d0a3d8f7fae67a9ccea67de91",
+    "docs/previews/cinematic-vex-0.9.1/reports/temporal-clip.json": "02ff3824b2e6de3b37b5083ee467b18ce9a830546b836c8c96a817d5ad454214",
+    "docs/previews/cinematic-vex-0.9.1/reports/throne-after.json": "28a5d97aab02fa8e99e9ec82fa8565239ec0512d30fe84187e565e763e3aeb28",
+    "docs/previews/cinematic-vex-0.9.1/reports/throne-before.json": "30ca8ba9796ab958fe24cf3d94e2799d9c851ebb756270e42dd6eb5c3eacfca4",
+    "docs/previews/cinematic-vex-0.9.1/reports/walk-clip.json": "d53dd69d595ec05471c17e3c06be7f2649e6662fc05e584fe9795d7ca6e9229e",
+    "docs/previews/venus-vault/README.md": "369350e433c442ee94c30022996b0c7a2b8cbbe569fe40fe654e0d23a1bc202e",
+    "docs/previews/venus-vault/atheon-walk-0000.png": "89739604951b06c8d85d33a936a13bf4d6e7f5837df004899c06a29527c974ca",
+    "docs/previews/venus-vault/atheon-walk-0018.png": "cbe2ce54ae671256944a9f3f63700f0a033a105e5da19a37aa4b966e56b55bde",
+    "docs/previews/venus-vault/atheon-walk-0047.png": "94cf07669a1666dfd2c35b95f274a2ed18c93e51f912f858f37df4021ffe43f7",
+    "docs/previews/venus-vault/atheon-walk.mp4": "8cf47c4d62fdb799bf10ab3c95b92b801ec20e12309fe3f9408065c1955dd5f7",
+    "docs/previews/venus-vault/atheon-walk.report.json": "8375f57ee48415e54a93f196a37fc5017fff1e9a6324db53fd3508b95dbd95f4",
+    "docs/previews/venus-vault/atheon.png": "ee6548576bf443d2fc8a017afbe168436d7c7da686c0efd9d2ffc34e3ec04da2",
+    "docs/previews/venus-vault/atheon.report.json": "0dab854f300fa4a353c041c195defbca6a1d1fb34172fced29a6cd21cca21ee3",
+    "docs/previews/venus-vault/evidence.json": "b80d8f0232f62ce2d492b8591564dc8211f7e3d5e3dae8817dc3aa68dc199686",
+    "docs/previews/venus-vault/glass-throne.png": "4f5458a800328bb0ce4c86db95d149d9cdb38274360e6f3be73781d45217e248",
+    "docs/previews/venus-vault/glass-throne.report.json": "1b1f2548a150af59df7feaecaf44c392334c427307ae8d32137027407463311f",
+    "docs/previews/venus-vault/templar.png": "1d34f15063c0d5567ab98f6a18f3024d5176f20c4891e78a0ed4716b2e633c4f",
+    "docs/previews/venus-vault/templar.report.json": "e3f674ac15e6c071072e2e99e2ed56f8c12b4b17afa0004d097f2db06e6c0e6b",
+    "docs/previews/venus-vault/templars-well.png": "d283fafe70dad96cc9abc3a629cecd1fdd9c99a5b1597afc1a0e69dff605e20c",
+    "docs/previews/venus-vault/templars-well.report.json": "cb46747c752ffbe1daeba1d32c91b838f82ddbbe37c83a4776145495f1b20359",
+    "docs/previews/venus-vault/venus.png": "60e56a18799a264557570d191cfbf884277cc4fd09706b3f445f5252eb32b2e7",
+    "docs/previews/venus-vault/venus.report.json": "6c7227506c7cf30cf258d01f48416f657f6db12946ebf896c69bddb718b37e44",
+    "docs/universal-library/crota/README.md": "b501d4268ad28ecd1a9e35a419fe2ab55375e12e82cf9f65b8b06c3b56b8c4ec",
+    "docs/universal-library/crota/attack-0000.png": "9b678bda9659bcd8455f7780395101e97297c53382364de3f5efe4ed4e2e81da",
+    "docs/universal-library/crota/attack-0012.png": "9a88ad9d2d1588e3fe1db0326acd7f235124bdd7548fb8c24fb67f972195f7e9",
+    "docs/universal-library/crota/attack-0023.png": "87854ee0f8fc11cea9d1f1deaf134dd8b0bfa57fe079b1728d8555be66505e5a",
+    "docs/universal-library/crota/attack-report.json": "9dfc1e82a349e139042028a2f9b4c11eec00d50d9540a51b2bd9d8071ef92160",
+    "docs/universal-library/crota/attack.mp4": "a1bb579050f2d7b6316dcc401aaf5ed8ca89b8ee494270c56ff747ba7edacaae",
+    "docs/universal-library/crota/environment-report.json": "cb20a416062f3409b9952a4b01ae64c3b1b1a9bea36b2c87e92748a3a639b5fd",
+    "docs/universal-library/crota/environment.png": "0d9fbe3999c6d4fbe53dc2d23e839138a7b1e8a4ca8fcd68c29a96fe2ad359ff",
+    "docs/universal-library/crota/evidence.json": "03c2eb8b15f3b424a668a38ec6d031ae52dab4c3820b808f3357d3420353effd",
+    "docs/universal-library/crota/front-report.json": "ee792cc2550afd3d861914fdc1e88551b3e43690b78908a730379dca7e7a47e6",
+    "docs/universal-library/crota/front.png": "7347592018e01bb1fa8ae87ea017573007fb18e44ce29bcac739c13deabf8888",
+    "docs/universal-library/crota/regression-front-report.json": "d131447d7f9305eaba012dbe62a9dfb4a3fa7360291073d0ba7b0895acd1c228",
+    "docs/universal-library/crota/regression-front.png": "59ce651039f50ff29e4375605766b81c418ac94c5710f1baad752dea678b5172",
+    "docs/universal-library/crota/silhouette-report.json": "702d7ed38ccbd9585b9ccb2c1c66018cb1bb01bd3600c9288c1cb349b54e3e81",
+    "docs/universal-library/crota/silhouette.png": "c1cdbea2d10926c5facbb40e4f7f67e3f30dcf43c88633c7544d1fcaabc954e2",
+    "docs/universal-library/crota/three-quarter-report.json": "fbb13f7d77f43ef750914e1dc71048d63549d6ddedb36bd62ba777140c2a762f",
+    "docs/universal-library/crota/three-quarter.png": "10a799dcca31ed7a6d7e51cf214c38accc0702643b30baafef8e0dac5cf0411b",
+    "remotion/blender/cinematic_vex/ART-DIRECTION.md": "56b49f4d4b1e43d921e0330a319f6439000a557c8be2f54cd46caea15600b7b3",
+    "remotion/blender/cinematic_vex/README.md": "19aa0bc87a5416125d9ef544b6b627b963e2880ebe2c801fb1fa1c70c0dd8975",
+    "remotion/blender/cinematic_vex/VALIDATION.md": "03cd3411c8fa6776579c59e9c4da3d49b091db3539eec70804f45b87e36bf522",
+    "remotion/blender/cinematic_vex/animation.py": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a",
+    "remotion/blender/cinematic_vex/atheon.py": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f",
+    "remotion/blender/cinematic_vex/blender_check.py": "f359068ddbb2a1d1f052c75f59cb430cc7580b9e261e6b55640d7b0c4f3938c2",
+    "remotion/blender/cinematic_vex/collect_evidence.py": "5cf811adad24ebd0210c1d7712de19c28c8db6bc8e3377e9c974334b77a6dada",
+    "remotion/blender/cinematic_vex/comparison_worker.py": "14599d8b56c9108eae4af7f6a6b7e7bc2945ebd5b7cae1af0e338bd4b95b4c44",
+    "remotion/blender/cinematic_vex/instancing.py": "5b8355c351a63859614c0669c2dc22850435d373890b1f22100d4a81a09af5e6",
+    "remotion/blender/cinematic_vex/materials.py": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542",
+    "remotion/blender/cinematic_vex/provenance.py": "dca99552488387fcc0a65fc3613642a1bdc4951bae3de23ae798a0d62d5ddd4b",
+    "remotion/blender/cinematic_vex/render_validation.py": "a56ba3a245d09554057ea1684b500f6951d5ea2651932af74f8cdd9c9f054d06",
+    "remotion/blender/cinematic_vex/shapes.py": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea",
+    "remotion/blender/cinematic_vex/templar.py": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5",
+    "remotion/blender/cinematic_vex/throne.py": "9e99f13f7c06edc66a05e90ba2ea396e14cc7bec435418948302d439e9ac81fd",
+    "remotion/blender/cinematic_vex/validation_shots.json": "0a6fec6cbeeff359247d4800bb6705b9910ba37be68db3a277e14ae4492346fa",
+    "remotion/blender/cinematic_vex/verify_evidence.py": "9f7ebc923b30ef3ee15590ac906ee5be226586425a8e6ca4abd742177571fb5c",
+    "remotion/blender/cinematic_vex/visual-references.json": "b4bc47641fe7cb0f2801a62bd2a0c2e13461e33bf52238cfa6c82696f214996f",
+    "remotion/blender/universal/crota-visual-references.json": "0c975fc9371188d44e2ab05454b0c590fc79a7ffca7cd976b72f4fc016659b12",
+    "remotion/blender/universal/crota.py": "9ac9fcf5261273c9f01ad1391e80f08640505811f1b5dbcef4e5b2e63f66e45a",
+    "remotion/blender/venus_vault/.gitignore": "32dae3052f331ee34d628ef535709b301259a45df7c7522c4d35dcf49873f00b",
+    "remotion/blender/venus_vault/README.md": "0eb8013e49d86c3e0d73f0768268c8568ed70bdb4d658b9422b54a360457f55b",
+    "remotion/blender/venus_vault/VALIDATION.md": "01e10d8ce0e3b7dd9a2685ca0aadf3e4a0cfe9936d20e0212c5898331c020e83",
+    "remotion/blender/venus_vault/atlas-bindings.json": "daf438b634df37cf940f4309e281a27081b21706a741a903348f2364f412323e",
+    "remotion/blender/venus_vault/blender_check.py": "a13c928e8c99ec4e811f2704d1ce2344a40a7d61c3e952a682f7de82091eb231",
+    "remotion/blender/venus_vault/camera.py": "d56b814d3d247dc539639899ef90bbdabef4e9e256041515201c191f02d728cf",
+    "remotion/blender/venus_vault/design.py": "f2f2c97656e820cfb5028ef978fd448a3c36c68bb6abd7cb7e2e6ad872f02823",
+    "remotion/blender/venus_vault/geometry.py": "846d0f5b21269c3ccd69640232dc0149c7b45e4e3e8297faa405cf7313391072",
+    "remotion/blender/venus_vault/renderer.py": "fb0943bc37142290dbd86d99c9900d72dd412c115542b534b246a9792600d39f",
+    "remotion/blender/venus_vault/request.py": "8112f167aadc72a987ae26d522f36ccf1f038d20781b685e27049eb3c0bd12e4",
+    "remotion/blender/venus_vault/verify_evidence.py": "1aa18c9301519db403365ebd5a9068635a56bd881e17ee6f0a10d8928858c036",
+    "docs/universal-library/approved/README.md": "d467d06017cfc86399364dc32c55b21007410b421c0084b5937e153ce4ebd2b2",
+    "docs/universal-library/approved/boss-atheon-silhouette-report.json": "dca7d43834bbaed70224d6f215621e90920fd636d4fba83f5298c26792a6720e",
+    "docs/universal-library/approved/boss-atheon-silhouette.png": "a7296ce77e3f17adaf51c229d062686fd0dfd211e951898b66f79520af74c617",
+    "docs/universal-library/approved/boss-atheon-three-quarter-report.json": "511a76711f743fb8531778618971bea835351608bf0d0d50ac1a98dc17360e32",
+    "docs/universal-library/approved/boss-atheon-three-quarter.png": "387b087cff9864fff16fc14be82464f41abdd9ed0eacdb59acf7633e3533fb9f",
+    "docs/universal-library/approved/boss-templar-environment-report.json": "8f608cea643a27b4768e4a80ed48cc5a7b7037e4de5eef3957470931adede13d",
+    "docs/universal-library/approved/boss-templar-environment.png": "de988b2ba9e92259476a87a4370f6969d7295f204eabbb9c063bcb0e71c33761",
+    "docs/universal-library/approved/boss-templar-rotate-0000.png": "a0090d4ea56ec3f7fad47870a01489e5bb134e390a2318d4d34d2d3105090671",
+    "docs/universal-library/approved/boss-templar-rotate-0012.png": "e69e3468ef5b9cedd379297503ccee439fff8545f592f41593d7467f10ac47fc",
+    "docs/universal-library/approved/boss-templar-rotate-0023.png": "7a6cbc5610e9a21c7c7f0cff37e0bb20941d77c2528013e3467bec325fcae51c",
+    "docs/universal-library/approved/boss-templar-rotate-report.json": "77758edc08e568fac8d44e4611a06b6684c5175813143daa667bf1702fb5b0ca",
+    "docs/universal-library/approved/boss-templar-rotate.mp4": "0bab083ec95e0ca0449b3a849d649a6875eddeee119d6a6bd59bbba3cc174fd5",
+    "docs/universal-library/approved/boss-templar-silhouette-report.json": "3770dda18d673d5c1f43e8f9a7bd3a3e6260179c3654a809f06ed9bc7c4e75a7",
+    "docs/universal-library/approved/boss-templar-silhouette.png": "0be562765abcc0e1cb9ef9bc8e427c4a7a0d6630a9e6630bc48958e5ac85c424",
+    "docs/universal-library/approved/boss-templar-three-quarter-report.json": "e0b1480cd9e6157a4123d6ccd2ec01031ccde9e73ce38144e0565e4957be8a97",
+    "docs/universal-library/approved/boss-templar-three-quarter.png": "acda341fcb03106ebda01d1fff78106b1e6ba558cd777d1e4aca7f820e8646e1",
+    "docs/universal-library/approved/evidence.json": "fba541b43b7981f590921c718930e67216433a4f86fb85587f7d8d00fbb40064",
+    "remotion/blender/characters/vex_bosses.py": "e372a2df2dfde4bca1242f115877a2e60df0a188f54dc0b7f3b74d56bff41951",
+    "remotion/blender/environments/vault_of_glass.py": "cd6cab89cd66a41976f744ffccbaaac4061e508e84cfcc18985e6dfcbb13fcaf",
+    "remotion/blender/environments/venus.py": "f6baf34cca0bb20c8c3be6e26df208fc0e05f3e82dde32b6c61d0cc3506d9d05"
+  },
+  "registryBindings": {
+    "boss-templar": {
+      "provider": "venus-vault",
+      "status": "implemented-user-approved",
+      "environmentId": "arena-templars-well",
+      "animations": [
+        "idle",
+        "rotate",
+        "move",
+        "attack",
+        "reveal"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/universal-library/approved/README.md",
+      "galleryV1Status": "technical-grid-rendered",
+      "protectedFiles": [
+        {
+          "path": "remotion/blender/cinematic_vex/atheon.py",
+          "sha256": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/templar.py",
+          "sha256": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/animation.py",
+          "sha256": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/shapes.py",
+          "sha256": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/materials.py",
+          "sha256": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542"
+        }
+      ]
+    },
+    "boss-atheon": {
+      "provider": "venus-vault",
+      "status": "implemented-user-approved",
+      "environmentId": "arena-glass-throne",
+      "animations": [
+        "idle",
+        "walk",
+        "combat",
+        "temporal",
+        "reveal"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/universal-library/approved/README.md",
+      "galleryV1Status": "technical-grid-rendered",
+      "protectedFiles": [
+        {
+          "path": "remotion/blender/cinematic_vex/atheon.py",
+          "sha256": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/templar.py",
+          "sha256": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/animation.py",
+          "sha256": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/shapes.py",
+          "sha256": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea"
+        },
+        {
+          "path": "remotion/blender/cinematic_vex/materials.py",
+          "sha256": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542"
+        }
+      ]
+    },
+    "venus": {
+      "provider": "venus-vault",
+      "status": "implemented",
+      "animations": [
+        "idle"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/previews/venus-vault/README.md",
+      "galleryV1Status": "partial-existing-evidence",
+      "protectedFiles": []
+    },
+    "vault-of-glass": {
+      "provider": "venus-vault",
+      "status": "implemented",
+      "animations": [
+        "idle"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/previews/venus-vault/README.md",
+      "galleryV1Status": "partial-existing-evidence",
+      "protectedFiles": []
+    },
+    "arena-templars-well": {
+      "provider": "venus-vault",
+      "status": "implemented",
+      "animations": [
+        "idle"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/previews/venus-vault/README.md",
+      "galleryV1Status": "partial-existing-evidence",
+      "protectedFiles": []
+    },
+    "arena-glass-throne": {
+      "provider": "venus-vault",
+      "status": "implemented",
+      "animations": [
+        "idle"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/previews/venus-vault/README.md",
+      "galleryV1Status": "partial-existing-evidence",
+      "protectedFiles": []
+    },
+    "boss-crota": {
+      "provider": "universal",
+      "status": "partial-dedicated-prototype",
+      "environmentId": "oversoul-throne",
+      "animations": [
+        "idle",
+        "move",
+        "attack",
+        "reveal"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/universal-library/crota/README.md",
+      "galleryV1Status": "technical-grid-rendered-artistic-partial",
+      "protectedFiles": [],
+      "module": "universal.crota"
+    },
+    "oversoul-throne": {
+      "provider": "universal",
+      "status": "partial-dedicated-prototype",
+      "animations": [
+        "idle"
+      ],
+      "lods": [
+        0,
+        1,
+        2
+      ],
+      "gallery": "docs/universal-library/crota/README.md",
+      "galleryV1Status": "technical-grid-rendered-artistic-partial",
+      "protectedFiles": [],
+      "module": "universal.crota"
+    }
+  },
+  "registryFileSha256": "0d84b36845146a09f08c7ac0630d5d133827ec151e1af13ab49072896bc2124d"
+}

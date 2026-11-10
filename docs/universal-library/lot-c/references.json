@@ -1,0 +1,73 @@
+{
+  "visualReferences": [
+    {
+      "boss": "oryx",
+      "title": "File:OryxFullD2.png",
+      "url": "https://destiny.wiki.gallery/images/9/9e/OryxFullD2.png",
+      "sha256": "32e2e9da1b8883a8af6870d77ee2a58032a764151647cc9f4a1b004c71e6cc11",
+      "checkedAt": "2026-11-09",
+      "use": "Visual observation only; not a model or shader input."
+    },
+    {
+      "boss": "oryx",
+      "title": "File:OryxStanding.jpg",
+      "url": "https://destiny.wiki.gallery/images/a/a9/OryxStanding.jpg",
+      "sha256": "ea23cc5e4d3626a9bdae7223196201064fea4847bf948859888e10858d7a36b4",
+      "checkedAt": "2026-11-09",
+      "use": "Visual observation only; not a model or shader input."
+    },
+    {
+      "boss": "rhulk",
+      "title": "File:RhulkInfobox.jpg",
+      "url": "https://destiny.wiki.gallery/images/5/55/RhulkInfobox.jpg",
+      "sha256": "8ef718c4b05f644a87fc52fc04b564bd2f9032322415eeb59cffc49734136050",
+      "checkedAt": "2026-11-09",
+      "use": "Visual observation only; not a model or shader input."
+    },
+    {
+      "boss": "rhulk",
+      "title": "File:Rhulk Art 1.jpg",
+      "url": "https://destiny.wiki.gallery/images/a/ad/Rhulk_Art_1.jpg",
+      "sha256": "7c04fd3825939aa8db918d1b8997398ec4244e46db32fad058c3ea30fcc3bb31",
+      "checkedAt": "2026-11-09",
+      "use": "Visual observation only; not a model or shader input."
+    },
+    {
+      "boss": "nezarec",
+      "title": "File:NezarecInfobox.jpg",
+      "url": "https://destiny.wiki.gallery/images/0/03/NezarecInfobox.jpg",
+      "sha256": "8fdd3a4585ee11dc4b38dd00f569f52912c216308d01463d8260cc2e2ae131ae",
+      "checkedAt": "2026-11-09",
+      "use": "Visual observation only; not a model or shader input."
+    },
+    {
+      "boss": "nezarec",
+      "title": "File:NezarecCharge.jpg",
+      "url": "https://destiny.wiki.gallery/images/d/dc/NezarecCharge.jpg",
+      "sha256": "d66aab4e58cfd80643b379d16930ccf62d9abad4f43a7f2641d9253f64b32f8b",
+      "checkedAt": "2026-11-09",
+      "use": "Visual observation only; not a model or shader input."
+    }
+  ],
+  "atlasPinnedArticles": [
+    {
+      "title": "Oryx, the Taken King",
+      "revision": 407096,
+      "url": "https://www.destinypedia.com/index.php?oldid=407096",
+      "sha256": "fca22a948539e6cbb637e32fa1c11f7c95167f1e5fbb5d6a8104d2fc1d2d520e"
+    },
+    {
+      "title": "Rhulk, Disciple of the Witness",
+      "revision": 405074,
+      "url": "https://www.destinypedia.com/index.php?oldid=405074",
+      "sha256": "627c98a5ff2d6e1f8c9fe07896757a904f5a80a2549214b0efda8627fa17ce3a"
+    },
+    {
+      "title": "Nezarec, Final God of Pain",
+      "revision": 407833,
+      "url": "https://www.destinypedia.com/index.php?oldid=407833",
+      "sha256": "e233d958d43664f32f13f9c5f3390800ae0296b4b3060ef8623864cda24683a1"
+    }
+  ],
+  "policy": "Reference images inspected in scratch only; never imported into geometry or shaders."
+}

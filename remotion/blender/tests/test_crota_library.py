@@ -30,14 +30,14 @@ class CrotaLibrary(unittest.TestCase):
   entries=implementations();entries['boss-crota']={**entries['boss-crota'],'status':'implemented-user-approved'}
   with patch('universal.registry.implementations',return_value=entries):
    with self.assertRaisesRegex(ValueError,'approval'):check_registry()
-  with self.assertRaises(ValueError):load('boss-oryx')
-  with patch('universal.providers.implementations',return_value={'boss-oryx':{'provider':'universal','module':'universal.crota'}}):
-   with self.assertRaisesRegex(ValueError,'identity'):load('boss-oryx')
+  with self.assertRaises(ValueError):load('boss-riven')
+  with patch('universal.providers.implementations',return_value={'boss-riven':{'provider':'universal','module':'universal.crota'}}):
+   with self.assertRaisesRegex(ValueError,'identity'):load('boss-riven')
  def test_batch_keeps_missing_models_and_requires_prototype_opt_in(self):
   from universal.batch import plan
   standard=plan();extended=plan(True)
-  self.assertEqual(len(standard['jobs']),10);self.assertEqual(len(extended['jobs']),15)
-  self.assertTrue(any(x['id']=='boss-crota' for x in standard['backlog']));self.assertTrue(any(x['id']=='boss-oryx' for x in extended['backlog']))
+  self.assertEqual(len(standard['jobs']),10);self.assertEqual(len(extended['jobs']),33)
+  self.assertTrue(any(x['id']=='boss-crota' for x in standard['backlog']));self.assertTrue(any(x['id']=='boss-riven' for x in extended['backlog']))
   self.assertTrue(all(j['lod']==0 for j in extended['jobs']))
  def test_arena_has_specific_oversoul_and_architecture(self):
   d=crota.arena();self.assertTrue(any('oversoul-latitude' in o['id'] for o in d['objects']));self.assertTrue(any('vault-rib' in o['id'] for o in d['objects']));self.assertTrue(any('rail-' in o['id'] for o in d['objects']));self.assertEqual(d['objects'],crota.arena(quality='draft')['objects'])

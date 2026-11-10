@@ -1,0 +1,261 @@
+{
+  "status": "partial-dedicated-prototype",
+  "userApproved": false,
+  "bossId": "boss-rhulk",
+  "arenaId": "vow-of-disciple",
+  "renders": [
+    {
+      "name": "front",
+      "settings": {
+        "boss": "boss-rhulk",
+        "slug": "rhulk",
+        "name": "front",
+        "view": "front",
+        "quality": "cinematic",
+        "width": 640,
+        "height": 800,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "front-report.json",
+      "reportSha256": "b0df8f38013097cad96ee70540396085fc3e06859ab453a57ceec74acb0776ec",
+      "images": [
+        {
+          "path": "front.png",
+          "index": 0,
+          "sha256": "74ed3e6e881c9ed26638345f593273803e9b30413e7897ca8efc82da95aa86f2"
+        }
+      ]
+    },
+    {
+      "name": "profile",
+      "settings": {
+        "boss": "boss-rhulk",
+        "slug": "rhulk",
+        "name": "profile",
+        "view": "profile",
+        "quality": "cinematic",
+        "width": 640,
+        "height": 800,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "profile-report.json",
+      "reportSha256": "3da2b03d5ed3d5401986321e7fdb722674353a716be8ee2ef4c53404c8239a58",
+      "images": [
+        {
+          "path": "profile.png",
+          "index": 0,
+          "sha256": "9a692735cf2fdfbbaba1183fbd5818a70c61aa4a9b3c779cdb23b58761921c69"
+        }
+      ]
+    },
+    {
+      "name": "three-quarter",
+      "settings": {
+        "boss": "boss-rhulk",
+        "slug": "rhulk",
+        "name": "three-quarter",
+        "view": "three-quarter",
+        "quality": "cinematic",
+        "width": 640,
+        "height": 800,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "three-quarter-report.json",
+      "reportSha256": "c7fbd783b219988d6047843cda1caf9b778663c78999c8d3405d660e51247d0f",
+      "images": [
+        {
+          "path": "three-quarter.png",
+          "index": 0,
+          "sha256": "51c394527c14f8111c8ab7d2654bed7c687a67baf9bc7bdadb3ec0a0a7014a00"
+        }
+      ]
+    },
+    {
+      "name": "cinematic",
+      "settings": {
+        "boss": "boss-rhulk",
+        "slug": "rhulk",
+        "name": "cinematic",
+        "view": "cinematic",
+        "quality": "cinematic",
+        "width": 640,
+        "height": 800,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "cinematic-report.json",
+      "reportSha256": "ab46ee25c3244e30a243098ae2f2dcfb46fc28b831b1fe21be68d8056da4bcef",
+      "images": [
+        {
+          "path": "cinematic.png",
+          "index": 0,
+          "sha256": "19509edaff553c201eb7cc63d5c965b35216b58ca0b618217e5243c5cd45102b"
+        }
+      ]
+    },
+    {
+      "name": "environment",
+      "settings": {
+        "boss": "boss-rhulk",
+        "slug": "rhulk",
+        "name": "environment",
+        "view": "environment",
+        "quality": "cinematic",
+        "width": 960,
+        "height": 540,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "environment-report.json",
+      "reportSha256": "8ffb74e7271046707da47e040c693294480d17e01ee30e2b1bff2eb1d534ca58",
+      "images": [
+        {
+          "path": "environment.png",
+          "index": 0,
+          "sha256": "949fe804ba7c42384108ad039df6779c21d6109b2f3e7ba547a287a6ee286a38"
+        }
+      ]
+    },
+    {
+      "name": "animation",
+      "settings": {
+        "boss": "boss-rhulk",
+        "slug": "rhulk",
+        "name": "animation",
+        "animation": "combat",
+        "lod": 0,
+        "seed": 42,
+        "quality": "balanced",
+        "view": "cinematic",
+        "frames": 36,
+        "fps": 24,
+        "width": 480,
+        "height": 360
+      },
+      "report": "animation-report.json",
+      "reportSha256": "51a9bfa8c918b76a1eabcabfaa5909a7573a60dc8898b2e6c80345c7f9144ba9",
+      "images": [
+        {
+          "path": "animation-0000.png",
+          "index": 0,
+          "sha256": "07e02021313bd495b789afa8cf6d1674be37fc695fae3171750e3ec172ef1e28"
+        },
+        {
+          "path": "animation-0012.png",
+          "index": 12,
+          "sha256": "556eb2394ddd006ce3b825d66dfa391de73cecd97158774fdf248818388fe011"
+        },
+        {
+          "path": "animation-0024.png",
+          "index": 24,
+          "sha256": "ddf42053d42a7dbc78963bf2f7ef399e9e541d447c98382b037518b47701253e"
+        },
+        {
+          "path": "animation-0035.png",
+          "index": 35,
+          "sha256": "dbd540bda8f97fe0eb953a7f7b1a7e0f0fc08967267bd3fa77ca69b56181d2bc"
+        }
+      ],
+      "video": {
+        "path": "animation.mp4",
+        "sha256": "a99e7c9eac7a10c69b0a2f345bec6555ebbe4186b7bddeeb0c0eecb0781aec7e"
+      }
+    }
+  ],
+  "native": {
+    "evaluations": 240,
+    "views": 5,
+    "clipProjectionFrames": 36,
+    "maxClipOverflow": 0,
+    "maxNormalizedOverflow": 0,
+    "staticResources": true,
+    "randomAccess": true,
+    "articulatedMotion": true,
+    "bounds": {
+      "front": {
+        "minX": 0.3312818109989166,
+        "maxX": 0.6993041038513184,
+        "minY": 0.1497410535812378,
+        "maxY": 0.8779847025871277
+      },
+      "profile": {
+        "minX": 0.4203358590602875,
+        "maxX": 0.5595273971557617,
+        "minY": 0.151664599776268,
+        "maxY": 0.8776436448097229
+      },
+      "three-quarter": {
+        "minX": 0.35152310132980347,
+        "maxX": 0.6644865870475769,
+        "minY": 0.14543010294437408,
+        "maxY": 0.8800623416900635
+      },
+      "cinematic": {
+        "minX": 0.33916667103767395,
+        "maxX": 0.6817871332168579,
+        "minY": 0.18040727078914642,
+        "maxY": 0.8510288000106812
+      },
+      "environment": {
+        "minX": 0.3451105058193207,
+        "maxX": 0.534794807434082,
+        "minY": 0.30224165320396423,
+        "maxY": 0.675258219242096
+      }
+    },
+    "physicalFootContactValidated": false,
+    "lowerLodConstructionChecks": [
+      {
+        "lod": 1,
+        "bossBoxes": 1697,
+        "joints": 22,
+        "animationModes": 5
+      },
+      {
+        "lod": 2,
+        "bossBoxes": 610,
+        "joints": 22,
+        "animationModes": 5
+      }
+    ]
+  },
+  "geometry": [
+    {
+      "lod": 0,
+      "boxes": 5477,
+      "joints": 22,
+      "environmentBoxes": 2669
+    },
+    {
+      "lod": 1,
+      "boxes": 1697,
+      "joints": 22,
+      "environmentBoxes": 769
+    },
+    {
+      "lod": 2,
+      "boxes": 610,
+      "joints": 22,
+      "environmentBoxes": 295
+    }
+  ],
+  "hardware": "Actual device/backend/threads in each raw report; GPU memory/utilization not measured."
+}

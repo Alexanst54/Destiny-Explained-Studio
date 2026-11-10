@@ -1,0 +1,261 @@
+{
+  "status": "partial-dedicated-prototype",
+  "userApproved": false,
+  "bossId": "boss-oryx",
+  "arenaId": "arena-threshold",
+  "renders": [
+    {
+      "name": "front",
+      "settings": {
+        "boss": "boss-oryx",
+        "slug": "oryx",
+        "name": "front",
+        "view": "front",
+        "quality": "cinematic",
+        "width": 768,
+        "height": 576,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "front-report.json",
+      "reportSha256": "27dd2335406f394b979784a4265be87c50154ab53c50af96d948f39ef265a743",
+      "images": [
+        {
+          "path": "front.png",
+          "index": 0,
+          "sha256": "57f9bc953a76cd8acff8267374f1d2ed2ec87f03ba006fd29460bc3bcb107ecc"
+        }
+      ]
+    },
+    {
+      "name": "profile",
+      "settings": {
+        "boss": "boss-oryx",
+        "slug": "oryx",
+        "name": "profile",
+        "view": "profile",
+        "quality": "cinematic",
+        "width": 768,
+        "height": 576,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "profile-report.json",
+      "reportSha256": "8bfd5b42f4e53ea729568898f9eebf1874f8aff20630e6abc2b340ac8180f3fd",
+      "images": [
+        {
+          "path": "profile.png",
+          "index": 0,
+          "sha256": "65c2ec115c7d0478d1db47f5f51994f2e74ade48729672633346961753d0baeb"
+        }
+      ]
+    },
+    {
+      "name": "three-quarter",
+      "settings": {
+        "boss": "boss-oryx",
+        "slug": "oryx",
+        "name": "three-quarter",
+        "view": "three-quarter",
+        "quality": "cinematic",
+        "width": 768,
+        "height": 576,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "three-quarter-report.json",
+      "reportSha256": "c248de891e1bc90ab8ab8d94672486950145947f534da3719c2feeabd75bcedc",
+      "images": [
+        {
+          "path": "three-quarter.png",
+          "index": 0,
+          "sha256": "c2b79449577cddd1494d2c9ff0b6f55052c595cfb01f4f44c57c2baaf70aa531"
+        }
+      ]
+    },
+    {
+      "name": "cinematic",
+      "settings": {
+        "boss": "boss-oryx",
+        "slug": "oryx",
+        "name": "cinematic",
+        "view": "cinematic",
+        "quality": "cinematic",
+        "width": 768,
+        "height": 576,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "cinematic-report.json",
+      "reportSha256": "377b1b7d2d3cc31e20aa03fbcc6071c627bb60d628b11dbad0697724fc8b341f",
+      "images": [
+        {
+          "path": "cinematic.png",
+          "index": 0,
+          "sha256": "5385bdd3bd87dfbc1770287d960c325bda208311e495b9cd072bdd3f70392d96"
+        }
+      ]
+    },
+    {
+      "name": "environment",
+      "settings": {
+        "boss": "boss-oryx",
+        "slug": "oryx",
+        "name": "environment",
+        "view": "environment",
+        "quality": "cinematic",
+        "width": 960,
+        "height": 540,
+        "animation": "idle",
+        "frames": 1,
+        "fps": 24,
+        "lod": 0,
+        "seed": 42
+      },
+      "report": "environment-report.json",
+      "reportSha256": "d2db31e6e2ec99a4da8f18a6bf97cd1045134321ea23332df0e167661fa6e962",
+      "images": [
+        {
+          "path": "environment.png",
+          "index": 0,
+          "sha256": "81a5fbf9d053ac524994256707bb46517fdc9bb75bc4a746546ed4f4131ba8ad"
+        }
+      ]
+    },
+    {
+      "name": "animation",
+      "settings": {
+        "boss": "boss-oryx",
+        "slug": "oryx",
+        "name": "animation",
+        "animation": "signature",
+        "lod": 0,
+        "seed": 42,
+        "quality": "balanced",
+        "view": "cinematic",
+        "frames": 36,
+        "fps": 24,
+        "width": 480,
+        "height": 360
+      },
+      "report": "animation-report.json",
+      "reportSha256": "17588c67eae32047f173f7ca4cb811deea3e3ba74c6bc20c3157155ed48efb3e",
+      "images": [
+        {
+          "path": "animation-0000.png",
+          "index": 0,
+          "sha256": "a718fb9ff46b2669305d7332066d8f05a05ffa895de839e02001956e798ed29f"
+        },
+        {
+          "path": "animation-0012.png",
+          "index": 12,
+          "sha256": "002e45de3801aaeb0e6a6dbe470fe14d6db909225c80929fea020d10e9578b2c"
+        },
+        {
+          "path": "animation-0024.png",
+          "index": 24,
+          "sha256": "08da618936eeaf910c46fc8c99bfef79052bc3ffa6a82e4ec77a40211c4a62e2"
+        },
+        {
+          "path": "animation-0035.png",
+          "index": 35,
+          "sha256": "4a0e7f6dc6198d3da45009d629296c065ec95e543ca001c6658faf34f891456b"
+        }
+      ],
+      "video": {
+        "path": "animation.mp4",
+        "sha256": "3ad078d4897d61c34edc7e5d9dbec039cc7decc6dd4c8e13e5a6212ce0d285a1"
+      }
+    }
+  ],
+  "native": {
+    "evaluations": 240,
+    "views": 5,
+    "clipProjectionFrames": 36,
+    "maxClipOverflow": 0,
+    "maxNormalizedOverflow": 0,
+    "staticResources": true,
+    "randomAccess": true,
+    "articulatedMotion": true,
+    "bounds": {
+      "front": {
+        "minX": 0.08654593676328659,
+        "maxX": 0.9134540557861328,
+        "minY": 0.1448640674352646,
+        "maxY": 0.8177027106285095
+      },
+      "profile": {
+        "minX": 0.45426321029663086,
+        "maxX": 0.5791326761245728,
+        "minY": 0.14606797695159912,
+        "maxY": 0.9597874879837036
+      },
+      "three-quarter": {
+        "minX": 0.2752758264541626,
+        "maxX": 0.9124259352684021,
+        "minY": 0.1369602084159851,
+        "maxY": 0.9045315384864807
+      },
+      "cinematic": {
+        "minX": 0.19672568142414093,
+        "maxX": 0.8653169274330139,
+        "minY": 0.21463549137115479,
+        "maxY": 0.7866448163986206
+      },
+      "environment": {
+        "minX": 0.3148166239261627,
+        "maxX": 0.6724249124526978,
+        "minY": 0.32792142033576965,
+        "maxY": 0.6364247798919678
+      }
+    },
+    "physicalFootContactValidated": false,
+    "lowerLodConstructionChecks": [
+      {
+        "lod": 1,
+        "bossBoxes": 1816,
+        "joints": 23,
+        "animationModes": 5
+      },
+      {
+        "lod": 2,
+        "bossBoxes": 590,
+        "joints": 23,
+        "animationModes": 5
+      }
+    ]
+  },
+  "geometry": [
+    {
+      "lod": 0,
+      "boxes": 5794,
+      "joints": 23,
+      "environmentBoxes": 684
+    },
+    {
+      "lod": 1,
+      "boxes": 1816,
+      "joints": 23,
+      "environmentBoxes": 366
+    },
+    {
+      "lod": 2,
+      "boxes": 590,
+      "joints": 23,
+      "environmentBoxes": 183
+    }
+  ],
+  "hardware": "Actual device/backend/threads in each raw report; GPU memory/utilization not measured."
+}

@@ -31,6 +31,12 @@ def build():
             e['implementation']['gallery']='docs/universal-library/approved/README.md'
             e['implementation']['galleryV1Status']=model['galleryStatus']
         if e['id']=='boss-crota' and (ROOT/'docs/universal-library/crota/evidence.json').exists():e['videoPreviews']=[dict(path='docs/universal-library/crota/attack.mp4',label='Prototype — attaque Balanced')]
+        if e['id'] in ['boss-oryx','boss-rhulk','boss-nezarec']:
+            slug=e['id'].removeprefix('boss-');path=ROOT/('docs/universal-library/lot-c/'+slug+'/evidence.json')
+            if path.exists():
+                proof=json.loads(path.read_text());prefix='docs/universal-library/lot-c/'+slug+'/'
+                e['previews']=[dict(view=r['name'],path=prefix+r['images'][0]['path'],quality=r['settings']['quality']) for r in proof['renders'] if r['name']!='animation']
+                e['videoPreviews']=[dict(path=prefix+'animation.mp4',label='Prototype — '+next(r['settings']['animation'] for r in proof['renders'] if r['name']=='animation')+' (Balanced)')]
         # A study belongs to a family, never grants a named Atlas environment implemented status.
     used={i for e in d['entities'] for i in e['destinationIds']};d['destinations']=[l for l in d['locations'] if l['id'] in used]
     return json.dumps(d,ensure_ascii=False,indent=2)+'\n'
