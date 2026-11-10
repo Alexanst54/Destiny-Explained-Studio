@@ -21,9 +21,14 @@ def run_task(cmd,log,progress=None):
  log=Path(log);log.parent.mkdir(parents=True,exist_ok=True)
  with log.open('a') as stream:
   proc=subprocess.Popen([str(x) for x in cmd],cwd=ROOT/'remotion',stdout=stream,stderr=subprocess.STDOUT,start_new_session=True)
+  started=time.monotonic();last=started
   try:
    while proc.poll() is None:
     if progress:progress()
+    if time.monotonic()-last>=15:
+     with log.open('rb') as tail:
+      tail.seek(max(0,log.stat().st_size-1024));lines=tail.read().decode(errors='replace').splitlines()
+     print(f'Task heartbeat {time.monotonic()-started:.0f}s | '+(lines[-1][-220:] if lines else str(log)),flush=True);last=time.monotonic()
     time.sleep(2)
   except BaseException:
    # Snapshot only descendants of our own child, so escalation cannot hit other jobs.
@@ -159,7 +164,7 @@ def bind_project(folder,identity):
 
 def preflight(folder,options,blender,node,allow_cpu=False,require_gpu=True,chrome=None):
  folder=Path(folder).expanduser().resolve();folder.mkdir(parents=True,exist_ok=True);(folder/'logs').mkdir(exist_ok=True)
- package=load_package();tools=software(blender,node,chrome);project=bind_project(folder,source_identity(package,options,tools));space=check_space(folder,options)
+ package=load_package();configs(package,options);tools=software(blender,node,chrome);project=bind_project(folder,source_identity(package,options,tools));space=check_space(folder,options)
  with tempfile.NamedTemporaryFile(dir=folder,prefix='.preflight-',mode='w') as test:test.write('Drive write check')
  device=probe(folder,tools)
  gpu=device['selected']=='GPU' and device.get('backend') in ['OPTIX','CUDA']
