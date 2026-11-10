@@ -23,3 +23,7 @@ The notebook includes an opt-in **audio-only English pilot preparation** cell th
 The complete **85–95-second episode is not rendered during PR development**. Final scene/camera review, complete assembly/export and real Tesla T4/Colab/Android validation belong to the later production session on the user's Colab hardware. Six timed scene selections are preproduction outputs, not a claim that a combined pilot MP4 already exists. Do not confuse successful audio preparation with a completed episode or GPU validation.
 
 See [TIMING.md](TIMING.md) for the measured local audio-only result and remaining checks. Review the lore changes and natural pronunciation of Destiny proper names before final production. The Studio remains multilingual; existing French proof media is preserved.
+
+## Complete episode production route
+
+The dedicated **Render Complete Atheon Episode** notebook section now renders all six scenes and assembles one continuous MP4 from this exact prepared package. See [starting instructions](../../docs/production-studio/COMPLETE-ATHEON.md). Audio-only preparation remains available, but is not necessary for the committed reviewed script. Actual full-episode production and hardware acceptance are still performed later on the user’s Colab GPU; no development fixture is represented as that episode.

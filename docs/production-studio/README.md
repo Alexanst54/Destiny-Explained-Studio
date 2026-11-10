@@ -4,6 +4,10 @@
 
 Une seule interface, sans PC local ni terminal : Atlas → Blender → Kokoro anglais/français → horodatages des mots → Remotion → MP4 H.264/AAC. **GitHub Actions est facultatif et ne participe à aucune étape de production, de validation ou de téléchargement.** Les outils et modèles sont téléchargés depuis leurs distributions officielles, pas depuis des artefacts Actions.
 
+## Épisode Atheon complet ce soir
+
+Le nouveau parcours **Render Complete Atheon Episode** réutilise les six voix et le plan de 89,067 secondes. [Instructions exactes de lancement et de reprise](COMPLETE-ATHEON.md) : installation rapide, préflight, première scène complète comme smoke-test, rendu reprenable des six scènes, assemblage Remotion et téléchargement.
+
 ## Du boss au MP4
 
 1. Ouvrir Colab dans Android Chrome, se connecter et choisir un runtime GPU T4 si disponible. Exécuter la cellule 1, autoriser le montage de son Drive. Elle installe Blender officiel 4.3.2, Node 22.23.4, les dépendances npm verrouillées et un environnement vocal isolé (Torch/torchaudio CPU 2.6, Kokoro 0.9.4, stable-ts). L’installation initiale et les modèles nécessitent plusieurs Go libres et une connexion réseau.
