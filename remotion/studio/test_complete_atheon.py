@@ -64,6 +64,7 @@ class CompleteAtheon(unittest.TestCase):
    with patch.object(ep,'run_task',side_effect=worker):
     with self.assertRaises(RuntimeError):ep.render_scene(folder,item,c,self.tools,0,0)
     resumed=ep.render_scene(folder,item,c,self.tools,0,0);self.assertEqual((resumed['framesReusedThisInvocation'],resumed['newFramesThisInvocation']),(2,1))
+   finished=ep.read(out/'progress.json');finished['status']='running';ep.atomic_json(out/'progress.json',finished)
    with patch.object(ep,'run_task') as launch:
     warm=ep.render_scene(folder,item,c,{**self.tools,'allow_cpu':False,'device':dict(selected='CPU')},0,0);launch.assert_not_called();self.assertEqual(warm['framesReusedThisInvocation'],3)
    before=ep.sha(out/'frame-0000.png');(out/'frame-0001.png').write_bytes(b'bad')

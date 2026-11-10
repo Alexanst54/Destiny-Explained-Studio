@@ -207,7 +207,7 @@ def trusted_chunk(out,config,part,tools):
  try:
   r=read(out/'progress.json');wanted=expected_request(config,part)
   expected=hashlib.sha256((fingerprint(wanted,'auto',3)+tools['blenderVersion']).encode()).hexdigest()
-  if r['status']!='success' or r['request']!=wanted or r['fingerprint']!=expected or set(r['frames'])!={str(i) for i in range(part['frames'])}:return None
+  if r.get('status') not in ['success','running','failed'] or r['request']!=wanted or r['fingerprint']!=expected or set(r['frames'])!={str(i) for i in range(part['frames'])}:return None
   for i in range(part['frames']):
    f=r['frames'][str(i)]
    if f['sourceFrame']!=part['start']+i or f['file']!=f'frame-{i:04d}.png' or not valid_png(out/f['file'],config['width'],config['height'],f['sha256']):return None
