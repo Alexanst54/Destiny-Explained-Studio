@@ -1,0 +1,51 @@
+{
+  "duration": 2.0,
+  "frames": 60,
+  "fps": 30,
+  "videoCodec": "h264",
+  "audioCodec": "aac",
+  "width": 360,
+  "height": 640,
+  "status": "passed",
+  "testFixture": true,
+  "fullEpisodeRendered": false,
+  "gpuValidated": false,
+  "fixtureUsesRepeatedStill": true,
+  "fixtureAudio": "generated tones, not pilot narration",
+  "audioAlignment": {
+    "method": "10ms PCM RMS envelopes; original full speech; +/-50ms search",
+    "scenes": [
+      {
+        "sceneId": "fixture-1",
+        "envelopeCorrelation": 0.999999393233401,
+        "bestLagMilliseconds": 0
+      },
+      {
+        "sceneId": "fixture-2",
+        "envelopeCorrelation": 0.9980279213632492,
+        "bestLagMilliseconds": 0
+      },
+      {
+        "sceneId": "fixture-3",
+        "envelopeCorrelation": 0.9984103127273047,
+        "bestLagMilliseconds": 0
+      },
+      {
+        "sceneId": "fixture-4",
+        "envelopeCorrelation": 0.9999997682474653,
+        "bestLagMilliseconds": 0
+      },
+      {
+        "sceneId": "fixture-5",
+        "envelopeCorrelation": 0.9982798994416783,
+        "bestLagMilliseconds": 0
+      },
+      {
+        "sceneId": "fixture-6",
+        "envelopeCorrelation": 0.9983539483578106,
+        "bestLagMilliseconds": 0
+      }
+    ]
+  },
+  "sourceBlenderFrameSha256": "dda35f5bd16d8f3c18d04edb924e90de2ff74120a85d1c8f8a236f31d3f97442"
+}

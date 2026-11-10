@@ -1,0 +1,39 @@
+{
+  "method": "10ms PCM RMS envelopes; original full speech; +/-50ms search",
+  "scenes": [
+    {
+      "sceneId": "01-hook",
+      "envelopeCorrelation": 0.9998530150704819,
+      "bestLagMilliseconds": 0
+    },
+    {
+      "sceneId": "02-identity",
+      "envelopeCorrelation": 0.9998887451310015,
+      "bestLagMilliseconds": 0
+    },
+    {
+      "sceneId": "03-vault",
+      "envelopeCorrelation": 0.9999136624173265,
+      "bestLagMilliseconds": 0
+    },
+    {
+      "sceneId": "04-time",
+      "envelopeCorrelation": 0.9913899658993283,
+      "bestLagMilliseconds": 0
+    },
+    {
+      "sceneId": "05-guardians",
+      "envelopeCorrelation": 0.991938871645908,
+      "bestLagMilliseconds": 0
+    },
+    {
+      "sceneId": "06-mystery",
+      "envelopeCorrelation": 0.9932050534021657,
+      "bestLagMilliseconds": 0
+    }
+  ],
+  "status": "passed",
+  "audioOnly": true,
+  "fullEpisodeRendered": false,
+  "gpuValidated": false
+}

@@ -1,0 +1,20 @@
+{
+  "boss": "boss-atheon",
+  "arena": "arena-glass-throne",
+  "language": "en-US",
+  "voice": "af_heart",
+  "narration": "What if an enemy could erase you from time itself?\nDeep beneath Venus lies the Vault of Glass, a place where the Vex bend reality to their will.\nAnd at its heart stands Atheon.",
+  "title": "Who Is Atheon, Time's Conflux?",
+  "sceneLabel": "The Hook",
+  "quality": "balanced",
+  "duration": 11.5,
+  "subtitles": true,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "animation": "idle",
+  "camera": "environment",
+  "music": "",
+  "musicCredit": "",
+  "frames": 345
+}

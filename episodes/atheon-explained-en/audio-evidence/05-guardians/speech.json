@@ -1,0 +1,159 @@
+{
+  "key": "4486b51b10d421b25f0c587120bf48fb4888223f0e3326bd97d64096fd56d130",
+  "sha256": "b8a58f9527d4d3e6c2f4d4bdf5c87b856bc6388afa4eb08dfe62fd510a575f2f",
+  "seconds": 12.65,
+  "words": [
+    {
+      "text": "To",
+      "start": 0.275,
+      "end": 0.35
+    },
+    {
+      "text": "defeat",
+      "start": 0.35,
+      "end": 0.725
+    },
+    {
+      "text": "Atheon,",
+      "start": 0.725,
+      "end": 1.3
+    },
+    {
+      "text": "Guardians",
+      "start": 1.4125,
+      "end": 1.975
+    },
+    {
+      "text": "must",
+      "start": 1.975,
+      "end": 2.25
+    },
+    {
+      "text": "work",
+      "start": 2.25,
+      "end": 2.5
+    },
+    {
+      "text": "together,",
+      "start": 2.5,
+      "end": 3.05
+    },
+    {
+      "text": "destroy",
+      "start": 3.15,
+      "end": 3.6125
+    },
+    {
+      "text": "the",
+      "start": 3.6125,
+      "end": 3.75
+    },
+    {
+      "text": "Oracles,",
+      "start": 3.75,
+      "end": 4.475
+    },
+    {
+      "text": "and",
+      "start": 4.55,
+      "end": 4.6875
+    },
+    {
+      "text": "use",
+      "start": 4.6875,
+      "end": 4.9375
+    },
+    {
+      "text": "the",
+      "start": 4.9375,
+      "end": 5.0625
+    },
+    {
+      "text": "Aegis",
+      "start": 5.0625,
+      "end": 5.425
+    },
+    {
+      "text": "to",
+      "start": 5.425,
+      "end": 5.55
+    },
+    {
+      "text": "survive",
+      "start": 5.55,
+      "end": 6.075
+    },
+    {
+      "text": "the",
+      "start": 6.075,
+      "end": 6.175
+    },
+    {
+      "text": "Vault's",
+      "start": 6.175,
+      "end": 6.5
+    },
+    {
+      "text": "temporal",
+      "start": 6.5,
+      "end": 6.9125
+    },
+    {
+      "text": "threats.",
+      "start": 6.9125,
+      "end": 7.825
+    },
+    {
+      "text": "Against",
+      "start": 7.9875,
+      "end": 8.425
+    },
+    {
+      "text": "impossible",
+      "start": 8.425,
+      "end": 9.0875
+    },
+    {
+      "text": "odds,",
+      "start": 9.0875,
+      "end": 9.55
+    },
+    {
+      "text": "they",
+      "start": 9.625,
+      "end": 9.775
+    },
+    {
+      "text": "bring",
+      "start": 9.775,
+      "end": 10.05
+    },
+    {
+      "text": "down",
+      "start": 10.05,
+      "end": 10.35
+    },
+    {
+      "text": "the",
+      "start": 10.35,
+      "end": 10.8
+    },
+    {
+      "text": "Conflux.",
+      "start": 11.475,
+      "end": 12.375
+    }
+  ],
+  "voice": "af_heart",
+  "language": "en",
+  "locale": "en-US",
+  "alignment": "kokoro-predicted-phoneme-durations",
+  "kokoro": {
+    "repo": "hexgrad/Kokoro-82M",
+    "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "voice": "af_heart",
+    "speed": 1.0,
+    "language": "a",
+    "threads": 2
+  }
+}

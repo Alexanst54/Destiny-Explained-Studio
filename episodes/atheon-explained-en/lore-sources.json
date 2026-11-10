@@ -1,0 +1,65 @@
+{
+  "reviewedAt": "2026-11-10",
+  "primary": [
+    {
+      "id": "atheon-card",
+      "url": "https://www.ishtar-collective.net/cards/atheon-times-conflux",
+      "status": 200,
+      "sha256": "f4fddb19a6f251cb421ed08dd80d1049e4c2a59b9226cb0ac5994b9d48acacd5",
+      "kind": "Bungie Grimoire reproduced by Ishtar Collective",
+      "reviewedAt": "2026-11-10"
+    },
+    {
+      "id": "vault-card",
+      "url": "https://www.ishtar-collective.net/cards/vault-of-glass",
+      "status": 200,
+      "sha256": "66fcfab726d7a8086f9ef3f18fcbe6b5d96c97cfcb3bc604f5edb2eea2a722b3",
+      "kind": "Bungie Grimoire reproduced by Ishtar Collective",
+      "reviewedAt": "2026-11-10"
+    },
+    {
+      "id": "vex-card",
+      "url": "https://www.ishtar-collective.net/cards/the-vex",
+      "status": 200,
+      "sha256": "fb379c5aee2e448cea3aefbf4b11506db43ff1fdb6a25ebd649c27502bf553da",
+      "kind": "Bungie Grimoire reproduced by Ishtar Collective",
+      "reviewedAt": "2026-11-10"
+    }
+  ],
+  "secondary": [
+    {
+      "sourceId": "wiki-boss-atheon-time-s-conflux",
+      "pageTitle": "Atheon, Time's Conflux",
+      "revisionId": 405973,
+      "url": "https://www.destinypedia.com/Atheon%2C_Time's_Conflux",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Atheon%2C+Time%27s+Conflux&oldid=405973",
+      "wikitextSha256": "cefee3e5604673eb611c559eb4e6f3bfa67b2bab36d595dcb4222074b0baee4a",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox: species/class/mission",
+        "introduction",
+        "gameplay forms"
+      ],
+      "reviewedAt": "2026-11-10",
+      "method": "Read existing archived wikitext; SHA-256 matches the pinned Atlas retrieval."
+    },
+    {
+      "sourceId": "wiki-vog",
+      "pageTitle": "Vault of Glass (raid)",
+      "revisionId": 406357,
+      "url": "https://www.destinypedia.com/Vault_of_Glass_(raid)",
+      "pinnedUrl": "https://www.destinypedia.com/index.php?title=Vault+of+Glass+%28raid%29&oldid=406357",
+      "wikitextSha256": "1553395cf2b74bc134db6852f0849e664e0a6219041d286c5ed5eeddbe60c68d",
+      "checkedAt": "2026-11-09",
+      "sections": [
+        "Infobox",
+        "Objectives",
+        "Walkthrough",
+        "Bosses",
+        "Transcript"
+      ],
+      "reviewedAt": "2026-11-10",
+      "method": "Read existing archived wikitext; SHA-256 matches the pinned Atlas retrieval."
+    }
+  ]
+}

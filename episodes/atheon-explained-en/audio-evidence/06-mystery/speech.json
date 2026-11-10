@@ -1,0 +1,229 @@
+{
+  "key": "8880153981f760c5c0ec61237222f7db2858f7c9b5107eb6c9e45e9bc5fd6c53",
+  "sha256": "7479d428cf63e164b5dbffd83a90056510fae908cff96c5b74d5d96f1979a2c4",
+  "seconds": 16.45,
+  "words": [
+    {
+      "text": "Yet",
+      "start": 0.275,
+      "end": 0.4375
+    },
+    {
+      "text": "the",
+      "start": 0.4375,
+      "end": 0.5375
+    },
+    {
+      "text": "Vault",
+      "start": 0.5375,
+      "end": 0.7875
+    },
+    {
+      "text": "of",
+      "start": 0.7875,
+      "end": 0.875
+    },
+    {
+      "text": "Glass",
+      "start": 0.875,
+      "end": 1.4
+    },
+    {
+      "text": "remains",
+      "start": 1.4,
+      "end": 1.9
+    },
+    {
+      "text": "one",
+      "start": 1.9,
+      "end": 2.0375
+    },
+    {
+      "text": "of",
+      "start": 2.0375,
+      "end": 2.1125
+    },
+    {
+      "text": "the",
+      "start": 2.1125,
+      "end": 2.2125
+    },
+    {
+      "text": "greatest",
+      "start": 2.2125,
+      "end": 2.725
+    },
+    {
+      "text": "mysteries",
+      "start": 2.725,
+      "end": 3.3
+    },
+    {
+      "text": "in",
+      "start": 3.3,
+      "end": 3.45
+    },
+    {
+      "text": "Destiny.",
+      "start": 3.45,
+      "end": 4.4
+    },
+    {
+      "text": "Atheon",
+      "start": 4.6,
+      "end": 5.15
+    },
+    {
+      "text": "was",
+      "start": 5.15,
+      "end": 5.35
+    },
+    {
+      "text": "defeated.",
+      "start": 5.35,
+      "end": 6.2
+    },
+    {
+      "text": "One",
+      "start": 6.375,
+      "end": 6.65
+    },
+    {
+      "text": "possibility",
+      "start": 6.65,
+      "end": 7.4125
+    },
+    {
+      "text": "is",
+      "start": 7.4125,
+      "end": 7.75
+    },
+    {
+      "text": "that",
+      "start": 7.75,
+      "end": 7.9
+    },
+    {
+      "text": "the",
+      "start": 7.9,
+      "end": 8.0375
+    },
+    {
+      "text": "Vex",
+      "start": 8.0375,
+      "end": 8.4375
+    },
+    {
+      "text": "seek",
+      "start": 8.4375,
+      "end": 8.725
+    },
+    {
+      "text": "to",
+      "start": 8.725,
+      "end": 8.8125
+    },
+    {
+      "text": "make",
+      "start": 8.8125,
+      "end": 9.025
+    },
+    {
+      "text": "their",
+      "start": 9.025,
+      "end": 9.2
+    },
+    {
+      "text": "calculations",
+      "start": 9.2,
+      "end": 10.225
+    },
+    {
+      "text": "part",
+      "start": 10.225,
+      "end": 10.4625
+    },
+    {
+      "text": "of",
+      "start": 10.4625,
+      "end": 10.55
+    },
+    {
+      "text": "reality",
+      "start": 10.55,
+      "end": 11.55
+    },
+    {
+      "text": "itself.",
+      "start": 12.0,
+      "end": 12.549999999999999
+    },
+    {
+      "text": "And",
+      "start": 12.6,
+      "end": 12.737499999999999
+    },
+    {
+      "text": "the",
+      "start": 12.737499999999999,
+      "end": 12.825
+    },
+    {
+      "text": "question",
+      "start": 12.825,
+      "end": 13.275
+    },
+    {
+      "text": "remains...",
+      "start": 13.275,
+      "end": 14.075
+    },
+    {
+      "text": "What",
+      "start": 14.225,
+      "end": 14.3625
+    },
+    {
+      "text": "else",
+      "start": 14.3625,
+      "end": 14.625
+    },
+    {
+      "text": "is",
+      "start": 14.625,
+      "end": 14.774999999999999
+    },
+    {
+      "text": "hidden",
+      "start": 14.774999999999999,
+      "end": 15.075
+    },
+    {
+      "text": "inside",
+      "start": 15.075,
+      "end": 15.4875
+    },
+    {
+      "text": "the",
+      "start": 15.4875,
+      "end": 15.575
+    },
+    {
+      "text": "Vault?",
+      "start": 15.575,
+      "end": 16.2
+    }
+  ],
+  "voice": "af_heart",
+  "language": "en",
+  "locale": "en-US",
+  "alignment": "kokoro-predicted-phoneme-durations",
+  "kokoro": {
+    "repo": "hexgrad/Kokoro-82M",
+    "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "voice": "af_heart",
+    "speed": 1.0,
+    "language": "a",
+    "threads": 2
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "key": "9342753f4c66a58e169859e5ca5ae3bc176710a783b3b3f07d2346b13d4ead04",
+  "sha256": "bb59a50fe3bdb0abae06bf7b60cde40695bd780799f988a66b348dc43230d13a",
+  "seconds": 11.25,
+  "words": [
+    {
+      "text": "What",
+      "start": 0.25,
+      "end": 0.4
+    },
+    {
+      "text": "if",
+      "start": 0.4,
+      "end": 0.5125
+    },
+    {
+      "text": "an",
+      "start": 0.5125,
+      "end": 0.6375
+    },
+    {
+      "text": "enemy",
+      "start": 0.6375,
+      "end": 1.025
+    },
+    {
+      "text": "could",
+      "start": 1.025,
+      "end": 1.15
+    },
+    {
+      "text": "erase",
+      "start": 1.15,
+      "end": 1.525
+    },
+    {
+      "text": "you",
+      "start": 1.525,
+      "end": 1.675
+    },
+    {
+      "text": "from",
+      "start": 1.675,
+      "end": 1.825
+    },
+    {
+      "text": "time",
+      "start": 1.825,
+      "end": 2.0625
+    },
+    {
+      "text": "itself?",
+      "start": 2.0625,
+      "end": 3.0
+    },
+    {
+      "text": "Deep",
+      "start": 3.15,
+      "end": 3.425
+    },
+    {
+      "text": "beneath",
+      "start": 3.425,
+      "end": 3.8375
+    },
+    {
+      "text": "Venus",
+      "start": 3.8375,
+      "end": 4.35
+    },
+    {
+      "text": "lies",
+      "start": 4.35,
+      "end": 4.7
+    },
+    {
+      "text": "the",
+      "start": 4.7,
+      "end": 4.8125
+    },
+    {
+      "text": "Vault",
+      "start": 4.8125,
+      "end": 5.0875
+    },
+    {
+      "text": "of",
+      "start": 5.0875,
+      "end": 5.2
+    },
+    {
+      "text": "Glass,",
+      "start": 5.2,
+      "end": 5.825
+    },
+    {
+      "text": "a",
+      "start": 5.95,
+      "end": 6.05
+    },
+    {
+      "text": "place",
+      "start": 6.05,
+      "end": 6.3875
+    },
+    {
+      "text": "where",
+      "start": 6.3875,
+      "end": 6.5125
+    },
+    {
+      "text": "the",
+      "start": 6.5125,
+      "end": 6.6125
+    },
+    {
+      "text": "Vex",
+      "start": 6.6125,
+      "end": 7.0375
+    },
+    {
+      "text": "bend",
+      "start": 7.0375,
+      "end": 7.4
+    },
+    {
+      "text": "reality",
+      "start": 7.4,
+      "end": 7.95
+    },
+    {
+      "text": "to",
+      "start": 7.95,
+      "end": 8.05
+    },
+    {
+      "text": "their",
+      "start": 8.05,
+      "end": 8.25
+    },
+    {
+      "text": "will.",
+      "start": 8.25,
+      "end": 8.9
+    },
+    {
+      "text": "And",
+      "start": 9.0,
+      "end": 9.2375
+    },
+    {
+      "text": "at",
+      "start": 9.2375,
+      "end": 9.3625
+    },
+    {
+      "text": "its",
+      "start": 9.3625,
+      "end": 9.525
+    },
+    {
+      "text": "heart",
+      "start": 9.525,
+      "end": 9.8625
+    },
+    {
+      "text": "stands",
+      "start": 9.8625,
+      "end": 10.2625
+    },
+    {
+      "text": "Atheon.",
+      "start": 10.2625,
+      "end": 11.0
+    }
+  ],
+  "voice": "af_heart",
+  "language": "en",
+  "locale": "en-US",
+  "alignment": "kokoro-predicted-phoneme-durations",
+  "kokoro": {
+    "repo": "hexgrad/Kokoro-82M",
+    "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "voice": "af_heart",
+    "speed": 1.0,
+    "language": "a",
+    "threads": 2
+  }
+}

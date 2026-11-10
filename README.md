@@ -64,3 +64,7 @@ Le [storyboard hybride](remotion/hybrid/README.md) réunit voxel, cartes schéma
 [Exporter une frame 0.7 vers Blender](remotion/blender/README.md), [notebook Colab Pro PNG](remotion/blender/Blender-Colab-Pro.ipynb), [rapport exécuté](remotion/blender/REPORT.md) et [journal de reprise](docs/BLENDER-BRIDGE-PROGRESS.md). Le pont reste indépendant de l’éditeur et du montage Remotion ; aucun rendu vidéo complet n’est lancé.
 
 Cinematic Voxel Environments 0.8.2: [procedural Riis, quality controls and Colab guide](remotion/blender/ENVIRONMENTS.md), with [CPU results and preview comparison](remotion/blender/ENVIRONMENTS-REPORT.md).
+
+## Studio Colab autonome
+
+[Ouvrir Destiny Studio dans Colab Pro](https://colab.research.google.com/github/Alexanst54/Destiny-Explained-Studio/blob/feat/standalone-colab-production-studio/remotion/blender/Destiny-Studio-Colab-Pro.ipynb) : sélection Atlas, Blender, narration anglaise/française Kokoro, sous-titres alignés et export Remotion H.264/AAC dans Google Drive. Aucun rendu ni téléchargement ne dépend de GitHub Actions. Voir le [guide de production et de reprise](docs/production-studio/README.md) et les limites de validation CPU/T4/Android.

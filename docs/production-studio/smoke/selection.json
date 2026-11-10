@@ -1,0 +1,16 @@
+{
+  "boss": "boss-rhulk",
+  "arena": "vow-of-disciple",
+  "animation": "combat",
+  "camera": "cinematic",
+  "quality": "draft",
+  "duration": 2,
+  "narration": "Voici ce boss.",
+  "voice": "ff_siwis",
+  "subtitles": true,
+  "width": 320,
+  "height": 240,
+  "fps": 24,
+  "music": "",
+  "musicCredit": ""
+}

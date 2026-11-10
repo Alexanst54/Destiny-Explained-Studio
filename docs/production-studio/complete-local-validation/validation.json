@@ -1,0 +1,30 @@
+{
+  "status": "local-components-passed-not-T4-acceptance",
+  "date": "2026-11-10",
+  "nodeTests": 116,
+  "pythonTests": {
+    "studio": 21,
+    "blender": 56,
+    "narration": 10,
+    "manifest": 4,
+    "total": 91
+  },
+  "typescriptConfigurations": 3,
+  "actualLocalBlenderStillFrames": 1,
+  "compositorFixtureFrames": 60,
+  "compositorFixtureUsesRepeatedImage": true,
+  "fullEpisodeRendered": false,
+  "realT4Tested": false,
+  "colabTested": false,
+  "androidTested": false,
+  "driveQuotaTested": false,
+  "localPreflightCapacityWasMocked": true,
+  "preparedPilotFrames": 2672,
+  "preparedPilotSeconds": 89.06666666666666,
+  "defaultResolution": [
+    360,
+    640
+  ],
+  "defaultQuality": "balanced",
+  "actionsUsed": false
+}

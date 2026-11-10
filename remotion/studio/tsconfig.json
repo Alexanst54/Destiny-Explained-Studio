@@ -1,0 +1,7 @@
+{
+  "extends": "../tsconfig.json",
+  "include": [
+    "./index.tsx",
+    "./complete-index.tsx"
+  ]
+}

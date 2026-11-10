@@ -1,0 +1,33 @@
+{
+  "key": "d872e8e35eb527d5c284ca276942517c9cbc62f8d13ac4143f87d09730c28fc0",
+  "sha256": "15e736f3eda9f7ca5534414b585be0abcb815f7178bcfea78620199e0a70f2ef",
+  "seconds": 1.775,
+  "words": [
+    {
+      "text": "Voici",
+      "start": 0.54,
+      "end": 0.76
+    },
+    {
+      "text": "ce",
+      "start": 0.76,
+      "end": 0.94
+    },
+    {
+      "text": "boss.",
+      "start": 0.94,
+      "end": 1.24
+    }
+  ],
+  "voice": "ff_siwis",
+  "language": "fr",
+  "alignment": "stable-ts multilingual base / French forced alignment",
+  "kokoro": {
+    "repo": "hexgrad/Kokoro-82M",
+    "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "voice": "ff_siwis",
+    "speed": 1.0,
+    "language": "f",
+    "threads": 2
+  }
+}

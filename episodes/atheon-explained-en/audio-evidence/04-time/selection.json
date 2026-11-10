@@ -1,0 +1,20 @@
+{
+  "boss": "boss-atheon",
+  "arena": "arena-glass-throne",
+  "language": "en-US",
+  "voice": "af_heart",
+  "narration": "During the battle, Atheon teleports Guardians into different versions of the Vault, while their teammates open portals for their return.\nBut there is an important distinction.\nThe Vex's power inside the Vault does not mean they control all of time throughout the universe.",
+  "title": "",
+  "sceneLabel": "Master of Time?",
+  "quality": "balanced",
+  "duration": 16.933333333333334,
+  "subtitles": true,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "animation": "temporal",
+  "camera": "environment",
+  "music": "",
+  "musicCredit": "",
+  "frames": 508
+}

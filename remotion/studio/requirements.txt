@@ -1,0 +1,19 @@
+# Install matching torch/torchaudio CPU wheels first; Blender uses CUDA independently.
+torch==2.6.0
+torchaudio==2.6.0
+kokoro==0.9.4
+misaki[en]==0.9.4
+transformers==4.51.3
+huggingface-hub==0.36.2
+numpy==2.2.6
+soundfile==0.13.1
+espeakng-loader==0.2.4
+phonemizer-fork==3.3.2
+spacy==3.8.18
+stable-ts==2.19.1
+
+# Whisper dependency, pinned to avoid newer multi-GB GPU toolchains.
+triton==2.3.1
+
+# Explicit English grapheme-to-phoneme model, also used by the historical Kokoro pipeline.
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl

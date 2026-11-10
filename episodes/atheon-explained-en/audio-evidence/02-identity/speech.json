@@ -1,0 +1,209 @@
+{
+  "key": "37ac972ed901814b214c828517d784c55e6eb3ce8f0819fe1d6d99a8a078c9ff",
+  "sha256": "4764a413a6bf8369c05d34fa70bfcc5a971d7eea1be583282b39e3d1ef6790f8",
+  "seconds": 15.025,
+  "words": [
+    {
+      "text": "Atheon,",
+      "start": 0.3,
+      "end": 0.875
+    },
+    {
+      "text": "Time's",
+      "start": 0.9625,
+      "end": 1.35
+    },
+    {
+      "text": "Conflux,",
+      "start": 1.35,
+      "end": 2.175
+    },
+    {
+      "text": "is",
+      "start": 2.25,
+      "end": 2.3625
+    },
+    {
+      "text": "a",
+      "start": 2.3625,
+      "end": 2.4625
+    },
+    {
+      "text": "powerful",
+      "start": 2.4625,
+      "end": 3.05
+    },
+    {
+      "text": "Vex",
+      "start": 3.05,
+      "end": 3.325
+    },
+    {
+      "text": "entity",
+      "start": 3.325,
+      "end": 3.9375
+    },
+    {
+      "text": "and",
+      "start": 3.9375,
+      "end": 4.0625
+    },
+    {
+      "text": "the",
+      "start": 4.0625,
+      "end": 4.1625
+    },
+    {
+      "text": "final",
+      "start": 4.1625,
+      "end": 4.55
+    },
+    {
+      "text": "boss",
+      "start": 4.55,
+      "end": 4.925
+    },
+    {
+      "text": "of",
+      "start": 4.925,
+      "end": 5.0125
+    },
+    {
+      "text": "the",
+      "start": 5.0125,
+      "end": 5.1
+    },
+    {
+      "text": "Vault",
+      "start": 5.1,
+      "end": 5.3625
+    },
+    {
+      "text": "of",
+      "start": 5.3625,
+      "end": 5.45
+    },
+    {
+      "text": "Glass.",
+      "start": 5.45,
+      "end": 6.325
+    },
+    {
+      "text": "But",
+      "start": 6.45,
+      "end": 6.6125
+    },
+    {
+      "text": "Atheon",
+      "start": 6.6125,
+      "end": 7.075
+    },
+    {
+      "text": "isn't",
+      "start": 7.075,
+      "end": 7.3625
+    },
+    {
+      "text": "simply",
+      "start": 7.3625,
+      "end": 7.725
+    },
+    {
+      "text": "another",
+      "start": 7.725,
+      "end": 8.0875
+    },
+    {
+      "text": "machine",
+      "start": 8.0875,
+      "end": 8.525
+    },
+    {
+      "text": "built",
+      "start": 8.525,
+      "end": 8.8
+    },
+    {
+      "text": "for",
+      "start": 8.8,
+      "end": 8.9625
+    },
+    {
+      "text": "war.",
+      "start": 8.9625,
+      "end": 9.65
+    },
+    {
+      "text": "It",
+      "start": 9.775,
+      "end": 9.925
+    },
+    {
+      "text": "is",
+      "start": 9.925,
+      "end": 10.075
+    },
+    {
+      "text": "connected",
+      "start": 10.075,
+      "end": 10.575
+    },
+    {
+      "text": "to",
+      "start": 10.575,
+      "end": 10.6625
+    },
+    {
+      "text": "the",
+      "start": 10.6625,
+      "end": 10.75
+    },
+    {
+      "text": "Vault's",
+      "start": 10.75,
+      "end": 11.475
+    },
+    {
+      "text": "mysterious",
+      "start": 11.9,
+      "end": 12.450000000000001
+    },
+    {
+      "text": "experiments",
+      "start": 12.450000000000001,
+      "end": 13.200000000000001
+    },
+    {
+      "text": "with",
+      "start": 13.200000000000001,
+      "end": 13.387500000000001
+    },
+    {
+      "text": "time",
+      "start": 13.387500000000001,
+      "end": 13.775
+    },
+    {
+      "text": "and",
+      "start": 13.775,
+      "end": 13.9
+    },
+    {
+      "text": "reality.",
+      "start": 13.9,
+      "end": 14.775
+    }
+  ],
+  "voice": "af_heart",
+  "language": "en",
+  "locale": "en-US",
+  "alignment": "kokoro-predicted-phoneme-durations",
+  "kokoro": {
+    "repo": "hexgrad/Kokoro-82M",
+    "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "voice": "af_heart",
+    "speed": 1.0,
+    "language": "a",
+    "threads": 2
+  }
+}

@@ -1,0 +1,234 @@
+{
+  "key": "1caebf412a312e1a953b482a7c2d4a318e2dfa75bbfdcd4ad6a270266bf2162b",
+  "sha256": "3c2b46e9a4e9e91cbea3366b8efe540a8885d67784265398401b1d2abe24f43b",
+  "seconds": 16.675,
+  "words": [
+    {
+      "text": "During",
+      "start": 0.275,
+      "end": 0.5125
+    },
+    {
+      "text": "the",
+      "start": 0.5125,
+      "end": 0.6
+    },
+    {
+      "text": "battle,",
+      "start": 0.6,
+      "end": 1.125
+    },
+    {
+      "text": "Atheon",
+      "start": 1.2375,
+      "end": 1.7125
+    },
+    {
+      "text": "teleports",
+      "start": 1.7125,
+      "end": 2.325
+    },
+    {
+      "text": "Guardians",
+      "start": 2.325,
+      "end": 2.8875
+    },
+    {
+      "text": "into",
+      "start": 2.8875,
+      "end": 3.125
+    },
+    {
+      "text": "different",
+      "start": 3.125,
+      "end": 3.425
+    },
+    {
+      "text": "versions",
+      "start": 3.425,
+      "end": 3.8875
+    },
+    {
+      "text": "of",
+      "start": 3.8875,
+      "end": 3.9625
+    },
+    {
+      "text": "the",
+      "start": 3.9625,
+      "end": 4.05
+    },
+    {
+      "text": "Vault,",
+      "start": 4.05,
+      "end": 4.65
+    },
+    {
+      "text": "while",
+      "start": 4.75,
+      "end": 4.9125
+    },
+    {
+      "text": "their",
+      "start": 4.9125,
+      "end": 5.0875
+    },
+    {
+      "text": "teammates",
+      "start": 5.0875,
+      "end": 5.6875
+    },
+    {
+      "text": "open",
+      "start": 5.6875,
+      "end": 6.025
+    },
+    {
+      "text": "portals",
+      "start": 6.025,
+      "end": 6.5
+    },
+    {
+      "text": "for",
+      "start": 6.5,
+      "end": 6.6125
+    },
+    {
+      "text": "their",
+      "start": 6.6125,
+      "end": 6.8
+    },
+    {
+      "text": "return.",
+      "start": 6.8,
+      "end": 7.675
+    },
+    {
+      "text": "But",
+      "start": 7.775,
+      "end": 7.925
+    },
+    {
+      "text": "there",
+      "start": 7.925,
+      "end": 8.1625
+    },
+    {
+      "text": "is",
+      "start": 8.1625,
+      "end": 8.35
+    },
+    {
+      "text": "an",
+      "start": 8.35,
+      "end": 8.45
+    },
+    {
+      "text": "important",
+      "start": 8.45,
+      "end": 8.925
+    },
+    {
+      "text": "distinction.",
+      "start": 8.925,
+      "end": 9.875
+    },
+    {
+      "text": "The",
+      "start": 10.0125,
+      "end": 10.375
+    },
+    {
+      "text": "Vex's",
+      "start": 11.05,
+      "end": 11.4875
+    },
+    {
+      "text": "power",
+      "start": 11.4875,
+      "end": 11.9375
+    },
+    {
+      "text": "inside",
+      "start": 11.9375,
+      "end": 12.3875
+    },
+    {
+      "text": "the",
+      "start": 12.3875,
+      "end": 12.475
+    },
+    {
+      "text": "Vault",
+      "start": 12.475,
+      "end": 13.0125
+    },
+    {
+      "text": "does",
+      "start": 13.0125,
+      "end": 13.2
+    },
+    {
+      "text": "not",
+      "start": 13.2,
+      "end": 13.4125
+    },
+    {
+      "text": "mean",
+      "start": 13.4125,
+      "end": 13.5875
+    },
+    {
+      "text": "they",
+      "start": 13.5875,
+      "end": 13.725
+    },
+    {
+      "text": "control",
+      "start": 13.725,
+      "end": 14.3625
+    },
+    {
+      "text": "all",
+      "start": 14.3625,
+      "end": 14.5375
+    },
+    {
+      "text": "of",
+      "start": 14.5375,
+      "end": 14.6375
+    },
+    {
+      "text": "time",
+      "start": 14.6375,
+      "end": 15.2
+    },
+    {
+      "text": "throughout",
+      "start": 15.2,
+      "end": 15.5375
+    },
+    {
+      "text": "the",
+      "start": 15.5375,
+      "end": 15.625
+    },
+    {
+      "text": "universe.",
+      "start": 15.625,
+      "end": 16.425
+    }
+  ],
+  "voice": "af_heart",
+  "language": "en",
+  "locale": "en-US",
+  "alignment": "kokoro-predicted-phoneme-durations",
+  "kokoro": {
+    "repo": "hexgrad/Kokoro-82M",
+    "revision": "f3ff3571791e39611d31c381e3a41a3af07b4987",
+    "voice": "af_heart",
+    "speed": 1.0,
+    "language": "a",
+    "threads": 2
+  }
+}

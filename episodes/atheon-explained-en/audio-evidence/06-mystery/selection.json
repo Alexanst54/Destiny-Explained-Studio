@@ -1,0 +1,20 @@
+{
+  "boss": "boss-atheon",
+  "arena": "arena-glass-throne",
+  "language": "en-US",
+  "voice": "af_heart",
+  "narration": "Yet the Vault of Glass remains one of the greatest mysteries in Destiny.\nAtheon was defeated.\nOne possibility is that the Vex seek to make their calculations part of reality itself.\nAnd the question remains...\nWhat else is hidden inside the Vault?",
+  "title": "",
+  "sceneLabel": "The Mystery",
+  "quality": "balanced",
+  "duration": 16.7,
+  "subtitles": true,
+  "width": 1080,
+  "height": 1920,
+  "fps": 30,
+  "animation": "idle",
+  "camera": "close-up",
+  "music": "",
+  "musicCredit": "",
+  "frames": 501
+}

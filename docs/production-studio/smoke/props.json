@@ -1,0 +1,25 @@
+{
+  "width": 320,
+  "height": 240,
+  "fps": 24,
+  "frames": 48,
+  "words": [
+    {
+      "text": "Voici",
+      "start": 0.54,
+      "end": 0.76
+    },
+    {
+      "text": "ce",
+      "start": 0.76,
+      "end": 0.94
+    },
+    {
+      "text": "boss.",
+      "start": 0.94,
+      "end": 1.24
+    }
+  ],
+  "subtitles": true,
+  "music": false
+}

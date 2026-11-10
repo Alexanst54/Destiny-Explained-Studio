@@ -1559,6 +1559,11 @@
       "sha256": "a59ddd859e636424ad802467a07a77d7f9c24f0fb12b5bd18c66d3470d4d9f57"
     },
     {
+      "path": "remotion/blender/Destiny-Studio-Colab-Pro.ipynb",
+      "bytes": 29289,
+      "sha256": "3dfda5d5b87649a6310e114a9ddd55ca37adfcf3f48b8d815697717df7aab672"
+    },
+    {
       "path": "remotion/blender/ENVIRONMENTS-REPORT.md",
       "bytes": 7655,
       "sha256": "55b9e13e451c8100f794bf0add628494e25f1ad18f1b45af94b0e3d8a04dce96"
