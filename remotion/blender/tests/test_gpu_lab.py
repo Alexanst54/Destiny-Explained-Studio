@@ -4,7 +4,7 @@ from unittest.mock import patch
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]/'gpu_lab'))
 import common as labcommon
 from common import CASES,safe_root,run_folder,atomic_json,read,sha,cleanup,archive,restore_zip,jobs,resolved_settings
-from reporting import aggregate,compare
+from reporting import aggregate,compare,residual_flicker
 from lab import export_configuration
 
 class Lab(unittest.TestCase):
@@ -48,11 +48,15 @@ class Lab(unittest.TestCase):
   for r in records:
    for f in r['frames'].values():f['shotId']='fixture'
   valid=aggregate(plan,records)[1];self.assertTrue(valid['eligibleForProductionReview']);self.assertEqual(valid['speedRatio'],1.25)
-  for field,value in [('cold',False),('actualT4',False),('cpuFallback',True),('oom',True)]:
+  for field,value in [('cold',False),('actualT4',False),('cpuFallback',True),('componentCpuFallback',True),('gpuFailure',True),('oom',True)]:
    altered=copy.deepcopy(records)
    for r in altered:r[field]=value
    self.assertFalse(aggregate(plan,altered)[1]['eligibleForProductionReview'])
   self.assertFalse(aggregate({**plan,'mode':'fast'},records)[1]['eligibleForProductionReview'])
+  tiny=copy.deepcopy(records)
+  for r in tiny:
+   if r['case']=='candidate-48':r['invocation']['invocationWallSeconds']=19.8
+  self.assertFalse(aggregate(plan,tiny)[1]['eligibleForProductionReview'])
   altered=copy.deepcopy(records);altered[-1]['frames']['0']['fixedSceneSignature']='different';self.assertFalse(aggregate(plan,altered)[1]['sceneIdentityMatchesBaseline'])
  def test_export_requires_explicit_approval_and_valid_cold_temporal_evidence(self):
   with tempfile.TemporaryDirectory() as d:
@@ -60,6 +64,24 @@ class Lab(unittest.TestCase):
    with self.assertRaises(ValueError):export_configuration(folder,'candidate-48',False)
    with patch('lab.sources',return_value={}):
     with self.assertRaises(ValueError):export_configuration(folder,'candidate-48',True)
+ def test_real_diff_metrics_and_temporal_proxy(self):
+  import struct,zlib
+  def png(value):
+   def chunk(k,p):return struct.pack('>I',len(p))+k+p+struct.pack('>I',zlib.crc32(k+p)&0xffffffff)
+   raw=(b'\0'+bytes([value]*3)*32)*32
+   return b'\x89PNG\r\n\x1a\n'+chunk(b'IHDR',struct.pack('>IIBBBBB',32,32,8,2,0,0,0))+chunk(b'IDAT',zlib.compress(raw))+chunk(b'IEND',b'')
+  with tempfile.TemporaryDirectory() as d:
+   root=pathlib.Path(d);paths=[]
+   for i,value in enumerate([10,12,11,14]):
+    p=root/('fixture-'+str(i)+'.png');p.write_bytes(png(value));paths.append(p)
+   metric=compare(paths[0],paths[0],root/'comparison');self.assertTrue(metric['psnrInfinite']);self.assertEqual(metric['ssim'],1)
+   self.assertAlmostEqual(residual_flicker(*paths)['normalizedResidualDeltaRms'],1/255)
+ def test_export_is_a_recipe_only_after_positive_synthetic_evidence(self):
+  with tempfile.TemporaryDirectory() as d:
+   folder=pathlib.Path(d);(folder/'final').mkdir();case=dict(case='candidate-48',eligibleForProductionReview=True,speedRatio=1.2,settings=dict(samples=48),projection=None)
+   atomic_json(folder/'final/results.json',dict(renderSources={},sourceCommit='SYNTHETIC-UNIT-FIXTURE',resolution=[540,960],comparisons=[case]));atomic_json(folder/'final/visual-metrics.json',dict(temporalResiduals=[dict(case='candidate-48')]));atomic_json(folder/'final/plan.json',{});archive(folder)
+   with patch('lab.sources',return_value={}):payload=export_configuration(folder,'candidate-48',True)
+   self.assertFalse(payload['automaticallyApplied']);self.assertFalse(payload['modifiesExistingProduction']);self.assertTrue(payload['newProjectRequired']);self.assertTrue((folder/'final/recommended-config.json').exists())
  def test_standalone_notebook_does_not_mount_drive_or_install_voices_by_default(self):
   n=read(labcommon.ROOT/'remotion/blender/Destiny-GPU-Optimization-Lab.ipynb');cells=[''.join(c['source']) for c in n['cells']]
   for i,c in enumerate(n['cells']):

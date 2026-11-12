@@ -41,7 +41,7 @@ def stages(log):
  return dict(approximatePrintedClockSeconds=result,scope='Rounded Blender progress deltas overlap operation wall; not exclusive GPU kernel, transfer or denoiser timing')
 
 def eligible(r):
- return r.get('status')=='passed' and r.get('cold') and r.get('actualT4') and not r.get('cpuFallback') and not r.get('oom') and len(r.get('frames',{}))==r.get('requestedFrames') and r.get('invocation',{}).get('exitCode')==0
+ return r.get('status')=='passed' and r.get('cold') and r.get('actualT4') and not r.get('cpuFallback') and not r.get('componentCpuFallback') and not r.get('gpuFailure') and not r.get('oom') and len(r.get('frames',{}))==r.get('requestedFrames') and r.get('invocation',{}).get('exitCode')==0
 
 def aggregate(plan,results):
  baseline=[r for r in results if r['case']=='baseline-48'];out=[]
@@ -61,7 +61,7 @@ def aggregate(plan,results):
   if rates and paired:
    per_shot={j['id']:statistics.median([f['renderOperationSeconds'] for r in group if eligible(r) for f in r['frames'].values() if f['shotId']==j['shotId']]) for j in plan['jobs']}
    projection=dict(renderOperationOnlyHours=statistics.mean(per_shot.values())*2672/3600,representativeShotRateEnvelopeHours=[min(per_shot.values())*2672/3600,max(per_shot.values())*2672/3600],completeProductionHours=None,scope='Coarse 3-shot extrapolation of Cycles+compositor only; excludes PNG/update/Drive checkpoints/Remotion/audio/export. Not a confidence interval; Templar and remaining shot complexity unmeasured.')
-  usable=all(j['request']['frames']>=3 for j in plan['jobs']) and plan['mode']=='standard' and len(paired)==plan['repeats'] and len(group)==plan['repeats'] and invariant and all(eligible(r) for r in group) and all(ratio>1 for ratio in paired)
+  usable=all(j['request']['frames']>=3 for j in plan['jobs']) and plan['mode']=='standard' and len(paired)==plan['repeats'] and len(group)==plan['repeats'] and invariant and all(eligible(r) for r in group) and all(ratio>1.02 for ratio in paired) and statistics.median(paired)>=1.05
   out.append(dict(case=case['id'],status=[r.get('status') for r in group],recordedMeanRenderOperationSecondsPerFrame=statistics.mean([f['renderOperationSeconds'] for r in group for f in r.get('frames',{}).values()]) if any(r.get('frames') for r in group) else None,medianInvocationSeconds=mean,speedRatio=statistics.median(paired) if paired else None,pairedTrialRatios=paired,sceneIdentityMatchesBaseline=invariant,eligibleForProductionReview=bool(usable and case['id']!='baseline-48'),settings=group[0].get('settingsRequested') if group else None,projection=projection,qualityApproved=False,visualReviewRequired=True))
  return out
 

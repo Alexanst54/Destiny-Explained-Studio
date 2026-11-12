@@ -63,7 +63,9 @@ def capability_probe(folder,plan,binary):
  for feature,available in [('optix-denoiser',caps['device']['optixDenoiserSupported']),('oidn-gpu',caps['device']['oidnGpuSupported']),('gpu-compositor',not plan['cpuValidation'] and 'compositor_device' in caps['defaults'])]:
   if not available:caps['features'][feature]=dict(supported=False,reason='Device/build capability unavailable');continue
   dest=base/feature;probe_plan=base/(feature+'-plan.json');atomic_json(probe_plan,{**data,'feature':feature,'output':str(dest)});trial=launch(binary,'probe',probe_plan,dest,240)
-  caps['features'][feature]=dict(supported=trial['exitCode']==0 and (dest/'probe.json').exists(),probe=trial,reason=None if trial['exitCode']==0 else 'Actual 32×32 render probe failed; feature not used')
+  probe_log=(dest/'blender-log.txt').read_text(errors='replace');fallback=bool(re.search('fall.*back.*CPU|not supported.*GPU|GPU.*not supported',probe_log,re.I))
+  supported=trial['exitCode']==0 and (dest/'probe.json').exists() and not fallback
+  caps['features'][feature]=dict(supported=supported,probe=trial,reason=None if supported else 'Actual 32×32 probe failed or logged an unsupported/CPU fallback; feature not used')
  atomic_json(folder/'capabilities.json',caps);return caps
 
 def run(root,folder,plan,binary):
@@ -95,10 +97,10 @@ def run(root,folder,plan,binary):
       job=next(j for j in plan['jobs'] if j['shotId']==f['shotId']);complete=complete and valid_png(out/f['file'],job['request']['width'],job['request']['height'],f['sha256'])
      if complete:
       original['reusedCompletedTrialReport']=True;results.append(original);print('Reused original completed trial report; no frames rendered:',case['id'],flush=True);continue
-    print(f'Trial {repeat+1}/{plan["repeats"]}: {case["id"]} — {settings}',flush=True);invocation=launch(binary,'render',file,out)
+    print(f'Trial {repeat+1}/{plan["repeats"]}: {case["id"]} — {settings}',flush=True);invocation=launch(binary,'render',file,out,300 if plan['mode']=='fast' else 900)
     record=read(out/'result.json') if (out/'result.json').exists() else dict(status='failed',error='No worker report',frames={},newFrames=0,cacheHits=0)
     if invocation['exitCode']!=0:record.update(status='failed',error=record.get('error','Blender exited '+str(invocation['exitCode'])))
-    text=(out/'blender-log.txt').read_text(errors='replace');record.update(case=case['id'],trial=repeat+1,invocation=invocation,settingsRequested=settings,oom=bool(re.search('out of memory|CUDA_ERROR_OUT_OF_MEMORY|Failed to allocate',text,re.I)),cpuFallback=bool(record.get('device',{}).get('selected')=='CPU' and not plan['cpuValidation']))
+    text=(out/'blender-log.txt').read_text(errors='replace');record.update(case=case['id'],trial=repeat+1,invocation=invocation,settingsRequested=settings,oom=bool(re.search('out of memory|CUDA_ERROR_OUT_OF_MEMORY|Failed to allocate',text,re.I)),cpuFallback=bool(record.get('device',{}).get('selected')=='CPU' and not plan['cpuValidation']),componentCpuFallback=bool(re.search('fall.*back.*CPU',text,re.I)),gpuFailure=bool(re.search('OptiX error|CUDA_ERROR|GPU.*failed',text,re.I)),configurationWarnings=[line[-500:] for line in text.splitlines() if re.search('fall.*back|not supported',line,re.I)])
     requested=sum(j['request']['frames'] for j in plan['jobs']);record['requestedFrames']=requested;record['cold']=record['newFrames']==requested and record['cacheHits']==0;record['actualT4']=record.get('device',{}).get('selected')=='GPU' and 'T4' in record.get('device',{}).get('name','') and all(f['device']['selected']=='GPU' and f['device']['backend'] in ['OPTIX','CUDA'] for f in record['frames'].values())
     # Only original cold passes remain eligible after a partial resume; warm never becomes cold.
     results.append(record);atomic_json(out/'case-result.json',record)
