@@ -51,7 +51,7 @@ class Performance(unittest.TestCase):
     rr={**r,'actualT4Rendering':gpu,'coldRun':cold};report=perf.summarize(folder,[],{'baseline-current':rr,'scratch-persistent':rr});self.assertFalse(report['fullEpisodeRerenderRecommended']);self.assertTrue(all(x['measuredSpeedRatio'] is None for x in report['estimates']))
  def test_cycles_log_labels_nested_approximate_scope(self):
   with tempfile.TemporaryDirectory() as d:
-   p=pathlib.Path(d)/'log';p.write_text('Fra:1 | Time:00:01.00 | Updating Scene\nFra:1 | Time:00:02.50 | Sample 1/48\nFra:1 | Time:00:05.00 | Denoising\n');r=perf.cycles_stages(p);self.assertEqual(r['approximateProgressSeconds']['geometry-sync-bvh'],1.5);self.assertEqual(r['approximateProgressSeconds']['sampling'],2.5)
+   p=pathlib.Path(d)/'log';p.write_text('Fra:1 | Time:00:01.00 | Updating Scene\nFra:1 | Time:00:02.50 | Sample 1/48\nFra:1 | Time:00:05.00 | Denoising\n');r=perf.cycles_stages(p);self.assertEqual(r['approximateProgressSeconds']['geometry-sync-bvh'],1.5);self.assertEqual(r['approximateProgressSeconds']['sampling'],2.5);offset=p.stat().st_size;p.write_text(p.read_text()+'New warm run, no Cycles frames\n');self.assertEqual(perf.cycles_stages(p,offset)['approximateProgressSeconds'],{})
  def test_notebook_new_controls_compile_and_standalone_is_preserved(self):
   notebook=json.loads((perf.ROOT/'remotion/blender/Destiny-Studio-Colab-Pro.ipynb').read_text());texts=[''.join(c['source']) for c in notebook['cells']]
   for i,c in enumerate(notebook['cells']):

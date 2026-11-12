@@ -43,10 +43,10 @@ def gpu_snapshot():
  try:return dict(available=True,query=subprocess.check_output([binary,'--query-gpu=uuid,name,driver_version,memory.total','--format=csv,noheader'],text=True,timeout=10).strip())
  except subprocess.SubprocessError as e:return dict(available=False,note=str(e))
 
-def cycles_stages(log):
+def cycles_stages(log,offset=0):
  """Approximate progress-time increments, not exclusive CUDA kernel timings."""
  result={};last=0;previous=None
- for line in Path(log).read_text(errors='replace').splitlines():
+ for line in Path(log).read_bytes()[offset:].decode(errors='replace').splitlines():
   match=re.search(r'Time:(\d+):(\d+(?:\.\d+)?)',line)
   if not match:continue
   elapsed=int(match[1])*60+float(match[2]);status=line.rsplit('|',1)[-1].strip()
@@ -81,7 +81,7 @@ def execute_profile(jobs,folder,scratch,case,blender,device='auto',require_gpu=T
   n=sum(bool(valid_record(local,str(i),prior['frames'].get(str(i)),j['request']['width'],j['request']['height'])) for i in j['indices']);verification+=time.perf_counter()-ts;reused+=n;cold+=len(j['indices'])-n
   j.update(output=str(local.resolve()),remote=str(remote.resolve()) if local!=remote else None);work.append(j)
  run_id=uuid.uuid4().hex;plan=dict(invocationId=run_id,jobs=work,settings=cfg,blenderVersion=version,device=device,requireGpu=require_gpu,direction=direction,checkpointEvery=checkpoint_every,events=str((scratch/('events-'+digest(str(folder.resolve()))[:16]+'.jsonl')).resolve()))
- Path(plan['events']).write_text('');plan_path=scratch/('plan-'+digest(str(folder.resolve()))[:16]+'.json');atomic_json(plan_path,plan);log=folder/'blender.log';ts=time.perf_counter();launch_epoch=time.time();error=None
+ Path(plan['events']).write_text('');plan_path=scratch/('plan-'+digest(str(folder.resolve()))[:16]+'.json');atomic_json(plan_path,plan);log=folder/'blender.log';log_offset=log.stat().st_size if log.exists() else 0;ts=time.perf_counter();launch_epoch=time.time();error=None
  with Telemetry(scratch/('gpu-'+digest(str(folder.resolve()))[:16]+'.jsonl')) as monitor:
   def progress():
    try:
@@ -108,7 +108,7 @@ def execute_profile(jobs,folder,scratch,case,blender,device='auto',require_gpu=T
  ready=next((e['epochSeconds'] for e in events if e['phase']=='worker-ready'),None)
  t4=bool(frame_records) and all(f['device']['selected']=='GPU' and f['device'].get('backend') in ['OPTIX','CUDA'] and any('T4' in d for d in f['device'].get('devices',[])) for f in frame_records)
  totals={key:sum(f.get(key,0) for f in frame_records if f.get('invocationId')==run_id) for key in ['updateSeconds','updateCpuSeconds','renderAndCompositeSeconds','renderCpuSeconds','pngEncodeAndWriteSeconds','pngCpuSeconds','verifySeconds']}
- result=dict(status='failed' if error else 'passed',error=error,wallSeconds=wall,frames=sum(len(j['indices']) for j in jobs),newFrames=cold,reusedFrames=reused,sourceFingerprint=digest(sources()),settings=cfg,direction=direction,blenderVersion=version,startupToWorkerReadySeconds=ready-launch_epoch if ready else None,buildSeconds=sum(b['seconds'] for r in reports for b in r.get('builds',[])),cpuBuildSeconds=sum(b['cpuSeconds'] for r in reports for b in r.get('builds',[])),cacheVerificationSeconds=verification+sum(r.get('cacheVerificationSeconds',0) for r in reports),restoreFromDrive=restore,driveCheckpoints=drive_io,workerCheckpointSeconds=sum(c['seconds'] for r in reports for c in r.get('driveCheckpoints',[])),phases=totals,cyclesLog=cycles_stages(log),gpu=monitor.report(),actualT4Rendering=t4,peakBlenderRssKiB=max((r.get('peakProcessRssKiB',0) for r in reports),default=0),coldRun=cold==sum(len(j['indices']) for j in jobs) and reused==0)
+ result=dict(status='failed' if error else 'passed',error=error,wallSeconds=wall,frames=sum(len(j['indices']) for j in jobs),newFrames=cold,reusedFrames=reused,sourceFingerprint=digest(sources()),settings=cfg,direction=direction,blenderVersion=version,startupToWorkerReadySeconds=ready-launch_epoch if ready else None,buildSeconds=sum(b['seconds'] for r in reports for b in r.get('builds',[])),cpuBuildSeconds=sum(b['cpuSeconds'] for r in reports for b in r.get('builds',[])),cacheVerificationSeconds=verification+sum(r.get('cacheVerificationSeconds',0) for r in reports),restoreFromDrive=restore,driveCheckpoints=drive_io,workerCheckpointSeconds=sum(c['seconds'] for r in reports for c in r.get('driveCheckpoints',[])),phases=totals,cyclesLog=cycles_stages(log,log_offset),startedEpochSeconds=launch_epoch,finishedEpochSeconds=time.time(),gpu=monitor.report(),actualT4Rendering=t4,peakBlenderRssKiB=max((r.get('peakProcessRssKiB',0) for r in reports),default=0),coldRun=cold==sum(len(j['indices']) for j in jobs) and reused==0)
  atomic_json(folder/'result.json',result)
  if error:raise RuntimeError('Profiler failed; partial cache and report preserved: '+error)
  return result

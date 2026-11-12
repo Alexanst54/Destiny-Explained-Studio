@@ -32,8 +32,8 @@ def camera(shot):
  'conflux':((-25,-32,15),(-18,-26,13),(0,9,12),36),
  'oracle-field':((-14,-28,9),(-6,-24,11),(0,12,12),32),
  'templar':((10,-33,11),(4,-28,10),(0,9,8),36),
- 'past-gate':((-32,-22,9),(-24,-12,10),(-16,23,10),32),
- 'future-gate':((32,-22,9),(24,-12,10),(16,23,10),32),
+ 'past-gate':((-5,-10,4.5),(-7,-4,6),(-17,23,8),32),
+ 'future-gate':((5,-10,4.5),(7,-4,6),(17,23,8),32),
  'return-gate':((0,-28,7),(4,-22,8),(0,15,9),30),
  'guardian-team':((-12,-28,4),(-6,-24,5),(0,9,10),30),
  'aegis':((10,-18,4),(7,-16,5),(0,-1,4),42),
@@ -75,7 +75,7 @@ def install(state):
   for row in range(5):
    for col in range(7):
     x=side*16+(col-3)*1.2;y=30+row*2;h=.4+((row*11+col*7)%9)*.4
-    landscapes.append(box('Reconstructed portal landscape',(x,y,h/2),(1.1,1.7,h),material))
+    landscapes.append(box('Reconstructed portal landscape',(x,y,3.5+h/2),(1.1,1.7,h),material))
  state['direction']=dict(collection=collection,guardians=guardians,shield=shield,motes=motes,oracles=oracles,landscapes=landscapes)
  state['directionBossCollection']=next((c for c in scene.collection.children if c.name.startswith('Boss/')),None)
  # Existing approved Templar provider, distinct arena and model; loaded on its own shot build.
@@ -100,6 +100,10 @@ def apply(state,scene_id,frame,frames):
  active=n in ['past-gate','future-gate','return-gate','guardian-team','aegis']
  for i,root in enumerate(d['guardians']):
   root.hide_render=not active
+  if n in ['past-gate','future-gate']:
+   side=-1 if n=='past-gate' else 1;root.location=(side*(12+(i%2)*1.2),10+i*1.1,1.25)
+  else:
+   x,y=[(-5,-2),(0,-1),(5,-2),(-8,3),(8,3),(0,-6)][i];root.location=(x,y,1.25)
   for child in root.children:child.hide_render=not active
   # Teleport silhouettes in and out with reversible deterministic light pulses.
   fade=1

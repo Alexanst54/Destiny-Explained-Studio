@@ -75,6 +75,8 @@ def assemble(folder,package,opts,tools,project,jobs,case,scratch,chrome=None):
   if old.get('fingerprint')==project['fingerprint'] and old.get('sha256')==sha(output) and old.get('status')=='passed':verify(output,opts);verify_audio_alignment(output,package['scenes']);print('Reused validated directed export',flush=True);return old
  # Stage only validated assets locally to isolate Drive reads from Remotion browser work.
  stage=Path(scratch)/('compose-'+project['fingerprint'][:16]);public=stage/'public';public.mkdir(parents=True,exist_ok=True);ts=time.perf_counter();bytes_copied=0
+ needed=sum((folder/'public'/path).stat().st_size for s in props['scenes'] for path in s['frameSources'])+512*1024**2
+ if shutil.disk_usage(stage).free<needed:raise ValueError('Insufficient local scratch space for composition staging/export; keep Drive frames and free local space before retrying assembly')
  for relative in [path for s in props['scenes'] for path in s['frameSources']]+['scenes/'+s['id']+'/speech.wav' for s in props['scenes']]:
   src=folder/'public'/relative;dest=public/relative;dest.parent.mkdir(parents=True,exist_ok=True)
   if not dest.exists() or sha(dest)!=sha(src):shutil.copyfile(src,dest);bytes_copied+=src.stat().st_size
@@ -85,7 +87,7 @@ def assemble(folder,package,opts,tools,project,jobs,case,scratch,chrome=None):
  ts=time.perf_counter();dest=folder/(stem+'.pending.mp4');shutil.copyfile(pending,dest)
  if sha(dest)!=sha(pending):raise ValueError('Final Drive MP4 readback differs')
  dest.replace(output);copy_seconds=time.perf_counter()-ts
- proof.update(status='passed',fingerprint=project['fingerprint'],sha256=sha(output),sourceCommit=project['sourceCommit'],fullEpisodeRendered=True,deviceReport=devices,preparedSpeechReused=True,originalSpeechSha256={i['scene']['id']:i['speech']['sha256'] for i in package['scenes']},subtitleWords=223,subtitleTimingValidated=True,cacheVerificationSeconds=cache_seconds,driveToScratchStageSeconds=stage_seconds,driveToScratchBytes=bytes_copied,remotionCompositionAndEncodeSeconds=export_seconds,finalDriveCopySeconds=copy_seconds)
+ proof.update(status='passed',fingerprint=project['fingerprint'],sha256=sha(output),sourceCommit=project['sourceCommit'],fullEpisodeRendered=True,deviceReport=devices,preparedSpeechReused=True,originalSpeechSha256={i['scene']['id']:i['speech']['sha256'] for i in package['scenes']},subtitleWords=223,subtitleTimingValidated=True,subtitlesSha256=sha(folder/'subtitles.en.srt'),cacheVerificationSeconds=cache_seconds,driveToScratchStageSeconds=stage_seconds,driveToScratchBytes=bytes_copied,remotionCompositionAndEncodeSeconds=export_seconds,finalDriveCopySeconds=copy_seconds)
  atomic_json(report,proof);return proof
 
 
