@@ -1,5 +1,5 @@
 """Isolated lab contracts. No production changes, Drive access or voice dependencies."""
-import hashlib,json,os,stat,sys,uuid,zipfile,shutil
+import hashlib,json,os,stat,sys,uuid,zipfile,shutil,fcntl,contextlib
 from pathlib import Path
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[2]
@@ -116,3 +116,12 @@ def resolved_settings(case,caps):
   if caps.get('autoTileAvailable'):settings['use_auto_tile']=False
  # No bounces, threshold, lights, volumes, geometry, thread count or animation changes.
  return settings,None
+
+
+@contextlib.contextmanager
+def action_lock(root):
+ with (Path(root)/'.lab-action.lock').open('a') as lock:
+  try:fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
+  except BlockingIOError:raise ValueError('A lab action is already running; simultaneous Blender/report/cleanup actions are forbidden')
+  try:yield
+  finally:fcntl.flock(lock,fcntl.LOCK_UN)

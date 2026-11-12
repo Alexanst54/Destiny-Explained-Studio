@@ -3,7 +3,7 @@ import copy,json,pathlib,sys,tempfile,unittest,zipfile
 from unittest.mock import patch
 sys.path.insert(0,str(pathlib.Path(__file__).resolve().parents[1]/'gpu_lab'))
 import common as labcommon
-from common import CASES,safe_root,run_folder,atomic_json,read,sha,cleanup,archive,restore_zip,jobs,resolved_settings
+from common import CASES,safe_root,run_folder,atomic_json,read,sha,cleanup,archive,restore_zip,jobs,resolved_settings,action_lock
 from reporting import aggregate,compare,residual_flicker
 from lab import export_configuration
 
@@ -21,6 +21,13 @@ class Lab(unittest.TestCase):
    parent=pathlib.Path(d);root=safe_root(parent/'destiny-gpu-lab',True);run=run_folder(root,'unit');run.mkdir(parents=True);atomic_json(run/'.lab-run.json',{'kind':'destiny-t4-lab-v1'});intermediate=run/'intermediate';intermediate.mkdir();(intermediate/'frame.png').write_bytes(b'fixture');(run/'final').mkdir();(run/'final/report.txt').write_text('keep');outside=parent/'episode.txt';outside.write_text('unchanged');(intermediate/'bad-link').symlink_to(outside)
    with self.assertRaises(ValueError):cleanup(root,run)
    self.assertEqual(outside.read_text(),'unchanged');(intermediate/'bad-link').unlink();self.assertGreater(cleanup(root,run),0);self.assertTrue((run/'final/report.txt').exists());self.assertFalse(intermediate.exists())
+ def test_actions_are_serialized_in_one_lab_workspace(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=safe_root(pathlib.Path(d)/'destiny-gpu-lab',True)
+   with action_lock(root):
+    with self.assertRaises(ValueError):
+     with action_lock(root):pass
+   with action_lock(root):pass
  def test_archive_and_restore_only_final_hash_checked_results(self):
   with tempfile.TemporaryDirectory() as d:
    root=safe_root(pathlib.Path(d)/'destiny-gpu-lab',True);run=run_folder(root,'unit');(run/'final').mkdir(parents=True);(run/'final/report.txt').write_text('real fixture, not a benchmark');z=archive(run);restored=restore_zip(root,z,'valid');self.assertEqual((restored/'final/report.txt').read_text(),'real fixture, not a benchmark')

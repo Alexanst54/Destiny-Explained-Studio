@@ -126,12 +126,13 @@ def export_configuration(folder,case_id,approved):
 
 def main():
  p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['prepare','run','report','export','restore']);p.add_argument('--root',default='/content/destiny-gpu-lab');p.add_argument('--run-id',default='t4-fast-01');p.add_argument('--mode',choices=['fast','standard'],default='fast');p.add_argument('--width',type=int,default=540);p.add_argument('--height',type=int,default=960);p.add_argument('--blender',default='blender');p.add_argument('--cpu-validation',action='store_true');p.add_argument('--cases',nargs='+',choices=[c['id'] for c in CASES]);p.add_argument('--keep-intermediates',action='store_true');p.add_argument('--selected-case');p.add_argument('--approved',action='store_true');p.add_argument('--archive');a=p.parse_args();root=safe_root(a.root,a.cpu_validation)
- if a.action=='restore':print(restore_zip(root,a.archive,a.run_id));return
- if a.action in ['prepare','run']:folder,plan=prepare(root,a.run_id,a.mode,a.width,a.height,a.cpu_validation,a.cases)
- else:folder=run_folder(root,a.run_id)
- if a.action=='run':run(root,folder,plan,a.blender)
- if a.action=='report':
-  from reporting import make_report
-  make_report(root,folder,not a.keep_intermediates)
- if a.action=='export':print(json.dumps(export_configuration(folder,a.selected_case,a.approved),indent=2))
+ with action_lock(root):
+  if a.action=='restore':print(restore_zip(root,a.archive,a.run_id));return
+  if a.action in ['prepare','run']:folder,plan=prepare(root,a.run_id,a.mode,a.width,a.height,a.cpu_validation,a.cases)
+  else:folder=run_folder(root,a.run_id)
+  if a.action=='run':run(root,folder,plan,a.blender)
+  if a.action=='report':
+   from reporting import make_report
+   make_report(root,folder,not a.keep_intermediates)
+  if a.action=='export':print(json.dumps(export_configuration(folder,a.selected_case,a.approved),indent=2))
 if __name__=='__main__':main()
