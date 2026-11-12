@@ -15,11 +15,18 @@ SHOTS={
  '06-mystery':[(0,.25,'aftermath','idle'),(.25,.58,'empty-throne','idle'),(.58,1,'unanswered-vault','idle')],
 }
 
+def cut_frame(fraction,frames):
+ # Match frame/frames >= fraction exactly, including non-integral boundaries.
+ n=math.ceil(fraction*frames)
+ while n>0 and (n-1)/frames>=fraction:n-=1
+ while n<frames and n/frames<fraction:n+=1
+ return n
+
 def shot_at(scene,frame,frames):
  if scene not in SHOTS or type(frame) is not int or frame<0 or frame>=frames:raise ValueError('Invalid directed scene/frame')
  u=frame/frames
  for a,b,name,animation in SHOTS[scene]:
-  if a<=u<b:return dict(name=name,animation=animation,progress=(u-a)/(b-a),cutStart=round(a*frames),cutEnd=round(b*frames))
+  if a<=u<b:return dict(name=name,animation=animation,progress=(u-a)/(b-a),cutStart=cut_frame(a,frames),cutEnd=cut_frame(b,frames))
  raise ValueError('No shot')
 
 def camera(shot):

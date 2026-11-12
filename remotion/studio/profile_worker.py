@@ -3,7 +3,7 @@ import cProfile,json,os,pstats,resource,sys,time
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'blender'))
-from perf_common import atomic_json,identity,valid_record,sha,checkpoint
+from perf_common import atomic_json,identity,valid_record,sha,checkpoint,cpu_snapshot,cpu_delta
 from universal.worker import build,update
 from universal.request import validate
 
@@ -11,6 +11,7 @@ from universal.request import validate
 def main():
     import bpy
     args=sys.argv[sys.argv.index('--')+1:];plan=json.loads(Path(args[0]).read_text());settings=plan['settings'];state=None;state_key=None;wall=time.perf_counter();build_count=0
+    offsets={i['id']:i['startFrame'] for i in json.loads((Path(__file__).resolve().parents[2]/'episodes/atheon-explained-en/audio-evidence/timing.json').read_text())['scenes']}
     events=Path(plan['events']);events.parent.mkdir(parents=True,exist_ok=True)
     def event(phase,**values):
         with events.open('a') as f:f.write(json.dumps(dict(phase=phase,epochSeconds=time.time(),**values))+'\n')
@@ -62,29 +63,33 @@ def main():
             if plan.get('requireGpu') and configuration.get('selected')!='GPU':raise RuntimeError('No actual GPU selected; benchmark stopped rather than silently timing CPU')
             report['configuration']=configuration
             for index in pending:
-                frame=r['startFrame']+index;event('frame-update',job=job['id'],frame=frame);ts=time.perf_counter();cpu=time.process_time();update(state,r,frame)
+                frame=r['startFrame']+index;event('frame-update',job=job['id'],frame=frame);ts=time.perf_counter();cpu=time.process_time();before_update=cpu_snapshot();update(state,r,frame)
                 if plan.get('direction'):
                     from cinematic_direction import apply
                     apply(state,job['sceneId'],frame,job['sceneFrames'])
-                update_seconds=time.perf_counter()-ts;cpu_update=time.process_time()-cpu
+                update_seconds=time.perf_counter()-ts;cpu_update=time.process_time()-cpu;update_scheduling=cpu_delta(before_update,cpu_snapshot());camera_diagnostic=None
+                if plan.get('direction'):
+                    from shot_audit import diagnostic
+                    camera_diagnostic=diagnostic(job['sceneId'],frame,job['sceneFrames'],scene,offsets[job['sceneId']]);event('camera-applied',job=job['id'],**camera_diagnostic)
                 geometry_counts=dict(objects=len(scene.objects),meshes=len(bpy.data.meshes),vertices=sum(len(o.data.vertices) for o in scene.objects if o.type=='MESH'))
-                event('cycles-and-compositor',job=job['id'],frame=frame);ts=time.perf_counter();cpu=time.process_time()
+                event('cycles-and-compositor',job=job['id'],frame=frame);ts=time.perf_counter();cpu=time.process_time();before_render=cpu_snapshot()
                 # Render and encode are intentionally separated. Blender log captures Cycles sync,
                 # BVH, sampling, denoising and compositing stages; this wall metric includes all.
                 bpy.ops.render.render(write_still=False,scene=scene.name)
-                render_seconds=time.perf_counter()-ts;render_cpu=time.process_time()-cpu
-                event('png-save',job=job['id'],frame=frame);tmp=out/f'pending-{index:04d}.png';ts=time.perf_counter();cpu=time.process_time();bpy.data.images['Render Result'].save_render(str(tmp),scene=scene);save_seconds=time.perf_counter()-ts;save_cpu=time.process_time()-cpu
+                render_seconds=time.perf_counter()-ts;render_cpu=time.process_time()-cpu;render_scheduling=cpu_delta(before_render,cpu_snapshot())
+                event('png-save',job=job['id'],frame=frame);tmp=out/f'pending-{index:04d}.png';ts=time.perf_counter();cpu=time.process_time();before_png=cpu_snapshot();bpy.data.images['Render Result'].save_render(str(tmp),scene=scene);save_seconds=time.perf_counter()-ts;save_cpu=time.process_time()-cpu;png_scheduling=cpu_delta(before_png,cpu_snapshot())
                 ts=time.perf_counter()
                 from universal.cache import valid_png
                 if not valid_png(tmp,r['width'],r['height']):raise ValueError('Invalid rendered PNG')
                 final=out/f'frame-{index:04d}.png';os.replace(tmp,final);checksum=sha(final);verification_seconds=time.perf_counter()-ts
-                report['frames'][str(index)]=dict(invocationId=plan['invocationId'],file=final.name,sourceFrame=frame,sha256=checksum,updateSeconds=update_seconds,updateCpuSeconds=cpu_update,renderAndCompositeSeconds=render_seconds,renderCpuSeconds=render_cpu,pngEncodeAndWriteSeconds=save_seconds,pngCpuSeconds=save_cpu,verifySeconds=verification_seconds,device=configuration,geometry=geometry_counts,cameraMatrix=[list(row) for row in scene.camera.matrix_world])
+                report['frames'][str(index)]=dict(invocationId=plan['invocationId'],file=final.name,sourceFrame=frame,sha256=checksum,updateSeconds=update_seconds,updateCpuSeconds=cpu_update,renderAndCompositeSeconds=render_seconds,renderCpuSeconds=render_cpu,pngEncodeAndWriteSeconds=save_seconds,pngCpuSeconds=save_cpu,verifySeconds=verification_seconds,device=configuration,geometry=geometry_counts,cameraDiagnostic=camera_diagnostic,cpuScheduling=dict(update=update_scheduling,render=render_scheduling,png=png_scheduling),cameraMatrix=[list(row) for row in scene.camera.matrix_world])
                 atomic_json(path,report);event('frame-complete',job=job['id'],frame=frame)
                 # At most checkpointEvery-1 freshly rendered frames can be lost on a VM loss.
                 if job.get('remote') and len(report['frames'])%plan['checkpointEvery']==0:
                     event('drive-checkpoint',job=job['id']);io=checkpoint(out,job['remote'],wanted,r['width'],r['height']);report.setdefault('driveCheckpoints',[]).append(io);atomic_json(path,report)
             report.update(status='success',workerSeconds=time.perf_counter()-wall,processBuildCount=build_count,peakProcessRssKiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss);atomic_json(path,report)
-            if job.get('remote'):checkpoint(out,job['remote'],wanted,r['width'],r['height'])
+            if job.get('remote'):
+                event('drive-checkpoint',job=job['id']);io=checkpoint(out,job['remote'],wanted,r['width'],r['height']);report.setdefault('driveCheckpoints',[]).append(io);atomic_json(path,report);atomic_json(Path(job['remote'])/'profile.json',report)
         except BaseException as error:
             report.update(status='failed',error=str(error));atomic_json(path,report)
             if job.get('remote'):

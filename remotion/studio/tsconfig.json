@@ -4,6 +4,7 @@
     "./index.tsx",
     "./complete-index.tsx",
     "./cinematic-index.tsx",
-    "./perf-export.tsx"
+    "./perf-export.tsx",
+    "./motion-index.tsx"
   ]
 }

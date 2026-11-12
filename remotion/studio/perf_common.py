@@ -1,5 +1,5 @@
 """Opt-in profiler provenance and resumable, per-frame scratch/Drive checkpoints."""
-import contextlib,hashlib,json,os,shutil,subprocess,threading,time
+import contextlib,hashlib,json,os,shutil,subprocess,threading,time,resource
 from pathlib import Path
 from production import ROOT
 from universal.cache import atomic_json,source_hashes,valid_png
@@ -8,7 +8,7 @@ def digest(obj):return hashlib.sha256(json.dumps(obj,sort_keys=True).encode()).h
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def sources():
     result=source_hashes()
-    for name in ['perf_common.py','profile_worker.py','performance.py','cinematic_atheon.py','cinematic_direction.py','cinematic-index.tsx','cinematic_captions.ts','complete_atheon.py','production.py','episode_timeline.ts']:
+    for name in ['perf_common.py','profile_worker.py','performance.py','cinematic_atheon.py','cinematic_direction.py','cinematic-index.tsx','cinematic_captions.ts','complete_atheon.py','production.py','episode_timeline.ts','shot_audit.py','motion_test.py','motion-index.tsx']:
         p=Path(__file__).with_name(name)
         if p.exists():result[str(p.relative_to(ROOT))]=sha(p)
     result['remotion/package-lock.json']=sha(ROOT/'remotion/package-lock.json')
@@ -63,4 +63,17 @@ class Telemetry:
     def __exit__(self,*args):self.stop_event.set();self.thread.join(timeout=4)
     def report(self):
         util=[s['gpuUtilPercent'] for s in self.samples if s['gpuUtilPercent'] is not None];mem=[s['usedMiB'] for s in self.samples if s['usedMiB'] is not None]
-        return dict(scope='Device-wide ~1s polling; includes other processes, sampled peaks only; no attribution to a single process',samples=len(self.samples),peakMemoryMiB=max(mem,default=None),meanUtilizationPercent=sum(util)/len(util) if util else None,error=self.error)
+        power=[s['powerWatts'] for s in self.samples if s['powerWatts'] is not None]
+        return dict(scope='Device-wide ~1s polling; includes other processes, sampled peaks only; no attribution to a single process',samples=len(self.samples),peakMemoryMiB=max(mem,default=None),meanUtilizationPercent=sum(util)/len(util) if util else None,meanPowerWatts=sum(power)/len(power) if power else None,peakPowerWatts=max(power,default=None),error=self.error)
+
+
+def cpu_snapshot():
+    usage=resource.getrusage(resource.RUSAGE_SELF);threads={}
+    for path in Path('/proc/self/task').glob('*/schedstat'):
+        try:threads[path.parent.name]=list(map(int,path.read_text().split()[:2]))
+        except (OSError,ValueError):pass
+    return dict(cpuSeconds=usage.ru_utime+usage.ru_stime,voluntary=usage.ru_nvcsw,involuntary=usage.ru_nivcsw,threads=threads)
+
+def cpu_delta(before,after):
+    queue=sum(max(0,v[1]-before['threads'].get(t,[0,0])[1]) for t,v in after['threads'].items())/1e9 if after['threads'] else None
+    return dict(processCpuSeconds=after['cpuSeconds']-before['cpuSeconds'],voluntaryContextSwitches=after['voluntary']-before['voluntary'],involuntaryContextSwitches=after['involuntary']-before['involuntary'],threadRunQueueWaitSeconds=queue,blockingIoOrGpuWaitSeconds=None,scope='Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time.')
