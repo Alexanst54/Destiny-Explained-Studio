@@ -2,6 +2,11 @@
 
 This stacked work starts at PR #25 commit `4f006f1`. PR #25 remains unmerged. No approved model, prepared narration, original subtitle timestamps or historical episode is changed. GitHub Actions is neither called nor required.
 
+
+## Investigate the reported smoke first
+
+The stock `atheon-smoke.mp4` comes from the legacy prepared-pilot **B** cell, not Q. Use the new **R0** route inspector and **M1–M3** three-second motion test before a complete rerender. [Exact cells, route evidence and measurement scope](SMOKE-ROUTE-AND-MOTION.md).
+
 ## What is known
 
 The user reports a successful 2672-frame, 540×960, 30 FPS episode on Colab Pro / Tesla T4 / OptiX, approximately 20 hours wall time, and approximately 10% observed GPU utilization. These are user observations, not measurements collected by this profiler. The original logs and video were not available in this development environment. 20 hours / 2672 is about 26.95 seconds per frame **including all work**, not measured Cycles kernel time.

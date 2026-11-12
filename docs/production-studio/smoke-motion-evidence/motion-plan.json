@@ -1,0 +1,503 @@
+[
+  {
+    "id": "scenes/01-hook/frames/motion-vault-establish",
+    "sceneId": "01-hook",
+    "sceneFrames": 345,
+    "request": {
+      "version": 1,
+      "selectionId": "boss-atheon",
+      "variantId": null,
+      "binding": {
+        "entity": {
+          "id": "boss-atheon",
+          "name": "Atheon, Time's Conflux",
+          "enName": "Atheon, Time's Conflux",
+          "kind": "boss",
+          "parentBossId": null,
+          "composition": "individual",
+          "members": [],
+          "nature": null,
+          "priority": false,
+          "atlasVisualStatus": "dedicated",
+          "status": "implemented-user-approved",
+          "implementation": {
+            "provider": "venus-vault",
+            "status": "implemented-user-approved",
+            "environmentId": "arena-glass-throne",
+            "animations": [
+              "idle",
+              "walk",
+              "combat",
+              "temporal",
+              "reveal"
+            ],
+            "lods": [
+              0,
+              1,
+              2
+            ],
+            "gallery": "docs/universal-library/approved/README.md",
+            "galleryV1Status": "technical-grid-rendered",
+            "protectedFiles": [
+              {
+                "path": "remotion/blender/cinematic_vex/atheon.py",
+                "sha256": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/templar.py",
+                "sha256": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/animation.py",
+                "sha256": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/shapes.py",
+                "sha256": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/materials.py",
+                "sha256": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542"
+              }
+            ]
+          },
+          "family": "vex",
+          "familyCandidates": [
+            "vex"
+          ],
+          "arenaIds": [
+            "arena-glass-throne"
+          ],
+          "encounterIds": [
+            "encounter-vault-of-glass-d1-atheon",
+            "encounter-vault-of-glass-d2-atheon"
+          ],
+          "activityIds": [
+            "activity-vault-of-glass-d1",
+            "activity-vault-of-glass-d2"
+          ],
+          "activityTypes": [
+            "raid"
+          ],
+          "variants": [],
+          "encounterBindings": [
+            {
+              "encounterId": "encounter-vault-of-glass-d1-atheon",
+              "bossId": "boss-atheon",
+              "bossVariantId": null,
+              "role": "primary",
+              "conditions": [],
+              "outcome": "defeat",
+              "sources": [
+                "wiki-vog",
+                "wiki-boss-atheon-time-s-conflux"
+              ],
+              "note": "Association sourc\u00e9e ; conditions de qu\u00eate, \u00e9v\u00e9nement ou difficult\u00e9 explicites, sans promotion en boss permanent de la version standard."
+            },
+            {
+              "encounterId": "encounter-vault-of-glass-d2-atheon",
+              "bossId": "boss-atheon",
+              "bossVariantId": null,
+              "role": "primary",
+              "conditions": [],
+              "outcome": "defeat",
+              "sources": [
+                "wiki-vog",
+                "wiki-boss-atheon-time-s-conflux"
+              ],
+              "note": "Association sourc\u00e9e ; conditions de qu\u00eate, \u00e9v\u00e9nement ou difficult\u00e9 explicites, sans promotion en boss permanent de la version standard."
+            }
+          ],
+          "sourceIds": [
+            "wiki-vog",
+            "wiki-boss-atheon-time-s-conflux"
+          ],
+          "reusePlans": [
+            {
+              "entityId": "boss-atheon",
+              "target": "boss",
+              "profileIds": [
+                "reuse-blender-atheon"
+              ],
+              "status": "implemented-stylized",
+              "silhouette": "Infobox inspect\u00e9e : Vex / Minotaur ; proportions exactes non mesur\u00e9es.",
+              "sources": [
+                "wiki-vog",
+                "wiki-boss-atheon-time-s-conflux"
+              ],
+              "note": "G\u00e9n\u00e9rateur Blender original affect\u00e9 et rendu ; aucune migration Remotion. Les limites restent d\u00e9clar\u00e9es dans le profil et blender/venus_vault/VALIDATION.md.",
+              "existingRecipe": null
+            }
+          ]
+        },
+        "provider": "venus-vault",
+        "selectionId": "boss-atheon",
+        "environmentId": "arena-glass-throne",
+        "status": "implemented-user-approved"
+      },
+      "quality": "draft",
+      "seed": 42,
+      "lod": 0,
+      "frames": 28,
+      "fps": 30,
+      "width": 324,
+      "height": 576,
+      "startFrame": 57,
+      "animation": "idle",
+      "view": "environment",
+      "environmentVariant": "sanctum"
+    },
+    "indices": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15,
+      18,
+      21,
+      24,
+      27
+    ],
+    "shotId": "01-hook/vault-establish",
+    "cameraId": "vault-establish",
+    "outputFrameStart": 0,
+    "outputFrames": 10,
+    "outputFps": 10,
+    "episodeSceneStart": 0
+  },
+  {
+    "id": "scenes/02-identity/frames/motion-monument",
+    "sceneId": "02-identity",
+    "sceneFrames": 459,
+    "request": {
+      "version": 1,
+      "selectionId": "boss-atheon",
+      "variantId": null,
+      "binding": {
+        "entity": {
+          "id": "boss-atheon",
+          "name": "Atheon, Time's Conflux",
+          "enName": "Atheon, Time's Conflux",
+          "kind": "boss",
+          "parentBossId": null,
+          "composition": "individual",
+          "members": [],
+          "nature": null,
+          "priority": false,
+          "atlasVisualStatus": "dedicated",
+          "status": "implemented-user-approved",
+          "implementation": {
+            "provider": "venus-vault",
+            "status": "implemented-user-approved",
+            "environmentId": "arena-glass-throne",
+            "animations": [
+              "idle",
+              "walk",
+              "combat",
+              "temporal",
+              "reveal"
+            ],
+            "lods": [
+              0,
+              1,
+              2
+            ],
+            "gallery": "docs/universal-library/approved/README.md",
+            "galleryV1Status": "technical-grid-rendered",
+            "protectedFiles": [
+              {
+                "path": "remotion/blender/cinematic_vex/atheon.py",
+                "sha256": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/templar.py",
+                "sha256": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/animation.py",
+                "sha256": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/shapes.py",
+                "sha256": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/materials.py",
+                "sha256": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542"
+              }
+            ]
+          },
+          "family": "vex",
+          "familyCandidates": [
+            "vex"
+          ],
+          "arenaIds": [
+            "arena-glass-throne"
+          ],
+          "encounterIds": [
+            "encounter-vault-of-glass-d1-atheon",
+            "encounter-vault-of-glass-d2-atheon"
+          ],
+          "activityIds": [
+            "activity-vault-of-glass-d1",
+            "activity-vault-of-glass-d2"
+          ],
+          "activityTypes": [
+            "raid"
+          ],
+          "variants": [],
+          "encounterBindings": [
+            {
+              "encounterId": "encounter-vault-of-glass-d1-atheon",
+              "bossId": "boss-atheon",
+              "bossVariantId": null,
+              "role": "primary",
+              "conditions": [],
+              "outcome": "defeat",
+              "sources": [
+                "wiki-vog",
+                "wiki-boss-atheon-time-s-conflux"
+              ],
+              "note": "Association sourc\u00e9e ; conditions de qu\u00eate, \u00e9v\u00e9nement ou difficult\u00e9 explicites, sans promotion en boss permanent de la version standard."
+            },
+            {
+              "encounterId": "encounter-vault-of-glass-d2-atheon",
+              "bossId": "boss-atheon",
+              "bossVariantId": null,
+              "role": "primary",
+              "conditions": [],
+              "outcome": "defeat",
+              "sources": [
+                "wiki-vog",
+                "wiki-boss-atheon-time-s-conflux"
+              ],
+              "note": "Association sourc\u00e9e ; conditions de qu\u00eate, \u00e9v\u00e9nement ou difficult\u00e9 explicites, sans promotion en boss permanent de la version standard."
+            }
+          ],
+          "sourceIds": [
+            "wiki-vog",
+            "wiki-boss-atheon-time-s-conflux"
+          ],
+          "reusePlans": [
+            {
+              "entityId": "boss-atheon",
+              "target": "boss",
+              "profileIds": [
+                "reuse-blender-atheon"
+              ],
+              "status": "implemented-stylized",
+              "silhouette": "Infobox inspect\u00e9e : Vex / Minotaur ; proportions exactes non mesur\u00e9es.",
+              "sources": [
+                "wiki-vog",
+                "wiki-boss-atheon-time-s-conflux"
+              ],
+              "note": "G\u00e9n\u00e9rateur Blender original affect\u00e9 et rendu ; aucune migration Remotion. Les limites restent d\u00e9clar\u00e9es dans le profil et blender/venus_vault/VALIDATION.md.",
+              "existingRecipe": null
+            }
+          ]
+        },
+        "provider": "venus-vault",
+        "selectionId": "boss-atheon",
+        "environmentId": "arena-glass-throne",
+        "status": "implemented-user-approved"
+      },
+      "quality": "draft",
+      "seed": 42,
+      "lod": 0,
+      "frames": 28,
+      "fps": 30,
+      "width": 324,
+      "height": 576,
+      "startFrame": 54,
+      "animation": "reveal",
+      "view": "environment",
+      "environmentVariant": "sanctum"
+    },
+    "indices": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15,
+      18,
+      21,
+      24,
+      27
+    ],
+    "shotId": "02-identity/monument",
+    "cameraId": "monument",
+    "outputFrameStart": 10,
+    "outputFrames": 10,
+    "outputFps": 10,
+    "episodeSceneStart": 345
+  },
+  {
+    "id": "scenes/02-identity/frames/motion-mechanism",
+    "sceneId": "02-identity",
+    "sceneFrames": 459,
+    "request": {
+      "version": 1,
+      "selectionId": "boss-atheon",
+      "variantId": null,
+      "binding": {
+        "entity": {
+          "id": "boss-atheon",
+          "name": "Atheon, Time's Conflux",
+          "enName": "Atheon, Time's Conflux",
+          "kind": "boss",
+          "parentBossId": null,
+          "composition": "individual",
+          "members": [],
+          "nature": null,
+          "priority": false,
+          "atlasVisualStatus": "dedicated",
+          "status": "implemented-user-approved",
+          "implementation": {
+            "provider": "venus-vault",
+            "status": "implemented-user-approved",
+            "environmentId": "arena-glass-throne",
+            "animations": [
+              "idle",
+              "walk",
+              "combat",
+              "temporal",
+              "reveal"
+            ],
+            "lods": [
+              0,
+              1,
+              2
+            ],
+            "gallery": "docs/universal-library/approved/README.md",
+            "galleryV1Status": "technical-grid-rendered",
+            "protectedFiles": [
+              {
+                "path": "remotion/blender/cinematic_vex/atheon.py",
+                "sha256": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/templar.py",
+                "sha256": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/animation.py",
+                "sha256": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/shapes.py",
+                "sha256": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea"
+              },
+              {
+                "path": "remotion/blender/cinematic_vex/materials.py",
+                "sha256": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542"
+              }
+            ]
+          },
+          "family": "vex",
+          "familyCandidates": [
+            "vex"
+          ],
+          "arenaIds": [
+            "arena-glass-throne"
+          ],
+          "encounterIds": [
+            "encounter-vault-of-glass-d1-atheon",
+            "encounter-vault-of-glass-d2-atheon"
+          ],
+          "activityIds": [
+            "activity-vault-of-glass-d1",
+            "activity-vault-of-glass-d2"
+          ],
+          "activityTypes": [
+            "raid"
+          ],
+          "variants": [],
+          "encounterBindings": [
+            {
+              "encounterId": "encounter-vault-of-glass-d1-atheon",
+              "bossId": "boss-atheon",
+              "bossVariantId": null,
+              "role": "primary",
+              "conditions": [],
+              "outcome": "defeat",
+              "sources": [
+                "wiki-vog",
+                "wiki-boss-atheon-time-s-conflux"
+              ],
+              "note": "Association sourc\u00e9e ; conditions de qu\u00eate, \u00e9v\u00e9nement ou difficult\u00e9 explicites, sans promotion en boss permanent de la version standard."
+            },
+            {
+              "encounterId": "encounter-vault-of-glass-d2-atheon",
+              "bossId": "boss-atheon",
+              "bossVariantId": null,
+              "role": "primary",
+              "conditions": [],
+              "outcome": "defeat",
+              "sources": [
+                "wiki-vog",
+                "wiki-boss-atheon-time-s-conflux"
+              ],
+              "note": "Association sourc\u00e9e ; conditions de qu\u00eate, \u00e9v\u00e9nement ou difficult\u00e9 explicites, sans promotion en boss permanent de la version standard."
+            }
+          ],
+          "sourceIds": [
+            "wiki-vog",
+            "wiki-boss-atheon-time-s-conflux"
+          ],
+          "reusePlans": [
+            {
+              "entityId": "boss-atheon",
+              "target": "boss",
+              "profileIds": [
+                "reuse-blender-atheon"
+              ],
+              "status": "implemented-stylized",
+              "silhouette": "Infobox inspect\u00e9e : Vex / Minotaur ; proportions exactes non mesur\u00e9es.",
+              "sources": [
+                "wiki-vog",
+                "wiki-boss-atheon-time-s-conflux"
+              ],
+              "note": "G\u00e9n\u00e9rateur Blender original affect\u00e9 et rendu ; aucune migration Remotion. Les limites restent d\u00e9clar\u00e9es dans le profil et blender/venus_vault/VALIDATION.md.",
+              "existingRecipe": null
+            }
+          ]
+        },
+        "provider": "venus-vault",
+        "selectionId": "boss-atheon",
+        "environmentId": "arena-glass-throne",
+        "status": "implemented-user-approved"
+      },
+      "quality": "draft",
+      "seed": 42,
+      "lod": 0,
+      "frames": 28,
+      "fps": 30,
+      "width": 324,
+      "height": 576,
+      "startFrame": 205,
+      "animation": "idle",
+      "view": "environment",
+      "environmentVariant": "sanctum"
+    },
+    "indices": [
+      0,
+      3,
+      6,
+      9,
+      12,
+      15,
+      18,
+      21,
+      24,
+      27
+    ],
+    "shotId": "02-identity/mechanism",
+    "cameraId": "mechanism",
+    "outputFrameStart": 20,
+    "outputFrames": 10,
+    "outputFps": 10,
+    "episodeSceneStart": 345
+  }
+]

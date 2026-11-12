@@ -1,0 +1,2861 @@
+{
+  "status": "passed",
+  "blenderVersion": "4.3.2",
+  "checkedFrames": 2672,
+  "orientationChecked": true,
+  "shots": [
+    {
+      "shotId": "01-hook/vault-establish",
+      "cameraId": "vault-establish",
+      "sceneId": "01-hook",
+      "sceneFrameStart": 0,
+      "sceneFrameEndExclusive": 145,
+      "episodeFrameStart": 0,
+      "episodeFrameEndExclusive": 145,
+      "animation": "idle",
+      "firstCamera": {
+        "position": [
+          28.0,
+          -66.0,
+          25.0
+        ],
+        "target": [
+          0,
+          20,
+          13
+        ],
+        "lens": 28
+      },
+      "lastCamera": {
+        "position": [
+          16.00138308443644,
+          -50.00184411258192,
+          22.00034577110911
+        ],
+        "target": [
+          0,
+          20,
+          13
+        ],
+        "lens": 28
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "01-hook/vault-establish",
+        "cameraId": "vault-establish",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 0,
+        "episodeFrame": 0,
+        "sceneRange": [
+          0,
+          145
+        ],
+        "episodeRange": [
+          0,
+          145
+        ],
+        "position": [
+          28.0,
+          -66.0,
+          25.0
+        ],
+        "matrixWorld": [
+          [
+            0.9508714079856873,
+            -0.04071889817714691,
+            0.30689653754234314,
+            28.0
+          ],
+          [
+            0.3095860183238983,
+            0.12506528198719025,
+            -0.9426108002662659,
+            -66.0
+          ],
+          [
+            -2.6512395834288327e-08,
+            0.991312563419342,
+            0.13152700662612915,
+            25.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 28.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          28.0,
+          -66.0,
+          25.0
+        ],
+        "maxPositionError": 0.0,
+        "targetDirectionAlignment": 1.000000011175871
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "01-hook/vault-establish",
+        "cameraId": "vault-establish",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 144,
+        "episodeFrame": 144,
+        "sceneRange": [
+          0,
+          145
+        ],
+        "episodeRange": [
+          0,
+          145
+        ],
+        "position": [
+          16.00138282775879,
+          -50.0018424987793,
+          22.00034523010254
+        ],
+        "matrixWorld": [
+          [
+            0.9748556017875671,
+            -0.02771361917257309,
+            0.22110746800899506,
+            16.00138282775879
+          ],
+          [
+            0.22283750772476196,
+            0.1212397888302803,
+            -0.9672871232032776,
+            -50.0018424987793
+          ],
+          [
+            4.710738465973918e-09,
+            0.992236316204071,
+            0.12436692416667938,
+            22.00034523010254
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 28.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          16.00138308443644,
+          -50.00184411258192,
+          22.00034577110911
+        ],
+        "maxPositionError": 1.6138026239786996e-06,
+        "targetDirectionAlignment": 0.9999999674037099
+      },
+      "framesChecked": 145,
+      "sceneTransition": true
+    },
+    {
+      "shotId": "01-hook/portal-threshold",
+      "cameraId": "portal-threshold",
+      "sceneId": "01-hook",
+      "sceneFrameStart": 145,
+      "sceneFrameEndExclusive": 249,
+      "episodeFrameStart": 145,
+      "episodeFrameEndExclusive": 249,
+      "animation": "idle",
+      "firstCamera": {
+        "position": [
+          -21.999991603815353,
+          1.679236929412661e-05,
+          7.000002798728215
+        ],
+        "target": [
+          -16,
+          23,
+          9
+        ],
+        "lens": 35
+      },
+      "lastCamera": {
+        "position": [
+          -19.000134079194854,
+          5.999731841610292,
+          7.999955306935049
+        ],
+        "target": [
+          -16,
+          23,
+          9
+        ],
+        "lens": 35
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "01-hook/portal-threshold",
+        "cameraId": "portal-threshold",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 145,
+        "episodeFrame": 145,
+        "sceneRange": [
+          145,
+          249
+        ],
+        "episodeRange": [
+          145,
+          249
+        ],
+        "position": [
+          -21.99999237060547,
+          1.6792369933682494e-05,
+          7.000002861022949
+        ],
+        "matrixWorld": [
+          [
+            0.9676173329353333,
+            -0.02116415463387966,
+            -0.2515329420566559,
+            -21.99999237060547
+          ],
+          [
+            -0.2524217367172241,
+            -0.0811292752623558,
+            -0.9642102122306824,
+            1.6792369933682494e-05
+          ],
+          [
+            8.318768784931763e-09,
+            0.9964788556098938,
+            -0.0838443860411644,
+            7.000002861022949
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 35.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -21.999991603815353,
+          1.679236929412661e-05,
+          7.000002798728215
+        ],
+        "maxPositionError": 7.667901158470158e-07,
+        "targetDirectionAlignment": 0.999999956227839
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "01-hook/portal-threshold",
+        "cameraId": "portal-threshold",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 248,
+        "episodeFrame": 248,
+        "sceneRange": [
+          145,
+          249
+        ],
+        "episodeRange": [
+          145,
+          249
+        ],
+        "position": [
+          -19.000133514404297,
+          5.99973201751709,
+          7.999955177307129
+        ],
+        "matrixWorld": [
+          [
+            0.9847826957702637,
+            -0.01005080621689558,
+            -0.17349934577941895,
+            -19.000133514404297
+          ],
+          [
+            -0.17379021644592285,
+            -0.056953076273202896,
+            -0.9831344485282898,
+            5.99973201751709
+          ],
+          [
+            -2.7887987030794648e-08,
+            0.9983262419700623,
+            -0.05783313885331154,
+            7.999955177307129
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 35.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -19.000134079194854,
+          5.999731841610292,
+          7.999955306935049
+        ],
+        "maxPositionError": 5.647905574335255e-07,
+        "targetDirectionAlignment": 0.9999999590218067
+      },
+      "framesChecked": 104,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "01-hook/monument",
+      "cameraId": "monument",
+      "sceneId": "01-hook",
+      "sceneFrameStart": 249,
+      "sceneFrameEndExclusive": 345,
+      "episodeFrameStart": 249,
+      "episodeFrameEndExclusive": 345,
+      "animation": "reveal",
+      "firstCamera": {
+        "position": [
+          9.99953897185452,
+          -34.99976948592726,
+          2.501094941845517
+        ],
+        "target": [
+          0,
+          9,
+          11
+        ],
+        "lens": 35
+      },
+      "lastCamera": {
+        "position": [
+          6.001277083817176,
+          -33.000638541908586,
+          11.996966925934206
+        ],
+        "target": [
+          0,
+          9,
+          11
+        ],
+        "lens": 35
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "01-hook/monument",
+        "cameraId": "monument",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 249,
+        "episodeFrame": 249,
+        "sceneRange": [
+          249,
+          345
+        ],
+        "episodeRange": [
+          249,
+          345
+        ],
+        "position": [
+          9.999539375305176,
+          -34.99977111816406,
+          2.5010950565338135
+        ],
+        "matrixWorld": [
+          [
+            0.9751347899436951,
+            0.04102054983377457,
+            0.21778294444084167,
+            9.999539375305176
+          ],
+          [
+            0.22161248326301575,
+            -0.18049778044223785,
+            -0.9582841396331787,
+            -34.99977111816406
+          ],
+          [
+            -3.951216243081035e-09,
+            0.9827196002006531,
+            -0.18510033190250397,
+            2.5010950565338135
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 35.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          9.99953897185452,
+          -34.99976948592726,
+          2.501094941845517
+        ],
+        "maxPositionError": 1.6322368026067124e-06,
+        "targetDirectionAlignment": 0.9999999813735485
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "01-hook/monument",
+        "cameraId": "monument",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 344,
+        "episodeFrame": 344,
+        "sceneRange": [
+          249,
+          345
+        ],
+        "episodeRange": [
+          249,
+          345
+        ],
+        "position": [
+          6.001276969909668,
+          -33.00063705444336,
+          11.996967315673828
+        ],
+        "matrixWorld": [
+          [
+            0.9899455904960632,
+            -0.003322883043438196,
+            0.1414097249507904,
+            6.001276969909668
+          ],
+          [
+            0.1414487659931183,
+            0.02325560338795185,
+            -0.9896723628044128,
+            -33.00063705444336
+          ],
+          [
+            -3.0538807038738014e-09,
+            0.9997240304946899,
+            0.02349179983139038,
+            11.996967315673828
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 35.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          6.001277083817176,
+          -33.000638541908586,
+          11.996966925934206
+        ],
+        "maxPositionError": 1.4874652265461918e-06,
+        "targetDirectionAlignment": 1.000000054424163
+      },
+      "framesChecked": 96,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "02-identity/monument",
+      "cameraId": "monument",
+      "sceneId": "02-identity",
+      "sceneFrameStart": 0,
+      "sceneFrameEndExclusive": 138,
+      "episodeFrameStart": 345,
+      "episodeFrameEndExclusive": 483,
+      "animation": "reveal",
+      "firstCamera": {
+        "position": [
+          10.0,
+          -35.0,
+          2.5
+        ],
+        "target": [
+          0,
+          9,
+          11
+        ],
+        "lens": 35
+      },
+      "lastCamera": {
+        "position": [
+          6.000309054532769,
+          -33.00015452726638,
+          11.999265995484674
+        ],
+        "target": [
+          0,
+          9,
+          11
+        ],
+        "lens": 35
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "02-identity/monument",
+        "cameraId": "monument",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 0,
+        "episodeFrame": 345,
+        "sceneRange": [
+          0,
+          138
+        ],
+        "episodeRange": [
+          345,
+          483
+        ],
+        "position": [
+          10.0,
+          -35.0,
+          2.5
+        ],
+        "matrixWorld": [
+          [
+            0.9751328825950623,
+            0.04102693870663643,
+            0.21779051423072815,
+            10.0
+          ],
+          [
+            0.22162111103534698,
+            -0.18051855266094208,
+            -0.958278238773346,
+            -35.0
+          ],
+          [
+            7.101662369279893e-09,
+            0.9827155470848083,
+            -0.18512201309204102,
+            2.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 35.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          10.0,
+          -35.0,
+          2.5
+        ],
+        "maxPositionError": 0.0,
+        "targetDirectionAlignment": 0.9999999776482582
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "02-identity/monument",
+        "cameraId": "monument",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 137,
+        "episodeFrame": 482,
+        "sceneRange": [
+          0,
+          138
+        ],
+        "episodeRange": [
+          345,
+          483
+        ],
+        "position": [
+          6.000308990478516,
+          -33.00015640258789,
+          11.999265670776367
+        ],
+        "matrixWorld": [
+          [
+            0.989948570728302,
+            -0.0033301166258752346,
+            0.14138875901699066,
+            6.000308990478516
+          ],
+          [
+            0.14142797887325287,
+            0.023309707641601562,
+            -0.9896740913391113,
+            -33.00015640258789
+          ],
+          [
+            -6.568643406978936e-10,
+            0.9997227191925049,
+            0.023546382784843445,
+            11.999265670776367
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 35.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          6.000309054532769,
+          -33.00015452726638,
+          11.999265995484674
+        ],
+        "maxPositionError": 1.8753215087485842e-06,
+        "targetDirectionAlignment": 1.0000000266591087
+      },
+      "framesChecked": 138,
+      "sceneTransition": true
+    },
+    {
+      "shotId": "02-identity/mechanism",
+      "cameraId": "mechanism",
+      "sceneId": "02-identity",
+      "sceneFrameStart": 138,
+      "sceneFrameEndExclusive": 303,
+      "episodeFrameStart": 483,
+      "episodeFrameEndExclusive": 648,
+      "animation": "idle",
+      "firstCamera": {
+        "position": [
+          8.999970370203076,
+          -11.999980246802052,
+          15.000009876598975
+        ],
+        "target": [
+          0,
+          9,
+          14
+        ],
+        "lens": 48
+      },
+      "lastCamera": {
+        "position": [
+          6.000290146721051,
+          -10.000193431147368,
+          15.999903284426317
+        ],
+        "target": [
+          0,
+          9,
+          14
+        ],
+        "lens": 48
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 138,
+        "episodeFrame": 483,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          8.999970436096191,
+          -11.999979972839355,
+          15.000009536743164
+        ],
+        "matrixWorld": [
+          [
+            0.919145405292511,
+            -0.017225071787834167,
+            0.39354169368743896,
+            8.999970436096191
+          ],
+          [
+            0.3939184844493866,
+            0.04019176959991455,
+            -0.918266236782074,
+            -11.999979972839355
+          ],
+          [
+            6.30521199695977e-08,
+            0.9990435242652893,
+            0.04372735321521759,
+            15.000009536743164
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          8.999970370203076,
+          -11.999980246802052,
+          15.000009876598975
+        ],
+        "maxPositionError": 3.3985581104900575e-07,
+        "targetDirectionAlignment": 1.0000000697327778
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 302,
+        "episodeFrame": 647,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          6.0002899169921875,
+          -10.00019359588623,
+          15.999903678894043
+        ],
+        "matrixWorld": [
+          [
+            0.9535793662071228,
+            -0.030074751004576683,
+            0.29963627457618713,
+            6.0002899169921875
+          ],
+          [
+            0.30114179849624634,
+            0.0952329933643341,
+            -0.9488120675086975,
+            -10.00019359588623
+          ],
+          [
+            2.706364021776153e-08,
+            0.9950006008148193,
+            0.09986898303031921,
+            15.999903678894043
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          6.000290146721051,
+          -10.000193431147368,
+          15.999903284426317
+        ],
+        "maxPositionError": 3.944677260392382e-07,
+        "targetDirectionAlignment": 1.0000001387670636
+      },
+      "framesChecked": 165,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "02-identity/conflux",
+      "cameraId": "conflux",
+      "sceneId": "02-identity",
+      "sceneFrameStart": 303,
+      "sceneFrameEndExclusive": 459,
+      "episodeFrameStart": 648,
+      "episodeFrameEndExclusive": 804,
+      "animation": "temporal",
+      "firstCamera": {
+        "position": [
+          -24.99999689667499,
+          -31.999997340007134,
+          14.999999113335711
+        ],
+        "target": [
+          0,
+          9,
+          12
+        ],
+        "lens": 36
+      },
+      "lastCamera": {
+        "position": [
+          -18.000858572294113,
+          -26.00073591910924,
+          13.000245306369747
+        ],
+        "target": [
+          0,
+          9,
+          12
+        ],
+        "lens": 36
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "02-identity/conflux",
+        "cameraId": "conflux",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 303,
+        "episodeFrame": 648,
+        "sceneRange": [
+          303,
+          459
+        ],
+        "episodeRange": [
+          648,
+          804
+        ],
+        "position": [
+          -24.999996185302734,
+          -31.999998092651367,
+          14.999999046325684
+        ],
+        "matrixWorld": [
+          [
+            0.8537962436676025,
+            0.03246051445603371,
+            -0.5195943713188171,
+            -24.999996185302734
+          ],
+          [
+            -0.5206073522567749,
+            0.0532352551817894,
+            -0.8521350026130676,
+            -31.999998092651367
+          ],
+          [
+            -1.620643175215264e-09,
+            0.9980542659759521,
+            0.06235124170780182,
+            14.999999046325684
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 36.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -24.99999689667499,
+          -31.999997340007134,
+          14.999999113335711
+        ],
+        "maxPositionError": 7.526442331595717e-07,
+        "targetDirectionAlignment": 1.000000095460564
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "02-identity/conflux",
+        "cameraId": "conflux",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 458,
+        "episodeFrame": 803,
+        "sceneRange": [
+          303,
+          459
+        ],
+        "episodeRange": [
+          648,
+          804
+        ],
+        "position": [
+          -18.000858306884766,
+          -26.000736236572266,
+          13.000245094299316
+        ],
+        "matrixWorld": [
+          [
+            0.8892828226089478,
+            0.011619392782449722,
+            -0.45721006393432617,
+            -18.000858306884766
+          ],
+          [
+            -0.4573576748371124,
+            0.022592533379793167,
+            -0.8889958262443542,
+            -26.000736236572266
+          ],
+          [
+            -5.73332386011316e-08,
+            0.9996772408485413,
+            0.02540537156164646,
+            13.000245094299316
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 36.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -18.000858572294113,
+          -26.00073591910924,
+          13.000245306369747
+        ],
+        "maxPositionError": 3.174630265334599e-07,
+        "targetDirectionAlignment": 1.000000130792614
+      },
+      "framesChecked": 156,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "03-vault/vault-establish",
+      "cameraId": "vault-establish",
+      "sceneId": "03-vault",
+      "sceneFrameStart": 0,
+      "sceneFrameEndExclusive": 123,
+      "episodeFrameStart": 804,
+      "episodeFrameEndExclusive": 927,
+      "animation": "idle",
+      "firstCamera": {
+        "position": [
+          28.0,
+          -66.0,
+          25.0
+        ],
+        "target": [
+          0,
+          20,
+          13
+        ],
+        "lens": 28
+      },
+      "lastCamera": {
+        "position": [
+          16.00123433997751,
+          -50.00164578663668,
+          22.00030858499438
+        ],
+        "target": [
+          0,
+          20,
+          13
+        ],
+        "lens": 28
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "03-vault/vault-establish",
+        "cameraId": "vault-establish",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 0,
+        "episodeFrame": 804,
+        "sceneRange": [
+          0,
+          123
+        ],
+        "episodeRange": [
+          804,
+          927
+        ],
+        "position": [
+          28.0,
+          -66.0,
+          25.0
+        ],
+        "matrixWorld": [
+          [
+            0.9508714079856873,
+            -0.04071889817714691,
+            0.30689653754234314,
+            28.0
+          ],
+          [
+            0.3095860183238983,
+            0.12506528198719025,
+            -0.9426108002662659,
+            -66.0
+          ],
+          [
+            -2.6512395834288327e-08,
+            0.991312563419342,
+            0.13152700662612915,
+            25.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 28.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          28.0,
+          -66.0,
+          25.0
+        ],
+        "maxPositionError": 0.0,
+        "targetDirectionAlignment": 1.000000011175871
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "03-vault/vault-establish",
+        "cameraId": "vault-establish",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 122,
+        "episodeFrame": 926,
+        "sceneRange": [
+          0,
+          123
+        ],
+        "episodeRange": [
+          804,
+          927
+        ],
+        "position": [
+          16.00123405456543,
+          -50.001644134521484,
+          22.000308990478516
+        ],
+        "matrixWorld": [
+          [
+            0.974855899810791,
+            -0.027713395655155182,
+            0.22110609710216522,
+            16.00123405456543
+          ],
+          [
+            0.22283612191677094,
+            0.12123972177505493,
+            -0.9672874212265015,
+            -50.001644134521484
+          ],
+          [
+            -2.229885254223518e-08,
+            0.992236316204071,
+            0.12436680495738983,
+            22.000308990478516
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 28.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          16.00123433997751,
+          -50.00164578663668,
+          22.00030858499438
+        ],
+        "maxPositionError": 1.6521151948722945e-06,
+        "targetDirectionAlignment": 1.0000000083819032
+      },
+      "framesChecked": 123,
+      "sceneTransition": true
+    },
+    {
+      "shotId": "03-vault/oracle-field",
+      "cameraId": "oracle-field",
+      "sceneId": "03-vault",
+      "sceneFrameStart": 123,
+      "sceneFrameEndExclusive": 284,
+      "episodeFrameStart": 927,
+      "episodeFrameEndExclusive": 1088,
+      "animation": "temporal",
+      "firstCamera": {
+        "position": [
+          -13.999927024006265,
+          -27.999963512003134,
+          9.000018243998433
+        ],
+        "target": [
+          0,
+          12,
+          12
+        ],
+        "lens": 32
+      },
+      "lastCamera": {
+        "position": [
+          -6.000037245038037,
+          -24.00001862251902,
+          10.99999068874049
+        ],
+        "target": [
+          0,
+          12,
+          12
+        ],
+        "lens": 32
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "03-vault/oracle-field",
+        "cameraId": "oracle-field",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 123,
+        "episodeFrame": 927,
+        "sceneRange": [
+          123,
+          284
+        ],
+        "episodeRange": [
+          927,
+          1088
+        ],
+        "position": [
+          -13.999926567077637,
+          -27.999963760375977,
+          9.000018119812012
+        ],
+        "matrixWorld": [
+          [
+            0.943858802318573,
+            -0.02332673966884613,
+            -0.32952460646629333,
+            -13.999926567077637
+          ],
+          [
+            -0.3303492069244385,
+            -0.06664804369211197,
+            -0.9415027499198914,
+            -27.999963760375977
+          ],
+          [
+            1.845466179872801e-08,
+            0.9975038170814514,
+            -0.07061231136322021,
+            9.000018119812012
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 32.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -13.999927024006265,
+          -27.999963512003134,
+          9.000018243998433
+        ],
+        "maxPositionError": 4.5692862826740566e-07,
+        "targetDirectionAlignment": 1.0000000935979187
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "03-vault/oracle-field",
+        "cameraId": "oracle-field",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 283,
+        "episodeFrame": 1087,
+        "sceneRange": [
+          123,
+          284
+        ],
+        "episodeRange": [
+          927,
+          1088
+        ],
+        "position": [
+          -6.00003719329834,
+          -24.000019073486328,
+          10.999990463256836
+        ],
+        "matrixWorld": [
+          [
+            0.9863937497138977,
+            -0.004502892028540373,
+            -0.16433821618556976,
+            -6.00003719329834
+          ],
+          [
+            -0.1643998920917511,
+            -0.02701716683804989,
+            -0.9860237240791321,
+            -24.000019073486328
+          ],
+          [
+            5.293903981851145e-09,
+            0.9996248483657837,
+            -0.02738983929157257,
+            10.999990463256836
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 32.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -6.000037245038037,
+          -24.00001862251902,
+          10.99999068874049
+        ],
+        "maxPositionError": 4.509673097174982e-07,
+        "targetDirectionAlignment": 0.9999999635037966
+      },
+      "framesChecked": 161,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "03-vault/templar",
+      "cameraId": "templar",
+      "sceneId": "03-vault",
+      "sceneFrameStart": 284,
+      "sceneFrameEndExclusive": 378,
+      "episodeFrameStart": 1088,
+      "episodeFrameEndExclusive": 1182,
+      "animation": "idle",
+      "firstCamera": {
+        "position": [
+          9.998714571596901,
+          -32.998928809664086,
+          10.999785761932817
+        ],
+        "target": [
+          0,
+          9,
+          8
+        ],
+        "lens": 36
+      },
+      "lastCamera": {
+        "position": [
+          4.000724080541341,
+          -28.00060340045112,
+          10.000120680090223
+        ],
+        "target": [
+          0,
+          9,
+          8
+        ],
+        "lens": 36
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "03-vault/templar",
+        "cameraId": "templar",
+        "blenderCamera": "VaultCinema.001",
+        "sceneFrame": 284,
+        "episodeFrame": 1088,
+        "sceneRange": [
+          284,
+          378
+        ],
+        "episodeRange": [
+          1088,
+          1182
+        ],
+        "position": [
+          9.998714447021484,
+          -32.99892807006836,
+          10.999785423278809
+        ],
+        "matrixWorld": [
+          [
+            0.9728115797042847,
+            -0.016053492203354836,
+            0.23104089498519897,
+            9.998714447021484
+          ],
+          [
+            0.23159794509410858,
+            0.06743154674768448,
+            -0.9704717397689819,
+            -32.99892807006836
+          ],
+          [
+            1.5258951435725976e-08,
+            0.9975947141647339,
+            0.06931614875793457,
+            10.999785423278809
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 36.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          9.998714571596901,
+          -32.998928809664086,
+          10.999785761932817
+        ],
+        "maxPositionError": 7.395957268840903e-07,
+        "targetDirectionAlignment": 0.9999999883584678
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "03-vault/templar",
+        "cameraId": "templar",
+        "blenderCamera": "VaultCinema.001",
+        "sceneFrame": 377,
+        "episodeFrame": 1181,
+        "sceneRange": [
+          284,
+          378
+        ],
+        "episodeRange": [
+          1088,
+          1182
+        ],
+        "position": [
+          4.0007243156433105,
+          -28.00060272216797,
+          10.000121116638184
+        ],
+        "matrixWorld": [
+          [
+            0.9942051768302917,
+            -0.005769042298197746,
+            0.10734444111585617,
+            4.0007243156433105
+          ],
+          [
+            0.10749935358762741,
+            0.05335468426346779,
+            -0.9927724599838257,
+            -28.00060272216797
+          ],
+          [
+            1.747086741943349e-08,
+            0.9985589385032654,
+            0.05366567149758339,
+            10.000121116638184
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 36.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          4.000724080541341,
+          -28.00060340045112,
+          10.000120680090223
+        ],
+        "maxPositionError": 6.782831505347531e-07,
+        "targetDirectionAlignment": 0.9999999676365405
+      },
+      "framesChecked": 94,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "03-vault/conflux",
+      "cameraId": "conflux",
+      "sceneId": "03-vault",
+      "sceneFrameStart": 378,
+      "sceneFrameEndExclusive": 472,
+      "episodeFrameStart": 1182,
+      "episodeFrameEndExclusive": 1276,
+      "animation": "temporal",
+      "firstCamera": {
+        "position": [
+          -24.999624018278404,
+          -31.999677729952918,
+          14.999892576650971
+        ],
+        "target": [
+          0,
+          9,
+          12
+        ],
+        "lens": 36
+      },
+      "lastCamera": {
+        "position": [
+          -18.00233990040973,
+          -26.002005628922625,
+          13.000668542974209
+        ],
+        "target": [
+          0,
+          9,
+          12
+        ],
+        "lens": 36
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "03-vault/conflux",
+        "cameraId": "conflux",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 378,
+        "episodeFrame": 1182,
+        "sceneRange": [
+          378,
+          472
+        ],
+        "episodeRange": [
+          1182,
+          1276
+        ],
+        "position": [
+          -24.999624252319336,
+          -31.999677658081055,
+          14.999892234802246
+        ],
+        "matrixWorld": [
+          [
+            0.8537977933883667,
+            0.03245958313345909,
+            -0.5195918083190918,
+            -24.999624252319336
+          ],
+          [
+            -0.5206047296524048,
+            0.05323401466012001,
+            -0.8521366119384766,
+            -31.999677658081055
+          ],
+          [
+            -4.03133597615124e-08,
+            0.9980543851852417,
+            0.06234969571232796,
+            14.999892234802246
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 36.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -24.999624018278404,
+          -31.999677729952918,
+          14.999892576650971
+        ],
+        "maxPositionError": 3.418487253270541e-07,
+        "targetDirectionAlignment": 1.000000009778887
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "03-vault/conflux",
+        "cameraId": "conflux",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 471,
+        "episodeFrame": 1275,
+        "sceneRange": [
+          378,
+          472
+        ],
+        "episodeRange": [
+          1182,
+          1276
+        ],
+        "position": [
+          -18.00234031677246,
+          -26.00200653076172,
+          13.0006685256958
+        ],
+        "matrixWorld": [
+          [
+            0.8892742991447449,
+            0.011624282225966454,
+            -0.45722654461860657,
+            -18.00234031677246
+          ],
+          [
+            -0.4573742747306824,
+            0.022601008415222168,
+            -0.8889870643615723,
+            -26.00200653076172
+          ],
+          [
+            -5.521531676322411e-08,
+            0.9996770024299622,
+            0.025415142998099327,
+            13.0006685256958
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 36.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -18.00233990040973,
+          -26.002005628922625,
+          13.000668542974209
+        ],
+        "maxPositionError": 9.018390940696008e-07,
+        "targetDirectionAlignment": 1.0000001160660759
+      },
+      "framesChecked": 94,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "04-time/past-gate",
+      "cameraId": "past-gate",
+      "sceneId": "04-time",
+      "sceneFrameStart": 0,
+      "sceneFrameEndExclusive": 178,
+      "episodeFrameStart": 1276,
+      "episodeFrameEndExclusive": 1454,
+      "animation": "temporal",
+      "firstCamera": {
+        "position": [
+          -5.0,
+          -10.0,
+          4.5
+        ],
+        "target": [
+          -17,
+          23,
+          8
+        ],
+        "lens": 32
+      },
+      "lastCamera": {
+        "position": [
+          -6.999878894732652,
+          -4.000363315802042,
+          5.99990917104949
+        ],
+        "target": [
+          -17,
+          23,
+          8
+        ],
+        "lens": 32
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "04-time/past-gate",
+        "cameraId": "past-gate",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 0,
+        "episodeFrame": 1276,
+        "sceneRange": [
+          0,
+          178
+        ],
+        "episodeRange": [
+          1276,
+          1454
+        ],
+        "position": [
+          -5.0,
+          -10.0,
+          4.5
+        ],
+        "matrixWorld": [
+          [
+            0.9397934079170227,
+            0.0338953472673893,
+            0.34005802869796753,
+            -5.0
+          ],
+          [
+            0.3417431116104126,
+            -0.0932120606303215,
+            -0.93515944480896,
+            -10.0
+          ],
+          [
+            -4.337612580229688e-08,
+            0.995069146156311,
+            -0.0991835743188858,
+            4.5
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 32.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -5.0,
+          -10.0,
+          4.5
+        ],
+        "maxPositionError": 0.0,
+        "targetDirectionAlignment": 1.0000000055879354
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "04-time/past-gate",
+        "cameraId": "past-gate",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 177,
+        "episodeFrame": 1453,
+        "sceneRange": [
+          0,
+          178
+        ],
+        "episodeRange": [
+          1276,
+          1454
+        ],
+        "position": [
+          -6.999878883361816,
+          -4.000363349914551,
+          5.999909400939941
+        ],
+        "matrixWorld": [
+          [
+            0.937748908996582,
+            0.02406826615333557,
+            0.34647905826568604,
+            -6.999878883361816
+          ],
+          [
+            0.3473140001296997,
+            -0.06498438119888306,
+            -0.9354945421218872,
+            -4.000363349914551
+          ],
+          [
+            -3.452496954992057e-09,
+            0.9975959658622742,
+            -0.06929827481508255,
+            5.999909400939941
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 32.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -6.999878894732652,
+          -4.000363315802042,
+          5.99990917104949
+        ],
+        "maxPositionError": 2.2989045156407428e-07,
+        "targetDirectionAlignment": 0.9999998980201781
+      },
+      "framesChecked": 178,
+      "sceneTransition": true
+    },
+    {
+      "shotId": "04-time/future-gate",
+      "cameraId": "future-gate",
+      "sceneId": "04-time",
+      "sceneFrameStart": 178,
+      "sceneFrameEndExclusive": 356,
+      "episodeFrameStart": 1454,
+      "episodeFrameEndExclusive": 1632,
+      "animation": "temporal",
+      "firstCamera": {
+        "position": [
+          5.000007586158741,
+          -9.999977241523776,
+          4.500005689619056
+        ],
+        "target": [
+          17,
+          23,
+          8
+        ],
+        "lens": 32
+      },
+      "lastCamera": {
+        "position": [
+          6.999931827048521,
+          -4.000204518854436,
+          5.999948870286391
+        ],
+        "target": [
+          17,
+          23,
+          8
+        ],
+        "lens": 32
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "04-time/future-gate",
+        "cameraId": "future-gate",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 178,
+        "episodeFrame": 1454,
+        "sceneRange": [
+          178,
+          356
+        ],
+        "episodeRange": [
+          1454,
+          1632
+        ],
+        "position": [
+          5.000007629394531,
+          -9.999977111816406,
+          4.500005722045898
+        ],
+        "matrixWorld": [
+          [
+            0.9397934079170227,
+            -0.033895257860422134,
+            -0.34005802869796753,
+            5.000007629394531
+          ],
+          [
+            -0.3417430818080902,
+            -0.09321209043264389,
+            -0.93515944480896,
+            -9.999977111816406
+          ],
+          [
+            -4.835509770373392e-08,
+            0.995069146156311,
+            -0.0991835743188858,
+            4.500005722045898
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 32.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          5.000007586158741,
+          -9.999977241523776,
+          4.500005689619056
+        ],
+        "maxPositionError": 1.2970737017781175e-07,
+        "targetDirectionAlignment": 1.0000000046566129
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "04-time/future-gate",
+        "cameraId": "future-gate",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 355,
+        "episodeFrame": 1631,
+        "sceneRange": [
+          178,
+          356
+        ],
+        "episodeRange": [
+          1454,
+          1632
+        ],
+        "position": [
+          6.999931812286377,
+          -4.000204563140869,
+          5.999948978424072
+        ],
+        "matrixWorld": [
+          [
+            0.9377488493919373,
+            -0.024067919701337814,
+            -0.346479207277298,
+            6.999931812286377
+          ],
+          [
+            -0.34731414914131165,
+            -0.06498336791992188,
+            -0.9354945421218872,
+            -4.000204563140869
+          ],
+          [
+            2.0931160804593674e-08,
+            0.9975960850715637,
+            -0.06929720938205719,
+            5.999948978424072
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 32.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          6.999931827048521,
+          -4.000204518854436,
+          5.999948870286391
+        ],
+        "maxPositionError": 1.0813768103190569e-07,
+        "targetDirectionAlignment": 1.0000000507570803
+      },
+      "framesChecked": 178,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "04-time/return-gate",
+      "cameraId": "return-gate",
+      "sceneId": "04-time",
+      "sceneFrameStart": 356,
+      "sceneFrameEndExclusive": 508,
+      "episodeFrameStart": 1632,
+      "episodeFrameEndExclusive": 1784,
+      "animation": "temporal",
+      "firstCamera": {
+        "position": [
+          8.252218312544378e-05,
+          -27.999876216725312,
+          7.000020630545781
+        ],
+        "target": [
+          0,
+          15,
+          9
+        ],
+        "lens": 30
+      },
+      "lastCamera": {
+        "position": [
+          3.9994855924386683,
+          -22.000771611341996,
+          7.999871398109667
+        ],
+        "target": [
+          0,
+          15,
+          9
+        ],
+        "lens": 30
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "04-time/return-gate",
+        "cameraId": "return-gate",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 356,
+        "episodeFrame": 1632,
+        "sceneRange": [
+          356,
+          508
+        ],
+        "episodeRange": [
+          1632,
+          1784
+        ],
+        "position": [
+          8.252217958215624e-05,
+          -27.999876022338867,
+          7.000020503997803
+        ],
+        "matrixWorld": [
+          [
+            1.0,
+            8.91648639367304e-08,
+            1.9170536234014435e-06,
+            8.252217958215624e-05
+          ],
+          [
+            1.9191261344531085e-06,
+            -0.04646110534667969,
+            -0.9989200830459595,
+            -27.999876022338867
+          ],
+          [
+            -1.3897340038742517e-13,
+            0.9989200830459595,
+            -0.04646110534667969,
+            7.000020503997803
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 30.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          8.252218312544378e-05,
+          -27.999876216725312,
+          7.000020630545781
+        ],
+        "maxPositionError": 1.943864447184751e-07,
+        "targetDirectionAlignment": 1.0000000540203844
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "04-time/return-gate",
+        "cameraId": "return-gate",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 507,
+        "episodeFrame": 1783,
+        "sceneRange": [
+          356,
+          508
+        ],
+        "episodeRange": [
+          1632,
+          1784
+        ],
+        "position": [
+          3.999485492706299,
+          -22.00077247619629,
+          7.999871253967285
+        ],
+        "matrixWorld": [
+          [
+            0.9942087531089783,
+            0.002886946313083172,
+            0.1074271947145462,
+            3.999485492706299
+          ],
+          [
+            0.10746597498655319,
+            -0.026708269491791725,
+            -0.9938499331474304,
+            -22.00077247619629
+          ],
+          [
+            2.9780196086903743e-09,
+            0.999639093875885,
+            -0.026863843202590942,
+            7.999871253967285
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 30.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          3.9994855924386683,
+          -22.000771611341996,
+          7.999871398109667
+        ],
+        "maxPositionError": 8.648542930700387e-07,
+        "targetDirectionAlignment": 0.9999999818392098
+      },
+      "framesChecked": 152,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "05-guardians/guardian-team",
+      "cameraId": "guardian-team",
+      "sceneId": "05-guardians",
+      "sceneFrameStart": 0,
+      "sceneFrameEndExclusive": 155,
+      "episodeFrameStart": 1784,
+      "episodeFrameEndExclusive": 1939,
+      "animation": "combat",
+      "firstCamera": {
+        "position": [
+          -12.0,
+          -28.0,
+          4.0
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 30
+      },
+      "lastCamera": {
+        "position": [
+          -6.000479084042655,
+          -24.00031938936177,
+          4.999920152659557
+        ],
+        "target": [
+          0,
+          9,
+          10
+        ],
+        "lens": 30
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "05-guardians/guardian-team",
+        "cameraId": "guardian-team",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 0,
+        "episodeFrame": 1784,
+        "sceneRange": [
+          0,
+          155
+        ],
+        "episodeRange": [
+          1784,
+          1939
+        ],
+        "position": [
+          -12.0,
+          -28.0,
+          4.0
+        ],
+        "matrixWorld": [
+          [
+            0.951222836971283,
+            -0.04703135043382645,
+            -0.3048986792564392,
+            -12.0
+          ],
+          [
+            -0.30850470066070557,
+            -0.14501334726810455,
+            -0.9401042461395264,
+            -28.0
+          ],
+          [
+            -6.511217343074804e-09,
+            0.9883112907409668,
+            -0.15244939923286438,
+            4.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 30.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -12.0,
+          -28.0,
+          4.0
+        ],
+        "maxPositionError": 0.0,
+        "targetDirectionAlignment": 0.999999986961484
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "05-guardians/guardian-team",
+        "cameraId": "guardian-team",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 154,
+        "episodeFrame": 1938,
+        "sceneRange": [
+          0,
+          155
+        ],
+        "episodeRange": [
+          1784,
+          1939
+        ],
+        "position": [
+          -6.000479221343994,
+          -24.00031852722168,
+          4.99992036819458
+        ],
+        "matrixWorld": [
+          [
+            0.9838677048683167,
+            -0.02637716941535473,
+            -0.1769423931837082,
+            -6.000479221343994
+          ],
+          [
+            -0.17889763414859772,
+            -0.14506417512893677,
+            -0.9731146097183228,
+            -24.00031852722168
+          ],
+          [
+            7.050011241460652e-09,
+            0.9890705943107605,
+            -0.1474427729845047,
+            4.99992036819458
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 30.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -6.000479084042655,
+          -24.00031938936177,
+          4.999920152659557
+        ],
+        "maxPositionError": 8.621400908737087e-07,
+        "targetDirectionAlignment": 0.9999999720603228
+      },
+      "framesChecked": 155,
+      "sceneTransition": true
+    },
+    {
+      "shotId": "05-guardians/aegis",
+      "cameraId": "aegis",
+      "sceneId": "05-guardians",
+      "sceneFrameStart": 155,
+      "sceneFrameEndExclusive": 287,
+      "episodeFrameStart": 1939,
+      "episodeFrameEndExclusive": 2071,
+      "animation": "combat",
+      "firstCamera": {
+        "position": [
+          9.999979227803037,
+          -17.99998615186869,
+          4.000006924065655
+        ],
+        "target": [
+          0,
+          -1,
+          4
+        ],
+        "lens": 42
+      },
+      "lastCamera": {
+        "position": [
+          7.000074919173498,
+          -16.000049946115666,
+          4.999975026942167
+        ],
+        "target": [
+          0,
+          -1,
+          4
+        ],
+        "lens": 42
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "05-guardians/aegis",
+        "cameraId": "aegis",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 155,
+        "episodeFrame": 1939,
+        "sceneRange": [
+          155,
+          287
+        ],
+        "episodeRange": [
+          1939,
+          2071
+        ],
+        "position": [
+          9.999979019165039,
+          -17.99998664855957,
+          4.000007152557373
+        ],
+        "matrixWorld": [
+          [
+            0.8619344830513,
+            -1.704321448414703e-07,
+            0.5070196390151978,
+            9.999979019165039
+          ],
+          [
+            0.5070196390151978,
+            2.639458500652836e-07,
+            -0.8619344830513,
+            -17.99998664855957
+          ],
+          [
+            1.3075617033564413e-08,
+            1.0,
+            3.1391647326017846e-07,
+            4.000007152557373
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 42.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          9.999979227803037,
+          -17.99998615186869,
+          4.000006924065655
+        ],
+        "maxPositionError": 4.966908804249215e-07,
+        "targetDirectionAlignment": 1.000000059604742
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "05-guardians/aegis",
+        "cameraId": "aegis",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 286,
+        "episodeFrame": 2070,
+        "sceneRange": [
+          155,
+          287
+        ],
+        "episodeRange": [
+          1939,
+          2071
+        ],
+        "position": [
+          7.000074863433838,
+          -16.000049591064453,
+          4.999975204467773
+        ],
+        "matrixWorld": [
+          [
+            0.9061819314956665,
+            -0.025500411167740822,
+            0.42211851477622986,
+            7.000074863433838
+          ],
+          [
+            0.42288804054260254,
+            0.054643113166093826,
+            -0.9045329093933105,
+            -16.000049591064453
+          ],
+          [
+            9.265171030392594e-08,
+            0.9981802701950073,
+            0.060300420969724655,
+            4.999975204467773
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 42.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          7.000074919173498,
+          -16.000049946115666,
+          4.999975026942167
+        ],
+        "maxPositionError": 3.550512133188022e-07,
+        "targetDirectionAlignment": 1.0000000363215804
+      },
+      "framesChecked": 132,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "05-guardians/conflux",
+      "cameraId": "conflux",
+      "sceneId": "05-guardians",
+      "sceneFrameStart": 287,
+      "sceneFrameEndExclusive": 387,
+      "episodeFrameStart": 2071,
+      "episodeFrameEndExclusive": 2171,
+      "animation": "combat",
+      "firstCamera": {
+        "position": [
+          -24.999205952741775,
+          -31.99931938806438,
+          14.999773129354793
+        ],
+        "target": [
+          0,
+          9,
+          12
+        ],
+        "lens": 36
+      },
+      "lastCamera": {
+        "position": [
+          -18.002060457389543,
+          -26.001766106333896,
+          13.000588702111298
+        ],
+        "target": [
+          0,
+          9,
+          12
+        ],
+        "lens": 36
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "05-guardians/conflux",
+        "cameraId": "conflux",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 287,
+        "episodeFrame": 2071,
+        "sceneRange": [
+          287,
+          387
+        ],
+        "episodeRange": [
+          2071,
+          2171
+        ],
+        "position": [
+          -24.99920654296875,
+          -31.999319076538086,
+          14.999773025512695
+        ],
+        "matrixWorld": [
+          [
+            0.8537996411323547,
+            0.03245827183127403,
+            -0.5195888876914978,
+            -24.99920654296875
+          ],
+          [
+            -0.520601749420166,
+            0.05323244258761406,
+            -0.8521385788917542,
+            -31.999319076538086
+          ],
+          [
+            3.939377535289168e-08,
+            0.9980545043945312,
+            0.06234767287969589,
+            14.999773025512695
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 36.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -24.999205952741775,
+          -31.99931938806438,
+          14.999773129354793
+        ],
+        "maxPositionError": 5.902269748503386e-07,
+        "targetDirectionAlignment": 1.0000000367872417
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "05-guardians/conflux",
+        "cameraId": "conflux",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 386,
+        "episodeFrame": 2170,
+        "sceneRange": [
+          287,
+          387
+        ],
+        "episodeRange": [
+          2071,
+          2171
+        ],
+        "position": [
+          -18.002059936523438,
+          -26.001766204833984,
+          13.000588417053223
+        ],
+        "matrixWorld": [
+          [
+            0.889275848865509,
+            0.011623268015682697,
+            -0.45722347497940063,
+            -18.002059936523438
+          ],
+          [
+            -0.45737120509147644,
+            0.022599386051297188,
+            -0.8889886736869812,
+            -26.001766204833984
+          ],
+          [
+            1.637661561915138e-08,
+            0.9996770024299622,
+            0.025413237512111664,
+            13.000588417053223
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 36.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          -18.002060457389543,
+          -26.001766106333896,
+          13.000588702111298
+        ],
+        "maxPositionError": 5.208661058020425e-07,
+        "targetDirectionAlignment": 1.0000000018626451
+      },
+      "framesChecked": 100,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "06-mystery/aftermath",
+      "cameraId": "aftermath",
+      "sceneId": "06-mystery",
+      "sceneFrameStart": 0,
+      "sceneFrameEndExclusive": 126,
+      "episodeFrameStart": 2171,
+      "episodeFrameEndExclusive": 2297,
+      "animation": "idle",
+      "firstCamera": {
+        "position": [
+          9.0,
+          -25.0,
+          5.0
+        ],
+        "target": [
+          0,
+          9,
+          11
+        ],
+        "lens": 32
+      },
+      "lastCamera": {
+        "position": [
+          6.000035808717703,
+          -29.99994031880383,
+          7.999964191282297
+        ],
+        "target": [
+          0,
+          9,
+          11
+        ],
+        "lens": 32
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "06-mystery/aftermath",
+        "cameraId": "aftermath",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 0,
+        "episodeFrame": 2171,
+        "sceneRange": [
+          0,
+          126
+        ],
+        "episodeRange": [
+          2171,
+          2297
+        ],
+        "position": [
+          9.0,
+          -25.0,
+          5.0
+        ],
+        "matrixWorld": [
+          [
+            0.9667052030563354,
+            0.04303232952952385,
+            0.2522483170032501,
+            9.0
+          ],
+          [
+            0.2558925449848175,
+            -0.16256645321846008,
+            -0.9529381394386292,
+            -25.0
+          ],
+          [
+            -3.2750133271974846e-08,
+            0.9857587814331055,
+            -0.16816549003124237,
+            5.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 32.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          9.0,
+          -25.0,
+          5.0
+        ],
+        "maxPositionError": 0.0,
+        "targetDirectionAlignment": 0.9999999795109034
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "06-mystery/aftermath",
+        "cameraId": "aftermath",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 125,
+        "episodeFrame": 2296,
+        "sceneRange": [
+          0,
+          126
+        ],
+        "episodeRange": [
+          2171,
+          2297
+        ],
+        "position": [
+          6.000035762786865,
+          -29.999940872192383,
+          7.999964237213135
+        ],
+        "matrixWorld": [
+          [
+            0.9883714914321899,
+            0.01152767799794674,
+            0.1516207605600357,
+            6.000035762786865
+          ],
+          [
+            0.15205834805965424,
+            -0.07492941617965698,
+            -0.9855272173881531,
+            -29.999940872192383
+          ],
+          [
+            1.5117221252580748e-08,
+            0.9971222281455994,
+            -0.0758109837770462,
+            7.999964237213135
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 32.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          6.000035808717703,
+          -29.99994031880383,
+          7.999964191282297
+        ],
+        "maxPositionError": 5.533885527597704e-07,
+        "targetDirectionAlignment": 0.9999999697320163
+      },
+      "framesChecked": 126,
+      "sceneTransition": true
+    },
+    {
+      "shotId": "06-mystery/empty-throne",
+      "cameraId": "empty-throne",
+      "sceneId": "06-mystery",
+      "sceneFrameStart": 126,
+      "sceneFrameEndExclusive": 291,
+      "episodeFrameStart": 2297,
+      "episodeFrameEndExclusive": 2462,
+      "animation": "idle",
+      "firstCamera": {
+        "position": [
+          0.0,
+          -35.00049239658234,
+          12.000184648718378
+        ],
+        "target": [
+          0,
+          20,
+          12
+        ],
+        "lens": 30
+      },
+      "lastCamera": {
+        "position": [
+          0.0,
+          -42.99970532248518,
+          14.99988949593194
+        ],
+        "target": [
+          0,
+          20,
+          12
+        ],
+        "lens": 30
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "06-mystery/empty-throne",
+        "cameraId": "empty-throne",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 126,
+        "episodeFrame": 2297,
+        "sceneRange": [
+          126,
+          291
+        ],
+        "episodeRange": [
+          2297,
+          2462
+        ],
+        "position": [
+          0.0,
+          -35.000492095947266,
+          12.000185012817383
+        ],
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            3.413357944737072e-06,
+            -1.0,
+            -35.000492095947266
+          ],
+          [
+            0.0,
+            1.0,
+            3.413357944737072e-06,
+            12.000185012817383
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 30.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          0.0,
+          -35.00049239658234,
+          12.000184648718378
+        ],
+        "maxPositionError": 3.6409900516787275e-07,
+        "targetDirectionAlignment": 1.0000000000113283
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "06-mystery/empty-throne",
+        "cameraId": "empty-throne",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 290,
+        "episodeFrame": 2461,
+        "sceneRange": [
+          126,
+          291
+        ],
+        "episodeRange": [
+          2297,
+          2462
+        ],
+        "position": [
+          0.0,
+          -42.99970626831055,
+          14.999889373779297
+        ],
+        "matrixWorld": [
+          [
+            1.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.04756355658173561,
+            -0.9988682270050049,
+            -42.99970626831055
+          ],
+          [
+            0.0,
+            0.9988682270050049,
+            0.04756355658173561,
+            14.999889373779297
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 30.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          0.0,
+          -42.99970532248518,
+          14.99988949593194
+        ],
+        "maxPositionError": 9.458253700245223e-07,
+        "targetDirectionAlignment": 0.9999999422580004
+      },
+      "framesChecked": 165,
+      "sceneTransition": false
+    },
+    {
+      "shotId": "06-mystery/unanswered-vault",
+      "cameraId": "unanswered-vault",
+      "sceneId": "06-mystery",
+      "sceneFrameStart": 291,
+      "sceneFrameEndExclusive": 501,
+      "episodeFrameStart": 2462,
+      "episodeFrameEndExclusive": 2672,
+      "animation": "idle",
+      "firstCamera": {
+        "position": [
+          5.000226788545451,
+          -43.00037002341626,
+          17.000143234870812
+        ],
+        "target": [
+          0,
+          22,
+          14
+        ],
+        "lens": 27
+      },
+      "lastCamera": {
+        "position": [
+          23.99871671629965,
+          -73.99790622133101,
+          28.99918950503136
+        ],
+        "target": [
+          0,
+          22,
+          14
+        ],
+        "lens": 27
+      },
+      "firstActual": {
+        "route": "cinematic",
+        "shotId": "06-mystery/unanswered-vault",
+        "cameraId": "unanswered-vault",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 291,
+        "episodeFrame": 2462,
+        "sceneRange": [
+          291,
+          501
+        ],
+        "episodeRange": [
+          2462,
+          2672
+        ],
+        "position": [
+          5.000226974487305,
+          -43.000370025634766,
+          17.00014305114746
+        ],
+        "matrixWorld": [
+          [
+            0.9970542788505554,
+            -0.003525968873873353,
+            0.07661844044923782,
+            5.000226974487305
+          ],
+          [
+            0.07669953256845474,
+            0.045835815370082855,
+            -0.9960001111030579,
+            -43.000370025634766
+          ],
+          [
+            -3.367477408033892e-09,
+            0.9989427924156189,
+            0.04597123712301254,
+            17.00014305114746
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 27.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          5.000226788545451,
+          -43.00037002341626,
+          17.000143234870812
+        ],
+        "maxPositionError": 1.8594185391407336e-07,
+        "targetDirectionAlignment": 0.999999932711944
+      },
+      "lastActual": {
+        "route": "cinematic",
+        "shotId": "06-mystery/unanswered-vault",
+        "cameraId": "unanswered-vault",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 500,
+        "episodeFrame": 2671,
+        "sceneRange": [
+          291,
+          501
+        ],
+        "episodeRange": [
+          2462,
+          2672
+        ],
+        "position": [
+          23.998716354370117,
+          -73.99790954589844,
+          28.999189376831055
+        ],
+        "matrixWorld": [
+          [
+            0.9701443314552307,
+            -0.036347292363643646,
+            0.23978927731513977,
+            23.998716354370117
+          ],
+          [
+            0.24252839386463165,
+            0.14539386332035065,
+            -0.9591874480247498,
+            -73.99790954589844
+          ],
+          [
+            -2.1812834205547915e-08,
+            0.9887059926986694,
+            0.14986827969551086,
+            28.999189376831055
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 27.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          23.99871671629965,
+          -73.99790622133101,
+          28.99918950503136
+        ],
+        "maxPositionError": 3.324567430240677e-06,
+        "targetDirectionAlignment": 1.000000037252903
+      },
+      "framesChecked": 210,
+      "sceneTransition": false
+    }
+  ],
+  "renderedFrames": 0,
+  "fullEpisodeRendered": false,
+  "gpuValidated": false
+}

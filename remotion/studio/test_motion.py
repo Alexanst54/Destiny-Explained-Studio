@@ -1,7 +1,7 @@
 import json,pathlib,sys,tempfile,unittest
 from unittest.mock import patch
 sys.path.insert(0,str(pathlib.Path(__file__).parent))
-from complete_atheon import load_package
+from complete_atheon import load_package,configs,settings
 from motion_test import jobs_for,SELECTED
 from shot_audit import timeline
 from cinematic_direction import shot_at
@@ -28,6 +28,10 @@ class Motion(unittest.TestCase):
   for kind,route in [('complete-atheon-v1','legacy-prepared-pilot'),('directed-atheon-v1','cinematic-Q'),('atheon-motion-test-v1','cinematic-motion-diagnostic')]:
    with tempfile.TemporaryDirectory() as d:
     p=pathlib.Path(d);(p/'project.json').write_text(json.dumps(dict(identity=dict(kind=kind),sourceCommit='fixture')));before=(p/'project.json').read_bytes();r=inspect(p);self.assertEqual(r['route'],route);self.assertEqual(before,(p/'project.json').read_bytes())
+ def test_prepared_smoke_is_345_frames_and_legacy_wide_is_static(self):
+  from venus_vault.camera import camera_pose
+  first=configs(self.package,settings())[0];self.assertEqual((first['frames'],first['camera'],first['animation']),(345,'environment','idle'))
+  self.assertEqual(camera_pose('arena-glass-throne','wide',0,30),camera_pose('arena-glass-throne','wide',344,30))
  def test_missing_gpu_power_stays_null(self):
   with tempfile.TemporaryDirectory() as d,patch('perf_common.shutil.which',return_value=None):
    m=Telemetry(pathlib.Path(d)/'gpu');m.poll();self.assertIsNone(m.report()['meanPowerWatts']);self.assertIsNone(m.report()['peakPowerWatts'])
