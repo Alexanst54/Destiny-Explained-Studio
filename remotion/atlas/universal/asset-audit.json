@@ -1559,6 +1559,11 @@
       "sha256": "a59ddd859e636424ad802467a07a77d7f9c24f0fb12b5bd18c66d3470d4d9f57"
     },
     {
+      "path": "remotion/blender/Destiny-GPU-Optimization-Lab.ipynb",
+      "bytes": 16746,
+      "sha256": "d784e5e98883a46c17ae11b9397f37c684c842bf4fd2c5814c5e6de6d27fcbe1"
+    },
+    {
       "path": "remotion/blender/Destiny-Studio-Colab-Pro.ipynb",
       "bytes": 48304,
       "sha256": "2cbdba741fcd366b40a4b5f1f4b4877df53bba98a33dbcbf1654e92d5ca96b0c"
@@ -1759,6 +1764,31 @@
       "sha256": "6d0c1c27ee1d0ba7dfef663f72d20d9770fab55e35445f89a8cb2e64de2d0e2b"
     },
     {
+      "path": "remotion/blender/gpu_lab/common.py",
+      "bytes": 7715,
+      "sha256": "b0f2535b4bc07285f0c86f09e2b55117b2f6603cf3c3c17ca405dc32efc258ec"
+    },
+    {
+      "path": "remotion/blender/gpu_lab/lab.py",
+      "bytes": 13311,
+      "sha256": "2e65403f29a078c1bd264ef56c602dc15a8433b65834c1c73fbd671aa9060cdb"
+    },
+    {
+      "path": "remotion/blender/gpu_lab/reporting.py",
+      "bytes": 15667,
+      "sha256": "87e8ecb02ed27891a7692408916fc26ac1071104fce49e9d561bde19c9648e82"
+    },
+    {
+      "path": "remotion/blender/gpu_lab/telemetry.py",
+      "bytes": 3491,
+      "sha256": "76367d0c18282825367b314464c31bad2bc23fa3eac27d80143f4c0ffcb5a4b7"
+    },
+    {
+      "path": "remotion/blender/gpu_lab/worker.py",
+      "bytes": 8938,
+      "sha256": "a74147e80b945d19f08a59336aefb19d0299da048e659b7e212fc3e7807f530d"
+    },
+    {
       "path": "remotion/blender/import_scene.py",
       "bytes": 12049,
       "sha256": "6957ffaef2eb50ff8b5057186820ef5b8ffbd06ca48c77354e2dc9da9ad8f287"
@@ -1832,6 +1862,11 @@
       "path": "remotion/blender/tests/test_environment.py",
       "bytes": 2705,
       "sha256": "63ffec34bf8a1accc54f9522e4bd733425b00fb722755488883072125837ba29"
+    },
+    {
+      "path": "remotion/blender/tests/test_gpu_lab.py",
+      "bytes": 8938,
+      "sha256": "5bcc780e5edc985b79264d13a5611a269733a649831776752cca68d0c04744b8"
     },
     {
       "path": "remotion/blender/tests/test_lot_c.py",

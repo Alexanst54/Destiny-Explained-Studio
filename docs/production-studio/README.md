@@ -63,3 +63,5 @@ Les tests Colab/T4/Android et les performances GPU restent non validés tant qu�
 The opt-in [performance/cinematic guide](PERFORMANCE-CINEMATIC.md) documents the paired 30–60-frame T4 benchmark and separate cinematic project controls. Run that benchmark before recommending a complete rerender. Existing validated outputs and their saved source commits remain usable.
 
 For `atheon-smoke` route confusion, use [R0 and M1–M3](SMOKE-ROUTE-AND-MOTION.md) to inspect the old project read-only and render a separate three-second moving-camera diagnostic.
+
+The [standalone GPU Optimization Lab](GPU-OPTIMIZATION-LAB.md) provides O1–O4 in a **separate notebook**, with local-only temporary storage and a downloadable report ZIP. The production notebook is unchanged by this lab extension.
