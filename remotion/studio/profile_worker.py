@@ -44,6 +44,24 @@ def main():
                 report['builds'].append(dict(seconds=build_seconds,cpuSeconds=cpu_seconds,geometryFunctions=entries,note='cProfile cumulative timings overlap; do not sum nested functions'))
                 state_key=key;scene=state['scene'];scene.render.use_persistent_data=True;scene.render.image_settings.compression=settings['pngCompression']
                 if settings['samples'] is not None:scene.cycles.samples=settings['samples']
+                if settings.get('productionPreset')=='candidate-48':
+                    # Apply the T4 lab's measured Candidate 48 recipe, without changing geometry.
+                    # Fail explicitly rather than silently falling back to CPU compositing/denoising.
+                    import _cycles
+                    if not getattr(_cycles,'with_openimagedenoise',False):
+                        raise RuntimeError('Candidate 48 requires OpenImageDenoise in Blender')
+                    if not hasattr(scene.render,'compositor_device') or not hasattr(scene.render,'compositor_precision'):
+                        raise RuntimeError('Candidate 48 requires Blender GPU compositor settings')
+                    if not hasattr(scene.cycles,'denoising_use_gpu') or not hasattr(scene.cycles,'use_auto_tile'):
+                        raise RuntimeError('Candidate 48 requires OIDN GPU and auto-tiling controls')
+                    scene.cycles.samples=48
+                    scene.cycles.use_denoising=True
+                    scene.cycles.denoiser='OPENIMAGEDENOISE'
+                    scene.cycles.denoising_use_gpu=True
+                    scene.cycles.use_auto_tile=False
+                    scene.render.compositor_device='GPU'
+                    scene.render.compositor_precision='FULL'
+
                 if settings['denoise']!='existing':
                     if settings['denoise']=='on':
                         import _cycles
