@@ -1,0 +1,1678 @@
+{
+  "identity": "341ab6d0ff9a2c8c0efa6be94ee82d7c122edc66a7982adc1b34e9ef71cb9bcb",
+  "frames": {
+    "0": {
+      "invocationId": "d5860d1883a8464f83490a22360900c5",
+      "file": "frame-0000.png",
+      "sourceFrame": 205,
+      "sha256": "ad144b073276ef9f18e1c943000edb4e34fe82edcbc2a33fc71016d92bb37281",
+      "updateSeconds": 0.013387977000093088,
+      "updateCpuSeconds": 0.01540641599990522,
+      "renderAndCompositeSeconds": 18.63784295700316,
+      "renderCpuSeconds": 37.197795326000005,
+      "pngEncodeAndWriteSeconds": 0.019231407997722272,
+      "pngCpuSeconds": 0.026018225000029815,
+      "verifySeconds": 0.0029875479958718643,
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "lod": 0,
+        "adaptiveThreshold": 0.11999999731779099,
+        "persistentData": true,
+        "samples": 16,
+        "bounces": 3,
+        "denoise": true,
+        "threads": 3,
+        "hazeDensity": 0.0010999999940395355,
+        "viewTransform": "AgX",
+        "environmentBoxes": 4349,
+        "bossBoxes": 3245,
+        "batchedMeshes": 88,
+        "particles": 24,
+        "designSha256": "6933dc4595b01d66f725cdaf351c034d87ed7c81e5513dffd71f0213e93a49c9",
+        "pngCompression": 15
+      },
+      "geometry": {
+        "objects": 284,
+        "meshes": 96,
+        "vertices": 62256
+      },
+      "cameraDiagnostic": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 205,
+        "episodeFrame": 550,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          7.9124298095703125,
+          -11.27495288848877,
+          15.362523078918457
+        ],
+        "matrixWorld": [
+          [
+            0.9315736293792725,
+            -0.022715380415320396,
+            0.3628423511981964,
+            7.9124298095703125
+          ],
+          [
+            0.36355268955230713,
+            0.058206118643283844,
+            -0.9297534823417664,
+            -11.27495288848877
+          ],
+          [
+            5.8845589734346504e-08,
+            0.9980461001396179,
+            0.06248152256011963,
+            15.362523078918457
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          7.912429632697387,
+          -11.274953088464924,
+          15.362523455767537
+        ],
+        "maxPositionError": 3.768490799416213e-07
+      },
+      "cpuScheduling": {
+        "update": {
+          "processCpuSeconds": 0.015416999999956715,
+          "voluntaryContextSwitches": 11,
+          "involuntaryContextSwitches": 9,
+          "threadRunQueueWaitSeconds": 0.000244553,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "render": {
+          "processCpuSeconds": 37.197803999999905,
+          "voluntaryContextSwitches": 152,
+          "involuntaryContextSwitches": 1260,
+          "threadRunQueueWaitSeconds": 17.685064822,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "png": {
+          "processCpuSeconds": 0.026023000000009233,
+          "voluntaryContextSwitches": 11,
+          "involuntaryContextSwitches": 12,
+          "threadRunQueueWaitSeconds": 0.000170334,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        }
+      },
+      "cameraMatrix": [
+        [
+          0.9315736293792725,
+          -0.022715380415320396,
+          0.3628423511981964,
+          7.9124298095703125
+        ],
+        [
+          0.36355268955230713,
+          0.058206118643283844,
+          -0.9297534823417664,
+          -11.27495288848877
+        ],
+        [
+          5.8845589734346504e-08,
+          0.9980461001396179,
+          0.06248152256011963,
+          15.362523078918457
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "3": {
+      "invocationId": "d5860d1883a8464f83490a22360900c5",
+      "file": "frame-0003.png",
+      "sourceFrame": 208,
+      "sha256": "7ffd256369f23e979348c42b8d9e693a5c70fe4006eda429ce497555dedecab2",
+      "updateSeconds": 0.012991903000511229,
+      "updateCpuSeconds": 0.015335397999933775,
+      "renderAndCompositeSeconds": 18.661874345998513,
+      "renderCpuSeconds": 37.24835521900002,
+      "pngEncodeAndWriteSeconds": 0.03160941199894296,
+      "pngCpuSeconds": 0.041835362999904646,
+      "verifySeconds": 0.00425356699997792,
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "lod": 0,
+        "adaptiveThreshold": 0.11999999731779099,
+        "persistentData": true,
+        "samples": 16,
+        "bounces": 3,
+        "denoise": true,
+        "threads": 3,
+        "hazeDensity": 0.0010999999940395355,
+        "viewTransform": "AgX",
+        "environmentBoxes": 4349,
+        "bossBoxes": 3245,
+        "batchedMeshes": 88,
+        "particles": 24,
+        "designSha256": "6933dc4595b01d66f725cdaf351c034d87ed7c81e5513dffd71f0213e93a49c9",
+        "pngCompression": 15
+      },
+      "geometry": {
+        "objects": 284,
+        "meshes": 96,
+        "vertices": 62256
+      },
+      "cameraDiagnostic": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 208,
+        "episodeFrame": 553,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          7.833024978637695,
+          -11.222016334533691,
+          15.388991355895996
+        ],
+        "matrixWorld": [
+          [
+            0.9324881434440613,
+            -0.0230875127017498,
+            0.36046192049980164,
+            7.833024978637695
+          ],
+          [
+            0.3612005412578583,
+            0.05960353463888168,
+            -0.9305813312530518,
+            -11.222016334533691
+          ],
+          [
+            5.088102383865589e-09,
+            0.9979550838470459,
+            0.0639188140630722,
+            15.388991355895996
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          7.8330251999994145,
+          -11.22201679999961,
+          15.388991600000194
+        ],
+        "maxPositionError": 4.654659182534715e-07
+      },
+      "cpuScheduling": {
+        "update": {
+          "processCpuSeconds": 0.015345000000024811,
+          "voluntaryContextSwitches": 10,
+          "involuntaryContextSwitches": 7,
+          "threadRunQueueWaitSeconds": 0.000180718,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "render": {
+          "processCpuSeconds": 37.24836200000004,
+          "voluntaryContextSwitches": 163,
+          "involuntaryContextSwitches": 1244,
+          "threadRunQueueWaitSeconds": 17.493403998,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "png": {
+          "processCpuSeconds": 0.041869000000019696,
+          "voluntaryContextSwitches": 11,
+          "involuntaryContextSwitches": 14,
+          "threadRunQueueWaitSeconds": 0.000220068,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        }
+      },
+      "cameraMatrix": [
+        [
+          0.9324881434440613,
+          -0.0230875127017498,
+          0.36046192049980164,
+          7.833024978637695
+        ],
+        [
+          0.3612005412578583,
+          0.05960353463888168,
+          -0.9305813312530518,
+          -11.222016334533691
+        ],
+        [
+          5.088102383865589e-09,
+          0.9979550838470459,
+          0.0639188140630722,
+          15.388991355895996
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "6": {
+      "invocationId": "d5860d1883a8464f83490a22360900c5",
+      "file": "frame-0006.png",
+      "sourceFrame": 211,
+      "sha256": "fe0e83699ada9c7acdc1d9f538dfbd3df3bb60bd0154b20f39ff255c5d9b3170",
+      "updateSeconds": 0.017668473003141116,
+      "updateCpuSeconds": 0.02035752599999796,
+      "renderAndCompositeSeconds": 19.502028337999946,
+      "renderCpuSeconds": 38.88337127199998,
+      "pngEncodeAndWriteSeconds": 0.018735696001385804,
+      "pngCpuSeconds": 0.025109616000008828,
+      "verifySeconds": 0.0030800359963905066,
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "lod": 0,
+        "adaptiveThreshold": 0.11999999731779099,
+        "persistentData": true,
+        "samples": 16,
+        "bounces": 3,
+        "denoise": true,
+        "threads": 3,
+        "hazeDensity": 0.0010999999940395355,
+        "viewTransform": "AgX",
+        "environmentBoxes": 4349,
+        "bossBoxes": 3245,
+        "batchedMeshes": 88,
+        "particles": 24,
+        "designSha256": "6933dc4595b01d66f725cdaf351c034d87ed7c81e5513dffd71f0213e93a49c9",
+        "pngCompression": 15
+      },
+      "geometry": {
+        "objects": 284,
+        "meshes": 96,
+        "vertices": 62256
+      },
+      "cameraDiagnostic": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 211,
+        "episodeFrame": 556,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          7.7527360916137695,
+          -11.168490409851074,
+          15.415754318237305
+        ],
+        "matrixWorld": [
+          [
+            0.9334134459495544,
+            -0.023459160700440407,
+            0.35803496837615967,
+            7.7527360916137695
+          ],
+          [
+            0.3588026762008667,
+            0.06102823093533516,
+            -0.9314162135124207,
+            -11.168490409851074
+          ],
+          [
+            3.9609826529840575e-09,
+            0.997860312461853,
+            0.06538178026676178,
+            15.415754318237305
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          7.7527360385130235,
+          -11.168490692342015,
+          15.415754653828992
+        ],
+        "maxPositionError": 3.355916877723075e-07
+      },
+      "cpuScheduling": {
+        "update": {
+          "processCpuSeconds": 0.020376000000055683,
+          "voluntaryContextSwitches": 15,
+          "involuntaryContextSwitches": 9,
+          "threadRunQueueWaitSeconds": 0.000203193,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "render": {
+          "processCpuSeconds": 38.883376999999996,
+          "voluntaryContextSwitches": 157,
+          "involuntaryContextSwitches": 1411,
+          "threadRunQueueWaitSeconds": 18.469924262,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "png": {
+          "processCpuSeconds": 0.025118000000020402,
+          "voluntaryContextSwitches": 11,
+          "involuntaryContextSwitches": 11,
+          "threadRunQueueWaitSeconds": 0.00017497,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        }
+      },
+      "cameraMatrix": [
+        [
+          0.9334134459495544,
+          -0.023459160700440407,
+          0.35803496837615967,
+          7.7527360916137695
+        ],
+        [
+          0.3588026762008667,
+          0.06102823093533516,
+          -0.9314162135124207,
+          -11.168490409851074
+        ],
+        [
+          3.9609826529840575e-09,
+          0.997860312461853,
+          0.06538178026676178,
+          15.415754318237305
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "9": {
+      "invocationId": "d5860d1883a8464f83490a22360900c5",
+      "file": "frame-0009.png",
+      "sourceFrame": 214,
+      "sha256": "7f32e5962947606c075c61085fd40dabd3a255aff26f40df3d2226f02c361746",
+      "updateSeconds": 0.014435257005970925,
+      "updateCpuSeconds": 0.016887977000010324,
+      "renderAndCompositeSeconds": 18.10409935300413,
+      "renderCpuSeconds": 36.239486897999996,
+      "pngEncodeAndWriteSeconds": 0.020390486999531277,
+      "pngCpuSeconds": 0.027385098999957336,
+      "verifySeconds": 0.003798181001911871,
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "lod": 0,
+        "adaptiveThreshold": 0.11999999731779099,
+        "persistentData": true,
+        "samples": 16,
+        "bounces": 3,
+        "denoise": true,
+        "threads": 3,
+        "hazeDensity": 0.0010999999940395355,
+        "viewTransform": "AgX",
+        "environmentBoxes": 4349,
+        "bossBoxes": 3245,
+        "batchedMeshes": 88,
+        "particles": 24,
+        "designSha256": "6933dc4595b01d66f725cdaf351c034d87ed7c81e5513dffd71f0213e93a49c9",
+        "pngCompression": 15
+      },
+      "geometry": {
+        "objects": 284,
+        "meshes": 96,
+        "vertices": 62256
+      },
+      "cameraDiagnostic": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 214,
+        "episodeFrame": 559,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          7.671777725219727,
+          -11.114518165588379,
+          15.442740440368652
+        ],
+        "matrixWorld": [
+          [
+            0.9343469738960266,
+            -0.023829136043787003,
+            0.355567067861557,
+            7.671777725219727
+          ],
+          [
+            0.3563646376132965,
+            0.06247716024518013,
+            -0.9322558045387268,
+            -11.114518165588379
+          ],
+          [
+            2.9667281964407266e-08,
+            0.9977619051933289,
+            0.06686720997095108,
+            15.442740440368652
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          7.671777585443187,
+          -11.114518390295459,
+          15.44274080485227
+        ],
+        "maxPositionError": 3.64483618398026e-07
+      },
+      "cpuScheduling": {
+        "update": {
+          "processCpuSeconds": 0.016908999999941443,
+          "voluntaryContextSwitches": 12,
+          "involuntaryContextSwitches": 9,
+          "threadRunQueueWaitSeconds": 0.000106447,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "render": {
+          "processCpuSeconds": 36.23949399999992,
+          "voluntaryContextSwitches": 145,
+          "involuntaryContextSwitches": 1258,
+          "threadRunQueueWaitSeconds": 17.187453964,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "png": {
+          "processCpuSeconds": 0.02739099999996597,
+          "voluntaryContextSwitches": 10,
+          "involuntaryContextSwitches": 11,
+          "threadRunQueueWaitSeconds": 0.000238356,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        }
+      },
+      "cameraMatrix": [
+        [
+          0.9343469738960266,
+          -0.023829136043787003,
+          0.355567067861557,
+          7.671777725219727
+        ],
+        [
+          0.3563646376132965,
+          0.06247716024518013,
+          -0.9322558045387268,
+          -11.114518165588379
+        ],
+        [
+          2.9667281964407266e-08,
+          0.9977619051933289,
+          0.06686720997095108,
+          15.442740440368652
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "12": {
+      "invocationId": "d5860d1883a8464f83490a22360900c5",
+      "file": "frame-0012.png",
+      "sourceFrame": 217,
+      "sha256": "4d52bba102c69cf8dfa0be35b6dfee282cc3855336f3e070af7f2a60746aaa45",
+      "updateSeconds": 0.0439517779959715,
+      "updateCpuSeconds": 0.04704246999995121,
+      "renderAndCompositeSeconds": 18.489826730998175,
+      "renderCpuSeconds": 36.94097724599999,
+      "pngEncodeAndWriteSeconds": 0.01873387200612342,
+      "pngCpuSeconds": 0.026709524000011697,
+      "verifySeconds": 0.0032518509979126975,
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "lod": 0,
+        "adaptiveThreshold": 0.11999999731779099,
+        "persistentData": true,
+        "samples": 16,
+        "bounces": 3,
+        "denoise": true,
+        "threads": 3,
+        "hazeDensity": 0.0010999999940395355,
+        "viewTransform": "AgX",
+        "environmentBoxes": 4349,
+        "bossBoxes": 3245,
+        "batchedMeshes": 88,
+        "particles": 24,
+        "designSha256": "6933dc4595b01d66f725cdaf351c034d87ed7c81e5513dffd71f0213e93a49c9",
+        "pngCompression": 15
+      },
+      "geometry": {
+        "objects": 284,
+        "meshes": 96,
+        "vertices": 62256
+      },
+      "cameraDiagnostic": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 217,
+        "episodeFrame": 562,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          7.590365409851074,
+          -11.060243606567383,
+          15.469878196716309
+        ],
+        "matrixWorld": [
+          [
+            0.9352862238883972,
+            -0.024195924401283264,
+            0.3530641496181488,
+            7.590365409851074
+          ],
+          [
+            0.3538922667503357,
+            0.06394625455141068,
+            -0.9330976009368896,
+            -11.060243606567383
+          ],
+          [
+            3.0020039787359565e-08,
+            0.9976599812507629,
+            0.06837080419063568,
+            15.469878196716309
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          7.590365277994875,
+          -11.06024351866325,
+          15.469878240668375
+        ],
+        "maxPositionError": 1.3185619884836797e-07
+      },
+      "cpuScheduling": {
+        "update": {
+          "processCpuSeconds": 0.04718900000011672,
+          "voluntaryContextSwitches": 9,
+          "involuntaryContextSwitches": 4,
+          "threadRunQueueWaitSeconds": 0.000156173,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "render": {
+          "processCpuSeconds": 36.94098199999996,
+          "voluntaryContextSwitches": 147,
+          "involuntaryContextSwitches": 1275,
+          "threadRunQueueWaitSeconds": 17.559066883,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "png": {
+          "processCpuSeconds": 0.026716000000078566,
+          "voluntaryContextSwitches": 12,
+          "involuntaryContextSwitches": 10,
+          "threadRunQueueWaitSeconds": 0.000238636,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        }
+      },
+      "cameraMatrix": [
+        [
+          0.9352862238883972,
+          -0.024195924401283264,
+          0.3530641496181488,
+          7.590365409851074
+        ],
+        [
+          0.3538922667503357,
+          0.06394625455141068,
+          -0.9330976009368896,
+          -11.060243606567383
+        ],
+        [
+          3.0020039787359565e-08,
+          0.9976599812507629,
+          0.06837080419063568,
+          15.469878196716309
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "15": {
+      "invocationId": "d5860d1883a8464f83490a22360900c5",
+      "file": "frame-0015.png",
+      "sourceFrame": 220,
+      "sha256": "bfe02f61e347f14ee5802a4a9f5c60dd91d1556eb204aecbc12d2644cc63c9ad",
+      "updateSeconds": 0.014359856999362819,
+      "updateCpuSeconds": 0.01671673400005602,
+      "renderAndCompositeSeconds": 17.987982460996136,
+      "renderCpuSeconds": 35.976795006999964,
+      "pngEncodeAndWriteSeconds": 0.01941006000561174,
+      "pngCpuSeconds": 0.02617393700006687,
+      "verifySeconds": 0.0035147939997841604,
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "lod": 0,
+        "adaptiveThreshold": 0.11999999731779099,
+        "persistentData": true,
+        "samples": 16,
+        "bounces": 3,
+        "denoise": true,
+        "threads": 3,
+        "hazeDensity": 0.0010999999940395355,
+        "viewTransform": "AgX",
+        "environmentBoxes": 4349,
+        "bossBoxes": 3245,
+        "batchedMeshes": 88,
+        "particles": 24,
+        "designSha256": "6933dc4595b01d66f725cdaf351c034d87ed7c81e5513dffd71f0213e93a49c9",
+        "pngCompression": 15
+      },
+      "geometry": {
+        "objects": 284,
+        "meshes": 96,
+        "vertices": 62256
+      },
+      "cameraDiagnostic": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 220,
+        "episodeFrame": 565,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          7.50871467590332,
+          -11.005809783935547,
+          15.497095108032227
+        ],
+        "matrixWorld": [
+          [
+            0.9362285733222961,
+            -0.024558523669838905,
+            0.3505323827266693,
+            7.50871467590332
+          ],
+          [
+            0.35139161348342896,
+            0.06543239951133728,
+            -0.9339392781257629,
+            -11.005809783935547
+          ],
+          [
+            -6.6753527150353875e-09,
+            0.9975547790527344,
+            0.06988934427499771,
+            15.497095108032227
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          7.508714553373062,
+          -11.005809702248708,
+          15.497095148875646
+        ],
+        "maxPositionError": 1.2253025793995675e-07
+      },
+      "cpuScheduling": {
+        "update": {
+          "processCpuSeconds": 0.016736000000037166,
+          "voluntaryContextSwitches": 13,
+          "involuntaryContextSwitches": 11,
+          "threadRunQueueWaitSeconds": 0.000277073,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "render": {
+          "processCpuSeconds": 35.97680099999991,
+          "voluntaryContextSwitches": 174,
+          "involuntaryContextSwitches": 1161,
+          "threadRunQueueWaitSeconds": 17.061129466,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "png": {
+          "processCpuSeconds": 0.026181999999948857,
+          "voluntaryContextSwitches": 10,
+          "involuntaryContextSwitches": 8,
+          "threadRunQueueWaitSeconds": 0.000278332,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        }
+      },
+      "cameraMatrix": [
+        [
+          0.9362285733222961,
+          -0.024558523669838905,
+          0.3505323827266693,
+          7.50871467590332
+        ],
+        [
+          0.35139161348342896,
+          0.06543239951133728,
+          -0.9339392781257629,
+          -11.005809783935547
+        ],
+        [
+          -6.6753527150353875e-09,
+          0.9975547790527344,
+          0.06988934427499771,
+          15.497095108032227
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "18": {
+      "invocationId": "d5860d1883a8464f83490a22360900c5",
+      "file": "frame-0018.png",
+      "sourceFrame": 223,
+      "sha256": "29e1f66b62eedcb61cf2a46443f78ebe7731dd4bc6ec11febf836b73bc4427f9",
+      "updateSeconds": 0.013847886002622545,
+      "updateCpuSeconds": 0.015819359000033728,
+      "renderAndCompositeSeconds": 17.474390856004902,
+      "renderCpuSeconds": 34.76247355999999,
+      "pngEncodeAndWriteSeconds": 0.03656722499727039,
+      "pngCpuSeconds": 0.025308842999947956,
+      "verifySeconds": 0.0039040519986883737,
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "lod": 0,
+        "adaptiveThreshold": 0.11999999731779099,
+        "persistentData": true,
+        "samples": 16,
+        "bounces": 3,
+        "denoise": true,
+        "threads": 3,
+        "hazeDensity": 0.0010999999940395355,
+        "viewTransform": "AgX",
+        "environmentBoxes": 4349,
+        "bossBoxes": 3245,
+        "batchedMeshes": 88,
+        "particles": 24,
+        "designSha256": "6933dc4595b01d66f725cdaf351c034d87ed7c81e5513dffd71f0213e93a49c9",
+        "pngCompression": 15
+      },
+      "geometry": {
+        "objects": 284,
+        "meshes": 96,
+        "vertices": 62256
+      },
+      "cameraDiagnostic": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 223,
+        "episodeFrame": 568,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          7.427041053771973,
+          -10.951360702514648,
+          15.524319648742676
+        ],
+        "matrixWorld": [
+          [
+            0.9371715188026428,
+            -0.02491581067442894,
+            0.3479781448841095,
+            7.427041053771973
+          ],
+          [
+            0.3488689959049225,
+            0.06693151593208313,
+            -0.9347783923149109,
+            -10.951360702514648
+          ],
+          [
+            5.749776477159685e-08,
+            0.9974464178085327,
+            0.07141866534948349,
+            15.524319648742676
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          7.427040848782719,
+          -10.951360565855145,
+          15.524319717072427
+        ],
+        "maxPositionError": 2.0498925401568613e-07
+      },
+      "cpuScheduling": {
+        "update": {
+          "processCpuSeconds": 0.015830999999934647,
+          "voluntaryContextSwitches": 9,
+          "involuntaryContextSwitches": 4,
+          "threadRunQueueWaitSeconds": 0.0002289,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "render": {
+          "processCpuSeconds": 34.762478999999985,
+          "voluntaryContextSwitches": 156,
+          "involuntaryContextSwitches": 1281,
+          "threadRunQueueWaitSeconds": 16.860516854,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "png": {
+          "processCpuSeconds": 0.025316999999972722,
+          "voluntaryContextSwitches": 11,
+          "involuntaryContextSwitches": 9,
+          "threadRunQueueWaitSeconds": 0.017833593,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        }
+      },
+      "cameraMatrix": [
+        [
+          0.9371715188026428,
+          -0.02491581067442894,
+          0.3479781448841095,
+          7.427041053771973
+        ],
+        [
+          0.3488689959049225,
+          0.06693151593208313,
+          -0.9347783923149109,
+          -10.951360702514648
+        ],
+        [
+          5.749776477159685e-08,
+          0.9974464178085327,
+          0.07141866534948349,
+          15.524319648742676
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "21": {
+      "invocationId": "d5860d1883a8464f83490a22360900c5",
+      "file": "frame-0021.png",
+      "sourceFrame": 226,
+      "sha256": "bfec2b7e125c92f89d460c6332d2831bffb7c2f16af2ed2b9058192ac3e20267",
+      "updateSeconds": 0.01607680299639469,
+      "updateCpuSeconds": 0.018642536000015753,
+      "renderAndCompositeSeconds": 17.40273476800212,
+      "renderCpuSeconds": 34.815588684999966,
+      "pngEncodeAndWriteSeconds": 0.01775982100662077,
+      "pngCpuSeconds": 0.02416694600003666,
+      "verifySeconds": 0.0030046249958104454,
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "lod": 0,
+        "adaptiveThreshold": 0.11999999731779099,
+        "persistentData": true,
+        "samples": 16,
+        "bounces": 3,
+        "denoise": true,
+        "threads": 3,
+        "hazeDensity": 0.0010999999940395355,
+        "viewTransform": "AgX",
+        "environmentBoxes": 4349,
+        "bossBoxes": 3245,
+        "batchedMeshes": 88,
+        "particles": 24,
+        "designSha256": "6933dc4595b01d66f725cdaf351c034d87ed7c81e5513dffd71f0213e93a49c9",
+        "pngCompression": 15
+      },
+      "geometry": {
+        "objects": 284,
+        "meshes": 96,
+        "vertices": 62256
+      },
+      "cameraDiagnostic": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 226,
+        "episodeFrame": 571,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          7.345559597015381,
+          -10.897039413452148,
+          15.551480293273926
+        ],
+        "matrixWorld": [
+          [
+            0.9381123781204224,
+            -0.025266489014029503,
+            0.3454080820083618,
+            7.345559597015381
+          ],
+          [
+            0.3463309705257416,
+            0.06843984127044678,
+            -0.9356125593185425,
+            -10.897039413452148
+          ],
+          [
+            -2.8963977882767722e-08,
+            0.9973352551460266,
+            0.07295482605695724,
+            15.551480293273926
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          7.345559601428816,
+          -10.897039734285878,
+          15.551480132857062
+        ],
+        "maxPositionError": 3.2083372936142496e-07
+      },
+      "cpuScheduling": {
+        "update": {
+          "processCpuSeconds": 0.01865700000007564,
+          "voluntaryContextSwitches": 21,
+          "involuntaryContextSwitches": 16,
+          "threadRunQueueWaitSeconds": 0.000183474,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "render": {
+          "processCpuSeconds": 34.81559400000003,
+          "voluntaryContextSwitches": 198,
+          "involuntaryContextSwitches": 1139,
+          "threadRunQueueWaitSeconds": 16.492992709,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "png": {
+          "processCpuSeconds": 0.024171000000023923,
+          "voluntaryContextSwitches": 10,
+          "involuntaryContextSwitches": 7,
+          "threadRunQueueWaitSeconds": 0.001140735,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        }
+      },
+      "cameraMatrix": [
+        [
+          0.9381123781204224,
+          -0.025266489014029503,
+          0.3454080820083618,
+          7.345559597015381
+        ],
+        [
+          0.3463309705257416,
+          0.06843984127044678,
+          -0.9356125593185425,
+          -10.897039413452148
+        ],
+        [
+          -2.8963977882767722e-08,
+          0.9973352551460266,
+          0.07295482605695724,
+          15.551480293273926
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "24": {
+      "invocationId": "d5860d1883a8464f83490a22360900c5",
+      "file": "frame-0024.png",
+      "sourceFrame": 229,
+      "sha256": "78121dadbab9d5f86995ed5d2afba65d22d1be1173954b9e2ea5a1e7b98cd4cb",
+      "updateSeconds": 0.012107652000850067,
+      "updateCpuSeconds": 0.013935300000071038,
+      "renderAndCompositeSeconds": 17.641217802003666,
+      "renderCpuSeconds": 35.167700862999936,
+      "pngEncodeAndWriteSeconds": 0.018202469997049775,
+      "pngCpuSeconds": 0.024663633000045593,
+      "verifySeconds": 0.003034670000488404,
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "lod": 0,
+        "adaptiveThreshold": 0.11999999731779099,
+        "persistentData": true,
+        "samples": 16,
+        "bounces": 3,
+        "denoise": true,
+        "threads": 3,
+        "hazeDensity": 0.0010999999940395355,
+        "viewTransform": "AgX",
+        "environmentBoxes": 4349,
+        "bossBoxes": 3245,
+        "batchedMeshes": 88,
+        "particles": 24,
+        "designSha256": "6933dc4595b01d66f725cdaf351c034d87ed7c81e5513dffd71f0213e93a49c9",
+        "pngCompression": 15
+      },
+      "geometry": {
+        "objects": 284,
+        "meshes": 96,
+        "vertices": 62256
+      },
+      "cameraDiagnostic": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 229,
+        "episodeFrame": 574,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          7.264486312866211,
+          -10.84299087524414,
+          15.57850456237793
+        ],
+        "matrixWorld": [
+          [
+            0.9390486478805542,
+            -0.025609586387872696,
+            0.34282901883125305,
+            7.264486312866211
+          ],
+          [
+            0.3437842130661011,
+            0.06995286792516708,
+            -0.9364395141601562,
+            -10.84299087524414
+          ],
+          [
+            -4.230415129313769e-08,
+            0.9972215294837952,
+            0.07449331879615784,
+            15.57850456237793
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          7.264486248516327,
+          -10.842990832344219,
+          15.578504583827891
+        ],
+        "maxPositionError": 6.434988364389937e-08
+      },
+      "cpuScheduling": {
+        "update": {
+          "processCpuSeconds": 0.01394500000003518,
+          "voluntaryContextSwitches": 12,
+          "involuntaryContextSwitches": 9,
+          "threadRunQueueWaitSeconds": 0.00010079,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "render": {
+          "processCpuSeconds": 35.16770699999995,
+          "voluntaryContextSwitches": 156,
+          "involuntaryContextSwitches": 1196,
+          "threadRunQueueWaitSeconds": 16.845115466,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "png": {
+          "processCpuSeconds": 0.024666999999908512,
+          "voluntaryContextSwitches": 10,
+          "involuntaryContextSwitches": 7,
+          "threadRunQueueWaitSeconds": 0.001389095,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        }
+      },
+      "cameraMatrix": [
+        [
+          0.9390486478805542,
+          -0.025609586387872696,
+          0.34282901883125305,
+          7.264486312866211
+        ],
+        [
+          0.3437842130661011,
+          0.06995286792516708,
+          -0.9364395141601562,
+          -10.84299087524414
+        ],
+        [
+          -4.230415129313769e-08,
+          0.9972215294837952,
+          0.07449331879615784,
+          15.57850456237793
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    "27": {
+      "invocationId": "d5860d1883a8464f83490a22360900c5",
+      "file": "frame-0027.png",
+      "sourceFrame": 232,
+      "sha256": "d6e9ba1795dce1677378b8ad77167f56f4be1a1b8fa60149c88f7d037e96517f",
+      "updateSeconds": 0.012284597993129864,
+      "updateCpuSeconds": 0.0142077350000136,
+      "renderAndCompositeSeconds": 17.502008998002566,
+      "renderCpuSeconds": 34.947909454999945,
+      "pngEncodeAndWriteSeconds": 0.0195195119958953,
+      "pngCpuSeconds": 0.027814056000124765,
+      "verifySeconds": 0.0029996150042279623,
+      "device": {
+        "requested": "auto",
+        "selected": "CPU",
+        "backend": null,
+        "devices": [],
+        "notes": [
+          "No compatible Cycles GPU found; CPU fallback selected."
+        ],
+        "lod": 0,
+        "adaptiveThreshold": 0.11999999731779099,
+        "persistentData": true,
+        "samples": 16,
+        "bounces": 3,
+        "denoise": true,
+        "threads": 3,
+        "hazeDensity": 0.0010999999940395355,
+        "viewTransform": "AgX",
+        "environmentBoxes": 4349,
+        "bossBoxes": 3245,
+        "batchedMeshes": 88,
+        "particles": 24,
+        "designSha256": "6933dc4595b01d66f725cdaf351c034d87ed7c81e5513dffd71f0213e93a49c9",
+        "pngCompression": 15
+      },
+      "geometry": {
+        "objects": 284,
+        "meshes": 96,
+        "vertices": 62256
+      },
+      "cameraDiagnostic": {
+        "route": "cinematic",
+        "shotId": "02-identity/mechanism",
+        "cameraId": "mechanism",
+        "blenderCamera": "VaultCinema",
+        "sceneFrame": 232,
+        "episodeFrame": 577,
+        "sceneRange": [
+          138,
+          303
+        ],
+        "episodeRange": [
+          483,
+          648
+        ],
+        "position": [
+          7.1840362548828125,
+          -10.78935718536377,
+          15.605320930480957
+        ],
+        "matrixWorld": [
+          [
+            0.939977765083313,
+            -0.02594437077641487,
+            0.3402479588985443,
+            7.1840362548828125
+          ],
+          [
+            0.3412356674671173,
+            0.07146728038787842,
+            -0.9372569918632507,
+            -10.78935718536377
+          ],
+          [
+            -5.3285042156403506e-08,
+            0.9971054792404175,
+            0.07603079825639725,
+            15.605320930480957
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "lens": 48.0,
+        "sensorFit": "VERTICAL",
+        "expectedPosition": [
+          7.184036227250225,
+          -10.789357484833483,
+          15.605321257583258
+        ],
+        "maxPositionError": 3.271023008011298e-07
+      },
+      "cpuScheduling": {
+        "update": {
+          "processCpuSeconds": 0.014214999999921929,
+          "voluntaryContextSwitches": 8,
+          "involuntaryContextSwitches": 3,
+          "threadRunQueueWaitSeconds": 0.000124735,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "render": {
+          "processCpuSeconds": 34.947917000000075,
+          "voluntaryContextSwitches": 152,
+          "involuntaryContextSwitches": 1264,
+          "threadRunQueueWaitSeconds": 16.630134035,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        },
+        "png": {
+          "processCpuSeconds": 0.02781900000013593,
+          "voluntaryContextSwitches": 6,
+          "involuntaryContextSwitches": 3,
+          "threadRunQueueWaitSeconds": 0.000466473,
+          "blockingIoOrGpuWaitSeconds": null,
+          "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+        }
+      },
+      "cameraMatrix": [
+        [
+          0.939977765083313,
+          -0.02594437077641487,
+          0.3402479588985443,
+          7.1840362548828125
+        ],
+        [
+          0.3412356674671173,
+          0.07146728038787842,
+          -0.9372569918632507,
+          -10.78935718536377
+        ],
+        [
+          -5.3285042156403506e-08,
+          0.9971054792404175,
+          0.07603079825639725,
+          15.605320930480957
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  },
+  "builds": [],
+  "status": "success",
+  "request": {
+    "version": 1,
+    "selectionId": "boss-atheon",
+    "variantId": null,
+    "binding": {
+      "entity": {
+        "id": "boss-atheon",
+        "name": "Atheon, Time's Conflux",
+        "enName": "Atheon, Time's Conflux",
+        "kind": "boss",
+        "parentBossId": null,
+        "composition": "individual",
+        "members": [],
+        "nature": null,
+        "priority": false,
+        "atlasVisualStatus": "dedicated",
+        "status": "implemented-user-approved",
+        "implementation": {
+          "provider": "venus-vault",
+          "status": "implemented-user-approved",
+          "environmentId": "arena-glass-throne",
+          "animations": [
+            "idle",
+            "walk",
+            "combat",
+            "temporal",
+            "reveal"
+          ],
+          "lods": [
+            0,
+            1,
+            2
+          ],
+          "gallery": "docs/universal-library/approved/README.md",
+          "galleryV1Status": "technical-grid-rendered",
+          "protectedFiles": [
+            {
+              "path": "remotion/blender/cinematic_vex/atheon.py",
+              "sha256": "265e4c4026fe143ecbabef6fa0566f85ba72c94716233e19cadbb73e587ba04f"
+            },
+            {
+              "path": "remotion/blender/cinematic_vex/templar.py",
+              "sha256": "3cc11b2524a2483eb13ab49f6aa2aadc5b7d69c1c849dfb11feaf11dd94abec5"
+            },
+            {
+              "path": "remotion/blender/cinematic_vex/animation.py",
+              "sha256": "4b6c2cf3461b1bf9236c44784d50a7a6e1f8c9166ee3bb0275eb50708cc2c49a"
+            },
+            {
+              "path": "remotion/blender/cinematic_vex/shapes.py",
+              "sha256": "c55cc9db2d93263defdf5a14bf3ebb0c5fc0c99b9021ec5b4a04c1883b7192ea"
+            },
+            {
+              "path": "remotion/blender/cinematic_vex/materials.py",
+              "sha256": "ce872ff518d12fb326b6764ee942ea89931772d46bf9ef2b7ea139e5cbf60542"
+            }
+          ]
+        },
+        "family": "vex",
+        "familyCandidates": [
+          "vex"
+        ],
+        "arenaIds": [
+          "arena-glass-throne"
+        ],
+        "encounterIds": [
+          "encounter-vault-of-glass-d1-atheon",
+          "encounter-vault-of-glass-d2-atheon"
+        ],
+        "activityIds": [
+          "activity-vault-of-glass-d1",
+          "activity-vault-of-glass-d2"
+        ],
+        "activityTypes": [
+          "raid"
+        ],
+        "variants": [],
+        "encounterBindings": [
+          {
+            "encounterId": "encounter-vault-of-glass-d1-atheon",
+            "bossId": "boss-atheon",
+            "bossVariantId": null,
+            "role": "primary",
+            "conditions": [],
+            "outcome": "defeat",
+            "sources": [
+              "wiki-vog",
+              "wiki-boss-atheon-time-s-conflux"
+            ],
+            "note": "Association sourc\u00e9e ; conditions de qu\u00eate, \u00e9v\u00e9nement ou difficult\u00e9 explicites, sans promotion en boss permanent de la version standard."
+          },
+          {
+            "encounterId": "encounter-vault-of-glass-d2-atheon",
+            "bossId": "boss-atheon",
+            "bossVariantId": null,
+            "role": "primary",
+            "conditions": [],
+            "outcome": "defeat",
+            "sources": [
+              "wiki-vog",
+              "wiki-boss-atheon-time-s-conflux"
+            ],
+            "note": "Association sourc\u00e9e ; conditions de qu\u00eate, \u00e9v\u00e9nement ou difficult\u00e9 explicites, sans promotion en boss permanent de la version standard."
+          }
+        ],
+        "sourceIds": [
+          "wiki-vog",
+          "wiki-boss-atheon-time-s-conflux"
+        ],
+        "reusePlans": [
+          {
+            "entityId": "boss-atheon",
+            "target": "boss",
+            "profileIds": [
+              "reuse-blender-atheon"
+            ],
+            "status": "implemented-stylized",
+            "silhouette": "Infobox inspect\u00e9e : Vex / Minotaur ; proportions exactes non mesur\u00e9es.",
+            "sources": [
+              "wiki-vog",
+              "wiki-boss-atheon-time-s-conflux"
+            ],
+            "note": "G\u00e9n\u00e9rateur Blender original affect\u00e9 et rendu ; aucune migration Remotion. Les limites restent d\u00e9clar\u00e9es dans le profil et blender/venus_vault/VALIDATION.md.",
+            "existingRecipe": null
+          }
+        ]
+      },
+      "provider": "venus-vault",
+      "selectionId": "boss-atheon",
+      "environmentId": "arena-glass-throne",
+      "status": "implemented-user-approved"
+    },
+    "quality": "draft",
+    "seed": 42,
+    "lod": 0,
+    "frames": 28,
+    "fps": 30,
+    "width": 324,
+    "height": 576,
+    "startFrame": 205,
+    "animation": "idle",
+    "view": "environment",
+    "environmentVariant": "sanctum"
+  },
+  "settings": {
+    "storage": "scratch",
+    "persistent": true,
+    "samples": null,
+    "denoise": "existing",
+    "pngCompression": 15,
+    "threads": 3
+  },
+  "driveCheckpoints": [],
+  "cacheVerificationSeconds": 0.02767214000050444,
+  "configuration": {
+    "requested": "auto",
+    "selected": "CPU",
+    "backend": null,
+    "devices": [],
+    "notes": [
+      "No compatible Cycles GPU found; CPU fallback selected."
+    ],
+    "lod": 0,
+    "adaptiveThreshold": 0.11999999731779099,
+    "persistentData": true,
+    "samples": 16,
+    "bounces": 3,
+    "denoise": true,
+    "threads": 3,
+    "hazeDensity": 0.0010999999940395355,
+    "viewTransform": "AgX",
+    "environmentBoxes": 4349,
+    "bossBoxes": 3245,
+    "batchedMeshes": 88,
+    "particles": 24,
+    "designSha256": "6933dc4595b01d66f725cdaf351c034d87ed7c81e5513dffd71f0213e93a49c9",
+    "pngCompression": 15
+  },
+  "workerSeconds": 562.0282544850052,
+  "processBuildCount": 1,
+  "peakProcessRssKiB": 595232
+}

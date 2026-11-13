@@ -57,3 +57,11 @@ Les tests Colab/T4/Android et les performances GPU restent non validés tant qu�
 ## Pilote anglais — Atheon
 
 [Who Is Atheon, Time’s Conflux?](../../episodes/atheon-explained-en/README.md) : six scènes fournies, `en-US`, `af_heart`, titres et sous-titres anglais, format vertical 9:16. La cellule dédiée du notebook prépare uniquement la voix et les sélections de scènes dans Drive. Le plan mesuré fait 89,067 secondes sans accélération ni coupe. Le rendu complet est différé à la session Colab Tesla T4 de l’utilisateur. Le français reste disponible et ses preuves antérieures sont conservées.
+
+## Performance investigation and directed Atheon edition
+
+The opt-in [performance/cinematic guide](PERFORMANCE-CINEMATIC.md) documents the paired 30–60-frame T4 benchmark and separate cinematic project controls. Run that benchmark before recommending a complete rerender. Existing validated outputs and their saved source commits remain usable.
+
+For `atheon-smoke` route confusion, use [R0 and M1–M3](SMOKE-ROUTE-AND-MOTION.md) to inspect the old project read-only and render a separate three-second moving-camera diagnostic.
+
+The [standalone GPU Optimization Lab](GPU-OPTIMIZATION-LAB.md) provides O1–O4 in a **separate notebook**, with local-only temporary storage and a downloadable report ZIP. The production notebook is unchanged by this lab extension.
