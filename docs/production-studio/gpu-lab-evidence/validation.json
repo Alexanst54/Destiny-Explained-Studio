@@ -1,0 +1,38 @@
+{
+  "status": "local-components-validated-T4-cold-matrix-pending",
+  "nodeTests": 118,
+  "pythonTests": {
+    "blender": 67,
+    "studio": 36,
+    "narration": 10,
+    "manifest": 4,
+    "total": 117
+  },
+  "typescriptConfigurations": 3,
+  "actualCpuRenderedFrames": 6,
+  "actualCpuCases": [
+    "baseline-48",
+    "samples-32"
+  ],
+  "actualCpuResolution": [
+    320,
+    240
+  ],
+  "actualT4ColdBenchmarkExecuted": false,
+  "providedM3IsWarmUserEvidence": true,
+  "noGpuSpeedupClaim": true,
+  "productionRecommendation": "Keep existing Balanced/48 until repeated cold T4 + user quality approval",
+  "actualSparseCheckoutMiB": 3.7,
+  "voiceWavsDownloaded": false,
+  "npmInstalled": false,
+  "originalProductionNotebookChanged": false,
+  "intermediateCleanupTested": true,
+  "actualReportZipRestoreTested": true,
+  "physicalColabAndroidTested": false,
+  "realDriveMounted": false,
+  "fullEpisodeRendered": false,
+  "localRenderSourceCommit": "fdbf4d3c9b8aaf53bb47ce31ff3b28cdf2b48adf",
+  "notes": "CPU component output was recorded before final timeout/fallback/review-gate refinements. Approved builder, camera and render/save worker are unchanged; no CPU ratio is used as a GPU claim.",
+  "noRawFrameCacheInArchive": true,
+  "serializedActionsTested": true
+}

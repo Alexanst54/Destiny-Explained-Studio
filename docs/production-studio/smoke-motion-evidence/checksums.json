@@ -1,0 +1,20 @@
+{
+  "all-frame-camera-audit.json": "d33d5e05c9904e48e40beded4ca227405f298b8eaf539bf2e5bb013fc88cf14f",
+  "frames-motion-vault-establish.json": "40417b1ab56098813300f07b088b6272736685e4ecb4d8e951fa862ccced7b63",
+  "motion-plan.json": "c67e1851ca2599212b09587f3771669dfc2f92ee59d71c2caab4c278887b73f7",
+  "frames-motion-monument.json": "8c8811b8e5965eccde30cffb5596dc0b240e61bd36e940f1dab935e3c5163ff0",
+  "atheon-motion-test.mp4": "68caedfe40264bbf0df41327fd38ef63268c0219afee86baed4e6ad4bbc73e3c",
+  "README.md": "156d6eca72ca4fd6a633d2e22461ecd6c87aaf1d9bfb3113ba5e57d0445dbb89",
+  "blender-log.txt": "cf4c4c527500f922c6dde38779ad8224f11df33dbc3308ea5568a6b2bf9d5aeb",
+  "per-frame-cameras.jsonl": "aed441c13847ee6f8d24c790cfbf724ff4d6b5ebb97b3bee5ad0df8e4122ec7e",
+  "shot-3.png": "7a316e9fa330ca0143848b92570e7bd51e7c4a54e85a4951c8adc4bcbccbc541",
+  "frames-motion-mechanism.json": "715649f3efe04d46cf411543591c50fa9022620283a7893c78b1fad39f841058",
+  "validation-summary.json": "ca2c17cbcd558b1535d8449d731d4583612051ff037c9b82e3fce07b1c280634",
+  "shot-2.png": "3d79bee57c5c3697f44c261e024e19163528aab0d3e8e30c0ed845f4203dec7a",
+  "motion-validation.json": "17a5c8c0251f4163d942978946d1faddca47c78e5150965af50212ca230d1d98",
+  "shot-1.png": "3727bab175c283d7424be7b00fed3a25bc6c822400b0d1f1834982d357811f6a",
+  "warm-render-result.json": "979731cacda138287f937a42288cea274ebf450f5371d2257d5ff50be1678547",
+  "cold-render-result.json": "fed0ac99f300d7746f61fdc41b52a69e28f10a68c1441256d514e89eb267bcbb",
+  "archived-general-route-example.json": "8c8b94c65ff10546d004b3effd8064456959c3df65a7bd07e8ee44157455e09d",
+  "actual-local-device.json": "41bd9b1c544ef2037dbf8f6683a8cbc4c0701c2da554808d975559db94ef18d2"
+}

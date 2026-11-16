@@ -1,0 +1,19 @@
+HIP hipInit: Invalid device
+Blender 4.3.2 (hash 32f5fdce0a0a built 2024-12-17 01:31:14)
+Traceback (most recent call last):
+  File "/workspace/Destiny-Explained-Studio-atlas/remotion/blender/gpu_lab/worker.py", line 94, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/Destiny-Explained-Studio-atlas/remotion/blender/gpu_lab/worker.py", line 51, in main
+    state,dev,build_time=start_state(plan['jobs'][0],out,cpu);scene=state['scene'];defaults=capture(scene);result=dict(status='passed',blenderVersion=bpy.app.version_string,device=dev,defaults=defaults,oidnCompiled=bool(_cycles.with_openimagedenoise),autoTileAvailable=hasattr(scene.cycles,'use_auto_tile'),build=build_time)
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/Destiny-Explained-Studio-atlas/remotion/blender/gpu_lab/worker.py", line 43, in start_state
+    ts=time.perf_counter();t_cpu=time.process_time();state=build(job['request'],'cpu' if cpu else 'auto',3,out);install(state);scene=state['scene'];dev=device(scene,cpu)
+                                                                                                                                                        ^^^^^^^^^^^^^^^^^
+  File "/workspace/Destiny-Explained-Studio-atlas/remotion/blender/gpu_lab/worker.py", line 29, in device
+    raise RuntimeError('One actual Tesla T4 / OptiX or CUDA device is required; CPU fallback is forbidden in this lab')
+RuntimeError: One actual Tesla T4 / OptiX or CUDA device is required; CPU fallback is forbidden in this lab
+
+Error: script failed, file: 'remotion/blender/gpu_lab/worker.py', exiting.
+
+Blender quit

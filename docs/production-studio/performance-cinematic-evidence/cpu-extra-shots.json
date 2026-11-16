@@ -1,0 +1,78 @@
+{
+  "status": "passed",
+  "error": null,
+  "wallSeconds": 138.18541262300278,
+  "frames": 2,
+  "newFrames": 2,
+  "reusedFrames": 0,
+  "sourceFingerprint": "204e1e0812d8980a6b54a7e3ff524a719e1111353ba8bcd6789a23762ea2bc43",
+  "settings": {
+    "storage": "scratch",
+    "persistent": true,
+    "samples": null,
+    "denoise": "existing",
+    "pngCompression": 15,
+    "threads": 3
+  },
+  "direction": true,
+  "blenderVersion": "Blender 4.3.2\n\tbuild date: 2024-12-17\n\tbuild time: 01:31:14\n\tbuild commit date: 2024-12-16\n\tbuild commit time: 21:10\n\tbuild hash: 32f5fdce0a0a\n\tbuild branch: blender-v4.3-release\n\tbuild platform: Linux\n\tbuild type: Release\n\tbuild c flags:  -Wall -Werror=implicit-function-declaration -Wstrict-prototypes -Werror=return-type -Werror=vla -Wmissing-prototypes -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wlogical-op -Wundef -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wformat-signedness -Wrestrict -Wno-stringop-overread -Wno-stringop-overflow -Wnonnull -Wabsolute-value -Wuninitialized -Wredundant-decls -Wshadow -Wimplicit-fallthrough=5 -Wno-error=unused-but-set-variable  -march=x86-64-v2 -std=gnu11 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild c++ flags:  -Wuninitialized -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Werror=return-type -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wundef -Wcomma-subscript -Wformat-signedness -Wrestrict -Wno-suggest-override -Wuninitialized -Wno-stringop-overread -Wno-stringop-overflow -Wimplicit-fallthrough=5 -Wundef -Wmissing-declarations  -march=x86-64-v2 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild link flags:  -Wl,--version-script='/home/blender/git/blender-v430/blender.git/source/creator/symbols_unix.map'\n\tbuild system: CMake\n",
+  "startupToWorkerReadySeconds": 1.1021802425384521,
+  "buildSeconds": 1.2430588960014575,
+  "cpuBuildSeconds": 0.41957630799999995,
+  "cacheVerificationSeconds": 0.004088931003934704,
+  "restoreFromDrive": [
+    {
+      "seconds": 6.278500222833827e-05,
+      "copied": 0
+    },
+    {
+      "seconds": 2.5557998014846817e-05,
+      "copied": 0
+    }
+  ],
+  "driveCheckpoints": [
+    {
+      "seconds": 0.01728172200091649,
+      "copiedFrames": 0,
+      "reusedFrames": 1,
+      "bytes": 0,
+      "scope": "copy + readback CRC/decode/SHA + manifest; mounted filesystem, not remote server timing"
+    },
+    {
+      "seconds": 0.008019664004677907,
+      "copiedFrames": 0,
+      "reusedFrames": 1,
+      "bytes": 0,
+      "scope": "copy + readback CRC/decode/SHA + manifest; mounted filesystem, not remote server timing"
+    }
+  ],
+  "workerCheckpointSeconds": 0,
+  "phases": {
+    "updateSeconds": 0.1183615589980036,
+    "updateCpuSeconds": 0.04058154600000108,
+    "renderAndCompositeSeconds": 133.8990994090018,
+    "renderCpuSeconds": 152.58682611899997,
+    "pngEncodeAndWriteSeconds": 0.3136739550027414,
+    "pngCpuSeconds": 0.13037770900001533,
+    "verifySeconds": 0.012549249000585405
+  },
+  "cyclesLog": {
+    "approximateProgressSeconds": {
+      "other": 0.6099999999999988,
+      "geometry-sync-bvh": 0.14,
+      "sampling": 133.05,
+      "compositor": 0.009999999999990905
+    },
+    "scope": "Blender printed progress clock deltas; nested/rounded stages, not GPU kernel timing; inspect raw log"
+  },
+  "gpu": {
+    "scope": "Device-wide ~1s polling; includes other processes, sampled peaks only; no attribution to a single process",
+    "samples": 0,
+    "peakMemoryMiB": null,
+    "meanUtilizationPercent": null,
+    "error": "nvidia-smi unavailable"
+  },
+  "actualT4Rendering": false,
+  "peakBlenderRssKiB": 608968,
+  "coldRun": true
+}

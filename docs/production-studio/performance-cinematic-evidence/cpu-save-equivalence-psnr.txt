@@ -1,0 +1,20 @@
+Input #0, png_pipe, from '/workspace/Destiny-Explained-Studio-atlas/work/atheon-complete-cpu-frame/frame-0000.png':
+  Duration: N/A, bitrate: N/A
+  Stream #0:0: Video: png, rgb24(pc, gbr/unknown/unknown), 360x640 [SAR 2834:2834 DAR 9:16], 25 fps, 25 tbr, 25 tbn
+Input #1, png_pipe, from '/workspace/Destiny-Explained-Studio-atlas/work/atheon-save-equivalence/baseline-equivalence/frame-0000.png':
+  Duration: N/A, bitrate: N/A
+  Stream #1:0: Video: png, rgb24(pc, gbr/unknown/unknown), 360x640 [SAR 2834:2834 DAR 9:16], 25 fps, 25 tbr, 25 tbn
+Stream mapping:
+  Stream #0:0 (png) -> psnr
+  Stream #1:0 (png) -> psnr
+  psnr:default -> Stream #0:0 (wrapped_avframe)
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf61.7.103
+  Stream #0:0: Video: wrapped_avframe, gbrp(pc, gbr/unknown/unknown, progressive), 360x640 [SAR 1:1 DAR 9:16], q=2-31, 200 kb/s, 25 fps, 25 tbn
+      Metadata:
+        encoder         : Lavc61.19.101 wrapped_avframe
+[Parsed_psnr_0 @ 0x7f3f60001f00] PSNR r:inf g:inf b:inf average:inf min:inf max:inf
+[out#0/null @ 0x55fa78fa0f40] video:0KiB audio:0KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+frame=    1 fps=0.0 q=-0.0 Lsize=N/A time=00:00:00.04 bitrate=N/A speed=0.561x    

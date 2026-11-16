@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "error": null,
+  "wallSeconds": 2.0017463539988967,
+  "frames": 30,
+  "newFrames": 0,
+  "reusedFrames": 30,
+  "sourceFingerprint": "cdbff2612716b9c8b24b62ad3363e62cd057edd44bfb2a2e6675e58d727c11ef",
+  "settings": {
+    "storage": "scratch",
+    "persistent": true,
+    "samples": null,
+    "denoise": "existing",
+    "pngCompression": 15,
+    "threads": 3
+  },
+  "direction": true,
+  "blenderVersion": "Blender 4.3.2\n\tbuild date: 2024-12-17\n\tbuild time: 01:31:14\n\tbuild commit date: 2024-12-16\n\tbuild commit time: 21:10\n\tbuild hash: 32f5fdce0a0a\n\tbuild branch: blender-v4.3-release\n\tbuild platform: Linux\n\tbuild type: Release\n\tbuild c flags:  -Wall -Werror=implicit-function-declaration -Wstrict-prototypes -Werror=return-type -Werror=vla -Wmissing-prototypes -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wlogical-op -Wundef -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wformat-signedness -Wrestrict -Wno-stringop-overread -Wno-stringop-overflow -Wnonnull -Wabsolute-value -Wuninitialized -Wredundant-decls -Wshadow -Wimplicit-fallthrough=5 -Wno-error=unused-but-set-variable  -march=x86-64-v2 -std=gnu11 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild c++ flags:  -Wuninitialized -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Werror=return-type -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wundef -Wcomma-subscript -Wformat-signedness -Wrestrict -Wno-suggest-override -Wuninitialized -Wno-stringop-overread -Wno-stringop-overflow -Wimplicit-fallthrough=5 -Wundef -Wmissing-declarations  -march=x86-64-v2 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild link flags:  -Wl,--version-script='/home/blender/git/blender-v430/blender.git/source/creator/symbols_unix.map'\n\tbuild system: CMake\n",
+  "startupToWorkerReadySeconds": 0.3066716194152832,
+  "buildSeconds": 0,
+  "cpuBuildSeconds": 0,
+  "cacheVerificationSeconds": 0.1693207530042855,
+  "restoreFromDrive": [
+    {
+      "seconds": 0.07362059799925191,
+      "copied": 0
+    },
+    {
+      "seconds": 0.06184397000470199,
+      "copied": 0
+    },
+    {
+      "seconds": 0.060540103004314005,
+      "copied": 0
+    }
+  ],
+  "driveCheckpoints": [
+    {
+      "seconds": 0.061044892005156726,
+      "copiedFrames": 0,
+      "reusedFrames": 10,
+      "bytes": 0,
+      "scope": "copy + readback CRC/decode/SHA + manifest; mounted filesystem, not remote server timing"
+    },
+    {
+      "seconds": 0.0624976949984557,
+      "copiedFrames": 0,
+      "reusedFrames": 10,
+      "bytes": 0,
+      "scope": "copy + readback CRC/decode/SHA + manifest; mounted filesystem, not remote server timing"
+    },
+    {
+      "seconds": 0.06356811199657386,
+      "copiedFrames": 0,
+      "reusedFrames": 10,
+      "bytes": 0,
+      "scope": "copy + readback CRC/decode/SHA + manifest; mounted filesystem, not remote server timing"
+    }
+  ],
+  "workerCheckpointSeconds": 0,
+  "actualFrameBackends": {
+    "('CPU', None, [])": 30
+  },
+  "cpuScheduling": [],
+  "phases": {
+    "updateSeconds": 0,
+    "updateCpuSeconds": 0,
+    "renderAndCompositeSeconds": 0,
+    "renderCpuSeconds": 0,
+    "pngEncodeAndWriteSeconds": 0,
+    "pngCpuSeconds": 0,
+    "verifySeconds": 0
+  },
+  "cyclesLog": {
+    "approximateProgressSeconds": {},
+    "scope": "Blender printed progress clock deltas; nested/rounded stages, not GPU kernel timing; inspect raw log"
+  },
+  "startedEpochSeconds": 1794514595.7614634,
+  "finishedEpochSeconds": 1794514597.976699,
+  "gpu": {
+    "scope": "Device-wide ~1s polling; includes other processes, sampled peaks only; no attribution to a single process",
+    "samples": 0,
+    "peakMemoryMiB": null,
+    "meanUtilizationPercent": null,
+    "meanPowerWatts": null,
+    "peakPowerWatts": null,
+    "error": "nvidia-smi unavailable"
+  },
+  "actualT4Rendering": false,
+  "peakBlenderRssKiB": 595232,
+  "coldRun": false
+}

@@ -1,0 +1,878 @@
+{
+  "status": "passed",
+  "error": null,
+  "wallSeconds": 562.6501495919947,
+  "frames": 30,
+  "newFrames": 30,
+  "reusedFrames": 0,
+  "sourceFingerprint": "cdbff2612716b9c8b24b62ad3363e62cd057edd44bfb2a2e6675e58d727c11ef",
+  "settings": {
+    "storage": "scratch",
+    "persistent": true,
+    "samples": null,
+    "denoise": "existing",
+    "pngCompression": 15,
+    "threads": 3
+  },
+  "direction": true,
+  "blenderVersion": "Blender 4.3.2\n\tbuild date: 2024-12-17\n\tbuild time: 01:31:14\n\tbuild commit date: 2024-12-16\n\tbuild commit time: 21:10\n\tbuild hash: 32f5fdce0a0a\n\tbuild branch: blender-v4.3-release\n\tbuild platform: Linux\n\tbuild type: Release\n\tbuild c flags:  -Wall -Werror=implicit-function-declaration -Wstrict-prototypes -Werror=return-type -Werror=vla -Wmissing-prototypes -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wlogical-op -Wundef -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Wformat-signedness -Wrestrict -Wno-stringop-overread -Wno-stringop-overflow -Wnonnull -Wabsolute-value -Wuninitialized -Wredundant-decls -Wshadow -Wimplicit-fallthrough=5 -Wno-error=unused-but-set-variable  -march=x86-64-v2 -std=gnu11 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild c++ flags:  -Wuninitialized -Wredundant-decls -Wall -Wno-invalid-offsetof -Wno-sign-compare -Wlogical-op -Winit-self -Wmissing-include-dirs -Wno-div-by-zero -Wtype-limits -Werror=return-type -Wno-char-subscripts -Wno-unknown-pragmas -Wpointer-arith -Wunused-parameter -Wwrite-strings -Wundef -Wcomma-subscript -Wformat-signedness -Wrestrict -Wno-suggest-override -Wuninitialized -Wno-stringop-overread -Wno-stringop-overflow -Wimplicit-fallthrough=5 -Wundef -Wmissing-declarations  -march=x86-64-v2 -pipe -fPIC -funsigned-char -fno-strict-aliasing -ffp-contract=off  \n\tbuild link flags:  -Wl,--version-script='/home/blender/git/blender-v430/blender.git/source/creator/symbols_unix.map'\n\tbuild system: CMake\n",
+  "startupToWorkerReadySeconds": 0.29448533058166504,
+  "buildSeconds": 0.363755348000268,
+  "cpuBuildSeconds": 0.380037348,
+  "cacheVerificationSeconds": 7.8318000305444e-05,
+  "restoreFromDrive": [
+    {
+      "seconds": 2.6660003641154617e-05,
+      "copied": 0
+    },
+    {
+      "seconds": 2.285499795107171e-05,
+      "copied": 0
+    },
+    {
+      "seconds": 2.2364001779351383e-05,
+      "copied": 0
+    }
+  ],
+  "driveCheckpoints": [
+    {
+      "seconds": 0.060961260001931805,
+      "copiedFrames": 0,
+      "reusedFrames": 10,
+      "bytes": 0,
+      "scope": "copy + readback CRC/decode/SHA + manifest; mounted filesystem, not remote server timing"
+    },
+    {
+      "seconds": 0.06164749899471644,
+      "copiedFrames": 0,
+      "reusedFrames": 10,
+      "bytes": 0,
+      "scope": "copy + readback CRC/decode/SHA + manifest; mounted filesystem, not remote server timing"
+    },
+    {
+      "seconds": 0.06111963599687442,
+      "copiedFrames": 0,
+      "reusedFrames": 10,
+      "bytes": 0,
+      "scope": "copy + readback CRC/decode/SHA + manifest; mounted filesystem, not remote server timing"
+    }
+  ],
+  "workerCheckpointSeconds": 0.36181480801315047,
+  "actualFrameBackends": {
+    "('CPU', None, [])": 30
+  },
+  "cpuScheduling": [
+    {
+      "update": {
+        "processCpuSeconds": 0.022082000000000157,
+        "voluntaryContextSwitches": 11,
+        "involuntaryContextSwitches": 1,
+        "threadRunQueueWaitSeconds": 4.967e-06,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 32.396648,
+        "voluntaryContextSwitches": 183,
+        "involuntaryContextSwitches": 1055,
+        "threadRunQueueWaitSeconds": 15.109498011,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.11628999999999223,
+        "voluntaryContextSwitches": 6,
+        "involuntaryContextSwitches": 3,
+        "threadRunQueueWaitSeconds": 0.002440417,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.017393999999995913,
+        "voluntaryContextSwitches": 5,
+        "involuntaryContextSwitches": 1,
+        "threadRunQueueWaitSeconds": 2.584e-06,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 33.210731,
+        "voluntaryContextSwitches": 163,
+        "involuntaryContextSwitches": 1057,
+        "threadRunQueueWaitSeconds": 15.723948945,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.028419999999997003,
+        "voluntaryContextSwitches": 4,
+        "involuntaryContextSwitches": 3,
+        "threadRunQueueWaitSeconds": 0.019341055,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.014516999999997893,
+        "voluntaryContextSwitches": 6,
+        "involuntaryContextSwitches": 3,
+        "threadRunQueueWaitSeconds": 0.000124694,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 36.284807,
+        "voluntaryContextSwitches": 109,
+        "involuntaryContextSwitches": 10723,
+        "threadRunQueueWaitSeconds": 52.503435739,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.030507000000000062,
+        "voluntaryContextSwitches": 5,
+        "involuntaryContextSwitches": 18,
+        "threadRunQueueWaitSeconds": 0.041005319,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.01873199999999997,
+        "voluntaryContextSwitches": 1,
+        "involuntaryContextSwitches": 26,
+        "threadRunQueueWaitSeconds": 0.153290519,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 36.26778300000001,
+        "voluntaryContextSwitches": 86,
+        "involuntaryContextSwitches": 12130,
+        "threadRunQueueWaitSeconds": 58.309947,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.03054399999999191,
+        "voluntaryContextSwitches": 5,
+        "involuntaryContextSwitches": 11,
+        "threadRunQueueWaitSeconds": 0.029592969,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.019315000000005966,
+        "voluntaryContextSwitches": 2,
+        "involuntaryContextSwitches": 18,
+        "threadRunQueueWaitSeconds": 0.102268534,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 33.531525000000016,
+        "voluntaryContextSwitches": 134,
+        "involuntaryContextSwitches": 8709,
+        "threadRunQueueWaitSeconds": 42.552040808,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.0251010000000349,
+        "voluntaryContextSwitches": 4,
+        "involuntaryContextSwitches": 14,
+        "threadRunQueueWaitSeconds": 0.01960737,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.014566999999999553,
+        "voluntaryContextSwitches": 3,
+        "involuntaryContextSwitches": 7,
+        "threadRunQueueWaitSeconds": 0.003718024,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 31.613804999999985,
+        "voluntaryContextSwitches": 118,
+        "involuntaryContextSwitches": 4302,
+        "threadRunQueueWaitSeconds": 27.055372132,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.02418199999999615,
+        "voluntaryContextSwitches": 7,
+        "involuntaryContextSwitches": 6,
+        "threadRunQueueWaitSeconds": 9.7233e-05,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.01439400000001001,
+        "voluntaryContextSwitches": 4,
+        "involuntaryContextSwitches": 2,
+        "threadRunQueueWaitSeconds": 3.2939e-05,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 33.21031899999997,
+        "voluntaryContextSwitches": 157,
+        "involuntaryContextSwitches": 1379,
+        "threadRunQueueWaitSeconds": 15.762877356,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.025498999999996386,
+        "voluntaryContextSwitches": 5,
+        "involuntaryContextSwitches": 3,
+        "threadRunQueueWaitSeconds": 0.002413246,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.015976999999963937,
+        "voluntaryContextSwitches": 4,
+        "involuntaryContextSwitches": 2,
+        "threadRunQueueWaitSeconds": 4.1162e-05,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 33.367036999999954,
+        "voluntaryContextSwitches": 168,
+        "involuntaryContextSwitches": 1144,
+        "threadRunQueueWaitSeconds": 15.594993874,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.029236000000025797,
+        "voluntaryContextSwitches": 9,
+        "involuntaryContextSwitches": 6,
+        "threadRunQueueWaitSeconds": 0.000139338,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.016409999999950742,
+        "voluntaryContextSwitches": 10,
+        "involuntaryContextSwitches": 5,
+        "threadRunQueueWaitSeconds": 6.4967e-05,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 33.921992999999986,
+        "voluntaryContextSwitches": 164,
+        "involuntaryContextSwitches": 1117,
+        "threadRunQueueWaitSeconds": 16.208383265,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.02496400000001131,
+        "voluntaryContextSwitches": 5,
+        "involuntaryContextSwitches": 5,
+        "threadRunQueueWaitSeconds": 0.056446768,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.015949999999975262,
+        "voluntaryContextSwitches": 5,
+        "involuntaryContextSwitches": 2,
+        "threadRunQueueWaitSeconds": 1.8578e-05,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 35.16328699999997,
+        "voluntaryContextSwitches": 153,
+        "involuntaryContextSwitches": 1693,
+        "threadRunQueueWaitSeconds": 16.834256683,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.023020999999971536,
+        "voluntaryContextSwitches": 8,
+        "involuntaryContextSwitches": 7,
+        "threadRunQueueWaitSeconds": 6.7792e-05,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.01343000000002803,
+        "voluntaryContextSwitches": 6,
+        "involuntaryContextSwitches": 2,
+        "threadRunQueueWaitSeconds": 1.2649e-05,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 32.22951400000005,
+        "voluntaryContextSwitches": 151,
+        "involuntaryContextSwitches": 1351,
+        "threadRunQueueWaitSeconds": 15.130063982,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.027241000000003623,
+        "voluntaryContextSwitches": 10,
+        "involuntaryContextSwitches": 10,
+        "threadRunQueueWaitSeconds": 0.000846758,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.01423099999999522,
+        "voluntaryContextSwitches": 7,
+        "involuntaryContextSwitches": 6,
+        "threadRunQueueWaitSeconds": 4.695e-05,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 32.99675000000002,
+        "voluntaryContextSwitches": 158,
+        "involuntaryContextSwitches": 1255,
+        "threadRunQueueWaitSeconds": 15.520966405,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.02578700000003664,
+        "voluntaryContextSwitches": 11,
+        "involuntaryContextSwitches": 11,
+        "threadRunQueueWaitSeconds": 0.040154586,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.016925999999955366,
+        "voluntaryContextSwitches": 6,
+        "involuntaryContextSwitches": 4,
+        "threadRunQueueWaitSeconds": 0.000106727,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 36.146375999999975,
+        "voluntaryContextSwitches": 172,
+        "involuntaryContextSwitches": 4710,
+        "threadRunQueueWaitSeconds": 25.256493207,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.026482999999984713,
+        "voluntaryContextSwitches": 7,
+        "involuntaryContextSwitches": 10,
+        "threadRunQueueWaitSeconds": 0.000116559,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.017364000000043234,
+        "voluntaryContextSwitches": 9,
+        "involuntaryContextSwitches": 5,
+        "threadRunQueueWaitSeconds": 0.000319135,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 35.34282499999995,
+        "voluntaryContextSwitches": 164,
+        "involuntaryContextSwitches": 1495,
+        "threadRunQueueWaitSeconds": 16.894227172,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.026496999999949367,
+        "voluntaryContextSwitches": 11,
+        "involuntaryContextSwitches": 8,
+        "threadRunQueueWaitSeconds": 0.000189462,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.01594299999993609,
+        "voluntaryContextSwitches": 31,
+        "involuntaryContextSwitches": 28,
+        "threadRunQueueWaitSeconds": 0.003367106,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 31.668299000000047,
+        "voluntaryContextSwitches": 206,
+        "involuntaryContextSwitches": 1204,
+        "threadRunQueueWaitSeconds": 15.029271127,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.02446500000002061,
+        "voluntaryContextSwitches": 7,
+        "involuntaryContextSwitches": 2,
+        "threadRunQueueWaitSeconds": 0.006232748,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.014416999999980362,
+        "voluntaryContextSwitches": 5,
+        "involuntaryContextSwitches": 4,
+        "threadRunQueueWaitSeconds": 6.8371e-05,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 31.416937000000075,
+        "voluntaryContextSwitches": 149,
+        "involuntaryContextSwitches": 1070,
+        "threadRunQueueWaitSeconds": 14.891003944,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.027214000000071792,
+        "voluntaryContextSwitches": 11,
+        "involuntaryContextSwitches": 9,
+        "threadRunQueueWaitSeconds": 0.001314713,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.015996000000086497,
+        "voluntaryContextSwitches": 8,
+        "involuntaryContextSwitches": 3,
+        "threadRunQueueWaitSeconds": 1.1728e-05,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 33.15759700000001,
+        "voluntaryContextSwitches": 186,
+        "involuntaryContextSwitches": 1088,
+        "threadRunQueueWaitSeconds": 15.536479299,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.027481000000079803,
+        "voluntaryContextSwitches": 11,
+        "involuntaryContextSwitches": 14,
+        "threadRunQueueWaitSeconds": 0.001154981,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.014255000000048312,
+        "voluntaryContextSwitches": 8,
+        "involuntaryContextSwitches": 4,
+        "threadRunQueueWaitSeconds": 4.0881e-05,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 32.39302299999986,
+        "voluntaryContextSwitches": 185,
+        "involuntaryContextSwitches": 1044,
+        "threadRunQueueWaitSeconds": 15.348307908,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.027401999999938198,
+        "voluntaryContextSwitches": 10,
+        "involuntaryContextSwitches": 10,
+        "threadRunQueueWaitSeconds": 0.000122543,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.020219999999994798,
+        "voluntaryContextSwitches": 8,
+        "involuntaryContextSwitches": 7,
+        "threadRunQueueWaitSeconds": 0.000175212,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 31.901904999999942,
+        "voluntaryContextSwitches": 159,
+        "involuntaryContextSwitches": 1262,
+        "threadRunQueueWaitSeconds": 15.167080307,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.026929999999993015,
+        "voluntaryContextSwitches": 11,
+        "involuntaryContextSwitches": 12,
+        "threadRunQueueWaitSeconds": 0.000507655,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.025242000000048392,
+        "voluntaryContextSwitches": 13,
+        "involuntaryContextSwitches": 11,
+        "threadRunQueueWaitSeconds": 0.000549325,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 33.13865199999998,
+        "voluntaryContextSwitches": 198,
+        "involuntaryContextSwitches": 1214,
+        "threadRunQueueWaitSeconds": 15.598602048,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.026743000000124084,
+        "voluntaryContextSwitches": 12,
+        "involuntaryContextSwitches": 12,
+        "threadRunQueueWaitSeconds": 0.000738227,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.015416999999956715,
+        "voluntaryContextSwitches": 11,
+        "involuntaryContextSwitches": 9,
+        "threadRunQueueWaitSeconds": 0.000244553,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 37.197803999999905,
+        "voluntaryContextSwitches": 152,
+        "involuntaryContextSwitches": 1260,
+        "threadRunQueueWaitSeconds": 17.685064822,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.026023000000009233,
+        "voluntaryContextSwitches": 11,
+        "involuntaryContextSwitches": 12,
+        "threadRunQueueWaitSeconds": 0.000170334,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.015345000000024811,
+        "voluntaryContextSwitches": 10,
+        "involuntaryContextSwitches": 7,
+        "threadRunQueueWaitSeconds": 0.000180718,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 37.24836200000004,
+        "voluntaryContextSwitches": 163,
+        "involuntaryContextSwitches": 1244,
+        "threadRunQueueWaitSeconds": 17.493403998,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.041869000000019696,
+        "voluntaryContextSwitches": 11,
+        "involuntaryContextSwitches": 14,
+        "threadRunQueueWaitSeconds": 0.000220068,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.020376000000055683,
+        "voluntaryContextSwitches": 15,
+        "involuntaryContextSwitches": 9,
+        "threadRunQueueWaitSeconds": 0.000203193,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 38.883376999999996,
+        "voluntaryContextSwitches": 157,
+        "involuntaryContextSwitches": 1411,
+        "threadRunQueueWaitSeconds": 18.469924262,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.025118000000020402,
+        "voluntaryContextSwitches": 11,
+        "involuntaryContextSwitches": 11,
+        "threadRunQueueWaitSeconds": 0.00017497,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.016908999999941443,
+        "voluntaryContextSwitches": 12,
+        "involuntaryContextSwitches": 9,
+        "threadRunQueueWaitSeconds": 0.000106447,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 36.23949399999992,
+        "voluntaryContextSwitches": 145,
+        "involuntaryContextSwitches": 1258,
+        "threadRunQueueWaitSeconds": 17.187453964,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.02739099999996597,
+        "voluntaryContextSwitches": 10,
+        "involuntaryContextSwitches": 11,
+        "threadRunQueueWaitSeconds": 0.000238356,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.04718900000011672,
+        "voluntaryContextSwitches": 9,
+        "involuntaryContextSwitches": 4,
+        "threadRunQueueWaitSeconds": 0.000156173,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 36.94098199999996,
+        "voluntaryContextSwitches": 147,
+        "involuntaryContextSwitches": 1275,
+        "threadRunQueueWaitSeconds": 17.559066883,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.026716000000078566,
+        "voluntaryContextSwitches": 12,
+        "involuntaryContextSwitches": 10,
+        "threadRunQueueWaitSeconds": 0.000238636,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.016736000000037166,
+        "voluntaryContextSwitches": 13,
+        "involuntaryContextSwitches": 11,
+        "threadRunQueueWaitSeconds": 0.000277073,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 35.97680099999991,
+        "voluntaryContextSwitches": 174,
+        "involuntaryContextSwitches": 1161,
+        "threadRunQueueWaitSeconds": 17.061129466,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.026181999999948857,
+        "voluntaryContextSwitches": 10,
+        "involuntaryContextSwitches": 8,
+        "threadRunQueueWaitSeconds": 0.000278332,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.015830999999934647,
+        "voluntaryContextSwitches": 9,
+        "involuntaryContextSwitches": 4,
+        "threadRunQueueWaitSeconds": 0.0002289,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 34.762478999999985,
+        "voluntaryContextSwitches": 156,
+        "involuntaryContextSwitches": 1281,
+        "threadRunQueueWaitSeconds": 16.860516854,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.025316999999972722,
+        "voluntaryContextSwitches": 11,
+        "involuntaryContextSwitches": 9,
+        "threadRunQueueWaitSeconds": 0.017833593,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.01865700000007564,
+        "voluntaryContextSwitches": 21,
+        "involuntaryContextSwitches": 16,
+        "threadRunQueueWaitSeconds": 0.000183474,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 34.81559400000003,
+        "voluntaryContextSwitches": 198,
+        "involuntaryContextSwitches": 1139,
+        "threadRunQueueWaitSeconds": 16.492992709,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.024171000000023923,
+        "voluntaryContextSwitches": 10,
+        "involuntaryContextSwitches": 7,
+        "threadRunQueueWaitSeconds": 0.001140735,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.01394500000003518,
+        "voluntaryContextSwitches": 12,
+        "involuntaryContextSwitches": 9,
+        "threadRunQueueWaitSeconds": 0.00010079,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 35.16770699999995,
+        "voluntaryContextSwitches": 156,
+        "involuntaryContextSwitches": 1196,
+        "threadRunQueueWaitSeconds": 16.845115466,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.024666999999908512,
+        "voluntaryContextSwitches": 10,
+        "involuntaryContextSwitches": 7,
+        "threadRunQueueWaitSeconds": 0.001389095,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    },
+    {
+      "update": {
+        "processCpuSeconds": 0.014214999999921929,
+        "voluntaryContextSwitches": 8,
+        "involuntaryContextSwitches": 3,
+        "threadRunQueueWaitSeconds": 0.000124735,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "render": {
+        "processCpuSeconds": 34.947917000000075,
+        "voluntaryContextSwitches": 152,
+        "involuntaryContextSwitches": 1264,
+        "threadRunQueueWaitSeconds": 16.630134035,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      },
+      "png": {
+        "processCpuSeconds": 0.02781900000013593,
+        "voluntaryContextSwitches": 6,
+        "involuntaryContextSwitches": 3,
+        "threadRunQueueWaitSeconds": 0.000466473,
+        "blockingIoOrGpuWaitSeconds": null,
+        "scope": "Linux per-thread runnable scheduler wait, summed across observed live threads; may exceed wall and miss exited threads. Blocking GPU/IO wait cannot be attributed; wall minus multithreaded CPU is NOT GPU time."
+      }
+    }
+  ],
+  "phases": {
+    "updateSeconds": 0.5001645000011194,
+    "updateCpuSeconds": 0.531484566999977,
+    "renderAndCompositeSeconds": 559.6229211370082,
+    "renderCpuSeconds": 1031.5399508369997,
+    "pngEncodeAndWriteSeconds": 0.7578787809907226,
+    "pngCpuSeconds": 0.899050593000382,
+    "verifySeconds": 0.1005346119927708
+  },
+  "cyclesLog": {
+    "approximateProgressSeconds": {
+      "other": 2.5600000000000103,
+      "geometry-sync-bvh": 0.4500000000000003,
+      "sampling": 556.38,
+      "compositor": 0.029999999999995808
+    },
+    "scope": "Blender printed progress clock deltas; nested/rounded stages, not GPU kernel timing; inspect raw log"
+  },
+  "startedEpochSeconds": 1794513898.7259958,
+  "finishedEpochSeconds": 1794514461.5975058,
+  "gpu": {
+    "scope": "Device-wide ~1s polling; includes other processes, sampled peaks only; no attribution to a single process",
+    "samples": 0,
+    "peakMemoryMiB": null,
+    "meanUtilizationPercent": null,
+    "meanPowerWatts": null,
+    "peakPowerWatts": null,
+    "error": "nvidia-smi unavailable"
+  },
+  "actualT4Rendering": false,
+  "peakBlenderRssKiB": 595232,
+  "coldRun": true
+}

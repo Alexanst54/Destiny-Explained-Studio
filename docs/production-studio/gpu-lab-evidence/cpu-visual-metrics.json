@@ -1,0 +1,40 @@
+{
+  "images": [
+    {
+      "psnrDb": 36.125469,
+      "psnrInfinite": false,
+      "ssim": 0.962825,
+      "differenceMapGain": 4,
+      "scope": "FFmpeg RGB PSNR/SSIM against 48-sample baseline, not ground truth or artistic approval",
+      "case": "samples-32",
+      "trial": 1,
+      "shot": "01-hook/vault-establish",
+      "sourceFrame": 72
+    },
+    {
+      "psnrDb": 36.761024,
+      "psnrInfinite": false,
+      "ssim": 0.982604,
+      "differenceMapGain": 4,
+      "scope": "FFmpeg RGB PSNR/SSIM against 48-sample baseline, not ground truth or artistic approval",
+      "case": "samples-32",
+      "trial": 1,
+      "shot": "04-time/past-gate",
+      "sourceFrame": 88
+    },
+    {
+      "psnrDb": 35.047324,
+      "psnrInfinite": false,
+      "ssim": 0.972497,
+      "differenceMapGain": 4,
+      "scope": "FFmpeg RGB PSNR/SSIM against 48-sample baseline, not ground truth or artistic approval",
+      "case": "samples-32",
+      "trial": 1,
+      "shot": "02-identity/mechanism",
+      "sourceFrame": 220
+    }
+  ],
+  "temporalResiduals": [],
+  "temporalEvidenceAvailable": false,
+  "warning": "PSNR/SSIM/residuals do not prove visual equivalence. Fast mode has no consecutive-frame flicker evidence."
+}

@@ -1,0 +1,43 @@
+{
+  "route": "legacy-general-studio",
+  "entrypoint": "production.py",
+  "notebookCell": "3. Smoke-test (2 s) or 4. Production",
+  "cinematic": false,
+  "sourceCommit": "3de621908dabeb682385c7648e6ee2b62c6b8bde",
+  "projectKind": null,
+  "confidence": "project manifest + archived render metadata; no route inferred from duration",
+  "media": [
+    {
+      "file": "video.mp4",
+      "decodedVideoFrames": 48,
+      "videoSeconds": 2.0,
+      "containerSeconds": 2.005,
+      "fps": "24/1",
+      "width": 320,
+      "height": 240
+    }
+  ],
+  "cameraGroups": [
+    {
+      "selection": "('boss-rhulk', 'cinematic', 'combat')",
+      "recordedFrames": 48,
+      "recordedCameraTransforms": 48,
+      "uniqueCameraTransforms": 1,
+      "maxTranslationFromFirst": 0.0,
+      "shotIds": []
+    }
+  ],
+  "expectedPreparedPilotSmoke": {
+    "file": "atheon-smoke.mp4",
+    "videoFrames": 345,
+    "fps": 30,
+    "videoSeconds": 11.5,
+    "camera": "environment \u2192 wide (static)"
+  },
+  "notes": [
+    "Current Q1 prepares, Q2 renders still previews, Q3 renders image sequences and Q4 exports the full episode. It has no 11.52-second smoke export.",
+    "The current general Studio smoke uses 2 seconds / 60 frames at 30 FPS.",
+    "AAC/container duration and player-estimated frames can differ from the decoded video stream. Read both values; do not change narration or frame counts to match a GUI estimate."
+  ],
+  "readOnly": true
+}

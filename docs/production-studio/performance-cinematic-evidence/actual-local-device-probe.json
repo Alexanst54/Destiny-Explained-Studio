@@ -1,0 +1,12 @@
+{
+  "requested": "auto",
+  "selected": "CPU",
+  "backend": null,
+  "devices": [],
+  "notes": [
+    "No compatible Cycles GPU found; CPU fallback selected."
+  ],
+  "blenderVersion": "4.3.2",
+  "probeOnly": true,
+  "renderingValidated": false
+}

@@ -1,0 +1,141 @@
+{
+  "status": "passed",
+  "blenderVersion": "4.3.2",
+  "checks": [
+    {
+      "boss": "boss-atheon",
+      "scene": "01-hook",
+      "shot": "vault-establish",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "01-hook",
+      "shot": "portal-threshold",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "01-hook",
+      "shot": "monument",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "02-identity",
+      "shot": "monument",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "02-identity",
+      "shot": "mechanism",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "02-identity",
+      "shot": "conflux",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "03-vault",
+      "shot": "vault-establish",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "03-vault",
+      "shot": "oracle-field",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "03-vault",
+      "shot": "conflux",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "04-time",
+      "shot": "past-gate",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "04-time",
+      "shot": "future-gate",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "04-time",
+      "shot": "return-gate",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "05-guardians",
+      "shot": "guardian-team",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "05-guardians",
+      "shot": "aegis",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "05-guardians",
+      "shot": "conflux",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "06-mystery",
+      "shot": "aftermath",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "06-mystery",
+      "shot": "empty-throne",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-atheon",
+      "scene": "06-mystery",
+      "shot": "unanswered-vault",
+      "deterministic": true,
+      "stableGeometry": true
+    },
+    {
+      "boss": "boss-templar",
+      "scene": "03-vault",
+      "shot": "templar",
+      "deterministic": true,
+      "stableGeometry": true
+    }
+  ],
+  "renderedFrames": 0,
+  "gpuValidated": false
+}

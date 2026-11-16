@@ -1,0 +1,26 @@
+{
+  "nodeTests": 118,
+  "pythonTests": 106,
+  "typescriptConfigurations": 3,
+  "actualBlenderCameraFramesChecked": 2672,
+  "actualDirectedShotsChecked": 19,
+  "actualImagesRendered": 30,
+  "clipSeconds": 3,
+  "clipFps": 10,
+  "quality": "draft",
+  "resolution": [
+    324,
+    576
+  ],
+  "actualBackend": "CPU",
+  "gpuUtilization": null,
+  "powerWatts": null,
+  "vramMiB": null,
+  "realT4Tested": false,
+  "realDriveTested": false,
+  "fullEpisodeRendered": false,
+  "originalNarrationModified": false,
+  "warmCacheHits": 30,
+  "warmNewFrames": 0,
+  "cameraTraceScope": "Copied actual frame cameraDiagnostic values from original image records after warm reuse. No epochs or transforms were invented. Warm events only contain cache reuse; original applied matrices remain in profile.json."
+}

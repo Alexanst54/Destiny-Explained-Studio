@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "frames": 3,
+  "driveToScratchSeconds": 0.008225765996030532,
+  "remotionCompositionAndEncodeSeconds": 42.055915169999935,
+  "finalDriveCopySeconds": 0.00042027499875985086,
+  "scope": "Actual CLI composition + H.264 encoding including browser/bundling; stages overlap, not exclusive GPU kernel times",
+  "notPilotEpisode": true,
+  "silentBenchmark": true,
+  "sourceFootage": "distinct genuinely rendered representative frames"
+}
