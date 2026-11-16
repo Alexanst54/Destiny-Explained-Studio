@@ -92,7 +92,7 @@ def assemble(folder,package,opts,tools,project,jobs,case,scratch,chrome=None):
 
 
 def main():
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['prepare','preview','render','assemble','validate']);p.add_argument('output');p.add_argument('--scratch',default='/content/atheon-directed');p.add_argument('--blender',default='blender');p.add_argument('--node',default='node');p.add_argument('--chrome');p.add_argument('--width',type=int,default=540);p.add_argument('--height',type=int,default=960);p.add_argument('--quality',choices=['draft','balanced','cinematic'],default='balanced');p.add_argument('--allow-cpu',action='store_true');p.add_argument('--scene');p.add_argument('--reviewed-previews',action='store_true');p.add_argument('--benchmark-reviewed',action='store_true');a=p.parse_args();opts=settings(a.width,a.height,a.quality);package=load_package();tools=software(a.blender,a.node,a.chrome);case={**CASES['scratch-persistent'],'productionPreset':'candidate-48'};jobs=jobs_for(package,a.width,a.height,a.quality)
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('action',choices=['prepare','preview','render','assemble','validate']);p.add_argument('output');p.add_argument('--scratch',default='/content/atheon-directed');p.add_argument('--blender',default='blender');p.add_argument('--node',default='node');p.add_argument('--chrome');p.add_argument('--width',type=int,default=540);p.add_argument('--height',type=int,default=960);p.add_argument('--quality',choices=['draft','balanced','cinematic'],default='balanced');p.add_argument('--allow-cpu',action='store_true');p.add_argument('--scene');p.add_argument('--reviewed-previews',action='store_true');p.add_argument('--benchmark-reviewed',action='store_true');p.add_argument('--production-approved-no-previews',action='store_true');a=p.parse_args();opts=settings(a.width,a.height,a.quality);package=load_package();tools=software(a.blender,a.node,a.chrome);case={**CASES['scratch-persistent'],'productionPreset':'candidate-48'};jobs=jobs_for(package,a.width,a.height,a.quality)
  with locked(a.output) as folder:
   project=bind(folder,package,opts,tools,case);(folder/'logs').mkdir(exist_ok=True);(folder/'reports').mkdir(exist_ok=True);check_space(folder,opts);tools['device']=probe(folder,tools);install_inputs(folder,package,opts)
   atomic_json(folder/'reports/direction-plan.json',dict(jobs=jobs,storyboard=SHOTS,approvedModelFilesUnmodified=True))
@@ -103,8 +103,9 @@ def main():
    for j in preview:cards.append(f'<h2>{j["sceneId"]}: {j["shotName"]}</h2><img width="270" src="{j["id"]}/frame-0000.png">')
    (folder/'previews/index.html').write_text('\n'.join(cards));return
   if a.action=='render':
-   if not a.reviewed_previews or not a.benchmark_reviewed:raise ValueError('Review the paired T4 benchmark and all directed shot previews before a complete rerender')
-   if not (folder/'previews/index.html').exists():raise ValueError('Render directed previews first')
+   if not a.production_approved_no_previews:
+    if not a.reviewed_previews or not a.benchmark_reviewed:raise ValueError('Review the paired T4 benchmark and all directed shot previews before a complete rerender')
+    if not (folder/'previews/index.html').exists():raise ValueError('Render directed previews first')
    if a.scene and a.scene not in [s['scene']['id'] for s in package['scenes']]:raise ValueError('Unknown scene')
    selected=[j for j in jobs if not a.scene or j['sceneId']==a.scene];execute_profile(selected,folder/'public',Path(a.scratch)/'render',case,tools['blender'],'auto',not a.allow_cpu,True)
   elif a.action=='assemble':assemble(folder,package,opts,tools,project,jobs,case,a.scratch,a.chrome)
